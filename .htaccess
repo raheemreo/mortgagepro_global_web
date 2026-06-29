@@ -1,0 +1,73 @@
+# ----------------------------------------------------------------------
+# 1. Enforce HTTPS and Redirect www to non-www (or vice-versa)
+# ----------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Redirection to HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# ----------------------------------------------------------------------
+# 2. Prevent Directory Listing and Protect Sensitive Files
+# ----------------------------------------------------------------------
+# Disable directory browsing
+Options -Indexes
+
+# Block access to hidden files (starting with a dot, e.g., .git, .gitignore)
+<FilesMatch "^\.">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Block access to project documentation and prompt files (.md, backups, logs)
+<FilesMatch "\.(md|log|bak|conf|local|sql|yaml|yml)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Allow the IndexNow verification key file to be publicly accessible
+<Files "a1b2c3d4e5f6789012345678901234ab.txt">
+    <IfModule mod_authz_core.c>
+        Require all granted
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order deny,allow
+        Allow from all
+    </IfModule>
+</Files>
+
+# ----------------------------------------------------------------------
+# 3. Security Headers
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+    # Enforce HTTPS (HSTS) - 1 year, include subdomains and preload
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+    # Prevent Clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
+
+    # Prevent MIME-type Sniffing
+    Header always set X-Content-Type-Options "nosniff"
+
+    # Control Referrer Information
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Restrict Device APIs and Features
+    Header always set Permissions-Policy "geolocation=(), camera=(), microphone=(), payment=()"
+
+    # Content Security Policy (CSP)
+    # Configured to support Google Analytics (GA4) and Google AdSense
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://adservice.google.com; img-src 'self' data: https://www.google-analytics.com https://pagead2.googlesyndication.com https://adservice.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-src 'self' https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://google-ads.gpt.g.doubleclick.net; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net;"
+</IfModule>
