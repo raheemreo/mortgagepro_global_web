@@ -1,0 +1,107 @@
+/* MortgagePro Global — calculators.css
+   Calculator widget styles, amortization table, results
+   REO TECH | June 2026 */
+
+/* ===== AMORTIZATION TABLE ===== */
+.amortization-section { margin-top: 24px; }
+.amortization-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 600;
+  width: 100%;
+  justify-content: center;
+  transition: background 0.15s;
+}
+.amortization-toggle:hover { background: rgba(255,255,255,0.2); }
+.amortization-table-wrap {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.amortization-table-wrap.open { max-height: 500px; overflow-y: auto; }
+.amortization-table-wrap table { font-size: 0.78rem; background: rgba(255,255,255,0.05); color: #fff; }
+.amortization-table-wrap thead { background: rgba(0,0,0,0.3); }
+.amortization-table-wrap td { border-bottom-color: rgba(255,255,255,0.08); padding: 8px 10px; }
+.amortization-table-wrap tbody tr:hover { background: rgba(255,255,255,0.06); }
+
+/* ===== INPUT RANGE SLIDER ===== */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: #D1D5DB;
+  outline: none;
+  margin-top: 8px;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: var(--page-accent, #B91C1C);
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 20px; height: 20px;
+  border: none;
+  border-radius: 50%;
+  background: var(--page-accent, #B91C1C);
+  cursor: pointer;
+}
+
+/* ===== TAX BENEFIT BOX (India) ===== */
+.tax-benefit-box {
+  background: linear-gradient(135deg, #065F46, #047857);
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-top: 20px;
+}
+.tax-benefit-box h4 { color: #6EE7B7; margin-top: 0; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.tax-benefit-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.12); }
+.tax-benefit-row:last-child { border-bottom: none; }
+.tax-benefit-label { font-size: 0.83rem; opacity: 0.85; }
+.tax-benefit-value { font-size: 0.95rem; font-weight: 700; font-family: Georgia, serif; }
+
+/* ===== PITI BREAKDOWN (USA) ===== */
+.piti-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+@media (max-width: 600px) { .piti-box { grid-template-columns: repeat(2, 1fr); } }
+.piti-item {
+  background: rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+}
+.piti-item .piti-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.7; margin-bottom: 4px; }
+.piti-item .piti-value { font-size: 1.05rem; font-weight: 700; }
+
+/* ===== RESULTS SHARE ===== */
+.results-actions { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+.btn-secondary {
+  padding: 8px 16px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.83rem;
+  cursor: pointer;
+  transition: background 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn-secondary:hover { background: rgba(255,255,255,0.2); }

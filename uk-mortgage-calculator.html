@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>UK Mortgage Calculator 2026 — Stamp Duty &amp; SDLT | MortgagePro Global</title>
+  <meta name="description" content="Free UK mortgage calculator estimating monthly repayment amounts and UK Stamp Duty Land Tax (SDLT) with first-time buyer tax relief calculations.">
+
+  <link rel="canonical" href="https://mortgageproglobal.com/uk-mortgage-calculator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="UK Mortgage Calculator 2026 — Stamp Duty &amp; SDLT">
+  <meta property="og:description" content="Calculate your UK mortgage monthly payments, interest, and Stamp Duty Land Tax (SDLT).">
+  <meta property="og:url" content="https://mortgageproglobal.com/uk-mortgage-calculator.html">
+  <meta property="og:image" content="https://mortgageproglobal.com/images/og-uk.jpg">
+
+  <!-- Verification -->
+  <meta name="google-site-verification" content="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  <meta name="msvalidate.01" content="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  <meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
+
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
+  </script>
+
+  <!-- Country colour tokens + critical CSS -->
+  <style>
+    :root { --page-primary:#0D0D2B; --page-accent:#C8102E; --page-bg:#F5F5F8; }
+    body { margin:0; font-family:'Helvetica Neue',Arial,sans-serif; background:var(--page-bg); color:var(--page-primary); font-size:16px; line-height:1.6; }
+    .skip-link { position:absolute; left:-9999px; }
+    .skip-link:focus { position:fixed; left:0; top:0; z-index:99999; background:#0D0D2B; color:#fff; padding:12px 24px; font-weight:700; text-decoration:none; }
+    [data-component] { min-height:60px; }
+    .checkbox-group { display:flex; align-items:center; gap:10px; margin:16px 0; }
+    .checkbox-group input { width:auto; margin:0; cursor:pointer; }
+    .checkbox-group label { display:inline; font-weight:600; cursor:pointer; }
+  </style>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://mortgageproglobal.com"},
+    {"@type":"ListItem","position":2,"name":"UK Mortgage Calculator","item":"https://mortgageproglobal.com/uk-mortgage-calculator.html"}
+  ]}
+  </script>
+
+  <!-- Structured Data: WebApplication -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"UK Mortgage Calculator","url":"https://mortgageproglobal.com/uk-mortgage-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Web","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"},"creator":{"@type":"Organization","name":"REO TECH"},"dateModified":"2026-06"}
+  </script>
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What is Stamp Duty (SDLT) in the UK?","acceptedAnswer":{"@type":"Answer","text":"Stamp Duty Land Tax (SDLT) is a tax paid when you buy a property or land over a certain threshold in England and Northern Ireland. The tax rate is tiered, meaning you pay different percentages on different bands of the property price. As of 2026, standard stamp duty rates start at 0% for properties up to £250,000, 5% on the portion between £250,001 and £925,000, and up to 12% on portions above £1.5 million."}},
+    {"@type":"Question","name":"Do first-time buyers pay Stamp Duty in the UK?","acceptedAnswer":{"@type":"Answer","text":"First-time buyers in the UK qualify for Stamp Duty relief on properties priced up to £625,000. If eligible, you pay 0% Stamp Duty on properties priced up to £425,000, and a discounted rate of 5% on the portion between £425,001 and £625,000. If the property price exceeds £625,000, no first-time buyer relief applies and you pay standard rates."}},
+    {"@type":"Question","name":"What is the difference between a repayment and interest-only mortgage?","acceptedAnswer":{"@type":"Answer","text":"A repayment mortgage requires monthly payments that cover both the interest and a portion of the original loan balance, ensuring the loan is completely paid off by the end of the term. An interest-only mortgage requires paying only the interest accrued each month, meaning the monthly payment is lower but the original debt remains fully outstanding and must be repaid via a separate repayment strategy at the end of the term."}}
+  ]}
+  </script>
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/calculators.css">
+  <link rel="stylesheet" href="/css/accessibility.css">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/rates.js" defer></script>
+  <script src="/js/charts.js" defer></script>
+  <script src="/js/calculators.js" defer></script>
+  <script src="/js/accessibility.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-component="header"></div>
+
+  <!-- Rate Strip -->
+  <div class="rate-strip" role="region" aria-label="Current UK mortgage rates">
+    <div class="container">
+      <div class="rate-item"><span class="rate-label">BoE Bank Rate</span><span class="rate-value" data-rate="uk.boe">—</span></div>
+      <div class="rate-item"><span class="rate-label">2-Yr Fixed</span><span class="rate-value" data-rate="uk.fixed2">—</span></div>
+      <div class="rate-item"><span class="rate-label">5-Yr Fixed</span><span class="rate-value" data-rate="uk.fixed5">—</span></div>
+      <div class="rate-item"><span class="rate-label">Tracker Rate</span><span class="rate-value" data-rate="uk.tracker">—</span></div>
+      <span class="rate-strip-note" data-rate-updated></span>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="page-hero hero-uk" aria-label="Page introduction">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li>UK Mortgage Calculator</li>
+        </ol>
+      </nav>
+      <h1>UK Mortgage Calculator 2026 — Stamp Duty, SDLT &amp; Repayment</h1>
+      <p class="subtitle">Calculate monthly repayments, total interest, Stamp Duty (SDLT) obligations, and view your amortization schedule.</p>
+    </div>
+  </section>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="page-layout">
+        <div class="main-content">
+
+          <!-- Quick Answer -->
+          <div class="quick-answer" role="note" aria-label="Quick Summary">
+            <p class="qa-label">Quick Answer</p>
+            <p>The <strong>UK mortgage calculator</strong> calculates monthly repayment costs and Stamp Duty. For a £380,000 home with 10% down at <span data-rate="uk.fixed5">4.35%</span> fixed for 25 years, the monthly repayment is approximately <strong>£1,870</strong>. If you are a first-time buyer, you will pay <strong>£0</strong> in Stamp Duty (SDLT) due to relief thresholds.</p>
+          </div>
+
+          <!-- Ad Unit 1 -->
+          <div class="ad-unit ad-leaderboard" aria-label="Advertisement" role="complementary"></div>
+
+          <!-- Calculator Widget -->
+          <section aria-labelledby="calc-heading">
+            <div class="calculator-card">
+              <h2 id="calc-heading">UK Mortgage Calculator</h2>
+              <p style="color:#6B7280;font-size:0.88rem;margin-top:-8px">Methodology: Standard UK mortgage amortization formula. Stamp Duty (SDLT) bandings updated for 2026. Built by REO TECH.</p>
+
+              <form id="uk-calc-form" novalidate aria-label="UK mortgage calculator">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="uk-price">Property Price (£)</label>
+                    <input type="number" id="uk-price" name="uk-price" min="20000" max="10000000" step="1000" value="380000"
+                           aria-required="true" autocomplete="off">
+                  </div>
+                  <div class="form-group">
+                    <label for="uk-down">Deposit (%)</label>
+                    <input type="number" id="uk-down" name="uk-down" min="5" max="99" step="0.5" value="10"
+                           aria-required="true" autocomplete="off">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="uk-rate">Interest Rate (% p.a.)</label>
+                    <input type="number" id="uk-rate" name="uk-rate" min="0.5" max="20" step="0.01" value="4.75"
+                           aria-required="true" autocomplete="off">
+                  </div>
+                  <div class="form-group">
+                    <label for="uk-tenure">Mortgage Term (Years)</label>
+                    <input type="number" id="uk-tenure" name="uk-tenure" min="5" max="40" step="1" value="25"
+                           aria-required="true" autocomplete="off">
+                  </div>
+                </div>
+                <div class="checkbox-group">
+                  <input type="checkbox" id="uk-ftb" name="uk-ftb" checked>
+                  <label for="uk-ftb">First-Time Buyer (Eligible for SDLT relief)</label>
+                </div>
+                <button type="submit" class="btn-calculate">Calculate Repayments</button>
+              </form>
+
+              <!-- Results -->
+              <section id="uk-results" class="results-section" aria-label="Calculation results" aria-live="polite" aria-atomic="true">
+                <div class="results-grid">
+                  <div class="result-item">
+                    <div class="result-label">Monthly Repayment</div>
+                    <div class="result-value highlight" id="uk-monthly-payment">£0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Stamp Duty (SDLT)</div>
+                    <div class="result-value" id="uk-sdlt">£0</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="result-label">Mortgage Loan Size</div>
+                    <div class="result-value" id="uk-loan-amount">£0</div>
+                  </div>
+                </div>
+
+                <div style="margin-top:16px;font-size:0.88rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.1);padding-top:16px;">
+                  <span id="uk-breakdown-totals">Interest: <strong id="uk-total-interest">£0</strong> | Total Cost: <strong id="uk-total-payment">£0</strong></span>
+                </div>
+
+                <div class="chart-container">
+                  <canvas id="uk-chart" aria-label="Principal vs interest breakdown"></canvas>
+                </div>
+
+                <!-- Amortization -->
+                <div class="amortization-section">
+                  <button class="amortization-toggle" aria-expanded="false">📊 Show Amortization Schedule</button>
+                  <div class="amortization-table-wrap">
+                    <table>
+                      <caption>Annual Amortization Schedule — UK Mortgage Repayment by Year</caption>
+                      <thead>
+                        <tr>
+                          <th scope="col">Year</th>
+                          <th scope="col">Payment/Month</th>
+                          <th scope="col">Principal Paid</th>
+                          <th scope="col">Interest Paid</th>
+                          <th scope="col">Balance</th>
+                        </tr>
+                      </thead>
+                      <tbody id="uk-amort-tbody"></tbody>
+                    </table>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+
+          <!-- Ad Unit 2 -->
+          <div class="ad-unit ad-mid" aria-label="Advertisement" role="complementary"></div>
+
+          <!-- Lender Rates comparison -->
+          <section aria-labelledby="rates-heading">
+            <h2 id="rates-heading">UK Mortgage Rates by Lender</h2>
+            <div class="data-table-wrap">
+              <table>
+                <caption>Current rates from major UK banks — <span data-rate-updated></span></caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Lender</th>
+                    <th scope="col">2-Yr Fixed</th>
+                    <th scope="col">5-Yr Fixed</th>
+                    <th scope="col">Standard Variable (SVR)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Lloyds Bank</td><td data-rate="uk.fixed2">—</td><td data-rate="uk.fixed5">—</td><td>7.99%</td></tr>
+                  <tr><td>Barclays</td><td>4.85%</td><td>4.40%</td><td>8.24%</td></tr>
+                  <tr><td>HSBC UK</td><td>4.79%</td><td>4.35%</td><td>7.99%</td></tr>
+                  <tr><td>NatWest</td><td>4.80%</td><td>4.38%</td><td>8.24%</td></tr>
+                  <tr><td>Santander UK</td><td>4.89%</td><td>4.45%</td><td>8.50%</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="source-note">Source: <a href="https://www.bankofengland.co.uk" target="_blank" rel="noopener noreferrer">Bank of England</a> — <span data-rate-updated></span></p>
+          </section>
+
+          <!-- SEO Content -->
+          <section class="content-article" aria-labelledby="sdlt-explained">
+            <h2 id="sdlt-explained">Understanding UK Stamp Duty &amp; Mortgages</h2>
+            <p class="definition-para">
+              <strong>Stamp Duty Land Tax (SDLT)</strong> is a tax paid when purchasing residential properties in England and Northern Ireland over a certain price threshold. SDLT operates in tiered bands, where different percentages apply to different portions of the property purchase price.
+            </p>
+
+            <h3>UK Stamp Duty Bands for 2026</h3>
+            <p>For standard residential home purchases (non-first-time buyers), SDLT bands are structured as follows:</p>
+            <ul>
+              <li><strong>Up to £250,000:</strong> 0% SDLT rate.</li>
+              <li><strong>£250,001 to £925,000:</strong> 5% SDLT rate.</li>
+              <li><strong>£925,001 to £1,500,000:</strong> 10% SDLT rate.</li>
+              <li><strong>Over £1,500,000:</strong> 12% SDLT rate.</li>
+            </ul>
+
+            <h3>First-Time Buyer SDLT Relief Rules</h3>
+            <p>First-time home buyers in the UK benefit from special relief thresholds to encourage market entry. If buying your first home, you are exempt from Stamp Duty on property values up to **£425,000**. For homes priced between £425,001 and £625,000, you pay a flat 5% on the portion exceeding £425,000. If the purchase price exceeds £625,000, the first-time buyer relief is completely disqualified, and standard SDLT rates apply to the entire property value.</p>
+          </section>
+
+          <!-- Ad Unit 3 -->
+          <div class="ad-unit ad-mid" aria-label="Advertisement" role="complementary"></div>
+
+          <!-- FAQ -->
+          <section aria-labelledby="faq-uk-heading">
+            <h2 id="faq-uk-heading">UK Mortgage FAQs</h2>
+            <ul class="faq-list" role="list">
+              <li class="faq-item">
+                <button class="faq-question" aria-expanded="false">What is Stamp Duty (SDLT) in the UK?</button>
+                <div class="faq-answer" role="region"><p>Stamp Duty Land Tax (SDLT) is a tax paid when you buy a property or land over a certain threshold in England and Northern Ireland. The tax rate is tiered, meaning you pay different percentages on different bands of the property price. As of 2026, standard stamp duty rates start at 0% for properties up to £250,000, 5% on the portion between £250,001 and £925,000, and up to 12% on portions above £1.5 million.</p></div>
+              </li>
+              <li class="faq-item">
+                <button class="faq-question" aria-expanded="false">Do first-time buyers pay Stamp Duty in the UK?</button>
+                <div class="faq-answer" role="region"><p>First-time buyers in the UK qualify for Stamp Duty relief on properties priced up to £625,000. If eligible, you pay 0% Stamp Duty on properties priced up to £425,000, and a discounted rate of 5% on the portion between £425,001 and £625,000. If the property price exceeds £625,000, no first-time buyer relief applies and you pay standard rates.</p></div>
+              </li>
+              <li class="faq-item">
+                <button class="faq-question" aria-expanded="false">What is the difference between a repayment and interest-only mortgage?</button>
+                <div class="faq-answer" role="region"><p>A repayment mortgage requires monthly payments that cover both the interest and a portion of the original loan balance, ensuring the loan is completely paid off by the end of the term. An interest-only mortgage requires paying only the interest accrued each month, meaning the monthly payment is lower but the original debt remains fully outstanding and must be repaid via a separate repayment strategy at the end of the term.</p></div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Resources -->
+          <section aria-labelledby="resources-heading">
+            <h2 id="resources-heading">Official UK Resources</h2>
+            <div class="resource-links">
+              <a href="https://www.bankofengland.co.uk" class="resource-link" target="_blank" rel="noopener noreferrer">🏦 Bank of England</a>
+              <a href="https://www.gov.uk/stamp-duty-land-tax" class="resource-link" target="_blank" rel="noopener noreferrer">UK Gov Stamp Duty</a>
+              <a href="https://www.moneyhelper.org.uk" class="resource-link" target="_blank" rel="noopener noreferrer">MoneyHelper UK</a>
+            </div>
+          </section>
+
+          <!-- Related -->
+          <section aria-labelledby="related-heading">
+            <h2 id="related-heading">Related Calculators</h2>
+            <div class="tool-grid">
+              <a href="/canada-mortgage-calculator.html" class="tool-card">
+                <div class="tool-icon" aria-hidden="true">🇨🇦</div>
+                <h3>Canada Mortgage Calculator</h3>
+                <p>CMHC, stress test &amp; semi-annual compounding for Canadian buyers.</p>
+              </a>
+              <a href="/australia-mortgage-calculator.html" class="tool-card">
+                <div class="tool-icon" aria-hidden="true">🇦🇺</div>
+                <h3>Australia Mortgage Calculator</h3>
+                <p>LMI premium, offset accounts, and state stamp duty estimation.</p>
+              </a>
+              <a href="/mortgage-faq.html#uk-faq" class="tool-card">
+                <div class="tool-icon" aria-hidden="true">❓</div>
+                <h3>UK Mortgage FAQ</h3>
+                <p>Answers to common questions about UK mortgage lending rules.</p>
+              </a>
+            </div>
+          </section>
+
+        </div><!-- .main-content -->
+
+        <aside class="sidebar" aria-label="Advertisement sidebar">
+          <div class="ad-unit ad-sidebar" aria-label="Advertisement" role="complementary"></div>
+        </aside>
+
+      </div><!-- .page-layout -->
+    </div><!-- .container -->
+  </main>
+
+  <div data-component="footer"></div>
+</body>
+</html>
