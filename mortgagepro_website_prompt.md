@@ -1,6 +1,6 @@
 # MortgagePro Global v2.1 — Master Build Prompt
 ### SEO · AdSense · AI-Search · Accessibility · Analytics · Phased Launch
-**By REO TECH | Updated: June 2026**
+**By REO Technologies | Updated: June 2026**
 
 ---
 
@@ -18,7 +18,7 @@
 
 ## Project Overview
 
-Build **MortgagePro Global** — a multi-page, traditional desktop/mobile website by **REO TECH** providing free mortgage calculators, home loan tools, and financial resources for 7 countries: USA, Canada, UK, Australia, New Zealand, India, and Europe.
+Build **MortgagePro Global** — a multi-page, traditional desktop/mobile website by **REO Technologies** providing free mortgage calculators, home loan tools, and financial resources for 7 countries: USA, Canada, UK, Australia, New Zealand, India, and Europe.
 
 **Core goals:**
 1. Rank on Google for country-specific mortgage calculator keywords
@@ -233,7 +233,7 @@ Instead of duplicating the header and footer HTML across every page, use a light
 <header class="site-header" role="banner">
   <div class="container">
     <a href="/" class="logo" aria-label="MortgagePro Global homepage">
-      <img src="/images/logo.svg" alt="MortgagePro Global by REO TECH"
+      <img src="/images/logo.svg" alt="MortgagePro Global by REO Technologies"
            width="180" height="40">
     </a>
     <nav aria-label="Main navigation" id="main-nav">
@@ -267,7 +267,7 @@ Instead of duplicating the header and footer HTML across every page, use a light
       <div class="footer-col">
         <h3>MortgagePro Global</h3>
         <p>Free mortgage calculators for home buyers in USA, Canada, UK,
-           Australia, New Zealand, India, and Europe. Built by REO TECH.</p>
+           Australia, New Zealand, India, and Europe. Built by REO Technologies.</p>
       </div>
       <div class="footer-col">
         <h3>Country Tools</h3>
@@ -286,7 +286,7 @@ Instead of duplicating the header and footer HTML across every page, use a light
         <ul role="list">
           <li><a href="/mortgage-faq.html">Mortgage FAQ</a></li>
           <li><a href="/blog/">Blog & Guides</a></li>
-          <li><a href="/about.html">About REO TECH</a></li>
+          <li><a href="/about.html">About Us</a></li>
           <li><a href="/contact.html">Contact</a></li>
           <li><a href="/privacy-policy.html">Privacy Policy</a></li>
           <li><a href="/disclaimer.html">Disclaimer</a></li>
@@ -301,7 +301,7 @@ Instead of duplicating the header and footer HTML across every page, use a light
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© <span id="footer-year"></span> REO TECH. All rights reserved.</p>
+      <p>© <span id="footer-year"></span> REO Technologies. All rights reserved.</p>
     </div>
   </div>
 </footer>
@@ -425,10 +425,10 @@ Instead of duplicating the header and footer HTML across every page, use a light
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Primary SEO — NO meta keywords (Google ignores them) -->
-  <title>[Primary Keyword] | MortgagePro Global by REO TECH</title>
+  <title>[Primary Keyword] | MortgagePro Global by REO Technologies</title>
   <meta name="description" content="[Unique 150–160 char description. Primary keyword in first 60 chars.]">
   <link rel="canonical" href="https://yourdomain.com/[page-slug]">
-  <meta name="author" content="REO TECH">
+  <meta name="author" content="REO Technologies">
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph -->
@@ -648,7 +648,7 @@ document.addEventListener('DOMContentLoaded', () => {
   "name": "MortgagePro Global",
   "url": "https://yourdomain.com",
   "description": "Free mortgage calculators for USA, Canada, UK, Australia, New Zealand, India, and Europe.",
-  "publisher": { "@type": "Organization", "name": "REO TECH" },
+  "publisher": { "@type": "Organization", "name": "REO Technologies" },
   "potentialAction": {
     "@type": "SearchAction",
     "target": {
@@ -665,10 +665,10 @@ document.addEventListener('DOMContentLoaded', () => {
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "REO TECH",
+  "name": "REO Technologies",
   "url": "https://yourdomain.com",
   "logo": "https://yourdomain.com/images/logo.svg",
-  "description": "REO TECH builds free financial calculator tools for home buyers worldwide.",
+  "description": "REO Technologies builds free financial calculator tools for home buyers worldwide.",
   "contactPoint": {
     "@type": "ContactPoint",
     "email": "contactreotechy@gmail.com",
@@ -689,7 +689,7 @@ document.addEventListener('DOMContentLoaded', () => {
   "operatingSystem": "Web",
   "browserRequirements": "Requires JavaScript",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "[ISO code]" },
-  "creator": { "@type": "Organization", "name": "REO TECH" },
+  "creator": { "@type": "Organization", "name": "REO Technologies" },
   "dateModified": "2026-06"
 }
 ```
@@ -741,10 +741,10 @@ document.addEventListener('DOMContentLoaded', () => {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "[Title]",
-  "author": { "@type": "Organization", "name": "REO TECH Editorial Team" },
+  "author": { "@type": "Organization", "name": "REO Technologies Editorial Team" },
   "publisher": {
     "@type": "Organization",
-    "name": "REO TECH",
+    "name": "REO Technologies",
     "logo": { "@type": "ImageObject", "url": "https://yourdomain.com/images/logo.svg" }
   },
   "datePublished": "2026-06-01",
@@ -1226,7 +1226,7 @@ H2: Related Calculators          ← Internal links
 7. **IndexNow after every publish/update** — Run the ping script after publishing new pages or updating rates. Costs nothing, speeds up Bing indexing significantly.
 
 8. **E-E-A-T signals on every page:**
-   - "About This Calculator" section crediting REO TECH
+   - "About This Calculator" section crediting REO Technologies
    - Methodology note: "Uses standard compound interest formula"
    - Last updated date via `data-rate-updated`
    - Official central bank source links

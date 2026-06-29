@@ -1,6 +1,6 @@
 /* MortgagePro Global — accessibility.css
    WCAG 2.1 AA focus states, high contrast, keyboard nav
-   REO TECH | June 2026 */
+   REO Technologies | June 2026 */
 
 /* ===== FOCUS STATES ===== */
 :focus-visible {
@@ -8,22 +8,36 @@
   outline-offset: 3px;
   border-radius: 3px;
 }
-*:focus:not(:focus-visible) { outline: none; }
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
 
 /* ===== VISUALLY HIDDEN (screen reader only) ===== */
 .sr-only {
   position: absolute;
-  width: 1px; height: 1px;
-  padding: 0; margin: -1px;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
   overflow: hidden;
-  clip: rect(0,0,0,0);
+  clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
 }
 
 /* ===== HIGH CONTRAST OVERRIDES ===== */
 @media (prefers-contrast: high) {
-  .btn-calculate { border: 2px solid currentColor; }
-  .tool-card, .calculator-card { border: 2px solid currentColor; }
-  .quick-answer { border-left-width: 8px; }
+  .btn-calculate {
+    border: 2px solid currentColor;
+  }
+
+  .tool-card,
+  .calculator-card {
+    border: 2px solid currentColor;
+  }
+
+  .quick-answer {
+    border-left-width: 8px;
+  }
 }

@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>New Zealand Home Loan Calculator 2026 — LVR &amp; KiwiSaver | MortgagePro Global</title>
-  <meta name="description" content="Free New Zealand home loan calculator with RBNZ LVR restriction warnings, KiwiSaver first home withdrawal estimators, and monthly amortization details.">
+  <meta name="description"
+    content="Free New Zealand home loan calculator with RBNZ LVR restriction warnings, KiwiSaver first home withdrawal estimators, and monthly amortization details.">
 
   <link rel="canonical" href="https://mortgageproglobal.com/new-zealand-mortgage-calculator.html">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="New Zealand Home Loan Calculator 2026 — LVR &amp; KiwiSaver">
-  <meta property="og:description" content="Calculate your NZ mortgage payments, check LVR rules, and estimate KiwiSaver home purchase balance.">
+  <meta property="og:description"
+    content="Calculate your NZ mortgage payments, check LVR rules, and estimate KiwiSaver home purchase balance.">
   <meta property="og:url" content="https://mortgageproglobal.com/new-zealand-mortgage-calculator.html">
   <meta property="og:image" content="https://mortgageproglobal.com/images/og-nz.jpg">
 
@@ -25,19 +28,60 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
   </script>
 
   <!-- Country colour tokens + critical CSS -->
   <style>
-    :root { --page-primary:#003049; --page-accent:#00843D; --page-bg:#F0F8FF; }
-    body { margin:0; font-family:'Helvetica Neue',Arial,sans-serif; background:var(--page-bg); color:var(--page-primary); font-size:16px; line-height:1.6; }
-    .skip-link { position:absolute; left:-9999px; }
-    .skip-link:focus { position:fixed; left:0; top:0; z-index:99999; background:#003049; color:#fff; padding:12px 24px; font-weight:700; text-decoration:none; }
-    [data-component] { min-height:60px; }
-    .lvr-warning-box { background:#FFFBEB; border-left:4px solid #D97706; padding:16px; border-radius:0 8px 8px 0; margin-top:20px; font-size:0.88rem; color:#92400E; font-weight:500; display:none; }
+    :root {
+      --page-primary: #003049;
+      --page-accent: #00843D;
+      --page-bg: #F0F8FF;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: var(--page-bg);
+      color: var(--page-primary);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .skip-link:focus {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99999;
+      background: #003049;
+      color: #fff;
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    [data-component] {
+      min-height: 60px;
+    }
+
+    .lvr-warning-box {
+      background: #FFFBEB;
+      border-left: 4px solid #D97706;
+      padding: 16px;
+      border-radius: 0 8px 8px 0;
+      margin-top: 20px;
+      font-size: 0.88rem;
+      color: #92400E;
+      font-weight: 500;
+      display: none;
+    }
   </style>
 
   <!-- Structured Data: BreadcrumbList -->
@@ -50,7 +94,7 @@
 
   <!-- Structured Data: WebApplication -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"New Zealand Home Loan Calculator","url":"https://mortgageproglobal.com/new-zealand-mortgage-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Web","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"NZD"},"creator":{"@type":"Organization","name":"REO TECH"},"dateModified":"2026-06"}
+  {"@context":"https://schema.org","@type":"WebApplication","name":"New Zealand Home Loan Calculator","url":"https://mortgageproglobal.com/new-zealand-mortgage-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Web","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"NZD"},"creator":{"@type":"Organization","name":"REO Technologies"},"dateModified":"2026-06"}
   </script>
 
   <!-- Structured Data: FAQPage -->
@@ -71,6 +115,7 @@
   <script src="/js/calculators.js" defer></script>
   <script src="/js/accessibility.js" defer></script>
 </head>
+
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <div data-component="header"></div>
@@ -78,10 +123,14 @@
   <!-- Rate Strip -->
   <div class="rate-strip" role="region" aria-label="Current New Zealand mortgage rates">
     <div class="container">
-      <div class="rate-item"><span class="rate-label">RBNZ OCR Rate</span><span class="rate-value" data-rate="newzealand.ocr">—</span></div>
-      <div class="rate-item"><span class="rate-label">Floating Rate</span><span class="rate-value" data-rate="newzealand.floating">—</span></div>
-      <div class="rate-item"><span class="rate-label">1-Yr Fixed</span><span class="rate-value" data-rate="newzealand.fixed1">—</span></div>
-      <div class="rate-item"><span class="rate-label">2-Yr Fixed</span><span class="rate-value" data-rate="newzealand.fixed2">—</span></div>
+      <div class="rate-item"><span class="rate-label">RBNZ OCR Rate</span><span class="rate-value"
+          data-rate="newzealand.ocr">—</span></div>
+      <div class="rate-item"><span class="rate-label">Floating Rate</span><span class="rate-value"
+          data-rate="newzealand.floating">—</span></div>
+      <div class="rate-item"><span class="rate-label">1-Yr Fixed</span><span class="rate-value"
+          data-rate="newzealand.fixed1">—</span></div>
+      <div class="rate-item"><span class="rate-label">2-Yr Fixed</span><span class="rate-value"
+          data-rate="newzealand.fixed2">—</span></div>
       <span class="rate-strip-note" data-rate-updated></span>
     </div>
   </div>
@@ -96,7 +145,8 @@
         </ol>
       </nav>
       <h1>New Zealand Home Loan Calculator 2026 — LVR &amp; KiwiSaver</h1>
-      <p class="subtitle">Calculate monthly repayments, LVR restriction warnings, KiwiSaver first home deposit reductions, and view amortization.</p>
+      <p class="subtitle">Calculate monthly repayments, LVR restriction warnings, KiwiSaver first home deposit
+        reductions, and view amortization.</p>
     </div>
   </section>
 
@@ -108,7 +158,10 @@
           <!-- Quick Answer -->
           <div class="quick-answer" role="note" aria-label="Quick Summary">
             <p class="qa-label">Quick Answer</p>
-            <p>The <strong>New Zealand home loan calculator</strong> estimates monthly repayments and KiwiSaver offsets. For a NZ$750,000 property with 20% down at <span data-rate="newzealand.fixed2">6.75%</span> fixed for 30 years, the monthly payment is approximately <strong>$3,892</strong>. If your deposit is below 20%, an LVR warning will appear.</p>
+            <p>The <strong>New Zealand home loan calculator</strong> estimates monthly repayments and KiwiSaver offsets.
+              For a NZ$750,000 property with 20% down at <span data-rate="newzealand.fixed2">6.75%</span> fixed for 30
+              years, the monthly payment is approximately <strong>$3,892</strong>. If your deposit is below 20%, an LVR
+              warning will appear.</p>
           </div>
 
           <!-- Ad Unit 1 -->
@@ -118,44 +171,48 @@
           <section aria-labelledby="calc-heading">
             <div class="calculator-card">
               <h2 id="calc-heading">NZ Home Loan Calculator</h2>
-              <p style="color:#6B7280;font-size:0.88rem;margin-top:-8px">Methodology: Standard NZ bank home loan interest calculation. LVR rules and KiwiSaver parameters updated for 2026. Built by REO TECH.</p>
+              <p style="color:#6B7280;font-size:0.88rem;margin-top:-8px">Methodology: Standard NZ bank home loan
+                interest calculation. LVR rules and KiwiSaver parameters updated for 2026. Built by REO Technologies.
+              </p>
 
               <form id="nz-calc-form" novalidate aria-label="New Zealand home loan calculator">
                 <div class="form-row">
                   <div class="form-group">
                     <label for="nz-price">Property Price (NZ$)</label>
-                    <input type="number" id="nz-price" name="nz-price" min="50000" max="10000000" step="5000" value="750000"
-                           aria-required="true" autocomplete="off">
+                    <input type="number" id="nz-price" name="nz-price" min="50000" max="10000000" step="5000"
+                      value="750000" aria-required="true" autocomplete="off">
                   </div>
                   <div class="form-group">
                     <label for="nz-down">Deposit (%)</label>
                     <input type="number" id="nz-down" name="nz-down" min="5" max="99" step="0.5" value="20"
-                           aria-required="true" autocomplete="off">
+                      aria-required="true" autocomplete="off">
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="form-group">
                     <label for="nz-rate">Interest Rate (% p.a.)</label>
                     <input type="number" id="nz-rate" name="nz-rate" min="1" max="20" step="0.01" value="7.09"
-                           aria-required="true" autocomplete="off">
+                      aria-required="true" autocomplete="off">
                   </div>
                   <div class="form-group">
                     <label for="nz-tenure">Mortgage Term (Years)</label>
                     <input type="number" id="nz-tenure" name="nz-tenure" min="5" max="40" step="1" value="30"
-                           aria-required="true" autocomplete="off">
+                      aria-required="true" autocomplete="off">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="nz-kiwisaver">KiwiSaver Balance (NZ$, optional)</label>
                   <input type="number" id="nz-kiwisaver" name="nz-kiwisaver" min="0" max="1000000" step="1000" value="0"
-                         aria-required="true" aria-describedby="nz-kiwisaver-hint" autocomplete="off">
-                  <span id="nz-kiwisaver-hint" class="field-hint">KiwiSaver first home withdrawal value. Subtracts from cash required.</span>
+                    aria-required="true" aria-describedby="nz-kiwisaver-hint" autocomplete="off">
+                  <span id="nz-kiwisaver-hint" class="field-hint">KiwiSaver first home withdrawal value. Subtracts from
+                    cash required.</span>
                 </div>
                 <button type="submit" class="btn-calculate">Calculate Payments</button>
               </form>
 
               <!-- Results -->
-              <section id="nz-results" class="results-section" aria-label="Calculation results" aria-live="polite" aria-atomic="true">
+              <section id="nz-results" class="results-section" aria-label="Calculation results" aria-live="polite"
+                aria-atomic="true">
                 <div class="results-grid">
                   <div class="result-item">
                     <div class="result-label">Monthly Payment</div>
@@ -173,8 +230,10 @@
 
                 <div id="nz-lvr-warning" class="lvr-warning-box" role="alert"></div>
 
-                <div style="margin-top:16px;font-size:0.88rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.1);padding-top:16px;">
-                  <span id="nz-breakdown-totals">Interest: <strong id="nz-total-interest">$0</strong> | Total Cost: <strong id="nz-total-payment">$0</strong></span>
+                <div
+                  style="margin-top:16px;font-size:0.88rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.1);padding-top:16px;">
+                  <span id="nz-breakdown-totals">Interest: <strong id="nz-total-interest">$0</strong> | Total Cost:
+                    <strong id="nz-total-payment">$0</strong></span>
                 </div>
 
                 <div class="chart-container">
@@ -222,29 +281,64 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>ANZ New Zealand</td><td data-rate="newzealand.fixed1">—</td><td data-rate="newzealand.fixed2">—</td><td data-rate="newzealand.floating">—</td></tr>
-                  <tr><td>ASB Bank</td><td>7.14%</td><td>6.79%</td><td>8.64%</td></tr>
-                  <tr><td>Westpac NZ</td><td>7.09%</td><td>6.75%</td><td>8.64%</td></tr>
-                  <tr><td>BNZ</td><td>7.05%</td><td>6.69%</td><td>8.50%</td></tr>
-                  <tr><td>Kiwibank</td><td>6.99%</td><td>6.59%</td><td>8.25%</td></tr>
+                  <tr>
+                    <td>ANZ New Zealand</td>
+                    <td data-rate="newzealand.fixed1">—</td>
+                    <td data-rate="newzealand.fixed2">—</td>
+                    <td data-rate="newzealand.floating">—</td>
+                  </tr>
+                  <tr>
+                    <td>ASB Bank</td>
+                    <td>7.14%</td>
+                    <td>6.79%</td>
+                    <td>8.64%</td>
+                  </tr>
+                  <tr>
+                    <td>Westpac NZ</td>
+                    <td>7.09%</td>
+                    <td>6.75%</td>
+                    <td>8.64%</td>
+                  </tr>
+                  <tr>
+                    <td>BNZ</td>
+                    <td>7.05%</td>
+                    <td>6.69%</td>
+                    <td>8.50%</td>
+                  </tr>
+                  <tr>
+                    <td>Kiwibank</td>
+                    <td>6.99%</td>
+                    <td>6.59%</td>
+                    <td>8.25%</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
-            <p class="source-note">Source: <a href="https://www.rbnz.govt.nz" target="_blank" rel="noopener noreferrer">Reserve Bank of New Zealand</a> — <span data-rate-updated></span></p>
+            <p class="source-note">Source: <a href="https://www.rbnz.govt.nz" target="_blank"
+                rel="noopener noreferrer">Reserve Bank of New Zealand</a> — <span data-rate-updated></span></p>
           </section>
 
           <!-- SEO Content -->
           <section class="content-article" aria-labelledby="nz-rules-explained">
             <h2 id="nz-rules-explained">Understanding New Zealand Home Loan Standards</h2>
             <p class="definition-para">
-              <strong>RBNZ LVR Restrictions</strong> are regulatory rules set by the Reserve Bank of New Zealand to manage risk in the real estate market. The LVR (Loan-to-Value Ratio) compares the home loan size to the property valuation. If your deposit is less than 20% (LTV above 80%), RBNZ limits the volume of low-deposit lending banks can execute. Consequently, you will face strict approval processes, and banks may add a Low Equity Premium (LEP) or rate margin of 0.25% - 0.75% to cover risk.
+              <strong>RBNZ LVR Restrictions</strong> are regulatory rules set by the Reserve Bank of New Zealand to
+              manage risk in the real estate market. The LVR (Loan-to-Value Ratio) compares the home loan size to the
+              property valuation. If your deposit is less than 20% (LTV above 80%), RBNZ limits the volume of
+              low-deposit lending banks can execute. Consequently, you will face strict approval processes, and banks
+              may add a Low Equity Premium (LEP) or rate margin of 0.25% - 0.75% to cover risk.
             </p>
 
             <h3>Using KiwiSaver to Buy Your First Home</h3>
-            <p>KiwiSaver is a powerful resource for first home buyers in NZ. If you have contributed to KiwiSaver for a minimum of three years, you qualify to withdraw almost all your balance (including employer contributions and government tax credits, keeping a $1,000 minimum balance) to use as cash toward your home deposit. This balance directly offsets the amount of personal out-of-pocket cash you need to save.</p>
+            <p>KiwiSaver is a powerful resource for first home buyers in NZ. If you have contributed to KiwiSaver for a
+              minimum of three years, you qualify to withdraw almost all your balance (including employer contributions
+              and government tax credits, keeping a $1,000 minimum balance) to use as cash toward your home deposit.
+              This balance directly offsets the amount of personal out-of-pocket cash you need to save.</p>
 
             <h3>The OCR Policy Rate and Floating vs Fixed Loans</h3>
-            <p>The Reserve Bank's Official Cash Rate (OCR) directly impacts retail lending rates in New Zealand. NZ home buyers heavily utilize **fixed-rate mortgages** (typically 1-to-3-year terms) which offer lower rates than floating (variable) interest products, which adjust immediately whenever the OCR changes.</p>
+            <p>The Reserve Bank's Official Cash Rate (OCR) directly impacts retail lending rates in New Zealand. NZ home
+              buyers heavily utilize **fixed-rate mortgages** (typically 1-to-3-year terms) which offer lower rates than
+              floating (variable) interest products, which adjust immediately whenever the OCR changes.</p>
           </section>
 
           <!-- Ad Unit 3 -->
@@ -255,16 +349,36 @@
             <h2 id="faq-nz-heading">New Zealand Mortgage FAQs</h2>
             <ul class="faq-list" role="list">
               <li class="faq-item">
-                <button class="faq-question" aria-expanded="false">What are the Loan-to-Value Ratio (LVR) restrictions in NZ?</button>
-                <div class="faq-answer" role="region"><p>The Reserve Bank of New Zealand (RBNZ) enforces LVR rules which limit bank lending to low-deposit borrowers. For owner-occupiers, banks are restricted in how many home loans they can write with a deposit under 20% (LTV above 80%). For property investors, the deposit requirement is higher, typically requiring at least 30% to 40% down. Securing a low-deposit loan is therefore more competitive and may carry higher interest rate margins.</p></div>
+                <button class="faq-question" aria-expanded="false">What are the Loan-to-Value Ratio (LVR) restrictions
+                  in NZ?</button>
+                <div class="faq-answer" role="region">
+                  <p>The Reserve Bank of New Zealand (RBNZ) enforces LVR rules which limit bank lending to low-deposit
+                    borrowers. For owner-occupiers, banks are restricted in how many home loans they can write with a
+                    deposit under 20% (LTV above 80%). For property investors, the deposit requirement is higher,
+                    typically requiring at least 30% to 40% down. Securing a low-deposit loan is therefore more
+                    competitive and may carry higher interest rate margins.</p>
+                </div>
               </li>
               <li class="faq-item">
-                <button class="faq-question" aria-expanded="false">How can I use KiwiSaver to buy my first home?</button>
-                <div class="faq-answer" role="region"><p>If you have been a member of KiwiSaver for at least three years, you may withdraw almost all of your KiwiSaver savings (including your contributions, employer contributions, and government tax credits, but leaving a minimum of $1,000 in your account) to put toward the down payment of your first home.</p></div>
+                <button class="faq-question" aria-expanded="false">How can I use KiwiSaver to buy my first
+                  home?</button>
+                <div class="faq-answer" role="region">
+                  <p>If you have been a member of KiwiSaver for at least three years, you may withdraw almost all of
+                    your KiwiSaver savings (including your contributions, employer contributions, and government tax
+                    credits, but leaving a minimum of $1,000 in your account) to put toward the down payment of your
+                    first home.</p>
+                </div>
               </li>
               <li class="faq-item">
-                <button class="faq-question" aria-expanded="false">What is a Low Equity Premium (LEP) in New Zealand?</button>
-                <div class="faq-answer" role="region"><p>A Low Equity Premium (LEP) or Low Equity Margin (LEM) is an additional fee or interest surcharge charged by NZ banks when your home loan deposit is less than 20%. The LEP can be a one-off fee (around 0.75% to 1.50% of the loan amount) or an ongoing rate margin (typically 0.25% to 0.75% added to your interest rate) that remains until your home value increases or loan pays down past the 80% LTV threshold.</p></div>
+                <button class="faq-question" aria-expanded="false">What is a Low Equity Premium (LEP) in New
+                  Zealand?</button>
+                <div class="faq-answer" role="region">
+                  <p>A Low Equity Premium (LEP) or Low Equity Margin (LEM) is an additional fee or interest surcharge
+                    charged by NZ banks when your home loan deposit is less than 20%. The LEP can be a one-off fee
+                    (around 0.75% to 1.50% of the loan amount) or an ongoing rate margin (typically 0.25% to 0.75% added
+                    to your interest rate) that remains until your home value increases or loan pays down past the 80%
+                    LTV threshold.</p>
+                </div>
               </li>
             </ul>
           </section>
@@ -273,9 +387,12 @@
           <section aria-labelledby="resources-heading">
             <h2 id="resources-heading">Official New Zealand Resources</h2>
             <div class="resource-links">
-              <a href="https://www.rbnz.govt.nz" class="resource-link" target="_blank" rel="noopener noreferrer">🏦 Reserve Bank of New Zealand</a>
-              <a href="https://www.kiwisaver.govt.nz" class="resource-link" target="_blank" rel="noopener noreferrer">KiwiSaver NZ</a>
-              <a href="https://kaingaora.govt.nz" class="resource-link" target="_blank" rel="noopener noreferrer">Kāinga Ora (Housing NZ)</a>
+              <a href="https://www.rbnz.govt.nz" class="resource-link" target="_blank" rel="noopener noreferrer">🏦
+                Reserve Bank of New Zealand</a>
+              <a href="https://www.kiwisaver.govt.nz" class="resource-link" target="_blank"
+                rel="noopener noreferrer">KiwiSaver NZ</a>
+              <a href="https://kaingaora.govt.nz" class="resource-link" target="_blank" rel="noopener noreferrer">Kāinga
+                Ora (Housing NZ)</a>
             </div>
           </section>
 
@@ -313,4 +430,5 @@
 
   <div data-component="footer"></div>
 </body>
+
 </html>

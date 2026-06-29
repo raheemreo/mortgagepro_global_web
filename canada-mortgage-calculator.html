@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Canada Mortgage Calculator 2026 — CMHC &amp; Stress Test | MortgagePro Global</title>
-  <meta name="description" content="Free Canada mortgage calculator estimating CMHC insurance premiums and testing OSFI stress test pass/fail ratios. Uses standard Canadian semi-annual compounding.">
+  <meta name="description"
+    content="Free Canada mortgage calculator estimating CMHC insurance premiums and testing OSFI stress test pass/fail ratios. Uses standard Canadian semi-annual compounding.">
 
   <link rel="canonical" href="https://mortgageproglobal.com/canada-mortgage-calculator.html">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Canada Mortgage Calculator 2026 — CMHC &amp; Stress Test">
-  <meta property="og:description" content="Compute your Canada mortgage payment including CMHC fees, OSFI stress test check, and amortization.">
+  <meta property="og:description"
+    content="Compute your Canada mortgage payment including CMHC fees, OSFI stress test check, and amortization.">
   <meta property="og:url" content="https://mortgageproglobal.com/canada-mortgage-calculator.html">
   <meta property="og:image" content="https://mortgageproglobal.com/images/og-canada.jpg">
 
@@ -25,21 +28,67 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
   </script>
 
   <!-- Country colour tokens + critical CSS -->
   <style>
-    :root { --page-primary:#0A2E1A; --page-accent:#C8102E; --page-bg:#F0F7F4; }
-    body { margin:0; font-family:'Helvetica Neue',Arial,sans-serif; background:var(--page-bg); color:var(--page-primary); font-size:16px; line-height:1.6; }
-    .skip-link { position:absolute; left:-9999px; }
-    .skip-link:focus { position:fixed; left:0; top:0; z-index:99999; background:#0A2E1A; color:#fff; padding:12px 24px; font-weight:700; text-decoration:none; }
-    [data-component] { min-height:60px; }
-    .status-pill { display:inline-block; padding:4px 10px; border-radius:20px; font-size:0.8rem; font-weight:700; text-transform:uppercase; }
-    .status-pass { background:#D1FAE5; color:#065F46; }
-    .status-fail { background:#FEE2E2; color:#991B1B; }
+    :root {
+      --page-primary: #0A2E1A;
+      --page-accent: #C8102E;
+      --page-bg: #F0F7F4;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: var(--page-bg);
+      color: var(--page-primary);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .skip-link:focus {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99999;
+      background: #0A2E1A;
+      color: #fff;
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    [data-component] {
+      min-height: 60px;
+    }
+
+    .status-pill {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .status-pass {
+      background: #D1FAE5;
+      color: #065F46;
+    }
+
+    .status-fail {
+      background: #FEE2E2;
+      color: #991B1B;
+    }
   </style>
 
   <!-- Structured Data: BreadcrumbList -->
@@ -52,7 +101,7 @@
 
   <!-- Structured Data: WebApplication -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"Canada Mortgage Calculator","url":"https://mortgageproglobal.com/canada-mortgage-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Web","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"},"creator":{"@type":"Organization","name":"REO TECH"},"dateModified":"2026-06"}
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Canada Mortgage Calculator","url":"https://mortgageproglobal.com/canada-mortgage-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Web","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"},"creator":{"@type":"Organization","name":"REO Technologies"},"dateModified":"2026-06"}
   </script>
 
   <!-- Structured Data: FAQPage -->
@@ -73,6 +122,7 @@
   <script src="/js/calculators.js" defer></script>
   <script src="/js/accessibility.js" defer></script>
 </head>
+
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <div data-component="header"></div>
@@ -80,10 +130,14 @@
   <!-- Rate Strip -->
   <div class="rate-strip" role="region" aria-label="Current Canada mortgage rates">
     <div class="container">
-      <div class="rate-item"><span class="rate-label">BoC Policy Rate</span><span class="rate-value" data-rate="canada.boc">—</span></div>
-      <div class="rate-item"><span class="rate-label">5-Yr Fixed</span><span class="rate-value" data-rate="canada.fixed5">—</span></div>
-      <div class="rate-item"><span class="rate-label">3-Yr Fixed</span><span class="rate-value" data-rate="canada.fixed3">—</span></div>
-      <div class="rate-item"><span class="rate-label">Variable Rate</span><span class="rate-value" data-rate="canada.variable">—</span></div>
+      <div class="rate-item"><span class="rate-label">BoC Policy Rate</span><span class="rate-value"
+          data-rate="canada.boc">—</span></div>
+      <div class="rate-item"><span class="rate-label">5-Yr Fixed</span><span class="rate-value"
+          data-rate="canada.fixed5">—</span></div>
+      <div class="rate-item"><span class="rate-label">3-Yr Fixed</span><span class="rate-value"
+          data-rate="canada.fixed3">—</span></div>
+      <div class="rate-item"><span class="rate-label">Variable Rate</span><span class="rate-value"
+          data-rate="canada.variable">—</span></div>
       <span class="rate-strip-note" data-rate-updated></span>
     </div>
   </div>
@@ -98,7 +152,8 @@
         </ol>
       </nav>
       <h1>Canada Mortgage Calculator 2026 — CMHC, Stress Test &amp; Amortization</h1>
-      <p class="subtitle">Calculate monthly payments, CMHC premiums, OSFI stress test qualifications, and view a semi-annually compounded amortization schedule.</p>
+      <p class="subtitle">Calculate monthly payments, CMHC premiums, OSFI stress test qualifications, and view a
+        semi-annually compounded amortization schedule.</p>
     </div>
   </section>
 
@@ -110,7 +165,10 @@
           <!-- Quick Answer -->
           <div class="quick-answer" role="note" aria-label="Quick Summary">
             <p class="qa-label">Quick Answer</p>
-            <p>The <strong>Canada mortgage calculator</strong> estimates your monthly payment using Canadian semi-annual compounding regulations. For a CA$650,000 home with 20% down at <span data-rate="canada.fixed5">4.99%</span> fixed for 25 years, the monthly payment is approximately <strong>$3,025</strong>. If down payment is under 20%, CMHC insurance is added to the loan.</p>
+            <p>The <strong>Canada mortgage calculator</strong> estimates your monthly payment using Canadian semi-annual
+              compounding regulations. For a CA$650,000 home with 20% down at <span
+                data-rate="canada.fixed5">4.99%</span> fixed for 25 years, the monthly payment is approximately
+              <strong>$3,025</strong>. If down payment is under 20%, CMHC insurance is added to the loan.</p>
           </div>
 
           <!-- Ad Unit 1 -->
@@ -120,19 +178,20 @@
           <section aria-labelledby="calc-heading">
             <div class="calculator-card">
               <h2 id="calc-heading">Canada Mortgage Calculator</h2>
-              <p style="color:#6B7280;font-size:0.88rem;margin-top:-8px">Methodology: Semi-annual compounding as per the Canadian Interest Act. CMHC premium tiered automatically. Built by REO TECH.</p>
+              <p style="color:#6B7280;font-size:0.88rem;margin-top:-8px">Methodology: Semi-annual compounding as per the
+                Canadian Interest Act. CMHC premium tiered automatically. Built by REO Technologies.</p>
 
               <form id="canada-calc-form" novalidate aria-label="Canada mortgage calculator">
                 <div class="form-row">
                   <div class="form-group">
                     <label for="can-price">Property Price (CA$)</label>
-                    <input type="number" id="can-price" name="can-price" min="50000" max="10000000" step="5000" value="650000"
-                           aria-required="true" autocomplete="off">
+                    <input type="number" id="can-price" name="can-price" min="50000" max="10000000" step="5000"
+                      value="650000" aria-required="true" autocomplete="off">
                   </div>
                   <div class="form-group">
                     <label for="can-down">Down Payment (%)</label>
                     <input type="number" id="can-down" name="can-down" min="5" max="99" step="0.5" value="20"
-                           aria-required="true" aria-describedby="can-down-hint" autocomplete="off">
+                      aria-required="true" aria-describedby="can-down-hint" autocomplete="off">
                     <span id="can-down-hint" class="field-hint">Min 5% under $500k. 20% minimum for $1M+.</span>
                   </div>
                 </div>
@@ -140,7 +199,7 @@
                   <div class="form-group">
                     <label for="can-rate">Interest Rate (% p.a.)</label>
                     <input type="number" id="can-rate" name="can-rate" min="1" max="20" step="0.01" value="4.99"
-                           aria-required="true" autocomplete="off">
+                      aria-required="true" autocomplete="off">
                   </div>
                   <div class="form-group">
                     <label for="can-tenure">Amortization Period (Years)</label>
@@ -155,15 +214,16 @@
                 </div>
                 <div class="form-group">
                   <label for="can-income">Annual Household Income (Gross CA$)</label>
-                  <input type="number" id="can-income" name="can-income" min="10000" max="10000000" step="1000" value="120000"
-                         aria-required="true" aria-describedby="can-income-hint" autocomplete="off">
+                  <input type="number" id="can-income" name="can-income" min="10000" max="10000000" step="1000"
+                    value="120000" aria-required="true" aria-describedby="can-income-hint" autocomplete="off">
                   <span id="can-income-hint" class="field-hint">Used to verify OSFI Stress Test qualification.</span>
                 </div>
                 <button type="submit" class="btn-calculate">Calculate Mortgage</button>
               </form>
 
               <!-- Results -->
-              <section id="canada-results" class="results-section" aria-label="Calculation results" aria-live="polite" aria-atomic="true">
+              <section id="canada-results" class="results-section" aria-label="Calculation results" aria-live="polite"
+                aria-atomic="true">
                 <div class="results-grid">
                   <div class="result-item">
                     <div class="result-label">Monthly Payment</div>
@@ -179,7 +239,8 @@
                   </div>
                 </div>
 
-                <div style="margin-top:16px;font-size:0.88rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.1);padding-top:16px;">
+                <div
+                  style="margin-top:16px;font-size:0.88rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.1);padding-top:16px;">
                   <span>LTV Ratio: <strong id="can-ltv">—</strong></span>
                   <span>Stress Test: <span id="can-stress-status" class="status-pill">—</span></span>
                 </div>
@@ -219,7 +280,8 @@
             <h2 id="rates-heading">Canada Mortgage Rates by Bank</h2>
             <div class="data-table-wrap">
               <table>
-                <caption>Current mortgage rates from major Canadian institutions — <span data-rate-updated></span></caption>
+                <caption>Current mortgage rates from major Canadian institutions — <span data-rate-updated></span>
+                </caption>
                 <thead>
                   <tr>
                     <th scope="col">Financial Institution</th>
@@ -229,36 +291,72 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>RBC Royal Bank</td><td data-rate="canada.fixed5">—</td><td data-rate="canada.fixed3">—</td><td data-rate="canada.variable">—</td></tr>
-                  <tr><td>TD Canada Trust</td><td>5.09%</td><td>5.24%</td><td>6.05%</td></tr>
-                  <tr><td>Scotiabank</td><td>5.14%</td><td>5.29%</td><td>6.10%</td></tr>
-                  <tr><td>BMO Bank of Montreal</td><td>5.04%</td><td>5.19%</td><td>5.99%</td></tr>
-                  <tr><td>CIBC</td><td>5.09%</td><td>5.24%</td><td>6.05%</td></tr>
+                  <tr>
+                    <td>RBC Royal Bank</td>
+                    <td data-rate="canada.fixed5">—</td>
+                    <td data-rate="canada.fixed3">—</td>
+                    <td data-rate="canada.variable">—</td>
+                  </tr>
+                  <tr>
+                    <td>TD Canada Trust</td>
+                    <td>5.09%</td>
+                    <td>5.24%</td>
+                    <td>6.05%</td>
+                  </tr>
+                  <tr>
+                    <td>Scotiabank</td>
+                    <td>5.14%</td>
+                    <td>5.29%</td>
+                    <td>6.10%</td>
+                  </tr>
+                  <tr>
+                    <td>BMO Bank of Montreal</td>
+                    <td>5.04%</td>
+                    <td>5.19%</td>
+                    <td>5.99%</td>
+                  </tr>
+                  <tr>
+                    <td>CIBC</td>
+                    <td>5.09%</td>
+                    <td>5.24%</td>
+                    <td>6.05%</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
-            <p class="source-note">Source: <a href="https://www.bankofcanada.ca" target="_blank" rel="noopener noreferrer">Bank of Canada</a> — <span data-rate-updated></span></p>
+            <p class="source-note">Source: <a href="https://www.bankofcanada.ca" target="_blank"
+                rel="noopener noreferrer">Bank of Canada</a> — <span data-rate-updated></span></p>
           </section>
 
           <!-- SEO Content -->
           <section class="content-article" aria-labelledby="rules-explained">
             <h2 id="rules-explained">Understanding Canadian Mortgage Regulations</h2>
             <p class="definition-para">
-              <strong>Canada Mortgage Regulations</strong> dictate that home loans are subject to unique amortization rules and underwriting standards. Standard Canadian mortgages compound interest semi-annually (twice a year) rather than monthly. This formula (Effective Rate = (1 + R/2)^(2/12) - 1) makes interest calculations slightly lower compared to monthly compounding systems.
+              <strong>Canada Mortgage Regulations</strong> dictate that home loans are subject to unique amortization
+              rules and underwriting standards. Standard Canadian mortgages compound interest semi-annually (twice a
+              year) rather than monthly. This formula (Effective Rate = (1 + R/2)^(2/12) - 1) makes interest
+              calculations slightly lower compared to monthly compounding systems.
             </p>
 
             <h3>How CMHC Default Insurance Affects Your Loan</h3>
-            <p>If your down payment is less than 20%, you are legally required to purchase mortgage default insurance. This is commonly provided by the <strong>Canada Mortgage and Housing Corporation (CMHC)</strong>. The insurance premium rates are tiered based on your Loan-to-Value (LTV) ratio:</p>
+            <p>If your down payment is less than 20%, you are legally required to purchase mortgage default insurance.
+              This is commonly provided by the <strong>Canada Mortgage and Housing Corporation (CMHC)</strong>. The
+              insurance premium rates are tiered based on your Loan-to-Value (LTV) ratio:</p>
             <ul>
               <li><strong>5.0% to 9.9% Down Payment (90.1% to 95% LTV):</strong> 4.00% premium rate.</li>
               <li><strong>10.0% to 14.9% Down Payment (85.1% to 90% LTV):</strong> 3.10% premium rate.</li>
               <li><strong>15.0% to 19.9% Down Payment (80.1% to 85% LTV):</strong> 2.80% premium rate.</li>
               <li><strong>20.0% or More Down Payment (80% or Less LTV):</strong> No CMHC insurance required.</li>
             </ul>
-            <p>Note that homes priced above $1,000,000 do not qualify for CMHC default insurance and require a minimum 20% down payment.</p>
+            <p>Note that homes priced above $1,000,000 do not qualify for CMHC default insurance and require a minimum
+              20% down payment.</p>
 
             <h3>The OSFI Mortgage Stress Test (MQR)</h3>
-            <p>The **Office of the Superintendent of Financial Institutions (OSFI)** mandates a mortgage stress test to ensure that buyers can keep up with their payments if interest rates rise. Home buyers must prove they can qualify at either their contract interest rate plus 2%, or the Bank of Canada benchmark rate (currently <span data-rate="canada.stressTest">6.99%</span>), whichever is higher. To pass, your housing costs (P&amp;I payment, taxes, heating) must not exceed 39% of your gross income (GDS ratio).</p>
+            <p>The **Office of the Superintendent of Financial Institutions (OSFI)** mandates a mortgage stress test to
+              ensure that buyers can keep up with their payments if interest rates rise. Home buyers must prove they can
+              qualify at either their contract interest rate plus 2%, or the Bank of Canada benchmark rate (currently
+              <span data-rate="canada.stressTest">6.99%</span>), whichever is higher. To pass, your housing costs
+              (P&amp;I payment, taxes, heating) must not exceed 39% of your gross income (GDS ratio).</p>
           </section>
 
           <!-- Ad Unit 3 -->
@@ -270,15 +368,33 @@
             <ul class="faq-list" role="list">
               <li class="faq-item">
                 <button class="faq-question" aria-expanded="false">What is CMHC insurance in Canada?</button>
-                <div class="faq-answer" role="region"><p>CMHC insurance is mortgage default insurance required by Canadian law when buying a home with a down payment between 5% and less than 20% of the purchase price. The insurance is provided by the Canada Mortgage and Housing Corporation and protects the lender in case of default. The premium is tiered based on the loan-to-value ratio and is added to the total mortgage loan amount.</p></div>
+                <div class="faq-answer" role="region">
+                  <p>CMHC insurance is mortgage default insurance required by Canadian law when buying a home with a
+                    down payment between 5% and less than 20% of the purchase price. The insurance is provided by the
+                    Canada Mortgage and Housing Corporation and protects the lender in case of default. The premium is
+                    tiered based on the loan-to-value ratio and is added to the total mortgage loan amount.</p>
+                </div>
               </li>
               <li class="faq-item">
-                <button class="faq-question" aria-expanded="false">How does the mortgage stress test work in Canada?</button>
-                <div class="faq-answer" role="region"><p>The Canadian mortgage stress test requires home buyers to qualify at a higher interest rate than their actual contract rate to ensure they can manage payments if rates rise. The qualifying rate is either your contract rate plus 2% or the Bank of Canada benchmark rate (currently 6.99%), whichever is higher. Borrowers must pass debt service ratio thresholds (GDS under 39% and TDS under 44%) at this higher rate.</p></div>
+                <button class="faq-question" aria-expanded="false">How does the mortgage stress test work in
+                  Canada?</button>
+                <div class="faq-answer" role="region">
+                  <p>The Canadian mortgage stress test requires home buyers to qualify at a higher interest rate than
+                    their actual contract rate to ensure they can manage payments if rates rise. The qualifying rate is
+                    either your contract rate plus 2% or the Bank of Canada benchmark rate (currently 6.99%), whichever
+                    is higher. Borrowers must pass debt service ratio thresholds (GDS under 39% and TDS under 44%) at
+                    this higher rate.</p>
+                </div>
               </li>
               <li class="faq-item">
-                <button class="faq-question" aria-expanded="false">What is the minimum down payment for a home in Canada?</button>
-                <div class="faq-answer" role="region"><p>The minimum down payment for a home in Canada is tiered: 5% on the first $500,000 of the purchase price, and 10% on the portion between $500,001 and $999,999. Homes priced at $1 million or more require a flat minimum down payment of 20% as they are not eligible for government-backed mortgage insurance.</p></div>
+                <button class="faq-question" aria-expanded="false">What is the minimum down payment for a home in
+                  Canada?</button>
+                <div class="faq-answer" role="region">
+                  <p>The minimum down payment for a home in Canada is tiered: 5% on the first $500,000 of the purchase
+                    price, and 10% on the portion between $500,001 and $999,999. Homes priced at $1 million or more
+                    require a flat minimum down payment of 20% as they are not eligible for government-backed mortgage
+                    insurance.</p>
+                </div>
               </li>
             </ul>
           </section>
@@ -287,9 +403,12 @@
           <section aria-labelledby="resources-heading">
             <h2 id="resources-heading">Official Resources</h2>
             <div class="resource-links">
-              <a href="https://www.bankofcanada.ca" class="resource-link" target="_blank" rel="noopener noreferrer">🏦 Bank of Canada</a>
-              <a href="https://www.cmhc-schl.gc.ca" class="resource-link" target="_blank" rel="noopener noreferrer">CMHC Canada</a>
-              <a href="https://www.osfi-bsif.gc.ca" class="resource-link" target="_blank" rel="noopener noreferrer">OSFI Canada</a>
+              <a href="https://www.bankofcanada.ca" class="resource-link" target="_blank" rel="noopener noreferrer">🏦
+                Bank of Canada</a>
+              <a href="https://www.cmhc-schl.gc.ca" class="resource-link" target="_blank" rel="noopener noreferrer">CMHC
+                Canada</a>
+              <a href="https://www.osfi-bsif.gc.ca" class="resource-link" target="_blank" rel="noopener noreferrer">OSFI
+                Canada</a>
             </div>
           </section>
 
@@ -327,4 +446,5 @@
 
   <div data-component="footer"></div>
 </body>
+
 </html>

@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>USA Mortgage Calculator 2026 — PITI, PMI, FHA, VA & USDA Loans | MortgagePro Global</title>
-  <meta name="description" content="Free USA mortgage calculator with PITI breakdown (Principal, Interest, Tax, Insurance), PMI, FHA, VA, and USDA loan support. Calculate monthly payments and 30-year amortization schedule.">
+  <meta name="description"
+    content="Free USA mortgage calculator with PITI breakdown (Principal, Interest, Tax, Insurance), PMI, FHA, VA, and USDA loan support. Calculate monthly payments and 30-year amortization schedule.">
 
   <link rel="canonical" href="https://mortgageproglobal.com/usa-mortgage-calculator.html">
   <meta property="og:title" content="USA Mortgage Calculator 2026 — PITI, PMI, FHA, VA & USDA">
-  <meta property="og:description" content="Calculate your US mortgage payment including principal, interest, property tax, insurance, and PMI.">
+  <meta property="og:description"
+    content="Calculate your US mortgage payment including principal, interest, property tax, insurance, and PMI.">
   <meta property="og:url" content="https://mortgageproglobal.com/usa-mortgage-calculator.html">
   <meta property="og:image" content="https://mortgageproglobal.com/images/og-usa.jpg">
 
@@ -20,17 +23,47 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
   </script>
 
   <style>
-    :root { --page-primary:#0B1D3A; --page-accent:#B91C1C; --page-bg:#F0F4FF; }
-    body { margin:0; font-family:'Helvetica Neue',Arial,sans-serif; background:var(--page-bg); color:var(--page-primary); font-size:16px; line-height:1.6; }
-    .skip-link { position:absolute; left:-9999px; }
-    .skip-link:focus { position:fixed; left:0; top:0; z-index:99999; background:#0B1D3A; color:#fff; padding:12px 24px; font-weight:700; text-decoration:none; }
-    [data-component] { min-height:60px; }
+    :root {
+      --page-primary: #0B1D3A;
+      --page-accent: #B91C1C;
+      --page-bg: #F0F4FF;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: var(--page-bg);
+      color: var(--page-primary);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .skip-link:focus {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99999;
+      background: #0B1D3A;
+      color: #fff;
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    [data-component] {
+      min-height: 60px;
+    }
   </style>
 
   <script type="application/ld+json">
@@ -41,7 +74,7 @@
   </script>
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"USA Mortgage Calculator","url":"https://mortgageproglobal.com/usa-mortgage-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Web","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"REO TECH"},"dateModified":"2026-06"}
+  {"@context":"https://schema.org","@type":"WebApplication","name":"USA Mortgage Calculator","url":"https://mortgageproglobal.com/usa-mortgage-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Web","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"REO Technologies"},"dateModified":"2026-06"}
   </script>
 
   <script type="application/ld+json">
@@ -61,6 +94,7 @@
   <script src="/js/calculators.js" defer></script>
   <script src="/js/accessibility.js" defer></script>
 </head>
+
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <div data-component="header"></div>
@@ -68,10 +102,14 @@
   <!-- Rate Strip -->
   <div class="rate-strip" role="region" aria-label="Current US mortgage rates">
     <div class="container">
-      <div class="rate-item"><span class="rate-label">Fed Funds Rate</span><span class="rate-value" data-rate="usa.fed">—</span></div>
-      <div class="rate-item"><span class="rate-label">30-Yr Fixed</span><span class="rate-value" data-rate="usa.fixed30">—</span></div>
-      <div class="rate-item"><span class="rate-label">15-Yr Fixed</span><span class="rate-value" data-rate="usa.fixed15">—</span></div>
-      <div class="rate-item"><span class="rate-label">5/1 ARM</span><span class="rate-value" data-rate="usa.arm5">—</span></div>
+      <div class="rate-item"><span class="rate-label">Fed Funds Rate</span><span class="rate-value"
+          data-rate="usa.fed">—</span></div>
+      <div class="rate-item"><span class="rate-label">30-Yr Fixed</span><span class="rate-value"
+          data-rate="usa.fixed30">—</span></div>
+      <div class="rate-item"><span class="rate-label">15-Yr Fixed</span><span class="rate-value"
+          data-rate="usa.fixed15">—</span></div>
+      <div class="rate-item"><span class="rate-label">5/1 ARM</span><span class="rate-value"
+          data-rate="usa.arm5">—</span></div>
       <span class="rate-strip-note" data-rate-updated></span>
     </div>
   </div>
@@ -86,7 +124,8 @@
         </ol>
       </nav>
       <h1>USA Mortgage Calculator 2026 — PITI, PMI, FHA, VA &amp; USDA Loans</h1>
-      <p class="subtitle">Calculate your complete monthly mortgage payment including principal, interest, property tax, homeowners insurance, and PMI.</p>
+      <p class="subtitle">Calculate your complete monthly mortgage payment including principal, interest, property tax,
+        homeowners insurance, and PMI.</p>
     </div>
   </section>
 
@@ -97,7 +136,10 @@
 
           <div class="quick-answer" role="note" aria-label="Quick Summary">
             <p class="qa-label">Quick Answer</p>
-            <p>The <strong>USA mortgage calculator</strong> computes your full PITI payment — Principal &amp; Interest, Property Tax, and Homeowners Insurance — plus PMI if your down payment is below 20%. For a $400,000 home with 20% down at <span data-rate="usa.fixed30">6.82%</span> fixed for 30 years, the monthly P&amp;I payment is approximately <strong>$2,093</strong>.</p>
+            <p>The <strong>USA mortgage calculator</strong> computes your full PITI payment — Principal &amp; Interest,
+              Property Tax, and Homeowners Insurance — plus PMI if your down payment is below 20%. For a $400,000 home
+              with 20% down at <span data-rate="usa.fixed30">6.82%</span> fixed for 30 years, the monthly P&amp;I
+              payment is approximately <strong>$2,093</strong>.</p>
           </div>
 
           <!-- Ad Unit 1 -->
@@ -107,19 +149,20 @@
           <section aria-labelledby="usa-calc-heading">
             <div class="calculator-card">
               <h2 id="usa-calc-heading">US Mortgage Calculator</h2>
-              <p style="color:#6B7280;font-size:0.88rem;margin-top:-8px">Methodology: Standard amortization formula. PMI at 0.6% annually when LTV &gt; 80%. Built by REO TECH.</p>
+              <p style="color:#6B7280;font-size:0.88rem;margin-top:-8px">Methodology: Standard amortization formula. PMI
+                at 0.6% annually when LTV &gt; 80%. Built by REO Technologies.</p>
 
               <form id="usa-calc-form" novalidate aria-label="USA mortgage calculator">
                 <div class="form-row">
                   <div class="form-group">
                     <label for="usa-price">Home Price ($)</label>
-                    <input type="number" id="usa-price" name="usa-price" min="50000" max="10000000" step="1000" value="400000"
-                           aria-required="true" autocomplete="off">
+                    <input type="number" id="usa-price" name="usa-price" min="50000" max="10000000" step="1000"
+                      value="400000" aria-required="true" autocomplete="off">
                   </div>
                   <div class="form-group">
                     <label for="usa-down">Down Payment (%)</label>
                     <input type="number" id="usa-down" name="usa-down" min="3" max="99" step="0.5" value="20"
-                           aria-required="true" aria-describedby="usa-down-hint" autocomplete="off">
+                      aria-required="true" aria-describedby="usa-down-hint" autocomplete="off">
                     <span id="usa-down-hint" class="field-hint">Below 20% requires PMI</span>
                   </div>
                 </div>
@@ -127,7 +170,7 @@
                   <div class="form-group">
                     <label for="usa-rate">Interest Rate (% p.a.)</label>
                     <input type="number" id="usa-rate" name="usa-rate" min="2" max="20" step="0.01" value="6.82"
-                           aria-required="true" autocomplete="off">
+                      aria-required="true" autocomplete="off">
                   </div>
                   <div class="form-group">
                     <label for="usa-tenure">Loan Term (Years)</label>
@@ -143,20 +186,21 @@
                   <div class="form-group">
                     <label for="usa-tax">Property Tax Rate (% annually)</label>
                     <input type="number" id="usa-tax" name="usa-tax" min="0" max="5" step="0.01" value="1.20"
-                           aria-required="true" aria-describedby="usa-tax-hint" autocomplete="off">
+                      aria-required="true" aria-describedby="usa-tax-hint" autocomplete="off">
                     <span id="usa-tax-hint" class="field-hint">US average ~1.2%. Check your county.</span>
                   </div>
                   <div class="form-group">
                     <label for="usa-insurance">Homeowners Insurance ($/year)</label>
-                    <input type="number" id="usa-insurance" name="usa-insurance" min="0" max="20000" step="100" value="1200"
-                           aria-required="true" autocomplete="off">
+                    <input type="number" id="usa-insurance" name="usa-insurance" min="0" max="20000" step="100"
+                      value="1200" aria-required="true" autocomplete="off">
                   </div>
                 </div>
                 <button type="submit" class="btn-calculate">Calculate Mortgage Payment</button>
               </form>
 
               <!-- Results -->
-              <section id="usa-results" class="results-section" aria-label="Mortgage calculation results" aria-live="polite" aria-atomic="true">
+              <section id="usa-results" class="results-section" aria-label="Mortgage calculation results"
+                aria-live="polite" aria-atomic="true">
                 <div class="results-grid">
                   <div class="result-item">
                     <div class="result-label">Total PITI Payment</div>
@@ -178,14 +222,27 @@
 
                 <!-- PITI Breakdown -->
                 <div class="piti-box">
-                  <div class="piti-item"><div class="piti-label">Principal &amp; Interest</div><div class="piti-value" id="usa-pi-2">$0</div></div>
-                  <div class="piti-item"><div class="piti-label">Property Tax</div><div class="piti-value" id="usa-tax-monthly">$0</div></div>
-                  <div class="piti-item"><div class="piti-label">Insurance</div><div class="piti-value" id="usa-insurance-monthly">$0</div></div>
-                  <div class="piti-item"><div class="piti-label">PMI</div><div class="piti-value" id="usa-pmi">—</div></div>
+                  <div class="piti-item">
+                    <div class="piti-label">Principal &amp; Interest</div>
+                    <div class="piti-value" id="usa-pi-2">$0</div>
+                  </div>
+                  <div class="piti-item">
+                    <div class="piti-label">Property Tax</div>
+                    <div class="piti-value" id="usa-tax-monthly">$0</div>
+                  </div>
+                  <div class="piti-item">
+                    <div class="piti-label">Insurance</div>
+                    <div class="piti-value" id="usa-insurance-monthly">$0</div>
+                  </div>
+                  <div class="piti-item">
+                    <div class="piti-label">PMI</div>
+                    <div class="piti-value" id="usa-pmi">—</div>
+                  </div>
                 </div>
 
                 <div style="margin-top:16px;font-size:0.82rem;opacity:0.8">
-                  Loan Amount: <strong id="usa-loan-amount">$0</strong> &nbsp;|&nbsp; LTV: <strong id="usa-ltv">—</strong>
+                  Loan Amount: <strong id="usa-loan-amount">$0</strong> &nbsp;|&nbsp; LTV: <strong
+                    id="usa-ltv">—</strong>
                 </div>
 
                 <div class="chart-container">
@@ -233,10 +290,34 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>Conventional</td><td>3%–5%</td><td>620+</td><td>PMI if &lt;20% down</td><td>All buyers</td></tr>
-                  <tr><td>FHA</td><td>3.5%</td><td>580+</td><td>MIP (required)</td><td>All buyers, first-time focus</td></tr>
-                  <tr><td>VA</td><td>0%</td><td>None (lender sets)</td><td>None (funding fee)</td><td>Veterans, active military, surviving spouses</td></tr>
-                  <tr><td>USDA</td><td>0%</td><td>640+</td><td>Guarantee fee</td><td>Rural/suburban buyers (income limits)</td></tr>
+                  <tr>
+                    <td>Conventional</td>
+                    <td>3%–5%</td>
+                    <td>620+</td>
+                    <td>PMI if &lt;20% down</td>
+                    <td>All buyers</td>
+                  </tr>
+                  <tr>
+                    <td>FHA</td>
+                    <td>3.5%</td>
+                    <td>580+</td>
+                    <td>MIP (required)</td>
+                    <td>All buyers, first-time focus</td>
+                  </tr>
+                  <tr>
+                    <td>VA</td>
+                    <td>0%</td>
+                    <td>None (lender sets)</td>
+                    <td>None (funding fee)</td>
+                    <td>Veterans, active military, surviving spouses</td>
+                  </tr>
+                  <tr>
+                    <td>USDA</td>
+                    <td>0%</td>
+                    <td>640+</td>
+                    <td>Guarantee fee</td>
+                    <td>Rural/suburban buyers (income limits)</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -246,14 +327,24 @@
           <section class="content-article" aria-labelledby="piti-explained">
             <h2 id="piti-explained">What is PITI in a US Mortgage?</h2>
             <p class="definition-para">
-              <strong>PITI</strong> stands for <strong>Principal, Interest, Taxes, and Insurance</strong> — the four components of a complete monthly mortgage payment in the United States. Lenders use your total PITI to calculate your front-end debt-to-income ratio (DTI), which should typically not exceed 28% of your gross monthly income for mortgage approval.
+              <strong>PITI</strong> stands for <strong>Principal, Interest, Taxes, and Insurance</strong> — the four
+              components of a complete monthly mortgage payment in the United States. Lenders use your total PITI to
+              calculate your front-end debt-to-income ratio (DTI), which should typically not exceed 28% of your gross
+              monthly income for mortgage approval.
             </p>
 
             <h3>When is PMI Required?</h3>
-            <p>Private Mortgage Insurance (PMI) is required on conventional US mortgages when the down payment is less than 20%, resulting in an LTV ratio above 80%. PMI typically costs 0.5%–1.5% of the loan amount annually and can be cancelled once your LTV reaches 80% through principal repayment or home value appreciation, as required by the Homeowners Protection Act of 1998.</p>
+            <p>Private Mortgage Insurance (PMI) is required on conventional US mortgages when the down payment is less
+              than 20%, resulting in an LTV ratio above 80%. PMI typically costs 0.5%–1.5% of the loan amount annually
+              and can be cancelled once your LTV reaches 80% through principal repayment or home value appreciation, as
+              required by the Homeowners Protection Act of 1998.</p>
 
             <h3>30-Year vs 15-Year Mortgage: Which is Better?</h3>
-            <p>A <strong>30-year mortgage</strong> offers lower monthly payments but costs significantly more in total interest. A <strong>15-year mortgage</strong> has higher monthly payments but builds equity faster and carries a lower interest rate (currently about 0.71% lower than 30-year rates). For most buyers who plan to stay in a home long-term, the 15-year option saves substantially — often $100,000+ in interest on a $400,000 loan.</p>
+            <p>A <strong>30-year mortgage</strong> offers lower monthly payments but costs significantly more in total
+              interest. A <strong>15-year mortgage</strong> has higher monthly payments but builds equity faster and
+              carries a lower interest rate (currently about 0.71% lower than 30-year rates). For most buyers who plan
+              to stay in a home long-term, the 15-year option saves substantially — often $100,000+ in interest on a
+              $400,000 loan.</p>
           </section>
 
           <!-- FAQ -->
@@ -262,15 +353,32 @@
             <ul class="faq-list" role="list">
               <li class="faq-item">
                 <button class="faq-question" aria-expanded="false">What is PITI in a mortgage?</button>
-                <div class="faq-answer" role="region"><p>PITI stands for Principal, Interest, Taxes, and Insurance — the four components of a complete monthly mortgage payment in the USA. Principal is the portion reducing your loan balance, interest is the lender's fee, taxes are your monthly property tax escrow, and insurance covers homeowners insurance. Lenders use your total PITI payment to calculate your front-end debt-to-income ratio.</p></div>
+                <div class="faq-answer" role="region">
+                  <p>PITI stands for Principal, Interest, Taxes, and Insurance — the four components of a complete
+                    monthly mortgage payment in the USA. Principal is the portion reducing your loan balance, interest
+                    is the lender's fee, taxes are your monthly property tax escrow, and insurance covers homeowners
+                    insurance. Lenders use your total PITI payment to calculate your front-end debt-to-income ratio.</p>
+                </div>
               </li>
               <li class="faq-item">
                 <button class="faq-question" aria-expanded="false">When is PMI required?</button>
-                <div class="faq-answer" role="region"><p>Private Mortgage Insurance (PMI) is required on conventional US mortgages when the down payment is less than 20% of the purchase price, resulting in a Loan-to-Value (LTV) ratio above 80%. PMI typically costs 0.5%–1.5% of the loan amount annually. Under the Homeowners Protection Act, lenders must automatically cancel PMI when the loan balance reaches 78% of the original purchase price.</p></div>
+                <div class="faq-answer" role="region">
+                  <p>Private Mortgage Insurance (PMI) is required on conventional US mortgages when the down payment is
+                    less than 20% of the purchase price, resulting in a Loan-to-Value (LTV) ratio above 80%. PMI
+                    typically costs 0.5%–1.5% of the loan amount annually. Under the Homeowners Protection Act, lenders
+                    must automatically cancel PMI when the loan balance reaches 78% of the original purchase price.</p>
+                </div>
               </li>
               <li class="faq-item">
-                <button class="faq-question" aria-expanded="false">What credit score do I need for a US mortgage?</button>
-                <div class="faq-answer" role="region"><p>Most US mortgage lenders require a minimum credit score of 620 for conventional loans, 580 for FHA loans (500–579 with 10% down), and typically 640 for USDA loans. VA loans have no official minimum, but most lenders set their own floor at 580–620. Higher credit scores qualify for lower interest rates — the difference between a 620 and a 760 score can save $50,000+ in interest on a 30-year mortgage.</p></div>
+                <button class="faq-question" aria-expanded="false">What credit score do I need for a US
+                  mortgage?</button>
+                <div class="faq-answer" role="region">
+                  <p>Most US mortgage lenders require a minimum credit score of 620 for conventional loans, 580 for FHA
+                    loans (500–579 with 10% down), and typically 640 for USDA loans. VA loans have no official minimum,
+                    but most lenders set their own floor at 580–620. Higher credit scores qualify for lower interest
+                    rates — the difference between a 620 and a 760 score can save $50,000+ in interest on a 30-year
+                    mortgage.</p>
+                </div>
               </li>
             </ul>
           </section>
@@ -279,10 +387,14 @@
           <section aria-labelledby="usa-resources-heading">
             <h2 id="usa-resources-heading">Official US Mortgage Resources</h2>
             <div class="resource-links">
-              <a href="https://www.federalreserve.gov" class="resource-link" target="_blank" rel="noopener noreferrer">🏦 Federal Reserve</a>
-              <a href="https://www.freddiemac.com/pmms" class="resource-link" target="_blank" rel="noopener noreferrer">Freddie Mac Rates Survey</a>
-              <a href="https://www.hud.gov/buying/loans" class="resource-link" target="_blank" rel="noopener noreferrer">HUD Loan Programs</a>
-              <a href="https://www.va.gov/housing-assistance/home-loans" class="resource-link" target="_blank" rel="noopener noreferrer">VA Home Loans</a>
+              <a href="https://www.federalreserve.gov" class="resource-link" target="_blank"
+                rel="noopener noreferrer">🏦 Federal Reserve</a>
+              <a href="https://www.freddiemac.com/pmms" class="resource-link" target="_blank"
+                rel="noopener noreferrer">Freddie Mac Rates Survey</a>
+              <a href="https://www.hud.gov/buying/loans" class="resource-link" target="_blank"
+                rel="noopener noreferrer">HUD Loan Programs</a>
+              <a href="https://www.va.gov/housing-assistance/home-loans" class="resource-link" target="_blank"
+                rel="noopener noreferrer">VA Home Loans</a>
             </div>
           </section>
 
@@ -339,4 +451,5 @@
     });
   </script>
 </body>
+
 </html>
