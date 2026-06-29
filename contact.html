@@ -87,34 +87,110 @@
       <div class="page-layout">
         <div class="main-content">
 
-          <div class="contact-card">
-            <h2>Send Us a Message</h2>
-            <p style="margin-bottom:24px">For bug reports, calculator suggestion features, or questions regarding rates, you can reach out directly via email at <a href="mailto:contactreotechy@gmail.com"><strong>contactreotechy@gmail.com</strong></a> or use the form below.</p>
+          <article class="content-article">
+            <p>Welcome to the official contact page for <strong>Mortgage Pro Global</strong>. We value your feedback, questions, and suggestions. Please find the appropriate contact channel below to ensure your inquiry reaches the correct department.</p>
 
-            <form id="contact-form" aria-label="Contact form">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="contact-name">Your Name</label>
-                  <input type="text" id="contact-name" name="name" required aria-required="true" autocomplete="name">
+            <div class="contact-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin: 32px 0;">
+              
+              <div class="contact-channel-card" style="background: #fff; padding: 24px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); border: 1px solid #e5e7eb;">
+                <h3 style="margin-top:0; color: var(--page-primary);">General Support</h3>
+                <p>For technical support, app assistance, calculator questions, bug reports, feature requests, and general inquiries.</p>
+                <p><strong>Email:</strong> <a href="mailto:support@mortgageproglobal.com">support@mortgageproglobal.com</a></p>
+                <p style="font-size: 0.9rem; color: #6b7280; margin-bottom: 0;">Typical response time: 2–5 business days</p>
+              </div>
+
+              <div class="contact-channel-card" style="background: #fff; padding: 24px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); border: 1px solid #e5e7eb;">
+                <h3 style="margin-top:0; color: var(--page-primary);">Privacy &amp; Data Protection</h3>
+                <p>For privacy-related requests, including GDPR, CCPA/CPRA, FADP, consent management, data access, deletion, or correction.</p>
+                <p><strong>Email:</strong> <a href="mailto:privacy@mortgageproglobal.com">privacy@mortgageproglobal.com</a></p>
+              </div>
+
+              <div class="contact-channel-card" style="background: #fff; padding: 24px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); border: 1px solid #e5e7eb;">
+                <h3 style="margin-top:0; color: var(--page-primary);">Security</h3>
+                <p>To report security vulnerabilities, website or app issues, responsible disclosure, or potential abuse.</p>
+                <p><strong>Email:</strong> <a href="mailto:security@mortgageproglobal.com">security@mortgageproglobal.com</a></p>
+              </div>
+
+              <div class="contact-channel-card" style="background: #fff; padding: 24px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); border: 1px solid #e5e7eb;">
+                <h3 style="margin-top:0; color: var(--page-primary);">Business &amp; Partnerships</h3>
+                <p>For business partnerships, advertising opportunities, media inquiries, press requests, or collaborations.</p>
+                <p><strong>Email:</strong> <a href="mailto:business@mortgageproglobal.com">business@mortgageproglobal.com</a></p>
+              </div>
+
+              <div class="contact-channel-card" style="background: #fff; padding: 24px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); border: 1px solid #e5e7eb;">
+                <h3 style="margin-top:0; color: var(--page-primary);">Legal</h3>
+                <p>For legal notices, copyright inquiries, trademark matters, DMCA notices, or compliance inquiries.</p>
+                <p><strong>Email:</strong> <a href="mailto:legal@mortgageproglobal.com">legal@mortgageproglobal.com</a></p>
+              </div>
+
+              <div class="contact-channel-card" style="background: #fff; padding: 24px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); border: 1px solid #e5e7eb;">
+                <h3 style="margin-top:0; color: var(--page-primary);">Feedback &amp; Suggestions</h3>
+                <p>We welcome ideas for improving Mortgage Pro Global, including UI/UX, country-specific tools, or performance.</p>
+                <p><strong>Email:</strong> <a href="mailto:feedback@mortgageproglobal.com">feedback@mortgageproglobal.com</a></p>
+              </div>
+
+              <div class="contact-channel-card" style="background: #fff; padding: 24px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); border: 1px solid #e5e7eb;">
+                <h3 style="margin-top:0; color: var(--page-primary);">Report Incorrect Information</h3>
+                <p>If you notice incorrect mortgage info, reference rates, property tax/stamp duty rates, or broken links.</p>
+                <p><strong>Email:</strong> <a href="mailto:corrections@mortgageproglobal.com">corrections@mortgageproglobal.com</a></p>
+              </div>
+
+            </div>
+
+            <div class="contact-card" style="margin-bottom: 32px;">
+              <h2>Contact Form</h2>
+              <p style="margin-bottom:24px">You may also contact us directly using the form below. Your message will be routed to the appropriate department.</p>
+
+              <form id="contact-form" aria-label="Contact form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="contact-name">Your Name</label>
+                    <input type="text" id="contact-name" name="name" required aria-required="true" autocomplete="name">
+                  </div>
+                  <div class="form-group">
+                    <label for="contact-email">Email Address</label>
+                    <input type="email" id="contact-email" name="email" required aria-required="true" autocomplete="email">
+                  </div>
                 </div>
                 <div class="form-group">
-                  <label for="contact-email">Email Address</label>
-                  <input type="email" id="contact-email" name="email" required aria-required="true" autocomplete="email">
+                  <label for="contact-subject">Subject</label>
+                  <input type="text" id="contact-subject" name="subject" required aria-required="true">
                 </div>
-              </div>
-              <div class="form-group">
-                <label for="contact-subject">Subject</label>
-                <input type="text" id="contact-subject" name="subject" required aria-required="true">
-              </div>
-              <div class="form-group">
-                <label for="contact-message">Message</label>
-                <textarea id="contact-message" name="message" required aria-required="true"></textarea>
-              </div>
-              <button type="submit" class="btn-calculate">Send Message</button>
-            </form>
+                <div class="form-group">
+                  <label for="contact-message">Message</label>
+                  <textarea id="contact-message" name="message" required aria-required="true"></textarea>
+                </div>
+                <button type="submit" class="btn-calculate">Send Message</button>
+              </form>
 
-            <div id="contact-status" class="status-msg" role="alert" aria-live="polite"></div>
-          </div>
+              <div id="contact-status" class="status-msg" role="alert" aria-live="polite"></div>
+            </div>
+
+            <h2>Supported Regions</h2>
+            <p>Mortgage Pro Global currently supports users in:</p>
+            <ul>
+              <li>United States</li>
+              <li>Canada</li>
+              <li>United Kingdom</li>
+              <li>Australia</li>
+              <li>New Zealand</li>
+              <li>European Union / EEA</li>
+              <li>India</li>
+            </ul>
+            <p>Users from other countries are also welcome to contact us.</p>
+
+            <h2>Our Commitment</h2>
+            <p>We are committed to:</p>
+            <ul>
+              <li>Responding professionally</li>
+              <li>Respecting your privacy</li>
+              <li>Protecting your information</li>
+              <li>Improving our products continuously</li>
+              <li>Maintaining a secure and reliable service</li>
+            </ul>
+            <p>Thank you for choosing Mortgage Pro Global.</p>
+
+          </article>
 
         </div><!-- .main-content -->
 
@@ -137,7 +213,7 @@
         form.addEventListener('submit', (e) => {
           e.preventDefault();
           status.className = "status-msg success";
-          status.textContent = "Thank you! Your message has been sent successfully. We will get back to you at contactreotechy@gmail.com.";
+          status.textContent = "Thank you! Your message has been sent successfully. We will get back to you at support@mortgageproglobal.com.";
           form.reset();
         });
       }
