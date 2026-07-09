@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DEVWXRXJP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1DEVWXRXJP');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DTI Calculator: The 6x and 7x Caps That Now Set Your Real Ceiling | MortgagePro Global</title>
+  <meta name="description"
+    content="See how New Zealand's debt-to-income restrictions work, using the Reserve Bank's own worked example, and why every dollar of existing debt subtracts directly from what you can borrow.">
+  <link rel="canonical" href="https://mortgageproglobal.com/blog/nz-dti-calculator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="DTI Calculator: The 6x and 7x Caps That Now Set Your Real Ceiling | MortgagePro Global">
+  <meta property="og:description"
+    content="See how New Zealand's debt-to-income restrictions work, using the Reserve Bank's own worked example, and why every dollar of existing debt subtracts directly from what you can borrow.">
+  <meta property="og:url" content="https://mortgageproglobal.com/blog/nz-dti-calculator.html">
+  <meta property="og:image" content="https://mortgageproglobal.com/images/og-nz.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DTI Calculator: NZ 6x & 7x Debt-to-Income Rules">
+  <meta name="twitter:description"
+    content="Understand the RBNZ's DTI framework, portfolio caps, Kenzo and Sachiko's example, and speed limits.">
+  <meta name="twitter:image" content="https://mortgageproglobal.com/images/og-nz.jpg">
+
+  <!-- Verification -->
+  <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
+  <meta name="msvalidate.01" content="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  <meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
+
+  <!-- Critical CSS -->
+  <style>
+    :root {
+      --page-primary: #0D3B2E;
+      --page-accent: #1A6B4A;
+      --page-bg: #EDF5F2;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: var(--page-bg);
+      color: var(--page-primary);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .skip-link:focus {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99999;
+      background: #0D3B2E;
+      color: #fff;
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    [data-component] {
+      min-height: 60px;
+    }
+
+    /* Article Styles */
+    .article-container {
+      background: #fff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      margin-bottom: 32px;
+    }
+
+    .article-meta {
+      font-size: 0.85rem;
+      color: #6B7280;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .article-content h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #F1F5F9;
+      padding-bottom: 8px;
+    }
+
+    .article-content h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.25rem;
+      color: #374151;
+      line-height: 1.75;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .article-content li {
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+
+    /* Table override to match NZ theme */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    thead {
+      background: var(--page-primary);
+      color: #fff;
+    }
+
+    th,
+    td {
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background-color: #E2ECE9;
+    }
+
+    .example-box {
+      background: #E8F5E9;
+      border-left: 4px solid var(--page-accent);
+      padding: 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+    }
+
+    .disclaimer-text {
+      font-size: 0.85rem;
+      color: #6B7280;
+      border-top: 1px solid #E5E7EB;
+      padding-top: 16px;
+      margin-top: 32px;
+    }
+
+    /* Dark Mode Overrides */
+    @media (prefers-color-scheme: dark) {
+      .article-container {
+        background: var(--bg-card, #1E293B);
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-content p,
+      .article-content li {
+        color: #D1D5DB;
+      }
+
+      .article-content h2 {
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-meta {
+        color: #9CA3AF;
+      }
+
+      .example-box {
+        background: #0B2920;
+        border-left-color: #2ea8ff;
+      }
+
+      tr:nth-child(even) {
+        background-color: #0E241E;
+      }
+
+      table {
+        background-color: #0A1713;
+      }
+    }
+  </style>
+
+  <!-- Structured Data: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "DTI Calculator: The 6x and 7x Caps That Now Set Your Real Ceiling",
+    "description": "See how New Zealand's debt-to-income restrictions work, using the Reserve Bank's own worked example, and why every dollar of existing debt subtracts directly from what you can borrow.",
+    "image": "https://mortgageproglobal.com/images/og-nz.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "REO Technologies Editorial Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "REO Technologies",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mortgageproglobal.com/images/logo.svg"
+      }
+    },
+    "datePublished": "2026-06-29",
+    "dateModified": "2026-06-29",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mortgageproglobal.com/blog/nz-dti-calculator.html"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mortgageproglobal.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mortgageproglobal.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "NZ DTI Ratio Guide", "item": "https://mortgageproglobal.com/blog/nz-dti-calculator.html" }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/accessibility.css">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/rates.js" defer></script>
+  <script src="/js/accessibility.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-component="header"></div>
+
+  <!-- Hero -->
+  <section class="page-hero" aria-label="Page introduction">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li>NZ DTI Ratio Guide</li>
+        </ol>
+      </nav>
+      <h1>DTI Calculator: The 6x and 7x Caps That Now Set Your Real Ceiling</h1>
+      <p class="subtitle">See how the Reserve Bank of New Zealand's debt-to-income framework shapes your buying limit.</p>
+    </div>
+  </section>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="page-layout">
+        <div class="main-content">
+
+          <article class="article-container">
+            <header>
+              <div class="article-meta">
+                <span><strong>Author:</strong> REO Technologies Editorial Team</span>
+                <span>•</span>
+                <span><strong>Published:</strong> June 29, 2026</span>
+                <span>•</span>
+                <span><strong>Category:</strong> Home Buying Basics</span>
+              </div>
+            </header>
+
+            <div class="article-content">
+              <p>Since July 2024, New Zealand has run a hard debt-to-income (DTI) restriction alongside its existing deposit rules — a genuinely different approach from Australia, where DTI is only a portfolio-level monitoring metric, not an enforced individual cap. Here, the 6x and 7x thresholds are real limits with real consequences for how much a specific borrower can be offered.</p>
+
+              <h2>The Two Thresholds</h2>
+              <p><strong>Owner-occupiers:</strong> most new lending is capped at <strong>6 times</strong> gross annual income.</p>
+              <p><strong>Investors:</strong> most new lending is capped at <strong>7 times</strong> gross annual income — set higher because rental income helps service the debt, and banks typically count that rental income at roughly 80% of its face value ("shaded" to allow for vacancies and maintenance) when calculating the ratio.</p>
+              <p>Both figures use <strong>gross</strong> income (before tax), and — critically — DTI is calculated on total debt, not just the new mortgage. Existing debts subtract directly, dollar for dollar, from the maximum loan a bank can offer.</p>
+
+              <h2>The Reserve Bank's Own Worked Example</h2>
+              <p>Kenzo and Sachiko, an owner-occupier couple, have $135,000 combined gross income and $27,000 in existing debt, looking at an $800,000 property. Their DTI works out to ($27,000 + $800,000) &divide; $135,000 = 6.13 — just over the 6x threshold. Using the formula in reverse:</p>
+              <div class="example-box" style="font-family: monospace; text-align: center; font-size: 1.15rem; font-style: normal; background: #E8F5E9;">
+                6 &times; $135,000 &minus; $27,000 = $783,000
+              </div>
+              <p>This is the maximum they could borrow and stay under the standard cap, roughly $17,000 less than the $800,000 they were hoping for, purely because of their existing $27,000 in debt.</p>
+
+              <h2>Worked Example: How a Car Loan Changes the Ceiling</h2>
+              <p>Take a household with $150,000 gross annual income, no other debt, seeking a mortgage as an owner-occupier:</p>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Scenario</th>
+                    <th>Max Loan Calculation</th>
+                    <th>Max Loan</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>No existing debt</td>
+                    <td>6 &times; $150,000 &minus; $0</td>
+                    <td>$900,000</td>
+                  </tr>
+                  <tr>
+                    <td>$25,000 car loan</td>
+                    <td>6 &times; $150,000 &minus; $25,000</td>
+                    <td><strong>$875,000</strong></td>
+                  </tr>
+                  <tr>
+                    <td>$25,000 car loan + $8,000 credit card limit</td>
+                    <td>6 &times; $150,000 &minus; $33,000</td>
+                    <td><strong>$867,000</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>A $25,000 car loan alone removed $25,000 of borrowing capacity here — not a percentage adjustment, a direct dollar-for-dollar subtraction, which is why clearing smaller debts before applying can meaningfully change what a bank will offer.</p>
+
+              <div class="example-box">
+                <strong>The 20% speed limit:</strong> banks aren't required to decline every application above the threshold. They're allowed to write up to 20% of their new lending outside the standard 6x/7x caps — but that headroom is limited and reserved for the strongest applications, not freely available on request.
+              </div>
+
+              <h2>Common Mistakes</h2>
+              <p>Buyers frequently calculate their own DTI using only the new mortgage amount, forgetting that all existing debt — car loans, student loans, and even unused credit card <em>limits</em>, not just balances — factors into the total.</p>
+              <p>Buyers also assume DTI applies everywhere — it's specifically a rule for registered banks; non-bank and second-tier lenders aren't bound by the same 6x/7x caps, which is part of why some borrowers who don't fit bank criteria look to non-bank lenders instead.</p>
+              <p>A third mistake: not checking exemptions before assuming the cap applies. Kāinga Ora First Home Loans are explicitly exempt from DTI restrictions, along with construction loans for new builds, straight refinancing without increasing the loan, and bridging finance — a first home buyer using a First Home Loan may not be constrained by DTI at all.</p>
+
+              <h2>Where This Calculator Has Limits</h2>
+              <p>It applies the standard 6x/7x thresholds and the RBNZ's published worked-example methodology, but doesn't reflect how individual banks allocate their 20% speed-limit headroom, which varies by lender and changes over time based on each bank's overall lending mix. It also can't fully model rental income shading for investor applications without a specific lender's exact policy.</p>
+
+              <h2>Frequently Asked Questions</h2>
+              <h3>Does DTI apply to all lenders in New Zealand?</h3>
+              <p>No — it applies to registered banks under RBNZ rules. Non-bank and second-tier lenders operate under their own separate criteria.</p>
+
+              <h3>Is my student loan included in the DTI calculation?</h3>
+              <p>Yes — student loan balances count as debt in the calculation, in addition to reducing your income through regular repayment deductions.</p>
+
+              <h3>Are Kāinga Ora First Home Loans exempt from DTI?</h3>
+              <p>Yes — First Home Loans are explicitly excluded from the DTI restrictions, which is a significant advantage for eligible first home buyers.</p>
+
+              <h3>Does paying off a small debt actually help meaningfully?</h3>
+              <p>Yes — since DTI subtracts debt directly, dollar for dollar, from your maximum loan, clearing even a modest debt before applying can free up real borrowing capacity.</p>
+
+              <h3>Can a bank ever lend above the 6x/7x threshold?</h3>
+              <p>Yes, within their 20% speed-limit allowance for exceptional cases — it's possible but not guaranteed, and reserved for the strongest applications.</p>
+
+              <h2>Related Tools</h2>
+              <p>
+                <a href="/blog/nz-lvr-calculator.html">LVR Calculator</a> &middot;
+                <a href="/blog/nz-car-loan-calculator.html">Car Loan Calculator</a> &middot;
+                <a href="/new-zealand-mortgage-calculator.html">Mortgage Calculator</a>
+              </p>
+
+              <p class="disclaimer-text">
+                <em>Educational content, not financial advice. DTI thresholds and speed limits are set by the Reserve Bank of New Zealand and can change — confirm your specific ratio and eligibility with a licensed New Zealand mortgage adviser. Written by the MortgagePro Global team; example methodology referenced against the RBNZ's published DTI explainer.</em>
+              </p>
+            </div>
+          </article>
+
+        </div><!-- .main-content -->
+
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Advertisement sidebar">
+          <div class="ad-unit ad-sidebar" aria-label="Advertisement" role="complementary"></div>
+        </aside>
+
+      </div><!-- .page-layout -->
+    </div><!-- .container -->
+  </main>
+
+  <div data-component="footer"></div>
+</body>
+
+</html>

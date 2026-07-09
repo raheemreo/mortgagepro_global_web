@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DEVWXRXJP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1DEVWXRXJP');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NZ Mortgage Calculator: Why Kiwi Borrowers Reprice More Often | MortgagePro Global</title>
+  <meta name="description"
+    content="See how a New Zealand mortgage payment is calculated on a short fixed term, and why 1-2 year fixes — not 5-year ones — are the real market default.">
+  <link rel="canonical" href="https://mortgageproglobal.com/blog/nz-mortgage-calculator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="NZ Mortgage Calculator: Why Kiwi Borrowers Reprice More Often | MortgagePro Global">
+  <meta property="og:description"
+    content="See how a New Zealand mortgage payment is calculated on a short fixed term, and why 1-2 year fixes — not 5-year ones — are the real market default.">
+  <meta property="og:url" content="https://mortgageproglobal.com/blog/nz-mortgage-calculator.html">
+  <meta property="og:image" content="https://mortgageproglobal.com/images/og-nz.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NZ Mortgage Calculator: Kiwi Repricing & Short Fixed Terms">
+  <meta name="twitter:description"
+    content="Understand table loans, short-term fixed locks vs floating, and splitting loan terms in NZ.">
+  <meta name="twitter:image" content="https://mortgageproglobal.com/images/og-nz.jpg">
+
+  <!-- Verification -->
+  <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
+  <meta name="msvalidate.01" content="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  <meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
+
+  <!-- Critical CSS -->
+  <style>
+    :root {
+      --page-primary: #0D3B2E;
+      --page-accent: #1A6B4A;
+      --page-bg: #EDF5F2;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: var(--page-bg);
+      color: var(--page-primary);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .skip-link:focus {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99999;
+      background: #0D3B2E;
+      color: #fff;
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    [data-component] {
+      min-height: 60px;
+    }
+
+    /* Article Styles */
+    .article-container {
+      background: #fff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      margin-bottom: 32px;
+    }
+
+    .article-meta {
+      font-size: 0.85rem;
+      color: #6B7280;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .article-content h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #F1F5F9;
+      padding-bottom: 8px;
+    }
+
+    .article-content h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.25rem;
+      color: #374151;
+      line-height: 1.75;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .article-content li {
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+
+    /* Table override to match NZ theme */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    thead {
+      background: var(--page-primary);
+      color: #fff;
+    }
+
+    th,
+    td {
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background-color: #E2ECE9;
+    }
+
+    .example-box {
+      background: #E8F5E9;
+      border-left: 4px solid var(--page-accent);
+      padding: 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+    }
+
+    .disclaimer-text {
+      font-size: 0.85rem;
+      color: #6B7280;
+      border-top: 1px solid #E5E7EB;
+      padding-top: 16px;
+      margin-top: 32px;
+    }
+
+    /* Dark Mode Overrides */
+    @media (prefers-color-scheme: dark) {
+      .article-container {
+        background: var(--bg-card, #1E293B);
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-content p,
+      .article-content li {
+        color: #D1D5DB;
+      }
+
+      .article-content h2 {
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-meta {
+        color: #9CA3AF;
+      }
+
+      .example-box {
+        background: #0B2920;
+        border-left-color: #2ea8ff;
+      }
+
+      tr:nth-child(even) {
+        background-color: #0E241E;
+      }
+
+      table {
+        background-color: #0A1713;
+      }
+    }
+  </style>
+
+  <!-- Structured Data: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "NZ Mortgage Calculator: Why Kiwi Borrowers Reprice More Often Than Almost Anyone",
+    "description": "See how a New Zealand mortgage payment is calculated on a short fixed term, and why 1-2 year fixes — not 5-year ones — are the real market default.",
+    "image": "https://mortgageproglobal.com/images/og-nz.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "REO Technologies Editorial Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "REO Technologies",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mortgageproglobal.com/images/logo.svg"
+      }
+    },
+    "datePublished": "2026-06-29",
+    "dateModified": "2026-06-29",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mortgageproglobal.com/blog/nz-mortgage-calculator.html"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mortgageproglobal.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mortgageproglobal.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "NZ Mortgage Guide", "item": "https://mortgageproglobal.com/blog/nz-mortgage-calculator.html" }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/accessibility.css">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/rates.js" defer></script>
+  <script src="/js/accessibility.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-component="header"></div>
+
+  <!-- Hero -->
+  <section class="page-hero" aria-label="Page introduction">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li>NZ Mortgage Guide</li>
+        </ol>
+      </nav>
+      <h1>NZ Mortgage Calculator: Why Kiwi Borrowers Reprice More Often Than Almost Anyone</h1>
+      <p class="subtitle">Understand the short fixed term model and table loan structures in New Zealand.</p>
+    </div>
+  </section>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="page-layout">
+        <div class="main-content">
+
+          <article class="article-container">
+            <header>
+              <div class="article-meta">
+                <span><strong>Author:</strong> REO Technologies Editorial Team</span>
+                <span>•</span>
+                <span><strong>Published:</strong> June 29, 2026</span>
+                <span>•</span>
+                <span><strong>Category:</strong> Mortgage Basics</span>
+              </div>
+            </header>
+
+            <div class="article-content">
+              <p>Take a $650,000 home, 20% down ($130,000), and a $520,000 mortgage at roughly 5.99% on a 1-year fixed rate, spread over a 30-year table loan — the monthly payment lands around $3,114. That rate is locked for just twelve months. New Zealand borrowers commonly fix for even shorter periods — six months isn't unusual — making this one of the most frequently-repriced mortgage markets covered on MortgagePro Global, ahead of both the UK's 2-5 year norm and Canada's 5-year term structure.</p>
+
+              <h2>Fixed vs. Floating, and Why Short Terms Dominate</h2>
+              <p>NZ borrowers choose between fixed rates (locked for a set term, commonly 6 months to 2 years, sometimes longer) and floating rates (which move whenever the lender adjusts, tracking the Official Cash Rate environment more directly). Fixed rates are the default for most borrowers, but the <em>short</em> end of the fixed-term spectrum is unusually popular compared to other markets — many borrowers deliberately choose 6-12 month terms to stay flexible if rates are expected to fall, accepting more frequent repricing risk in exchange.</p>
+
+              <h2>The Math</h2>
+              <p>Standard NZ mortgage repayments (table loans) use monthly compounding, the familiar amortization formula:</p>
+              <div class="example-box" style="font-family: monospace; text-align: center; font-size: 1.15rem; font-style: normal; background: #E8F5E9;">
+                M = P &times; [r(1+r)ⁿ] / [(1+r)ⁿ &minus; 1]
+              </div>
+              <p>Where P is the loan amount, r is the monthly rate (annual &divide; 12), and n is the number of monthly payments — but because the fixed term is often just 6-12 months, this rate is genuinely temporary in a way it isn't for a US or Canadian borrower.</p>
+
+              <h2>Worked Example</h2>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Input</th>
+                    <th>Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Property price</td>
+                    <td>$650,000</td>
+                  </tr>
+                  <tr>
+                    <td>Deposit (20%)</td>
+                    <td>$130,000</td>
+                  </tr>
+                  <tr>
+                    <td>Loan amount</td>
+                    <td>$520,000</td>
+                  </tr>
+                  <tr>
+                    <td>Rate</td>
+                    <td>~5.99% (1-yr fixed)</td>
+                  </tr>
+                  <tr>
+                    <td>Table loan term</td>
+                    <td>30 years (360 payments)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Monthly Payment</strong></td>
+                    <td><strong>&asymp; $3,114</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="example-box">
+                <strong>The refixing habit worth building:</strong> with fixed terms this short, actively shopping your rate every single time a term ends — rather than accepting your bank's automatic rollover offer — has a much bigger cumulative effect in New Zealand than in markets where borrowers only reprice every five years or so.
+              </div>
+
+              <h2>Common Mistakes</h2>
+              <p>Borrowers frequently split all their borrowing into one fixed term, which means the <em>entire</em> mortgage reprices at once when that term ends — many advisers recommend splitting a loan across two or three different fixed terms (a "laddering" approach) specifically to avoid the whole mortgage repricing simultaneously into an unfavourable rate environment.</p>
+              <p>Borrowers also default to accepting their existing bank's rollover rate without comparison shopping — because refixing happens so often here, the cumulative cost of never negotiating or switching adds up faster than in slower-repricing markets.</p>
+              <p>A third mistake: choosing a floating rate purely for flexibility without checking the real cost — floating rates typically sit meaningfully above the shortest fixed rates, a premium worth being deliberate about rather than defaulting into.</p>
+
+              <h2>Where This Calculator Has Limits</h2>
+              <p>It uses a single fixed-rate snapshot — since most NZ mortgages reprice within a year or two, the true lifetime cost depends heavily on a rate path across many future terms, not one number. It also assumes a standard table loan (principal and interest); interest-only structures calculate differently, covered in our <a href="/blog/nz-repayment-calculator.html">Repayment Calculator</a>.</p>
+
+              <h2>Frequently Asked Questions</h2>
+              <h3>Is a 1-year fixed rate always cheaper than a 2-year fixed rate?</h3>
+              <p>Often, but not always — it depends on the shape of the current rate curve; sometimes longer terms price lower if the market expects rates to rise.</p>
+
+              <h3>What happens automatically when my fixed term ends?</h3>
+              <p>Your bank typically rolls you onto a floating rate or a default fixed rate if you don't actively choose a new term — usually not the most competitive option available.</p>
+
+              <h3>Can I split my mortgage across multiple fixed terms?</h3>
+              <p>Yes — this "laddering" strategy is common in New Zealand specifically because of how frequently borrowers reprice here, and it can reduce the risk of the whole loan repricing at once.</p>
+
+              <h3>Does a bigger deposit affect my rate here the way it does elsewhere?</h3>
+              <p>Yes — crossing loan-to-value thresholds (particularly the 80% LVR line) affects rate access and lending restrictions, covered in our LVR Calculator.</p>
+
+              <h3>Is floating always more expensive than fixed?</h3>
+              <p>Usually, yes, at the shortest end — but it offers full flexibility to switch or make unlimited extra repayments without break fees, a genuine tradeoff some borrowers value.</p>
+
+              <h2>Related Tools</h2>
+              <p>
+                <a href="/blog/nz-lvr-calculator.html">LVR Calculator</a> &middot;
+                <a href="/blog/nz-dti-calculator.html">DTI Calculator</a> &middot;
+                <a href="/blog/nz-repayment-calculator.html">Repayment Calculator</a> &middot;
+                <a href="/blog/nz-first-home-buyer.html">First Home Buyer</a>
+              </p>
+
+              <p class="disclaimer-text">
+                <em>Educational content, not financial advice. Rates and figures are illustrative and change regularly — confirm current numbers with a licensed New Zealand mortgage adviser or lender. Written by the MortgagePro Global team.</em>
+              </p>
+            </div>
+          </article>
+
+        </div><!-- .main-content -->
+
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Advertisement sidebar">
+          <div class="ad-unit ad-sidebar" aria-label="Advertisement" role="complementary"></div>
+        </aside>
+
+      </div><!-- .page-layout -->
+    </div><!-- .container -->
+  </main>
+
+  <div data-component="footer"></div>
+</body>
+
+</html>

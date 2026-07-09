@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DEVWXRXJP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1DEVWXRXJP');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>KiwiSaver Calculator: The Three-Year Rule That Catches Buyers Out | MortgagePro Global</title>
+  <meta name="description"
+    content="See how much of your KiwiSaver balance you can actually withdraw for a first home, the three-year membership rule, and the $1,000 you can never touch.">
+  <link rel="canonical" href="https://mortgageproglobal.com/blog/nz-kiwisaver-calculator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="KiwiSaver Calculator: The Three-Year Rule That Catches Buyers Out | MortgagePro Global">
+  <meta property="og:description"
+    content="See how much of your KiwiSaver balance you can actually withdraw for a first home, the three-year membership rule, and the $1,000 you can never touch.">
+  <meta property="og:url" content="https://mortgageproglobal.com/blog/nz-kiwisaver-calculator.html">
+  <meta property="og:image" content="https://mortgageproglobal.com/images/og-nz.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KiwiSaver Calculator: First Home Withdrawal Math">
+  <meta name="twitter:description"
+    content="Learn how much of your KiwiSaver can be withdrawn, the 3-year clock, and the $1,000 minimum rule.">
+  <meta name="twitter:image" content="https://mortgageproglobal.com/images/og-nz.jpg">
+
+  <!-- Verification -->
+  <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
+  <meta name="msvalidate.01" content="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  <meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
+
+  <!-- Critical CSS -->
+  <style>
+    :root {
+      --page-primary: #0D3B2E;
+      --page-accent: #1A6B4A;
+      --page-bg: #EDF5F2;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: var(--page-bg);
+      color: var(--page-primary);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .skip-link:focus {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99999;
+      background: #0D3B2E;
+      color: #fff;
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    [data-component] {
+      min-height: 60px;
+    }
+
+    /* Article Styles */
+    .article-container {
+      background: #fff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      margin-bottom: 32px;
+    }
+
+    .article-meta {
+      font-size: 0.85rem;
+      color: #6B7280;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .article-content h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #F1F5F9;
+      padding-bottom: 8px;
+    }
+
+    .article-content h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.25rem;
+      color: #374151;
+      line-height: 1.75;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .article-content li {
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+
+    /* Table override to match NZ theme */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    thead {
+      background: var(--page-primary);
+      color: #fff;
+    }
+
+    th,
+    td {
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background-color: #E2ECE9;
+    }
+
+    .example-box {
+      background: #E8F5E9;
+      border-left: 4px solid var(--page-accent);
+      padding: 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+    }
+
+    .disclaimer-text {
+      font-size: 0.85rem;
+      color: #6B7280;
+      border-top: 1px solid #E5E7EB;
+      padding-top: 16px;
+      margin-top: 32px;
+    }
+
+    /* Dark Mode Overrides */
+    @media (prefers-color-scheme: dark) {
+      .article-container {
+        background: var(--bg-card, #1E293B);
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-content p,
+      .article-content li {
+        color: #D1D5DB;
+      }
+
+      .article-content h2 {
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-meta {
+        color: #9CA3AF;
+      }
+
+      .example-box {
+        background: #0B2920;
+        border-left-color: #2ea8ff;
+      }
+
+      tr:nth-child(even) {
+        background-color: #0E241E;
+      }
+
+      table {
+        background-color: #0A1713;
+      }
+    }
+  </style>
+
+  <!-- Structured Data: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "KiwiSaver Calculator: The Three-Year Rule That Catches First-Time Buyers Out",
+    "description": "See how much of your KiwiSaver balance you can actually withdraw for a first home, the three-year membership rule, and the $1,000 you can never touch.",
+    "image": "https://mortgageproglobal.com/images/og-nz.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "REO Technologies Editorial Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "REO Technologies",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mortgageproglobal.com/images/logo.svg"
+      }
+    },
+    "datePublished": "2026-06-29",
+    "dateModified": "2026-06-29",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mortgageproglobal.com/blog/nz-kiwisaver-calculator.html"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mortgageproglobal.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mortgageproglobal.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "KiwiSaver Guide", "item": "https://mortgageproglobal.com/blog/nz-kiwisaver-calculator.html" }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/accessibility.css">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/rates.js" defer></script>
+  <script src="/js/accessibility.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-component="header"></div>
+
+  <!-- Hero -->
+  <section class="page-hero" aria-label="Page introduction">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li>KiwiSaver Guide</li>
+        </ol>
+      </nav>
+      <h1>KiwiSaver Calculator: The Three-Year Rule That Catches First-Time Buyers Out</h1>
+      <p class="subtitle">Understand membership timelines, withdrawal limits, and deposit rules for KiwiSaver.</p>
+    </div>
+  </section>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="page-layout">
+        <div class="main-content">
+
+          <article class="article-container">
+            <header>
+              <div class="article-meta">
+                <span><strong>Author:</strong> REO Technologies Editorial Team</span>
+                <span>•</span>
+                <span><strong>Published:</strong> June 29, 2026</span>
+                <span>•</span>
+                <span><strong>Category:</strong> Home Buying Basics</span>
+              </div>
+            </header>
+
+            <div class="article-content">
+              <p>KiwiSaver's first-home withdrawal is, for most New Zealand first-time buyers, the single largest source of deposit funds available — genuinely more significant than any current government grant, since there isn't one anymore (see our <a href="/blog/nz-first-home-buyer.html">First Home Buyer</a> article for that specific correction). What trips people up isn't the amount available; it's the eligibility clock that starts ticking from your very first contribution, not from when you start seriously planning to buy.</p>
+
+              <h2>The Core Eligibility Rule</h2>
+              <p>You must have been a KiwiSaver member for <strong>at least three years</strong> before you can apply for a first-home withdrawal. That three-year clock starts from your first contribution — including contributions made automatically through an employer before you were paying close attention — not from whenever you decide to start house-hunting. Checking your actual membership start date early is worth doing well before you begin seriously looking at properties.</p>
+
+              <h2>What You Can and Can't Withdraw</h2>
+              <p>You can withdraw most of your KiwiSaver balance — your own contributions, your employer's contributions, and investment returns — for a first-home deposit. You must leave a minimum of <strong>$1,000</strong> in your account afterward; this can't be withdrawn under any circumstances. Some longer-term members who received the government's old $1,000 "kick-start" contribution (discontinued for new members back in 2015) also can't withdraw that specific portion.</p>
+
+              <h2>Worked Example</h2>
+              <p>A member with a $62,000 KiwiSaver balance after several years of contributions and growth:</p>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Item</th>
+                    <th>Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Total KiwiSaver balance</td>
+                    <td>$62,000</td>
+                  </tr>
+                  <tr>
+                    <td>Minimum balance required to remain</td>
+                    <td>$1,000</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Maximum Withdrawal Available</strong></td>
+                    <td><strong>$61,000</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>That $61,000, combined with other savings, can materially change what's achievable — especially paired with a Kāinga Ora First Home Loan, which reduces the deposit required to just 5% of the purchase price.</p>
+
+              <div class="example-box">
+                <strong>The property has to be your first home, and you have to live in it.</strong> KiwiSaver first-home withdrawals can't be used to buy an investment property — the fund provider requires evidence you intend to live in the property as your primary residence, and the funds are paid directly to your solicitor, not into your personal bank account.
+              </div>
+
+              <h2>Common Mistakes</h2>
+              <p>Buyers frequently assume the three-year clock starts when they decide to buy, not when they first joined KiwiSaver — checking your actual membership start date (via your provider, not just guessing) well ahead of a purchase timeline avoids a late, unpleasant surprise.</p>
+              <p>Buyers also confuse the discontinued First Home Grant with the KiwiSaver withdrawal itself — these were always two separate things, and while the grant closed in May 2024, the KiwiSaver first-home withdrawal remains fully available and unaffected by that closure.</p>
+              <p>A third mistake: not accounting for processing time. Applications typically need to be submitted with your provider well ahead of settlement — commonly at least 15 working days — since funds are released to your solicitor as part of the settlement process, not on demand.</p>
+
+              <h2>Where This Calculator Has Limits</h2>
+              <p>It uses standard eligibility rules — "second chance" withdrawals for previous home owners who are now in a similar financial position to a first-time buyer follow additional, more detailed criteria (including an asset test) that this simplified calculator doesn't fully model. It also can't confirm your specific fund provider's processing timeline or any complying-fund-specific rules if you're not in a standard KiwiSaver scheme.</p>
+
+              <h2>Frequently Asked Questions</h2>
+              <h3>Does the three-year clock reset if I change KiwiSaver providers?</h3>
+              <p>No — it's based on total KiwiSaver membership time, not time with your current specific provider, though you'll need to provide evidence of your full membership history when applying.</p>
+
+              <h3>Can I withdraw KiwiSaver funds to buy land to build on?</h3>
+              <p>Yes, provided it's for your first home and you intend to live there — this includes land purchases for building, not just existing dwellings.</p>
+
+              <h3>What if I've owned a home before — am I locked out entirely?</h3>
+              <p>Not necessarily — a "second chance" withdrawal may be available if you no longer own any property interest and meet an asset test showing you're in a similar financial position to a first-time buyer.</p>
+
+              <h3>Is the KiwiSaver withdrawal the same as the old First Home Grant?</h3>
+              <p>No — they were always separate. The grant was abolished in May 2024; the KiwiSaver withdrawal is your own savings and remains fully available.</p>
+
+              <h3>How long does the withdrawal process take?</h3>
+              <p>Providers generally recommend applying well in advance of your settlement date — commonly at least 15 working days — since funds need to be processed and paid to your solicitor.</p>
+
+              <h2>Related Tools</h2>
+              <p>
+                <a href="/blog/nz-first-home-buyer.html">First Home Buyer</a> &middot;
+                <a href="/new-zealand-mortgage-calculator.html">Mortgage Calculator</a> &middot;
+                <a href="/blog/nz-lvr-calculator.html">LVR Calculator</a>
+              </p>
+
+              <p class="disclaimer-text">
+                <em>Educational content, not financial advice. KiwiSaver withdrawal rules are set under the KiwiSaver Act and administered by individual scheme providers — confirm your specific eligibility and balance with your KiwiSaver provider or Kāinga Ora. Written by the MortgagePro Global team.</em>
+              </p>
+            </div>
+          </article>
+
+        </div><!-- .main-content -->
+
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Advertisement sidebar">
+          <div class="ad-unit ad-sidebar" aria-label="Advertisement" role="complementary"></div>
+        </aside>
+
+      </div><!-- .page-layout -->
+    </div><!-- .container -->
+  </main>
+
+  <div data-component="footer"></div>
+</body>
+
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DEVWXRXJP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1DEVWXRXJP');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Repayment Calculator: Principal & Interest vs Interest-Only | MortgagePro Global</title>
+  <meta name="description"
+    content="See how a standard table loan compares to an interest-only structure on an NZ mortgage, and why banks now restrict interest-only more tightly than before.">
+  <link rel="canonical" href="https://mortgageproglobal.com/blog/nz-repayment-calculator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Repayment Calculator: Principal & Interest vs Interest-Only | MortgagePro Global">
+  <meta property="og:description"
+    content="See how a standard table loan compares to an interest-only structure on an NZ mortgage, and why banks now restrict interest-only more tightly than before.">
+  <meta property="og:url" content="https://mortgageproglobal.com/blog/nz-repayment-calculator.html">
+  <meta property="og:image" content="https://mortgageproglobal.com/images/og-nz.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Repayment Calculator: NZ Principal & Interest vs Interest-Only">
+  <meta name="twitter:description"
+    content="Compare table loan structures against interest-only schedules, step-up payments, and bank criteria.">
+  <meta name="twitter:image" content="https://mortgageproglobal.com/images/og-nz.jpg">
+
+  <!-- Verification -->
+  <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
+  <meta name="msvalidate.01" content="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  <meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
+
+  <!-- Critical CSS -->
+  <style>
+    :root {
+      --page-primary: #0D3B2E;
+      --page-accent: #1A6B4A;
+      --page-bg: #EDF5F2;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: var(--page-bg);
+      color: var(--page-primary);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .skip-link:focus {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99999;
+      background: #0D3B2E;
+      color: #fff;
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    [data-component] {
+      min-height: 60px;
+    }
+
+    /* Article Styles */
+    .article-container {
+      background: #fff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      margin-bottom: 32px;
+    }
+
+    .article-meta {
+      font-size: 0.85rem;
+      color: #6B7280;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .article-content h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #F1F5F9;
+      padding-bottom: 8px;
+    }
+
+    .article-content h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.25rem;
+      color: #374151;
+      line-height: 1.75;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .article-content li {
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+
+    /* Table override to match NZ theme */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    thead {
+      background: var(--page-primary);
+      color: #fff;
+    }
+
+    th,
+    td {
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background-color: #E2ECE9;
+    }
+
+    .example-box {
+      background: #E8F5E9;
+      border-left: 4px solid var(--page-accent);
+      padding: 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+    }
+
+    .disclaimer-text {
+      font-size: 0.85rem;
+      color: #6B7280;
+      border-top: 1px solid #E5E7EB;
+      padding-top: 16px;
+      margin-top: 32px;
+    }
+
+    /* Dark Mode Overrides */
+    @media (prefers-color-scheme: dark) {
+      .article-container {
+        background: var(--bg-card, #1E293B);
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-content p,
+      .article-content li {
+        color: #D1D5DB;
+      }
+
+      .article-content h2 {
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-meta {
+        color: #9CA3AF;
+      }
+
+      .example-box {
+        background: #0B2920;
+        border-left-color: #2ea8ff;
+      }
+
+      tr:nth-child(even) {
+        background-color: #0E241E;
+      }
+
+      table {
+        background-color: #0A1713;
+      }
+    }
+  </style>
+
+  <!-- Structured Data: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Repayment Calculator: Principal & Interest vs. Interest-Only in New Zealand",
+    "description": "See how a standard table loan compares to an interest-only structure on an NZ mortgage, and why banks now restrict interest-only more tightly than before.",
+    "image": "https://mortgageproglobal.com/images/og-nz.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "REO Technologies Editorial Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "REO Technologies",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mortgageproglobal.com/images/logo.svg"
+      }
+    },
+    "datePublished": "2026-06-29",
+    "dateModified": "2026-06-29",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mortgageproglobal.com/blog/nz-repayment-calculator.html"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mortgageproglobal.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mortgageproglobal.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Repayment Options Guide", "item": "https://mortgageproglobal.com/blog/nz-repayment-calculator.html" }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/accessibility.css">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/rates.js" defer></script>
+  <script src="/js/accessibility.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-component="header"></div>
+
+  <!-- Hero -->
+  <section class="page-hero" aria-label="Page introduction">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li>Repayment Options Guide</li>
+        </ol>
+      </nav>
+      <h1>Repayment Calculator: Principal & Interest vs. Interest-Only in New Zealand</h1>
+      <p class="subtitle">See how table loans compare to interest-only structures and how qualifications have tightened.</p>
+    </div>
+  </section>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="page-layout">
+        <div class="main-content">
+
+          <article class="article-container">
+            <header>
+              <div class="article-meta">
+                <span><strong>Author:</strong> REO Technologies Editorial Team</span>
+                <span>•</span>
+                <span><strong>Published:</strong> June 29, 2026</span>
+                <span>•</span>
+                <span><strong>Category:</strong> Mortgage Basics</span>
+              </div>
+            </header>
+
+            <div class="article-content">
+              <p>Every New Zealand mortgage repayment falls into one of two structures: a standard table loan, where each payment reduces both interest and principal, or interest-only, where the loan balance doesn't move at all until the interest-only period ends. Banks here have tightened who qualifies for the second option considerably in recent years — it's still available, but it's no longer a default choice the way it once was.</p>
+
+              <h2>The Two Structures</h2>
+              <p><strong>Table loan (principal & interest):</strong> the standard NZ mortgage structure. Each payment is a fixed amount, split between interest and principal, following the familiar amortization curve — interest-heavy early on, shifting toward principal over the term.</p>
+              <p><strong>Interest-only:</strong> payments cover interest alone, typically for a defined period (commonly 1-5 years) rather than the whole loan term. The balance stays exactly where it started until the interest-only period ends, at which point payments step up to a table-loan structure recalculated against the remaining term.</p>
+
+              <h2>Worked Example</h2>
+              <p>On the $520,000 loan at 5.99% from our Mortgage Calculator example, over a 30-year table loan:</p>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Structure</th>
+                    <th>Monthly Payment</th>
+                    <th>Balance After 5 Years</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Table loan (P&I)</strong></td>
+                    <td>&asymp; $3,114</td>
+                    <td>&asymp; $493,000</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Interest-only (5-yr period)</strong></td>
+                    <td>&asymp; $2,596</td>
+                    <td><strong>$520,000 (unchanged)</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>The interest-only payment is lower month to month, but at the 5-year mark, the table loan borrower has paid down roughly $27,000 of principal, while the interest-only borrower still owes the full original amount — and their payment steps up sharply once the interest-only period ends and the remaining balance is re-amortized over a shorter remaining term.</p>
+
+              <div class="example-box">
+                <strong>Why the step-up at the end of an interest-only period can be steep:</strong> if a $520,000 balance switches to table-loan repayments with only 25 years left instead of the original 30, the new payment is calculated to clear the same balance in less time — often a noticeably bigger jump than borrowers expect going in.
+              </div>
+
+              <h2>Common Mistakes</h2>
+              <p>Borrowers frequently choose interest-only purely to lower their monthly payment without a specific plan for what happens when the period ends — banks increasingly require evidence of a credible strategy (a lump sum, planned sale, or investment vehicle) before approving it, particularly for owner-occupied lending.</p>
+              <p>Borrowers also assume interest-only is mainly for investment properties — while it is more common there (since it can maximise the tax-deductible interest component relative to rental income), it remains available for owner-occupied lending too, just under tighter conditions than in the past.</p>
+              <p>A third mistake: not budgeting for the payment step-up at the end of the interest-only period — treating the lower initial payment as the permanent number, rather than a temporary phase with a known, calculable increase coming.</p>
+
+              <h2>Where This Calculator Has Limits</h2>
+              <p>It shows the two structures at their simplest — some borrowers use a part table-loan, part interest-only split, which this direct comparison doesn't model. It also can't confirm whether a specific lender will approve an interest-only application without knowing your full financial picture and their current lending policy.</p>
+
+              <h2>Frequently Asked Questions</h2>
+              <h3>Is interest-only still available for owner-occupied homes in New Zealand?</h3>
+              <p>Yes, though banks apply tighter criteria than in the past, generally requiring a credible plan for repaying the principal once the interest-only period ends.</p>
+
+              <h3>Does interest-only cost more overall?</h3>
+              <p>Yes — since the balance doesn't reduce during the interest-only period, more total interest accrues over the life of the loan compared to an equivalent table loan.</p>
+
+              <h3>What happens automatically when my interest-only period ends?</h3>
+              <p>Payments switch to a table-loan structure, recalculated to fully repay the remaining balance over whatever term is left — this step-up is worth planning for well in advance.</p>
+
+              <h3>Is interest-only more common for investment properties?</h3>
+              <p>Yes, considerably — many investors use it to maximise the interest-deductible portion of their loan while relying on rental income and property appreciation as the underlying strategy.</p>
+
+              <h3>Can I extend my interest-only period when it ends?</h3>
+              <p>Sometimes, subject to your bank's current lending policy and your financial circumstances at the time — it's not automatic and generally requires a fresh application or review.</p>
+
+              <h2>Related Tools</h2>
+              <p>
+                <a href="/new-zealand-mortgage-calculator.html">Mortgage Calculator</a> &middot;
+                <a href="/blog/nz-rental-yield-calculator.html">Rental Yield Calculator</a> &middot;
+                <a href="/blog/nz-lvr-calculator.html">LVR Calculator</a>
+              </p>
+
+              <p class="disclaimer-text">
+                <em>Educational content, not financial advice. Interest-only eligibility and lending criteria vary by bank and change over time — confirm your specific options with a licensed New Zealand mortgage adviser. Written by the MortgagePro Global team.</em>
+              </p>
+            </div>
+          </article>
+
+        </div><!-- .main-content -->
+
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Advertisement sidebar">
+          <div class="ad-unit ad-sidebar" aria-label="Advertisement" role="complementary"></div>
+        </aside>
+
+      </div><!-- .page-layout -->
+    </div><!-- .container -->
+  </main>
+
+  <div data-component="footer"></div>
+</body>
+
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DEVWXRXJP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1DEVWXRXJP');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>LVR Calculator: The "Speed Limit" That Caps Banks | MortgagePro Global</title>
+  <meta name="description"
+    content="See how New Zealand's LVR restrictions actually work as a bank-wide speed limit, why new builds are exempt, and what changed on 1 December 2025.">
+  <link rel="canonical" href="https://mortgageproglobal.com/blog/nz-lvr-calculator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="LVR Calculator: The "Speed Limit" That Caps Banks | MortgagePro Global">
+  <meta property="og:description"
+    content="See how New Zealand's LVR restrictions actually work as a bank-wide speed limit, why new builds are exempt, and what changed on 1 December 2025.">
+  <meta property="og:url" content="https://mortgageproglobal.com/blog/nz-lvr-calculator.html">
+  <meta property="og:image" content="https://mortgageproglobal.com/images/og-nz.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LVR Calculator: NZ Bank LVR Speed Limits">
+  <meta name="twitter:description"
+    content="Learn about loan-to-value restrictions, the new-build LVR exemption, and rules from December 2025.">
+  <meta name="twitter:image" content="https://mortgageproglobal.com/images/og-nz.jpg">
+
+  <!-- Verification -->
+  <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
+  <meta name="msvalidate.01" content="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  <meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
+
+  <!-- Critical CSS -->
+  <style>
+    :root {
+      --page-primary: #0D3B2E;
+      --page-accent: #1A6B4A;
+      --page-bg: #EDF5F2;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: var(--page-bg);
+      color: var(--page-primary);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .skip-link:focus {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99999;
+      background: #0D3B2E;
+      color: #fff;
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    [data-component] {
+      min-height: 60px;
+    }
+
+    /* Article Styles */
+    .article-container {
+      background: #fff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      margin-bottom: 32px;
+    }
+
+    .article-meta {
+      font-size: 0.85rem;
+      color: #6B7280;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .article-content h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #F1F5F9;
+      padding-bottom: 8px;
+    }
+
+    .article-content h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.25rem;
+      color: #374151;
+      line-height: 1.75;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .article-content li {
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+
+    /* Table override to match NZ theme */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    thead {
+      background: var(--page-primary);
+      color: #fff;
+    }
+
+    th,
+    td {
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background-color: #E2ECE9;
+    }
+
+    .example-box {
+      background: #E8F5E9;
+      border-left: 4px solid var(--page-accent);
+      padding: 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+    }
+
+    .disclaimer-text {
+      font-size: 0.85rem;
+      color: #6B7280;
+      border-top: 1px solid #E5E7EB;
+      padding-top: 16px;
+      margin-top: 32px;
+    }
+
+    /* Dark Mode Overrides */
+    @media (prefers-color-scheme: dark) {
+      .article-container {
+        background: var(--bg-card, #1E293B);
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-content p,
+      .article-content li {
+        color: #D1D5DB;
+      }
+
+      .article-content h2 {
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-meta {
+        color: #9CA3AF;
+      }
+
+      .example-box {
+        background: #0B2920;
+        border-left-color: #2ea8ff;
+      }
+
+      tr:nth-child(even) {
+        background-color: #0E241E;
+      }
+
+      table {
+        background-color: #0A1713;
+      }
+    }
+  </style>
+
+  <!-- Structured Data: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "LVR Calculator: The 'Speed Limit' That Caps Banks, Not Just Borrowers",
+    "description": "See how New Zealand's LVR restrictions actually work as a bank-wide speed limit, why new builds are exempt, and what changed on 1 December 2025.",
+    "image": "https://mortgageproglobal.com/images/og-nz.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "REO Technologies Editorial Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "REO Technologies",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mortgageproglobal.com/images/logo.svg"
+      }
+    },
+    "datePublished": "2026-06-29",
+    "dateModified": "2026-06-29",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mortgageproglobal.com/blog/nz-lvr-calculator.html"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mortgageproglobal.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mortgageproglobal.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "LVR Guide", "item": "https://mortgageproglobal.com/blog/nz-lvr-calculator.html" }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/accessibility.css">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/rates.js" defer></script>
+  <script src="/js/accessibility.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-component="header"></div>
+
+  <!-- Hero -->
+  <section class="page-hero" aria-label="Page introduction">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li>LVR Guide</li>
+        </ol>
+      </nav>
+      <h1>LVR Calculator: The "Speed Limit" That Caps Banks, Not Just Borrowers</h1>
+      <p class="subtitle">Understand New Zealand's loan-to-value framework and speed-limit exemptions.</p>
+    </div>
+  </section>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="page-layout">
+        <div class="main-content">
+
+          <article class="article-container">
+            <header>
+              <div class="article-meta">
+                <span><strong>Author:</strong> REO Technologies Editorial Team</span>
+                <span>•</span>
+                <span><strong>Published:</strong> June 29, 2026</span>
+                <span>•</span>
+                <span><strong>Category:</strong> Home Buying Basics</span>
+              </div>
+            </header>
+
+            <div class="article-content">
+              <p>New Zealand's loan-to-value ratio (LVR) restrictions don't work quite the way most people assume. They're not a hard rule blocking any individual borrower with a small deposit — they're a cap on how much of each <strong>bank's total new lending</strong> can go to high-LVR borrowers, known as a "speed limit." Individual approval still depends on the bank's own criteria and how much of that speed-limit headroom they have left.</p>
+
+              <h2>The Current Settings</h2>
+              <p><strong>Owner-occupiers:</strong> loans above 80% LVR (deposits under 20%) are classed as high-LVR. As of 1 December 2025, banks can direct up to <strong>25%</strong> of their new owner-occupier lending to high-LVR borrowers (eased from 20%).</p>
+              <p><strong>Investors:</strong> loans above 70% LVR (deposits under 30%) are classed as high-LVR for this category. As of 1 December 2025, banks can direct up to <strong>10%</strong> of new investor lending to high-LVR borrowers (eased from 5%).</p>
+              <p>Both settings have loosened meaningfully over the past two years as part of the Reserve Bank's broader easing cycle — worth checking for further changes, since these thresholds move periodically based on financial stability conditions.</p>
+
+              <h2>New Builds Get a Genuine Exemption</h2>
+              <p>New build properties (houses and units under new title) are generally exempt from LVR restrictions entirely, for both owner-occupiers and investors — an explicit policy choice to support new housing supply. In practice: owner-occupiers can borrow up to 90% LVR (10% deposit) on a new build without touching the bank's high-LVR allowance; investors can borrow up to 80% LVR (20% deposit) on a new build without hitting the standard 70% investor threshold.</p>
+
+              <h2>Worked Example</h2>
+              <p>A first home buyer purchasing a $700,000 property:</p>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Scenario</th>
+                    <th>Deposit Needed</th>
+                    <th>LVR</th>
+                    <th>Counts Against Bank's Limit?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Existing home, standard lending</td>
+                    <td>$140,000 (20%)</td>
+                    <td>80%</td>
+                    <td>No — under threshold</td>
+                  </tr>
+                  <tr>
+                    <td>Existing home, low deposit</td>
+                    <td>$70,000 (10%)</td>
+                    <td>90%</td>
+                    <td>Yes — high-LVR, uses speed limit</td>
+                  </tr>
+                  <tr>
+                    <td>New build, low deposit</td>
+                    <td>$70,000 (10%)</td>
+                    <td>90%</td>
+                    <td><strong>No — new build exemption applies</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Kāinga Ora First Home Loan</td>
+                    <td>As little as $35,000 (5%)</td>
+                    <td>95%</td>
+                    <td><strong>No — exempt entirely</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>The same 90% LVR looks completely different depending on whether it's an existing home (uses up scarce speed-limit allowance, harder to get approved) or a new build (exempt, easier to access at the same deposit level).</p>
+
+              <div class="example-box">
+                <strong>Why this matters for negotiating with a bank:</strong> if you're a low-deposit buyer and your bank says no to an existing-home purchase, asking whether a comparable new-build option is available — or whether you qualify for a Kāinga Ora First Home Loan — can access a completely different lending pathway that doesn't compete for the same restricted allowance.
+              </div>
+
+              <h2>Common Mistakes</h2>
+              <p>Buyers frequently think LVR restrictions are a personal rule applied to their specific loan — it's actually a portfolio-wide cap on the bank, meaning your individual approval odds depend partly on how much high-LVR lending that particular bank has already done that quarter, not just your own financial profile.</p>
+              <p>Buyers also miss the new-build exemption entirely, assuming a 10% deposit purchase is equally hard to finance whether it's an existing home or a newly built one — the exemption can make a real, practical difference in which properties are realistically accessible at a given deposit level.</p>
+              <p>A third mistake: not checking whether refinancing (without increasing the loan) is exempt — it generally is, since it doesn't add new leverage to the system, which matters for existing high-LVR borrowers looking to switch lenders.</p>
+
+              <h2>Where This Calculator Has Limits</h2>
+              <p>It reflects the current RBNZ-set thresholds and speed limits, which are reviewed periodically and have changed multiple times in recent years — always confirm current settings before relying on this for a live purchase. It also can't predict which individual banks currently have speed-limit headroom available, since that varies by lender and time of year.</p>
+
+              <h2>Frequently Asked Questions</h2>
+              <h3>Is the LVR restriction the same as a hard deposit requirement?</h3>
+              <p>Not exactly — it's a cap on how much high-LVR lending each bank can do overall, so approval for a specific low-deposit loan depends on the bank's current lending mix, not just a fixed rule.</p>
+
+              <h3>Are new builds always exempt from LVR restrictions?</h3>
+              <p>Generally yes, which is a deliberate policy choice to support housing supply — confirm the exact definition of "new build" your bank is applying, since it typically requires the property to be under new title or newly constructed within a set window.</p>
+
+              <h3>Does the LVR restriction apply to refinancing?</h3>
+              <p>Refinancing without increasing the loan amount is generally exempt, since it doesn't add new leverage to the system.</p>
+
+              <h3>When did the settings last change?</h3>
+              <p>Most recently on 1 December 2025, when both the owner-occupier and investor speed limits were eased — worth checking for further updates given how often these settings have moved historically.</p>
+
+              <h3>Are Kāinga Ora First Home Loans subject to LVR restrictions?</h3>
+              <p>No — they're explicitly exempt, which is part of why they're such a significant tool for genuinely low-deposit first home buyers.</p>
+
+              <h2>Related Tools</h2>
+              <p>
+                <a href="/blog/nz-dti-calculator.html">DTI Calculator</a> &middot;
+                <a href="/new-zealand-mortgage-calculator.html">Mortgage Calculator</a> &middot;
+                <a href="/blog/nz-first-home-buyer.html">First Home Buyer</a>
+              </p>
+
+              <p class="disclaimer-text">
+                <em>Educational content, not financial advice. LVR thresholds and speed limits are set by the Reserve Bank of New Zealand and reviewed periodically — confirm current settings with a licensed New Zealand mortgage adviser. Written by the MortgagePro Global team; settings referenced against the RBNZ's rules in effect from 1 December 2025.</em>
+              </p>
+            </div>
+          </article>
+
+        </div><!-- .main-content -->
+
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Advertisement sidebar">
+          <div class="ad-unit ad-sidebar" aria-label="Advertisement" role="complementary"></div>
+        </aside>
+
+      </div><!-- .page-layout -->
+    </div><!-- .container -->
+  </main>
+
+  <div data-component="footer"></div>
+</body>
+
+</html>
