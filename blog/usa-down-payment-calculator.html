@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DEVWXRXJP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1DEVWXRXJP');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Down Payment Calculator: What Actually Changes at 3%, 5%, 10%, 20% | MortgagePro Global</title>
+  <meta name="description"
+    content="See exactly what shifts — PMI, rate access, and monthly payment — at each common US down payment tier, not just the size of the check you write.">
+  <link rel="canonical" href="https://mortgageproglobal.com/blog/usa-down-payment-calculator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Down Payment Calculator: What Actually Changes at 3%, 5%, 10%, 20% | MortgagePro Global">
+  <meta property="og:description"
+    content="See exactly what shifts — PMI, rate access, and monthly payment — at each common US down payment tier, not just the size of the check you write.">
+  <meta property="og:url" content="https://mortgageproglobal.com/blog/usa-down-payment-calculator.html">
+  <meta property="og:image" content="https://mortgageproglobal.com/images/og-home.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Down Payment Calculator: What Actually Changes at 3%, 5%, 10%, 20%">
+  <meta name="twitter:description"
+    content="PMI requirements, interest rates, and loan features shift at critical down payment thresholds. Compare the tiers.">
+  <meta name="twitter:image" content="https://mortgageproglobal.com/images/og-home.jpg">
+
+  <!-- Verification -->
+  <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
+  <meta name="msvalidate.01" content="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  <meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
+
+  <!-- Critical CSS -->
+  <style>
+    :root {
+      --page-primary: #0B1D3A;
+      --page-accent: #B91C1C;
+      --page-bg: #F0F4FF;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: var(--page-bg);
+      color: var(--page-primary);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .skip-link:focus {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99999;
+      background: #0B1D3A;
+      color: #fff;
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    [data-component] {
+      min-height: 60px;
+    }
+
+    /* Article Styles */
+    .article-container {
+      background: #fff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      margin-bottom: 32px;
+    }
+
+    .article-meta {
+      font-size: 0.85rem;
+      color: #6B7280;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .article-content h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #F1F5F9;
+      padding-bottom: 8px;
+    }
+
+    .article-content h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.25rem;
+      color: #374151;
+      line-height: 1.75;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .article-content li {
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+
+    /* Table Styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    thead {
+      background: var(--page-primary);
+      color: #fff;
+    }
+
+    th, td {
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background-color: #F9FAFB;
+    }
+
+    .disclaimer-text {
+      font-size: 0.85rem;
+      color: #6B7280;
+      border-top: 1px solid #E5E7EB;
+      padding-top: 16px;
+      margin-top: 32px;
+    }
+
+    /* Dark Mode Overrides */
+    @media (prefers-color-scheme: dark) {
+      .article-container {
+        background: var(--bg-card, #1E293B);
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-content p,
+      .article-content li {
+        color: #D1D5DB;
+      }
+
+      .article-content h2 {
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-meta {
+        color: #9CA3AF;
+      }
+
+      tr:nth-child(even) {
+        background-color: #1E293B;
+      }
+
+      table {
+        background-color: #0F172A;
+      }
+
+      thead {
+        background: #1E293B;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+      }
+    }
+  </style>
+
+  <!-- Structured Data: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Down Payment Calculator: What Actually Changes at 3%, 5%, 10%, and 20%",
+    "description": "See exactly what shifts — PMI, rate access, and monthly payment — at each common US down payment tier, not just the size of the check you write.",
+    "image": "https://mortgageproglobal.com/images/og-home.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "REO Technologies Editorial Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "REO Technologies",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mortgageproglobal.com/images/logo.svg"
+      }
+    },
+    "datePublished": "2026-06-29",
+    "dateModified": "2026-06-29",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mortgageproglobal.com/blog/usa-down-payment-calculator.html"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mortgageproglobal.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mortgageproglobal.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Down Payment Calculator Guide", "item": "https://mortgageproglobal.com/blog/usa-down-payment-calculator.html" }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/accessibility.css">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/rates.js" defer></script>
+  <script src="/js/accessibility.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-component="header"></div>
+
+  <!-- Hero -->
+  <section class="page-hero" aria-label="Page introduction">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li>Down Payment Calculator Guide</li>
+        </ol>
+      </nav>
+      <h1>Down Payment Calculator: What Actually Changes at 3%, 5%, 10%, and 20%</h1>
+      <p class="subtitle">See how different down payment thresholds impact your monthly payments, PMI, and mortgage rates.</p>
+    </div>
+  </section>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="page-layout">
+        <div class="main-content">
+
+          <article class="article-container">
+            <header>
+              <div class="article-meta">
+                <span><strong>Author:</strong> REO Technologies Editorial Team</span>
+                <span>•</span>
+                <span><strong>Published:</strong> June 29, 2026</span>
+                <span>•</span>
+                <span><strong>Category:</strong> Home Buying Basics</span>
+              </div>
+            </header>
+
+            <div class="article-content">
+              <p>Down payment size does more than determine your loan amount. At four common thresholds — 3%, 5%, 10%, and 20% — different rules kick in that change your monthly payment beyond simple math.</p>
+
+              <h2>The Four Tiers, and What Each One Unlocks</h2>
+              <p><strong>3% down</strong> — the minimum for many conventional conforming loans aimed at first-time buyers. PMI applies, typically at the higher end of the pricing scale since loan-to-value is highest.</p>
+              <p><strong>5% down</strong> — opens up a broader set of conventional loan programs beyond first-time-buyer-specific options. PMI still applies but usually prices slightly better than 3% down.</p>
+              <p><strong>10% down</strong> — a meaningful jump in loan-to-value that noticeably lowers PMI pricing, and on FHA loans specifically, drops the mortgage insurance duration from life-of-loan to cancelable after 11 years.</p>
+              <p><strong>20% down</strong> — the traditional threshold that eliminates PMI entirely on a conventional loan and, on many lenders' pricing grids, unlocks marginally better rate pricing on top of the insurance savings.</p>
+
+              <h2>Worked Comparison</h2>
+              <p>On a $412,500 home at 6.47%, 30-year fixed:</p>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Down Payment</th>
+                    <th>Loan Amount</th>
+                    <th>Est. PMI/Month</th>
+                    <th>Est. Total Monthly (P&amp;I + PMI)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>3% ($12,375)</strong></td>
+                    <td>$400,125</td>
+                    <td>~$310</td>
+                    <td>~$2,835</td>
+                  </tr>
+                  <tr>
+                    <td><strong>5% ($20,625)</strong></td>
+                    <td>$391,875</td>
+                    <td>~$260</td>
+                    <td>~$2,730</td>
+                  </tr>
+                  <tr>
+                    <td><strong>10% ($41,250)</strong></td>
+                    <td>$371,250</td>
+                    <td>~$140</td>
+                    <td>~$2,480</td>
+                  </tr>
+                  <tr>
+                    <td><strong>20% ($82,500)</strong></td>
+                    <td>$330,000</td>
+                    <td>$0</td>
+                    <td>~$2,080</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>The gap between 3% and 20% down here is roughly $750/month — not just from the smaller loan, but from PMI stacking on top of it at the lower tiers.</p>
+
+              <h2>Common Mistakes</h2>
+              <p>Buyers sometimes assume a bigger down payment is always the right move, without weighing the opportunity cost of tying up that extra cash versus keeping it liquid — especially if the alternative use of that money (an emergency fund, other investments) matters more to their specific situation.</p>
+              <p>Buyers also underestimate how much PMI actually costs over time on the low end. On the 3% down scenario above, PMI alone runs roughly $3,700/year until it's removable — real money that a slightly larger down payment could avoid.</p>
+
+              <h2>Where This Calculator Has Limits</h2>
+              <p>It doesn't factor in down payment assistance programs, which can effectively let a buyer "put down" more than their own cash covers. It also can't model your specific PMI rate without your credit score — the estimates above use average pricing, and your actual quote could run higher or lower.</p>
+
+              <h2>Frequently Asked Questions</h2>
+              <h3>Is there ever a reason to put down less than I can afford?</h3>
+              <p>Yes — keeping cash liquid for emergencies, renovations, or other financial goals is a legitimate reason many buyers choose a lower down payment even when they could put more down.</p>
+
+              <h3>Does 20% down guarantee the best rate?</h3>
+              <p>Not automatically, but it typically improves pricing on most lenders' rate sheets compared to lower down payment tiers, on top of removing PMI.</p>
+
+              <h3>Can I remove PMI without refinancing?</h3>
+              <p>Yes — once you reach 20% equity through paydown or appreciation, you can typically request PMI cancellation directly from your servicer.</p>
+
+              <h3>What's the minimum down payment for FHA vs. conventional?</h3>
+              <p>FHA allows as low as 3.5% down (with a 580+ credit score); conventional loans can go as low as 3% for qualifying first-time buyers.</p>
+
+              <h2>Related Tools</h2>
+              <p>
+                <a href="/blog/usa-fha-loan-calculator.html">FHA Loan Calculator</a> &middot;
+                <a href="/blog/usa-mortgage-calculator.html">Mortgage Calculator</a> &middot;
+                <a href="/blog/usa-affordability-calculator.html">Affordability Calculator</a>
+              </p>
+
+              <p class="disclaimer-text">
+                <em>Educational content, not financial advice. PMI pricing varies by lender, credit score, and loan-to-value — confirm exact figures with a licensed mortgage lender. Written by the MortgagePro Global team.</em>
+              </p>
+            </div>
+          </article>
+
+        </div><!-- .main-content -->
+
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Advertisement sidebar">
+          <div class="ad-unit ad-sidebar" aria-label="Advertisement" role="complementary"></div>
+        </aside>
+
+      </div><!-- .page-layout -->
+    </div><!-- .container -->
+  </main>
+
+  <div data-component="footer"></div>
+</body>
+
+</html>

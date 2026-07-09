@@ -46,7 +46,7 @@ function drawPieChart(canvasId, principal, interest) {
   ctx.fillStyle = '#fff';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
-  ctx.font = `bold ${Math.round(r * 0.32)}px Georgia, serif`;
+  ctx.font = `bold ${Math.round(r * 0.32)}px sans-serif`;
   ctx.fillText(`${pct}%`, cx, cy - 10);
   ctx.font = `${Math.round(r * 0.16)}px Arial`;
   ctx.fillStyle = 'rgba(255,255,255,0.75)';

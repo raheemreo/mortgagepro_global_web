@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DEVWXRXJP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1DEVWXRXJP');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Affordability Calculator: How PMI Changes "How Much House" | MortgagePro Global</title>
+  <meta name="description"
+    content="See how private mortgage insurance shifts US home affordability math for buyers putting down less than 20%, and where the real ceiling on 'how much house' actually sits.">
+  <link rel="canonical" href="https://mortgageproglobal.com/blog/usa-affordability-calculator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Affordability Calculator: How PMI Changes 'How Much House' | MortgagePro Global">
+  <meta property="og:description"
+    content="See how private mortgage insurance shifts US home affordability math for buyers putting down less than 20%, and where the real ceiling on 'how much house' actually sits.">
+  <meta property="og:url" content="https://mortgageproglobal.com/blog/usa-affordability-calculator.html">
+  <meta property="og:image" content="https://mortgageproglobal.com/images/og-home.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Affordability Calculator: How PMI Changes 'How Much House'">
+  <meta name="twitter:description"
+    content="PMI shifts affordability calculations for US home buyers. Learn how to calculate the real ceiling on your home purchase.">
+  <meta name="twitter:image" content="https://mortgageproglobal.com/images/og-home.jpg">
+
+  <!-- Verification -->
+  <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
+  <meta name="msvalidate.01" content="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  <meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
+
+  <!-- Critical CSS -->
+  <style>
+    :root {
+      --page-primary: #0B1D3A;
+      --page-accent: #B91C1C;
+      --page-bg: #F0F4FF;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: var(--page-bg);
+      color: var(--page-primary);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .skip-link:focus {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99999;
+      background: #0B1D3A;
+      color: #fff;
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    [data-component] {
+      min-height: 60px;
+    }
+
+    /* Article Styles */
+    .article-container {
+      background: #fff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      margin-bottom: 32px;
+    }
+
+    .article-meta {
+      font-size: 0.85rem;
+      color: #6B7280;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .article-content h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #F1F5F9;
+      padding-bottom: 8px;
+    }
+
+    .article-content h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.25rem;
+      color: #374151;
+      line-height: 1.75;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .article-content li {
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+
+    /* Table Styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    thead {
+      background: var(--page-primary);
+      color: #fff;
+    }
+
+    th, td {
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background-color: #F9FAFB;
+    }
+
+    .disclaimer-text {
+      font-size: 0.85rem;
+      color: #6B7280;
+      border-top: 1px solid #E5E7EB;
+      padding-top: 16px;
+      margin-top: 32px;
+    }
+
+    /* Dark Mode Overrides */
+    @media (prefers-color-scheme: dark) {
+      .article-container {
+        background: var(--bg-card, #1E293B);
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-content p,
+      .article-content li {
+        color: #D1D5DB;
+      }
+
+      .article-content h2 {
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-meta {
+        color: #9CA3AF;
+      }
+
+      tr:nth-child(even) {
+        background-color: #1E293B;
+      }
+
+      table {
+        background-color: #0F172A;
+      }
+
+      thead {
+        background: #1E293B;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+      }
+    }
+  </style>
+
+  <!-- Structured Data: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Affordability Calculator: How PMI Changes \"How Much House\" Once You're Under 20% Down",
+    "description": "See how private mortgage insurance shifts US home affordability math for buyers putting down less than 20%, and where the real ceiling on \"how much house\" actually sits.",
+    "image": "https://mortgageproglobal.com/images/og-home.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "REO Technologies Editorial Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "REO Technologies",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mortgageproglobal.com/images/logo.svg"
+      }
+    },
+    "datePublished": "2026-06-29",
+    "dateModified": "2026-06-29",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mortgageproglobal.com/blog/usa-affordability-calculator.html"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mortgageproglobal.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mortgageproglobal.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Affordability Calculator Guide", "item": "https://mortgageproglobal.com/blog/usa-affordability-calculator.html" }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/accessibility.css">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/rates.js" defer></script>
+  <script src="/js/accessibility.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-component="header"></div>
+
+  <!-- Hero -->
+  <section class="page-hero" aria-label="Page introduction">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li>Affordability Calculator Guide</li>
+        </ol>
+      </nav>
+      <h1>Affordability Calculator: How PMI Changes "How Much House" Once You're Under 20% Down</h1>
+      <p class="subtitle">See how private mortgage insurance shifts home affordability math and where your real purchase ceiling sits.</p>
+    </div>
+  </section>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="page-layout">
+        <div class="main-content">
+
+          <article class="article-container">
+            <header>
+              <div class="article-meta">
+                <span><strong>Author:</strong> REO Technologies Editorial Team</span>
+                <span>•</span>
+                <span><strong>Published:</strong> June 29, 2026</span>
+                <span>•</span>
+                <span><strong>Category:</strong> Home Buying Basics</span>
+              </div>
+            </header>
+
+            <div class="article-content">
+              <p>Most affordability calculators start with income and spit out a home price. That's the easy part. The part that actually moves the number for a large share of US buyers — anyone under 20% down — is PMI, an extra monthly cost that doesn't show up until you dig into the loan terms.</p>
+
+              <h2>The Basic Affordability Math</h2>
+              <p>Lenders generally work backward from your gross income and target DTI ratios (see our <a href="/blog/usa-dti-calculator.html">DTI Calculator</a> for the full breakdown) to find a maximum PITI payment, then work forward from that payment, your rate, and your down payment to a maximum home price.</p>
+              <p>Roughly: Max monthly housing payment (28% of gross income) &rarr; Max loan amount at your rate and term &rarr; Add back your down payment &rarr; Max home price.</p>
+
+              <h2>Where PMI Enters the Picture</h2>
+              <p>If your down payment is under 20% on a conventional loan, PMI gets added on top of principal, interest, taxes, and insurance — and it counts against your DTI ratio, which means it directly shrinks the loan amount you can qualify for, not just adds a cost after the fact.</p>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Down Payment</th>
+                    <th>PMI (approx, avg credit)</th>
+                    <th>Effect on Affordability</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>20%+</strong></td>
+                    <td>$0</td>
+                    <td>Full affordability ceiling from income/DTI</td>
+                  </tr>
+                  <tr>
+                    <td><strong>10%</strong></td>
+                    <td>~0.55%/year</td>
+                    <td>Reduces max loan by roughly 3-5% vs. no-PMI scenario</td>
+                  </tr>
+                  <tr>
+                    <td><strong>5%</strong></td>
+                    <td>~0.85%/year</td>
+                    <td>Reduces max loan more, plus a larger loan balance to insure</td>
+                  </tr>
+                  <tr>
+                    <td><strong>3%</strong></td>
+                    <td>~1.1%+/year</td>
+                    <td>Largest PMI drag, though the lowest cash-to-close</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>PMI rates aren't flat — they scale with credit score and loan-to-value, so a 620 credit score borrower at 5% down can pay meaningfully more in PMI than a 760 credit score borrower at the identical down payment.</p>
+
+              <h2>Worked Example</h2>
+              <p>A household with $8,400 gross monthly income and minimal other debt, targeting a 28% front-end ratio, has roughly $2,350/month available for PITI (plus PMI if applicable). At 6.47% on a 30-year fixed with 10% down and PMI factored in, that translates to a maximum home price in the high $300,000s to low $400,000s, depending on local tax rates. The same income with 20%+ down, no PMI drag, can typically support a price 5-8% higher.</p>
+
+              <h2>Common Mistakes</h2>
+              <p>Buyers frequently run affordability numbers assuming 20% down "because that's what everyone says," then get pre-approved at a smaller amount than the calculator showed once PMI enters actual underwriting.</p>
+              <p>Buyers also forget that affordability calculators use <em>gross</em> income, and treat the output as a hard target rather than a ceiling — comfortable spending and maximum qualifying capacity are usually two different numbers, and it's worth deciding which one you're actually solving for.</p>
+
+              <h2>Where This Calculator Has Limits</h2>
+              <p>It can't fully model credit-score-tiered PMI pricing without your actual score. It also doesn't factor in local cost-of-living pressures outside the mortgage itself — two buyers who "afford" the identical house on paper can have very different comfort levels depending on childcare, commute costs, or other fixed expenses the DTI math never sees.</p>
+
+              <h2>Frequently Asked Questions</h2>
+              <h3>Does a higher down payment always mean I can afford more house?</h3>
+              <p>Usually yes, for two reasons — it shrinks the loan you need, and it can eliminate PMI entirely above 20% down, freeing up more of your DTI room for the loan itself.</p>
+
+              <h3>Can PMI be removed later even if I start under 20%?</h3>
+              <p>Yes — once you reach 20% equity through paydown or appreciation, you can typically request PMI cancellation on a conventional loan.</p>
+
+              <h3>Is affordability the same as what a lender will pre-approve me for?</h3>
+              <p>It's an estimate. Actual pre-approval also weighs credit score, employment history, and asset documentation that a simple calculator doesn't capture.</p>
+
+              <h3>Does this account for closing costs?</h3>
+              <p>No — closing costs (typically 2-5% of loan amount) are a separate cash requirement on top of the down payment, not part of the ongoing affordability math.</p>
+
+              <h3>Should I max out what I qualify for?</h3>
+              <p>Not necessarily — qualifying capacity is a ceiling based on debt ratios, not a recommendation for comfortable monthly spending.</p>
+
+              <h2>Related Tools</h2>
+              <p>
+                <a href="/blog/usa-dti-calculator.html">DTI Calculator</a> &middot;
+                <a href="/blog/usa-down-payment-calculator.html">Down Payment Calculator</a> &middot;
+                <a href="/blog/usa-piti-calculator.html">PITI Calculator</a>
+              </p>
+
+              <p class="disclaimer-text">
+                <em>Educational content, not financial advice. PMI rates vary by lender, credit score, and loan-to-value ratio — confirm your exact affordability figures with a licensed mortgage lender. Written by the MortgagePro Global team.</em>
+              </p>
+            </div>
+          </article>
+
+        </div><!-- .main-content -->
+
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Advertisement sidebar">
+          <div class="ad-unit ad-sidebar" aria-label="Advertisement" role="complementary"></div>
+        </aside>
+
+      </div><!-- .page-layout -->
+    </div><!-- .container -->
+  </main>
+
+  <div data-component="footer"></div>
+</body>
+
+</html>

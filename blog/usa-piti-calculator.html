@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DEVWXRXJP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1DEVWXRXJP');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PITI Calculator: The Two-Fifths of a US Mortgage Payment | MortgagePro Global</title>
+  <meta name="description"
+    content="See how property tax and homeowners insurance turn a $2,340 mortgage payment into something closer to $3,140 — and why lenders bundle both into escrow.">
+  <link rel="canonical" href="https://mortgageproglobal.com/blog/usa-piti-calculator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="PITI Calculator: The Two-Fifths of a US Mortgage Payment | MortgagePro Global">
+  <meta property="og:description"
+    content="See how property tax and homeowners insurance turn a $2,340 mortgage payment into something closer to $3,140 — and why lenders bundle both into escrow.">
+  <meta property="og:url" content="https://mortgageproglobal.com/blog/usa-piti-calculator.html">
+  <meta property="og:image" content="https://mortgageproglobal.com/images/og-home.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PITI Calculator: The Two-Fifths of a US Mortgage Payment">
+  <meta name="twitter:description"
+    content="Learn how property taxes, homeowners insurance, and PMI add up with your mortgage principal and interest.">
+  <meta name="twitter:image" content="https://mortgageproglobal.com/images/og-home.jpg">
+
+  <!-- Verification -->
+  <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
+  <meta name="msvalidate.01" content="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  <meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
+
+  <!-- Critical CSS -->
+  <style>
+    :root {
+      --page-primary: #0B1D3A;
+      --page-accent: #B91C1C;
+      --page-bg: #F0F4FF;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: var(--page-bg);
+      color: var(--page-primary);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .skip-link:focus {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99999;
+      background: #0B1D3A;
+      color: #fff;
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    [data-component] {
+      min-height: 60px;
+    }
+
+    /* Article Styles */
+    .article-container {
+      background: #fff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      margin-bottom: 32px;
+    }
+
+    .article-meta {
+      font-size: 0.85rem;
+      color: #6B7280;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .article-content h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #F1F5F9;
+      padding-bottom: 8px;
+    }
+
+    .article-content h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.25rem;
+      color: #374151;
+      line-height: 1.75;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .article-content li {
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+
+    /* Table Styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    thead {
+      background: var(--page-primary);
+      color: #fff;
+    }
+
+    th, td {
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background-color: #F9FAFB;
+    }
+
+    .disclaimer-text {
+      font-size: 0.85rem;
+      color: #6B7280;
+      border-top: 1px solid #E5E7EB;
+      padding-top: 16px;
+      margin-top: 32px;
+    }
+
+    /* Dark Mode Overrides */
+    @media (prefers-color-scheme: dark) {
+      .article-container {
+        background: var(--bg-card, #1E293B);
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-content p,
+      .article-content li {
+        color: #D1D5DB;
+      }
+
+      .article-content h2 {
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-meta {
+        color: #9CA3AF;
+      }
+
+      tr:nth-child(even) {
+        background-color: #1E293B;
+      }
+
+      table {
+        background-color: #0F172A;
+      }
+
+      thead {
+        background: #1E293B;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+      }
+    }
+  </style>
+
+  <!-- Structured Data: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "PITI Calculator: The Two-Fifths of a US Mortgage Payment Most Buyers Forget to Add",
+    "description": "See how property tax and homeowners insurance turn a $2,340 mortgage payment into something closer to $3,140 — and why lenders bundle both into escrow.",
+    "image": "https://mortgageproglobal.com/images/og-home.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "REO Technologies Editorial Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "REO Technologies",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mortgageproglobal.com/images/logo.svg"
+      }
+    },
+    "datePublished": "2026-06-29",
+    "dateModified": "2026-06-29",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mortgageproglobal.com/blog/usa-piti-calculator.html"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mortgageproglobal.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mortgageproglobal.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "PITI Calculator Guide", "item": "https://mortgageproglobal.com/blog/usa-piti-calculator.html" }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/accessibility.css">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/rates.js" defer></script>
+  <script src="/js/accessibility.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-component="header"></div>
+
+  <!-- Hero -->
+  <section class="page-hero" aria-label="Page introduction">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li>PITI Calculator Guide</li>
+        </ol>
+      </nav>
+      <h1>PITI Calculator: The Two-Fifths of a US Mortgage Payment Most Buyers Forget to Add</h1>
+      <p class="subtitle">Learn how taxes, insurance, and escrow turn your principal &amp; interest figures into your real monthly payment.</p>
+    </div>
+  </section>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="page-layout">
+        <div class="main-content">
+
+          <article class="article-container">
+            <header>
+              <div class="article-meta">
+                <span><strong>Author:</strong> REO Technologies Editorial Team</span>
+                <span>•</span>
+                <span><strong>Published:</strong> June 29, 2026</span>
+                <span>•</span>
+                <span><strong>Category:</strong> Mortgage Basics</span>
+              </div>
+            </header>
+
+            <div class="article-content">
+              <p>A reader ran the numbers on that same $412,500 home from our Mortgage Calculator article and got $2,340 a month. Then their pre-approval letter came back showing $3,140. Nobody had raised their rate. What happened is PITI — Principal, Interest, Taxes, and Insurance — the actual number lenders qualify you against, not just the P&amp;I your calculator first spits out.</p>
+
+              <h2>What PITI Actually Stands For, and Why It's Bundled</h2>
+              <p>In most of the US, when you take out a mortgage, your lender doesn't just collect principal and interest. They also collect a monthly slice toward your annual property tax bill and homeowners insurance premium, hold it in an escrow account, and pay those bills on your behalf when they're due. It's not optional in most cases — lenders require escrow on the majority of conventional loans with less than 20% down, and on virtually all FHA and VA loans regardless of down payment.</p>
+              <p>This is genuinely different from a lot of the world. In some countries, property tax is a separate annual bill the homeowner pays directly. In the US mortgage system, it's baked into the same monthly draft as your loan payment.</p>
+
+              <h2>The Math</h2>
+              <p>PITI = Principal + Interest + 1/12 of annual property tax + 1/12 of annual homeowners insurance premium (+ PMI if applicable, + HOA dues if applicable, though HOA usually isn't escrowed by the lender).</p>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Component</th>
+                    <th>Monthly</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Principal &amp; Interest</td>
+                    <td>$2,340</td>
+                    <td>On $371,250 @ 6.47%, 30-yr</td>
+                  </tr>
+                  <tr>
+                    <td>Property tax</td>
+                    <td>$515</td>
+                    <td>Based on ~1.5% annual rate on $412,500</td>
+                  </tr>
+                  <tr>
+                    <td>Homeowners insurance</td>
+                    <td>$145</td>
+                    <td>Roughly $1,740/year, mid-range coverage</td>
+                  </tr>
+                  <tr>
+                    <td>PMI</td>
+                    <td>$140</td>
+                    <td>Estimated ~0.45%/year on conventional, since down payment is under 20%</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Total PITI</strong></td>
+                    <td><strong>&asymp; $3,140</strong></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>Property tax rates vary enormously by state and even by county — from under 0.3% of home value annually in Hawaii to over 2% in parts of New Jersey and Illinois. That single line item can shift your PITI by hundreds of dollars for an identical loan.</p>
+
+              <h2>Common Mistakes</h2>
+              <p>Buyers moving between states get burned by this constantly — someone relocating from a low-tax state to a high-tax one often underestimates their new payment by $300-500/month, purely on the tax line, without the mortgage terms changing at all.</p>
+              <p>Another mistake: assuming your first year's escrow estimate is locked in. Lenders re-run an escrow analysis annually, and if your insurance premium or tax bill went up, your monthly PITI goes up with it — even if your rate and P&amp;I never change. This is why a fixed-rate mortgage can still have a payment that rises over time.</p>
+              <p>A third mistake: not shopping homeowners insurance separately. Lenders will often quote a placeholder estimate before you've picked a policy, and the real premium can come in meaningfully different once you compare carriers.</p>
+
+              <h2>Where PITI Falls Short as a Full Budget Number</h2>
+              <p>PITI doesn't include HOA dues, which many lenders factor into qualifying but don't escrow. It doesn't include maintenance — a commonly cited rule of thumb is budgeting 1-2% of home value annually for upkeep, separate from what shows up in any mortgage calculator. And it's calculated on your first year's tax and insurance estimates, which for a new construction home or a recent sale can be based on outdated assessed values that jump significantly after the county reassesses.</p>
+
+              <h2>Frequently Asked Questions</h2>
+              <h3>Can I avoid escrow and pay taxes/insurance myself?</h3>
+              <p>Sometimes, if you put down 20% or more on a conventional loan — some lenders allow a waiver, occasionally for a small fee. FHA and VA loans generally require escrow regardless of down payment.</p>
+
+              <h3>Why did my PITI go up even though my rate is fixed?</h3>
+              <p>Almost always a tax or insurance increase, not the loan itself. Your escrow account gets reanalyzed annually.</p>
+
+              <h3>Does PITI include PMI?</h3>
+              <p>It's often lumped in for budgeting purposes when down payment is under 20%, though technically PMI is a separate line, not one of the four PITI letters.</p>
+
+              <h3>How accurate is the tax estimate before I own the home?</h3>
+              <p>It's an estimate based on the current assessed value — if you're buying at a higher price than the current assessment, expect your actual tax bill (and PITI) to rise after the county reassesses post-sale.</p>
+
+              <h3>Is a lower PITI always the better deal?</h3>
+              <p>Not necessarily — a lower monthly PITI from a longer term or an ARM can mean more total interest or future rate risk. Compare the full picture, not just the monthly number.</p>
+
+              <h2>Related Tools</h2>
+              <p>
+                <a href="/blog/usa-mortgage-calculator.html">Mortgage Calculator</a> &middot;
+                <a href="/blog/usa-affordability-calculator.html">Affordability Calculator</a> &middot;
+                <a href="/blog/usa-dti-calculator.html">DTI Calculator</a>
+              </p>
+
+              <p class="disclaimer-text">
+                <em>Educational content, not financial advice. Property tax rates, insurance costs, and PMI estimates vary significantly by location and borrower profile — confirm exact figures with your county assessor, insurance carrier, and lender. Written by the MortgagePro Global team.</em>
+              </p>
+            </div>
+          </article>
+
+        </div><!-- .main-content -->
+
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Advertisement sidebar">
+          <div class="ad-unit ad-sidebar" aria-label="Advertisement" role="complementary"></div>
+        </aside>
+
+      </div><!-- .page-layout -->
+    </div><!-- .container -->
+  </main>
+
+  <div data-component="footer"></div>
+</body>
+
+</html>

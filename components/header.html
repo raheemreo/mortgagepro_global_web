@@ -1,27 +1,53 @@
-﻿<!-- components/header.html — injected by components.js -->
+<!-- components/header.html — injected by components.js -->
 <header class="site-header" role="banner">
-  <div class="container">
+  <div class="container header-inner">
     <a href="/" class="logo" aria-label="MortgagePro Global homepage">
+      <div class="logo-icon" aria-hidden="true">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="36" height="36" rx="8" fill="#B91C1C" />
+          <path d="M7 20L18 10L29 20V28H23V23H13V28H7V20Z" fill="white" />
+          <rect x="15" y="18" width="6" height="6" fill="#B91C1C" />
+        </svg>
+      </div>
       <div class="logo-text">
-        MortgagePro Global
-        <span>by REO Technologies</span>
+        MortgagePro<span class="logo-accent">Global</span>
+        <small>by REO Technologies</small>
       </div>
     </a>
+
     <nav aria-label="Main navigation" id="main-nav">
-      <button class="hamburger-btn" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation menu">
+      <button class="hamburger-btn" id="hamburger" aria-expanded="false" aria-controls="nav-menu"
+        aria-label="Open navigation menu">
         <span aria-hidden="true">☰</span>
       </button>
       <ul id="nav-menu" role="list" class="nav-list">
         <li><a href="/">Home</a></li>
-        <li><a href="/usa-mortgage-calculator.html"><img src="https://flagcdn.com/us.svg" class="header-flag" alt="" aria-hidden="true"> USA</a></li>
-        <li><a href="/canada-mortgage-calculator.html"><img src="https://flagcdn.com/ca.svg" class="header-flag" alt="" aria-hidden="true"> Canada</a></li>
-        <li><a href="/uk-mortgage-calculator.html"><img src="https://flagcdn.com/gb.svg" class="header-flag" alt="" aria-hidden="true"> UK</a></li>
-        <li><a href="/india-home-loan-emi-calculator.html"><img src="https://flagcdn.com/in.svg" class="header-flag" alt="" aria-hidden="true"> India</a></li>
-        <li><a href="/australia-mortgage-calculator.html"><img src="https://flagcdn.com/au.svg" class="header-flag" alt="" aria-hidden="true"> Australia</a></li>
-        <li><a href="/new-zealand-mortgage-calculator.html"><img src="https://flagcdn.com/nz.svg" class="header-flag" alt="" aria-hidden="true"> NZ</a></li>
-        <li><a href="/europe-mortgage-calculator.html"><img src="https://flagcdn.com/eu.svg" class="header-flag" alt="" aria-hidden="true"> Europe</a></li>
-        <li><a href="/mortgage-faq.html">FAQ</a></li>
-        <li><a href="/blog/">Blog</a></li>
+        <li class="nav-dropdown">
+          <a href="#calculators" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Calculators
+            <span class="nav-chevron">▾</span></a>
+          <ul class="nav-dropdown-menu" role="list">
+            <li><a href="/usa-mortgage-calculator.html"><img src="https://flagcdn.com/us.svg" class="header-flag" alt=""
+                  aria-hidden="true"> USA Mortgage</a></li>
+            <li><a href="/canada-mortgage-calculator.html"><img src="https://flagcdn.com/ca.svg" class="header-flag"
+                  alt="" aria-hidden="true"> Canada Mortgage</a></li>
+            <li><a href="/uk-mortgage-calculator.html"><img src="https://flagcdn.com/gb.svg" class="header-flag" alt=""
+                  aria-hidden="true"> UK Mortgage</a></li>
+            <li><a href="/india-home-loan-emi-calculator.html"><img src="https://flagcdn.com/in.svg" class="header-flag"
+                  alt="" aria-hidden="true"> India EMI</a></li>
+            <li><a href="/australia-mortgage-calculator.html"><img src="https://flagcdn.com/au.svg" class="header-flag"
+                  alt="" aria-hidden="true"> Australia</a></li>
+            <li><a href="/new-zealand-mortgage-calculator.html"><img src="https://flagcdn.com/nz.svg"
+                  class="header-flag" alt="" aria-hidden="true"> New Zealand</a></li>
+            <li><a href="/europe-mortgage-calculator.html"><img src="https://flagcdn.com/eu.svg" class="header-flag"
+                  alt="" aria-hidden="true"> Europe</a></li>
+          </ul>
+        </li>
+        <li><a href="/blog/">Learn</a></li>
+        <li><a href="/mortgage-faq.html">FAQs</a></li>
+        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li class="nav-cta-item"><a href="#calculators" class="btn-nav-cta">Calculate Your Mortgage</a></li>
       </ul>
     </nav>
   </div>

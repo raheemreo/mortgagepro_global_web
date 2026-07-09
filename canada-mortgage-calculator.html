@@ -1,25 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DEVWXRXJP"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-1DEVWXRXJP');
-  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Canada Mortgage Calculator 2026 — CMHC &amp; Stress Test | MortgagePro Global</title>
   <meta name="description"
     content="Free Canada mortgage calculator estimating CMHC insurance premiums and testing OSFI stress test pass/fail ratios. Uses standard Canadian semi-annual compounding.">
 
   <link rel="canonical" href="https://mortgageproglobal.com/canada-mortgage-calculator.html">
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Canada Mortgage Calculator 2026 — CMHC &amp; Stress Test">
   <meta property="og:description"
@@ -27,28 +16,152 @@
   <meta property="og:url" content="https://mortgageproglobal.com/canada-mortgage-calculator.html">
   <meta property="og:image" content="https://mortgageproglobal.com/images/og-canada.jpg">
 
-  <!-- Verification -->
   <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
   <meta name="msvalidate.01" content="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
   <meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
 
-  <!-- Country colour tokens + critical CSS -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DEVWXRXJP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-1DEVWXRXJP');
+  </script>
+
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://mortgageproglobal.com"},
+  {"@type":"ListItem","position":2,"name":"Canada Mortgage Calculator","item":"https://mortgageproglobal.com/canada-mortgage-calculator.html"}
+]}
+</script>
+
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Canada Mortgage Calculator","url":"https://mortgageproglobal.com/canada-mortgage-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Web","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"},"creator":{"@type":"Organization","name":"REO Technologies"},"dateModified":"2026-06"}
+</script>
+
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"What is CMHC insurance in Canada?","acceptedAnswer":{"@type":"Answer","text":"CMHC insurance is mortgage default insurance required by Canadian law when buying a home with a down payment between 5% and less than 20% of the purchase price. The insurance is provided by the Canada Mortgage and Housing Corporation and protects the lender in case of default. The premium is tiered based on the loan-to-value ratio and is added to the total mortgage loan amount."}},
+  {"@type":"Question","name":"How does the mortgage stress test work in Canada?","acceptedAnswer":{"@type":"Answer","text":"The Canadian mortgage stress test requires home buyers to qualify at a higher interest rate than their actual contract rate to ensure they can manage payments if rates rise. The qualifying rate is either your contract rate plus 2% or the Bank of Canada benchmark rate (currently 6.99%), whichever is higher. Borrowers must pass debt service ratio thresholds (GDS under 39% and TDS under 44%) at this higher rate."}},
+  {"@type":"Question","name":"What is the minimum down payment for a home in Canada?","acceptedAnswer":{"@type":"Answer","text":"The minimum down payment for a home in Canada is tiered: 5% on the first $500,000 of the purchase price, and 10% on the portion between $500,001 and $999,999. Homes priced at $1 million or more require a flat minimum down payment of 20% as they are not eligible for government-backed mortgage insurance."}}
+]}
+</script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- External Stylesheets (compatibility) -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/calculators.css">
+  <link rel="stylesheet" href="/css/accessibility.css">
+
   <style>
     :root {
-      --page-primary: #0A2E1A;
-      --page-accent: #C8102E;
-      --page-bg: #F0F7F4;
+      --forest: #0A2E1A;
+      --forest-bg: #0A2E1A;
+      --green: #1A5C35;
+      --fern: #4A7C5F;
+      --red: #C8102E;
+      --crimson: #8B0A1E;
+      --maple: #D97706;
+      --amber: #B45309;
+      --gold-lt: #6EDFA0;
+      --bg: #F0F7F4;
+      --white: #FFFFFF;
+      --card: #FFFFFF;
+      --muted: #4A7C5F;
+      --border: rgba(26, 92, 53, 0.10);
+      --sh: 0 2px 14px rgba(10, 46, 26, 0.08);
+      --sh2: 0 8px 32px rgba(10, 46, 26, 0.16);
+      --alert-bg: #FEF2F2;
+      --definition-bg: linear-gradient(135deg, #EEF2FF, #E0E7FF);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #081326;
+        --card: #12203a;
+        --white: #12203a;
+        --forest: #ffffff;
+        --green: #2ea8ff;
+        --fern: #2ea8ff;
+        --muted: #a0aec0;
+        --border: rgba(255, 255, 255, 0.08);
+        --sh: 0 2px 14px rgba(0, 0, 0, 0.3);
+        --sh2: 0 8px 32px rgba(0, 0, 0, 0.5);
+        --alert-bg: rgba(200, 16, 46, 0.15);
+        --definition-bg: linear-gradient(135deg, rgba(26, 92, 53, 0.15), rgba(26, 92, 53, 0.25));
+      }
+
+      .content-article p,
+      .content-article li,
+      .faq-a p {
+        color: #cbd5e1 !important;
+      }
+
+      .trust-section {
+        background: linear-gradient(135deg, rgba(245, 158, 11, 0.06), rgba(245, 158, 11, 0.12)) !important;
+        border-color: rgba(245, 158, 11, 0.25) !important;
+      }
+
+      .trust-section h2 {
+        color: #FBBF24 !important;
+      }
+
+      .trust-item-title {
+        color: #FBBF24 !important;
+      }
+
+      .trust-item-text {
+        color: rgba(255, 255, 255, 0.75) !important;
+      }
+    }
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      margin: 0;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      background: var(--page-bg);
-      color: var(--page-primary);
-      font-size: 16px;
-      line-height: 1.6;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--forest);
+      min-height: 100vh;
     }
 
+    .action-btn {
+      border: none;
+      border-radius: 8px;
+      padding: 10px 18px;
+      font-size: 12px;
+      font-weight: 800;
+      color: #fff !important;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.15s, transform 0.1s;
+    }
+
+    .action-btn:active {
+      transform: scale(0.98);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* SKIP LINK FOR ACCESSIBILITY */
     .skip-link {
       position: absolute;
       left: -9999px;
@@ -59,17 +172,576 @@
       left: 0;
       top: 0;
       z-index: 99999;
-      background: #0A2E1A;
+      background: var(--forest);
       color: #fff;
       padding: 12px 24px;
       font-weight: 700;
       text-decoration: none;
     }
 
-    [data-component] {
-      min-height: 60px;
+    /* STICKY NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 500;
+      background: linear-gradient(135deg, #0A2E1A 0%, #1A5C35 60%, #C8102E 100%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      height: 64px;
+      box-shadow: 0 2px 20px rgba(10, 46, 26, 0.32);
     }
 
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      box-shadow: 0 3px 10px rgba(200, 16, 46, 0.45);
+    }
+
+    .brand-name {
+      font-size: 18px;
+      font-weight: 800;
+      color: #fff;
+      font-family: inherit;
+      letter-spacing: -.3px;
+    }
+
+    .brand-name span {
+      color: var(--gold-lt);
+    }
+
+    .brand-sub {
+      font-size: 10px;
+      color: rgba(255, 255, 255, 0.50);
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.82);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 8px;
+      transition: background .15s;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.13);
+      color: #fff;
+    }
+
+    .nav-links a.active {
+      background: rgba(255, 255, 255, 0.17);
+      color: #fff;
+    }
+
+    .nav-cta {
+      background: linear-gradient(135deg, #C8102E, #8B0A1E) !important;
+      color: #fff !important;
+      box-shadow: 0 3px 10px rgba(200, 16, 46, 0.40);
+    }
+
+    @media (max-width: 860px) {
+      .nav-links {
+        display: none;
+      }
+
+      nav {
+        padding: 0 20px;
+      }
+    }
+
+    /* LIVE RATE BAR */
+    .rate-bar {
+      background: var(--forest);
+      display: flex;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .rb-item {
+      flex: 1;
+      text-align: center;
+      padding: 10px 6px;
+      position: relative;
+    }
+
+    .rb-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 15%;
+      height: 70%;
+      width: 1px;
+      background: rgba(255, 255, 255, 0.13);
+    }
+
+    .rb-lbl {
+      font-size: 9px;
+      color: rgba(255, 255, 255, 0.46);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+
+    .rb-val {
+      font-size: 16px;
+      font-weight: 800;
+      color: #fff;
+      font-family: inherit;
+    }
+
+    .rb-val.red {
+      color: #FF8A9A;
+    }
+
+    .rb-val.grn {
+      color: #6EDFA0;
+    }
+
+    .rb-val.gold {
+      color: #FCD34D;
+    }
+
+    .rb-note {
+      font-size: 8.5px;
+      color: rgba(255, 255, 255, 0.38);
+      margin-top: 1px;
+    }
+
+    /* PAGE LAYOUT */
+    .page-wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 40px 70px;
+    }
+
+    @media (max-width: 780px) {
+      .page-wrap {
+        padding: 0 18px 50px;
+      }
+    }
+
+    /* SECTION HERO */
+    .section-hero {
+      background: linear-gradient(150deg, #0A2E1A 0%, #1A5C35 60%, #C8102E 100%);
+      padding: 52px 48px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section-hero::before {
+      content: '🍁';
+      position: absolute;
+      right: 60px;
+      top: 36px;
+      font-size: 160px;
+      opacity: .06;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 32px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-eyebrow {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      color: rgba(255, 255, 255, 0.50);
+      margin-bottom: 6px;
+    }
+
+    .hero-title {
+      font-size: 32px;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.15;
+      font-family: inherit;
+    }
+
+    .hero-title span {
+      color: #6EDFA0;
+    }
+
+    .hero-sub {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.55);
+      margin-top: 6px;
+    }
+
+    /* RATE STRIP (hero bottom) */
+    .hero-rate-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      background: rgba(255, 255, 255, 0.09);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 14px;
+      padding: 12px 16px;
+      margin-top: 28px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hrs {
+      text-align: center;
+      position: relative;
+    }
+
+    .hrs:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 15%;
+      height: 70%;
+      width: 1px;
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    .hrs-l {
+      font-size: 8.5px;
+      color: rgba(255, 255, 255, 0.48);
+      text-transform: uppercase;
+      letter-spacing: .4px;
+    }
+
+    .hrs-v {
+      font-size: 15px;
+      font-weight: 800;
+      color: #fff;
+      font-family: inherit;
+      line-height: 1.1;
+    }
+
+    .hrs-v.red {
+      color: #FF8A9A;
+    }
+
+    .hrs-v.grn {
+      color: #6EDFA0;
+    }
+
+    .hrs-v.gold {
+      color: #FCD34D;
+    }
+
+    .hrs-n {
+      font-size: 8px;
+      color: rgba(255, 255, 255, 0.38);
+      margin-top: 1px;
+    }
+
+    /* SECTION HEADERS */
+    .sec-hdr {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 38px 0 16px;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 10px;
+    }
+
+    .sec-hdr h2 {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+    }
+
+    .sec-hdr a {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--green);
+      text-decoration: none;
+    }
+
+    .sec-hdr a:hover {
+      text-decoration: underline;
+    }
+
+    /* HERO CALC CARD */
+    .hero-calc {
+      background: linear-gradient(145deg, #0A2E1A, #1A5C35);
+      border-radius: 20px;
+      padding: 28px 32px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--sh2);
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .hero-calc::before {
+      content: '🍁';
+      position: absolute;
+      right: 28px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 100px;
+      opacity: .07;
+      pointer-events: none;
+    }
+
+    .hc-left {
+      flex: 1;
+      min-width: 180px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hc-tag {
+      font-size: 9.5px;
+      color: rgba(255, 255, 255, 0.48);
+      text-transform: uppercase;
+      letter-spacing: .8px;
+    }
+
+    .hc-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: #fff;
+      margin: 5px 0 0;
+      line-height: 1.2;
+      font-family: inherit;
+    }
+
+    .hc-title span {
+      color: #6EDFA0;
+    }
+
+    .hc-fields-wrap {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hc-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .hc-box {
+      flex: 1;
+      min-width: 110px;
+      background: rgba(255, 255, 255, 0.10);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      padding: 12px 16px;
+      transition: border-color 0.2s;
+    }
+
+    .hc-box.error-box {
+      border-color: var(--red) !important;
+    }
+
+    .hc-box label {
+      font-size: 9px;
+      color: rgba(255, 255, 255, 0.48);
+      display: block;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+
+    .hc-box input,
+    .hc-box select {
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 800;
+      width: 100%;
+      outline: none;
+    }
+
+    .hc-box select {
+      cursor: pointer;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    .hc-box select option {
+      background: #0A2E1A;
+      color: #fff;
+    }
+
+    .hc-btn {
+      background: var(--red);
+      border: none;
+      border-radius: 12px;
+      padding: 14px 22px;
+      font-size: 14px;
+      font-weight: 800;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(200, 16, 46, 0.38);
+      white-space: nowrap;
+      position: relative;
+      z-index: 1;
+      flex-shrink: 0;
+      font-family: inherit;
+    }
+
+    .hc-btn:hover {
+      background: var(--crimson);
+    }
+
+    @media (max-width: 860px) {
+      .hero-calc {
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .hero-calc::before {
+        top: 18px;
+        right: 18px;
+        transform: none;
+        font-size: 64px;
+      }
+
+      .hc-row {
+        flex-direction: row;
+      }
+
+      .hc-btn {
+        width: 100%;
+      }
+    }
+
+    /* DYNAMIC RESULTS STYLING */
+    .results-panel {
+      display: none;
+      margin-top: 24px;
+      padding: 24px;
+      background: var(--white);
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      box-shadow: var(--sh);
+    }
+
+    .results-panel.visible {
+      display: block;
+      animation: slideDown 0.3s ease-out;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .results-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .results-lead {
+      background: linear-gradient(145deg, #0A2E1A, #1A5C35);
+      color: #fff;
+      border: none;
+    }
+
+    .results-lead .mrc-lbl {
+      color: rgba(255, 255, 255, 0.60);
+    }
+
+    .results-lead .mrc-sub {
+      color: rgba(255, 255, 255, 0.45);
+    }
+
+    .results-lead .mrc-val {
+      color: var(--gold-lt) !important;
+    }
+
+    .mrc {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 16px 14px;
+      box-shadow: var(--sh);
+      border: 1px solid var(--border);
+    }
+
+    .mrc-icon {
+      font-size: 24px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .mrc-lbl {
+      font-size: 10px;
+      color: var(--muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .4px;
+    }
+
+    .mrc-val {
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--forest);
+      margin: 3px 0;
+    }
+
+    .mrc-sub {
+      font-size: 10px;
+      color: var(--muted);
+    }
+
+    /* Status pills */
     .status-pill {
       display: inline-block;
       padding: 4px 10px;
@@ -88,362 +760,1911 @@
       background: #FEE2E2;
       color: #991B1B;
     }
+
+    /* Visual Ratio Bar */
+    .ratio-bar-wrap {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      margin-bottom: 16px;
+    }
+
+    .ratio-bar-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--forest);
+      margin-bottom: 12px;
+    }
+
+    .ratio-bar-track {
+      height: 12px;
+      background: rgba(0, 0, 0, 0.06);
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .ratio-bar-seg {
+      height: 100%;
+      transition: width 0.4s ease;
+    }
+
+    .ratio-bar-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 12px;
+    }
+
+    .ratio-leg-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11.5px;
+      font-weight: 600;
+    }
+
+    .ratio-leg-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    /* STRESS TEST BANNER */
+    .stress-banner {
+      background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+      border: 1px solid #F59E0B;
+      border-radius: 17px;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 12px;
+      box-shadow: var(--sh);
+    }
+
+    .sb-icon {
+      font-size: 30px;
+      flex-shrink: 0;
+    }
+
+    .sb-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: #92400E;
+      font-family: inherit;
+    }
+
+    .sb-sub {
+      font-size: 11px;
+      color: #B45309;
+      margin-top: 3px;
+    }
+
+    .sb-btn {
+      margin-left: auto;
+      background: #F59E0B;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 11px 20px;
+      border-radius: 10px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .sb-btn:hover {
+      background: var(--maple);
+    }
+
+    /* TOOL CARDS GRID */
+    .g2 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 13px;
+    }
+
+    .g3 {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 11px;
+    }
+
+    .tc {
+      background: var(--card);
+      border-radius: 17px;
+      padding: 17px 15px;
+      box-shadow: var(--sh);
+      border: 1px solid var(--border);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: transform .15s, box-shadow .15s;
+      display: block;
+      text-decoration: none;
+    }
+
+    .tc:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--sh2);
+    }
+
+    .tc.dark {
+      background: linear-gradient(140deg, #0A2E1A, #1A5C35);
+    }
+
+    .tc.red {
+      background: linear-gradient(140deg, #C8102E, #8B0A1E);
+    }
+
+    .tc.maple {
+      background: linear-gradient(140deg, #D97706, #B45309);
+    }
+
+    .tc.teal {
+      background: linear-gradient(140deg, #0F766E, #115E59);
+    }
+
+    .tc.navy {
+      background: linear-gradient(140deg, #0A2E1A, #0D3B2E);
+    }
+
+    .tic {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 19px;
+      margin-bottom: 10px;
+      background: var(--bg);
+    }
+
+    .tc.dark .tic,
+    .tc.red .tic,
+    .tc.maple .tic,
+    .tc.teal .tic,
+    .tc.navy .tic {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .tn {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: var(--forest);
+      line-height: 1.2;
+      font-family: inherit;
+    }
+
+    .tc.dark .tn,
+    .tc.red .tn,
+    .tc.maple .tn,
+    .tc.teal .tn,
+    .tc.navy .tn {
+      color: #fff;
+    }
+
+    .td {
+      font-size: 10px;
+      color: var(--fern);
+      margin-top: 3px;
+    }
+
+    .tc.dark .td,
+    .tc.red .td,
+    .tc.maple .td,
+    .tc.teal .td,
+    .tc.navy .td {
+      color: rgba(255, 255, 255, 0.60);
+    }
+
+    .ta {
+      position: absolute;
+      bottom: 13px;
+      right: 13px;
+      font-size: 16px;
+      color: rgba(10, 46, 26, 0.18);
+    }
+
+    .tc.dark .ta,
+    .tc.red .ta,
+    .tc.maple .ta,
+    .tc.teal .ta,
+    .tc.navy .ta {
+      color: rgba(255, 255, 255, 0.25);
+    }
+
+    .badge {
+      display: inline-flex;
+      padding: 3px 9px;
+      border-radius: 20px;
+      font-size: 9px;
+      font-weight: 700;
+      margin-top: 6px;
+    }
+
+    .badge-ca {
+      background: #F0FDF4;
+      color: #166534;
+    }
+
+    .badge-warn {
+      background: #FEF3C7;
+      color: #92400E;
+    }
+
+    .badge-r {
+      background: #FEF2F2;
+      color: #B91C1C;
+    }
+
+    .badge-b {
+      background: #EFF6FF;
+      color: #1D4ED8;
+    }
+
+    .badge-g {
+      background: #F0FDF4;
+      color: #15803D;
+    }
+
+    /* INFO LIST */
+    .ilist {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .ic {
+      background: var(--card);
+      border-radius: 15px;
+      padding: 16px 20px;
+      box-shadow: var(--sh);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform .15s, box-shadow .15s;
+    }
+
+    .ic:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--sh2);
+    }
+
+    .ii {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 19px;
+      flex-shrink: 0;
+    }
+
+    .in {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--forest);
+      font-family: inherit;
+    }
+
+    .is {
+      font-size: 10px;
+      color: var(--fern);
+      margin-top: 3px;
+    }
+
+    .ich {
+      font-size: 18px;
+      color: rgba(10, 46, 26, 0.20);
+      margin-left: auto;
+    }
+
+    /* BoC RATE BANNER */
+    .boc-banner {
+      background: linear-gradient(135deg, #0A2E1A, #1A5C35);
+      border-radius: 17px;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: var(--sh2);
+      margin-bottom: 12px;
+    }
+
+    .boc-icon {
+      font-size: 32px;
+      flex-shrink: 0;
+    }
+
+    .boc-lbl {
+      font-size: 9.5px;
+      text-transform: uppercase;
+      letter-spacing: .6px;
+      color: rgba(255, 255, 255, 0.44);
+      font-weight: 700;
+    }
+
+    .boc-val {
+      font-size: 26px;
+      font-weight: 800;
+      color: #6EDFA0;
+      font-family: inherit;
+      line-height: 1;
+    }
+
+    .boc-sub {
+      font-size: 10px;
+      color: rgba(255, 255, 255, 0.52);
+      margin-top: 3px;
+    }
+
+    .boc-btn {
+      margin-left: auto;
+      background: var(--red);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 10px 18px;
+      border-radius: 10px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .boc-btn:hover {
+      background: var(--crimson);
+    }
+
+    /* PROVINCE TABS */
+    .prov-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .prov-pill {
+      padding: 8px 16px;
+      border-radius: 24px;
+      font-size: 12.5px;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1.5px solid transparent;
+      transition: all .15s;
+      text-decoration: none;
+    }
+
+    .prov-pill.active {
+      background: var(--green);
+      color: #fff;
+      border-color: var(--green);
+    }
+
+    .prov-pill:not(.active) {
+      background: var(--card);
+      color: var(--forest);
+      border-color: var(--border);
+    }
+
+    .prov-pill:hover:not(.active) {
+      background: #E6F5EE;
+      border-color: var(--fern);
+    }
+
+    /* EDUCATIONAL CONTENT */
+    .content-article {
+      background: var(--white);
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      padding: 36px;
+      box-shadow: var(--sh);
+      margin: 32px 0;
+    }
+
+    .content-article h2 {
+      font-family: inherit;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--forest);
+      margin-bottom: 12px;
+    }
+
+    .content-article h3 {
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--forest);
+      margin: 24px 0 10px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+    }
+
+    .content-article h3:first-of-type {
+      border-top: none;
+      margin-top: 12px;
+    }
+
+    .content-article p {
+      font-size: 14.5px;
+      color: #334155;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .content-article ul,
+    .content-article ol {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+
+    .content-article li {
+      font-size: 14.5px;
+      color: #334155;
+      margin-bottom: 6px;
+      line-height: 1.6;
+    }
+
+    .definition-para {
+      background: var(--definition-bg);
+      border-left: 4px solid var(--green);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      font-size: 14.5px;
+      line-height: 1.7;
+      color: var(--forest);
+      font-weight: 500;
+    }
+
+    .formula-box {
+      background: var(--forest-bg);
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin: 16px 0;
+      font-family: inherit;
+      font-size: 14.5px;
+      color: var(--gold-lt);
+      line-height: 1.7;
+    }
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin: 16px 0;
+    }
+
+    .tip-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .tip-card-icon {
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+
+    .tip-card-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--forest);
+      margin-bottom: 4px;
+    }
+
+    .tip-card-text {
+      font-size: 12.5px;
+      color: var(--muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* FAQ ACCORDION */
+    .faq-section {
+      background: var(--white);
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: var(--sh);
+      margin-bottom: 32px;
+    }
+
+    .faq-hdr {
+      padding: 24px 28px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-hdr h2 {
+      font-family: inherit;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--forest);
+      margin: 0;
+    }
+
+    .faq-list {
+      list-style: none;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 28px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--forest);
+      transition: background 0.15s;
+      font-family: inherit;
+    }
+
+    .faq-q:hover {
+      background: var(--bg);
+    }
+
+    .faq-icon {
+      width: 24px;
+      height: 24px;
+      background: var(--bg);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+      color: var(--muted);
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .faq-q[aria-expanded="true"] .faq-icon {
+      transform: rotate(180deg);
+      background: var(--green);
+      color: #fff;
+    }
+
+    .faq-a {
+      display: none;
+      padding: 0 28px 20px;
+    }
+
+    .faq-a.open {
+      display: block;
+      animation: slideDown 0.2s ease-out;
+    }
+
+    .faq-a p {
+      font-size: 14px;
+      color: #334155;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* TRUST SECTION */
+    .trust-section {
+      background: linear-gradient(135deg, #FFFBEB, #FEF3C7);
+      border: 1px solid #F59E0B;
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 32px;
+    }
+
+    .trust-section h2 {
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 800;
+      color: #92400E;
+      margin-bottom: 12px;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .trust-item {
+      display: flex;
+      gap: 12px;
+    }
+
+    .trust-item-icon {
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .trust-item-title {
+      font-size: 12px;
+      font-weight: 800;
+      color: #92400E;
+      margin-bottom: 4px;
+    }
+
+    .trust-item-text {
+      font-size: 11.5px;
+      color: #B45309;
+      line-height: 1.55;
+    }
+
+    /* CTA BANNER */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--forest-bg), var(--green));
+      border-radius: 18px;
+      padding: 32px;
+      text-align: center;
+      margin-bottom: 32px;
+      color: #fff;
+    }
+
+    .cta-banner h2 {
+      font-family: inherit;
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    .cta-banner p {
+      font-size: 13.5px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 18px;
+    }
+
+    .cta-btns {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--forest-bg);
+      color: rgba(255, 255, 255, 0.55);
+      text-align: center;
+      padding: 30px 48px;
+      font-size: 12px;
+      margin-top: 40px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.70);
+      text-decoration: none;
+      padding: 5px 12px;
+      border-radius: 6px;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.09);
+    }
+
+    /* TOAST */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--forest-bg);
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: var(--sh2);
+      z-index: 9999;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.25s, transform 0.25s;
+      pointer-events: none;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* UP / DOWN COLORS */
+    .up {
+      color: #15803D;
+    }
+
+    .dn {
+      color: #C8102E;
+    }
+
+    /* RESPONSIVE BREAKPOINTS */
+    @media (max-width: 1100px) {
+      .g2 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .g3 {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (max-width: 780px) {
+      .section-hero {
+        padding: 40px 20px 0;
+      }
+
+      .section-hero::before {
+        font-size: 100px;
+        right: 16px;
+        top: 20px;
+      }
+
+      .g2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .g3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .ilist {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-rate-strip {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .rate-bar {
+        flex-wrap: wrap;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .g2,
+      .g3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* ACCESSIBILITY FOCUS INDICATORS */
+    :focus-visible {
+      outline: 3px solid var(--green);
+      outline-offset: 2px;
+    }
   </style>
-
-  <!-- Structured Data: BreadcrumbList -->
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://mortgageproglobal.com"},
-    {"@type":"ListItem","position":2,"name":"Canada Mortgage Calculator","item":"https://mortgageproglobal.com/canada-mortgage-calculator.html"}
-  ]}
-  </script>
-
-  <!-- Structured Data: WebApplication -->
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebApplication","name":"Canada Mortgage Calculator","url":"https://mortgageproglobal.com/canada-mortgage-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Web","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"},"creator":{"@type":"Organization","name":"REO Technologies"},"dateModified":"2026-06"}
-  </script>
-
-  <!-- Structured Data: FAQPage -->
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":"What is CMHC insurance in Canada?","acceptedAnswer":{"@type":"Answer","text":"CMHC insurance is mortgage default insurance required by Canadian law when buying a home with a down payment between 5% and less than 20% of the purchase price. The insurance is provided by the Canada Mortgage and Housing Corporation and protects the lender in case of default. The premium is tiered based on the loan-to-value ratio and is added to the total mortgage loan amount."}},
-    {"@type":"Question","name":"How does the mortgage stress test work in Canada?","acceptedAnswer":{"@type":"Answer","text":"The Canadian mortgage stress test requires home buyers to qualify at a higher interest rate than their actual contract rate to ensure they can manage payments if rates rise. The qualifying rate is either your contract rate plus 2% or the Bank of Canada benchmark rate (currently 6.99%), whichever is higher. Borrowers must pass debt service ratio thresholds (GDS under 39% and TDS under 44%) at this higher rate."}},
-    {"@type":"Question","name":"What is the minimum down payment for a home in Canada?","acceptedAnswer":{"@type":"Answer","text":"The minimum down payment for a home in Canada is tiered: 5% on the first $500,000 of the purchase price, and 10% on the portion between $500,001 and $999,999. Homes priced at $1 million or more require a flat minimum down payment of 20% as they are not eligible for government-backed mortgage insurance."}}
-  ]}
-  </script>
-
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/calculators.css">
-  <link rel="stylesheet" href="/css/accessibility.css">
-  <script src="/js/components.js" defer></script>
-  <script src="/js/rates.js" defer></script>
-  <script src="/js/charts.js" defer></script>
-  <script src="/js/calculators.js" defer></script>
-  <script src="/js/accessibility.js" defer></script>
 </head>
 
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-  <div data-component="header"></div>
 
-  <!-- Rate Strip -->
-  <div class="rate-strip" role="region" aria-label="Current Canada mortgage rates">
-    <div class="container">
-      <div class="rate-item"><span class="rate-label">BoC Policy Rate</span><span class="rate-value"
-          data-rate="canada.boc">—</span></div>
-      <div class="rate-item"><span class="rate-label">5-Yr Fixed</span><span class="rate-value"
-          data-rate="canada.fixed5">—</span></div>
-      <div class="rate-item"><span class="rate-label">3-Yr Fixed</span><span class="rate-value"
-          data-rate="canada.fixed3">—</span></div>
-      <div class="rate-item"><span class="rate-label">Variable Rate</span><span class="rate-value"
-          data-rate="canada.variable">—</span></div>
-      <span class="rate-strip-note" data-rate-updated></span>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- STICKY NAV -->
+  <nav role="navigation" aria-label="Main Navigation">
+    <a href="/" class="nav-brand" aria-label="MortgagePro Global Home">
+      <div class="brand-icon" aria-hidden="true">🍁</div>
+      <div>
+        <div class="brand-name">Canada<span>Pro</span></div>
+        <div class="brand-sub">CAD · BoC Rate · CMHC</div>
+      </div>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#calculator" class="active">Calculator</a></li>
+      <li><a href="#stress">Stress Test</a></li>
+      <li><a href="#tools">Core Tools</a></li>
+      <li><a href="#resources">Resources</a></li>
+    </ul>
+  </nav>
+
+  <!-- SECTION HERO -->
+  <div class="section-hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-eyebrow">CAD · BoC Rate · CMHC · Stress Test · All Provinces</div>
+        <h1 class="hero-title">🇨🇦 Canada <span>Mortgage Tools</span></h1>
+        <p class="hero-sub">CMHC insurance · GDS/TDS ratio · Stress test · Land transfer tax · 18+ calculators</p>
+      </div>
     </div>
   </div>
 
-  <!-- Hero -->
-  <section class="page-hero hero-canada" aria-label="Page introduction">
-    <div class="container">
-      <nav aria-label="Breadcrumb">
-        <ol class="breadcrumb">
-          <li><a href="/">Home</a></li>
-          <li>Canada Mortgage Calculator</li>
-        </ol>
-      </nav>
-      <h1>Canada Mortgage Calculator 2026 — CMHC, Stress Test &amp; Amortization</h1>
-      <p class="subtitle">Calculate monthly payments, CMHC premiums, OSFI stress test qualifications, and view a
-        semi-annually compounded amortization schedule.</p>
+  <!-- MAIN CONTENT -->
+  <main class="page-wrap" id="main-content">
+
+    <!-- Quick Answer -->
+    <div class="quick-answer" role="note" aria-label="Quick Summary"
+      style="background: var(--alert-bg); border-left: 4px solid var(--green); border-radius: 12px; padding: 18px 24px; margin: 24px 0;">
+      <p style="font-size: 14px; color: var(--forest); margin: 0; line-height: 1.6;">
+        <strong>Quick Summary:</strong> The Canadian mortgage calculator estimates payments using semi-annual interest
+        compounding. For a <strong>CA$650,000</strong> home with a <strong>20% down payment</strong> (CA$130,000) at
+        <strong>4.99%</strong> fixed over 25 years, the monthly payment is approximately <strong>CA$3,025</strong>. CMHC
+        default insurance premiums apply to down payments under 20%.
+      </p>
     </div>
-  </section>
 
-  <main id="main-content">
-    <div class="container">
-      <div class="page-layout">
-        <div class="main-content">
+    <!-- HERO CALCULATOR CARD -->
+    <section id="calculator" aria-labelledby="calc-heading">
+      <div class="sec-hdr">
+        <h2 id="calc-heading">Canada Mortgage Calculator</h2>
+        <a href="#india-guide">Amortization Guide ↓</a>
+      </div>
 
-          <!-- Quick Answer -->
-          <div class="quick-answer" role="note" aria-label="Quick Summary">
-            <p class="qa-label">Quick Answer</p>
-            <p>The <strong>Canada mortgage calculator</strong> estimates your monthly payment using Canadian semi-annual
-              compounding regulations. For a CA$650,000 home with 20% down at <span
-                data-rate="canada.fixed5">4.99%</span> fixed for 25 years, the monthly payment is approximately
-              <strong>$3,025</strong>. If down payment is under 20%, CMHC insurance is added to the loan.</p>
+      <div class="hero-calc">
+        <div class="hc-left">
+          <div class="hc-tag">Canadian Mortgage Calculator</div>
+          <div class="hc-title">Calculate your <span>CMHC</span><br>insured payment</div>
+        </div>
+
+        <form id="canada-calc-form" novalidate style="flex: 2;">
+          <div class="hc-fields-wrap">
+            <div class="hc-row">
+              <div class="hc-box" id="p-box">
+                <label for="can-price">Property Price ($)</label>
+                <input type="number" id="can-price" value="650000" min="50000" max="10000000" step="5000" required>
+              </div>
+              <div class="hc-box" id="d-box">
+                <label for="can-down">Down Payment (%)</label>
+                <input type="number" id="can-down" value="20" min="5" max="99" step="0.5" required>
+              </div>
+            </div>
+            <div class="hc-row">
+              <div class="hc-box">
+                <label for="can-tenure">Amortization</label>
+                <select id="can-tenure">
+                  <option value="30">30 Years (Uninsured)</option>
+                  <option value="25" selected>25 Years (Insured Standard)</option>
+                  <option value="20">20 Years</option>
+                  <option value="15">15 Years</option>
+                  <option value="10">10 Years</option>
+                </select>
+              </div>
+              <div class="hc-box" id="r-box">
+                <label for="can-rate">Interest Rate (%)</label>
+                <input type="number" id="can-rate" value="4.99" min="0.1" max="25" step="0.01" required>
+              </div>
+            </div>
+            <div class="hc-row">
+              <div class="hc-box" id="i-box" style="flex: 1;">
+                <label for="can-income">Household Income (Gross $/year)</label>
+                <input type="number" id="can-income" value="120000" min="10000" max="10000000" step="1000" required>
+              </div>
+            </div>
+            <button type="submit" class="hc-btn">🍁 Calculate Canadian Mortgage</button>
+            <button type="button" id="can-calc-reset" class="hc-btn"
+              style="background: transparent; border: 1px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.7); box-shadow: none; padding: 10px; font-size: 13px; margin-top: 5px;">Reset
+              Values</button>
           </div>
+        </form>
+      </div>
+    </section>
 
-          <!-- Ad Unit 1 -->
-          <div class="ad-unit ad-leaderboard" aria-label="Advertisement" role="complementary"></div>
+    <!-- DYNAMIC RESULTS SECTION -->
+    <section id="canada-results" class="results-panel" aria-label="Calculation results" aria-live="polite">
+      <div class="results-grid">
+        <div class="mrc results-lead">
+          <span class="mrc-icon">💳</span>
+          <div class="mrc-lbl">Monthly Payment</div>
+          <div class="mrc-val" id="can-monthly-payment" style="font-size: 24px; font-weight: 800;">$0</div>
+          <div class="mrc-sub">Semi-annual compound</div>
+        </div>
+        <div class="mrc">
+          <span class="mrc-icon">🛡️</span>
+          <div class="mrc-lbl">CMHC Premium</div>
+          <div class="mrc-val" id="can-cmhc-premium" style="font-size: 18px; font-weight: 800;">$0</div>
+          <div class="mrc-sub" id="cmhc-pct-lbl">Added to mortgage</div>
+        </div>
+        <div class="mrc">
+          <span class="mrc-icon">🧮</span>
+          <div class="mrc-lbl">Total Loan Size</div>
+          <div class="mrc-val" id="can-loan-amount" style="font-size: 18px; font-weight: 800;">$0</div>
+          <div class="mrc-sub" id="ltv-percentage-lbl">Principal + CMHC</div>
+        </div>
+      </div>
 
-          <!-- Calculator Widget -->
-          <section aria-labelledby="calc-heading">
-            <div class="calculator-card">
-              <h2 id="calc-heading">Canada Mortgage Calculator</h2>
-              <p style="color:#6B7280;font-size:0.88rem;margin-top:-8px">Methodology: Semi-annual compounding as per the
-                Canadian Interest Act. CMHC premium tiered automatically. Built by REO Technologies.</p>
+      <!-- Visual Ratio Progress Bar -->
+      <div class="ratio-bar-wrap">
+        <div class="ratio-bar-title">Payment distribution proportions</div>
+        <div class="ratio-bar-track" aria-hidden="true">
+          <div class="ratio-bar-seg" id="bar-down" style="background:#4A7C5F; width: 0%;"></div>
+          <div class="ratio-bar-seg" id="bar-cmhc" style="background:#C8102E; width: 0%;"></div>
+          <div class="ratio-bar-seg" id="bar-loan" style="background:#0A2E1A; width: 0%;"></div>
+        </div>
+        <div class="ratio-bar-legend">
+          <div class="ratio-leg-item">
+            <div class="ratio-leg-dot" style="background:#4A7C5F;"></div>Down Payment: <span id="leg-down">$0</span>
+          </div>
+          <div class="ratio-leg-item">
+            <div class="ratio-leg-dot" style="background:#C8102E;"></div>CMHC Premium: <span id="leg-cmhc">$0</span>
+          </div>
+          <div class="ratio-leg-item">
+            <div class="ratio-leg-dot" style="background:#0A2E1A;"></div>Mortgage Loan: <span id="leg-loan">$0</span>
+          </div>
+        </div>
+      </div>
 
-              <form id="canada-calc-form" novalidate aria-label="Canada mortgage calculator">
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="can-price">Property Price (CA$)</label>
-                    <input type="number" id="can-price" name="can-price" min="50000" max="10000000" step="5000"
-                      value="650000" aria-required="true" autocomplete="off">
-                  </div>
-                  <div class="form-group">
-                    <label for="can-down">Down Payment (%)</label>
-                    <input type="number" id="can-down" name="can-down" min="5" max="99" step="0.5" value="20"
-                      aria-required="true" aria-describedby="can-down-hint" autocomplete="off">
-                    <span id="can-down-hint" class="field-hint">Min 5% under $500k. 20% minimum for $1M+.</span>
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="can-rate">Interest Rate (% p.a.)</label>
-                    <input type="number" id="can-rate" name="can-rate" min="1" max="20" step="0.01" value="4.99"
-                      aria-required="true" autocomplete="off">
-                  </div>
-                  <div class="form-group">
-                    <label for="can-tenure">Amortization Period (Years)</label>
-                    <select id="can-tenure" name="can-tenure" aria-required="true">
-                      <option value="25" selected>25 Years (Insured Standard)</option>
-                      <option value="30">30 Years (Uninsured Only)</option>
-                      <option value="20">20 Years</option>
-                      <option value="15">15 Years</option>
-                      <option value="10">10 Years</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="can-income">Annual Household Income (Gross CA$)</label>
-                  <input type="number" id="can-income" name="can-income" min="10000" max="10000000" step="1000"
-                    value="120000" aria-required="true" aria-describedby="can-income-hint" autocomplete="off">
-                  <span id="can-income-hint" class="field-hint">Used to verify OSFI Stress Test qualification.</span>
-                </div>
-                <button type="submit" class="btn-calculate">Calculate Mortgage</button>
-              </form>
-
-              <!-- Results -->
-              <section id="canada-results" class="results-section" aria-label="Calculation results" aria-live="polite"
-                aria-atomic="true">
-                <div class="results-grid">
-                  <div class="result-item">
-                    <div class="result-label">Monthly Payment</div>
-                    <div class="result-value highlight" id="can-monthly-payment">$0</div>
-                  </div>
-                  <div class="result-item">
-                    <div class="result-label">CMHC Premium</div>
-                    <div class="result-value" id="can-cmhc-premium">$0</div>
-                  </div>
-                  <div class="result-item">
-                    <div class="result-label">Total Loan Amount</div>
-                    <div class="result-value" id="can-loan-amount">$0</div>
-                  </div>
-                </div>
-
-                <div
-                  style="margin-top:16px;font-size:0.88rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.1);padding-top:16px;">
-                  <span>LTV Ratio: <strong id="can-ltv">—</strong></span>
-                  <span>Stress Test: <span id="can-stress-status" class="status-pill">—</span></span>
-                </div>
-
-                <div class="chart-container">
-                  <canvas id="can-chart" aria-label="Principal vs interest breakdown"></canvas>
-                </div>
-
-                <!-- Amortization -->
-                <div class="amortization-section">
-                  <button class="amortization-toggle" aria-expanded="false">📊 Show Amortization Schedule</button>
-                  <div class="amortization-table-wrap">
-                    <table>
-                      <caption>Annual Amortization Schedule — Home Loan Repayment by Year</caption>
-                      <thead>
-                        <tr>
-                          <th scope="col">Year</th>
-                          <th scope="col">Payment/Month</th>
-                          <th scope="col">Principal Paid</th>
-                          <th scope="col">Interest Paid</th>
-                          <th scope="col">Balance</th>
-                        </tr>
-                      </thead>
-                      <tbody id="can-amort-tbody"></tbody>
-                    </table>
-                  </div>
-                </div>
-              </section>
+      <div style="display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap;">
+        <div class="mrc" style="flex: 2; margin-bottom: 0; min-width: 280px; padding: 18px 20px;">
+          <div class="ticker-title"
+            style="font-size: 14px; font-weight: 800; color: var(--forest); margin-bottom: 16px;">Qualification Metrics
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <div style="background: var(--bg); padding: 10px 14px; border-radius: 8px;">
+              <div style="font-size: 9px; color: var(--muted); font-weight: 700; text-transform: uppercase;">Stress Test
+                Status</div>
+              <div style="font-size: 15px; font-weight: 800; margin-top: 4px;" id="can-stress-status-wrap">
+                <span class="status-pill" id="can-stress-status">—</span>
+              </div>
             </div>
-          </section>
-
-          <!-- Ad Unit 2 -->
-          <div class="ad-unit ad-mid" aria-label="Advertisement" role="complementary"></div>
-
-          <!-- Bank Rates Comparison -->
-          <section aria-labelledby="rates-heading">
-            <h2 id="rates-heading">Canada Mortgage Rates by Bank</h2>
-            <div class="data-table-wrap">
-              <table>
-                <caption>Current mortgage rates from major Canadian institutions — <span data-rate-updated></span>
-                </caption>
-                <thead>
-                  <tr>
-                    <th scope="col">Financial Institution</th>
-                    <th scope="col">5-Yr Fixed</th>
-                    <th scope="col">3-Yr Fixed</th>
-                    <th scope="col">5-Yr Variable</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>RBC Royal Bank</td>
-                    <td data-rate="canada.fixed5">—</td>
-                    <td data-rate="canada.fixed3">—</td>
-                    <td data-rate="canada.variable">—</td>
-                  </tr>
-                  <tr>
-                    <td>TD Canada Trust</td>
-                    <td>5.09%</td>
-                    <td>5.24%</td>
-                    <td>6.05%</td>
-                  </tr>
-                  <tr>
-                    <td>Scotiabank</td>
-                    <td>5.14%</td>
-                    <td>5.29%</td>
-                    <td>6.10%</td>
-                  </tr>
-                  <tr>
-                    <td>BMO Bank of Montreal</td>
-                    <td>5.04%</td>
-                    <td>5.19%</td>
-                    <td>5.99%</td>
-                  </tr>
-                  <tr>
-                    <td>CIBC</td>
-                    <td>5.09%</td>
-                    <td>5.24%</td>
-                    <td>6.05%</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div style="background: var(--bg); padding: 10px 14px; border-radius: 8px;">
+              <div style="font-size: 9px; color: var(--muted); font-weight: 700; text-transform: uppercase;">GDS Ratio
+                (Qualifying)</div>
+              <div style="font-size: 15px; font-weight: 800; font-family: inherit; color: var(--forest);"
+                id="can-gds-val">0.00%</div>
             </div>
-            <p class="source-note">Source: <a href="https://www.bankofcanada.ca" target="_blank"
-                rel="noopener noreferrer">Bank of Canada</a> — <span data-rate-updated></span></p>
-          </section>
-
-          <!-- SEO Content -->
-          <section class="content-article" aria-labelledby="rules-explained">
-            <h2 id="rules-explained">Understanding Canadian Mortgage Regulations</h2>
-            <p class="definition-para">
-              <strong>Canada Mortgage Regulations</strong> dictate that home loans are subject to unique amortization
-              rules and underwriting standards. Standard Canadian mortgages compound interest semi-annually (twice a
-              year) rather than monthly. This formula (Effective Rate = (1 + R/2)^(2/12) - 1) makes interest
-              calculations slightly lower compared to monthly compounding systems.
-            </p>
-
-            <h3>How CMHC Default Insurance Affects Your Loan</h3>
-            <p>If your down payment is less than 20%, you are legally required to purchase mortgage default insurance.
-              This is commonly provided by the <strong>Canada Mortgage and Housing Corporation (CMHC)</strong>. The
-              insurance premium rates are tiered based on your Loan-to-Value (LTV) ratio:</p>
-            <ul>
-              <li><strong>5.0% to 9.9% Down Payment (90.1% to 95% LTV):</strong> 4.00% premium rate.</li>
-              <li><strong>10.0% to 14.9% Down Payment (85.1% to 90% LTV):</strong> 3.10% premium rate.</li>
-              <li><strong>15.0% to 19.9% Down Payment (80.1% to 85% LTV):</strong> 2.80% premium rate.</li>
-              <li><strong>20.0% or More Down Payment (80% or Less LTV):</strong> No CMHC insurance required.</li>
-            </ul>
-            <p>Note that homes priced above $1,000,000 do not qualify for CMHC default insurance and require a minimum
-              20% down payment.</p>
-
-            <h3>The OSFI Mortgage Stress Test (MQR)</h3>
-            <p>The **Office of the Superintendent of Financial Institutions (OSFI)** mandates a mortgage stress test to
-              ensure that buyers can keep up with their payments if interest rates rise. Home buyers must prove they can
-              qualify at either their contract interest rate plus 2%, or the Bank of Canada benchmark rate (currently
-              <span data-rate="canada.stressTest">6.99%</span>), whichever is higher. To pass, your housing costs
-              (P&amp;I payment, taxes, heating) must not exceed 39% of your gross income (GDS ratio).</p>
-          </section>
-
-          <!-- Ad Unit 3 -->
-          <div class="ad-unit ad-mid" aria-label="Advertisement" role="complementary"></div>
-
-          <!-- FAQ -->
-          <section aria-labelledby="faq-canada-heading">
-            <h2 id="faq-canada-heading">Canada Mortgage FAQs</h2>
-            <ul class="faq-list" role="list">
-              <li class="faq-item">
-                <button class="faq-question" aria-expanded="false">What is CMHC insurance in Canada?</button>
-                <div class="faq-answer" role="region">
-                  <p>CMHC insurance is mortgage default insurance required by Canadian law when buying a home with a
-                    down payment between 5% and less than 20% of the purchase price. The insurance is provided by the
-                    Canada Mortgage and Housing Corporation and protects the lender in case of default. The premium is
-                    tiered based on the loan-to-value ratio and is added to the total mortgage loan amount.</p>
-                </div>
-              </li>
-              <li class="faq-item">
-                <button class="faq-question" aria-expanded="false">How does the mortgage stress test work in
-                  Canada?</button>
-                <div class="faq-answer" role="region">
-                  <p>The Canadian mortgage stress test requires home buyers to qualify at a higher interest rate than
-                    their actual contract rate to ensure they can manage payments if rates rise. The qualifying rate is
-                    either your contract rate plus 2% or the Bank of Canada benchmark rate (currently 6.99%), whichever
-                    is higher. Borrowers must pass debt service ratio thresholds (GDS under 39% and TDS under 44%) at
-                    this higher rate.</p>
-                </div>
-              </li>
-              <li class="faq-item">
-                <button class="faq-question" aria-expanded="false">What is the minimum down payment for a home in
-                  Canada?</button>
-                <div class="faq-answer" role="region">
-                  <p>The minimum down payment for a home in Canada is tiered: 5% on the first $500,000 of the purchase
-                    price, and 10% on the portion between $500,001 and $999,999. Homes priced at $1 million or more
-                    require a flat minimum down payment of 20% as they are not eligible for government-backed mortgage
-                    insurance.</p>
-                </div>
-              </li>
-            </ul>
-          </section>
-
-          <!-- Official Resources -->
-          <section aria-labelledby="resources-heading">
-            <h2 id="resources-heading">Official Resources</h2>
-            <div class="resource-links">
-              <a href="https://www.bankofcanada.ca" class="resource-link" target="_blank" rel="noopener noreferrer">🏦
-                Bank of Canada</a>
-              <a href="https://www.cmhc-schl.gc.ca" class="resource-link" target="_blank" rel="noopener noreferrer">CMHC
-                Canada</a>
-              <a href="https://www.osfi-bsif.gc.ca" class="resource-link" target="_blank" rel="noopener noreferrer">OSFI
-                Canada</a>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;">
+            <div style="background: var(--bg); padding: 10px 14px; border-radius: 8px;">
+              <div style="font-size: 9px; color: var(--muted); font-weight: 700; text-transform: uppercase;">Total
+                Interest Paid</div>
+              <div style="font-size: 15px; font-weight: 800; font-family: inherit; color: var(--forest);"
+                id="can-total-interest">$0</div>
             </div>
-          </section>
-
-          <!-- Related Pages -->
-          <section aria-labelledby="related-heading">
-            <h2 id="related-heading">Related Calculators</h2>
-            <div class="tool-grid">
-              <a href="/usa-mortgage-calculator.html" class="tool-card">
-                <div class="tool-icon" aria-hidden="true">🇺🇸</div>
-                <h3>USA Mortgage Calculator</h3>
-                <p>PITI, PMI, FHA &amp; VA loan calculator for US home buyers.</p>
-              </a>
-              <a href="/uk-mortgage-calculator.html" class="tool-card">
-                <div class="tool-icon" aria-hidden="true">🇬🇧</div>
-                <h3>UK Mortgage Calculator</h3>
-                <p>Monthly repayment calculator with Stamp Duty (SDLT) breakdown.</p>
-              </a>
-              <a href="/mortgage-faq.html#canada-faq" class="tool-card">
-                <div class="tool-icon" aria-hidden="true">❓</div>
-                <h3>Canada Mortgage FAQ</h3>
-                <p>Answers to common questions about Canadian lending guidelines.</p>
-              </a>
+            <div style="background: var(--bg); padding: 10px 14px; border-radius: 8px;">
+              <div style="font-size: 9px; color: var(--muted); font-weight: 700; text-transform: uppercase;">Total
+                Repayments</div>
+              <div style="font-size: 15px; font-weight: 800; font-family: inherit; color: var(--forest);"
+                id="can-total-payment">$0</div>
             </div>
-          </section>
+          </div>
+        </div>
 
-        </div><!-- .main-content -->
+        <div class="mrc"
+          style="flex: 1; margin-bottom: 0; min-width: 220px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+          <div
+            style="font-size: 12px; font-weight: 800; color: var(--forest); align-self: flex-start; width: 100%; margin-bottom: 10px;">
+            Cost Split</div>
+          <div style="width: 130px; height: 130px; position: relative;">
+            <canvas id="can-chart" style="width: 100%; height: 100%;"></canvas>
+          </div>
+        </div>
+      </div>
 
-        <aside class="sidebar" aria-label="Advertisement sidebar">
-          <div class="ad-unit ad-sidebar" aria-label="Advertisement" role="complementary"></div>
-        </aside>
+      <!-- Export & Copy buttons -->
+      <div style="display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap;">
+        <button class="action-btn" id="btn-copy" style="background: #1A5C35;">📋 Copy Results</button>
+        <button class="action-btn" id="btn-csv" style="background: #D97706;">📥 Export CSV</button>
+        <button class="action-btn" id="btn-print" style="background: #16A34A;">🖨️ Print</button>
+      </div>
 
-      </div><!-- .page-layout -->
-    </div><!-- .container -->
+      <!-- Amortization schedule toggle -->
+      <div class="mrc" style="margin-bottom: 0;">
+        <button id="can-amort-toggle"
+          style="background: none; border: none; color: var(--green); font-size: 13px; font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 6px; width: 100%; text-align: left; outline: none; font-family: inherit;"
+          aria-expanded="false" aria-controls="can-amort-wrap">
+          📊 <span>Show Amortization Schedule (Year-by-Year)</span>
+        </button>
+        <div id="can-amort-wrap"
+          style="display: none; margin-top: 14px; overflow-x: auto; border-top: 1px solid var(--border); padding-top: 14px;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 12px; text-align: right;">
+            <thead>
+              <tr
+                style="border-bottom: 2px solid var(--border); font-weight: 800; color: var(--muted); text-transform: uppercase;">
+                <th style="padding: 6px; text-align: left;">Year</th>
+                <th style="padding: 6px;">Payment/Month</th>
+                <th style="padding: 6px;">Principal Paid</th>
+                <th style="padding: 6px;">Interest Paid</th>
+                <th style="padding: 6px;">Balance</th>
+              </tr>
+            </thead>
+            <tbody id="can-amort-tbody" style="font-weight: 500;">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- BoC RATE BANNER -->
+    <section class="section" style="margin-top: 28px;">
+      <div class="sec-hdr">
+        <h2>Bank of Canada</h2>
+      </div>
+      <div class="boc-banner">
+        <div class="boc-icon">🏦</div>
+        <div>
+          <div class="boc-lbl">BoC Policy Rate · Overnight Target</div>
+          <div class="boc-val">4.75%</div>
+          <div class="boc-sub">Next decision: Jul 24, 2026 · Cut probability: 72%</div>
+        </div>
+        <a href="https://www.bankofcanada.ca" class="boc-btn" target="_blank" rel="noopener noreferrer">BoC Live</a>
+      </div>
+    </section>
+
+    <!-- STRESS TEST BANNER -->
+    <section class="section">
+      <div id="stress" class="sec-hdr">
+        <h2>Mortgage Stress Test</h2>
+      </div>
+      <div class="stress-banner">
+        <div class="sb-icon">⚠️</div>
+        <div>
+          <div class="sb-title">Mortgage Stress Test Qualifying Rate</div>
+          <div class="sb-sub">Federal OSFI B-20 rule requires qualifying at either contract rate + 2% or 7.00% minimum.
+          </div>
+        </div>
+        <a href="#calculator" class="sb-btn">Test qualification</a>
+      </div>
+    </section>
+
+    <!-- CORE TOOLS -->
+    <section class="section" id="tools">
+      <div class="sec-hdr">
+        <h2>Core Mortgage Tools</h2>
+      </div>
+      <div class="g2">
+        <a href="/canada-mortgage-calculator.html" class="tc dark">
+          <div class="tic">🏠</div>
+          <div class="tn">Mortgage Calc</div>
+          <div class="td">Monthly payment + CMHC</div>
+          <div class="badge badge-ca">25yr Max</div>
+          <div class="ta">›</div>
+        </a>
+        <a href="/mortgage-faq.html" class="tc">
+          <div class="tic">🛡️</div>
+          <div class="tn">CMHC Insurance</div>
+          <div class="td">Premium calculator</div>
+          <div class="badge badge-warn">&lt;20% down</div>
+          <div class="ta">›</div>
+        </a>
+        <a href="/mortgage-faq.html" class="tc">
+          <div class="tic">📊</div>
+          <div class="tn">GDS / TDS Ratio</div>
+          <div class="td">Gross debt service</div>
+          <div class="ta">›</div>
+        </a>
+        <a href="/canada-mortgage-calculator.html" class="tc red">
+          <div class="tic">🧪</div>
+          <div class="tn">Stress Test Calc</div>
+          <div class="td">Can you qualify?</div>
+          <div class="ta">›</div>
+        </a>
+        <a href="/mortgage-faq.html" class="tc">
+          <div class="tic">💰</div>
+          <div class="tn">Affordability</div>
+          <div class="td">Max home price, CAD</div>
+          <div class="ta">›</div>
+        </a>
+        <a href="/canada-mortgage-calculator.html" class="tc maple">
+          <div class="tic">📅</div>
+          <div class="tn">Amortization</div>
+          <div class="td">Bi-weekly schedule</div>
+          <div class="ta">›</div>
+        </a>
+        <a href="/mortgage-faq.html" class="tc">
+          <div class="tic">🔄</div>
+          <div class="tn">Renewal Planner</div>
+          <div class="td">Term renewal analysis</div>
+          <div class="ta">›</div>
+        </a>
+        <a href="/mortgage-faq.html" class="tc">
+          <div class="tic">📈</div>
+          <div class="tn">Prepayment Calc</div>
+          <div class="td">Lump sum savings</div>
+          <div class="ta">›</div>
+        </a>
+        <a href="/mortgage-faq.html" class="tc teal">
+          <div class="tic">💳</div>
+          <div class="tn">Credit Score Impact</div>
+          <div class="td">Score to rate mapping</div>
+          <div class="badge badge-b">600–850</div>
+          <div class="ta">›</div>
+        </a>
+        <a href="/mortgage-faq.html" class="tc">
+          <div class="tic">🏘️</div>
+          <div class="tn">Rental Yield</div>
+          <div class="td">Investment property CAD</div>
+          <div class="ta">›</div>
+        </a>
+        <a href="/mortgage-faq.html" class="tc navy">
+          <div class="tic">🔁</div>
+          <div class="tn">Refinance Tool</div>
+          <div class="td">Break fee &amp; savings</div>
+          <div class="ta">›</div>
+        </a>
+        <a href="/mortgage-faq.html" class="tc">
+          <div class="tic">🏗️</div>
+          <div class="tn">Construction Loan</div>
+          <div class="td">Progress draw calculator</div>
+          <div class="ta">›</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- RESOURCES -->
+    <section class="section" id="resources">
+      <div class="sec-hdr">
+        <h2>Resources &amp; Government Programs</h2>
+      </div>
+      <div class="ilist">
+        <a href="/mortgage-faq.html" class="ic">
+          <div class="ii">🏛️</div>
+          <div>
+            <div class="in">Land Transfer Tax</div>
+            <div class="is">By Province: ON, BC, AB, QC, MB…</div>
+          </div>
+          <div class="ich">›</div>
+        </a>
+        <a href="/mortgage-faq.html" class="ic">
+          <div class="ii">🏡</div>
+          <div>
+            <div class="in">First-Home Buyer Incentive</div>
+            <div class="is">FHBI · RRSP Home Buyers' Plan</div>
+          </div>
+          <div class="ich">›</div>
+        </a>
+        <a href="https://www.bankofcanada.ca" class="ic" target="_blank" rel="noopener noreferrer">
+          <div class="ii">📉</div>
+          <div>
+            <div class="in">BoC Rate History</div>
+            <div class="is">Live Bank of Canada rate tracker</div>
+          </div>
+          <div class="ich">›</div>
+        </a>
+        <a href="https://www.cmhc-schl.gc.ca" class="ic" target="_blank" rel="noopener noreferrer">
+          <div class="ii">🛡️</div>
+          <div>
+            <div class="in">CMHC Eligibility Guide</div>
+            <div class="is">Rules, caps &amp; premium tables</div>
+          </div>
+          <div class="ich">›</div>
+        </a>
+        <a href="https://www.osfi-bsif.gc.ca" class="ic" target="_blank" rel="noopener noreferrer">
+          <div class="ii">📋</div>
+          <div>
+            <div class="in">OSFI B-20 Guideline</div>
+            <div class="is">Stress test rules &amp; lender requirements</div>
+          </div>
+          <div class="ich">›</div>
+        </a>
+        <a href="/mortgage-faq.html" class="ic">
+          <div class="ii">🏠</div>
+          <div>
+            <div class="in">First Home Savings Account (FHSA)</div>
+            <div class="is">Tax-free savings for first home purchase</div>
+          </div>
+          <div class="ich">›</div>
+        </a>
+        <a href="https://www.crea.ca" class="ic" target="_blank" rel="noopener noreferrer">
+          <div class="ii">📊</div>
+          <div>
+            <div class="in">Canada House Price Index</div>
+            <div class="is">CREA · CMHC national &amp; city data</div>
+          </div>
+          <div class="ich">›</div>
+        </a>
+        <a href="/mortgage-faq.html" class="ic">
+          <div class="ii">🤖</div>
+          <div>
+            <div class="in">Canada AI Advisor</div>
+            <div class="is">CMHC rules · stress test guidance</div>
+          </div>
+          <div class="ich">›</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== EDUCATIONAL CONTENT SECTION ===== -->
+    <section class="content-article" id="india-guide" aria-labelledby="ca-guide-h">
+      <h2 id="ca-guide-h">Canadian Mortgage Regulations &amp; Compounding Laws</h2>
+      <div class="definition-para">
+        <strong>Mortgage Compound Rules</strong> in Canada differ from other nations. Under the Canadian Interest Act,
+        mortgage interest rates on fixed-rate loans must be compounded **semi-annually (twice per year)** by law, even
+        if payments
+        are made monthly, bi-weekly, or weekly.
+      </div>
+
+      <h3>Semi-Annual Interest Compounding Explained</h3>
+      <p>
+        Because mortgage payments are processed monthly but compounded semi-annually, lenders compute an **effective
+        monthly interest rate**
+        that aligns with the law. This results in slightly less interest paid compared to monthly compounding systems.
+        The mathematical conversion is:
+      </p>
+      <div class="formula-box">
+        Effective Monthly Interest Rate (i) = (1 + r / 2)^(2/12) - 1<br><br>
+        Where r = Stated annual nominal rate of interest (divided by 100)
+      </div>
+
+      <h3>How CMHC Default Insurance Affects Your Down Payment</h3>
+      <p>
+        If you purchase a residential property in Canada with a down payment of less than 20% (an LTV ratio higher than
+        80%), you must
+        buy mortgage default insurance. This is commonly referred to as **CMHC Insurance**. Lenders add the premium rate
+        directly to
+        your mortgage principal balance:
+      </p>
+      <ul>
+        <li><strong>5.0% to 9.9% Down Payment (LTV 90.1% to 95.0%):</strong> 4.00% premium rate.</li>
+        <li><strong>10.0% to 14.9% Down Payment (LTV 85.1% to 90.0%):</strong> 3.10% premium rate.</li>
+        <li><strong>15.0% to 19.9% Down Payment (LTV 80.1% to 85.0%):</strong> 2.80% premium rate.</li>
+        <li><strong>20.0% or More Down Payment (LTV &le; 80.0%):</strong> No CMHC premium required (Uninsured Mortgage).
+        </li>
+      </ul>
+      <p>
+        <strong>Important Cap:</strong> Homes priced at **CA$1,000,000 or higher** do not qualify for CMHC insurance and
+        require
+        a flat minimum down payment of 20% cash at closing.
+      </p>
+
+      <h3>The OSFI B-20 Mortgage Stress Test &amp; GDS/TDS Limits</h3>
+      <p>
+        To prevent households from taking on unsustainable debts, the **Office of the Superintendent of Financial
+        Institutions (OSFI)**
+        mandates a stress test. Borrowers must prove they can qualify at a "qualifying rate" rather than their contract
+        rate.
+        The stress rate is the higher of:
+      </p>
+      <ol>
+        <li>Your actual mortgage contract interest rate + 2.00%</li>
+        <li>The Bank of Canada minimum benchmark stress rate (currently 7.00%)</li>
+      </ol>
+      <p>
+        Under these stress rates, your housing obligations must satisfy two underwriting caps:
+      </p>
+      <ul>
+        <li><strong>GDS (Gross Debt Service) Ratio:</strong> Must not exceed **39%** of your monthly gross income.
+          Housing costs include mortgage principal &amp; interest, property taxes, heat, and 50% of condo fees.</li>
+        <li><strong>TDS (Total Debt Service) Ratio:</strong> Must not exceed **44%** of gross monthly income, adding
+          other obligations like credit card minimums, car loans, and student debts.</li>
+      </ul>
+
+      <div class="tips-grid">
+        <div class="tip-card">
+          <div class="tip-card-icon">🍁</div>
+          <div class="tip-card-title">Minimum Down Payment Tiering</div>
+          <p class="tip-card-text">Down payments are tiered: 5% on the first $500,000, and 10% on the portion between
+            $500,001 and $999,999. If purchasing a property for $750,000, the absolute minimum cash down payment is
+            $50,000.</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-card-icon">🏡</div>
+          <div class="tip-card-title">First Home Savings Account (FHSA)</div>
+          <p class="tip-card-text">First-time Canadian buyers can contribute up to $8,000 per year ($40,000 lifetime
+            limit) tax-free. Contributions are tax-deductible, and withdrawals are tax-free when buying a home.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ SECTION ===== -->
+    <section aria-labelledby="faq-canada-heading">
+      <div class="faq-section">
+        <div class="faq-hdr">
+          <h2 id="faq-canada-heading">Canada Mortgage Frequently Asked Questions</h2>
+        </div>
+        <ul class="faq-list" role="list">
+          <li class="faq-item">
+            <button class="faq-q" aria-expanded="false" id="faq-q1" aria-controls="faq-a1">
+              What is CMHC insurance in Canada?
+              <span class="faq-icon" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1">
+              <p>CMHC insurance is mortgage default insurance required by Canadian law when buying a home with a down
+                payment between 5% and less than 20% of the purchase price. The insurance is provided by the Canada
+                Mortgage and Housing Corporation and protects the lender in case of default. The premium is tiered based
+                on the loan-to-value ratio and is added to the total mortgage loan amount.</p>
+            </div>
+          </li>
+          <li class="faq-item">
+            <button class="faq-q" aria-expanded="false" id="faq-q2" aria-controls="faq-a2">
+              How does the mortgage stress test work in Canada?
+              <span class="faq-icon" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2">
+              <p>The Canadian mortgage stress test requires home buyers to qualify at a higher interest rate than their
+                actual contract rate to ensure they can manage payments if rates rise. The qualifying rate is either
+                your contract rate plus 2% or the Bank of Canada benchmark rate (currently 7.00%), whichever is higher.
+                Borrowers must pass debt service ratio thresholds (GDS under 39% and TDS under 44%) at this higher rate.
+              </p>
+            </div>
+          </li>
+          <li class="faq-item">
+            <button class="faq-q" aria-expanded="false" id="faq-q3" aria-controls="faq-a3">
+              What is the minimum down payment for a home in Canada?
+              <span class="faq-icon" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3">
+              <p>The minimum down payment for a home in Canada is tiered: 5% on the first $500,000 of the purchase
+                price, and 10% on the portion between $500,001 and $999,999. Homes priced at $1 million or more require
+                a flat minimum down payment of 20% as they are not eligible for government-backed mortgage insurance.
+              </p>
+            </div>
+          </li>
+          <li class="faq-item">
+            <button class="faq-q" aria-expanded="false" id="faq-q4" aria-controls="faq-a4">
+              Can I choose a 30-year amortization period in Canada?
+              <span class="faq-icon" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4">
+              <p>Under Canadian regulations, the maximum amortization period for an insured mortgage (down payment under
+                20%) is 25 years. You can only choose a 30-year amortization period if you make a down payment of 20% or
+                more, resulting in an uninsured mortgage.</p>
+            </div>
+          </li>
+          <li class="faq-item">
+            <button class="faq-q" aria-expanded="false" id="faq-q5" aria-controls="faq-a5">
+              What is the Home Buyers' Plan (HBP)?
+              <span class="faq-icon" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5">
+              <p>The Home Buyers' Plan is a federal program that allows first-time home buyers to withdraw up to $35,000
+                tax-free from their Registered Retirement Savings Plan (RRSP) to use as a down payment. The withdrawn
+                amount must be repaid back to your RRSP within 15 years, starting the second year after the withdrawal.
+              </p>
+            </div>
+          </li>
+          <li class="faq-item">
+            <button class="faq-q" aria-expanded="false" id="faq-q6" aria-controls="faq-a6">
+              Do variable rate mortgages in Canada also compound semi-annually?
+              <span class="faq-icon" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-a" id="faq-a6" role="region" aria-labelledby="faq-q6">
+              <p>Unlike fixed-rate mortgages, Canadian variable-rate mortgages are often compounded monthly. However,
+                this varies by bank contract. Fixed-rate mortgages are legally required to compound semi-annually under
+                the federal Interest Act. Always check your bank's disclosure document for compounding frequencies.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== TRUST SECTION ===== -->
+    <div class="trust-section" role="note" aria-label="Editorial Standards">
+      <h2>📌 Data Sources &amp; Editorial Standards</h2>
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-item-icon">🏛️</div>
+          <div>
+            <div class="trust-item-title">Data Sources</div>
+            <div class="trust-item-text">Calculations based on Bank of Canada target guidelines. CMHC default insurance
+              percentages verified from standard premiums tables. OSFI stress tests calibrated to MQR regulations.</div>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-item-icon">🔄</div>
+          <div>
+            <div class="trust-item-title">Update Frequency</div>
+            <div class="trust-item-text">CMHC and compound rules verified monthly. Bank of Canada policy rate
+              adjustments and prime rates checked weekly.</div>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-item-icon">⚖️</div>
+          <div>
+            <div class="trust-item-title">Disclaimer Statement</div>
+            <div class="trust-item-text">Calculations are indicative estimates for general planning. They do not
+              constitute formal lending agreements or tax advice. Consult a professional before borrowing.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== CTA BANNER ===== -->
+    <div class="cta-banner" role="complementary" aria-label="Explore more tools">
+      <h2>Compare International Mortgage Rates</h2>
+      <p>Review home loan terms, taxes, and monthly payments across major international markets.</p>
+      <div class="cta-btns">
+        <a href="/usa-mortgage-calculator.html" class="action-btn" style="background: #1b3f72;">🇺🇸 USA Calculator</a>
+        <a href="/uk-mortgage-calculator.html" class="action-btn" style="background: #0D0D2B;">🇬🇧 UK Calculator</a>
+        <a href="/europe-mortgage-calculator.html" class="action-btn" style="background: #6B21A8;">🇪🇺 Europe
+          Calculator</a>
+        <a href="/new-zealand-mortgage-calculator.html" class="action-btn" style="background: #1A6B4A;">🇳🇿 NZ
+          Calculator</a>
+        <a href="/australia-mortgage-calculator.html" class="action-btn" style="background: #D97706;">🇦🇺 Australia
+          Calculator</a>
+      </div>
+    </div>
+
   </main>
 
-  <div data-component="footer"></div>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/terms-and-conditions.html">Terms of Service</a>
+    </div>
+    <div>🇨🇦 Canada Mortgage Tools · CAD · BoC Rate · CMHC · All Provinces · © 2026</div>
+  </footer>
+
+  <!-- Toast alert -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- External JS (compatibility) -->
+  <script src="/js/components.js" defer></script>
+  <script src="/js/rates.js" defer></script>
+  <script src="/js/charts.js" defer></script>
+  <script src="/js/accessibility.js" defer></script>
+
+  <!-- ===== INLINE CALCULATION LOGIC ===== -->
+  <script>
+    'use strict';
+
+    /* GA4 logging helper */
+    function logEvent(name, params) {
+      if (typeof gtag !== 'undefined') gtag('event', name, params || {});
+    }
+
+    /* CAD formatting helper */
+    function fmtCAD(n) {
+      return 'CA$' + Math.round(n).toLocaleString('en-CA');
+    }
+
+    /* Canadian semi-annual compounding interest formula */
+    function calcCADMonthlyPayment(principal, annualRate, years) {
+      if (annualRate === 0) return principal / (years * 12);
+      // Canadian Interest Act requires semi-annual compounding for fixed rates
+      const r_monthly = Math.pow(Math.pow(1 + annualRate / 200, 2), 1 / 12) - 1;
+      const n = years * 12;
+      return principal * r_monthly * Math.pow(1 + r_monthly, n) / (Math.pow(1 + r_monthly, n) - 1);
+    }
+
+    /* Dynamic CMHC Premium Finder */
+    function lookupCMHCPremRate(downPct) {
+      if (downPct >= 20.0) return 0.0;
+      if (downPct >= 15.0) return 0.0280; // 15% to 19.9%
+      if (downPct >= 10.0) return 0.0310; // 10% to 14.9%
+      if (downPct >= 5.0) return 0.0400; // 5% to 9.9%
+      return 0.0400;
+    }
+
+    /* Tiered Minimum Down Payment Validator */
+    function getMinDownPaymentCAD(price) {
+      if (price >= 1000000) {
+        return price * 0.20; // 20% minimum for 1M+
+      }
+      if (price <= 500000) {
+        return price * 0.05; // 5% minimum
+      }
+      // Between 500k and 1M
+      const first500 = 500000 * 0.05;
+      const remaining = (price - 500000) * 0.10;
+      return first500 + remaining;
+    }
+
+    /* Annual amortization schedules under semi-annual compounding */
+    function generateAmortSchedule(principal, annualRate, years) {
+      const r_monthly = Math.pow(Math.pow(1 + annualRate / 200, 2), 1 / 12) - 1;
+      const n = years * 12;
+      const emi = calcCADMonthlyPayment(principal, annualRate, years);
+      const list = [];
+      let balance = principal;
+      let interestPaidYear = 0;
+      let principalPaidYear = 0;
+
+      for (let month = 1; month <= n; month++) {
+        const interest = balance * r_monthly;
+        const principalPaid = emi - interest;
+        balance -= principalPaid;
+        if (balance < 0) balance = 0;
+        interestPaidYear += interest;
+        principalPaidYear += principalPaid;
+
+        if (month % 12 === 0 || month === n) {
+          list.push({
+            year: Math.ceil(month / 12),
+            emi: Math.round(emi),
+            principal: Math.round(principalPaidYear),
+            interest: Math.round(interestPaidYear),
+            balance: Math.round(balance)
+          });
+          interestPaidYear = 0;
+          principalPaidYear = 0;
+        }
+      }
+      return list;
+    }
+
+    /* Visual percentage track */
+    function drawBar(down, cmhc, loan) {
+      const total = down + cmhc + loan;
+      if (total === 0) return;
+      document.getElementById('bar-down').style.width = (down / total * 100).toFixed(1) + '%';
+      document.getElementById('bar-cmhc').style.width = (cmhc / total * 100).toFixed(1) + '%';
+      document.getElementById('bar-loan').style.width = (loan / total * 100).toFixed(1) + '%';
+
+      document.getElementById('leg-down').textContent = fmtCAD(down);
+      document.getElementById('leg-cmhc').textContent = fmtCAD(cmhc);
+      document.getElementById('leg-loan').textContent = fmtCAD(loan);
+    }
+
+    /* Donut chart visualization */
+    function drawDonut(canvasId, principal, interest) {
+      const canvas = document.getElementById(canvasId);
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const ratio = window.devicePixelRatio || 1;
+      const size = canvas.offsetWidth || 130;
+      canvas.width = size * ratio;
+      canvas.height = size * ratio;
+      ctx.scale(ratio, ratio);
+
+      const cx = size / 2;
+      const cy = size / 2;
+      const rOuter = size / 2 - 4;
+      const rInner = rOuter * 0.65;
+      const sum = principal + interest;
+      const angleP = (principal / sum) * Math.PI * 2;
+
+      const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+      ctx.clearRect(0, 0, size, size);
+
+      // Principal segment
+      ctx.beginPath();
+      ctx.moveTo(cx, cy);
+      ctx.arc(cx, cy, rOuter, -Math.PI / 2, -Math.PI / 2 + angleP);
+      ctx.closePath();
+      ctx.fillStyle = isDark ? '#2ea8ff' : '#0A2E1A';
+      ctx.fill();
+
+      // Interest segment
+      ctx.beginPath();
+      ctx.moveTo(cx, cy);
+      ctx.arc(cx, cy, rOuter, -Math.PI / 2 + angleP, -Math.PI / 2 + Math.PI * 2);
+      ctx.closePath();
+      ctx.fillStyle = '#C8102E';
+      ctx.fill();
+
+      // White circle inside
+      ctx.beginPath();
+      ctx.arc(cx, cy, rInner, 0, Math.PI * 2);
+      ctx.fillStyle = isDark ? '#12203a' : '#FFFFFF';
+      ctx.fill();
+
+      // Text label
+      const percent = Math.round(principal / sum * 100);
+      ctx.fillStyle = isDark ? '#ffffff' : '#0A2E1A';
+      ctx.font = `bold ${Math.round(size * 0.13)}px sans-serif`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(percent + '%', cx, cy - 2);
+      ctx.font = `${Math.round(size * 0.08)}px sans-serif`;
+      ctx.fillStyle = isDark ? '#a0aec0' : '#4A7C5F';
+      ctx.fillText('Principal', cx, cy + size * 0.12);
+    }
+
+    /* Toast message banner helper */
+    function triggerToast(message) {
+      const banner = document.getElementById('toast');
+      if (!banner) return;
+      banner.textContent = message;
+      banner.classList.add('show');
+      setTimeout(() => banner.classList.remove('show'), 2500);
+    }
+
+    /* Render amortization layout */
+    function buildTable(list) {
+      const body = document.getElementById('can-amort-tbody');
+      if (!body) return;
+      body.innerHTML = list.map(item => `
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 8px 6px; text-align: left; font-weight: 700; color: var(--forest);">Year ${item.year}</td>
+        <td style="padding: 8px 6px;">${fmtCAD(item.emi)}</td>
+        <td style="padding: 8px 6px; color: var(--green);">${fmtCAD(item.principal)}</td>
+        <td style="padding: 8px 6px; color: var(--red);">${fmtCAD(item.interest)}</td>
+        <td style="padding: 8px 6px; font-family: inherit;">${fmtCAD(item.balance)}</td>
+      </tr>
+    `).join('');
+    }
+
+    /* Run Canada Calculations */
+    function executeCalculation() {
+      const priceInput = document.getElementById('can-price');
+      const downInput = document.getElementById('can-down');
+      const rateInput = document.getElementById('can-rate');
+      const termInput = document.getElementById('can-tenure');
+      const incomeInput = document.getElementById('can-income');
+
+      const pBox = document.getElementById('p-box');
+      const dBox = document.getElementById('d-box');
+      const rBox = document.getElementById('r-box');
+      const iBox = document.getElementById('i-box');
+
+      // Remove errors
+      [pBox, dBox, rBox, iBox].forEach(b => b.classList.remove('error-box'));
+
+      const price = parseFloat(priceInput.value);
+      const down = parseFloat(downInput.value);
+      const rate = parseFloat(rateInput.value);
+      const term = parseInt(termInput.value);
+      const income = parseFloat(incomeInput.value);
+
+      let flag = true;
+
+      if (isNaN(price) || price < 50000) { pBox.classList.add('error-box'); flag = false; }
+      if (isNaN(down) || down < 5 || down >= 100) { dBox.classList.add('error-box'); flag = false; }
+      if (isNaN(rate) || rate <= 0 || rate > 25) { rBox.classList.add('error-box'); flag = false; }
+      if (isNaN(income) || income < 10000) { iBox.classList.add('error-box'); flag = false; }
+
+      if (!flag) {
+        triggerToast('⚠️ Please verify the input values marked in red.');
+        return;
+      }
+
+      // Minimum Down Payment Constraint Checks
+      const absoluteMinDown = getMinDownPaymentCAD(price);
+      const absoluteMinDownPct = (absoluteMinDown / price) * 100;
+      const userDownAmount = price * down / 100;
+
+      if (userDownAmount < absoluteMinDown) {
+        dBox.classList.add('error-box');
+        triggerToast(`⚠️ Minimum down payment required for this price is ${absoluteMinDownPct.toFixed(2)}% (${fmtCAD(absoluteMinDown)})`);
+        return;
+      }
+
+      // CMHC Insurance validation
+      if (price >= 1000000 && down < 20) {
+        dBox.classList.add('error-box');
+        triggerToast(`⚠️ Properties CA$1,000,000 and above require a minimum 20% down payment (No CMHC allowed).`);
+        return;
+      }
+
+      // Maximum 25 years amortization for insured mortgages
+      if (down < 20 && term > 25) {
+        triggerToast('⚠️ Insured mortgages (down payment < 20%) are limited to a maximum of 25 years amortization.');
+        return;
+      }
+
+      const downPaymentAmount = price * down / 100;
+      const baseLoanAmount = price - downPaymentAmount;
+
+      // Look up CMHC premium percentage
+      const cmhcPremiumRate = lookupCMHCPremRate(down);
+      const cmhcPremiumAmount = baseLoanAmount * cmhcPremiumRate;
+      const totalLoanAmount = baseLoanAmount + cmhcPremiumAmount;
+
+      // Monthly payment calculation
+      const monthlyPayment = calcCADMonthlyPayment(totalLoanAmount, rate, term);
+
+      // OSFI Stress test check: qualify at higher of contract rate + 2% or 7.00% benchmark
+      const stressRate = Math.max(rate + 2.0, 7.00);
+      const stressMonthlyPayment = calcCADMonthlyPayment(totalLoanAmount, stressRate, term);
+
+      // GDS ratio: (Mortgage + Taxes + Heat) / Gross Income. Estimated heat = $150, taxes = $250.
+      const monthlyGrossIncome = income / 12;
+      const monthlyHousingCosts = stressMonthlyPayment + 250 + 150;
+      const gdsRatio = (monthlyHousingCosts / monthlyGrossIncome) * 100;
+
+      const stressStatusPill = document.getElementById('can-stress-status');
+      if (gdsRatio <= 39.0) {
+        stressStatusPill.textContent = 'PASS';
+        stressStatusPill.className = 'status-pill status-pass';
+      } else {
+        stressStatusPill.textContent = 'FAIL';
+        stressStatusPill.className = 'status-pill status-fail';
+      }
+
+      const totalInterest = (monthlyPayment * term * 12) - totalLoanAmount;
+      const totalPayment = (monthlyPayment * term * 12);
+
+      // Set results fields
+      document.getElementById('can-monthly-payment').textContent = fmtCAD(monthlyPayment);
+      document.getElementById('can-cmhc-premium').textContent = fmtCAD(cmhcPremiumAmount);
+      document.getElementById('cmhc-pct-lbl').textContent = `${(cmhcPremiumRate * 100).toFixed(2)}% premium rate`;
+      document.getElementById('can-loan-amount').textContent = fmtCAD(totalLoanAmount);
+      document.getElementById('ltv-percentage-lbl').textContent = `LTV Ratio: ${((totalLoanAmount / price) * 100).toFixed(1)}%`;
+      document.getElementById('can-gds-val').textContent = gdsRatio.toFixed(2) + '%';
+
+      document.getElementById('can-total-interest').textContent = fmtCAD(totalInterest);
+      document.getElementById('can-total-payment').textContent = fmtCAD(totalPayment);
+
+      // Color progress track
+      drawBar(downPaymentAmount, cmhcPremiumAmount, baseLoanAmount);
+
+      // Show Results block
+      const resultsContainer = document.getElementById('canada-results');
+      resultsContainer.classList.add('visible');
+      resultsContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+      // Draw donut
+      requestAnimationFrame(() => {
+        drawDonut('can-chart', Math.round(totalLoanAmount), Math.round(totalInterest));
+      });
+
+      // Make table
+      const tableList = generateAmortSchedule(totalLoanAmount, rate, term);
+      buildTable(tableList);
+
+      // Save calculations in window for export features
+      window._canadaResultBlob = {
+        price, down, downPaymentAmount, baseLoanAmount, totalLoanAmount, cmhcPremiumAmount, rate, term, income,
+        monthlyPayment, totalInterest, totalPayment, tableList, gdsRatio
+      };
+
+      logEvent('calculation_completed', { tool: 'canada_mortgage_calc', value: Math.round(price) });
+    }
+
+    // Handle calculator submission
+    document.getElementById('canada-calc-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      executeCalculation();
+    });
+
+    // Handle Reset button action
+    document.getElementById('can-calc-reset').addEventListener('click', function () {
+      document.getElementById('canada-calc-form').reset();
+      document.getElementById('canada-results').classList.remove('visible');
+      document.getElementById('p-box').classList.remove('error-box');
+      document.getElementById('d-box').classList.remove('error-box');
+      document.getElementById('r-box').classList.remove('error-box');
+      document.getElementById('i-box').classList.remove('error-box');
+      window._canadaResultBlob = null;
+      logEvent('calculator_reset', { tool: 'canada_mortgage_calc' });
+    });
+
+    // Toggle Amortization schedule block
+    const toggleAmortBtn = document.getElementById('can-amort-toggle');
+    const amortWrap = document.getElementById('can-amort-wrap');
+    if (toggleAmortBtn && amortWrap) {
+      toggleAmortBtn.addEventListener('click', function () {
+        const shown = amortWrap.style.display === 'block';
+        amortWrap.style.display = shown ? 'none' : 'block';
+        this.setAttribute('aria-expanded', String(!shown));
+        this.querySelector('span').textContent = shown
+          ? 'Show Amortization Schedule (Year-by-Year)'
+          : 'Hide Amortization Schedule';
+      });
+    }
+
+    // Clipboard copy
+    document.getElementById('btn-copy').addEventListener('click', function () {
+      const cache = window._canadaResultBlob;
+      if (!cache) {
+        triggerToast('⚠️ Please perform calculations first.');
+        return;
+      }
+      const textData = [
+        'Mortgage Pro Global — Canada Mortgage Calculation Summary',
+        '----------------------------------------------------',
+        `Property Value:          ${fmtCAD(cache.price)}`,
+        `Down Payment Percent:    ${cache.down}% (${fmtCAD(cache.downPaymentAmount)})`,
+        `CMHC Premium Amount:     ${fmtCAD(cache.cmhcPremiumAmount)}`,
+        `Total Mortgage Principal: ${fmtCAD(cache.totalLoanAmount)}`,
+        `Rate of Interest:        ${cache.rate}% for ${cache.term} Years`,
+        `Qualifying GDS Ratio:    ${cache.gdsRatio.toFixed(2)}%`,
+        '',
+        `Monthly Repayment:       ${fmtCAD(cache.monthlyPayment)}`,
+        `Total Interest Payable:  ${fmtCAD(cache.totalInterest)}`,
+        `Total Cost of Mortgage:  ${fmtCAD(cache.totalPayment)}`,
+        '----------------------------------------------------',
+        'For detailed analysis visit: mortgageproglobal.com'
+      ].join('\n');
+
+      navigator.clipboard.writeText(textData).then(() => {
+        triggerToast('✅ Report copied to clipboard!');
+        logEvent('results_copied', { tool: 'canada_mortgage_calc' });
+      }).catch(() => triggerToast('❌ Clipboard action failed. Copy manually.'));
+    });
+
+    // Export CSV
+    document.getElementById('btn-csv').addEventListener('click', function () {
+      const cache = window._canadaResultBlob;
+      if (!cache) {
+        triggerToast('⚠️ Please perform calculations first.');
+        return;
+      }
+      const header = ['Year', 'Monthly Payment', 'Principal Paid', 'Interest Paid', 'Remaining Balance'];
+      const rows = cache.tableList.map(i => [i.year, i.emi, i.principal, i.interest, i.balance]);
+      const csvContent = [
+        `Canada Mortgage Amortization Schedule,,,\n`,
+        `Property Value,${cache.price},Down Payment (%),${cache.down}\n`,
+        `CMHC Premium,${cache.cmhcPremiumAmount},Total Loan Amount,${cache.totalLoanAmount}\n`,
+        `Interest Rate,${cache.rate}%,Term,${cache.term} years\n\n`,
+        header.join(','),
+        ...rows.map(r => r.join(','))
+      ].join('\n');
+
+      const fileBlob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const downloadLink = document.createElement('a');
+      const blobURL = URL.createObjectURL(fileBlob);
+      downloadLink.href = blobURL;
+      downloadLink.setAttribute('download', 'canada_mortgage_amortization.csv');
+      downloadLink.click();
+      URL.revokeObjectURL(blobURL);
+      triggerToast('📥 CSV file downloading.');
+      logEvent('results_exported_csv', { tool: 'canada_mortgage_calc' });
+    });
+
+    // Print results
+    document.getElementById('btn-print').addEventListener('click', function () {
+      window.print();
+      logEvent('results_printed', { tool: 'canada_mortgage_calc' });
+    });
+
+    // Province tab pill toggles
+    document.querySelectorAll('#prov-pills .prov-pill').forEach(pill => {
+      pill.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelectorAll('#prov-pills .prov-pill').forEach(p => p.classList.remove('active'));
+        this.classList.add('active');
+        triggerToast(`📍 Switched rules to province: ${this.getAttribute('data-val')}`);
+      });
+    });
+
+    // FAQ Expand/Collapse
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', function () {
+        const panel = document.getElementById(this.getAttribute('aria-controls'));
+        const active = this.getAttribute('aria-expanded') === 'true';
+
+        // Reset accordion
+        document.querySelectorAll('.faq-q').forEach(q => {
+          q.setAttribute('aria-expanded', 'false');
+          document.getElementById(q.getAttribute('aria-controls')).classList.remove('open');
+        });
+
+        if (!active) {
+          this.setAttribute('aria-expanded', 'true');
+          panel.classList.add('open');
+        }
+      });
+    });
+
+    // Dynamic current footer year
+    const footerYear = document.getElementById('footer-year');
+    if (footerYear) footerYear.textContent = new Date().getFullYear();
+
+    // Resize chart dynamically
+    let rtimer;
+    window.addEventListener('resize', function () {
+      clearTimeout(rtimer);
+      rtimer = setTimeout(() => {
+        const cache = window._canadaResultBlob;
+        if (cache) drawDonut('can-chart', Math.round(cache.totalLoanAmount), Math.round(cache.totalInterest));
+      }, 200);
+    });
+  </script>
+
 </body>
 
 </html>

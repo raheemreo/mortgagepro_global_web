@@ -23,24 +23,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>MortgagePro Global — Free Mortgage Calculators for 7 Countries | REO Technologies</title>
+  <title>MortgagePro Global - Free Mortgage Calculators for 7 Countries | REO Technologies</title>
   <meta name="description"
     content="Free mortgage and home loan calculators for USA, Canada, UK, Australia, New Zealand, India, and Europe. Calculate monthly payments, EMI, amortization, taxes, and more. Built by REO Technologies.">
-
+  <meta name="author" content="REO Technologies">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://mortgageproglobal.com/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="MortgagePro Global — Free Mortgage Calculators for 7 Countries">
+  <meta property="og:title" content="MortgagePro Global - Free Mortgage Calculators for 7 Countries">
   <meta property="og:description"
     content="Free mortgage and home loan calculators for USA, Canada, UK, Australia, New Zealand, India, and Europe.">
   <meta property="og:url" content="https://mortgageproglobal.com/">
   <meta property="og:image" content="https://mortgageproglobal.com/images/og-home.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="MortgagePro Global">
+  <meta property="og:locale" content="en_US">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="MortgagePro Global — Free Mortgage Calculators">
+  <meta name="twitter:title" content="MortgagePro Global - Free Mortgage Calculators">
   <meta name="twitter:description"
     content="Free mortgage calculators for 7 countries. USA, Canada, UK, Australia, NZ, India, Europe.">
   <meta name="twitter:image" content="https://mortgageproglobal.com/images/og-home.jpg">
@@ -50,18 +54,22 @@
   <meta name="msvalidate.01" content="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
   <meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
 
+  <!-- DNS Prefetch for performance -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://flagcdn.com">
+  <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
 
   <!-- Critical CSS -->
   <style>
     :root {
       --page-primary: #0B1D3A;
       --page-accent: #B91C1C;
-      --page-bg: #F0F4FF;
+      --page-bg: #FFFFFF;
     }
 
     body {
       margin: 0;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
       background: var(--page-bg);
       color: var(--page-primary);
       font-size: 16px;
@@ -122,6 +130,75 @@
   }
   </script>
 
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a mortgage calculator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A mortgage calculator estimates your monthly home loan payment based on the loan amount, interest rate, and repayment term. Professional calculators like those on MortgagePro Global also factor in country-specific costs such as taxes, insurance, and government fees (CMHC, Stamp Duty, LMI, PMI) to give a complete picture of your total home ownership cost."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How accurate are mortgage calculators?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "MortgagePro Global calculators use the standard compound interest formula (EMI = P × r × (1+r)ⁿ / ((1+r)ⁿ - 1)) and official central bank rates updated monthly. Results are estimates - actual payments may vary based on your lender's rate, fees, and specific loan product. Always confirm figures with a licensed mortgage broker before making decisions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much house can I afford?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most lenders recommend that your total housing costs (mortgage payment, taxes, insurance) do not exceed 28% of your gross monthly income. Your debt-to-income ratio (DTI) should ideally stay below 43%. Use our mortgage calculators to estimate payments and adjust your home price until the monthly payment fits comfortably within your budget."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What affects monthly mortgage payments?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your monthly mortgage payment is determined by the loan amount (home price minus down payment), interest rate, and loan term. Additional factors include property taxes, homeowners insurance, PMI (if down payment is under 20%), HOA fees, and country-specific costs like CMHC premiums in Canada or Stamp Duty in the UK."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which country calculator should I use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use the calculator for the country where you are purchasing property, not where you live. Each country's calculator applies the correct local mortgage rules - Canada uses semi-annual compounding and requires a stress test, while India applies EMI-based repayment with RBI repo rate-linked pricing. Choosing the wrong country's calculator will give you inaccurate results."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: HowTo -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Use MortgagePro Global Mortgage Calculators",
+    "step": [
+      { "@type": "HowToStep", "position": 1, "name": "Select Your Country", "text": "Choose from 7 countries. Each calculator uses correct local rules, taxes, fees, and central bank rates." },
+      { "@type": "HowToStep", "position": 2, "name": "Enter Loan Details", "text": "Input your property price, down payment, interest rate, and loan term. Defaults are set to local market averages." },
+      { "@type": "HowToStep", "position": 3, "name": "Get Instant Results", "text": "See monthly payment, total interest, amortization schedule, and country-specific costs - instantly, no sign-up needed." }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/accessibility.css">
   <script src="/js/components.js" defer></script>
@@ -135,184 +212,738 @@
 
   <main id="main-content">
 
-    <!-- Hero -->
-    <section class="page-hero" aria-label="Site introduction">
+    <!-- ===== 1. HERO SECTION ===== -->
+    <section class="hero-v2" aria-label="Site introduction">
       <div class="container">
-        <h1>Free Mortgage Calculators for Home Buyers Worldwide</h1>
-        <p class="subtitle">Professional-grade tools for USA, Canada, UK, Australia, New Zealand, India, and Europe —
-          built by REO Technologies.</p>
+        <div class="hero-v2-inner">
+
+          <!-- Left: Text Content -->
+          <div class="hero-v2-content">
+            <div class="hero-v2-eyebrow" aria-hidden="true">
+              🌍 Trusted by Home Buyers in 7 Countries
+            </div>
+            <h1>
+              Make Smarter<br>
+              <span class="accent">Mortgage Decisions</span><br>
+              Worldwide
+            </h1>
+            <p class="hero-v2-desc">
+              Professional-grade mortgage calculators for USA, Canada, UK, Australia, New Zealand, India, and Europe -
+              with real central bank rates, country-specific fees, and instant results. Built by REO Technologies. 100%
+              free, no registration.
+            </p>
+            <div class="hero-v2-ctas">
+              <a href="#calculators" class="btn-hero-primary" id="hero-cta-primary">
+                Start Calculating
+              </a>
+              <a href="/blog/" class="btn-hero-secondary" id="hero-cta-secondary">
+                Explore Mortgage Guides
+              </a>
+            </div>
+            <div class="hero-trust-badges" role="list" aria-label="Trust indicators">
+              <span class="trust-badge" role="listitem"><span class="trust-badge-icon">✅</span> Free to Use</span>
+              <span class="trust-badge" role="listitem"><span class="trust-badge-icon">🔒</span> No Registration</span>
+              <span class="trust-badge" role="listitem"><span class="trust-badge-icon">📱</span> Mobile Friendly</span>
+              <span class="trust-badge" role="listitem"><span class="trust-badge-icon">🔄</span> Updated
+                Regularly</span>
+              <span class="trust-badge" role="listitem"><span class="trust-badge-icon">🛡️</span> Secure</span>
+            </div>
+          </div>
+
+          <!-- Right: Calculator Mockup -->
+          <div class="hero-v2-visual" aria-hidden="true">
+            <div class="hero-calc-mockup">
+              <div class="hero-calc-mockup-header">
+                <div class="mockup-icon">🏠</div>
+                <h3>Mortgage Calculator</h3>
+              </div>
+              <div class="mockup-field">
+                <label>Home Price</label>
+                <div class="mockup-input">$450,000</div>
+              </div>
+              <div class="mockup-field">
+                <label>Down Payment</label>
+                <div class="mockup-input">$90,000 (20%)</div>
+              </div>
+              <div class="mockup-field">
+                <label>Interest Rate</label>
+                <div class="mockup-input">6.82% (30-yr fixed)</div>
+              </div>
+              <div class="mockup-result">
+                <div class="mockup-result-label">Monthly Payment</div>
+                <div class="mockup-result-value">$2,361</div>
+                <div class="mockup-result-sub">Principal + Interest</div>
+              </div>
+              <div class="hero-floating-cards">
+                <div class="hero-float-card">
+                  <div class="hero-float-value">$250K</div>
+                  <div class="hero-float-label">Total Interest</div>
+                </div>
+                <div class="hero-float-card">
+                  <div class="hero-float-value">30 yr</div>
+                  <div class="hero-float-label">Loan Term</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
-    <!-- Quick Answer -->
+    <!-- ===== AD UNIT 1 - Leaderboard ===== -->
     <div class="container">
-      <div class="quick-answer" role="note" aria-label="Quick Summary">
-        <p class="qa-label">Quick Answer</p>
-        <p>MortgagePro Global provides <strong>free mortgage and home loan calculators</strong> for 7 countries. Select
-          your country below to calculate monthly payments, EMI, amortization schedules, taxes, insurance, and
-          country-specific costs like CMHC (Canada), Stamp Duty (UK), LMI (Australia), and PMI (USA).</p>
-      </div>
-
-      <!-- Ad Unit 1 -->
       <div class="ad-unit ad-leaderboard" aria-label="Advertisement" role="complementary"></div>
+    </div>
 
-      <!-- Country Grid -->
-      <section aria-labelledby="countries-heading">
-        <h2 id="countries-heading">Choose Country</h2>
+    <!-- ===== 2. FEATURED MORTGAGE CALCULATORS ===== -->
+    <section class="section-white" id="calculators" aria-labelledby="calculators-heading">
+      <div class="container">
+        <div class="section-eyebrow" aria-hidden="true">Our Tools</div>
+        <h2 class="section-heading" id="calculators-heading">Mortgage Calculators by Country</h2>
+        <p class="section-subheading">Each calculator is built for local mortgage rules, rates, and regulations. Pick
+          your country to get started.</p>
 
-        <div class="country-grid">
+        <div class="calc-cards-grid">
 
-          <a href="/usa-mortgage-calculator.html" class="country-card" style="--card-accent:#B91C1C"
-            aria-label="USA Mortgage Calculator">
-            <div class="flag" aria-hidden="true">🇺🇸</div>
+          <a href="/usa-mortgage-calculator.html" class="calc-card fade-in"
+            aria-label="USA Mortgage Calculator - PITI, PMI, FHA, VA loans">
+            <div class="calc-card-icon" aria-hidden="true">
+              <img src="https://flagcdn.com/us.svg" alt="" width="40" height="27" loading="lazy"
+                style="border-radius:4px;object-fit:cover;display:block;">
+            </div>
             <h3>USA Mortgage Calculator</h3>
             <p>PITI calculator with PMI, FHA, VA, and USDA loan options. Includes property tax, homeowners insurance,
-              and amortization.</p>
-            <span class="rate-badge">30-Yr Fixed: <span data-rate="usa.fixed30">—</span></span>
+              and full amortization schedule.</p>
+            <div class="calc-card-meta">
+              <span class="calc-card-time">⏱ ~2 min</span>
+              <span class="calc-card-cta">Calculate Now →</span>
+            </div>
           </a>
 
-          <a href="/canada-mortgage-calculator.html" class="country-card" style="--card-accent:#C8102E"
-            aria-label="Canada Mortgage Calculator">
-            <div class="flag" aria-hidden="true">🇨🇦</div>
+          <a href="/canada-mortgage-calculator.html" class="calc-card fade-in"
+            aria-label="Canada Mortgage Calculator - CMHC, stress test, semi-annual compounding">
+            <div class="calc-card-icon" aria-hidden="true">
+              <img src="https://flagcdn.com/ca.svg" alt="" width="40" height="27" loading="lazy"
+                style="border-radius:4px;object-fit:cover;display:block;">
+            </div>
             <h3>Canada Mortgage Calculator</h3>
-            <p>Includes CMHC insurance premium, stress test (MQR), and semi-annual compounding — the Canadian standard.
-            </p>
-            <span class="rate-badge">BoC Rate: <span data-rate="canada.boc">—</span></span>
+            <p>Includes CMHC insurance premium, stress test (MQR), and semi-annual compounding - the Canadian standard
+              per OSFI regulations.</p>
+            <div class="calc-card-meta">
+              <span class="calc-card-time">⏱ ~2 min</span>
+              <span class="calc-card-cta">Calculate Now →</span>
+            </div>
           </a>
 
-          <a href="/uk-mortgage-calculator.html" class="country-card" style="--card-accent:#C8102E"
-            aria-label="UK Mortgage Calculator">
-            <div class="flag" aria-hidden="true">🇬🇧</div>
+          <a href="/uk-mortgage-calculator.html" class="calc-card fade-in"
+            aria-label="UK Mortgage Calculator - Stamp Duty, LTV, first-time buyer relief">
+            <div class="calc-card-icon" aria-hidden="true">
+              <img src="https://flagcdn.com/gb.svg" alt="" width="40" height="27" loading="lazy"
+                style="border-radius:4px;object-fit:cover;display:block;">
+            </div>
             <h3>UK Mortgage Calculator</h3>
-            <p>Monthly repayment calculator with Stamp Duty Land Tax (SDLT), first-time buyer relief, and LTV breakdown.
-            </p>
-            <span class="rate-badge">BoE Rate: <span data-rate="uk.boe">—</span></span>
+            <p>Monthly repayment calculator with Stamp Duty Land Tax (SDLT), first-time buyer relief, and full LTV
+              breakdown.</p>
+            <div class="calc-card-meta">
+              <span class="calc-card-time">⏱ ~2 min</span>
+              <span class="calc-card-cta">Calculate Now →</span>
+            </div>
           </a>
 
-          <a href="/india-home-loan-emi-calculator.html" class="country-card" style="--card-accent:#FF6B35"
-            aria-label="India Home Loan EMI Calculator">
-            <div class="flag" aria-hidden="true">🇮🇳</div>
+          <a href="/india-home-loan-emi-calculator.html" class="calc-card fade-in"
+            aria-label="India Home Loan EMI Calculator - RBI repo rate, Section 24b tax benefits">
+            <div class="calc-card-icon" aria-hidden="true">
+              <img src="https://flagcdn.com/in.svg" alt="" width="40" height="27" loading="lazy"
+                style="border-radius:4px;object-fit:cover;display:block;">
+            </div>
             <h3>India Home Loan Calculator</h3>
-            <p>EMI calculator with RBI repo rate, tax benefits under Section 24b, 80C &amp; 80EEA, and SBI/HDFC/ICICI
-              rate comparison.</p>
-            <span class="rate-badge">Repo Rate: <span data-rate="india.repo">—</span></span>
+            <p>EMI calculator with RBI repo rate, tax benefits under Section 24b, 80C & 80EEA, and SBI/HDFC/ICICI rate
+              comparison.</p>
+            <div class="calc-card-meta">
+              <span class="calc-card-time">⏱ ~2 min</span>
+              <span class="calc-card-cta">Calculate Now →</span>
+            </div>
           </a>
 
-          <a href="/australia-mortgage-calculator.html" class="country-card" style="--card-accent:#002868"
-            aria-label="Australia Mortgage Calculator">
-            <div class="flag" aria-hidden="true">🇦🇺</div>
+          <a href="/australia-mortgage-calculator.html" class="calc-card fade-in"
+            aria-label="Australia Mortgage Calculator - LMI, offset account, stamp duty by state">
+            <div class="calc-card-icon" aria-hidden="true">
+              <img src="https://flagcdn.com/au.svg" alt="" width="40" height="27" loading="lazy"
+                style="border-radius:4px;object-fit:cover;display:block;">
+            </div>
             <h3>Australia Mortgage Calculator</h3>
-            <p>LMI premium calculator, offset account savings estimator, and stamp duty by state. RBA cash rate updated.
-            </p>
-            <span class="rate-badge">RBA Rate: <span data-rate="australia.rba">—</span></span>
+            <p>LMI premium calculator, offset account savings estimator, and stamp duty by state. RBA cash rate updated
+              regularly.</p>
+            <div class="calc-card-meta">
+              <span class="calc-card-time">⏱ ~2 min</span>
+              <span class="calc-card-cta">Calculate Now →</span>
+            </div>
           </a>
 
-          <a href="/new-zealand-mortgage-calculator.html" class="country-card" style="--card-accent:#00843D"
-            aria-label="New Zealand Home Loan Calculator">
-            <div class="flag" aria-hidden="true">🇳🇿</div>
+          <a href="/new-zealand-mortgage-calculator.html" class="calc-card fade-in"
+            aria-label="New Zealand Mortgage Calculator - LVR rules, KiwiSaver, RBNZ OCR">
+            <div class="calc-card-icon" aria-hidden="true">
+              <img src="https://flagcdn.com/nz.svg" alt="" width="40" height="27" loading="lazy"
+                style="border-radius:4px;object-fit:cover;display:block;">
+            </div>
             <h3>New Zealand Calculator</h3>
-            <p>LVR rules, KiwiSaver First Home Withdrawal estimator, and RBNZ OCR rate tracking for NZ home buyers.</p>
-            <span class="rate-badge">OCR: <span data-rate="newzealand.ocr">—</span></span>
+            <p>LVR rules, KiwiSaver First Home Withdrawal estimator, and RBNZ OCR rate tracking for NZ home buyers and
+              investors.</p>
+            <div class="calc-card-meta">
+              <span class="calc-card-time">⏱ ~2 min</span>
+              <span class="calc-card-cta">Calculate Now →</span>
+            </div>
           </a>
 
-          <a href="/europe-mortgage-calculator.html" class="country-card" style="--card-accent:#003399"
-            aria-label="Europe Mortgage Calculator">
-            <div class="flag" aria-hidden="true">🇪🇺</div>
+          <a href="/europe-mortgage-calculator.html" class="calc-card fade-in"
+            aria-label="Europe Mortgage Calculator - Germany, France, Spain, Euribor tracking">
+            <div class="calc-card-icon" aria-hidden="true">
+              <img src="https://flagcdn.com/eu.svg" alt="" width="40" height="27" loading="lazy"
+                style="border-radius:4px;object-fit:cover;display:block;">
+            </div>
             <h3>Europe Mortgage Calculator</h3>
             <p>Covers Germany, France, Spain, Italy, and more. Euribor tracking, notary fee estimates, and country
-              comparison.</p>
-            <span class="rate-badge">ECB Rate: <span data-rate="europe.ecb">—</span></span>
+              comparison tools.</p>
+            <div class="calc-card-meta">
+              <span class="calc-card-time">⏱ ~2 min</span>
+              <span class="calc-card-cta">Calculate Now →</span>
+            </div>
           </a>
 
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Ad Unit 2 -->
-      <div class="ad-unit ad-mid" aria-label="Advertisement" role="complementary"></div>
+    <p class="rates-disclaimer" data-rate-updated>Rates as of June 2026. Verify with your lender before making financial
+      decisions. <a href="/disclaimer.html">Read disclaimer.</a></p>
+    </div>
+    </section>
 
-      <!-- How It Works -->
-      <section aria-labelledby="how-heading">
-        <h2 id="how-heading">How to Use MortgagePro Global</h2>
-        <div class="tool-grid">
-          <div class="tool-card" style="pointer-events:none">
-            <div class="tool-icon" aria-hidden="true">🌍</div>
-            <h3>1. Select Your Country</h3>
-            <p>Choose from 7 countries above. Each calculator uses the correct local rules, taxes, fees, and central
-              bank rates.</p>
+    <!-- ===== 4. WHY CHOOSE MORTGAGE PRO GLOBAL ===== -->
+    <section class="section-alt" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="section-eyebrow" aria-hidden="true">Why Us</div>
+        <h2 class="section-heading" id="why-heading">Why Thousands of Home Buyers Use MortgagePro Global</h2>
+        <p class="section-subheading">We believe every home buyer deserves access to professional-grade financial tools,
+          for free.</p>
+
+        <div class="benefits-grid">
+          <div class="benefit-card fade-in">
+            <div class="benefit-icon" aria-hidden="true">🎯</div>
+            <h3>Accurate Calculations</h3>
+            <p>Uses the standard compound interest formula with official central bank rates - not estimates.</p>
           </div>
-          <div class="tool-card" style="pointer-events:none">
-            <div class="tool-icon" aria-hidden="true">🔢</div>
-            <h3>2. Enter Loan Details</h3>
-            <p>Input your property price, down payment, interest rate, and loan term. Defaults are set to local market
-              averages.</p>
+          <div class="benefit-card fade-in">
+            <div class="benefit-icon" aria-hidden="true">🛠️</div>
+            <h3>Modern Financial Tools</h3>
+            <p>Built by REO Technologies with 50,000+ app downloads and real-world mortgage expertise.</p>
           </div>
-          <div class="tool-card" style="pointer-events:none">
-            <div class="tool-icon" aria-hidden="true">📊</div>
-            <h3>3. Get Instant Results</h3>
-            <p>See monthly payment, total interest, amortization schedule, and country-specific costs — instantly, no
-              sign-up needed.</p>
+          <div class="benefit-card fade-in">
+            <div class="benefit-icon" aria-hidden="true">📖</div>
+            <h3>Educational Resources</h3>
+            <p>In-depth guides, glossaries, and FAQs help you understand every step of the mortgage process.</p>
+          </div>
+          <div class="benefit-card fade-in">
+            <div class="benefit-icon" aria-hidden="true">⚡</div>
+            <h3>Lightning Fast</h3>
+            <p>Instant results with no page reloads. Results appear as you type for real-time planning.</p>
+          </div>
+          <div class="benefit-card fade-in">
+            <div class="benefit-icon" aria-hidden="true">🔒</div>
+            <h3>Secure & Private</h3>
+            <p>All calculations happen in your browser. We never store your financial data on our servers.</p>
+          </div>
+          <div class="benefit-card fade-in">
+            <div class="benefit-icon" aria-hidden="true">📱</div>
+            <h3>Mobile Optimized</h3>
+            <p>Fully responsive design works perfectly on phones, tablets, and desktops of all sizes.</p>
+          </div>
+          <div class="benefit-card fade-in">
+            <div class="benefit-icon" aria-hidden="true">🚫</div>
+            <h3>No Login Required</h3>
+            <p>Start calculating immediately. No account creation, no email, no personal details needed.</p>
+          </div>
+          <div class="benefit-card fade-in">
+            <div class="benefit-icon" aria-hidden="true">♾️</div>
+            <h3>Free Forever</h3>
+            <p>All calculators and educational content are completely free with no paywalls or subscriptions.</p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- About section (E-E-A-T) -->
-      <section aria-labelledby="about-heading" class="content-article">
-        <h2 id="about-heading">About MortgagePro Global</h2>
-        <p>MortgagePro Global is a free financial tool platform built by <strong>REO Technologies</strong>, a developer
-          of
-          trusted mortgage and loan calculator apps with over 50,000 downloads on Google Play. Our tools are built for
-          accuracy, transparency, and accessibility — we use the standard compound interest formula (EMI = P × r ×
-          (1+r)ⁿ / ((1+r)ⁿ - 1)) and source all rates from official central banks.</p>
-        <p>Our calculators cover the full range of home buying costs specific to each country: CMHC insurance premiums
-          in Canada, Stamp Duty Land Tax in the UK, Lenders Mortgage Insurance (LMI) in Australia, PMI thresholds in the
-          USA, and tax deduction benefits under India's Income Tax Act.</p>
-        <p>All calculations are estimates. Rates change daily — always verify with your lender or mortgage broker before
-          making financial decisions. <a href="/disclaimer.html">Read our full disclaimer.</a></p>
-      </section>
-
-      <!-- Ad Unit 3 -->
+    <!-- ===== AD UNIT 2 - Mid-Page ===== -->
+    <div class="container">
       <div class="ad-unit ad-mid" aria-label="Advertisement" role="complementary"></div>
+    </div>
 
-      <!-- FAQ Preview -->
-      <section aria-labelledby="faq-home-heading">
-        <h2 id="faq-home-heading">Frequently Asked Questions</h2>
-        <ul class="faq-list" role="list">
+    <!-- ===== 5. EDUCATIONAL LEARNING CENTER ===== -->
+    <section class="section-white" aria-labelledby="learn-heading">
+      <div class="container">
+        <div class="section-eyebrow" aria-hidden="true">Educational Content</div>
+        <h2 class="section-heading" id="learn-heading">Learning Center - Mortgage Guides &amp; Articles</h2>
+        <p class="section-subheading">Expert articles on home buying, mortgage refinancing, credit scores, and more -
+          updated regularly.</p>
+
+        <div class="blog-cards-grid">
+
+          <a href="/blog/how-to-use-mortgage-calculator.html" class="blog-card fade-in"
+            aria-label="Read: How to Use a Mortgage Calculator - Complete Guide">
+            <div class="blog-card-img" aria-hidden="true">🧮</div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-card-category">Guide</span>
+                <span class="blog-card-time">📖 6 min read</span>
+              </div>
+              <h3>How to Use a Mortgage Calculator - Complete Guide</h3>
+              <p>Learn how to get the most accurate results from any mortgage calculator, including how to input local
+                taxes, insurance, and country-specific fees.</p>
+              <span class="blog-card-link">Read Article →</span>
+            </div>
+          </a>
+
+          <a href="/blog/cmhc-insurance-canada-guide.html" class="blog-card fade-in"
+            aria-label="Read: CMHC Mortgage Insurance in Canada - Complete Guide">
+            <div class="blog-card-img"
+              style="background:linear-gradient(135deg,#B31924,#0D131C);flex-direction:column;gap:8px;"
+              aria-hidden="true">
+              <img src="https://flagcdn.com/ca.svg" alt="" width="48" height="32" loading="lazy"
+                style="border-radius:4px;object-fit:cover;box-shadow:0 2px 8px rgba(0,0,0,0.3);">
+              <span
+                style="font-size:0.75rem;color:rgba(255,255,255,0.75);text-transform:uppercase;letter-spacing:0.06em;font-weight:600;">Canada</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-card-category">Canada</span>
+                <span class="blog-card-time">📖 8 min read</span>
+              </div>
+              <h3>CMHC Mortgage Insurance in Canada - Complete Guide</h3>
+              <p>Everything Canadian home buyers need to know about CMHC insurance premiums, qualification rules, and
+                how to minimize your insurance costs.</p>
+              <span class="blog-card-link">Read Article →</span>
+            </div>
+          </a>
+
+          <a href="/blog/uk-stamp-duty-guide.html" class="blog-card fade-in"
+            aria-label="Read: UK Stamp Duty Land Tax - First-Time Buyer Guide">
+            <div class="blog-card-img"
+              style="background:linear-gradient(135deg,#002F6C,#BF0A30);flex-direction:column;gap:8px;"
+              aria-hidden="true">
+              <img src="https://flagcdn.com/gb.svg" alt="" width="48" height="32" loading="lazy"
+                style="border-radius:4px;object-fit:cover;box-shadow:0 2px 8px rgba(0,0,0,0.3);">
+              <span
+                style="font-size:0.75rem;color:rgba(255,255,255,0.75);text-transform:uppercase;letter-spacing:0.06em;font-weight:600;">United
+                Kingdom</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-card-category">UK</span>
+                <span class="blog-card-time">📖 7 min read</span>
+              </div>
+              <h3>UK Stamp Duty Land Tax - First-Time Buyer Guide</h3>
+              <p>Understand how Stamp Duty Land Tax works in England and Northern Ireland, including first-time buyer
+                relief and how to calculate your exact bill.</p>
+              <span class="blog-card-link">Read Article →</span>
+            </div>
+          </a>
+
+        </div>
+
+        <a href="/blog/" class="view-all-link" id="view-all-articles">View All Articles →</a>
+      </div>
+    </section>
+
+    <!-- ===== 6. HOW IT WORKS ===== -->
+    <section class="section-alt" aria-labelledby="how-heading">
+      <div class="container">
+        <div class="section-eyebrow" aria-hidden="true">Getting Started</div>
+        <h2 class="section-heading" id="how-heading">How to Use MortgagePro Global</h2>
+        <p class="section-subheading">Get your personalized mortgage estimate in under 2 minutes - no registration
+          required.</p>
+
+        <div class="tool-grid">
+          <div class="tool-card">
+            <div class="tool-icon" aria-hidden="true" style="font-size:2.5rem;margin-bottom:14px;">🌍</div>
+            <h3>1. Select Your Country</h3>
+            <p>Choose from 7 countries above. Each calculator uses the correct local rules, taxes, fees, and official
+              central bank rates.</p>
+          </div>
+          <div class="tool-card">
+            <div class="tool-icon" aria-hidden="true" style="font-size:2.5rem;margin-bottom:14px;">🔢</div>
+            <h3>2. Enter Loan Details</h3>
+            <p>Input your property price, down payment, interest rate, and loan term. Defaults are pre-filled with local
+              market averages.</p>
+          </div>
+          <div class="tool-card">
+            <div class="tool-icon" aria-hidden="true" style="font-size:2.5rem;margin-bottom:14px;">📊</div>
+            <h3>3. Get Instant Results</h3>
+            <p>See monthly payment, total interest, full amortization schedule, and country-specific costs - instantly,
+              no sign-up needed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 7. INTERACTIVE LEARNING - Mortgage Glossary ===== -->
+    <section class="section-white" aria-labelledby="glossary-heading">
+      <div class="container">
+        <div class="section-eyebrow" aria-hidden="true">Mortgage Terminology</div>
+        <h2 class="section-heading" id="glossary-heading">Mortgage Glossary - Key Terms Explained</h2>
+        <p class="section-subheading">New to mortgages? Click any term to learn what it means in plain English.</p>
+
+        <div class="glossary-grid" id="glossary-grid">
+
+          <div class="glossary-card">
+            <button class="glossary-card-trigger" aria-expanded="false" id="gloss-amortization-btn"
+              aria-controls="gloss-amortization">
+              <span class="glossary-card-term-icon" aria-hidden="true">📅</span>
+              <span class="glossary-card-label">Amortization</span>
+            </button>
+            <div class="glossary-card-body" id="gloss-amortization" role="region"
+              aria-labelledby="gloss-amortization-btn">
+              Amortization is the process of paying off your loan through scheduled, regular payments over time. Early
+              payments are mostly interest; later payments are mostly principal. A 30-year mortgage has 360 monthly
+              payments before it's fully paid off.
+            </div>
+          </div>
+
+          <div class="glossary-card">
+            <button class="glossary-card-trigger" aria-expanded="false" id="gloss-piti-btn" aria-controls="gloss-piti">
+              <span class="glossary-card-term-icon" aria-hidden="true">💵</span>
+              <span class="glossary-card-label">PITI (USA)</span>
+            </button>
+            <div class="glossary-card-body" id="gloss-piti" role="region" aria-labelledby="gloss-piti-btn">
+              PITI stands for Principal, Interest, Taxes, and Insurance - the four components of a typical US monthly
+              mortgage payment. Lenders use PITI to determine whether you qualify for a loan based on your income.
+            </div>
+          </div>
+
+          <div class="glossary-card">
+            <button class="glossary-card-trigger" aria-expanded="false" id="gloss-pmi-btn" aria-controls="gloss-pmi">
+              <span class="glossary-card-term-icon" aria-hidden="true">🛡️</span>
+              <span class="glossary-card-label">PMI - Private Mortgage Insurance</span>
+            </button>
+            <div class="glossary-card-body" id="gloss-pmi" role="region" aria-labelledby="gloss-pmi-btn">
+              PMI is required in the USA when your down payment is less than 20% of the home's purchase price. It
+              protects the lender (not you) if you default. PMI typically costs 0.5%–1% of the loan annually and can be
+              cancelled once you reach 20% equity.
+            </div>
+          </div>
+
+          <div class="glossary-card">
+            <button class="glossary-card-trigger" aria-expanded="false" id="gloss-ltv-btn" aria-controls="gloss-ltv">
+              <span class="glossary-card-term-icon" aria-hidden="true">📐</span>
+              <span class="glossary-card-label">LTV - Loan-to-Value Ratio</span>
+            </button>
+            <div class="glossary-card-body" id="gloss-ltv" role="region" aria-labelledby="gloss-ltv-btn">
+              LTV is the ratio of your loan amount to the property's appraised value. A $360,000 loan on a $450,000 home
+              has an 80% LTV. Lower LTV ratios typically mean better interest rates and no mortgage insurance
+              requirements.
+            </div>
+          </div>
+
+          <div class="glossary-card">
+            <button class="glossary-card-trigger" aria-expanded="false" id="gloss-emi-btn" aria-controls="gloss-emi">
+              <span class="glossary-card-term-icon" aria-hidden="true">🇮🇳</span>
+              <span class="glossary-card-label">EMI - Equated Monthly Instalment</span>
+            </button>
+            <div class="glossary-card-body" id="gloss-emi" role="region" aria-labelledby="gloss-emi-btn">
+              EMI is the fixed monthly amount you pay toward your home loan in India. It's calculated using the formula:
+              EMI = P × r × (1+r)ⁿ / ((1+r)ⁿ - 1), where P is principal, r is monthly interest rate, and n is number of
+              months.
+            </div>
+          </div>
+
+          <div class="glossary-card">
+            <button class="glossary-card-trigger" aria-expanded="false" id="gloss-cmhc-btn" aria-controls="gloss-cmhc">
+              <span class="glossary-card-term-icon" aria-hidden="true">🇨🇦</span>
+              <span class="glossary-card-label">CMHC Insurance (Canada)</span>
+            </button>
+            <div class="glossary-card-body" id="gloss-cmhc" role="region" aria-labelledby="gloss-cmhc-btn">
+              CMHC (Canada Mortgage and Housing Corporation) mortgage insurance is mandatory in Canada when your down
+              payment is less than 20%. The premium (0.6%–4% of the loan) is added to your mortgage and protects the
+              lender against default.
+            </div>
+          </div>
+
+        </div>
+
+        <p style="margin-top:24px;font-size:0.9rem;color:#6B7280;">
+          <a href="/mortgage-faq.html" style="color:#B91C1C;font-weight:600;">View Full Mortgage FAQ & Glossary →</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== 8. POPULAR RESOURCES ===== -->
+    <section class="section-alt" aria-labelledby="resources-heading">
+      <div class="container">
+        <div class="section-eyebrow" aria-hidden="true">Resources</div>
+        <h2 class="section-heading" id="resources-heading">Popular Mortgage Resources</h2>
+        <p class="section-subheading">Guides, checklists, and tools to help you navigate every stage of the home buying
+          journey.</p>
+
+        <div class="resources-grid">
+
+          <a href="/mortgage-faq.html" class="resource-card fade-in" aria-label="Mortgage FAQ - 30+ Questions Answered">
+            <div class="resource-card-icon" aria-hidden="true">❓</div>
+            <h3>Mortgage FAQ</h3>
+            <p>30+ commonly asked questions about mortgages, interest rates, and home loans answered in plain English.
+            </p>
+            <span class="resource-card-arrow">Read FAQ →</span>
+          </a>
+
+          <a href="/blog/" class="resource-card fade-in" aria-label="Blog and Mortgage Guides">
+            <div class="resource-card-icon" aria-hidden="true">📰</div>
+            <h3>Blog & Guides</h3>
+            <p>Expert guides on first-time home buying, refinancing, credit scores, closing costs, and more.</p>
+            <span class="resource-card-arrow">Read Guides →</span>
+          </a>
+
+          <a href="/mortgage-faq.html#what-is-a-mortgage-calculator" class="resource-card fade-in"
+            aria-label="Mortgage Rate Guide">
+            <div class="resource-card-icon" aria-hidden="true">📈</div>
+            <h3>Mortgage Rate Guide</h3>
+            <p>Understand how central bank decisions affect your mortgage rate and what to watch in the market.</p>
+            <span class="resource-card-arrow">Learn More →</span>
+          </a>
+
+          <a href="/blog/how-to-use-mortgage-calculator.html" class="resource-card fade-in"
+            aria-label="Home Buying Checklist">
+            <div class="resource-card-icon" aria-hidden="true">✅</div>
+            <h3>First-Time Buyer Guide</h3>
+            <p>A complete step-by-step guide for first-time home buyers - from pre-approval to closing day.</p>
+            <span class="resource-card-arrow">Start Reading →</span>
+          </a>
+
+          <a href="/mortgage-faq.html#closing-costs" class="resource-card fade-in" aria-label="Closing Cost Guide">
+            <div class="resource-card-icon" aria-hidden="true">📋</div>
+            <h3>Closing Cost Guide</h3>
+            <p>Learn what closing costs to expect in your country - from appraisal fees to title insurance and stamp
+              duty.</p>
+            <span class="resource-card-arrow">Explore Guide →</span>
+          </a>
+
+          <a href="/mortgage-faq.html#credit-score" class="resource-card fade-in"
+            aria-label="Credit Score for Mortgage">
+            <div class="resource-card-icon" aria-hidden="true">💳</div>
+            <h3>Credit Score Guide</h3>
+            <p>How your credit score affects your mortgage rate and what you can do to improve it before applying.</p>
+            <span class="resource-card-arrow">Improve Score →</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 9. WHY HOMEBUYERS USE MORTGAGE CALCULATORS (Stats) ===== -->
+    <section class="section-white" aria-labelledby="stats-heading">
+      <div class="container">
+        <div class="section-eyebrow" aria-hidden="true">By The Numbers</div>
+        <h2 class="section-heading" id="stats-heading">Why Millions of Homebuyers Use Mortgage Calculators</h2>
+        <p class="section-subheading">Understanding your numbers before you apply puts you in a stronger negotiating
+          position and saves you money.</p>
+
+        <div class="stats-grid" role="list">
+          <div class="stat-item fade-in" role="listitem">
+            <div class="stat-value">$250K+</div>
+            <div class="stat-label">Average total interest paid on a 30-year US mortgage - a calculator shows you how to
+              reduce this</div>
+          </div>
+          <div class="stat-item fade-in" role="listitem">
+            <div class="stat-value">43%</div>
+            <div class="stat-label">Maximum debt-to-income (DTI) ratio most lenders allow for mortgage qualification
+            </div>
+          </div>
+          <div class="stat-item fade-in" role="listitem">
+            <div class="stat-value">7 Countries</div>
+            <div class="stat-label">Country-specific calculators with local rules, taxes, and real central bank rates
+            </div>
+          </div>
+          <div class="stat-item fade-in" role="listitem">
+            <div class="stat-value">2 Min</div>
+            <div class="stat-label">Average time to calculate your full mortgage estimate including local taxes and fees
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== AD UNIT 3 - Mid-Page ===== -->
+    <div class="container">
+      <div class="ad-unit ad-mid" aria-label="Advertisement" role="complementary"></div>
+    </div>
+
+    <!-- ===== 10. FAQ SECTION ===== -->
+    <section class="section-alt" aria-labelledby="faq-home-heading">
+      <div class="container">
+        <div class="section-eyebrow" aria-hidden="true">Got Questions?</div>
+        <h2 class="section-heading" id="faq-home-heading">Frequently Asked Questions</h2>
+        <p class="section-subheading">The most common mortgage questions - answered clearly and concisely.</p>
+
+        <ul class="faq-list" role="list" style="max-width:760px;">
           <li class="faq-item">
-            <button class="faq-question" aria-expanded="false">What is a mortgage calculator?</button>
-            <div class="faq-answer" role="region">
-              <p>A mortgage calculator is a tool that estimates your monthly home loan payment based on the loan amount,
-                interest rate, and repayment term. Professional calculators like those on MortgagePro Global also factor
-                in country-specific costs such as taxes, insurance, and government fees (CMHC, Stamp Duty, LMI, PMI) to
-                give a complete picture of your monthly and total home ownership cost.</p>
+            <button class="faq-question" aria-expanded="false" id="faq-1" aria-controls="faq-ans-1">What is a mortgage
+              calculator?</button>
+            <div class="faq-answer" id="faq-ans-1" role="region" aria-labelledby="faq-1">
+              <p>A mortgage calculator estimates your monthly home loan payment based on the loan amount, interest rate,
+                and repayment term. Professional calculators like those on MortgagePro Global also factor in
+                country-specific costs such as taxes, insurance, and government fees (CMHC, Stamp Duty, LMI, PMI) to
+                give a complete picture of your total home ownership cost.</p>
             </div>
           </li>
           <li class="faq-item">
-            <button class="faq-question" aria-expanded="false">Are these calculators accurate?</button>
-            <div class="faq-answer" role="region">
+            <button class="faq-question" aria-expanded="false" id="faq-2" aria-controls="faq-ans-2">How accurate are
+              these mortgage calculators?</button>
+            <div class="faq-answer" id="faq-ans-2" role="region" aria-labelledby="faq-2">
               <p>MortgagePro Global calculators use the standard compound interest formula (EMI = P × r × (1+r)ⁿ /
-                ((1+r)ⁿ - 1)) and official central bank rates updated monthly. Results are estimates — actual payments
+                ((1+r)ⁿ - 1)) and official central bank rates updated monthly. Results are estimates - actual payments
                 may vary based on your lender's rate, fees, and specific loan product. Always confirm figures with a
-                licensed mortgage broker or financial advisor before making decisions.</p>
+                licensed mortgage broker before making financial decisions.</p>
             </div>
           </li>
           <li class="faq-item">
-            <button class="faq-question" aria-expanded="false">Which country calculator should I use?</button>
-            <div class="faq-answer" role="region">
-              <p>Use the calculator for the country where you are purchasing property, not where you live. Each
-                country's calculator applies the correct local mortgage rules — for example, Canada uses semi-annual
-                compounding (not monthly) and requires a stress test at 2% above your rate, while India applies
-                EMI-based repayment with RBI repo rate-linked pricing. Choosing the wrong country will give you
-                inaccurate results.</p>
+            <button class="faq-question" aria-expanded="false" id="faq-3" aria-controls="faq-ans-3">How much house can I
+              afford?</button>
+            <div class="faq-answer" id="faq-ans-3" role="region" aria-labelledby="faq-3">
+              <p>Most lenders recommend that your total housing costs (mortgage payment, taxes, insurance) do not exceed
+                28% of your gross monthly income, and your total debt-to-income (DTI) ratio stays below 43%. Use our
+                calculators to estimate payments and adjust your target home price until the monthly payment fits
+                comfortably within your budget.</p>
+            </div>
+          </li>
+          <li class="faq-item">
+            <button class="faq-question" aria-expanded="false" id="faq-4" aria-controls="faq-ans-4">What affects my
+              monthly mortgage payment?</button>
+            <div class="faq-answer" id="faq-ans-4" role="region" aria-labelledby="faq-4">
+              <p>Your monthly mortgage payment is determined by: loan amount (home price minus down payment), interest
+                rate, and loan term. Additional factors include property taxes, homeowners insurance, PMI (if down
+                payment is under 20%), HOA fees, and country-specific costs like CMHC premiums in Canada or Stamp Duty
+                in the UK.</p>
+            </div>
+          </li>
+          <li class="faq-item">
+            <button class="faq-question" aria-expanded="false" id="faq-5" aria-controls="faq-ans-5">Which country
+              calculator should I use?</button>
+            <div class="faq-answer" id="faq-ans-5" role="region" aria-labelledby="faq-5">
+              <p>Use the calculator for the country where you are purchasing property, not where you currently live.
+                Each country's calculator applies the correct local mortgage rules - for example, Canada uses
+                semi-annual compounding and requires a stress test, while India applies EMI-based repayment with RBI
+                repo rate-linked pricing. Using the wrong country's calculator will give inaccurate results.</p>
             </div>
           </li>
         </ul>
-        <p><a href="/mortgage-faq.html">View all 30+ mortgage FAQs →</a></p>
-      </section>
 
-    </div><!-- .container -->
+        <p style="margin-top:28px;">
+          <a href="/mortgage-faq.html" style="color:#B91C1C;font-weight:700;font-size:0.95rem;">View all 30+ Mortgage
+            FAQs →</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== 11. ABOUT MORTGAGE PRO GLOBAL ===== -->
+    <section class="section-white" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-inline">
+          <div class="about-inline-img" aria-hidden="true">🏡</div>
+          <div>
+            <div class="section-eyebrow" aria-hidden="true">About Us</div>
+            <h2 class="section-heading" id="about-heading">About MortgagePro Global</h2>
+            <p style="color:#374151;line-height:1.75;margin-bottom:14px;">
+              MortgagePro Global is a free financial tool platform built by <strong>REO Technologies</strong>, a
+              developer of trusted mortgage and loan calculator apps with over 500+ downloads on Google Play. Our
+              tools are built for accuracy, transparency, and accessibility.
+            </p>
+            <p style="color:#374151;line-height:1.75;margin-bottom:14px;">
+              We use the standard compound interest formula and source all rates from official central banks - the
+              Reserve Bank of India, Bank of England, Bank of Canada, Federal Reserve, RBA, RBNZ, and ECB.
+            </p>
+            <p style="color:#374151;line-height:1.75;margin-bottom:20px;">
+              Our mission: help every home buyer in the world make smarter mortgage decisions with free, accurate, and
+              easy-to-use tools. All calculations are estimates - always verify with your lender. <a
+                href="/disclaimer.html" style="color:#B91C1C;">Read our full disclaimer.</a>
+            </p>
+            <div class="about-badges">
+              <span class="about-badge">✅ 500+ App Downloads</span>
+              <span class="about-badge">🌍 7 Countries Covered</span>
+              <span class="about-badge">🏆 100% Free, Always</span>
+              <span class="about-badge">🎓 Educational Purpose</span>
+            </div>
+            <p style="margin-top:20px;">
+              <a href="/about.html" class="view-all-link" style="display:inline-flex;margin-top:0;"
+                id="about-link">Learn More About Us →</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 12. TRUST & TRANSPARENCY STRIP ===== -->
+    <div class="trust-strip" role="navigation" aria-label="Trust and legal links">
+      <div class="container">
+        <div class="trust-strip-inner">
+          <span>🔒 Educational Content Only - Not Financial Advice</span>
+          <span class="trust-sep">|</span>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <span class="trust-sep">|</span>
+          <a href="/privacy-policy.html">Privacy Policy</a>
+          <span class="trust-sep">|</span>
+          <a href="/terms-and-conditions.html">Terms &amp; Conditions</a>
+          <span class="trust-sep">|</span>
+          <a href="/data-deletion-policy.html">Data Deletion</a>
+          <span class="trust-sep">|</span>
+          <a href="/about.html">Editorial Standards</a>
+          <span class="trust-sep">|</span>
+          <a href="/contact.html">Contact Us</a>
+          <span class="trust-sep">|</span>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+
   </main>
 
   <div data-component="footer"></div>
+
+  <!-- Homepage interactive scripts -->
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        const answer = document.getElementById(btn.getAttribute('aria-controls'));
+        btn.setAttribute('aria-expanded', String(!expanded));
+        if (answer) answer.classList.toggle('open', !expanded);
+      });
+    });
+
+    // Glossary accordion
+    document.querySelectorAll('.glossary-card-trigger').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const card = btn.closest('.glossary-card');
+        const isOpen = card.classList.contains('open');
+        card.classList.toggle('open', !isOpen);
+        btn.setAttribute('aria-expanded', String(!isOpen));
+      });
+    });
+
+    // Scroll fade-in via IntersectionObserver
+    (function () {
+      if (!('IntersectionObserver' in window)) {
+        document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
+        return;
+      }
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+    })();
+  </script>
 </body>
 
 </html>
