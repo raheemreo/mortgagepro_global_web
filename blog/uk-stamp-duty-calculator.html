@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DEVWXRXJP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1DEVWXRXJP');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Stamp Duty (SDLT) Calculator: The Tiered Tax That Isn't a Flat Percentage | MortgagePro Global</title>
+  <meta name="description"
+    content="See exactly how UK Stamp Duty Land Tax is calculated in bands, why first-time buyer relief disappears entirely above £500,000, and what non-residents pay on top.">
+  <link rel="canonical" href="https://mortgageproglobal.com/blog/uk-stamp-duty-calculator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Stamp Duty (SDLT) Calculator: The Tiered Tax That Isn't a Flat Percentage | MortgagePro Global">
+  <meta property="og:description"
+    content="See exactly how UK Stamp Duty Land Tax is calculated in bands, why first-time buyer relief disappears entirely above £500,000, and what non-residents pay on top.">
+  <meta property="og:url" content="https://mortgageproglobal.com/blog/uk-stamp-duty-calculator.html">
+  <meta property="og:image" content="https://mortgageproglobal.com/images/og-uk.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Stamp Duty (SDLT) Calculator: Banded Taxes in the UK">
+  <meta name="twitter:description"
+    content="Learn standard SDLT bands, first-time buyer relief cliff edges, and additional-property surcharges.">
+  <meta name="twitter:image" content="https://mortgageproglobal.com/images/og-uk.jpg">
+
+  <!-- Verification -->
+  <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
+  <meta name="msvalidate.01" content="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  <meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
+
+  <!-- Critical CSS -->
+  <style>
+    :root {
+      --page-primary: #0D0D2B;
+      --page-accent: #C8102E;
+      --page-bg: #F5F5F8;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: var(--page-bg);
+      color: var(--page-primary);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .skip-link:focus {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99999;
+      background: #0D0D2B;
+      color: #fff;
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    [data-component] {
+      min-height: 60px;
+    }
+
+    /* Article Styles */
+    .article-container {
+      background: #fff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      margin-bottom: 32px;
+    }
+
+    .article-meta {
+      font-size: 0.85rem;
+      color: #6B7280;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .article-content h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #F1F5F9;
+      padding-bottom: 8px;
+    }
+
+    .article-content h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.25rem;
+      color: #374151;
+      line-height: 1.75;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .article-content li {
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+
+    /* Table override to match UK theme */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    thead {
+      background: var(--page-primary);
+      color: #fff;
+    }
+
+    th,
+    td {
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background-color: #FFF2F2;
+    }
+
+    .example-box {
+      background: #FFF2F2;
+      border-left: 4px solid var(--page-accent);
+      padding: 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+    }
+
+    .disclaimer-text {
+      font-size: 0.85rem;
+      color: #6B7280;
+      border-top: 1px solid #E5E7EB;
+      padding-top: 16px;
+      margin-top: 32px;
+    }
+
+    /* Dark Mode Overrides */
+    @media (prefers-color-scheme: dark) {
+      .article-container {
+        background: var(--bg-card, #1E293B);
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-content p,
+      .article-content li {
+        color: #D1D5DB;
+      }
+
+      .article-content h2 {
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-meta {
+        color: #9CA3AF;
+      }
+
+      .example-box {
+        background: #2D0C11;
+        border-left-color: #C8102E;
+      }
+
+      tr:nth-child(even) {
+        background-color: #2D1418;
+      }
+
+      table {
+        background-color: #1F0D10;
+      }
+    }
+  </style>
+
+  <!-- Structured Data: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Stamp Duty (SDLT) Calculator: The Tiered Tax That Isn't a Flat Percentage",
+    "description": "See exactly how UK Stamp Duty Land Tax is calculated in bands, why first-time buyer relief disappears entirely above £500,000, and what non-residents pay on top.",
+    "image": "https://mortgageproglobal.com/images/og-uk.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "REO Technologies Editorial Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "REO Technologies",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mortgageproglobal.com/images/logo.svg"
+      }
+    },
+    "datePublished": "2026-06-29",
+    "dateModified": "2026-06-29",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mortgageproglobal.com/blog/uk-stamp-duty-calculator.html"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mortgageproglobal.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mortgageproglobal.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Stamp Duty Guide", "item": "https://mortgageproglobal.com/blog/uk-stamp-duty-calculator.html" }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/accessibility.css">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/rates.js" defer></script>
+  <script src="/js/accessibility.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-component="header"></div>
+
+  <!-- Hero -->
+  <section class="page-hero" aria-label="Page introduction">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li>Stamp Duty Guide</li>
+        </ol>
+      </nav>
+      <h1>Stamp Duty (SDLT) Calculator: The Tiered Tax That Isn't a Flat Percentage</h1>
+      <p class="subtitle">Understand how Stamp Duty Land Tax is calculated in bands across England and Northern Ireland.</p>
+    </div>
+  </section>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="page-layout">
+        <div class="main-content">
+
+          <article class="article-container">
+            <header>
+              <div class="article-meta">
+                <span><strong>Author:</strong> REO Technologies Editorial Team</span>
+                <span>•</span>
+                <span><strong>Published:</strong> June 29, 2026</span>
+                <span>•</span>
+                <span><strong>Category:</strong> Mortgage Basics</span>
+              </div>
+            </header>
+
+            <div class="article-content">
+              <p>A lot of buyers estimate Stamp Duty by multiplying their purchase price by one percentage. That's not how SDLT works. It's a banded, "slice" tax — different rates apply only to the portion of the price that falls within each band, and a single threshold decides whether first-time buyer relief applies at all, or not even a little.</p>
+
+              <h2>The Standard Bands (England and Northern Ireland)</h2>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Portion of Price</th>
+                    <th>Rate</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>£0 &ndash; £125,000</td>
+                    <td>0%</td>
+                  </tr>
+                  <tr>
+                    <td>£125,001 &ndash; £250,000</td>
+                    <td>2%</td>
+                  </tr>
+                  <tr>
+                    <td>£250,001 &ndash; £925,000</td>
+                    <td>5%</td>
+                  </tr>
+                  <tr>
+                    <td>£925,001 &ndash; £1,500,000</td>
+                    <td>10%</td>
+                  </tr>
+                  <tr>
+                    <td>Above £1,500,000</td>
+                    <td>12%</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h2>First-Time Buyer Relief &mdash; and Its Cliff Edge</h2>
+              <p>First-time buyers pay 0% up to £300,000, then 5% on the portion from £300,001 to £500,000. Above £500,000, the relief disappears <strong>entirely</strong> — not partially. A first-time buyer purchasing at £500,001 pays full standard rates on the whole price, not just the relief rate up to £300,000 plus standard rates above it.</p>
+
+              <h2>Worked Example</h2>
+              <p>A standard (non-first-time) buyer purchasing at £500,000:</p>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Band</th>
+                    <th>Taxed Amount</th>
+                    <th>Rate</th>
+                    <th>Tax</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>£0 &ndash; £125,000</td>
+                    <td>£125,000</td>
+                    <td>0%</td>
+                    <td>£0</td>
+                  </tr>
+                  <tr>
+                    <td>£125,001 &ndash; £250,000</td>
+                    <td>£125,000</td>
+                    <td>2%</td>
+                    <td>£2,500</td>
+                  </tr>
+                  <tr>
+                    <td>£250,001 &ndash; £500,000</td>
+                    <td>£250,000</td>
+                    <td>5%</td>
+                    <td>£12,500</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Total Standard Tax</strong></td>
+                    <td></td>
+                    <td></td>
+                    <td><strong>£15,000</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>The same £500,000 purchase as a first-time buyer:</p>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Band</th>
+                    <th>Taxed Amount</th>
+                    <th>Rate</th>
+                    <th>Tax</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>£0 &ndash; £300,000</td>
+                    <td>£300,000</td>
+                    <td>0%</td>
+                    <td>£0</td>
+                  </tr>
+                  <tr>
+                    <td>£300,001 &ndash; £500,000</td>
+                    <td>£200,000</td>
+                    <td>5%</td>
+                    <td>£10,000</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Total First-Time Tax</strong></td>
+                    <td></td>
+                    <td></td>
+                    <td><strong>£10,000</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>First-time buyer relief saves exactly £5,000 here — but push the purchase price to £500,001 and the relief vanishes completely, and the first-time buyer owes the full £15,000+ standard-rate bill instead.</p>
+
+              <h2>Surcharges Stacked on Top</h2>
+              <p>Buying an additional property (a second home or buy-to-let) adds a <strong>5 percentage point surcharge</strong> to every band. Non-UK residents add a further <strong>2% surcharge</strong> on top of whatever rate otherwise applies. These stack — a non-resident buying a second home pays standard rates, plus 5%, plus 2%.</p>
+
+              <div class="example-box">
+                <strong>The surcharge refund most buyers don't know about:</strong> if you paid the 5% additional-property surcharge because your previous main home hadn't sold yet, and you sell it within 36 months of the new purchase, HMRC refunds the surcharge — but you have to apply within 12 months of that sale.
+              </div>
+
+              <h2>Common Mistakes</h2>
+              <p>Buyers frequently calculate SDLT as a single flat rate on the full price, overstating or understating their actual liability — the banded structure means the "rate" you see quoted is really the top marginal band, not your effective rate on the whole purchase.</p>
+              <p>Buyers also miss the first-time buyer relief cliff edge entirely — pricing a purchase at £510,000 instead of staying under £500,000 costs a first-time buyer thousands more in SDLT alone, on top of the higher purchase price itself.</p>
+              <p>A third mistake: forgetting the 14-day filing deadline after completion. Your solicitor typically handles this, but late filing carries automatic penalties, so confirming it's been submitted is worth a direct check.</p>
+
+              <h2>Where This Calculator Has Limits</h2>
+              <p>It covers standard England/Northern Ireland SDLT — Scotland (Land and Buildings Transaction Tax) and Wales (Land Transaction Tax) use entirely different bands and thresholds, not simple variations of the SDLT structure. It also doesn't calculate the 17% flat rate that applies to companies purchasing residential property above £500,000, or reliefs for mixed-use and multiple-dwelling transactions.</p>
+
+              <h2>Frequently Asked Questions</h2>
+              <h3>Is Stamp Duty the same across the whole UK?</h3>
+              <p>No — SDLT applies only in England and Northern Ireland. Scotland and Wales have their own separate taxes with different rates and thresholds.</p>
+
+              <h3>Does first-time buyer relief apply if I'm buying with someone who's owned before?</h3>
+              <p>No — every buyer named on the purchase must be a first-time buyer for the relief to apply at all.</p>
+
+              <h3>When exactly is SDLT due?</h3>
+              <p>Within 14 days of completion — your solicitor typically files and pays it on your behalf as part of conveyancing.</p>
+
+              <h3>Can I get a refund if I sell my old home after buying the new one?</h3>
+              <p>Yes, if you paid the additional-property surcharge and sell your previous main residence within 36 months, you can apply for a refund within 12 months of that sale.</p>
+
+              <h3>Does SDLT apply to leasehold as well as freehold?</h3>
+              <p>Yes — both freehold and leasehold purchases above the threshold are subject to SDLT, with a slightly different calculation for the rental element of long leases.</p>
+
+              <h2>Related Tools</h2>
+              <p>
+                <a href="/uk-mortgage-calculator.html">Mortgage Calculator</a> &middot;
+                <a href="/blog/uk-ltv-calculator.html">LTV Calculator</a> &middot;
+                <a href="/blog/uk-affordability-calculator.html">Affordability Calculator</a>
+              </p>
+
+              <p class="disclaimer-text">
+                <em>Educational content, not financial or tax advice. SDLT rates, thresholds, and surcharges are set by HMRC and can change with each Budget — confirm current figures at gov.uk or with a licensed conveyancer before completion. Written by the MortgagePro Global team; rates referenced against thresholds in force since 1 April 2025.</em>
+              </p>
+            </div>
+          </article>
+
+        </div><!-- .main-content -->
+
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Advertisement sidebar">
+          <div class="ad-unit ad-sidebar" aria-label="Advertisement" role="complementary"></div>
+        </aside>
+
+      </div><!-- .page-layout -->
+    </div><!-- .container -->
+  </main>
+
+  <div data-component="footer"></div>
+</body>
+
+</html>

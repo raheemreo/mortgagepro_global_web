@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DEVWXRXJP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1DEVWXRXJP');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Amortization Calculator: Repayment vs Interest-Only | MortgagePro Global</title>
+  <meta name="description"
+    content="See how a repayment mortgage's amortization schedule compares to an interest-only structure, and what UK lenders now require before allowing the interest-only route.">
+  <link rel="canonical" href="https://mortgageproglobal.com/blog/uk-amortization-calculator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Amortization Calculator: Repayment vs Interest-Only | MortgagePro Global">
+  <meta property="og:description"
+    content="See how a repayment mortgage's amortization schedule compares to an interest-only structure, and what UK lenders now require before allowing the interest-only route.">
+  <meta property="og:url" content="https://mortgageproglobal.com/blog/uk-amortization-calculator.html">
+  <meta property="og:image" content="https://mortgageproglobal.com/images/og-uk.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Amortization Calculator: Repayment vs Interest-Only in the UK">
+  <meta name="twitter:description"
+    content="Compare repayment amortization with interest-only balances and learn exit vehicle rules.">
+  <meta name="twitter:image" content="https://mortgageproglobal.com/images/og-uk.jpg">
+
+  <!-- Verification -->
+  <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
+  <meta name="msvalidate.01" content="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  <meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
+
+  <!-- Critical CSS -->
+  <style>
+    :root {
+      --page-primary: #0D0D2B;
+      --page-accent: #C8102E;
+      --page-bg: #F5F5F8;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: var(--page-bg);
+      color: var(--page-primary);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .skip-link:focus {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99999;
+      background: #0D0D2B;
+      color: #fff;
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    [data-component] {
+      min-height: 60px;
+    }
+
+    /* Article Styles */
+    .article-container {
+      background: #fff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      margin-bottom: 32px;
+    }
+
+    .article-meta {
+      font-size: 0.85rem;
+      color: #6B7280;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .article-content h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #F1F5F9;
+      padding-bottom: 8px;
+    }
+
+    .article-content h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.25rem;
+      color: #374151;
+      line-height: 1.75;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .article-content li {
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+
+    /* Table override to match UK theme */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    thead {
+      background: var(--page-primary);
+      color: #fff;
+    }
+
+    th,
+    td {
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background-color: #FFF2F2;
+    }
+
+    .example-box {
+      background: #FFF2F2;
+      border-left: 4px solid var(--page-accent);
+      padding: 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+    }
+
+    .disclaimer-text {
+      font-size: 0.85rem;
+      color: #6B7280;
+      border-top: 1px solid #E5E7EB;
+      padding-top: 16px;
+      margin-top: 32px;
+    }
+
+    /* Dark Mode Overrides */
+    @media (prefers-color-scheme: dark) {
+      .article-container {
+        background: var(--bg-card, #1E293B);
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-content p,
+      .article-content li {
+        color: #D1D5DB;
+      }
+
+      .article-content h2 {
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-meta {
+        color: #9CA3AF;
+      }
+
+      .example-box {
+        background: #2D0C11;
+        border-left-color: #C8102E;
+      }
+
+      tr:nth-child(even) {
+        background-color: #2D1418;
+      }
+
+      table {
+        background-color: #1F0D10;
+      }
+    }
+  </style>
+
+  <!-- Structured Data: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Amortization Calculator: Repayment vs. Interest-Only, and Why the Choice Still Exists in the UK",
+    "description": "See how a repayment mortgage's amortization schedule compares to an interest-only structure, and what UK lenders now require before allowing the interest-only route.",
+    "image": "https://mortgageproglobal.com/images/og-uk.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "REO Technologies Editorial Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "REO Technologies",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mortgageproglobal.com/images/logo.svg"
+      }
+    },
+    "datePublished": "2026-06-29",
+    "dateModified": "2026-06-29",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mortgageproglobal.com/blog/uk-amortization-calculator.html"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mortgageproglobal.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mortgageproglobal.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "UK Amortization Guide", "item": "https://mortgageproglobal.com/blog/uk-amortization-calculator.html" }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/accessibility.css">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/rates.js" defer></script>
+  <script src="/js/accessibility.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-component="header"></div>
+
+  <!-- Hero -->
+  <section class="page-hero" aria-label="Page introduction">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li>UK Amortization Guide</li>
+        </ol>
+      </nav>
+      <h1>Amortization Calculator: Repayment vs. Interest-Only, and Why the Choice Still Exists in the UK</h1>
+      <p class="subtitle">Understand the math behind principal reduction and the exit vehicle standards for interest-only mortgages.</p>
+    </div>
+  </section>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="page-layout">
+        <div class="main-content">
+
+          <article class="article-container">
+            <header>
+              <div class="article-meta">
+                <span><strong>Author:</strong> REO Technologies Editorial Team</span>
+                <span>•</span>
+                <span><strong>Published:</strong> June 29, 2026</span>
+                <span>•</span>
+                <span><strong>Category:</strong> Mortgage Basics</span>
+              </div>
+            </header>
+
+            <div class="article-content">
+              <p>Most countries have quietly standardized on repayment mortgages, where every payment chips away at both interest and principal. The UK is one of the few markets where interest-only is still a genuine, live choice for some borrowers — not just a legacy product from decades past — provided you can satisfy the lender's repayment vehicle requirements.</p>
+
+              <h2>The Two Structures, Side by Side</h2>
+              <p><strong>Repayment mortgage:</strong> each monthly payment covers interest plus a portion of principal, following the same amortization curve used elsewhere — heavily interest-weighted early on, shifting toward principal over time. By the end of the term, the balance is fully cleared.</p>
+              <p><strong>Interest-only mortgage:</strong> each monthly payment covers interest alone. The original loan balance never reduces through the payment itself — at the end of the term, the full amount is still owed, and needs to be repaid through some separate means: savings, investments, or sale of the property.</p>
+
+              <h2>Worked Example</h2>
+              <p>On the £262,500 loan from our Mortgage Calculator example, at 4.48% over 25 years:</p>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Structure</th>
+                    <th>Monthly Payment</th>
+                    <th>Balance at Year 25</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Repayment</strong></td>
+                    <td>&asymp; £1,456</td>
+                    <td>£0</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Interest-only</strong></td>
+                    <td>&asymp; £980</td>
+                    <td><strong>£262,500 (unchanged)</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>The interest-only payment is noticeably lower month to month — but the entire original balance is still due at the end, which is exactly why lenders now require documented proof of a credible repayment strategy before approving it.</p>
+
+              <div class="example-box">
+                <strong>Why lenders tightened this up:</strong> after widespread concern about borrowers reaching the end of interest-only terms without a way to actually clear the balance, most UK lenders now require evidence of a specific, credible repayment vehicle — an investment portfolio, pension lump sum, or planned property sale — rather than simply hoping for future property appreciation to cover it.
+              </div>
+
+              <h2>Common Mistakes</h2>
+              <p>Borrowers sometimes choose interest-only purely for the lower monthly payment without a concrete repayment plan, which is precisely the pattern lenders now screen against — an application without a credible, evidenced repayment vehicle is likely to be declined outright, not just questioned.</p>
+              <p>Borrowers also confuse "interest-only" with "buy-to-let default" — while interest-only is more common on BTL mortgages (where rental income services the interest and the property itself is often the exit strategy), it's not exclusive to buy-to-let, and residential interest-only still exists for qualifying borrowers.</p>
+              <p>A third mistake: underestimating how much total interest an interest-only mortgage costs over a long holding period, since the balance never shrinks — every year's interest is calculated on the full original amount, unlike a repayment mortgage where the interest charge shrinks as the balance does.</p>
+
+              <h2>Where This Calculator Has Limits</h2>
+              <p>It shows the two structures at their simplest — many borrowers actually use part-and-part mortgages, splitting a portion on repayment and a portion on interest-only, which this comparison doesn't model directly. It also can't verify whether a specific repayment vehicle would satisfy a given lender's requirements — that's a case-by-case underwriting decision.</p>
+
+              <h2>Frequently Asked Questions</h2>
+              <h3>Can I still get an interest-only mortgage in the UK?</h3>
+              <p>Yes, for qualifying borrowers who can evidence a credible repayment strategy — it's more restricted than it was pre-financial crisis, but it hasn't disappeared.</p>
+
+              <h3>Is interest-only cheaper overall?</h3>
+              <p>Monthly payments are lower, but total interest paid over the loan's life is typically higher, since the balance being charged interest never reduces.</p>
+
+              <h3>What counts as a credible repayment vehicle?</h3>
+              <p>Commonly an investment portfolio, pension lump sum, ISA, or a planned property sale — each lender sets its own acceptable list and evidence requirements.</p>
+
+              <h3>Does switching from interest-only to repayment mid-term reset my amortization?</h3>
+              <p>It restructures your remaining payments to start clearing principal from that point forward — your lender can model the new schedule based on the remaining balance and term.</p>
+
+              <h3>Is interest-only more common on buy-to-let than residential mortgages?</h3>
+              <p>Yes, considerably — many BTL mortgages are structured as interest-only by default, since rental income is intended to cover the interest while the property itself (or its sale) is the repayment plan.</p>
+
+              <h2>Related Tools</h2>
+              <p>
+                <a href="/uk-mortgage-calculator.html">Mortgage Calculator</a> &middot;
+                <a href="/blog/uk-buy-to-let-calculator.html">Buy-to-Let Calculator</a> &middot;
+                <a href="/blog/uk-remortgage-tool.html">Remortgage Tool</a>
+              </p>
+
+              <p class="disclaimer-text">
+                <em>Educational content, not financial advice. Interest-only eligibility and repayment vehicle requirements vary significantly by lender — confirm your specific options with a licensed UK mortgage adviser. Written by the MortgagePro Global team.</em>
+              </p>
+            </div>
+          </article>
+
+        </div><!-- .main-content -->
+
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Advertisement sidebar">
+          <div class="ad-unit ad-sidebar" aria-label="Advertisement" role="complementary"></div>
+        </aside>
+
+      </div><!-- .page-layout -->
+    </div><!-- .container -->
+  </main>
+
+  <div data-component="footer"></div>
+</body>
+
+</html>

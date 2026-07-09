@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DEVWXRXJP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1DEVWXRXJP');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>LTV Calculator: The Number That Sets Your Mortgage Rate Tier | MortgagePro Global</title>
+  <meta name="description"
+    content="See how loan-to-value bands directly move UK mortgage pricing, and why crossing from 76% to 75% LTV can unlock a noticeably better rate.">
+  <link rel="canonical" href="https://mortgageproglobal.com/blog/uk-ltv-calculator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="LTV Calculator: The Number That Sets Your Mortgage Rate Tier | MortgagePro Global">
+  <meta property="og:description"
+    content="See how loan-to-value bands directly move UK mortgage pricing, and why crossing from 76% to 75% LTV can unlock a noticeably better rate.">
+  <meta property="og:url" content="https://mortgageproglobal.com/blog/uk-ltv-calculator.html">
+  <meta property="og:image" content="https://mortgageproglobal.com/images/og-uk.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LTV Calculator: UK Loan-to-Value Rate Tiers">
+  <meta name="twitter:description"
+    content="Learn how mortgage interest rates scale with LTV bands, Sweet-spot bands (75%, 60%), and valuation shifts.">
+  <meta name="twitter:image" content="https://mortgageproglobal.com/images/og-uk.jpg">
+
+  <!-- Verification -->
+  <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
+  <meta name="msvalidate.01" content="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  <meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
+
+  <!-- Critical CSS -->
+  <style>
+    :root {
+      --page-primary: #0D0D2B;
+      --page-accent: #C8102E;
+      --page-bg: #F5F5F8;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: var(--page-bg);
+      color: var(--page-primary);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .skip-link:focus {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99999;
+      background: #0D0D2B;
+      color: #fff;
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    [data-component] {
+      min-height: 60px;
+    }
+
+    /* Article Styles */
+    .article-container {
+      background: #fff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      margin-bottom: 32px;
+    }
+
+    .article-meta {
+      font-size: 0.85rem;
+      color: #6B7280;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .article-content h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #F1F5F9;
+      padding-bottom: 8px;
+    }
+
+    .article-content h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.25rem;
+      color: #374151;
+      line-height: 1.75;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .article-content li {
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+
+    /* Table override to match UK theme */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    thead {
+      background: var(--page-primary);
+      color: #fff;
+    }
+
+    th,
+    td {
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background-color: #FFF2F2;
+    }
+
+    .example-box {
+      background: #FFF2F2;
+      border-left: 4px solid var(--page-accent);
+      padding: 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+    }
+
+    .disclaimer-text {
+      font-size: 0.85rem;
+      color: #6B7280;
+      border-top: 1px solid #E5E7EB;
+      padding-top: 16px;
+      margin-top: 32px;
+    }
+
+    /* Dark Mode Overrides */
+    @media (prefers-color-scheme: dark) {
+      .article-container {
+        background: var(--bg-card, #1E293B);
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-content p,
+      .article-content li {
+        color: #D1D5DB;
+      }
+
+      .article-content h2 {
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-meta {
+        color: #9CA3AF;
+      }
+
+      .example-box {
+        background: #2D0C11;
+        border-left-color: #C8102E;
+      }
+
+      tr:nth-child(even) {
+        background-color: #2D1418;
+      }
+
+      table {
+        background-color: #1F0D10;
+      }
+    }
+  </style>
+
+  <!-- Structured Data: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "LTV Calculator: The Number That Sets Your Mortgage Rate Tier, Not Just Your Deposit",
+    "description": "See how loan-to-value bands directly move UK mortgage pricing, and why crossing from 76% to 75% LTV can unlock a noticeably better rate.",
+    "image": "https://mortgageproglobal.com/images/og-uk.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "REO Technologies Editorial Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "REO Technologies",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mortgageproglobal.com/images/logo.svg"
+      }
+    },
+    "datePublished": "2026-06-29",
+    "dateModified": "2026-06-29",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mortgageproglobal.com/blog/uk-ltv-calculator.html"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mortgageproglobal.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mortgageproglobal.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "LTV Guide", "item": "https://mortgageproglobal.com/blog/uk-ltv-calculator.html" }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/accessibility.css">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/rates.js" defer></script>
+  <script src="/js/accessibility.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-component="header"></div>
+
+  <!-- Hero -->
+  <section class="page-hero" aria-label="Page introduction">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li>LTV Guide</li>
+        </ol>
+      </nav>
+      <h1>LTV Calculator: The Number That Sets Your Mortgage Rate Tier, Not Just Your Deposit</h1>
+      <p class="subtitle">Understand loan-to-value pricing thresholds and lock in a lower interest tier.</p>
+    </div>
+  </section>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="page-layout">
+        <div class="main-content">
+
+          <article class="article-container">
+            <header>
+              <div class="article-meta">
+                <span><strong>Author:</strong> REO Technologies Editorial Team</span>
+                <span>•</span>
+                <span><strong>Published:</strong> June 29, 2026</span>
+                <span>•</span>
+                <span><strong>Category:</strong> Mortgage Basics</span>
+              </div>
+            </header>
+
+            <div class="article-content">
+              <p>Ask most buyers what their deposit percentage is, and they'll answer easily. Ask what their loan-to-value (LTV) is, and fewer will — even though LTV, not deposit size on its own, is the number that actually sets which rate tier a UK lender offers.</p>
+
+              <h2>LTV is the Mirror Image of Your Deposit</h2>
+              <p>LTV = mortgage amount &divide; property value, expressed as a percentage. A 25% deposit means a 75% LTV. It sounds like the same information stated differently, but lenders publish entire rate sheets organized by LTV band — 95%, 90%, 85%, 80%, 75%, 60% — not by deposit percentage, and pricing often steps down noticeably at each threshold rather than moving smoothly.</p>
+
+              <h2>Why the Bands Matter</h2>
+              <p>Each LTV band represents a different risk tier to the lender. A 95% LTV mortgage (5% deposit) leaves very little equity cushion if property values dip, so lenders price that risk in with a higher rate. Crossing into a lower band — say, from 80% to 75% LTV — often unlocks a meaningfully better rate, sometimes enough to justify finding a few thousand extra pounds of deposit specifically to clear the threshold.</p>
+
+              <h2>Worked Example</h2>
+              <p>A £350,000 property at three different deposit levels:</p>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Deposit</th>
+                    <th>LTV</th>
+                    <th>Mortgage Amount</th>
+                    <th>Typical Rate Tier</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>5% (£17,500)</td>
+                    <td>95%</td>
+                    <td>£332,500</td>
+                    <td>Highest tier &mdash; smallest cushion for the lender</td>
+                  </tr>
+                  <tr>
+                    <td>15% (£52,500)</td>
+                    <td>85%</td>
+                    <td>£297,500</td>
+                    <td>Meaningfully better than 90-95% tier</td>
+                  </tr>
+                  <tr>
+                    <td>25% (£87,500)</td>
+                    <td>75%</td>
+                    <td>£262,500</td>
+                    <td><strong>Sweet-spot band threshold</strong></td>
+                  </tr>
+                  <tr>
+                    <td>40% (£140,000)</td>
+                    <td>60%</td>
+                    <td>£210,000</td>
+                    <td><strong>Best available tier at most lenders</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>The exact rate gap between tiers moves with the market, but the pattern — meaningfully better pricing as LTV drops, especially at 90%, 80%, 75%, and 60% — holds consistently across lenders.</p>
+
+              <div class="example-box">
+                <strong>Quick check:</strong> If you're sitting at 76% LTV and can find even a small amount of extra deposit to drop to 75%, it's worth checking whether that crosses into a better published rate band — the savings can outweigh the effort of finding the extra funds, depending on the specific lender's rate sheet.
+              </div>
+
+              <h2>Common Mistakes</h2>
+              <p>Buyers frequently focus on the deposit amount in isolation without checking which LTV band it lands them in — two buyers with £50,000 deposits on different-priced homes can land in completely different LTV tiers with very different rate offers.</p>
+              <p>Buyers also forget that LTV is recalculated at remortgage based on the <em>current</em> property valuation, not the original purchase price — rising property values can push an existing borrower into a better LTV band naturally, without any extra payment at all, which is worth checking before assuming your rate options haven't changed.</p>
+              <p>A third mistake: not accounting for the mortgage default insurance-adjacent products some 90%+ LTV lenders build into pricing (distinct from the mortgage guarantee scheme mechanics that support them) — the headline rate on very high-LTV products sometimes includes costs that aren't obvious from the rate alone.</p>
+
+              <h2>Where This Calculator Has Limits</h2>
+              <p>It shows the general pattern of LTV bands, but exact rate differences between tiers vary by lender, product type, and current market conditions — it can't quote you a specific rate without checking live lender rate sheets. It also doesn't account for how a valuation coming in lower than the purchase price can shift your actual LTV at completion, even if your deposit percentage against the <em>agreed price</em> looked fine on paper.</p>
+
+              <h2>Frequently Asked Questions</h2>
+              <h3>Is a lower LTV always better?</h3>
+              <p>For rate pricing, generally yes — but it means committing more cash upfront, which has its own opportunity cost worth weighing.</p>
+
+              <h3>Does LTV change over the life of my mortgage?</h3>
+              <p>Yes — as you pay down the balance and/or the property value changes, your LTV shifts, which can open up better remortgage options over time.</p>
+
+              <h3>What's considered a "good" LTV in the UK market?</h3>
+              <p>75% or below is widely treated as a meaningful pricing threshold, with 60% typically unlocking the very best available rates.</p>
+
+              <h3>Can a low valuation at completion change my LTV unexpectedly?</h3>
+              <p>Yes — if the property is valued below the agreed purchase price, your LTV against that lower valuation is higher than you planned, potentially moving you into a worse rate tier or requiring a larger deposit to compensate.</p>
+
+              <h3>Does LTV affect buy-to-let mortgages the same way?</h3>
+              <p>The concept is the same, but BTL affordability is driven primarily by rental coverage (see our Buy-to-Let Calculator), with LTV as a secondary factor rather than the primary qualifying test.</p>
+
+              <h2>Related Tools</h2>
+              <p>
+                <a href="/uk-mortgage-calculator.html">Mortgage Calculator</a> &middot;
+                <a href="/blog/uk-remortgage-tool.html">Remortgage Tool</a> &middot;
+                <a href="/blog/uk-buy-to-let-calculator.html">Buy-to-Let Calculator</a>
+              </p>
+
+              <p class="disclaimer-text">
+                <em>Educational content, not financial advice. LTV rate tiers vary by lender and change with market conditions — confirm current rate bands with a licensed UK mortgage adviser. Written by the MortgagePro Global team.</em>
+              </p>
+            </div>
+          </article>
+
+        </div><!-- .main-content -->
+
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Advertisement sidebar">
+          <div class="ad-unit ad-sidebar" aria-label="Advertisement" role="complementary"></div>
+        </aside>
+
+      </div><!-- .page-layout -->
+    </div><!-- .container -->
+  </main>
+
+  <div data-component="footer"></div>
+</body>
+
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DEVWXRXJP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1DEVWXRXJP');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Buy-to-Let Calculator: The Rent Test That Matters More Than Salary | MortgagePro Global</title>
+  <meta name="description"
+    content="See how the Interest Coverage Ratio (ICR) — not personal income — sets how much you can borrow on a UK buy-to-let mortgage, and why ownership structure changes the required rent.">
+  <link rel="canonical" href="https://mortgageproglobal.com/blog/uk-buy-to-let-calculator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Buy-to-Let Calculator: The Rent Test That Matters More Than Salary | MortgagePro Global">
+  <meta property="og:description"
+    content="See how the Interest Coverage Ratio (ICR) — not personal income — sets how much you can borrow on a UK buy-to-let mortgage, and why ownership structure changes the required rent.">
+  <meta property="og:url" content="https://mortgageproglobal.com/blog/uk-buy-to-let-calculator.html">
+  <meta property="og:image" content="https://mortgageproglobal.com/images/og-uk.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Buy-to-Let Calculator: UK Interest Coverage Ratios">
+  <meta name="twitter:description"
+    content="Learn how ICR, Ltd company SPVs vs personal ownership, and stress rates set buy-to-let mortgage caps.">
+  <meta name="twitter:image" content="https://mortgageproglobal.com/images/og-uk.jpg">
+
+  <!-- Verification -->
+  <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
+  <meta name="msvalidate.01" content="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  <meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
+
+  <!-- Critical CSS -->
+  <style>
+    :root {
+      --page-primary: #0D0D2B;
+      --page-accent: #C8102E;
+      --page-bg: #F5F5F8;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: var(--page-bg);
+      color: var(--page-primary);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .skip-link:focus {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99999;
+      background: #0D0D2B;
+      color: #fff;
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    [data-component] {
+      min-height: 60px;
+    }
+
+    /* Article Styles */
+    .article-container {
+      background: #fff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      margin-bottom: 32px;
+    }
+
+    .article-meta {
+      font-size: 0.85rem;
+      color: #6B7280;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .article-content h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #F1F5F9;
+      padding-bottom: 8px;
+    }
+
+    .article-content h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.25rem;
+      color: #374151;
+      line-height: 1.75;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .article-content li {
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+
+    /* Table override to match UK theme */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    thead {
+      background: var(--page-primary);
+      color: #fff;
+    }
+
+    th,
+    td {
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background-color: #FFF2F2;
+    }
+
+    .example-box {
+      background: #FFF2F2;
+      border-left: 4px solid var(--page-accent);
+      padding: 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+    }
+
+    .disclaimer-text {
+      font-size: 0.85rem;
+      color: #6B7280;
+      border-top: 1px solid #E5E7EB;
+      padding-top: 16px;
+      margin-top: 32px;
+    }
+
+    /* Dark Mode Overrides */
+    @media (prefers-color-scheme: dark) {
+      .article-container {
+        background: var(--bg-card, #1E293B);
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-content p,
+      .article-content li {
+        color: #D1D5DB;
+      }
+
+      .article-content h2 {
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-meta {
+        color: #9CA3AF;
+      }
+
+      .example-box {
+        background: #2D0C11;
+        border-left-color: #C8102E;
+      }
+
+      tr:nth-child(even) {
+        background-color: #2D1418;
+      }
+
+      table {
+        background-color: #1F0D10;
+      }
+    }
+  </style>
+
+  <!-- Structured Data: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Buy-to-Let Calculator: The Rent Test That Matters More Than Your Salary",
+    "description": "See how the Interest Coverage Ratio (ICR) — not personal income — sets how much you can borrow on a UK buy-to-let mortgage, and why ownership structure changes the required rent.",
+    "image": "https://mortgageproglobal.com/images/og-uk.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "REO Technologies Editorial Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "REO Technologies",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mortgageproglobal.com/images/logo.svg"
+      }
+    },
+    "datePublished": "2026-06-29",
+    "dateModified": "2026-06-29",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mortgageproglobal.com/blog/uk-buy-to-let-calculator.html"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mortgageproglobal.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mortgageproglobal.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "UK Buy-to-Let Guide", "item": "https://mortgageproglobal.com/blog/uk-buy-to-let-calculator.html" }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/accessibility.css">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/rates.js" defer></script>
+  <script src="/js/accessibility.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-component="header"></div>
+
+  <!-- Hero -->
+  <section class="page-hero" aria-label="Page introduction">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li>UK Buy-to-Let Guide</li>
+        </ol>
+      </nav>
+      <h1>Buy-to-Let Calculator: The Rent Test That Matters More Than Your Salary</h1>
+      <p class="subtitle">Understand Interest Coverage Ratios (ICR) and SPV limited company borrowing advantages.</p>
+    </div>
+  </section>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="page-layout">
+        <div class="main-content">
+
+          <article class="article-container">
+            <header>
+              <div class="article-meta">
+                <span><strong>Author:</strong> REO Technologies Editorial Team</span>
+                <span>•</span>
+                <span><strong>Published:</strong> June 29, 2026</span>
+                <span>•</span>
+                <span><strong>Category:</strong> Mortgage Basics</span>
+              </div>
+            </header>
+
+            <div class="article-content">
+              <p>A buy-to-let mortgage application in the UK barely looks at your personal salary at all. What actually decides how much you can borrow is whether the property's own rental income clears a stress-tested coverage threshold — and that threshold changes depending on whether you own the property personally or through a limited company.</p>
+
+              <h2>How the Interest Coverage Ratio Works</h2>
+              <p>The Interest Coverage Ratio (ICR) tests whether rental income covers the mortgage interest by a set margin, calculated at a stressed interest rate — not the actual rate you'll pay. The two common thresholds:</p>
+              <ul>
+                <li><strong>145% ICR</strong>, typically applied to higher-rate personal landlords</li>
+                <li><strong>125% ICR</strong>, typically applied to limited company (SPV) ownership or basic-rate taxpayers</li>
+              </ul>
+              <p>Both are calculated against a stress rate, commonly around 5.5%, regardless of the actual product rate on offer — similar in spirit to the residential mortgage stress test, but built entirely around the property's rent rather than the borrower's income.</p>
+
+              <h2>Worked Example</h2>
+              <p>A £300,000 buy-to-let mortgage, stress rate 5.5%:</p>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Factor</th>
+                    <th>145% ICR (Personal, Higher-Rate)</th>
+                    <th>125% ICR (Ltd Company / Basic-Rate)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Stressed annual interest</td>
+                    <td>£300,000 &times; 5.5% = £16,500</td>
+                    <td>£16,500</td>
+                  </tr>
+                  <tr>
+                    <td>Required annual rent</td>
+                    <td>£16,500 &times; 1.45 = £23,925</td>
+                    <td>£16,500 &times; 1.25 = £20,625</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Required Monthly Rent</strong></td>
+                    <td><strong>&asymp; £1,994</strong></td>
+                    <td><strong>&asymp; £1,719</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>If the property actually rents for £1,800/month, it clears the 125% test comfortably but fails the 145% test outright — the same property, same loan, same borrower, producing two completely different outcomes purely based on ownership structure.</p>
+
+              <div class="example-box">
+                <strong>Why so many landlords use limited companies:</strong> the gap between 145% and 125% ICR is exactly why. It's not just a tax consideration — it's a direct borrowing-capacity difference on the same rental income, which is why company (SPV) structures have become common even among smaller landlords, not just large portfolios.
+              </div>
+
+              <h2>Common Mistakes</h2>
+              <p>Landlords frequently assume their personal income and credit profile drive BTL affordability the way it does for a residential mortgage — it's a secondary factor at most; the property's rent against the ICR test is what actually sets the loan size.</p>
+              <p>Landlords also compare products purely on rate without checking the stress rate and ICR threshold behind each one — a slightly higher headline rate paired with a lower stress rate or ICR requirement can actually unlock more borrowing than a cheaper-looking product with a stricter test.</p>
+              <p>A third mistake: not accounting for how a shorter fixed-rate deal is often stressed at a higher rate than a longer one, which directly reduces borrowing capacity — a 5-year fix stressed at a lower rate than a 2-year fix, on identical rental income, can support a meaningfully larger loan.</p>
+
+              <h2>Where This Calculator Has Limits</h2>
+              <p>It uses common ICR benchmarks, but individual lenders set their own specific thresholds and stress rates, which shift with the market — some also offer "top-slicing," using surplus personal income to bridge a rental shortfall, which this simple calculation doesn't model. It also doesn't account for portfolio landlords, where multiple properties' rental coverage may be assessed together rather than loan by loan.</p>
+
+              <h2>Frequently Asked Questions</h2>
+              <h3>Does my salary matter at all for a BTL mortgage?</h3>
+              <p>It can factor in as a secondary consideration, particularly for first-time landlords or through top-slicing arrangements, but the rental ICR test is the primary qualifying mechanism.</p>
+
+              <h3>Why is the stress rate higher than the actual mortgage rate?</h3>
+              <p>It builds in a safety margin in case rates rise during the term, similar in purpose to the residential mortgage stress test, ensuring the rent could still cover a higher future rate.</p>
+
+              <h3>Is a limited company structure always better for borrowing power?</h3>
+              <p>It often allows a lower ICR threshold, which increases borrowing capacity on the same rent — but it comes with its own tax and administrative considerations worth weighing separately, not purely a borrowing decision.</p>
+
+              <h3>Does a longer fixed-rate term always mean a lower stress rate?</h3>
+              <p>Commonly, yes — five-year fixes are often stressed at a lower rate than two-year fixes, which can materially increase how much a lender will offer on identical rental income.</p>
+
+              <h3>What happens if my rental income doesn't meet the ICR test?</h3>
+              <p>The loan amount gets capped to whatever the rent can support at the required ratio, regardless of your personal financial strength — some lenders offer top-slicing to bridge a modest gap using other income.</p>
+
+              <h2>Related Tools</h2>
+              <p>
+                <a href="/blog/uk-ltv-calculator.html">LTV Calculator</a> &middot;
+                <a href="/blog/uk-amortization-calculator.html">Amortization Calculator</a> &middot;
+                <a href="/uk-mortgage-calculator.html">Mortgage Calculator</a>
+              </p>
+
+              <p class="disclaimer-text">
+                <em>Educational content, not financial or tax advice. ICR thresholds, stress rates, and BTL lending criteria vary by lender and change with the market — confirm current requirements with a licensed UK mortgage adviser or specialist BTL broker. Written by the MortgagePro Global team.</em>
+              </p>
+            </div>
+          </article>
+
+        </div><!-- .main-content -->
+
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Advertisement sidebar">
+          <div class="ad-unit ad-sidebar" aria-label="Advertisement" role="complementary"></div>
+        </aside>
+
+      </div><!-- .page-layout -->
+    </div><!-- .container -->
+  </main>
+
+  <div data-component="footer"></div>
+</body>
+
+</html>

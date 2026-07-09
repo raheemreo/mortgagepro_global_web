@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DEVWXRXJP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1DEVWXRXJP');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>UK Mortgage Calculator: Why Your Rate Has an Expiry Date | MortgagePro Global</title>
+  <meta name="description"
+    content="See how a UK mortgage payment is calculated on a 5-year fixed rate, and why — unlike a US 30-year fixed — that rate doesn't last the life of the loan.">
+  <link rel="canonical" href="https://mortgageproglobal.com/blog/uk-mortgage-calculator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="UK Mortgage Calculator: Why Your Rate Has an Expiry Date | MortgagePro Global">
+  <meta property="og:description"
+    content="See how a UK mortgage payment is calculated on a 5-year fixed rate, and why — unlike a US 30-year fixed — that rate doesn't last the life of the loan.">
+  <meta property="og:url" content="https://mortgageproglobal.com/blog/uk-mortgage-calculator.html">
+  <meta property="og:image" content="https://mortgageproglobal.com/images/og-uk.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="UK Mortgage Calculator: Fixed Rates & SVR Expiries">
+  <meta name="twitter:description"
+    content="Learn about UK 2-5 year fixed deals, payment repricing shock, and standard variable rates.">
+  <meta name="twitter:image" content="https://mortgageproglobal.com/images/og-uk.jpg">
+
+  <!-- Verification -->
+  <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
+  <meta name="msvalidate.01" content="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  <meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
+
+  <!-- Critical CSS -->
+  <style>
+    :root {
+      --page-primary: #0D0D2B;
+      --page-accent: #C8102E;
+      --page-bg: #F5F5F8;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: var(--page-bg);
+      color: var(--page-primary);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .skip-link:focus {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99999;
+      background: #0D0D2B;
+      color: #fff;
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    [data-component] {
+      min-height: 60px;
+    }
+
+    /* Article Styles */
+    .article-container {
+      background: #fff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      margin-bottom: 32px;
+    }
+
+    .article-meta {
+      font-size: 0.85rem;
+      color: #6B7280;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .article-content h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #F1F5F9;
+      padding-bottom: 8px;
+    }
+
+    .article-content h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.25rem;
+      color: #374151;
+      line-height: 1.75;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .article-content li {
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+
+    /* Table override to match UK theme */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    thead {
+      background: var(--page-primary);
+      color: #fff;
+    }
+
+    th,
+    td {
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background-color: #FFF2F2;
+    }
+
+    .example-box {
+      background: #FFF2F2;
+      border-left: 4px solid var(--page-accent);
+      padding: 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+    }
+
+    .disclaimer-text {
+      font-size: 0.85rem;
+      color: #6B7280;
+      border-top: 1px solid #E5E7EB;
+      padding-top: 16px;
+      margin-top: 32px;
+    }
+
+    /* Dark Mode Overrides */
+    @media (prefers-color-scheme: dark) {
+      .article-container {
+        background: var(--bg-card, #1E293B);
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-content p,
+      .article-content li {
+        color: #D1D5DB;
+      }
+
+      .article-content h2 {
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-meta {
+        color: #9CA3AF;
+      }
+
+      .example-box {
+        background: #2D0C11;
+        border-left-color: #C8102E;
+      }
+
+      tr:nth-child(even) {
+        background-color: #2D1418;
+      }
+
+      table {
+        background-color: #1F0D10;
+      }
+    }
+  </style>
+
+  <!-- Structured Data: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "UK Mortgage Calculator: Why Your Rate Has an Expiry Date",
+    "description": "See how a UK mortgage payment is calculated on a 5-year fixed rate, and why — unlike a US 30-year fixed — that rate doesn't last the life of the loan.",
+    "image": "https://mortgageproglobal.com/images/og-uk.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "REO Technologies Editorial Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "REO Technologies",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mortgageproglobal.com/images/logo.svg"
+      }
+    },
+    "datePublished": "2026-06-29",
+    "dateModified": "2026-06-29",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mortgageproglobal.com/blog/uk-mortgage-calculator.html"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mortgageproglobal.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mortgageproglobal.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "UK Mortgage Guide", "item": "https://mortgageproglobal.com/blog/uk-mortgage-calculator.html" }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/accessibility.css">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/rates.js" defer></script>
+  <script src="/js/accessibility.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-component="header"></div>
+
+  <!-- Hero -->
+  <section class="page-hero" aria-label="Page introduction">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li>UK Mortgage Guide</li>
+        </ol>
+      </nav>
+      <h1>UK Mortgage Calculator: Why Your Rate Has an Expiry Date</h1>
+      <p class="subtitle">Understand short-term fixed locks and how to prepare for the end of a deal.</p>
+    </div>
+  </section>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="page-layout">
+        <div class="main-content">
+
+          <article class="article-container">
+            <header>
+              <div class="article-meta">
+                <span><strong>Author:</strong> REO Technologies Editorial Team</span>
+                <span>•</span>
+                <span><strong>Published:</strong> June 29, 2026</span>
+                <span>•</span>
+                <span><strong>Category:</strong> Mortgage Basics</span>
+              </div>
+            </header>
+
+            <div class="article-content">
+              <p>Take a £350,000 home, 25% down (£87,500), and a 5-year fixed rate of 4.48% — a rate MortgagePro Global draws from Bank of England context — on a 25-year repayment mortgage. The £262,500 loan works out to roughly £1,456 a month. That number is solid for exactly five years. After that, it resets to whatever rate is available at the time, because UK mortgages don't lock a rate for the full term the way US mortgages typically do.</p>
+
+              <h2>Fixed Terms, Not Fixed Loans</h2>
+              <p>A UK "5-year fixed" mortgage means the rate is fixed for 5 years, against a repayment schedule that's usually spread over 25-35 years. When the fixed period ends, the mortgage doesn't finish — it rolls onto the lender's standard variable rate (SVR), typically much higher, unless you actively remortgage or take a product transfer beforehand. Two-year fixes are just as common as five-year ones in the UK market, meaning some borrowers reprice even more often.</p>
+
+              <h2>The Math</h2>
+              <p>Standard UK repayment mortgages use monthly compounding, the same amortization formula used elsewhere:</p>
+              <div class="example-box" style="font-family: monospace; text-align: center; font-size: 1.15rem; font-style: normal; background: #FFF2F2;">
+                M = P &times; [r(1+r)ⁿ] / [(1+r)ⁿ &minus; 1]
+              </div>
+              <p>Where P is the loan amount, r is the monthly rate (annual &divide; 12), and n is the number of monthly payments.</p>
+
+              <h2>Worked Example</h2>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Input</th>
+                    <th>Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Property price</td>
+                    <td>£350,000</td>
+                  </tr>
+                  <tr>
+                    <td>Deposit (25%)</td>
+                    <td>£87,500</td>
+                  </tr>
+                  <tr>
+                    <td>Mortgage amount</td>
+                    <td>£262,500</td>
+                  </tr>
+                  <tr>
+                    <td>Rate</td>
+                    <td>4.48% (5-yr fixed)</td>
+                  </tr>
+                  <tr>
+                    <td>Term</td>
+                    <td>25 years (300 payments)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Monthly Payment</strong></td>
+                    <td><strong>&asymp; £1,456</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="example-box">
+                <strong>The rate-shock scenario:</strong> if this borrower's 5-year fix ends and rates have moved to, say, 5.8%, the same remaining balance reprices to roughly £1,610/month — a jump of over £150 with no change to the loan itself, purely from the fix expiring into a higher-rate environment.
+              </div>
+
+              <h2>Common Mistakes</h2>
+              <p>Borrowers frequently treat their fixed rate as permanent and don't plan for what happens when it ends — letting the mortgage lapse onto the lender's SVR is usually the most expensive outcome available, often several percentage points above any fixed deal on the market.</p>
+              <p>Borrowers also compare only headline rates between a 2-year and 5-year fix without weighing the tradeoff: a 2-year fix often has a slightly lower rate but exposes you to repricing risk twice as often over a decade; a 5-year fix trades a bit of rate for more payment certainty.</p>
+              <p>A third mistake: forgetting product fees. Many UK mortgage deals carry an arrangement fee (often £999-£2,000, sometimes a percentage of the loan) that changes the true cost comparison between two seemingly similar rates.</p>
+
+              <h2>Where This Calculator Has Limits</h2>
+              <p>It assumes a standard repayment mortgage — interest-only mortgages calculate very differently (see our <a href="/blog/uk-amortization-calculator.html">Amortization tool</a> for that distinction). It also can't predict what rate will be available when this fix ends, which is the single biggest variable in the true lifetime cost of a UK mortgage.</p>
+
+              <h2>Frequently Asked Questions</h2>
+              <h3>Does my rate ever stay fixed for the whole mortgage?</h3>
+              <p>Not on a standard UK residential mortgage — fixed periods of 2, 3, 5, or occasionally 10 years are common, but the underlying mortgage term (25-35 years) is much longer than any single fix.</p>
+
+              <h3>What happens if I do nothing when my fix ends?</h3>
+              <p>You automatically roll onto the lender's standard variable rate, which is usually higher than available fixed or tracker deals — most borrowers remortgage or take a product transfer before this happens.</p>
+
+              <h3>Is a 5-year fix always safer than a 2-year fix?</h3>
+              <p>It offers more payment certainty, but if rates fall during your fixed period, you're locked out of the lower rate until your term ends — there's a genuine tradeoff either way.</p>
+
+              <h3>Does a bigger deposit always get me a better rate?</h3>
+              <p>Generally yes — crossing certain loan-to-value thresholds (75%, 60%, etc.) typically unlocks better pricing tiers, covered in our LTV Calculator.</p>
+
+              <h3>Can I overpay a fixed-rate mortgage?</h3>
+              <p>Usually yes, up to an annual allowance (commonly 10% of the balance) without penalty — exceeding it can trigger an early repayment charge.</p>
+
+              <h2>Related Tools</h2>
+              <p>
+                <a href="/blog/uk-stamp-duty-calculator.html">Stamp Duty (SDLT) Calculator</a> &middot;
+                <a href="/blog/uk-ltv-calculator.html">LTV Calculator</a> &middot;
+                <a href="/blog/uk-remortgage-tool.html">Remortgage Tool</a> &middot;
+                <a href="/blog/uk-affordability-calculator.html">Affordability Calculator</a>
+              </p>
+
+              <p class="disclaimer-text">
+                <em>Educational content, not financial advice. Rates and figures are illustrative and change regularly — confirm current numbers with a licensed UK mortgage adviser or lender. Written by the MortgagePro Global team.</em>
+              </p>
+            </div>
+          </article>
+
+        </div><!-- .main-content -->
+
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Advertisement sidebar">
+          <div class="ad-unit ad-sidebar" aria-label="Advertisement" role="complementary"></div>
+        </aside>
+
+      </div><!-- .page-layout -->
+    </div><!-- .container -->
+  </main>
+
+  <div data-component="footer"></div>
+</body>
+
+</html>
