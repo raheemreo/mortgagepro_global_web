@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DEVWXRXJP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1DEVWXRXJP');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DTI Ratio Calculator: The 6x Threshold Regulators Watch | MortgagePro Global</title>
+  <meta name="description"
+    content="See how Australia's debt-to-income monitoring actually works — a portfolio-wide regulatory watch point, not a hard borrower cap the way it functions in New Zealand or Canada.">
+  <link rel="canonical" href="https://mortgageproglobal.com/blog/australia-dti-ratio-calculator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="DTI Ratio Calculator: The 6x Threshold Regulators Watch | MortgagePro Global">
+  <meta property="og:description"
+    content="See how Australia's debt-to-income monitoring actually works — a portfolio-wide regulatory watch point, not a hard borrower cap the way it functions in New Zealand or Canada.">
+  <meta property="og:url" content="https://mortgageproglobal.com/blog/australia-dti-ratio-calculator.html">
+  <meta property="og:image" content="https://mortgageproglobal.com/images/og-home.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DTI Ratio Calculator: The 6x APRA Threshold in Australia">
+  <meta name="twitter:description"
+    content="Understand APRA's DTI monitoring limits, portfolio caps, and how DTI ratios shape Australian home loan criteria.">
+  <meta name="twitter:image" content="https://mortgageproglobal.com/images/og-home.jpg">
+
+  <!-- Verification -->
+  <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
+  <meta name="msvalidate.01" content="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  <meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
+
+  <!-- Critical CSS -->
+  <style>
+    :root {
+      --page-primary: #1A0A00;
+      --page-accent: #7C2D12;
+      --page-bg: #FFF8F0;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: var(--page-bg);
+      color: var(--page-primary);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .skip-link:focus {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99999;
+      background: #1A0A00;
+      color: #fff;
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    [data-component] {
+      min-height: 60px;
+    }
+
+    /* Article Styles */
+    .article-container {
+      background: #fff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      margin-bottom: 32px;
+    }
+
+    .article-meta {
+      font-size: 0.85rem;
+      color: #6B7280;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .article-content h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #F1F5F9;
+      padding-bottom: 8px;
+    }
+
+    .article-content h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.25rem;
+      color: #374151;
+      line-height: 1.75;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .article-content li {
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+
+    /* Table override to match Australia theme */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    thead {
+      background: var(--page-primary);
+      color: #fff;
+    }
+
+    th,
+    td {
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background-color: #FFF3E0;
+    }
+
+    .example-box {
+      background: #FFF7ED;
+      border-left: 4px solid var(--page-accent);
+      padding: 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+    }
+
+    .disclaimer-text {
+      font-size: 0.85rem;
+      color: #6B7280;
+      border-top: 1px solid #E5E7EB;
+      padding-top: 16px;
+      margin-top: 32px;
+    }
+
+    /* Dark Mode Overrides */
+    @media (prefers-color-scheme: dark) {
+      .article-container {
+        background: var(--bg-card, #1E293B);
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-content p,
+      .article-content li {
+        color: #D1D5DB;
+      }
+
+      .article-content h2 {
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-meta {
+        color: #9CA3AF;
+      }
+
+      .example-box {
+        background: #2C1608;
+        border-left-color: #F97316;
+      }
+
+      tr:nth-child(even) {
+        background-color: #271A12;
+      }
+
+      table {
+        background-color: #1A0F0A;
+      }
+    }
+  </style>
+
+  <!-- Structured Data: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "DTI Ratio Calculator: The 6x Threshold Regulators Watch, Not a Rule Applied to You Personally",
+    "description": "See how Australia's debt-to-income monitoring actually works — a portfolio-wide regulatory watch point, not a hard borrower cap the way it functions in New Zealand or Canada.",
+    "image": "https://mortgageproglobal.com/images/og-home.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "REO Technologies Editorial Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "REO Technologies",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mortgageproglobal.com/images/logo.svg"
+      }
+    },
+    "datePublished": "2026-06-29",
+    "dateModified": "2026-06-29",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mortgageproglobal.com/blog/australia-dti-ratio-calculator.html"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mortgageproglobal.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mortgageproglobal.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Australia DTI Ratio Guide", "item": "https://mortgageproglobal.com/blog/australia-dti-ratio-calculator.html" }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/accessibility.css">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/rates.js" defer></script>
+  <script src="/js/accessibility.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-component="header"></div>
+
+  <!-- Hero -->
+  <section class="page-hero" aria-label="Page introduction">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li>Australia DTI Ratio Guide</li>
+        </ol>
+      </nav>
+      <h1>DTI Ratio Calculator: The 6x Threshold Regulators Watch, Not a Rule Applied to You Personally</h1>
+      <p class="subtitle">Learn how Australia's debt-to-income monitoring system actually functions under APRA guidelines.</p>
+    </div>
+  </section>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="page-layout">
+        <div class="main-content">
+
+          <article class="article-container">
+            <header>
+              <div class="article-meta">
+                <span><strong>Author:</strong> REO Technologies Editorial Team</span>
+                <span>•</span>
+                <span><strong>Published:</strong> June 29, 2026</span>
+                <span>•</span>
+                <span><strong>Category:</strong> Mortgage Basics</span>
+              </div>
+            </header>
+
+            <div class="article-content">
+              <p>Australia's approach to debt-to-income (DTI) ratio is genuinely different from several other markets covered on MortgagePro Global. There's no legal DTI cap applied to individual borrowers the way New Zealand enforces a hard limit or Canada runs its stress test. Instead, APRA — the prudential regulator — monitors what share of each lender's <em>overall</em> new lending sits above a DTI of 6x, treating high-DTI volume as a system-wide risk signal rather than an individual borrower rule.</p>
+
+              <h2>What DTI Actually Measures Here</h2>
+              <p>DTI = total debt (the new mortgage plus any other debts) &divide; gross annual income. A single applicant borrowing $480,000 against $80,000 income sits at a 6.0x DTI. It's a simpler ratio than the US's split front-end/back-end system or Canada's GDS/TDS — one number, not two — but the way it's used at the system level is what makes Australia distinct.</p>
+
+              <h2>How This Actually Affects an Individual Borrower</h2>
+              <p>Because APRA's focus is portfolio-wide, not case-by-case, an individual borrower can still get approved above 6x DTI for a specific borrower with a strong overall profile — but if too many of a lender's total new loans cross that threshold, APRA applies supervisory pressure on the <em>lender</em>, which can flow through to tighter individual lending standards across the board, especially at banks already running close to their internal risk limits.</p>
+
+              <h2>Worked Example</h2>
+              <p>A single applicant earning $95,000/year, seeking a $520,000 loan with no other debt:</p>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Item</th>
+                    <th>Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Gross annual income</td>
+                    <td>$95,000</td>
+                  </tr>
+                  <tr>
+                    <td>Proposed loan</td>
+                    <td>$520,000</td>
+                  </tr>
+                  <tr>
+                    <td><strong>DTI Ratio</strong></td>
+                    <td><strong>5.5x</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>This sits comfortably under the 6x watch point. The same applicant seeking a $600,000 loan against the same income would sit at 6.3x — not automatically declined, but the kind of application that draws closer individual scrutiny, particularly at a lender already carrying a higher share of high-DTI loans in its book.</p>
+
+              <div class="example-box">
+                <strong>Why this matters more in expensive cities:</strong> in Sydney and Melbourne, where property prices are highest relative to typical incomes, a larger share of otherwise-qualified borrowers naturally land above 6x DTI just from local price levels — which is part of why lender-level DTI monitoring interacts differently with serviceability outcomes depending on where in Australia you're buying.
+              </div>
+
+              <h2>Common Mistakes</h2>
+              <p>Buyers frequently assume 6x DTI is a hard personal cutoff, the way it functions in New Zealand — in Australia it's a lender-level supervisory metric, meaning individual approval above 6x is genuinely possible depending on the lender's current portfolio position and your specific financial strength.</p>
+              <p>Buyers also conflate DTI with the separate serviceability assessment every lender runs regardless of DTI — passing a comfortable DTI ratio doesn't guarantee approval if the serviceability buffer test (see our <a href="/blog/australia-affordability-calculator.html">Affordability Calculator</a>) shows the loan isn't affordable at a stressed rate.</p>
+              <p>A third mistake: not accounting for existing debts properly — DTI includes all debt, not just the new mortgage, so an applicant with an existing car loan or credit card balance has a higher DTI than the mortgage amount alone would suggest.</p>
+
+              <h2>Where This Calculator Has Limits</h2>
+              <p>It can't predict how a specific lender will treat an above-6x application, since that depends on the lender's current portfolio composition relative to APRA's monitoring thresholds — information not publicly available in real time. It also doesn't replace the separate serviceability stress test, which is the more binding constraint for most individual applications.</p>
+
+              <h2>Frequently Asked Questions</h2>
+              <h3>Is 6x DTI a legal limit in Australia?</h3>
+              <p>No — unlike New Zealand's enforced DTI cap, Australia's 6x threshold is a system-wide monitoring metric APRA uses to watch lender risk, not a rule directly blocking individual borrower approval.</p>
+
+              <h3>Can I still get approved above 6x DTI?</h3>
+              <p>Yes, depending on the lender and your broader financial profile — it's more likely to draw additional scrutiny than an automatic decline, unlike a hard regulatory cap.</p>
+
+              <h3>Does DTI include my partner's debt on a joint application?</h3>
+              <p>Yes — joint applications use combined income and combined debt, the same way most other affordability metrics work.</p>
+
+              <h3>How is this different from the serviceability buffer test?</h3>
+              <p>DTI measures the debt-to-income ratio itself; the serviceability buffer (see our Affordability Calculator) tests whether you could still afford repayments at a stressed interest rate — they're related but separate checks.</p>
+
+              <h3>Does APRA ever tighten this further?</h3>
+              <p>It's a metric APRA reviews periodically as part of broader macroprudential policy — thresholds and monitoring intensity can shift with the housing market and financial stability conditions.</p>
+
+              <h2>Related Tools</h2>
+              <p>
+                <a href="/blog/australia-affordability-calculator.html">Affordability Calculator</a> &middot;
+                <a href="/australia-mortgage-calculator.html">Mortgage Calculator</a> &middot;
+                <a href="/blog/australia-lmi-calculator.html">LMI Calculator</a>
+              </p>
+
+              <p class="disclaimer-text">
+                <em>Educational content, not financial advice. DTI monitoring practices and thresholds are set by APRA and individual lender risk policy, both of which can change — confirm your specific situation with a licensed Australian mortgage broker. Written by the MortgagePro Global team.</em>
+              </p>
+            </div>
+          </article>
+
+        </div><!-- .main-content -->
+
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Advertisement sidebar">
+          <div class="ad-unit ad-sidebar" aria-label="Advertisement" role="complementary"></div>
+        </aside>
+
+      </div><!-- .page-layout -->
+    </div><!-- .container -->
+  </main>
+
+  <div data-component="footer"></div>
+</body>
+
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DEVWXRXJP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1DEVWXRXJP');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Canada Mortgage Calculator: Why Your Rate Compounds Differently | MortgagePro Global</title>
+  <meta name="description"
+    content="See how a Canadian mortgage calculator handles semi-annual compounding, the 5-year term vs. 25-year amortization split, and what that means for your real monthly payment.">
+  <link rel="canonical" href="https://mortgageproglobal.com/blog/canada-mortgage-calculator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Canada Mortgage Calculator: Why Your Rate Compounds Differently | MortgagePro Global">
+  <meta property="og:description"
+    content="See how a Canadian mortgage calculator handles semi-annual compounding, the 5-year term vs. 25-year amortization split, and what that means for your real monthly payment.">
+  <meta property="og:url" content="https://mortgageproglobal.com/blog/canada-mortgage-calculator.html">
+  <meta property="og:image" content="https://mortgageproglobal.com/images/og-home.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Canada Mortgage Calculator: Why Your Rate Compounds Differently">
+  <meta name="twitter:description"
+    content="Learn how semi-annual compounding laws in Canada make our fixed mortgage math unique.">
+  <meta name="twitter:image" content="https://mortgageproglobal.com/images/og-home.jpg">
+
+  <!-- Verification -->
+  <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
+  <meta name="msvalidate.01" content="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  <meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
+
+  <!-- Critical CSS -->
+  <style>
+    :root {
+      --page-primary: #0A2E1A;
+      --page-accent: #C8102E;
+      --page-bg: #F0F7F4;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: var(--page-bg);
+      color: var(--page-primary);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .skip-link:focus {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99999;
+      background: #0A2E1A;
+      color: #fff;
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    [data-component] {
+      min-height: 60px;
+    }
+
+    /* Article Styles */
+    .article-container {
+      background: #fff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      margin-bottom: 32px;
+    }
+
+    .article-meta {
+      font-size: 0.85rem;
+      color: #6B7280;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .article-content h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #F1F5F9;
+      padding-bottom: 8px;
+    }
+
+    .article-content h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.25rem;
+      color: #374151;
+      line-height: 1.75;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .article-content li {
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+
+    /* Table override to match Canada theme */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    thead {
+      background: var(--page-primary);
+      color: #fff;
+    }
+
+    th,
+    td {
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background-color: #F9FAFB;
+    }
+
+    .example-box {
+      background: #F4FAF6;
+      border-left: 4px solid var(--page-primary);
+      padding: 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+    }
+
+    .disclaimer-text {
+      font-size: 0.85rem;
+      color: #6B7280;
+      border-top: 1px solid #E5E7EB;
+      padding-top: 16px;
+      margin-top: 32px;
+    }
+
+    /* Dark Mode Overrides */
+    @media (prefers-color-scheme: dark) {
+      .article-container {
+        background: var(--bg-card, #1E293B);
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-content p,
+      .article-content li {
+        color: #D1D5DB;
+      }
+
+      .article-content h2 {
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-meta {
+        color: #9CA3AF;
+      }
+
+      .example-box {
+        background: #111C15;
+        border-left-color: #34D399;
+      }
+
+      tr:nth-child(even) {
+        background-color: #1A2421;
+      }
+
+      table {
+        background-color: #121B18;
+      }
+    }
+  </style>
+
+  <!-- Structured Data: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Canada Mortgage Calculator: Why Your Rate Compounds Differently Than You Think",
+    "description": "See how a Canadian mortgage calculator handles semi-annual compounding, the 5-year term vs. 25-year amortization split, and what that means for your real monthly payment.",
+    "image": "https://mortgageproglobal.com/images/og-home.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "REO Technologies Editorial Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "REO Technologies",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mortgageproglobal.com/images/logo.svg"
+      }
+    },
+    "datePublished": "2026-06-29",
+    "dateModified": "2026-06-29",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mortgageproglobal.com/blog/canada-mortgage-calculator.html"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mortgageproglobal.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mortgageproglobal.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Canada Mortgage Calculator Guide", "item": "https://mortgageproglobal.com/blog/canada-mortgage-calculator.html" }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/accessibility.css">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/rates.js" defer></script>
+  <script src="/js/accessibility.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-component="header"></div>
+
+  <!-- Hero -->
+  <section class="page-hero" aria-label="Page introduction">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li>Canada Mortgage Guide</li>
+        </ol>
+      </nav>
+      <h1>Canada Mortgage Calculator: Why Your Rate Compounds Differently Than You Think</h1>
+      <p class="subtitle">Understand semi-annual compounding laws, amortization vs. term logic, and how regular payments are calculated.</p>
+    </div>
+  </section>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="page-layout">
+        <div class="main-content">
+
+          <article class="article-container">
+            <header>
+              <div class="article-meta">
+                <span><strong>Author:</strong> REO Technologies Editorial Team</span>
+                <span>•</span>
+                <span><strong>Published:</strong> June 29, 2026</span>
+                <span>•</span>
+                <span><strong>Category:</strong> Mortgage Basics</span>
+              </div>
+            </header>
+
+            <div class="article-content">
+              <p>Take a $650,000 home, 20% down ($130,000), and a 5-year fixed rate of 3.99% — a rate MortgagePro Global pulls from the Bank of Canada context. Run that through a Canadian mortgage calculator and the $520,000 loan comes out to roughly $2,730 a month on a 25-year amortization. That number relies on a quirk almost no other country's mortgage math uses: Canadian law requires fixed-rate mortgages to compound semi-annually, not monthly.</p>
+
+              <h2>Two Numbers, Not One: Term vs. Amortization</h2>
+              <p>The first thing that trips up anyone new to Canadian mortgages is that "how long is my mortgage" has two different answers. The <strong>term</strong> — typically 5 years — is how long your current rate is locked in. The <strong>amortization</strong> — typically 25 years, sometimes 30 for first-time buyers or new builds — is how long it actually takes to pay off the loan at that payment schedule. You don't sign one mortgage for 25 years; you sign a series of 5-year terms, renewing (or switching lenders) each time, against a shrinking balance on a fixed overall payoff clock.</p>
+
+              <h2>Why Semi-Annual Compounding Matters</h2>
+              <p>By law, Canadian fixed-rate mortgages compound semi-annually. A quoted "3.99% annual rate" isn't simply divided by 12 to get a monthly rate the way it would be in the US. It's first converted to a 6-month periodic rate, then converted again into the equivalent monthly rate:</p>
+              <div class="example-box" style="font-family: monospace; text-align: center; font-size: 1.15rem; font-style: normal;">
+                Monthly Rate = (1 + Annual Rate &divide; 2)^(1/6) &minus; 1
+              </div>
+              <p>That produces a slightly different — very slightly higher — effective rate than simple monthly compounding would. It's a small difference on paper but it's baked into every Canadian mortgage calculator, and it's why plugging Canadian numbers into a generic US-style calculator gives you a payment that's a few dollars off.</p>
+
+              <h2>Worked Example</h2>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Input</th>
+                    <th>Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Home price</td>
+                    <td>$650,000</td>
+                  </tr>
+                  <tr>
+                    <td>Down payment (20%)</td>
+                    <td>$130,000</td>
+                  </tr>
+                  <tr>
+                    <td>Loan amount</td>
+                    <td>$520,000</td>
+                  </tr>
+                  <tr>
+                    <td>Rate</td>
+                    <td>3.99% (5-yr fixed, semi-annual compounding)</td>
+                  </tr>
+                  <tr>
+                    <td>Amortization</td>
+                    <td>25 years</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Monthly Payment</strong></td>
+                    <td><strong>&asymp; $2,730</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="example-box">
+                <strong>Quick check:</strong> Switch to an accelerated bi-weekly schedule (half the monthly payment, paid every two weeks — 26 payments a year instead of 12 monthly ones) and you're effectively making 13 monthly payments a year instead of 12. On this loan, that alone can cut roughly 3-4 years off a 25-year amortization.
+              </div>
+
+              <h2>Common Mistakes</h2>
+              <p>Buyers frequently confuse their 5-year term rate with their full loan term, and are surprised when the rate — and payment — can change entirely at renewal. This isn't a US-style "set it and forget it" 30-year fixed; it's a rate you'll likely revisit five or six times before the mortgage is paid off.</p>
+              <p>Buyers also underestimate how much a rate move affects the <em>renewal</em> payment, not just a new purchase. Someone who locked 3.99% five years ago renewing into today's rate environment can see a real payment jump — this is covered in depth in our <a href="/blog/canada-renewal-planner.html">Renewal Planner</a> tool.</p>
+              <p>A third mistake: assuming this monthly number is the whole housing cost. If the down payment is under 20%, CMHC mortgage default insurance adds a premium on top — covered separately in our <a href="/blog/canada-cmhc-insurance-calculator.html">CMHC Insurance Calculator</a>.</p>
+
+              <h2>Where This Calculator Has Limits</h2>
+              <p>It assumes a fixed rate for the full term — variable-rate mortgages fluctuate with the Bank of Canada's policy rate and this math doesn't apply the same way. It also doesn't build in the mandatory mortgage stress test, which determines whether you <em>qualify</em> for this payment in the first place, not just what the payment is.</p>
+
+              <h2>Frequently Asked Questions</h2>
+              <h3>Why is Canadian mortgage math different from what I see on US calculators?</h3>
+              <p>Mainly the semi-annual compounding rule — a legal requirement in Canada for fixed-rate mortgages that doesn't exist in the US market.</p>
+
+              <h3>What's the difference between term and amortization again?</h3>
+              <p>Term is how long your rate is locked (commonly 5 years); amortization is the total payoff timeline (commonly 25-30 years). You renew your term multiple times over one amortization period.</p>
+
+              <h3>Does a 30-year amortization save money?</h3>
+              <p>It lowers the monthly payment but increases total interest paid over the life of the loan compared to a 25-year amortization at the same rate.</p>
+
+              <h3>Is my rate ever guaranteed for the full amortization?</h3>
+              <p>No — only for the current term. At renewal, you get whatever rate is available at that time, from your current lender or a new one.</p>
+
+              <h3>Does this calculator include CMHC insurance?</h3>
+              <p>No — this example assumes 20% down with no insurance required. Use the CMHC Insurance Calculator for scenarios under 20% down.</p>
+
+              <h2>Related Tools</h2>
+              <p>
+                <a href="/blog/canada-cmhc-insurance-calculator.html">CMHC Insurance Calculator</a> &middot;
+                <a href="/blog/canada-stress-test-calculator.html">Stress Test Calculator</a> &middot;
+                <a href="/blog/canada-amortization-calculator.html">Amortization Calculator</a> &middot;
+                <a href="/blog/canada-renewal-planner.html">Renewal Planner</a>
+              </p>
+
+              <p class="disclaimer-text">
+                <em>Educational content, not financial advice. Rates and figures are illustrative and change regularly — confirm current numbers with a licensed Canadian mortgage lender or broker. Written by the MortgagePro Global team.</em>
+              </p>
+            </div>
+          </article>
+
+        </div><!-- .main-content -->
+
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Advertisement sidebar">
+          <div class="ad-unit ad-sidebar" aria-label="Advertisement" role="complementary"></div>
+        </aside>
+
+      </div><!-- .page-layout -->
+    </div><!-- .container -->
+  </main>
+
+  <div data-component="footer"></div>
+</body>
+
+</html>

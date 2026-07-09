@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DEVWXRXJP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1DEVWXRXJP');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GDS/TDS Ratio Calculator: Canada's Two-Ratio Qualifying System | MortgagePro Global</title>
+  <meta name="description"
+    content="See how Gross Debt Service and Total Debt Service ratios work together to determine Canadian mortgage qualification, and why heat and condo fees actually count.">
+  <link rel="canonical" href="https://mortgageproglobal.com/blog/canada-gds-tds-calculator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="GDS/TDS Ratio Calculator: Canada's Two-Ratio Qualifying System | MortgagePro Global">
+  <meta property="og:description"
+    content="See how Gross Debt Service and Total Debt Service ratios work together to determine Canadian mortgage qualification, and why heat and condo fees actually count.">
+  <meta property="og:url" content="https://mortgageproglobal.com/blog/canada-gds-tds-calculator.html">
+  <meta property="og:image" content="https://mortgageproglobal.com/images/og-home.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GDS/TDS Ratio Calculator: Canada's Two-Ratio Qualifying System">
+  <meta name="twitter:description"
+    content="Learn how lenders assess GDS and TDS ratios in Canada and what counts toward your limit.">
+  <meta name="twitter:image" content="https://mortgageproglobal.com/images/og-home.jpg">
+
+  <!-- Verification -->
+  <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
+  <meta name="msvalidate.01" content="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  <meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
+
+  <!-- Critical CSS -->
+  <style>
+    :root {
+      --page-primary: #0A2E1A;
+      --page-accent: #C8102E;
+      --page-bg: #F0F7F4;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: var(--page-bg);
+      color: var(--page-primary);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .skip-link:focus {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99999;
+      background: #0A2E1A;
+      color: #fff;
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    [data-component] {
+      min-height: 60px;
+    }
+
+    /* Article Styles */
+    .article-container {
+      background: #fff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      margin-bottom: 32px;
+    }
+
+    .article-meta {
+      font-size: 0.85rem;
+      color: #6B7280;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .article-content h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #F1F5F9;
+      padding-bottom: 8px;
+    }
+
+    .article-content h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.25rem;
+      color: #374151;
+      line-height: 1.75;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .article-content li {
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+
+    /* Table override to match Canada theme */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    thead {
+      background: var(--page-primary);
+      color: #fff;
+    }
+
+    th,
+    td {
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background-color: #F9FAFB;
+    }
+
+    .example-box {
+      background: #F4FAF6;
+      border-left: 4px solid var(--page-primary);
+      padding: 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+    }
+
+    .disclaimer-text {
+      font-size: 0.85rem;
+      color: #6B7280;
+      border-top: 1px solid #E5E7EB;
+      padding-top: 16px;
+      margin-top: 32px;
+    }
+
+    /* Dark Mode Overrides */
+    @media (prefers-color-scheme: dark) {
+      .article-container {
+        background: var(--bg-card, #1E293B);
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-content p,
+      .article-content li {
+        color: #D1D5DB;
+      }
+
+      .article-content h2 {
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-meta {
+        color: #9CA3AF;
+      }
+
+      .example-box {
+        background: #111C15;
+        border-left-color: #34D399;
+      }
+
+      tr:nth-child(even) {
+        background-color: #1A2421;
+      }
+
+      table {
+        background-color: #121B18;
+      }
+    }
+  </style>
+
+  <!-- Structured Data: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "GDS/TDS Ratio Calculator: Canada's Two-Ratio Qualifying System, Explained",
+    "description": "See how Gross Debt Service and Total Debt Service ratios work together to determine Canadian mortgage qualification, and why heat and condo fees actually count.",
+    "image": "https://mortgageproglobal.com/images/og-home.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "REO Technologies Editorial Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "REO Technologies",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mortgageproglobal.com/images/logo.svg"
+      }
+    },
+    "datePublished": "2026-06-29",
+    "dateModified": "2026-06-29",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mortgageproglobal.com/blog/canada-gds-tds-calculator.html"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mortgageproglobal.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mortgageproglobal.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "GDS/TDS Ratio Calculator Guide", "item": "https://mortgageproglobal.com/blog/canada-gds-tds-calculator.html" }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/accessibility.css">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/rates.js" defer></script>
+  <script src="/js/accessibility.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-component="header"></div>
+
+  <!-- Hero -->
+  <section class="page-hero" aria-label="Page introduction">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li>GDS/TDS Ratio Guide</li>
+        </ol>
+      </nav>
+      <h1>GDS/TDS Ratio Calculator: Canada's Two-Ratio Qualifying System, Explained</h1>
+      <p class="subtitle">Learn how GDS and TDS ceilings limit your borrowing capacity and what expenses are included.</p>
+    </div>
+  </section>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="page-layout">
+        <div class="main-content">
+
+          <article class="article-container">
+            <header>
+              <div class="article-meta">
+                <span><strong>Author:</strong> REO Technologies Editorial Team</span>
+                <span>•</span>
+                <span><strong>Published:</strong> June 29, 2026</span>
+                <span>•</span>
+                <span><strong>Category:</strong> Mortgage Basics</span>
+              </div>
+            </header>
+
+            <div class="article-content">
+              <p>Canadian lenders don't run one debt ratio against your income — they run two, and both use figures that catch people off guard the first time: heating costs and half your condo fee count as housing expenses, even though neither shows up on a mortgage statement.</p>
+
+              <h2>The Two Ratios</h2>
+              <p><strong>GDS (Gross Debt Service):</strong> your total monthly housing costs — mortgage payment (principal and interest), property tax, heating, and 50% of any condo fee — divided by gross monthly income. The commonly applied ceiling is <strong>39%</strong>.</p>
+              <p><strong>TDS (Total Debt Service):</strong> everything in GDS, plus every other debt obligation — car loans, student loans, credit card minimums, lines of credit — divided by gross monthly income. The commonly applied ceiling is <strong>44%</strong>.</p>
+              <p>Both ratios are calculated using your <strong>stress-tested qualifying rate</strong>, not your actual contract rate — a detail covered in full in our <a href="/blog/canada-stress-test-calculator.html">Stress Test Calculator</a>, but one that matters here too, since it means your GDS/TDS payment inputs are higher than what you'll actually pay.</p>
+
+              <h2>Worked Example</h2>
+              <p>A household with $12,500 gross monthly income ($150,000/year), a stressed mortgage payment of $3,325 (on a $520,000 loan at a 5.99% qualifying rate), $220/month property tax portion, $120/month heating, and a $300 condo fee (50% = $150 counted):</p>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Item</th>
+                    <th>Monthly</th>
+                    <th>Counts Toward</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Stressed mortgage payment</td>
+                    <td>$3,325</td>
+                    <td>GDS + TDS</td>
+                  </tr>
+                  <tr>
+                    <td>Property tax</td>
+                    <td>$220</td>
+                    <td>GDS + TDS</td>
+                  </tr>
+                  <tr>
+                    <td>Heat</td>
+                    <td>$120</td>
+                    <td>GDS + TDS</td>
+                  </tr>
+                  <tr>
+                    <td>50% of condo fee</td>
+                    <td>$150</td>
+                    <td>GDS + TDS</td>
+                  </tr>
+                  <tr>
+                    <td><strong>GDS Subtotal</strong></td>
+                    <td><strong>$3,815</strong></td>
+                    <td><strong>30.5%</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Car loan</td>
+                    <td>$450</td>
+                    <td>TDS only</td>
+                  </tr>
+                  <tr>
+                    <td>Credit card minimums</td>
+                    <td>$180</td>
+                    <td>TDS only</td>
+                  </tr>
+                  <tr>
+                    <td><strong>TDS Total</strong></td>
+                    <td><strong>$4,445</strong></td>
+                    <td><strong>35.6%</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>This household clears both ceilings comfortably — 30.5% GDS against the 39% cap, and 35.6% TDS against the 44% cap — leaving genuine room even after the stress-tested payment is included.</p>
+
+              <h2>Common Mistakes</h2>
+              <p>Buyers frequently forget heat and condo fees entirely when self-estimating affordability, since neither appears as a line item on a mortgage quote — but both get added directly into the ratio a lender actually uses.</p>
+              <p>Buyers also assume GDS and TDS use their real contract rate. They don't — both ratios are calculated at the stress-tested qualifying rate, which is typically 2 percentage points above the contract rate (or the 5.25% floor, whichever is higher). This is a large part of why a rate that looks affordable on paper can still fail to qualify.</p>
+              <p>A third mistake: condo buyers assuming the <em>full</em> condo fee counts. Only 50% is included in GDS/TDS, though some lenders may use 100% if the condo corporation's reserve fund is flagged as insufficient — worth confirming with your lender directly.</p>
+
+              <h2>Where This Calculator Has Limits</h2>
+              <p>It uses the standard 39%/44% guideline ceilings, but individual lenders sometimes apply stricter or slightly more flexible internal limits, especially for insured versus uninsured mortgages or non-federally-regulated lenders like provincial credit unions, which aren't bound by the same OSFI rules.</p>
+
+              <h2>Frequently Asked Questions</h2>
+              <h3>Are 39% and 44% hard limits everywhere?</h3>
+              <p>They're the commonly applied guideline ceilings for federally regulated lenders, but some lenders — particularly credit unions not regulated by OSFI — may apply different limits.</p>
+
+              <h3>Why does heat count as a housing cost?</h3>
+              <p>It's treated as a fixed, unavoidable cost of maintaining the home, similar to property tax, and lenders build it into the housing-cost side of the ratio.</p>
+
+              <h3>Does my down payment size affect GDS/TDS?</h3>
+              <p>Indirectly, yes — a larger down payment lowers your loan amount and stressed payment, which lowers GDS and TDS proportionally.</p>
+
+              <h3>What if I fail TDS but pass GDS?</h3>
+              <p>This is common — it usually means non-housing debt (car loans, credit cards) is the limiting factor. Paying down or consolidating that debt before applying can resolve it without changing anything about the home purchase itself.</p>
+
+              <h3>Does combining income with a co-borrower help?</h3>
+              <p>Yes — combined household income and combined debt are used for joint applications, which is often the most direct way to bring both ratios into range.</p>
+
+              <h2>Related Tools</h2>
+              <p>
+                <a href="/blog/canada-stress-test-calculator.html">Stress Test Calculator</a> &middot;
+                <a href="/blog/canada-affordability-calculator.html">Affordability Calculator</a> &middot;
+                <a href="/canada-mortgage-calculator.html">Mortgage Calculator</a>
+              </p>
+
+              <p class="disclaimer-text">
+                <em>Educational content, not financial or credit advice. GDS/TDS ceilings are OSFI guideline figures for federally regulated lenders and can vary by institution — confirm your specific ratios and eligibility with a licensed Canadian mortgage professional. Written by the MortgagePro Global team.</em>
+              </p>
+            </div>
+          </article>
+
+        </div><!-- .main-content -->
+
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Advertisement sidebar">
+          <div class="ad-unit ad-sidebar" aria-label="Advertisement" role="complementary"></div>
+        </aside>
+
+      </div><!-- .page-layout -->
+    </div><!-- .container -->
+  </main>
+
+  <div data-component="footer"></div>
+</body>
+
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DEVWXRXJP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1DEVWXRXJP');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Amortization Calculator: What Switching to Fortnightly Payments Actually Saves | MortgagePro Global</title>
+  <meta name="description"
+    content="See how fortnightly mortgage payments — matched to Australia's common fortnightly pay cycle — quietly shave years off a home loan compared to monthly payments.">
+  <link rel="canonical" href="https://mortgageproglobal.com/blog/australia-amortization-calculator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Amortization Calculator: What Switching to Fortnightly Payments Actually Saves | MortgagePro Global">
+  <meta property="og:description"
+    content="See how fortnightly mortgage payments — matched to Australia's common fortnightly pay cycle — quietly shave years off a home loan compared to monthly payments.">
+  <meta property="og:url" content="https://mortgageproglobal.com/blog/australia-amortization-calculator.html">
+  <meta property="og:image" content="https://mortgageproglobal.com/images/og-home.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Amortization Calculator: Fortnightly vs Monthly Repayments">
+  <meta name="twitter:description"
+    content="Understand how aligning repayments with a fortnightly pay cycle accelerates home loan payoff times.">
+  <meta name="twitter:image" content="https://mortgageproglobal.com/images/og-home.jpg">
+
+  <!-- Verification -->
+  <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
+  <meta name="msvalidate.01" content="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  <meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
+
+  <!-- Critical CSS -->
+  <style>
+    :root {
+      --page-primary: #1A0A00;
+      --page-accent: #7C2D12;
+      --page-bg: #FFF8F0;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: var(--page-bg);
+      color: var(--page-primary);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .skip-link:focus {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99999;
+      background: #1A0A00;
+      color: #fff;
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    [data-component] {
+      min-height: 60px;
+    }
+
+    /* Article Styles */
+    .article-container {
+      background: #fff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      margin-bottom: 32px;
+    }
+
+    .article-meta {
+      font-size: 0.85rem;
+      color: #6B7280;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .article-content h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #F1F5F9;
+      padding-bottom: 8px;
+    }
+
+    .article-content h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.25rem;
+      color: #374151;
+      line-height: 1.75;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .article-content li {
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+
+    /* Table override to match Australia theme */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    thead {
+      background: var(--page-primary);
+      color: #fff;
+    }
+
+    th,
+    td {
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background-color: #FFF3E0;
+    }
+
+    .example-box {
+      background: #FFF7ED;
+      border-left: 4px solid var(--page-accent);
+      padding: 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+    }
+
+    .disclaimer-text {
+      font-size: 0.85rem;
+      color: #6B7280;
+      border-top: 1px solid #E5E7EB;
+      padding-top: 16px;
+      margin-top: 32px;
+    }
+
+    /* Dark Mode Overrides */
+    @media (prefers-color-scheme: dark) {
+      .article-container {
+        background: var(--bg-card, #1E293B);
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-content p,
+      .article-content li {
+        color: #D1D5DB;
+      }
+
+      .article-content h2 {
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-meta {
+        color: #9CA3AF;
+      }
+
+      .example-box {
+        background: #2C1608;
+        border-left-color: #F97316;
+      }
+
+      tr:nth-child(even) {
+        background-color: #271A12;
+      }
+
+      table {
+        background-color: #1A0F0A;
+      }
+    }
+  </style>
+
+  <!-- Structured Data: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Amortization Calculator: What Switching to Fortnightly Payments Actually Saves",
+    "description": "See how fortnightly mortgage payments — matched to Australia's common fortnightly pay cycle — quietly shave years off a home loan compared to monthly payments.",
+    "image": "https://mortgageproglobal.com/images/og-home.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "REO Technologies Editorial Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "REO Technologies",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mortgageproglobal.com/images/logo.svg"
+      }
+    },
+    "datePublished": "2026-06-29",
+    "dateModified": "2026-06-29",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mortgageproglobal.com/blog/australia-amortization-calculator.html"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mortgageproglobal.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mortgageproglobal.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Australia Amortization Guide", "item": "https://mortgageproglobal.com/blog/australia-amortization-calculator.html" }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/accessibility.css">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/rates.js" defer></script>
+  <script src="/js/accessibility.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-component="header"></div>
+
+  <!-- Hero -->
+  <section class="page-hero" aria-label="Page introduction">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li>Australia Amortization Guide</li>
+        </ol>
+      </nav>
+      <h1>Amortization Calculator: What Switching to Fortnightly Payments Actually Saves</h1>
+      <p class="subtitle">Understand the math behind fortnightly payment schedules and accelerated principal reduction.</p>
+    </div>
+  </section>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="page-layout">
+        <div class="main-content">
+
+          <article class="article-container">
+            <header>
+              <div class="article-meta">
+                <span><strong>Author:</strong> REO Technologies Editorial Team</span>
+                <span>•</span>
+                <span><strong>Published:</strong> June 29, 2026</span>
+                <span>•</span>
+                <span><strong>Category:</strong> Mortgage Basics</span>
+              </div>
+            </header>
+
+            <div class="article-content">
+              <p>Many Australian employers pay fortnightly, and a lot of lenders default mortgage repayments to a monthly schedule anyway — a mismatch that, once corrected, turns out to meaningfully shorten a loan's life without requiring a single extra dollar of annual budget.</p>
+
+              <h2>The Fortnightly Math</h2>
+              <p>Twelve monthly payments a year is straightforward. Twenty-six fortnightly payments a year — matching a fortnightly pay cycle — is not simply "half the monthly amount, doubled." A year has slightly more than 24 fortnights, so paying half your monthly amount every fortnight results in the equivalent of 13 monthly payments annually, not 12 — one full extra payment a year, applied directly to principal, purely from aligning payment frequency to a fortnightly income cycle.</p>
+
+              <h2>Worked Example</h2>
+              <p>On the $520,000 loan at 6.19%, 25-year term, from our Mortgage Calculator:</p>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Payment Schedule</th>
+                    <th>Payment Amount</th>
+                    <th>Effective Annual Payments</th>
+                    <th>Payoff Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Standard Monthly</strong></td>
+                    <td>$3,413/month</td>
+                    <td>12</td>
+                    <td>25 years</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Fortnightly (half of monthly)</strong></td>
+                    <td>$1,707/fortnight</td>
+                    <td>26 (= 13 monthly equivalents)</td>
+                    <td><strong>&asymp; 21.5 years</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>That's roughly 3.5 years cut from the loan term, and a real reduction in total interest paid — purely from a payment frequency change that matches how most people's income actually arrives.</p>
+
+              <div class="example-box">
+                <strong>The distinction that matters:</strong> this only works if the fortnightly payment is set as exactly half the monthly amount, paid every fortnight (26 times a year). Some lenders offer a "fortnightly" option that simply divides the annual total by 26 evenly — mathematically identical to monthly payments with no early-payoff benefit at all. Confirm which version your lender is actually offering.
+              </div>
+
+              <h2>Common Mistakes</h2>
+              <p>Borrowers frequently assume any fortnightly option automatically accelerates payoff — as above, only the "half-of-monthly" structure does; the evenly-divided version doesn't produce the extra-payment effect, even though it feels similar in practice.</p>
+              <p>Borrowers also don't reassess this when their pay frequency changes — someone who moves from a fortnightly-paid role to a monthly-paid one (or vice versa) sometimes keeps a mismatched repayment schedule that's harder to manage against actual cash flow, even if the loan math itself is unaffected.</p>
+              <p>A third mistake: not combining this with an offset account. Since interest is calculated daily on most Australian loans, timing extra funds into an offset account between fortnightly pay cycles compounds the benefit further than the amortization effect alone.</p>
+
+              <h2>Where This Calculator Has Limits</h2>
+              <p>It assumes a constant variable rate for the full term, which isn't realistic on a variable-rate loan where the rate can move at any time — actual total interest saved will depend on the rate path over the full loan life, not just the current rate. It also doesn't factor in an offset account running alongside the loan, which many Australian borrowers use in combination with accelerated payment frequency.</p>
+
+              <h2>Frequently Asked Questions</h2>
+              <h3>Does fortnightly payment cost more per year than monthly?</h3>
+              <p>Yes, slightly — it's mathematically equivalent to one extra monthly payment annually, which is the entire mechanism behind the faster payoff.</p>
+
+              <h3>How do I know if my lender's fortnightly option actually accelerates payoff?</h3>
+              <p>Check whether the fortnightly amount equals exactly half your monthly repayment — if it's calculated as 1/26th of the annual total instead, there's no acceleration effect.</p>
+
+              <h3>Can I switch payment frequency without refinancing?</h3>
+              <p>Usually yes — most lenders allow a frequency change as a simple account adjustment, not a full refinance, though it's worth confirming there's no fee attached.</p>
+
+              <h3>Does this work the same way with weekly payments?</h3>
+              <p>Yes — weekly payments set at exactly a quarter of the monthly amount (52 payments = 13 monthly equivalents) produce nearly identical results to the fortnightly approach.</p>
+
+              <h3>Does my variable rate changing affect the payoff timeline shown here?</h3>
+              <p>Yes — a rate rise extends the effective payoff time (or increases required payments to hold the same timeline); a rate cut shortens it, since amortization schedules recalculate against whatever rate is currently in effect.</p>
+
+              <h2>Related Tools</h2>
+              <p>
+                <a href="/australia-mortgage-calculator.html">Mortgage Calculator</a> &middot;
+                <a href="/blog/australia-offset-account-calculator.html">Offset Account Calculator</a> &middot;
+                <a href="/blog/australia-refinance-tool.html">Refinance Tool</a>
+              </p>
+
+              <p class="disclaimer-text">
+                <em>Educational content, not financial advice. This example uses a specific loan scenario for illustration — confirm your actual repayment schedule and options with your lender. Written by the MortgagePro Global team.</em>
+              </p>
+            </div>
+          </article>
+
+        </div><!-- .main-content -->
+
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Advertisement sidebar">
+          <div class="ad-unit ad-sidebar" aria-label="Advertisement" role="complementary"></div>
+        </aside>
+
+      </div><!-- .page-layout -->
+    </div><!-- .container -->
+  </main>
+
+  <div data-component="footer"></div>
+</body>
+
+</html>

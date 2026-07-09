@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DEVWXRXJP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1DEVWXRXJP');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Prepayment Calculator: How Much Extra You Can Pay Before It Costs You | MortgagePro Global</title>
+  <meta name="description"
+    content="See how Canadian prepayment privileges work, why exceeding them on a closed mortgage triggers a real penalty, and how much interest a privilege-sized lump sum actually saves.">
+  <link rel="canonical" href="https://mortgageproglobal.com/blog/canada-prepayment-calculator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Prepayment Calculator: How Much Extra You Can Pay Before It Costs You | MortgagePro Global">
+  <meta property="og:description"
+    content="See how Canadian prepayment privileges work, why exceeding them on a closed mortgage triggers a real penalty, and how much interest a privilege-sized lump sum actually saves.">
+  <meta property="og:url" content="https://mortgageproglobal.com/blog/canada-prepayment-calculator.html">
+  <meta property="og:image" content="https://mortgageproglobal.com/images/og-home.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Prepayment Calculator: How Much Extra You Can Pay Before It Costs You">
+  <meta name="twitter:description"
+    content="Learn about Canadian mortgage prepayment rules, anniversary allowances, and penalty calculations.">
+  <meta name="twitter:image" content="https://mortgageproglobal.com/images/og-home.jpg">
+
+  <!-- Verification -->
+  <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
+  <meta name="msvalidate.01" content="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  <meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
+
+  <!-- Critical CSS -->
+  <style>
+    :root {
+      --page-primary: #0A2E1A;
+      --page-accent: #C8102E;
+      --page-bg: #F0F7F4;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: var(--page-bg);
+      color: var(--page-primary);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .skip-link:focus {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99999;
+      background: #0A2E1A;
+      color: #fff;
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    [data-component] {
+      min-height: 60px;
+    }
+
+    /* Article Styles */
+    .article-container {
+      background: #fff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      margin-bottom: 32px;
+    }
+
+    .article-meta {
+      font-size: 0.85rem;
+      color: #6B7280;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .article-content h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #F1F5F9;
+      padding-bottom: 8px;
+    }
+
+    .article-content h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.25rem;
+      color: #374151;
+      line-height: 1.75;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .article-content li {
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+
+    /* Table override to match Canada theme */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    thead {
+      background: var(--page-primary);
+      color: #fff;
+    }
+
+    th,
+    td {
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background-color: #F9FAFB;
+    }
+
+    .example-box {
+      background: #F4FAF6;
+      border-left: 4px solid var(--page-primary);
+      padding: 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+    }
+
+    .disclaimer-text {
+      font-size: 0.85rem;
+      color: #6B7280;
+      border-top: 1px solid #E5E7EB;
+      padding-top: 16px;
+      margin-top: 32px;
+    }
+
+    /* Dark Mode Overrides */
+    @media (prefers-color-scheme: dark) {
+      .article-container {
+        background: var(--bg-card, #1E293B);
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-content p,
+      .article-content li {
+        color: #D1D5DB;
+      }
+
+      .article-content h2 {
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .article-meta {
+        color: #9CA3AF;
+      }
+
+      .example-box {
+        background: #111C15;
+        border-left-color: #34D399;
+      }
+
+      tr:nth-child(even) {
+        background-color: #1A2421;
+      }
+
+      table {
+        background-color: #121B18;
+      }
+    }
+  </style>
+
+  <!-- Structured Data: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Prepayment Calculator: How Much Extra You Can Pay Before It Costs You",
+    "description": "See how Canadian prepayment privileges work, why exceeding them on a closed mortgage triggers a real penalty, and how much interest a privilege-sized lump sum actually saves.",
+    "image": "https://mortgageproglobal.com/images/og-home.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "REO Technologies Editorial Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "REO Technologies",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mortgageproglobal.com/images/logo.svg"
+      }
+    },
+    "datePublished": "2026-06-29",
+    "dateModified": "2026-06-29",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mortgageproglobal.com/blog/canada-prepayment-calculator.html"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mortgageproglobal.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mortgageproglobal.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Prepayment Calculator Guide", "item": "https://mortgageproglobal.com/blog/canada-prepayment-calculator.html" }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/accessibility.css">
+  <script src="/js/components.js" defer></script>
+  <script src="/js/rates.js" defer></script>
+  <script src="/js/accessibility.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-component="header"></div>
+
+  <!-- Hero -->
+  <section class="page-hero" aria-label="Page introduction">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li>Prepayment Guide</li>
+        </ol>
+      </nav>
+      <h1>Prepayment Calculator: How Much Extra You Can Pay Before It Costs You</h1>
+      <p class="subtitle">Understand prepayment allowances, Closed vs. Open differences, and the penalty guidelines.</p>
+    </div>
+  </section>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="page-layout">
+        <div class="main-content">
+
+          <article class="article-container">
+            <header>
+              <div class="article-meta">
+                <span><strong>Author:</strong> REO Technologies Editorial Team</span>
+                <span>•</span>
+                <span><strong>Published:</strong> June 29, 2026</span>
+                <span>•</span>
+                <span><strong>Category:</strong> Mortgage Basics</span>
+              </div>
+            </header>
+
+            <div class="article-content">
+              <p>Unlike some countries where paying down a mortgage early is simply free, most Canadian closed mortgages come with a specific annual limit on how much extra you can pay without penalty — a prepayment privilege, typically 10-20% of the original principal per year. Go past it, and the penalty on a fixed-rate mortgage can be a genuinely large number.</p>
+
+              <h2>How the Privilege Works</h2>
+              <p>Lenders set an annual prepayment privilege, commonly 15% or 20% of the <em>original</em> loan amount (not the current balance), resetting each year on your anniversary date. Some lenders also allow a separate "payment increase" privilege — raising your regular payment amount by a percentage, which compounds the effect over the term.</p>
+
+              <h2>Worked Example</h2>
+              <p>On the $520,000 original loan amount, with a 15% annual prepayment privilege:</p>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Item</th>
+                    <th>Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Original loan amount</td>
+                    <td>$520,000</td>
+                  </tr>
+                  <tr>
+                    <td>Annual privilege (15%)</td>
+                    <td>$78,000</td>
+                  </tr>
+                  <tr>
+                    <td>Lump sum applied in year 3</td>
+                    <td>$30,000 (within privilege)</td>
+                  </tr>
+                  <tr>
+                    <td>Approx. interest saved over remaining term</td>
+                    <td>~$14,000-$18,000</td>
+                  </tr>
+                  <tr>
+                    <td>Approx. time cut off amortization</td>
+                    <td><strong>~1.5-2 years</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>That $30,000 lump sum stays comfortably within the $78,000 annual allowance, so it's applied penalty-free, directly reducing principal.</p>
+
+              <h2>What Happens if You Go Over the Privilege</h2>
+              <p>On a closed, fixed-rate mortgage, exceeding your annual privilege triggers a penalty calculated as the <strong>greater of</strong>:</p>
+              <ul>
+                <li><strong>Three months' interest</strong> on the excess amount, or</li>
+                <li>The <strong>Interest Rate Differential (IRD)</strong> — roughly, the difference between your contract rate and the current rate the lender could get on a similar mortgage for your remaining term, applied to the excess amount and remaining time.</li>
+              </ul>
+              <p>The IRD can be substantial when rates have dropped significantly since you signed — which is often exactly when someone is motivated to prepay or refinance in the first place, since a bigger IRD often shows up alongside a lower available rate.</p>
+
+              <div class="example-box">
+                <strong>Variable-rate mortgages work differently:</strong> most variable-rate closed mortgages use only the three-months'-interest penalty, without an IRD calculation, since there's no fixed-rate spread to measure against. This makes breaking a variable mortgage meaningfully cheaper than breaking a fixed one, in most cases.
+              </div>
+
+              <h2>Common Mistakes</h2>
+              <p>Borrowers frequently assume their prepayment privilege resets on the calendar year — it typically resets on the mortgage's anniversary date instead, which can mean unused privilege from one year doesn't carry over, and a large prepayment made just before the anniversary might be smarter timed just after it, to get a fresh allowance sooner.</p>
+              <p>Borrowers also confuse "prepayment privilege" with "no penalty ever" — the privilege is specifically an <em>allowance</em>, not a full elimination of penalties; anything beyond it is still subject to the IRD or three-month-interest calculation.</p>
+              <p>A third mistake: not checking whether unused privilege is "use it or lose it." Most lenders don't allow you to bank an unused 15% allowance from one year into the next — it simply resets.</p>
+
+              <h2>Where This Calculator Has Limits</h2>
+              <p>It can't calculate your exact IRD penalty without your lender's specific posted rates and remaining term, since that formula is lender-proprietary and varies. It also assumes a standard closed mortgage — open mortgages typically allow unlimited prepayment without penalty, at the cost of a meaningfully higher interest rate.</p>
+
+              <h2>Frequently Asked Questions</h2>
+              <h3>Is there ever truly no penalty for prepaying?</h3>
+              <p>Yes — open mortgages allow unlimited prepayment penalty-free, though they carry higher rates than closed mortgages as a tradeoff.</p>
+
+              <h3>Does my privilege apply to lump sums, higher regular payments, or both?</h3>
+              <p>Depends on the lender — many separate these into two distinct privileges (e.g., 15% lump sum plus a 15% payment increase allowance), so check your specific mortgage documents.</p>
+
+              <h3>Can I estimate my IRD penalty myself?</h3>
+              <p>Roughly, but not precisely — your lender's exact posted-rate comparison table is needed for an accurate number; online estimates are directional only.</p>
+
+              <h3>Does prepaying always make sense?</h3>
+              <p>Usually it reduces total interest paid, but it's worth weighing against other uses of that cash — paying off higher-interest debt first, or maintaining an emergency fund, can sometimes be the better move.</p>
+
+              <h3>Do variable-rate mortgages have prepayment privileges too?</h3>
+              <p>Yes, typically similar percentage-based privileges, with a simpler three-months'-interest penalty (no IRD) for amounts exceeding the allowance.</p>
+
+              <h2>Related Tools</h2>
+              <p>
+                <a href="/blog/canada-amortization-calculator.html">Amortization Calculator</a> &middot;
+                <a href="/blog/canada-renewal-planner.html">Renewal Planner</a> &middot;
+                <a href="/canada-mortgage-calculator.html">Mortgage Calculator</a>
+              </p>
+
+              <p class="disclaimer-text">
+                <em>Educational content, not financial advice. Prepayment privileges and penalty calculations vary significantly by lender and mortgage type — confirm your specific terms with your mortgage documents or lender directly. Written by the MortgagePro Global team.</em>
+              </p>
+            </div>
+          </article>
+
+        </div><!-- .main-content -->
+
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Advertisement sidebar">
+          <div class="ad-unit ad-sidebar" aria-label="Advertisement" role="complementary"></div>
+        </aside>
+
+      </div><!-- .page-layout -->
+    </div><!-- .container -->
+  </main>
+
+  <div data-component="footer"></div>
+</body>
+
+</html>
