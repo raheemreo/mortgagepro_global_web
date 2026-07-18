@@ -1768,31 +1768,31 @@ p {
 }
 
 .country-card[href*="india"] .flag {
-  background-image: url('https://flagcdn.com/in.svg');
+  background-image: url('/images/flags/in.svg');
 }
 
 .country-card[href*="usa"] .flag {
-  background-image: url('https://flagcdn.com/us.svg');
+  background-image: url('/images/flags/us.svg');
 }
 
 .country-card[href*="canada"] .flag {
-  background-image: url('https://flagcdn.com/ca.svg');
+  background-image: url('/images/flags/ca.svg');
 }
 
 .country-card[href*="uk"] .flag {
-  background-image: url('https://flagcdn.com/gb.svg');
+  background-image: url('/images/flags/gb.svg');
 }
 
 .country-card[href*="australia"] .flag {
-  background-image: url('https://flagcdn.com/au.svg');
+  background-image: url('/images/flags/au.svg');
 }
 
 .country-card[href*="new-zealand"] .flag {
-  background-image: url('https://flagcdn.com/nz.svg');
+  background-image: url('/images/flags/nz.svg');
 }
 
 .country-card[href*="europe"] .flag {
-  background-image: url('https://flagcdn.com/eu.svg');
+  background-image: url('/images/flags/eu.svg');
 }
 
 .country-card h3 {
