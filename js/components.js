@@ -118,9 +118,9 @@
       document.head.appendChild(s);
     };
     if ('requestIdleCallback' in window) {
-      requestIdleCallback(initGTM);
+      requestIdleCallback(initGTM, { timeout: 1000 });
     } else {
-      setTimeout(initGTM, 1);
+      setTimeout(initGTM, 1000);
     }
   });
 })();
