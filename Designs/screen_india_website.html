@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>India Financial Tools – MortgagePro</title>
+<style>
+/* ═══════════════════════════════
+   TOKENS  —  Saffron · Ashoka · Deep Emerald
+═══════════════════════════════ */
+:root{
+  --saffron:  #FF6B00;
+  --saffron2: #E05A00;
+  --ochre:    #F5A623;
+  --ochre-lt: #FFDEA0;
+  --navy:     #0B1F48;
+  --chakra:   #1A3A8F;
+  --green:    #046A38;
+  --green2:   #07543A;
+  --teal:     #0D9488;
+  --white:    #FFFFFF;
+  --bg:       #FFF8F0;
+  --card:     #FFFFFF;
+  --muted:    #7A5C3A;
+  --border:   rgba(255,107,0,0.10);
+  --sh:       0 4px 20px rgba(11,31,72,0.09);
+  --sh2:      0 10px 40px rgba(11,31,72,0.18);
+}
+
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--navy);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+a{ text-decoration:none; color:inherit; }
+.wrap{ max-width:1240px; margin:0 auto; padding:0 32px; position:relative; z-index:1; }
+
+/* Decorative mandala background */
+body::before{
+  content:'';
+  position:fixed; top:0; left:0; width:100%; height:100%;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(255,107,0,0.04) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(4,106,56,0.04) 0%, transparent 50%);
+  pointer-events:none; z-index:0;
+}
+
+/* ═══════════════════════════════
+   TOP NAV
+═══════════════════════════════ */
+.topnav{
+  position:sticky; top:0; z-index:200;
+  background:rgba(11,31,72,0.92); backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  font-family:'Trebuchet MS',sans-serif;
+}
+.topnav .wrap{ display:flex; align-items:center; justify-content:space-between; height:68px; }
+.brand{ display:flex; align-items:center; gap:10px; font-weight:800; color:#fff; font-size:16px; }
+.brand .flag{ font-size:22px; }
+.nav-links{ display:flex; gap:26px; list-style:none; }
+.nav-links a{ font-size:13px; font-weight:600; color:rgba(255,255,255,0.65); transition:color .15s; }
+.nav-links a:hover, .nav-links a.active{ color:var(--ochre-lt); }
+.nav-actions{ display:flex; align-items:center; gap:12px; }
+.icon-btn{
+  width:36px; height:36px; border-radius:10px;
+  background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.20);
+  display:flex; align-items:center; justify-content:center;
+  font-size:16px; color:#fff; cursor:pointer;
+}
+.nav-cta{ background:linear-gradient(135deg, var(--saffron), var(--saffron2)); color:#fff; font-size:13px; font-weight:800; padding:10px 18px; border-radius:10px; cursor:pointer; border:none; }
+.nav-toggle{ display:none; width:36px; height:36px; border-radius:10px; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.20); color:#fff; font-size:18px; align-items:center; justify-content:center; cursor:pointer; }
+
+/* ═══════════════════════════════
+   HEADER / HERO
+═══════════════════════════════ */
+.header{
+  background: linear-gradient(158deg, #0B1F48 0%, #1A3A8F 40%, #FF6B00 82%, #E05A00 100%);
+  padding: 56px 0 0;
+  position: relative; overflow: hidden;
+}
+.header::before{
+  content:'☸';
+  position:absolute; right:2%; top:20px;
+  font-size:220px; color:rgba(255,255,255,0.06);
+  line-height:1;
+}
+.header::after{
+  content:'';
+  position:absolute; bottom:0; left:0; width:100%; height:4px;
+  background: linear-gradient(90deg, #FF6B00 33.3%, #FFFFFF 33.3% 66.6%, #046A38 66.6%);
+}
+.header-inner{ display:grid; grid-template-columns:1.1fr .9fr; gap:44px; align-items:center; position:relative; z-index:2; padding-bottom:36px; }
+.hdr-eyebrow{
+  display:inline-flex; align-items:center; gap:8px;
+  background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.20);
+  padding:6px 14px; border-radius:20px; font-size:11px; font-weight:700;
+  color:#fff; letter-spacing:.4px; text-transform:uppercase; margin-bottom:18px;
+  font-family:'Trebuchet MS',sans-serif;
+}
+.hdr-h1{ font-size:40px; font-weight:800; color:#fff; line-height:1.15; margin-bottom:14px; letter-spacing:-.5px; }
+.hdr-h1 span{ color:var(--ochre-lt); }
+.hdr-p{ font-size:15px; color:rgba(255,255,255,0.65); max-width:460px; margin-bottom:24px; font-family:'Trebuchet MS',sans-serif; }
+.hdr-btns{ display:flex; gap:12px; }
+.btn-primary{
+  background:linear-gradient(135deg, var(--saffron), var(--saffron2));
+  color:#fff; border:none; padding:14px 24px; border-radius:12px;
+  font-size:14px; font-weight:800; cursor:pointer;
+  box-shadow:0 4px 18px rgba(255,107,0,0.42);
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; letter-spacing:.3px;
+}
+.btn-ghost{ background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.25); color:#fff; padding:14px 24px; border-radius:12px; font-size:14px; font-weight:700; cursor:pointer; font-family:'Trebuchet MS',sans-serif; }
+
+/* Rate strip */
+.rate-strip{
+  background:rgba(255,255,255,0.10); border:1px solid rgba(255,255,255,0.14);
+  border-radius:16px; padding:18px 22px;
+  display:grid; grid-template-columns:repeat(4,1fr);
+  position:relative; z-index:2;
+}
+.rs{ text-align:center; position:relative; padding:0 6px; }
+.rs:not(:last-child)::after{
+  content:''; position:absolute; right:0; top:15%;
+  height:70%; width:1px; background:rgba(255,255,255,0.13);
+}
+.rs-l{ font-size:10px; color:rgba(255,255,255,0.5); text-transform:uppercase; letter-spacing:.5px; font-family:'Trebuchet MS',sans-serif; margin-bottom:4px; }
+.rs-v{ font-size:19px; font-weight:800; color:#fff; line-height:1.15; }
+.rs-v.saf{ color:var(--ochre-lt); }
+.rs-v.grn{ color:#86EFAC; }
+.rs-v.up::after{ content:'↑'; font-size:11px; color:#86EFAC; }
+.rs-v.dn::after{ content:'↓'; font-size:11px; color:#FCA5A5; }
+.rs-n{ font-size:10px; color:rgba(255,255,255,0.4); margin-top:2px; font-family:'Trebuchet MS',sans-serif; }
+
+/* Hero calculator card */
+.hero{
+  background:linear-gradient(148deg, var(--navy), var(--chakra));
+  border-radius:22px; padding:28px;
+  position:relative; overflow:hidden; box-shadow:var(--sh2);
+}
+.hero::before{
+  content:''; position:absolute; top:-50px; right:-50px;
+  width:200px; height:200px; border-radius:50%;
+  background:rgba(255,107,0,0.16);
+}
+.hero::after{
+  content:'☸'; position:absolute; right:18px; bottom:14px;
+  font-size:70px; color:rgba(255,255,255,0.06);
+}
+.h-tag{ font-size:11px; color:rgba(255,255,255,0.45); text-transform:uppercase; letter-spacing:.8px; font-family:'Trebuchet MS',sans-serif; }
+.h-title{ font-size:22px; font-weight:800; color:#fff; margin:8px 0 18px; line-height:1.25; }
+.h-title span{ color:var(--ochre-lt); }
+.h-row{ display:flex; gap:10px; }
+.h-box{
+  flex:1; background:rgba(255,255,255,0.09); border:1px solid rgba(255,255,255,0.14);
+  border-radius:12px; padding:11px 12px;
+}
+.h-box label{ font-size:10px; color:rgba(255,255,255,0.45); display:block; margin-bottom:3px; font-family:'Trebuchet MS',sans-serif; }
+.h-box .v{ font-size:15px; font-weight:800; color:#fff; }
+.h-btn{
+  margin-top:18px; width:100%;
+  background:linear-gradient(135deg, var(--saffron), var(--saffron2));
+  border:none; border-radius:13px; padding:15px;
+  font-size:14px; font-weight:800; color:#fff; cursor:pointer;
+  box-shadow:0 6px 20px rgba(255,107,0,0.42);
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; letter-spacing:.3px;
+}
+
+/* ═══════════════════════════════
+   CONTENT
+═══════════════════════════════ */
+.content{ padding:56px 0; position:relative; z-index:1; }
+.section{ margin-bottom:52px; }
+.sec{
+  font-size:13px; font-weight:800; color:var(--muted);
+  text-transform:uppercase; letter-spacing:1.2px;
+  margin-bottom:20px; display:flex; align-items:baseline; justify-content:space-between;
+  font-family:'Trebuchet MS',sans-serif;
+}
+.sec .more{ font-size:13px; font-weight:600; color:var(--saffron); text-transform:none; letter-spacing:0; cursor:pointer; }
+
+/* RBI banner */
+.rbi-banner{
+  background:linear-gradient(135deg, var(--navy), var(--chakra));
+  border-radius:18px; padding:22px 24px;
+  display:flex; align-items:center; gap:16px;
+  box-shadow:var(--sh2);
+}
+.rb-icon{ font-size:32px; }
+.rb-lbl{ font-size:10.5px; text-transform:uppercase; letter-spacing:.6px; color:rgba(255,255,255,0.44); font-weight:700; font-family:'Trebuchet MS',sans-serif; }
+.rb-val{ font-size:26px; font-weight:800; color:var(--ochre-lt); line-height:1; margin:3px 0; }
+.rb-sub{ font-size:11px; color:rgba(255,255,255,0.5); font-family:'Trebuchet MS',sans-serif; }
+.rb-btn{ margin-left:auto; background:var(--saffron); color:#fff; font-size:12px; font-weight:800; padding:10px 16px; border-radius:9px; white-space:nowrap; flex-shrink:0; font-family:'Trebuchet MS',sans-serif; cursor:pointer; border:none; }
+
+/* Market ticker */
+.ticker{
+  background:var(--card); border-radius:18px; padding:22px 24px;
+  box-shadow:var(--sh); border:1px solid var(--border);
+}
+.ticker-title{
+  font-size:14px; font-weight:800; color:var(--navy); margin-bottom:16px;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.ticker-title span{ font-size:11px; font-weight:600; color:var(--saffron); font-family:'Trebuchet MS',sans-serif; }
+.tick-grid{ display:grid; grid-template-columns:repeat(6,1fr); gap:14px; }
+.tick-item{ text-align:center; }
+.tick-nm{ font-size:10px; color:var(--muted); font-weight:700; text-transform:uppercase; letter-spacing:.4px; font-family:'Trebuchet MS',sans-serif; }
+.tick-v{ font-size:16px; font-weight:800; color:var(--navy); margin:4px 0; }
+.tick-c{ font-size:11px; font-weight:700; font-family:'Trebuchet MS',sans-serif; }
+.up{ color:var(--green); } .dn{ color:var(--saffron2); }
+
+/* Horizontal rate cards -> grid */
+.hscroll{ display:grid; grid-template-columns:repeat(7,1fr); gap:12px; }
+.mrc{
+  background:var(--card);
+  border-radius:16px; padding:16px 14px;
+  box-shadow:var(--sh); border:1px solid var(--border); cursor:pointer;
+  transition:transform .15s;
+}
+.mrc:hover{ transform:translateY(-3px); }
+.mrc-icon{ font-size:24px; margin-bottom:8px; display:block; }
+.mrc-lbl{ font-size:10px; color:var(--muted); font-weight:700; text-transform:uppercase; letter-spacing:.4px; font-family:'Trebuchet MS',sans-serif; }
+.mrc-val{ font-size:19px; font-weight:800; color:var(--navy); margin:3px 0; }
+.mrc-sub{ font-size:10px; color:var(--muted); font-family:'Trebuchet MS',sans-serif; }
+.mrc-chg{ font-size:10px; font-weight:700; margin-top:5px; font-family:'Trebuchet MS',sans-serif; }
+
+/* Grid tools */
+.g2{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+.g3{ display:grid; grid-template-columns:repeat(6,1fr); gap:14px; }
+
+.tc{
+  background:var(--card); border-radius:18px; padding:20px 18px;
+  box-shadow:var(--sh); border:1px solid var(--border);
+  cursor:pointer; position:relative; overflow:hidden; transition:transform .15s, box-shadow .15s;
+}
+.tc:hover{ transform:translateY(-3px); box-shadow:var(--sh2); }
+.tc.nv{ background:linear-gradient(140deg, var(--navy), var(--chakra)); }
+.tc.sf{ background:linear-gradient(140deg, var(--saffron), var(--saffron2)); }
+.tc.gr{ background:linear-gradient(140deg, var(--green), var(--green2)); }
+.tc.tl{ background:linear-gradient(140deg, #0D9488, #0F766E); }
+.tc.oc{ background:linear-gradient(140deg, var(--ochre), #B45309); }
+.tc.sl{ background:linear-gradient(140deg, #334155, #1E293B); }
+.tc.mg{ background:linear-gradient(140deg, #9333EA, #6D28D9); }
+.tc.rose{ background:linear-gradient(140deg, #BE185D, #9D174D); }
+
+.ti{
+  width:42px; height:42px; border-radius:12px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:19px; margin-bottom:12px;
+}
+.tc:not(.nv):not(.sf):not(.gr):not(.tl):not(.oc):not(.sl):not(.mg):not(.rose) .ti{ background:rgba(255,107,0,0.08); }
+.tc.nv .ti,.tc.sf .ti,.tc.gr .ti,.tc.tl .ti,.tc.oc .ti,.tc.sl .ti,.tc.mg .ti,.tc.rose .ti{ background:rgba(255,255,255,0.14); }
+
+.tn{ font-size:14px; font-weight:800; color:var(--navy); line-height:1.25; }
+.tc.nv .tn,.tc.sf .tn,.tc.gr .tn,.tc.tl .tn,.tc.oc .tn,.tc.sl .tn,.tc.mg .tn,.tc.rose .tn{ color:#fff; }
+.td{ font-size:11px; color:var(--muted); margin-top:4px; font-family:'Trebuchet MS',sans-serif; }
+.tc.nv .td,.tc.sf .td,.tc.gr .td,.tc.tl .td,.tc.oc .td,.tc.sl .td,.tc.mg .td,.tc.rose .td{ color:rgba(255,255,255,0.60); }
+.ta{ position:absolute; bottom:16px; right:16px; font-size:16px; color:rgba(11,31,72,0.16); }
+.tc.nv .ta,.tc.sf .ta,.tc.gr .ta,.tc.tl .ta,.tc.oc .ta,.tc.sl .ta,.tc.mg .ta,.tc.rose .ta{ color:rgba(255,255,255,0.24); }
+
+.bge{ display:inline-flex; padding:3px 8px; border-radius:20px; font-size:10px; font-weight:700; margin-top:6px; font-family:'Trebuchet MS',sans-serif; }
+.bge-s{ background:#FFF3E0; color:#E05A00; }
+.bge-g{ background:#ECFDF5; color:#065F46; }
+.bge-b{ background:#EFF6FF; color:#1D4ED8; }
+.bge-r{ background:#FEF2F2; color:#B91C1C; }
+.bge-o{ background:#FFF7ED; color:#C2410C; }
+.bge-m{ background:#F5F3FF; color:#6D28D9; }
+
+/* Special banners */
+.pmay-banner{
+  background:linear-gradient(135deg, #ECFDF5, #D1FAE5);
+  border:1.5px solid #6EE7B7; border-radius:18px;
+  padding:20px 24px; display:flex; align-items:center; gap:16px;
+}
+.pb-icon{ font-size:28px; }
+.pb-title{ font-size:14px; font-weight:800; color:var(--green2); }
+.pb-sub{ font-size:11px; color:var(--green); margin-top:3px; font-family:'Trebuchet MS',sans-serif; }
+.pb-btn{ margin-left:auto; background:var(--green); color:#fff; font-size:12px; font-weight:800; padding:10px 16px; border-radius:9px; white-space:nowrap; flex-shrink:0; font-family:'Trebuchet MS',sans-serif; cursor:pointer; border:none; }
+
+.gst-banner{
+  background:linear-gradient(135deg, #FFF3E0, #FFEDD5);
+  border:1.5px solid #FDBA74; border-radius:18px;
+  padding:20px 24px; display:flex; align-items:center; gap:16px;
+  margin-top:14px;
+}
+.gb-icon{ font-size:28px; }
+.gb-title{ font-size:14px; font-weight:800; color:#9A3412; }
+.gb-sub{ font-size:11px; color:#C2410C; margin-top:3px; font-family:'Trebuchet MS',sans-serif; }
+.gb-btn{ margin-left:auto; background:var(--saffron); color:#fff; font-size:12px; font-weight:800; padding:10px 16px; border-radius:9px; white-space:nowrap; flex-shrink:0; font-family:'Trebuchet MS',sans-serif; cursor:pointer; border:none; }
+
+/* City scroll -> grid */
+.city-scroll{ display:grid; grid-template-columns:repeat(6,1fr); gap:14px; }
+.city-card{
+  background:var(--card);
+  border-radius:16px; padding:16px 14px;
+  box-shadow:var(--sh); border:1px solid var(--border); cursor:pointer;
+  transition:transform .15s;
+}
+.city-card:hover{ transform:translateY(-3px); }
+.city-icon{ font-size:26px; margin-bottom:8px; display:block; }
+.city-name{ font-size:13px; font-weight:800; color:var(--navy); }
+.city-sub{ font-size:10px; color:var(--muted); margin-top:3px; font-family:'Trebuchet MS',sans-serif; }
+.city-price{ font-size:15px; font-weight:800; color:var(--saffron); margin-top:8px; }
+.city-chg{ font-size:10px; font-weight:700; font-family:'Trebuchet MS',sans-serif; }
+
+/* Info list */
+.ilist{ display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+.ic{
+  background:var(--card); border-radius:16px; padding:18px;
+  box-shadow:var(--sh); border:1px solid var(--border);
+  display:flex; align-items:center; gap:14px; cursor:pointer;
+  transition:transform .15s;
+}
+.ic:hover{ transform:translateY(-2px); }
+.ii{ width:44px; height:44px; border-radius:12px; background:rgba(255,107,0,0.07); display:flex; align-items:center; justify-content:center; font-size:19px; flex-shrink:0; }
+.in{ font-size:14px; font-weight:800; color:var(--navy); }
+.is{ font-size:11px; color:var(--muted); margin-top:3px; font-family:'Trebuchet MS',sans-serif; }
+.ich{ font-size:19px; color:rgba(11,31,72,0.18); margin-left:auto; }
+
+/* Lender cards -> grid */
+.lender-scroll{ display:grid; grid-template-columns:repeat(7,1fr); gap:12px; }
+.lc{
+  background:var(--card);
+  border-radius:16px; padding:16px 14px;
+  box-shadow:var(--sh); border:1px solid var(--border); cursor:pointer;
+  transition:transform .15s;
+}
+.lc:hover{ transform:translateY(-3px); }
+.lc-icon{ font-size:24px; margin-bottom:8px; display:block; }
+.lc-name{ font-size:12.5px; font-weight:800; color:var(--navy); }
+.lc-rate{ font-size:18px; font-weight:800; color:var(--saffron); margin:4px 0; }
+.lc-type{ font-size:10px; color:var(--muted); font-family:'Trebuchet MS',sans-serif; }
+
+/* ═══════════════════════════════
+   FOOTER
+═══════════════════════════════ */
+.site-footer{ background:var(--navy); color:rgba(255,255,255,0.6); padding:48px 0 28px; font-family:'Trebuchet MS',sans-serif; }
+.footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:32px; margin-bottom:32px; }
+.footer-brand{ color:#fff; font-weight:800; font-size:16px; margin-bottom:10px; display:flex; align-items:center; gap:8px; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+.footer-desc{ font-size:12px; line-height:1.6; max-width:280px; }
+.footer-col h4{ font-size:12px; color:#fff; text-transform:uppercase; letter-spacing:.6px; margin-bottom:14px; }
+.footer-col ul{ list-style:none; display:flex; flex-direction:column; gap:9px; }
+.footer-col a{ font-size:12.5px; color:rgba(255,255,255,0.6); transition:color .15s; }
+.footer-col a:hover{ color:var(--ochre-lt); }
+.footer-bottom{ border-top:1px solid rgba(255,255,255,0.1); padding-top:22px; display:flex; justify-content:space-between; font-size:11.5px; flex-wrap:wrap; gap:10px; }
+
+/* ═══ ANIMATIONS ═══ */
+@keyframes fadeUp{ from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);} }
+.fu1{ animation:fadeUp .38s ease both .04s; }
+.fu2{ animation:fadeUp .38s ease both .09s; }
+.fu3{ animation:fadeUp .38s ease both .14s; }
+.fu4{ animation:fadeUp .38s ease both .19s; }
+.fu5{ animation:fadeUp .38s ease both .24s; }
+.fu6{ animation:fadeUp .38s ease both .29s; }
+.fu7{ animation:fadeUp .38s ease both .34s; }
+.fu8{ animation:fadeUp .38s ease both .39s; }
+.fu9{ animation:fadeUp .38s ease both .44s; }
+
+/* ═══════════════════════════════
+   RESPONSIVE
+═══════════════════════════════ */
+@media (max-width:1080px){
+  .g2{ grid-template-columns:repeat(3,1fr); }
+  .g3, .hscroll, .city-scroll, .lender-scroll{ grid-template-columns:repeat(4,1fr); }
+  .tick-grid{ grid-template-columns:repeat(3,1fr); }
+}
+@media (max-width:980px){
+  .header-inner{ grid-template-columns:1fr; }
+  .footer-grid{ grid-template-columns:1fr 1fr; }
+  .ilist{ grid-template-columns:1fr; }
+}
+@media (max-width:760px){
+  .nav-links{ display:none; }
+  .nav-toggle{ display:flex; }
+  .wrap{ padding:0 20px; }
+  .hdr-h1{ font-size:30px; }
+  .rate-strip{ grid-template-columns:repeat(2,1fr); row-gap:14px; }
+  .rs:nth-child(2)::after{ display:none; }
+  .g2{ grid-template-columns:repeat(2,1fr); }
+  .g3, .hscroll, .city-scroll, .lender-scroll{ grid-template-columns:repeat(2,1fr); }
+  .tick-grid{ grid-template-columns:repeat(2,1fr); }
+  .footer-grid{ grid-template-columns:1fr; }
+  .hdr-btns{ flex-direction:column; }
+}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="wrap">
+    <div class="brand"><span class="flag">🇮🇳</span> India Financial Tools</div>
+    <ul class="nav-links">
+      <li><a href="#" class="active">EMI Calculator</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#cities">Cities</a></li>
+      <li><a href="#lenders">Lenders</a></li>
+      <li><a href="#resources">Resources</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="icon-btn">🔔</div>
+      <button class="nav-cta">Get Started</button>
+      <div class="nav-toggle">☰</div>
+    </div>
+  </div>
+</nav>
+
+<header class="header">
+  <div class="wrap">
+    <div class="header-inner">
+      <div>
+        <div class="hdr-eyebrow">INR · RBI · Home Loan · EMI · GST · Stamp Duty</div>
+        <h1 class="hdr-h1">Your home loan,<br>simplified for <span>India</span></h1>
+        <p class="hdr-p">Calculate EMIs, check PMAY eligibility, compare bank rates, and navigate stamp duty, GST, and tax deductions — all in one place.</p>
+        <div class="hdr-btns">
+          <button class="btn-primary">☸ Calculate Home Loan EMI</button>
+          <button class="btn-ghost">Explore Tools</button>
+        </div>
+      </div>
+      <div class="hero">
+        <div class="h-tag">भारत Home Loan EMI Calculator</div>
+        <div class="h-title">Calculate your <span>Home Loan EMI</span> with processing fees</div>
+        <div class="h-row">
+          <div class="h-box"><label>Loan Amount</label><div class="v">₹50 L</div></div>
+          <div class="h-box"><label>Interest Rate</label><div class="v">8.50%</div></div>
+          <div class="h-box"><label>Tenure</label><div class="v">20 yr</div></div>
+        </div>
+        <button class="h-btn">☸ Calculate Home Loan EMI</button>
+      </div>
+    </div>
+
+    <div class="rate-strip">
+      <div class="rs"><div class="rs-l">Repo Rate</div><div class="rs-v saf">6.50%</div><div class="rs-n">RBI 2024</div></div>
+      <div class="rs"><div class="rs-l">Home Loan</div><div class="rs-v dn">8.50%</div><div class="rs-n">SBI Avg</div></div>
+      <div class="rs"><div class="rs-l">CPI Inflation</div><div class="rs-v grn">5.10%</div><div class="rs-n">Apr 2024</div></div>
+      <div class="rs"><div class="rs-l">Sensex</div><div class="rs-v up">74,683</div><div class="rs-n">BSE</div></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap content">
+
+  <section class="section">
+    <div class="sec fu2">Reserve Bank of India <span class="more">RBI Policy →</span></div>
+    <div class="rbi-banner fu2">
+      <div class="rb-icon">🏛️</div>
+      <div>
+        <div class="rb-lbl">RBI Repo Rate · Monetary Policy</div>
+        <div class="rb-val">6.50%</div>
+        <div class="rb-sub">Next MPC Meeting: Jun 7 · Rate cut expected Q3 2024</div>
+      </div>
+      <button class="rb-btn">RBI Live</button>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sec fu2">Market Snapshot <span class="more">Full →</span></div>
+    <div class="ticker fu3">
+      <div class="ticker-title">Indian Financial Markets <span>● Live</span></div>
+      <div class="tick-grid">
+        <div class="tick-item"><div class="tick-nm">Sensex</div><div class="tick-v">74,683</div><div class="tick-c up">+0.55%</div></div>
+        <div class="tick-item"><div class="tick-nm">Nifty 50</div><div class="tick-v">22,643</div><div class="tick-c up">+0.48%</div></div>
+        <div class="tick-item"><div class="tick-nm">USD/INR</div><div class="tick-v">83.52</div><div class="tick-c dn">+0.12%</div></div>
+        <div class="tick-item"><div class="tick-nm">Nifty Realty</div><div class="tick-v">897.4</div><div class="tick-c up">+1.20%</div></div>
+        <div class="tick-item"><div class="tick-nm">10-Yr G-Sec</div><div class="tick-v">7.05%</div><div class="tick-c dn">-0.02</div></div>
+        <div class="tick-item"><div class="tick-nm">Gold (10g)</div><div class="tick-v">₹72,400</div><div class="tick-c up">+0.30%</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sec fu3">Live Bank Home Loan Rates <span class="more">Compare All →</span></div>
+    <div class="hscroll fu4">
+      <div class="mrc"><span class="mrc-icon">🏦</span><div class="mrc-lbl">SBI</div><div class="mrc-val">8.50%</div><div class="mrc-sub">State Bank</div><div class="mrc-chg up">↓ Best</div></div>
+      <div class="mrc"><span class="mrc-icon">🏛️</span><div class="mrc-lbl">HDFC Bank</div><div class="mrc-val">8.70%</div><div class="mrc-sub">Floating</div><div class="mrc-chg dn">↑ +0.20</div></div>
+      <div class="mrc"><span class="mrc-icon">🏢</span><div class="mrc-lbl">ICICI Bank</div><div class="mrc-val">8.75%</div><div class="mrc-sub">Floating</div><div class="mrc-chg dn">↑ +0.25</div></div>
+      <div class="mrc"><span class="mrc-icon">🏦</span><div class="mrc-lbl">Axis Bank</div><div class="mrc-val">8.75%</div><div class="mrc-sub">Floating</div><div class="mrc-chg dn">↑ +0.25</div></div>
+      <div class="mrc"><span class="mrc-icon">🏗️</span><div class="mrc-lbl">LIC HFL</div><div class="mrc-val">8.65%</div><div class="mrc-sub">HFC</div><div class="mrc-chg up">↓ -0.05</div></div>
+      <div class="mrc"><span class="mrc-icon">🌿</span><div class="mrc-lbl">PNB HFL</div><div class="mrc-val">8.99%</div><div class="mrc-sub">HFC</div><div class="mrc-chg" style="color:var(--muted)">Stable</div></div>
+      <div class="mrc"><span class="mrc-icon">🏦</span><div class="mrc-lbl">Kotak</div><div class="mrc-val">8.85%</div><div class="mrc-sub">Private</div><div class="mrc-chg dn">↑ +0.15</div></div>
+    </div>
+  </section>
+
+  <section class="section" id="tools">
+    <div class="sec fu4">Core Home Loan Tools <span class="more">All →</span></div>
+    <div class="g2 fu4">
+      <div class="tc nv"><div class="ti">🏠</div><div class="tn">EMI Calculator</div><div class="td">Monthly installment</div><div class="bge bge-s">₹ INR</div><div class="ta">›</div></div>
+      <div class="tc"><div class="ti">📊</div><div class="tn">Amortization</div><div class="td">Full repayment schedule</div><div class="ta">›</div></div>
+      <div class="tc"><div class="ti">💰</div><div class="tn">Loan Eligibility</div><div class="td">Max loan on salary</div><div class="bge bge-g">FOIR Check</div><div class="ta">›</div></div>
+      <div class="tc sf"><div class="ti">📅</div><div class="tn">Prepayment Calc</div><div class="td">Part payment savings</div><div class="ta">›</div></div>
+      <div class="tc"><div class="ti">🔄</div><div class="tn">Balance Transfer</div><div class="td">Switch bank savings</div><div class="ta">›</div></div>
+      <div class="tc gr"><div class="ti">📈</div><div class="tn">FOIR Calculator</div><div class="td">Fixed obligation ratio</div><div class="ta">›</div></div>
+      <div class="tc"><div class="ti">🏗️</div><div class="tn">Under Construction</div><div class="td">Pre-EMI vs full EMI</div><div class="ta">›</div></div>
+      <div class="tc oc"><div class="ti">🤝</div><div class="tn">Joint Loan Calc</div><div class="td">Co-applicant benefit</div><div class="ta">›</div></div>
+      <div class="tc"><div class="ti">📉</div><div class="tn">Floating vs Fixed</div><div class="td">Rate type comparison</div><div class="ta">›</div></div>
+      <div class="tc tl"><div class="ti">🏎️</div><div class="tn">Car Loan EMI</div><div class="td">Vehicle financing</div><div class="ta">›</div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sec fu5">Govt. Housing Schemes <span class="more">All Schemes →</span></div>
+    <div class="pmay-banner fu5">
+      <div class="pb-icon">🏡</div>
+      <div>
+        <div class="pb-title">PMAY – Pradhan Mantri Awas Yojana</div>
+        <div class="pb-sub">Interest subsidy up to ₹2.67 Lakh · EWS/LIG/MIG eligible</div>
+      </div>
+      <button class="pb-btn">Check Eligibility</button>
+    </div>
+    <div class="gst-banner fu5">
+      <div class="gb-icon">📋</div>
+      <div>
+        <div class="gb-title">GST on Property Purchase</div>
+        <div class="gb-sub">Under-construction: 5% GST · Ready possession: Nil · RERA check</div>
+      </div>
+      <button class="gb-btn">GST Calc</button>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="g2 fu5">
+      <div class="tc nv"><div class="ti">🏛️</div><div class="tn">Stamp Duty Calc</div><div class="td">State-wise stamp duty</div><div class="bge bge-s">All States</div><div class="ta">›</div></div>
+      <div class="tc"><div class="ti">📋</div><div class="tn">GST Calculator</div><div class="td">Under-constr. 5%</div><div class="ta">›</div></div>
+      <div class="tc"><div class="ti">🏠</div><div class="tn">PMAY Subsidy</div><div class="td">Interest subsidy calc</div><div class="bge bge-g">₹2.67L max</div><div class="ta">›</div></div>
+      <div class="tc gr"><div class="ti">📜</div><div class="tn">Section 80C</div><div class="td">Principal tax deduction</div><div class="ta">›</div></div>
+      <div class="tc"><div class="ti">📝</div><div class="tn">Section 24(b)</div><div class="td">Interest deduction ₹2L</div><div class="ta">›</div></div>
+      <div class="tc sf"><div class="ti">🏗️</div><div class="tn">RERA Compliance</div><div class="td">Project verification</div><div class="ta">›</div></div>
+      <div class="tc"><div class="ti">💳</div><div class="tn">CIBIL Score Impact</div><div class="td">Score → loan rate</div><div class="bge bge-b">750+ ideal</div><div class="ta">›</div></div>
+      <div class="tc tl"><div class="ti">🎁</div><div class="tn">First-Home Buyer</div><div class="td">Sec 80EE · ₹50K extra</div><div class="ta">›</div></div>
+      <div class="tc sl"><div class="ti">📊</div><div class="tn">TDS on Property</div><div class="td">1% TDS &gt;₹50L</div><div class="ta">›</div></div>
+      <div class="tc mg"><div class="ti">🔑</div><div class="tn">Capital Gains Tax</div><div class="td">LTCG / STCG calc</div><div class="ta">›</div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sec fu6">Personal Finance <span class="more">All →</span></div>
+    <div class="g2 fu6">
+      <div class="tc nv"><div class="ti">💼</div><div class="tn">Personal Loan EMI</div><div class="td">Unsecured loan calc</div><div class="ta">›</div></div>
+      <div class="tc"><div class="ti">📚</div><div class="tn">Education Loan</div><div class="td">80E tax benefit</div><div class="ta">›</div></div>
+      <div class="tc"><div class="ti">💰</div><div class="tn">PPF Calculator</div><div class="td">Public Provident Fund</div><div class="bge bge-g">7.1% PA</div><div class="ta">›</div></div>
+      <div class="tc oc"><div class="ti">🏆</div><div class="tn">EPF Calculator</div><div class="td">Provident Fund returns</div><div class="ta">›</div></div>
+      <div class="tc"><div class="ti">📈</div><div class="tn">SIP Calculator</div><div class="td">Mutual fund returns</div><div class="ta">›</div></div>
+      <div class="tc gr"><div class="ti">🏖️</div><div class="tn">NPS Calculator</div><div class="td">National Pension Scheme</div><div class="ta">›</div></div>
+      <div class="tc"><div class="ti">🧾</div><div class="tn">Income Tax Calc</div><div class="td">Old vs New regime</div><div class="bge bge-o">FY 2024–25</div><div class="ta">›</div></div>
+      <div class="tc rose"><div class="ti">💎</div><div class="tn">Gold Loan Calc</div><div class="td">LTV · EMI on gold</div><div class="ta">›</div></div>
+      <div class="tc"><div class="ti">🏪</div><div class="tn">LAP Calculator</div><div class="td">Loan Against Property</div><div class="ta">›</div></div>
+      <div class="tc tl"><div class="ti">🤖</div><div class="tn">India AI Advisor</div><div class="td">RBI · PMAY · 80C guidance</div><div class="ta">›</div></div>
+    </div>
+  </section>
+
+  <section class="section" id="cities">
+    <div class="sec fu7">City Property Prices <span class="more">All Cities →</span></div>
+    <div class="city-scroll fu7">
+      <div class="city-card"><span class="city-icon">🌆</span><div class="city-name">Mumbai</div><div class="city-sub">Maharashtra</div><div class="city-price">₹22,400/sqft</div><div class="city-chg up">↑ +3.2%</div></div>
+      <div class="city-card"><span class="city-icon">🏙️</span><div class="city-name">Delhi NCR</div><div class="city-sub">Delhi/Noida/Gurgaon</div><div class="city-price">₹12,800/sqft</div><div class="city-chg up">↑ +4.1%</div></div>
+      <div class="city-card"><span class="city-icon">💻</span><div class="city-name">Bengaluru</div><div class="city-sub">Karnataka</div><div class="city-price">₹11,500/sqft</div><div class="city-chg up">↑ +5.8%</div></div>
+      <div class="city-card"><span class="city-icon">🌊</span><div class="city-name">Chennai</div><div class="city-sub">Tamil Nadu</div><div class="city-price">₹8,200/sqft</div><div class="city-chg up">↑ +2.4%</div></div>
+      <div class="city-card"><span class="city-icon">🏗️</span><div class="city-name">Hyderabad</div><div class="city-sub">Telangana</div><div class="city-price">₹9,100/sqft</div><div class="city-chg up">↑ +6.2%</div></div>
+      <div class="city-card"><span class="city-icon">🌸</span><div class="city-name">Pune</div><div class="city-sub">Maharashtra</div><div class="city-price">₹8,600/sqft</div><div class="city-chg up">↑ +4.5%</div></div>
+      <div class="city-card"><span class="city-icon">🎶</span><div class="city-name">Kolkata</div><div class="city-sub">West Bengal</div><div class="city-price">₹6,400/sqft</div><div class="city-chg up">↑ +1.9%</div></div>
+      <div class="city-card"><span class="city-icon">🌴</span><div class="city-name">Ahmedabad</div><div class="city-sub">Gujarat</div><div class="city-price">₹5,800/sqft</div><div class="city-chg up">↑ +3.6%</div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sec fu7">Stamp Duty by State <span class="more">All States →</span></div>
+    <div class="g3 fu7">
+      <div class="tc"><div class="ti">🌆</div><div class="tn">Maharashtra</div><div class="td">5–6% + Metro</div><div class="ta">›</div></div>
+      <div class="tc nv"><div class="ti">🏙️</div><div class="tn">Delhi</div><div class="td">4% Women · 6% Men</div><div class="ta">›</div></div>
+      <div class="tc"><div class="ti">💻</div><div class="tn">Karnataka</div><div class="td">5% + Reg 1%</div><div class="ta">›</div></div>
+      <div class="tc sf"><div class="ti">🌊</div><div class="tn">Tamil Nadu</div><div class="td">7% + Reg 4%</div><div class="ta">›</div></div>
+      <div class="tc"><div class="ti">🏗️</div><div class="tn">Telangana</div><div class="td">4% + Reg 0.5%</div><div class="ta">›</div></div>
+      <div class="tc gr"><div class="ti">🗺️</div><div class="tn">All 28 States</div><div class="td">Complete state guide</div><div class="ta">›</div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sec fu8">NRI Home Loan Tools <span class="more">NRI Guide →</span></div>
+    <div class="g2 fu8">
+      <div class="tc nv"><div class="ti">✈️</div><div class="tn">NRI Home Loan</div><div class="td">Eligibility & EMI calc</div><div class="bge bge-b">NRI/PIO/OCI</div><div class="ta">›</div></div>
+      <div class="tc"><div class="ti">💱</div><div class="tn">NRE/NRO Account</div><div class="td">Repatriation rules</div><div class="ta">›</div></div>
+      <div class="tc"><div class="ti">📋</div><div class="tn">FEMA Compliance</div><div class="td">Foreign exchange rules</div><div class="ta">›</div></div>
+      <div class="tc tl"><div class="ti">🌐</div><div class="tn">USD/INR Converter</div><div class="td">Remittance to India</div><div class="ta">›</div></div>
+    </div>
+  </section>
+
+  <section class="section" id="lenders">
+    <div class="sec fu8">Top Banks & HFCs <span class="more">Compare →</span></div>
+    <div class="lender-scroll fu8">
+      <div class="lc"><span class="lc-icon">🏦</span><div class="lc-name">SBI Home Loan</div><div class="lc-rate">8.50%</div><div class="lc-type">Floating · PSU Bank</div></div>
+      <div class="lc"><span class="lc-icon">🏛️</span><div class="lc-name">HDFC Bank</div><div class="lc-rate">8.70%</div><div class="lc-type">Floating · Private</div></div>
+      <div class="lc"><span class="lc-icon">💼</span><div class="lc-name">ICICI Bank</div><div class="lc-rate">8.75%</div><div class="lc-type">Floating · Private</div></div>
+      <div class="lc"><span class="lc-icon">⚡</span><div class="lc-name">Axis Bank</div><div class="lc-rate">8.75%</div><div class="lc-type">Floating · Private</div></div>
+      <div class="lc"><span class="lc-icon">🏗️</span><div class="lc-name">LIC HFL</div><div class="lc-rate">8.65%</div><div class="lc-type">Fixed/Float · HFC</div></div>
+      <div class="lc"><span class="lc-icon">🌿</span><div class="lc-name">PNB Housing</div><div class="lc-rate">8.99%</div><div class="lc-type">Floating · HFC</div></div>
+      <div class="lc"><span class="lc-icon">🔶</span><div class="lc-name">Bajaj HFL</div><div class="lc-rate">8.55%</div><div class="lc-type">Floating · NBFC</div></div>
+    </div>
+  </section>
+
+  <section class="section" id="resources">
+    <div class="sec fu9">Resources & Government <span class="more">All →</span></div>
+    <div class="ilist fu9">
+      <div class="ic"><div class="ii">🏛️</div><div><div class="in">RBI Repo Rate History</div><div class="is">Monetary Policy Committee decisions since 2000</div></div><div class="ich">›</div></div>
+      <div class="ic"><div class="ii">🏠</div><div><div class="in">PMAY – Housing for All</div><div class="is">Urban & Rural · EWS/LIG/MIG subsidy guide</div></div><div class="ich">›</div></div>
+      <div class="ic"><div class="ii">📊</div><div><div class="in">NHB Residex — Property Index</div><div class="is">National Housing Bank city-level HPI</div></div><div class="ich">›</div></div>
+      <div class="ic"><div class="ii">🏗️</div><div><div class="in">RERA Project Checker</div><div class="is">Verify builder registration state-wise</div></div><div class="ich">›</div></div>
+      <div class="ic"><div class="ii">💳</div><div><div class="in">CIBIL / Experian Score Check</div><div class="is">Free credit score · impact on rates</div></div><div class="ich">›</div></div>
+      <div class="ic"><div class="ii">📋</div><div><div class="in">Section 80C / 24(b) Guide</div><div class="is">Income tax deductions on home loan</div></div><div class="ich">›</div></div>
+      <div class="ic"><div class="ii">🌐</div><div><div class="in">NSDL / MCA Property Registry</div><div class="is">Title verification · encumbrance check</div></div><div class="ich">›</div></div>
+      <div class="ic"><div class="ii">🤖</div><div><div class="in">India AI Mortgage Advisor</div><div class="is">RBI · PMAY · RERA · tax guidance</div></div><div class="ich">›</div></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><span class="flag">🇮🇳</span> India Financial Tools</div>
+        <p class="footer-desc">EMI calculators, RBI-aligned guidance, and state-wise stamp duty and tax tools for home buyers across India.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <ul>
+          <li><a href="#">EMI Calculator</a></li>
+          <li><a href="#">Stamp Duty Calc</a></li>
+          <li><a href="#">PMAY Subsidy</a></li>
+          <li><a href="#">CIBIL Score Impact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Cities</h4>
+        <ul>
+          <li><a href="#">Mumbai</a></li>
+          <li><a href="#">Delhi NCR</a></li>
+          <li><a href="#">Bengaluru</a></li>
+          <li><a href="#">Chennai</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">AI Advisor</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 India Financial Tools. All rates shown are indicative.</span>
+      <span>RBI Repo Rate: 6.50% · Updated daily</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

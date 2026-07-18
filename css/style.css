@@ -2,9 +2,49 @@
    Shared styles: reset, typography, header, footer, grid, cards
    REO Technologies | June 2026 */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/inter-300.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/inter-500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/inter-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/inter-700.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/fonts/inter-800.woff2') format('woff2');
+}
 
-/* ===== RESET & BASE ===== */
 *,
 *::before,
 *::after {
@@ -45,7 +85,6 @@ ul[role="list"] {
   list-style: none;
 }
 
-/* ===== TYPOGRAPHY ===== */
 h1,
 h2,
 h3,
@@ -79,7 +118,6 @@ p {
   margin-bottom: 1rem;
 }
 
-/* ===== LAYOUT ===== */
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -107,7 +145,6 @@ p {
   min-width: 0;
 }
 
-/* ===== HEADER ===== */
 .site-header {
   background: var(--page-primary, #0B1D3A);
   color: #fff;
@@ -170,7 +207,6 @@ p {
   text-transform: uppercase;
 }
 
-/* Nav */
 #main-nav {
   flex: 1;
   display: flex;
@@ -216,7 +252,6 @@ p {
   color: #fff;
 }
 
-/* Header CTA button */
 .btn-nav-cta {
   background: #B91C1C !important;
   color: #fff !important;
@@ -243,7 +278,6 @@ p {
   opacity: 0.7;
 }
 
-/* Dropdown nav */
 .nav-dropdown {
   position: relative;
 }
@@ -332,7 +366,6 @@ p {
   }
 }
 
-/* ===== FOOTER ===== */
 .site-footer {
   background: var(--page-primary, #0B1D3A);
   color: rgba(255, 255, 255, 0.8);
@@ -402,7 +435,6 @@ p {
   color: rgba(255, 255, 255, 0.5);
 }
 
-/* ===== BREADCRUMB ===== */
 .breadcrumb {
   display: flex;
   flex-wrap: wrap;
@@ -431,7 +463,6 @@ p {
   text-decoration: underline;
 }
 
-/* ===== HERO SECTION ===== */
 .page-hero {
   background: linear-gradient(135deg, #0B1D3A 0%, #1E3A8A 50%, #0F172A 100%);
   color: #fff;
@@ -452,7 +483,6 @@ p {
   margin-bottom: 0;
 }
 
-/* ===== HOMEPAGE HERO V2 ===== */
 .hero-v2 {
   background: linear-gradient(135deg, #050E1D 0%, #0B1D3A 40%, #162E5A 70%, #0B1D3A 100%);
   color: #fff;
@@ -622,7 +652,6 @@ p {
   font-size: 0.85rem;
 }
 
-/* Hero Visual (right side) */
 .hero-v2-visual {
   position: relative;
   z-index: 1;
@@ -750,7 +779,6 @@ p {
   letter-spacing: 0.05em;
 }
 
-/* ===== SECTION SHARED STYLES ===== */
 .section-eyebrow {
   font-size: 0.72rem;
   font-weight: 700;
@@ -822,7 +850,6 @@ p {
   background: #F87171;
 }
 
-/* ===== CALCULATOR CARDS (HOMEPAGE) ===== */
 .calc-cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -935,7 +962,6 @@ p {
   gap: 8px;
 }
 
-/* ===== LIVE RATES SECTION ===== */
 .rates-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -1014,7 +1040,6 @@ p {
   color: rgba(255,255,255,0.6);
 }
 
-/* ===== LEARNING CENTER ===== */
 .blog-cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -1145,7 +1170,6 @@ p {
   color: #fff;
 }
 
-/* ===== WHY CHOOSE US ===== */
 .benefits-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -1196,7 +1220,6 @@ p {
   line-height: 1.55;
 }
 
-/* ===== GLOSSARY / INTERACTIVE LEARNING ===== */
 .glossary-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -1278,7 +1301,6 @@ p {
   display: block;
 }
 
-/* ===== POPULAR RESOURCES ===== */
 .resources-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -1343,7 +1365,6 @@ p {
   gap: 8px;
 }
 
-/* ===== STATS / WHY HOMEBUYERS SECTION ===== */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -1375,7 +1396,6 @@ p {
   background: #E5E7EB;
 }
 
-/* ===== TRUST STRIP ===== */
 .trust-strip {
   background: #F8FAFF;
   border-top: 1px solid #E5E7EB;
@@ -1407,7 +1427,6 @@ p {
   opacity: 0.3;
 }
 
-/* Flag-inspired country hero gradients (with safe dark transitions for text contrast) */
 .page-hero.hero-india {
   background: linear-gradient(135deg, #D85A00 0%, #0B1320 50%, #0F5E1C 100%) !important;
 }
@@ -1436,7 +1455,6 @@ p {
   background: linear-gradient(135deg, #003399 0%, #091326 50%, #FFCC00 100%) !important;
 }
 
-/* ===== QUICK ANSWER BOX ===== */
 .quick-answer {
   background: #fff;
   border-left: 5px solid var(--page-accent, #B91C1C);
@@ -1455,7 +1473,6 @@ p {
   margin-bottom: 8px !important;
 }
 
-/* ===== RATE STRIP ===== */
 .rate-strip {
   background: var(--page-accent, #B91C1C);
   color: #fff;
@@ -1498,7 +1515,6 @@ p {
   white-space: nowrap;
 }
 
-/* ===== CALCULATOR WIDGET ===== */
 .calculator-card {
   background: #fff;
   border-radius: 16px;
@@ -1641,7 +1657,6 @@ p {
   font-size: 2rem;
 }
 
-/* Chart */
 .chart-container {
   background: rgba(255, 255, 255, 0.08);
   border-radius: 10px;
@@ -1654,7 +1669,6 @@ p {
   max-height: 240px;
 }
 
-/* ===== TOOL CARDS GRID ===== */
 .tool-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1709,7 +1723,6 @@ p {
   margin: 0;
 }
 
-/* ===== COUNTRY CARDS (Homepage) ===== */
 .country-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1805,7 +1818,6 @@ p {
   color: #374151;
 }
 
-/* ===== CONTACT PAGE ===== */
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1836,7 +1848,6 @@ p {
   margin-bottom: 0;
 }
 
-/* ===== FAQ SECTION ===== */
 .faq-list {
   list-style: none;
   margin: 0;
@@ -1890,7 +1901,6 @@ p {
   display: block;
 }
 
-/* ===== FAQ NAVIGATION & SECTION FLAGS ===== */
 .faq-nav-links a {
   display: flex !important;
   align-items: center;
@@ -1914,7 +1924,6 @@ p {
   display: inline-block;
 }
 
-/* ===== DATA TABLES ===== */
 .data-table-wrap {
   overflow-x: auto;
   margin: 20px 0;
@@ -1967,7 +1976,6 @@ tbody tr:hover {
   background: #F8FAFC;
 }
 
-/* ===== AD UNITS ===== */
 .ad-unit {
   background: #F8FAFC;
   border: 1px dashed #CBD5E1;
@@ -1991,7 +1999,6 @@ tbody tr:hover {
   min-height: 90px;
 }
 
-/* ===== SOURCE NOTE ===== */
 .source-note {
   font-size: 0.78rem;
   color: #6B7280;
@@ -2002,7 +2009,6 @@ tbody tr:hover {
   color: #6B7280;
 }
 
-/* ===== CONTENT ARTICLE ===== */
 .content-article {
   max-width: 780px;
 }
@@ -2023,7 +2029,6 @@ tbody tr:hover {
   color: #374151;
 }
 
-/* ===== RESOURCE LINKS ===== */
 .resource-links {
   display: flex;
   flex-wrap: wrap;
@@ -2051,7 +2056,6 @@ tbody tr:hover {
   text-decoration: none;
 }
 
-/* ===== DEFINITION PARA ===== */
 .definition-para {
   background: #F8FAFC;
   border-radius: 8px;
@@ -2060,24 +2064,20 @@ tbody tr:hover {
   color: #374151;
 }
 
-/* ===== SECTION SPACING ===== */
 section {
   margin-bottom: 0;
 }
 
-/* Legacy section spacing for non-homepage sections */
 .container > section {
   margin-bottom: 48px;
 }
 
-/* New full-width sections reset margin */
 .section-white,
 .section-alt,
 .section-dark {
   margin-bottom: 0 !important;
 }
 
-/* ===== SKIP LINK ===== */
 .skip-link {
   position: absolute;
   left: -9999px;
@@ -2102,7 +2102,6 @@ section {
   border-radius: 0 0 8px 0;
 }
 
-/* ===== DARK MODE ===== */
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
@@ -2114,7 +2113,6 @@ section {
     --accent: #2ea8ff;
     --border-color: rgba(255, 255, 255, 0.08);
 
-    /* Map existing template variables to the central theme system */
     --bg: var(--bg-primary);
     --text: var(--text-primary);
     --card-bg: var(--bg-card);
@@ -2402,15 +2400,11 @@ section {
     border-color: var(--border-color) !important;
   }
 
-  /* ===== HERO OVERRIDES ===== */
   .page-hero {
     background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 50%, #0F172A 100%) !important;
     color: #ffffff !important;
   }
 
-  /* ===== NEW HOMEPAGE SECTION OVERRIDES ===== */
-
-  /* Section backgrounds */
   .section-white {
     background: var(--bg-secondary, #12203a) !important;
   }
@@ -2419,7 +2413,6 @@ section {
     background: var(--bg-primary, #081326) !important;
   }
 
-  /* Section text */
   .section-heading {
     color: var(--text-primary, #fff) !important;
   }
@@ -2436,7 +2429,6 @@ section {
     background: #F87171 !important;
   }
 
-  /* Calculator cards */
   .calc-card {
     background: var(--bg-card, #1d2b44) !important;
     border-color: rgba(255,255,255,0.08) !important;
@@ -2458,7 +2450,6 @@ section {
     background: rgba(185,28,28,0.18) !important;
   }
 
-  /* Benefit cards */
   .benefit-card {
     background: var(--bg-card, #1d2b44) !important;
     border-color: rgba(255,255,255,0.08) !important;
@@ -2476,7 +2467,6 @@ section {
     background: rgba(185,28,28,0.18) !important;
   }
 
-  /* Blog cards */
   .blog-card {
     background: var(--bg-card, #1d2b44) !important;
     border-color: rgba(255,255,255,0.08) !important;
@@ -2499,7 +2489,6 @@ section {
     color: rgba(255,255,255,0.45) !important;
   }
 
-  /* Resource cards */
   .resource-card {
     background: var(--bg-card, #1d2b44) !important;
     border-color: rgba(255,255,255,0.08) !important;
@@ -2513,7 +2502,6 @@ section {
     color: var(--text-secondary, #d6dce5) !important;
   }
 
-  /* Glossary cards */
   .glossary-card {
     background: var(--bg-card, #1d2b44) !important;
     border-color: rgba(255,255,255,0.08) !important;
@@ -2541,7 +2529,6 @@ section {
     border-top-color: rgba(255,255,255,0.06) !important;
   }
 
-  /* Stats section */
   .stat-value {
     color: #F87171 !important;
   }
@@ -2550,13 +2537,11 @@ section {
     color: var(--text-secondary, #d6dce5) !important;
   }
 
-  /* About inline text */
   .about-inline p,
   .about-inline > div > p {
     color: var(--text-secondary, #d6dce5) !important;
   }
 
-  /* Trust strip */
   .trust-strip {
     background: var(--bg-secondary, #12203a) !important;
     border-color: rgba(255,255,255,0.08) !important;
@@ -2574,14 +2559,12 @@ section {
     color: #F87171 !important;
   }
 
-  /* About section */
   .about-badge {
     background: var(--bg-card, #1d2b44) !important;
     border-color: rgba(255,255,255,0.08) !important;
     color: var(--text-primary, #fff) !important;
   }
 
-  /* View all link */
   .view-all-link {
     background: rgba(255,255,255,0.1) !important;
     border: 1px solid rgba(255,255,255,0.15) !important;
@@ -2591,7 +2574,6 @@ section {
     background: rgba(255,255,255,0.18) !important;
   }
 
-  /* Tool cards (How it works section) */
   .tool-card {
     background: var(--bg-card, #1d2b44) !important;
     border-color: rgba(255,255,255,0.08) !important;
@@ -2605,18 +2587,15 @@ section {
     color: var(--text-secondary, #d6dce5) !important;
   }
 
-  /* FAQ in dark sections */
   .faq-question::after {
     color: #F87171 !important;
   }
 
-  /* Ad units */
   .ad-unit {
     background: var(--bg-card) !important;
     border-color: rgba(255,255,255,0.08) !important;
   }
 
-  /* Social widget */
   .social-widget {
     position: fixed;
     bottom: 20px;
@@ -2641,7 +2620,6 @@ section {
   }
 }
 
-/* ===== REDUCED MOTION ===== */
 @media (prefers-reduced-motion: reduce) {
 
   *,
@@ -2652,7 +2630,6 @@ section {
   }
 }
 
-/* ===== FORCED COLORS ===== */
 @media (forced-colors: active) {
 
   .card,
@@ -2666,7 +2643,6 @@ section {
   }
 }
 
-/* ===== SCROLL FADE-IN ===== */
 .fade-in {
   opacity: 0;
   transform: translateY(24px);
@@ -2678,7 +2654,6 @@ section {
   transform: translateY(0);
 }
 
-/* ===== HOMEPAGE MOBILE FIXES ===== */
 @media (max-width: 640px) {
   .hero-v2 {
     padding: 60px 0 70px;
@@ -2696,7 +2671,6 @@ section {
   }
 }
 
-/* ===== ABOUT INLINE SECTION ===== */
 .about-inline {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2739,4 +2713,41 @@ section {
   font-size: 0.78rem;
   font-weight: 600;
   color: #374151;
+}
+
+:focus-visible {
+  outline: 3px solid #005FCC;
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-contrast: high) {
+  .btn-calculate {
+    border: 2px solid currentColor;
+  }
+
+  .tool-card,
+  .calculator-card {
+    border: 2px solid currentColor;
+  }
+
+  .quick-answer {
+    border-left-width: 8px;
+  }
 }

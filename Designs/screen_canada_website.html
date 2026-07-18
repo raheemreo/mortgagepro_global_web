@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canada Mortgage Tools — MortgagePro</title>
+<style>
+/* ═══════════════════════════════
+   TOKENS
+═══════════════════════════════ */
+:root {
+  --forest:  #0A2E1A;
+  --green:   #1A5C35;
+  --fern:    #4A7C5F;
+  --red:     #C8102E;
+  --crimson: #8B0A1E;
+  --maple:   #D97706;
+  --amber:   #B45309;
+  --gold-lt: #6EDFA0;
+  --bg:      #F0F7F4;
+  --card:    #FFFFFF;
+  --muted:   #4A7C5F;
+  --border:  rgba(26,92,53,0.10);
+  --sh:      0 2px 14px rgba(10,46,26,0.08);
+  --sh2:     0 8px 32px rgba(10,46,26,0.16);
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--forest);
+  min-height: 100vh;
+}
+
+/* ═══════════════════════════════
+   STICKY NAV
+═══════════════════════════════ */
+nav {
+  position: sticky; top: 0; z-index: 500;
+  background: linear-gradient(135deg, #0A2E1A 0%, #1A5C35 60%, #C8102E 100%);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 48px; height: 64px;
+  box-shadow: 0 2px 20px rgba(10,46,26,0.32);
+}
+.nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand-icon {
+  width: 38px; height: 38px; border-radius: 10px;
+  background: var(--red); display: flex; align-items: center; justify-content: center;
+  font-size: 20px; box-shadow: 0 3px 10px rgba(200,16,46,0.45);
+}
+.brand-name  { font-size: 18px; font-weight: 800; color: #fff; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; letter-spacing: -.3px; }
+.brand-name span { color: var(--gold-lt); }
+.brand-sub   { font-size: 10px; color: rgba(255,255,255,0.50); }
+.nav-links { list-style: none; display: flex; align-items: center; gap: 4px; }
+.nav-links a {
+  color: rgba(255,255,255,0.82); text-decoration: none;
+  font-size: 13px; font-weight: 600; padding: 7px 14px; border-radius: 8px;
+  transition: background .15s;
+}
+.nav-links a:hover { background: rgba(255,255,255,0.13); color: #fff; }
+.nav-links a.active { background: rgba(255,255,255,0.17); color: #fff; }
+.nav-cta {
+  background: linear-gradient(135deg, #C8102E, #8B0A1E) !important;
+  color: #fff !important; box-shadow: 0 3px 10px rgba(200,16,46,0.40);
+}
+@media (max-width: 860px) { .nav-links { display: none; } nav { padding: 0 20px; } }
+
+/* ═══════════════════════════════
+   RATE BAR
+═══════════════════════════════ */
+.rate-bar {
+  background: var(--forest);
+  display: flex;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.rb-item { flex: 1; text-align: center; padding: 10px 6px; position: relative; }
+.rb-item:not(:last-child)::after {
+  content: ''; position: absolute; right: 0; top: 15%; height: 70%;
+  width: 1px; background: rgba(255,255,255,0.13);
+}
+.rb-lbl  { font-size: 9px; color: rgba(255,255,255,0.46); text-transform: uppercase; letter-spacing: .5px; }
+.rb-val  { font-size: 16px; font-weight: 800; color: #fff; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+.rb-val.red { color: #FF8A9A; }
+.rb-val.grn { color: #6EDFA0; }
+.rb-val.gold { color: #FCD34D; }
+.rb-note { font-size: 8.5px; color: rgba(255,255,255,0.38); margin-top: 1px; }
+
+/* ═══════════════════════════════
+   PAGE LAYOUT
+═══════════════════════════════ */
+.page-wrap { max-width: 1280px; margin: 0 auto; padding: 0 40px 70px; }
+@media (max-width: 780px) { .page-wrap { padding: 0 18px 50px; } }
+
+/* SECTION HERO BANNER */
+.section-hero {
+  background: linear-gradient(150deg, #0A2E1A 0%, #1A5C35 60%, #C8102E 100%);
+  padding: 52px 48px 0;
+  position: relative; overflow: hidden;
+}
+.section-hero::before {
+  content: '🍁';
+  position: absolute; right: 60px; top: 36px;
+  font-size: 160px; opacity: .06; pointer-events: none;
+}
+.hero-inner {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  gap: 32px; position: relative; z-index: 2;
+}
+.hero-text { flex: 1; }
+.hero-eyebrow { font-size: 10px; text-transform: uppercase; letter-spacing: .8px; color: rgba(255,255,255,0.50); margin-bottom: 6px; }
+.hero-title { font-size: 32px; font-weight: 800; color: #fff; line-height: 1.15; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+.hero-title span { color: #6EDFA0; }
+.hero-sub { font-size: 13px; color: rgba(255,255,255,0.55); margin-top: 6px; }
+
+/* RATE STRIP (hero bottom) */
+.hero-rate-strip {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  background: rgba(255,255,255,0.09); border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 14px; padding: 12px 16px;
+  margin-top: 28px; position: relative; z-index: 2;
+}
+.hrs { text-align: center; position: relative; }
+.hrs:not(:last-child)::after {
+  content: ''; position: absolute; right: 0; top: 15%; height: 70%;
+  width: 1px; background: rgba(255,255,255,0.14);
+}
+.hrs-l  { font-size: 8.5px; color: rgba(255,255,255,0.48); text-transform: uppercase; letter-spacing: .4px; }
+.hrs-v  { font-size: 15px; font-weight: 800; color: #fff; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.1; }
+.hrs-v.red  { color: #FF8A9A; }
+.hrs-v.grn  { color: #6EDFA0; }
+.hrs-v.gold { color: #FCD34D; }
+.hrs-n  { font-size: 8px; color: rgba(255,255,255,0.38); margin-top: 1px; }
+
+/* ═══════════════════════════════
+   SECTION HEADERS
+═══════════════════════════════ */
+.sec-hdr {
+  display: flex; align-items: center; justify-content: space-between;
+  margin: 38px 0 16px; border-bottom: 2px solid var(--border); padding-bottom: 10px;
+}
+.sec-hdr h2 {
+  font-size: 11.5px; font-weight: 800; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 1.2px;
+}
+.sec-hdr a { font-size: 13px; font-weight: 600; color: var(--green); text-decoration: none; }
+.sec-hdr a:hover { text-decoration: underline; }
+
+/* ═══════════════════════════════
+   HERO CALC CARD
+═══════════════════════════════ */
+.hero-calc {
+  background: linear-gradient(145deg, #0A2E1A, #1A5C35);
+  border-radius: 20px; padding: 28px 32px;
+  position: relative; overflow: hidden; box-shadow: var(--sh2);
+  display: flex; align-items: center; gap: 32px;
+}
+.hero-calc::before {
+  content: '🍁'; position: absolute; right: 28px; top: 50%;
+  transform: translateY(-50%); font-size: 100px; opacity: .07; pointer-events: none;
+}
+.hc-left { flex: 1; min-width: 180px; position: relative; z-index: 1; }
+.hc-tag  { font-size: 9.5px; color: rgba(255,255,255,0.48); text-transform: uppercase; letter-spacing: .8px; }
+.hc-title { font-size: 22px; font-weight: 800; color: #fff; margin: 5px 0 0; line-height: 1.2; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+.hc-title span { color: #6EDFA0; }
+.hc-fields { display: flex; gap: 12px; flex: 2; position: relative; z-index: 1; }
+.hc-box {
+  flex: 1; background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px; padding: 12px 16px;
+}
+.hc-box label { font-size: 9px; color: rgba(255,255,255,0.48); display: block; margin-bottom: 4px; text-transform: uppercase; }
+.hc-box .v    { font-size: 16px; font-weight: 800; color: #fff; }
+.hc-btn {
+  background: var(--red); border: none; border-radius: 12px;
+  padding: 14px 22px; font-size: 14px; font-weight: 800; color: #fff; cursor: pointer;
+  box-shadow: 0 4px 14px rgba(200,16,46,0.38);
+  white-space: nowrap; position: relative; z-index: 1; flex-shrink: 0;
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.hc-btn:hover { background: var(--crimson); }
+@media (max-width: 860px) {
+  .hero-calc { flex-direction: column; gap: 18px; }
+  .hero-calc::before { top: 18px; right: 18px; transform: none; font-size: 64px; }
+  .hc-fields { flex-wrap: wrap; }
+  .hc-btn { width: 100%; }
+}
+
+/* ═══════════════════════════════
+   STRESS TEST BANNER
+═══════════════════════════════ */
+.stress-banner {
+  background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+  border: 1px solid #F59E0B; border-radius: 17px;
+  padding: 18px 22px; display: flex; align-items: center; gap: 16px;
+  margin-bottom: 12px; box-shadow: var(--sh);
+}
+.sb-icon  { font-size: 30px; flex-shrink: 0; }
+.sb-title { font-size: 15px; font-weight: 800; color: #92400E; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+.sb-sub   { font-size: 11px; color: #B45309; margin-top: 3px; }
+.sb-btn   {
+  margin-left: auto; background: #F59E0B; color: #fff;
+  font-size: 12px; font-weight: 800; padding: 11px 20px; border-radius: 10px;
+  white-space: nowrap; flex-shrink: 0; cursor: pointer; border: none; text-decoration: none; display: inline-block;
+}
+.sb-btn:hover { background: var(--maple); }
+
+/* ═══════════════════════════════
+   TOOL CARDS GRID
+═══════════════════════════════ */
+.g2 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 13px; }
+.g3 { display: grid; grid-template-columns: repeat(6, 1fr); gap: 11px; }
+.tc {
+  background: var(--card); border-radius: 17px; padding: 17px 15px;
+  box-shadow: var(--sh); border: 1px solid var(--border);
+  cursor: pointer; position: relative; overflow: hidden;
+  transition: transform .15s, box-shadow .15s; display: block; text-decoration: none;
+}
+.tc:hover { transform: translateY(-3px); box-shadow: var(--sh2); }
+.tc.dark   { background: linear-gradient(140deg, #0A2E1A, #1A5C35); }
+.tc.red    { background: linear-gradient(140deg, #C8102E, #8B0A1E); }
+.tc.maple  { background: linear-gradient(140deg, #D97706, #B45309); }
+.tc.teal   { background: linear-gradient(140deg, #0F766E, #115E59); }
+.tc.navy   { background: linear-gradient(140deg, #0A2E1A, #0D3B2E); }
+.tic {
+  width: 42px; height: 42px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 19px; margin-bottom: 10px; background: var(--bg);
+}
+.tc.dark .tic, .tc.red .tic, .tc.maple .tic, .tc.teal .tic, .tc.navy .tic { background: rgba(255,255,255,0.15); }
+.tn { font-size: 13.5px; font-weight: 800; color: var(--forest); line-height: 1.2; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+.tc.dark .tn, .tc.red .tn, .tc.maple .tn, .tc.teal .tn, .tc.navy .tn { color: #fff; }
+.td { font-size: 10px; color: var(--fern); margin-top: 3px; }
+.tc.dark .td, .tc.red .td, .tc.maple .td, .tc.teal .td, .tc.navy .td { color: rgba(255,255,255,0.60); }
+.ta { position: absolute; bottom: 13px; right: 13px; font-size: 16px; color: rgba(10,46,26,0.18); }
+.tc.dark .ta, .tc.red .ta, .tc.maple .ta, .tc.teal .ta, .tc.navy .ta { color: rgba(255,255,255,0.25); }
+.badge { display: inline-flex; padding: 3px 9px; border-radius: 20px; font-size: 9px; font-weight: 700; margin-top: 6px; }
+.badge-ca   { background: #F0FDF4; color: #166534; }
+.badge-warn { background: #FEF3C7; color: #92400E; }
+.badge-r    { background: #FEF2F2; color: #B91C1C; }
+.badge-b    { background: #EFF6FF; color: #1D4ED8; }
+.badge-g    { background: #F0FDF4; color: #15803D; }
+
+/* ═══════════════════════════════
+   INFO LIST
+═══════════════════════════════ */
+.ilist { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.ic {
+  background: var(--card); border-radius: 15px; padding: 16px 20px;
+  box-shadow: var(--sh); border: 1px solid var(--border);
+  display: flex; align-items: center; gap: 14px; cursor: pointer; text-decoration: none;
+  transition: transform .15s, box-shadow .15s;
+}
+.ic:hover { transform: translateY(-2px); box-shadow: var(--sh2); }
+.ii {
+  width: 42px; height: 42px; border-radius: 12px; background: var(--bg);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 19px; flex-shrink: 0;
+}
+.in  { font-size: 13px; font-weight: 800; color: var(--forest); font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+.is  { font-size: 10px; color: var(--fern); margin-top: 3px; }
+.ich { font-size: 18px; color: rgba(10,46,26,0.20); margin-left: auto; }
+
+/* ═══════════════════════════════
+   BoC RATE BANNER
+═══════════════════════════════ */
+.boc-banner {
+  background: linear-gradient(135deg, #0A2E1A, #1A5C35);
+  border-radius: 17px; padding: 18px 24px;
+  display: flex; align-items: center; gap: 16px; box-shadow: var(--sh2);
+  margin-bottom: 12px;
+}
+.boc-icon  { font-size: 32px; flex-shrink: 0; }
+.boc-lbl   { font-size: 9.5px; text-transform: uppercase; letter-spacing: .6px; color: rgba(255,255,255,0.44); font-weight: 700; }
+.boc-val   { font-size: 26px; font-weight: 800; color: #6EDFA0; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1; }
+.boc-sub   { font-size: 10px; color: rgba(255,255,255,0.52); margin-top: 3px; }
+.boc-btn   {
+  margin-left: auto; background: var(--red); color: #fff;
+  font-size: 11px; font-weight: 800; padding: 10px 18px; border-radius: 10px;
+  white-space: nowrap; flex-shrink: 0; border: none; cursor: pointer; text-decoration: none; display: inline-block;
+}
+.boc-btn:hover { background: var(--crimson); }
+
+/* ═══════════════════════════════
+   PROVINCE TABS
+═══════════════════════════════ */
+.prov-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.prov-pill {
+  padding: 8px 16px; border-radius: 24px; font-size: 12.5px; font-weight: 700;
+  cursor: pointer; border: 1.5px solid transparent; transition: all .15s; text-decoration: none;
+}
+.prov-pill.active { background: var(--green); color: #fff; border-color: var(--green); }
+.prov-pill:not(.active) { background: var(--card); color: var(--forest); border-color: var(--border); }
+.prov-pill:hover:not(.active) { background: #E6F5EE; border-color: var(--fern); }
+
+/* ═══════════════════════════════
+   FOOTER
+═══════════════════════════════ */
+footer {
+  background: var(--forest); color: rgba(255,255,255,0.55);
+  text-align: center; padding: 30px 48px; font-size: 12px; margin-top: 40px;
+}
+.footer-links { display: flex; justify-content: center; gap: 4px; flex-wrap: wrap; margin-bottom: 10px; }
+.footer-links a { color: rgba(255,255,255,0.70); text-decoration: none; padding: 5px 12px; border-radius: 6px; }
+.footer-links a:hover { color: #fff; background: rgba(255,255,255,0.09); }
+
+/* ═══════════════════════════════
+   UP / DOWN COLORS
+═══════════════════════════════ */
+.up { color: #15803D; }
+.dn { color: #C8102E; }
+
+/* ═══════════════════════════════
+   RESPONSIVE BREAKPOINTS
+═══════════════════════════════ */
+@media (max-width: 1100px) {
+  .g2 { grid-template-columns: repeat(3, 1fr); }
+  .g3 { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 780px) {
+  .section-hero { padding: 40px 20px 0; }
+  .section-hero::before { font-size: 100px; right: 16px; top: 20px; }
+  .g2 { grid-template-columns: repeat(2, 1fr); }
+  .g3 { grid-template-columns: repeat(3, 1fr); }
+  .ilist { grid-template-columns: 1fr; }
+  .hero-inner { flex-direction: column; align-items: flex-start; }
+  .hero-rate-strip { grid-template-columns: repeat(2, 1fr); }
+  .rate-bar { flex-wrap: wrap; }
+}
+@media (max-width: 480px) {
+  .g2, .g3 { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     STICKY NAV
+══════════════════════════════════════ -->
+<nav>
+  <a href="#" class="nav-brand">
+    <div class="brand-icon">🍁</div>
+    <div>
+      <div class="brand-name">Canada<span>Pro</span></div>
+      <div class="brand-sub">CAD · BoC Rate · CMHC</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#calculator">Calculator</a></li>
+    <li><a href="#stress">Stress Test</a></li>
+    <li><a href="#tools">Core Tools</a></li>
+    <li><a href="#provinces">Provinces</a></li>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="#" class="nav-cta">🍁 Get Rate</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════════════════════════════════
+     LIVE RATE BAR
+══════════════════════════════════════ -->
+<div class="rate-bar">
+  <div class="rb-item"><div class="rb-lbl">5-Yr Fixed</div><div class="rb-val red">4.99%</div><div class="rb-note">↓ -0.1 wk</div></div>
+  <div class="rb-item"><div class="rb-lbl">3-Yr Fixed</div><div class="rb-val">5.14%</div><div class="rb-note">BoC</div></div>
+  <div class="rb-item"><div class="rb-lbl">Variable</div><div class="rb-val grn">5.95%</div><div class="rb-note">Prime − 0.5</div></div>
+  <div class="rb-item"><div class="rb-lbl">Stress Test</div><div class="rb-val gold">7.00%</div><div class="rb-note">Min qualifying rate</div></div>
+  <div class="rb-item"><div class="rb-lbl">BoC Policy</div><div class="rb-val">4.75%</div><div class="rb-note">Bank of Canada</div></div>
+  <div class="rb-item"><div class="rb-lbl">1-Yr Fixed</div><div class="rb-val red">6.14%</div><div class="rb-note">↑ +0.05</div></div>
+  <div class="rb-item"><div class="rb-lbl">HELOC</div><div class="rb-val grn">7.20%</div><div class="rb-note">Prime + 0.5</div></div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SECTION HERO
+══════════════════════════════════════ -->
+<div class="section-hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-eyebrow">CAD · BoC Rate · CMHC · Stress Test · All Provinces</div>
+      <div class="hero-title">🇨🇦 Canada <span>Mortgage Tools</span></div>
+      <div class="hero-sub">CMHC insurance · GDS/TDS ratio · Stress test · Land transfer tax · 18+ calculators</div>
+    </div>
+  </div>
+  <div class="hero-rate-strip">
+    <div class="hrs"><div class="hrs-l">5-Yr Fixed</div><div class="hrs-v red">4.99%</div><div class="hrs-n">↓ -0.1 wk</div></div>
+    <div class="hrs"><div class="hrs-l">Variable</div><div class="hrs-v grn">5.95%</div><div class="hrs-n">Prime − 0.5</div></div>
+    <div class="hrs"><div class="hrs-l">Stress Test</div><div class="hrs-v gold">7.00%</div><div class="hrs-n">Min rate</div></div>
+    <div class="hrs"><div class="hrs-l">BoC Policy</div><div class="hrs-v">4.75%</div><div class="hrs-n">Bank of Canada</div></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     MAIN CONTENT
+══════════════════════════════════════ -->
+<main class="page-wrap">
+
+  <!-- ── HERO CALCULATOR ── -->
+  <div id="calculator" class="sec-hdr" style="margin-top: 36px;">
+    <h2>Quick Estimate</h2>
+    <a href="#">Advanced Calculator →</a>
+  </div>
+  <div class="hero-calc">
+    <div class="hc-left">
+      <div class="hc-tag">Canadian Mortgage Calculator</div>
+      <div class="hc-title">Calculate your <span>CMHC</span><br>insured payment</div>
+    </div>
+    <div class="hc-fields">
+      <div class="hc-box"><label>Home Price</label><div class="v">CA$650,000</div></div>
+      <div class="hc-box"><label>Down Payment</label><div class="v">10%</div></div>
+      <div class="hc-box"><label>Amortization</label><div class="v">25 yr</div></div>
+      <div class="hc-box"><label>Rate</label><div class="v">4.99%</div></div>
+    </div>
+    <button class="hc-btn">🍁 Calculate Canadian Mortgage</button>
+  </div>
+
+  <!-- ── BoC RATE BANNER ── -->
+  <div class="sec-hdr">
+    <h2>Bank of Canada</h2>
+    <a href="#">Rate History →</a>
+  </div>
+  <div class="boc-banner">
+    <div class="boc-icon">🏦</div>
+    <div>
+      <div class="boc-lbl">BoC Policy Rate · Overnight Target</div>
+      <div class="boc-val">4.75%</div>
+      <div class="boc-sub">Next decision: Jul 24, 2026 · Cut probability: 72%</div>
+    </div>
+    <a href="#" class="boc-btn">BoC Live</a>
+  </div>
+
+  <!-- ── STRESS TEST ── -->
+  <div id="stress" class="sec-hdr">
+    <h2>Mortgage Stress Test</h2>
+    <a href="#">Learn More →</a>
+  </div>
+  <div class="stress-banner">
+    <div class="sb-icon">⚠️</div>
+    <div>
+      <div class="sb-title">Mortgage Stress Test</div>
+      <div class="sb-sub">Qualify at 7.00% or contract rate + 2% — whichever is higher (OSFI B-20 guideline)</div>
+    </div>
+    <a href="#" class="sb-btn">Test Now</a>
+  </div>
+
+  <!-- ── CORE TOOLS ── -->
+  <div id="tools" class="sec-hdr">
+    <h2>Core Mortgage Tools</h2>
+    <a href="#">All Tools →</a>
+  </div>
+  <div class="g2">
+    <div class="tc dark"><div class="tic">🏠</div><div class="tn">Mortgage Calc</div><div class="td">Monthly payment + CMHC</div><div class="badge badge-ca">25yr Max</div><div class="ta">›</div></div>
+    <div class="tc"><div class="tic">🛡️</div><div class="tn">CMHC Insurance</div><div class="td">Premium calculator</div><div class="badge badge-warn">&lt;20% down</div><div class="ta">›</div></div>
+    <div class="tc"><div class="tic">📊</div><div class="tn">GDS / TDS Ratio</div><div class="td">Gross debt service</div><div class="ta">›</div></div>
+    <div class="tc red"><div class="tic">🧪</div><div class="tn">Stress Test Calc</div><div class="td">Can you qualify?</div><div class="ta">›</div></div>
+    <div class="tc"><div class="tic">💰</div><div class="tn">Affordability</div><div class="td">Max home price, CAD</div><div class="ta">›</div></div>
+    <div class="tc maple"><div class="tic">📅</div><div class="tn">Amortization</div><div class="td">Bi-weekly schedule</div><div class="ta">›</div></div>
+    <div class="tc"><div class="tic">🔄</div><div class="tn">Renewal Planner</div><div class="td">Term renewal analysis</div><div class="ta">›</div></div>
+    <div class="tc"><div class="tic">📈</div><div class="tn">Prepayment Calc</div><div class="td">Lump sum savings</div><div class="ta">›</div></div>
+    <div class="tc teal"><div class="tic">💳</div><div class="tn">Credit Score Impact</div><div class="td">Score to rate mapping</div><div class="badge badge-b">600–850</div><div class="ta">›</div></div>
+    <div class="tc"><div class="tic">🏘️</div><div class="tn">Rental Yield</div><div class="td">Investment property CAD</div><div class="ta">›</div></div>
+    <div class="tc navy"><div class="tic">🔁</div><div class="tn">Refinance Tool</div><div class="td">Break fee &amp; savings</div><div class="ta">›</div></div>
+    <div class="tc"><div class="tic">🏗️</div><div class="tn">Construction Loan</div><div class="td">Progress draw calculator</div><div class="ta">›</div></div>
+  </div>
+
+  <!-- ── PROVINCES ── -->
+  <div id="provinces" class="sec-hdr">
+    <h2>Province Tools</h2>
+    <a href="#">All Provinces →</a>
+  </div>
+  <div class="prov-tabs">
+    <a href="#" class="prov-pill active">🏙️ Ontario</a>
+    <a href="#" class="prov-pill">🌄 British Columbia</a>
+    <a href="#" class="prov-pill">🌾 Alberta</a>
+    <a href="#" class="prov-pill">⚜️ Quebec</a>
+    <a href="#" class="prov-pill">🌊 Manitoba</a>
+    <a href="#" class="prov-pill">🌻 Saskatchewan</a>
+    <a href="#" class="prov-pill">🦞 Nova Scotia</a>
+    <a href="#" class="prov-pill">🍁 All Provinces</a>
+  </div>
+  <div class="g2">
+    <div class="tc dark"><div class="tic">🏛️</div><div class="tn">Land Transfer Tax</div><div class="td">By province: ON, BC, AB, QC, MB…</div><div class="badge badge-ca">Province</div><div class="ta">›</div></div>
+    <div class="tc"><div class="tic">🏡</div><div class="tn">First-Home Buyer</div><div class="td">FHBI · RRSP Home Buyers' Plan</div><div class="badge badge-g">Incentive</div><div class="ta">›</div></div>
+    <div class="tc red"><div class="tic">🌆</div><div class="tn">Ontario LTT</div><div class="td">Incl. Toronto municipal tax</div><div class="ta">›</div></div>
+    <div class="tc"><div class="tic">🌄</div><div class="tn">BC PTT</div><div class="td">Property Transfer Tax</div><div class="ta">›</div></div>
+    <div class="tc maple"><div class="tic">⚜️</div><div class="tn">Quebec Welcome Tax</div><div class="td">Droits de mutation immobilière</div><div class="ta">›</div></div>
+    <div class="tc"><div class="tic">🌾</div><div class="tn">Alberta (No LTT)</div><div class="td">Land title transfer fee only</div><div class="badge badge-g">No tax</div><div class="ta">›</div></div>
+    <div class="tc teal"><div class="tic">🏘️</div><div class="tn">Condo Fee Impact</div><div class="td">Effect on GDS/TDS ratio</div><div class="ta">›</div></div>
+    <div class="tc"><div class="tic">🤝</div><div class="tn">Rent vs Buy CA</div><div class="td">True cost comparison, CAD</div><div class="ta">›</div></div>
+  </div>
+
+  <!-- ── RESOURCES ── -->
+  <div id="resources" class="sec-hdr">
+    <h2>Resources &amp; Government Programs</h2>
+    <a href="#">All →</a>
+  </div>
+  <div class="ilist">
+    <a href="#" class="ic"><div class="ii">🏛️</div><div><div class="in">Land Transfer Tax</div><div class="is">By Province: ON, BC, AB, QC, MB…</div></div><div class="ich">›</div></a>
+    <a href="#" class="ic"><div class="ii">🏡</div><div><div class="in">First-Home Buyer Incentive</div><div class="is">FHBI · RRSP Home Buyers' Plan</div></div><div class="ich">›</div></a>
+    <a href="#" class="ic"><div class="ii">📉</div><div><div class="in">BoC Rate History</div><div class="is">Live Bank of Canada rate tracker</div></div><div class="ich">›</div></a>
+    <a href="#" class="ic"><div class="ii">🛡️</div><div><div class="in">CMHC Eligibility Guide</div><div class="is">Rules, caps &amp; premium tables</div></div><div class="ich">›</div></a>
+    <a href="#" class="ic"><div class="ii">📋</div><div><div class="in">OSFI B-20 Guideline</div><div class="is">Stress test rules &amp; lender requirements</div></div><div class="ich">›</div></a>
+    <a href="#" class="ic"><div class="ii">🏠</div><div><div class="in">First Home Savings Account (FHSA)</div><div class="is">Tax-free savings for first home purchase</div></div><div class="ich">›</div></a>
+    <a href="#" class="ic"><div class="ii">📊</div><div><div class="in">Canada House Price Index</div><div class="is">CREA · CMHC national &amp; city data</div></div><div class="ich">›</div></a>
+    <a href="#" class="ic"><div class="ii">🤖</div><div><div class="in">Canada AI Advisor</div><div class="is">CMHC rules · stress test guidance</div></div><div class="ich">›</div></a>
+  </div>
+
+</main>
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer>
+  <div class="footer-links">
+    <a href="#calculator">Calculator</a>
+    <a href="#stress">Stress Test</a>
+    <a href="#tools">Tools</a>
+    <a href="#provinces">Provinces</a>
+    <a href="#resources">Resources</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+  </div>
+  <div>🇨🇦 Canada Mortgage Tools · CAD · BoC Rate · CMHC · All Provinces · © 2026</div>
+</footer>
+
+<script>
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+  // Province tab toggle
+  document.querySelectorAll('.prov-pill').forEach(p => {
+    p.addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelectorAll('.prov-pill').forEach(x => x.classList.remove('active'));
+      p.classList.add('active');
+    });
+  });
+  // Active nav on scroll
+  const sections = document.querySelectorAll('[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 90) cur = s.id; });
+    navLinks.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + cur) a.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>

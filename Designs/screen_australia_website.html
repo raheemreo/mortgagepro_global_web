@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Australia Mortgage Tools</title>
+<style>
+:root{
+  --dark:#1A0A00;
+  --rust:#7C2D12;
+  --navy:#002868;
+  --gold:#FFD700;
+  --bg:#FFF8F0;
+  --brown-text:#92400E;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--dark);line-height:1.4;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px;}
+
+/* ============ TOP NAV ============ */
+.topnav{position:sticky;top:0;z-index:200;background:rgba(26,10,0,0.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,0.08);}
+.topnav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;color:#fff;font-size:16px;}
+.brand .flag{font-size:22px;}
+.nav-links{display:flex;gap:28px;list-style:none;}
+.nav-links a{font-size:13px;font-weight:600;color:rgba(255,255,255,0.65);transition:color .15s;}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);}
+.nav-actions{display:flex;align-items:center;gap:12px;}
+.icon-btn{width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;font-size:16px;color:#fff;cursor:pointer;}
+.nav-cta{background:var(--navy);color:#fff;font-size:13px;font-weight:800;padding:10px 18px;border-radius:10px;cursor:pointer;border:none;}
+.nav-toggle{display:none;width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:18px;align-items:center;justify-content:center;cursor:pointer;}
+
+/* ============ HERO / HEADER ============ */
+.header{background:linear-gradient(150deg,#1A0A00 0%,#7C2D12 55%,#002868 100%);position:relative;overflow:hidden;padding:56px 0 0;}
+.header::before{content:'';position:absolute;top:-80px;right:-80px;width:320px;height:320px;border-radius:50%;background:rgba(255,215,0,0.06);}
+.header::after{content:'';position:absolute;bottom:-60px;left:-40px;width:260px;height:260px;border-radius:50%;background:rgba(0,40,104,0.25);}
+.header-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;position:relative;z-index:2;padding-bottom:36px;}
+.hdr-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);padding:6px 14px;border-radius:20px;font-size:11px;font-weight:700;color:#fff;letter-spacing:0.4px;text-transform:uppercase;margin-bottom:18px;}
+.hdr-h1{font-size:40px;font-weight:800;color:#fff;font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:1.15;margin-bottom:14px;}
+.hdr-h1 span{color:var(--gold);}
+.hdr-p{font-size:15px;color:rgba(255,255,255,0.65);max-width:440px;margin-bottom:24px;}
+.hdr-btns{display:flex;gap:12px;}
+.btn-primary{background:var(--navy);color:#fff;border:none;padding:14px 24px;border-radius:12px;font-size:14px;font-weight:800;cursor:pointer;box-shadow:0 4px 14px rgba(0,40,104,0.45);}
+.btn-ghost{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.25);color:#fff;padding:14px 24px;border-radius:12px;font-size:14px;font-weight:700;cursor:pointer;}
+
+.rate-strip{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:18px 22px;display:grid;grid-template-columns:repeat(4,1fr);position:relative;z-index:2;}
+.rs-item{text-align:center;padding:0 6px;border-right:1px solid rgba(255,255,255,0.12);}
+.rs-item:last-child{border-right:none;}
+.rs-lbl{font-size:10px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;}
+.rs-val{font-size:19px;font-weight:800;color:#fff;font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;}
+.rs-val.red{color:#FF8A9A;}.rs-val.grn{color:#BBF7D0;}.rs-val.gold{color:var(--gold);}
+.rs-note{font-size:10px;color:rgba(255,255,255,0.45);margin-top:2px;}
+
+.hero-card{background:linear-gradient(145deg,#1A0A00,#7C2D12);border-radius:22px;padding:28px;position:relative;overflow:hidden;box-shadow:0 16px 44px rgba(26,10,0,0.32);}
+.hero-card::before{content:'🦘';position:absolute;right:0;top:-10px;font-size:100px;opacity:0.1;}
+.hc-tag{font-size:11px;color:rgba(255,255,255,0.55);text-transform:uppercase;letter-spacing:0.8px;}
+.hc-title{font-size:22px;font-weight:800;color:#fff;margin:8px 0 18px;line-height:1.25;font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;}
+.hc-title span{color:var(--gold);}
+.hc-row{display:flex;gap:10px;}
+.hc-box{flex:1;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);border-radius:12px;padding:11px 12px;}
+.hc-box label{font-size:10px;color:rgba(255,255,255,0.5);display:block;margin-bottom:3px;}
+.hc-box .v{font-size:15px;font-weight:800;color:#fff;}
+.hc-btn{margin-top:18px;width:100%;background:var(--navy);border:none;border-radius:13px;padding:15px;font-size:14px;font-weight:800;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(0,40,104,0.4);}
+
+/* ============ MAIN CONTENT ============ */
+.content{padding:56px 0;}
+.section{margin-bottom:56px;}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:22px;}
+.sec-lbl{font-size:13px;font-weight:700;color:var(--brown-text);text-transform:uppercase;letter-spacing:1.2px;}
+.sec-lbl .more{font-size:13px;font-weight:600;color:var(--rust);text-transform:none;letter-spacing:0;cursor:pointer;}
+.sec-title{font-size:26px;font-weight:800;color:var(--dark);font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;}
+
+/* LMI banner */
+.lmi-banner{background:linear-gradient(135deg,#FFF7ED,#FFEDD5);border:1px solid #FCA5A5;border-radius:16px;padding:20px 24px;display:flex;align-items:center;gap:16px;}
+.sb-title{font-size:15px;font-weight:800;color:var(--rust);font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;}
+.sb-sub{font-size:12px;color:#C2410C;margin-top:3px;}
+.sb-btn{margin-left:auto;background:#EA580C;color:#fff;font-size:12px;font-weight:700;padding:10px 16px;border-radius:9px;white-space:nowrap;flex-shrink:0;cursor:pointer;border:none;}
+
+/* Tools grid */
+.grid-tools{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.tcard{background:#fff;border-radius:18px;padding:20px 18px;box-shadow:0 3px 14px rgba(26,10,0,0.08);border:1px solid rgba(124,45,18,0.08);cursor:pointer;position:relative;overflow:hidden;transition:transform .15s,box-shadow .15s;}
+.tcard:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(26,10,0,0.14);}
+.tcard.dark{background:linear-gradient(140deg,#1A0A00,#7C2D12);}
+.tcard.blue{background:linear-gradient(140deg,#002868,#1e3a8a);}
+.tcard.gold{background:linear-gradient(140deg,#D97706,#92400E);}
+.tcard.teal{background:linear-gradient(140deg,#0F766E,#115E59);}
+.tic{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:19px;margin-bottom:12px;}
+.tcard:not(.dark):not(.blue):not(.gold):not(.teal) .tic{background:var(--bg);}
+.tcard.dark .tic,.tcard.blue .tic,.tcard.gold .tic,.tcard.teal .tic{background:rgba(255,255,255,0.15);}
+.tname{font-size:14px;font-weight:800;color:var(--dark);line-height:1.25;font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;}
+.tcard.dark .tname,.tcard.blue .tname,.tcard.gold .tname,.tcard.teal .tname{color:#fff;}
+.tdesc{font-size:11px;color:var(--brown-text);margin-top:4px;}
+.tcard.dark .tdesc,.tcard.blue .tdesc,.tcard.gold .tdesc,.tcard.teal .tdesc{color:rgba(255,255,255,0.6);}
+.tarr{position:absolute;bottom:16px;right:16px;font-size:16px;color:rgba(26,10,0,0.18);}
+.tcard.dark .tarr,.tcard.blue .tarr,.tcard.gold .tarr,.tcard.teal .tarr{color:rgba(255,255,255,0.25);}
+.badge{display:inline-flex;align-items:center;padding:3px 9px;border-radius:20px;font-size:10px;font-weight:700;margin-top:6px;}
+.badge-au{background:#FFF7ED;color:#C2410C;}.badge-b{background:#EFF6FF;color:#1D4ED8;}
+
+/* State & resources */
+.grid-info{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+.info-card{background:#fff;border-radius:16px;padding:18px;box-shadow:0 3px 14px rgba(26,10,0,0.07);border:1px solid rgba(124,45,18,0.08);display:flex;align-items:center;gap:14px;cursor:pointer;transition:transform .15s;}
+.info-card:hover{transform:translateY(-2px);}
+.info-icon{width:44px;height:44px;border-radius:12px;background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0;}
+.info-name{font-size:14px;font-weight:800;color:var(--dark);font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;}
+.info-sub{font-size:11px;color:var(--brown-text);margin-top:3px;}
+.info-chev{font-size:19px;color:rgba(26,10,0,0.2);margin-left:auto;}
+
+/* ============ FOOTER ============ */
+.site-footer{background:var(--dark);color:rgba(255,255,255,0.6);padding:48px 0 28px;}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;margin-bottom:32px;}
+.footer-brand{color:#fff;font-weight:800;font-size:16px;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.footer-desc{font-size:12px;line-height:1.6;max-width:280px;}
+.footer-col h4{font-size:12px;color:#fff;text-transform:uppercase;letter-spacing:0.6px;margin-bottom:14px;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.footer-col a{font-size:12.5px;color:rgba(255,255,255,0.6);transition:color .15s;}
+.footer-col a:hover{color:var(--gold);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:22px;display:flex;justify-content:space-between;font-size:11.5px;flex-wrap:wrap;gap:10px;}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:980px){
+  .header-inner{grid-template-columns:1fr;}
+  .grid-tools{grid-template-columns:repeat(3,1fr);}
+  .grid-info{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:760px){
+  .nav-links{display:none;}
+  .nav-toggle{display:flex;}
+  .wrap{padding:0 20px;}
+  .hdr-h1{font-size:30px;}
+  .rate-strip{grid-template-columns:repeat(2,1fr);row-gap:14px;}
+  .rs-item:nth-child(2){border-right:none;}
+  .grid-tools{grid-template-columns:repeat(2,1fr);}
+  .footer-grid{grid-template-columns:1fr;}
+  .hdr-btns{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="wrap">
+    <div class="brand"><span class="flag">🇦🇺</span> Australia Mortgage Tools</div>
+    <ul class="nav-links">
+      <li><a href="#" class="active">Calculator</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#">Rates</a></li>
+      <li><a href="#">Advisor</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="icon-btn">🔔</div>
+      <button class="nav-cta">Get Started</button>
+      <div class="nav-toggle">☰</div>
+    </div>
+  </div>
+</nav>
+
+<header class="header">
+  <div class="wrap">
+    <div class="header-inner">
+      <div>
+        <div class="hdr-eyebrow">AUD · RBA Rate · LMI</div>
+        <h1 class="hdr-h1">Your mortgage,<br>sorted for <span>Australia</span></h1>
+        <p class="hdr-p">Estimate repayments, work out LMI, and compare variable, fixed, and offset options against RBA cash rate movements — all in one place.</p>
+        <div class="hdr-btns">
+          <button class="btn-primary">🦘 Calculate My Mortgage</button>
+          <button class="btn-ghost">Explore Tools</button>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hc-tag">Australian Mortgage Calculator</div>
+        <div class="hc-title">Calculate with <span>LMI</span> & offset account</div>
+        <div class="hc-row">
+          <div class="hc-box"><label>Property Value</label><div class="v">AU$750K</div></div>
+          <div class="hc-box"><label>Deposit</label><div class="v">10%</div></div>
+          <div class="hc-box"><label>Term</label><div class="v">30 yr</div></div>
+        </div>
+        <button class="hc-btn">🦘 Calculate Australian Mortgage</button>
+      </div>
+    </div>
+
+    <div class="rate-strip">
+      <div class="rs-item"><div class="rs-lbl">Variable</div><div class="rs-val red">6.09%</div><div class="rs-note">↓ -0.25</div></div>
+      <div class="rs-item"><div class="rs-lbl">2-Yr Fixed</div><div class="rs-val">6.29%</div><div class="rs-note">Avg</div></div>
+      <div class="rs-item"><div class="rs-lbl">3-Yr Fixed</div><div class="rs-val grn">6.15%</div><div class="rs-note">Big 4</div></div>
+      <div class="rs-item"><div class="rs-lbl">RBA Cash</div><div class="rs-val gold">4.35%</div><div class="rs-note">Current</div></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap content">
+
+  <section class="section">
+    <div class="sec-head">
+      <span class="sec-lbl">LMI Calculator</span>
+      <span class="sec-lbl more">Learn more →</span>
+    </div>
+    <div class="lmi-banner">
+      <div style="font-size:28px">🛡️</div>
+      <div><div class="sb-title">Lenders Mortgage Insurance</div><div class="sb-sub">Required when deposit is below 20% — calculate LMI cost</div></div>
+      <button class="sb-btn">Calculate</button>
+    </div>
+  </section>
+
+  <section class="section" id="tools">
+    <div class="sec-head">
+      <span class="sec-lbl">Core Tools</span>
+      <span class="sec-lbl more">All tools →</span>
+    </div>
+    <div class="grid-tools">
+      <div class="tcard dark"><div class="tic">🏠</div><div class="tname">Mortgage Calc</div><div class="tdesc">Variable & fixed rates</div><div class="badge badge-au">LMI Incl.</div><div class="tarr">›</div></div>
+      <div class="tcard"><div class="tic">🛡️</div><div class="tname">LMI Calculator</div><div class="tdesc">Insurance premium</div><div class="badge badge-b">&lt;20% dep.</div><div class="tarr">›</div></div>
+      <div class="tcard teal"><div class="tic">🏦</div><div class="tname">Offset Account</div><div class="tdesc">Interest savings calc</div><div class="tarr">›</div></div>
+      <div class="tcard"><div class="tic">📊</div><div class="tname">DTI Ratio</div><div class="tdesc">Debt-to-income AUS</div><div class="tarr">›</div></div>
+      <div class="tcard"><div class="tic">💰</div><div class="tname">Affordability</div><div class="tdesc">Borrowing capacity AUD</div><div class="tarr">›</div></div>
+      <div class="tcard blue"><div class="tic">📅</div><div class="tname">Amortization</div><div class="tdesc">Fortnightly schedule</div><div class="tarr">›</div></div>
+      <div class="tcard gold"><div class="tic">🏘️</div><div class="tname">Stamp Duty (AUS)</div><div class="tdesc">State-by-state calc</div><div class="tarr">›</div></div>
+      <div class="tcard"><div class="tic">🔄</div><div class="tname">Refinance Tool</div><div class="tdesc">Switch lender savings</div><div class="tarr">›</div></div>
+      <div class="tcard"><div class="tic">📈</div><div class="tname">Extra Repayments</div><div class="tdesc">Save on interest</div><div class="tarr">›</div></div>
+      <div class="tcard"><div class="tic">🏗️</div><div class="tname">Construction Loan</div><div class="tdesc">Progressive drawdown</div><div class="tarr">›</div></div>
+    </div>
+  </section>
+
+  <section class="section" id="resources">
+    <div class="sec-head"><span class="sec-lbl">State & Resources</span></div>
+    <div class="grid-info">
+      <div class="info-card"><div class="info-icon">📋</div><div><div class="info-name">Stamp Duty by State</div><div class="info-sub">NSW, VIC, QLD, WA, SA, TAS…</div></div><div class="info-chev">›</div></div>
+      <div class="info-card"><div class="info-icon">🏡</div><div><div class="info-name">First Home Owner Grant</div><div class="info-sub">FHOG · First Home Guarantee</div></div><div class="info-chev">›</div></div>
+      <div class="info-card"><div class="info-icon">📉</div><div><div class="info-name">RBA Rate History</div><div class="info-sub">Reserve Bank of Australia tracker</div></div><div class="info-chev">›</div></div>
+      <div class="info-card"><div class="info-icon">🤖</div><div><div class="info-name">Australia AI Advisor</div><div class="info-sub">RBA rules · LMI · offset guidance</div></div><div class="info-chev">›</div></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><span class="flag">🇦🇺</span> Australia Mortgage Tools</div>
+        <p class="footer-desc">Rates, calculators, and state-by-state guidance for mortgage shoppers across Australia.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <ul>
+          <li><a href="#">Mortgage Calculator</a></li>
+          <li><a href="#">LMI Calculator</a></li>
+          <li><a href="#">Offset Account</a></li>
+          <li><a href="#">Stamp Duty</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>States</h4>
+        <ul>
+          <li><a href="#">NSW</a></li>
+          <li><a href="#">VIC</a></li>
+          <li><a href="#">QLD</a></li>
+          <li><a href="#">WA</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">AI Advisor</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Australia Mortgage Tools. All rates shown are indicative.</span>
+      <span>RBA Cash Rate: 4.35% · Updated daily</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

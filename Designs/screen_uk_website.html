@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UK Mortgage Tools — MortgagePro</title>
+<style>
+/* ═══════════════════════════════
+   DESIGN TOKENS
+═══════════════════════════════ */
+:root {
+  --navy:    #0D0D2B;
+  --royal:   #1a1a5e;
+  --indigo:  #4F46E5;
+  --violet:  #3730A3;
+  --red:     #C8102E;
+  --crimson: #8B0A1E;
+  --gold:    #B45309;
+  --amber:   #92400E;
+  --gold-lt: #FFD700;
+  --bg:      #F5F5F8;
+  --card:    #FFFFFF;
+  --muted:   #5C5C8A;
+  --border:  rgba(26,26,94,0.09);
+  --sh:      0 2px 14px rgba(13,13,43,0.08);
+  --sh2:     0 8px 32px rgba(13,13,43,0.16);
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--navy);
+  min-height: 100vh;
+}
+
+/* ═══════════════════════════════
+   STICKY NAV
+═══════════════════════════════ */
+nav {
+  position: sticky; top: 0; z-index: 500;
+  background: linear-gradient(135deg, #0D0D2B 0%, #1a1a5e 55%, #C8102E 100%);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 48px; height: 64px;
+  box-shadow: 0 2px 20px rgba(13,13,43,0.35);
+}
+.nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand-icon {
+  width: 38px; height: 38px; border-radius: 10px;
+  background: var(--red); display: flex; align-items: center; justify-content: center;
+  font-size: 20px; box-shadow: 0 3px 10px rgba(200,16,46,0.45);
+}
+.brand-name { font-size: 18px; font-weight: 800; color: #fff; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; letter-spacing: -.3px; }
+.brand-name span { color: var(--gold-lt); }
+.brand-sub  { font-size: 10px; color: rgba(255,255,255,0.50); }
+.nav-links { list-style: none; display: flex; align-items: center; gap: 4px; }
+.nav-links a {
+  color: rgba(255,255,255,0.82); text-decoration: none;
+  font-size: 13px; font-weight: 600; padding: 7px 14px; border-radius: 8px;
+  transition: background .15s;
+}
+.nav-links a:hover { background: rgba(255,255,255,0.13); color: #fff; }
+.nav-links a.active { background: rgba(255,255,255,0.17); color: #fff; }
+.nav-cta {
+  background: linear-gradient(135deg, #C8102E, #8B0A1E) !important;
+  color: #fff !important;
+  box-shadow: 0 3px 10px rgba(200,16,46,0.42);
+}
+@media (max-width: 900px) { .nav-links { display: none; } nav { padding: 0 20px; } }
+
+/* ═══════════════════════════════
+   LIVE RATE BAR
+═══════════════════════════════ */
+.rate-bar {
+  background: var(--navy);
+  display: flex;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.rb-item { flex: 1; text-align: center; padding: 10px 6px; position: relative; }
+.rb-item:not(:last-child)::after {
+  content: ''; position: absolute; right: 0; top: 15%; height: 70%;
+  width: 1px; background: rgba(255,255,255,0.13);
+}
+.rb-lbl  { font-size: 9px; color: rgba(255,255,255,0.46); text-transform: uppercase; letter-spacing: .5px; }
+.rb-val  { font-size: 16px; font-weight: 800; color: #fff; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+.rb-val.red  { color: #FF8A9A; }
+.rb-val.grn  { color: #90EE90; }
+.rb-val.gold { color: var(--gold-lt); }
+.rb-note { font-size: 8.5px; color: rgba(255,255,255,0.38); margin-top: 1px; }
+
+/* ═══════════════════════════════
+   SECTION HERO
+═══════════════════════════════ */
+.section-hero {
+  background: linear-gradient(150deg, #0D0D2B 0%, #1a1a5e 55%, #C8102E 100%);
+  padding: 52px 48px 0;
+  position: relative; overflow: hidden;
+}
+.section-hero::before {
+  content: '👑';
+  position: absolute; right: 64px; top: 28px;
+  font-size: 170px; opacity: .06; pointer-events: none; line-height: 1;
+}
+.section-hero::after {
+  content: '';
+  position: absolute; bottom: -30px; left: 20px;
+  width: 140px; height: 140px; border-radius: 50%;
+  background: rgba(200,16,46,0.12); pointer-events: none;
+}
+.hero-inner {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  gap: 32px; position: relative; z-index: 2;
+}
+.hero-text { flex: 1; }
+.hero-eyebrow { font-size: 10px; text-transform: uppercase; letter-spacing: .8px; color: rgba(255,255,255,0.50); margin-bottom: 6px; }
+.hero-title { font-size: 32px; font-weight: 800; color: #fff; line-height: 1.15; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+.hero-title span { color: var(--gold-lt); }
+.hero-sub { font-size: 13px; color: rgba(255,255,255,0.55); margin-top: 6px; }
+
+/* Hero rate strip */
+.hero-rate-strip {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  background: rgba(255,255,255,0.09); border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 14px; padding: 12px 16px;
+  margin-top: 28px; position: relative; z-index: 2;
+}
+.hrs { text-align: center; position: relative; }
+.hrs:not(:last-child)::after {
+  content: ''; position: absolute; right: 0; top: 15%; height: 70%;
+  width: 1px; background: rgba(255,255,255,0.14);
+}
+.hrs-l  { font-size: 8.5px; color: rgba(255,255,255,0.48); text-transform: uppercase; letter-spacing: .4px; }
+.hrs-v  { font-size: 15px; font-weight: 800; color: #fff; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.1; }
+.hrs-v.red  { color: #FF8A9A; }
+.hrs-v.grn  { color: #90EE90; }
+.hrs-v.gold { color: var(--gold-lt); }
+.hrs-n  { font-size: 8px; color: rgba(255,255,255,0.38); margin-top: 1px; }
+
+/* ═══════════════════════════════
+   PAGE LAYOUT
+═══════════════════════════════ */
+.page-wrap { max-width: 1280px; margin: 0 auto; padding: 0 40px 70px; }
+@media (max-width: 780px) { .page-wrap { padding: 0 18px 50px; } }
+
+.sec-hdr {
+  display: flex; align-items: center; justify-content: space-between;
+  margin: 38px 0 16px; border-bottom: 2px solid var(--border); padding-bottom: 10px;
+}
+.sec-hdr h2 {
+  font-size: 11.5px; font-weight: 800; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 1.2px;
+}
+.sec-hdr a { font-size: 13px; font-weight: 600; color: var(--royal); text-decoration: none; }
+.sec-hdr a:hover { text-decoration: underline; }
+
+/* ═══════════════════════════════
+   HERO CALCULATOR
+═══════════════════════════════ */
+.hero-calc {
+  background: linear-gradient(145deg, #0D0D2B, #1a1a5e);
+  border-radius: 20px; padding: 28px 32px;
+  position: relative; overflow: hidden; box-shadow: var(--sh2);
+  display: flex; align-items: center; gap: 32px;
+}
+.hero-calc::before {
+  content: '👑'; position: absolute; right: 28px; top: 50%;
+  transform: translateY(-50%); font-size: 100px; opacity: .07; pointer-events: none;
+}
+.hc-left { flex: 1; min-width: 180px; position: relative; z-index: 1; }
+.hc-tag  { font-size: 9.5px; color: rgba(255,255,255,0.48); text-transform: uppercase; letter-spacing: .8px; }
+.hc-title { font-size: 22px; font-weight: 800; color: #fff; margin: 5px 0 0; line-height: 1.2; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+.hc-title span { color: var(--gold-lt); }
+.hc-fields { display: flex; gap: 12px; flex: 2; position: relative; z-index: 1; }
+.hc-box {
+  flex: 1; background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px; padding: 12px 16px;
+}
+.hc-box label { font-size: 9px; color: rgba(255,255,255,0.48); display: block; margin-bottom: 4px; text-transform: uppercase; }
+.hc-box .v    { font-size: 16px; font-weight: 800; color: #fff; }
+.hc-btn {
+  background: var(--red); border: none; border-radius: 12px;
+  padding: 14px 22px; font-size: 14px; font-weight: 800; color: #fff; cursor: pointer;
+  box-shadow: 0 4px 14px rgba(200,16,46,0.40);
+  white-space: nowrap; flex-shrink: 0; position: relative; z-index: 1;
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.hc-btn:hover { background: var(--crimson); }
+@media (max-width: 860px) {
+  .hero-calc { flex-direction: column; gap: 18px; }
+  .hero-calc::before { top: 18px; right: 18px; transform: none; font-size: 64px; }
+  .hc-fields { flex-wrap: wrap; }
+  .hc-btn { width: 100%; }
+}
+
+/* ═══════════════════════════════
+   BoE RATE BANNER
+═══════════════════════════════ */
+.boe-banner {
+  background: linear-gradient(135deg, #0D0D2B, #1a1a5e);
+  border-radius: 17px; padding: 18px 24px;
+  display: flex; align-items: center; gap: 16px; box-shadow: var(--sh2); margin-bottom: 12px;
+}
+.boe-icon { font-size: 32px; flex-shrink: 0; }
+.boe-lbl  { font-size: 9.5px; text-transform: uppercase; letter-spacing: .6px; color: rgba(255,255,255,0.44); font-weight: 700; }
+.boe-val  { font-size: 26px; font-weight: 800; color: var(--gold-lt); font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1; }
+.boe-sub  { font-size: 10px; color: rgba(255,255,255,0.52); margin-top: 3px; }
+.boe-btn  {
+  margin-left: auto; background: var(--red); color: #fff;
+  font-size: 11px; font-weight: 800; padding: 10px 18px; border-radius: 10px;
+  white-space: nowrap; flex-shrink: 0; border: none; cursor: pointer;
+  text-decoration: none; display: inline-block;
+}
+.boe-btn:hover { background: var(--crimson); }
+
+/* ═══════════════════════════════
+   SDLT BANNER
+═══════════════════════════════ */
+.sdlt-banner {
+  background: linear-gradient(135deg, #EEF2FF, #E0E7FF);
+  border: 1px solid #A5B4FC; border-radius: 17px;
+  padding: 18px 22px; display: flex; align-items: center; gap: 16px;
+  box-shadow: var(--sh); margin-bottom: 12px;
+}
+.sdlt-icon  { font-size: 30px; flex-shrink: 0; }
+.sdlt-title { font-size: 15px; font-weight: 800; color: #1e1b4b; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+.sdlt-sub   { font-size: 11px; color: #4338ca; margin-top: 3px; }
+.sdlt-btn   {
+  margin-left: auto; background: var(--indigo); color: #fff;
+  font-size: 12px; font-weight: 800; padding: 11px 20px; border-radius: 10px;
+  white-space: nowrap; flex-shrink: 0; border: none; cursor: pointer;
+  text-decoration: none; display: inline-block;
+}
+.sdlt-btn:hover { background: var(--violet); }
+
+/* ═══════════════════════════════
+   TOOL CARDS GRID
+═══════════════════════════════ */
+.g2 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 13px; }
+.g3 { display: grid; grid-template-columns: repeat(6, 1fr); gap: 11px; }
+
+.tc {
+  background: var(--card); border-radius: 17px; padding: 17px 15px;
+  box-shadow: var(--sh); border: 1px solid var(--border);
+  cursor: pointer; position: relative; overflow: hidden;
+  transition: transform .15s, box-shadow .15s; display: block; text-decoration: none;
+}
+.tc:hover { transform: translateY(-3px); box-shadow: var(--sh2); }
+.tc.dark   { background: linear-gradient(140deg, #0D0D2B, #1a1a5e); }
+.tc.red    { background: linear-gradient(140deg, #C8102E, #8B0A1E); }
+.tc.royal  { background: linear-gradient(140deg, #4F46E5, #3730A3); }
+.tc.gold   { background: linear-gradient(140deg, #B45309, #92400E); }
+.tc.teal   { background: linear-gradient(140deg, #0F766E, #115E59); }
+.tc.slate  { background: linear-gradient(140deg, #334155, #1E293B); }
+
+.tic {
+  width: 42px; height: 42px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 19px; margin-bottom: 10px; background: var(--bg);
+}
+.tc.dark .tic, .tc.red .tic, .tc.royal .tic, .tc.gold .tic,
+.tc.teal .tic, .tc.slate .tic { background: rgba(255,255,255,0.15); }
+
+.tn { font-size: 13.5px; font-weight: 800; color: var(--navy); line-height: 1.2; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+.tc.dark .tn, .tc.red .tn, .tc.royal .tn, .tc.gold .tn,
+.tc.teal .tn, .tc.slate .tn { color: #fff; }
+
+.td { font-size: 10px; color: var(--muted); margin-top: 3px; }
+.tc.dark .td, .tc.red .td, .tc.royal .td, .tc.gold .td,
+.tc.teal .td, .tc.slate .td { color: rgba(255,255,255,0.60); }
+
+.ta { position: absolute; bottom: 13px; right: 13px; font-size: 16px; color: rgba(13,13,43,0.18); }
+.tc.dark .ta, .tc.red .ta, .tc.royal .ta, .tc.gold .ta,
+.tc.teal .ta, .tc.slate .ta { color: rgba(255,255,255,0.25); }
+
+.badge { display: inline-flex; padding: 3px 9px; border-radius: 20px; font-size: 9px; font-weight: 700; margin-top: 6px; }
+.badge-uk { background: #EEF2FF; color: #3730A3; }
+.badge-r  { background: #FEF2F2; color: #991B1B; }
+.badge-b  { background: #EFF6FF; color: #1D4ED8; }
+.badge-g  { background: #F0FDF4; color: #15803D; }
+.badge-o  { background: #FFF7ED; color: #C2410C; }
+
+/* ═══════════════════════════════
+   INFO LIST
+═══════════════════════════════ */
+.ilist { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.ic {
+  background: var(--card); border-radius: 15px; padding: 16px 20px;
+  box-shadow: var(--sh); border: 1px solid var(--border);
+  display: flex; align-items: center; gap: 14px;
+  cursor: pointer; text-decoration: none;
+  transition: transform .15s, box-shadow .15s;
+}
+.ic:hover { transform: translateY(-2px); box-shadow: var(--sh2); }
+.ii  { width: 42px; height: 42px; border-radius: 12px; background: var(--bg); display: flex; align-items: center; justify-content: center; font-size: 19px; flex-shrink: 0; }
+.in  { font-size: 13px; font-weight: 800; color: var(--navy); font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+.is  { font-size: 10px; color: var(--muted); margin-top: 3px; }
+.ich { font-size: 18px; color: rgba(13,13,43,0.20); margin-left: auto; }
+
+/* ═══════════════════════════════
+   REGION TABS
+═══════════════════════════════ */
+.region-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.region-pill {
+  padding: 8px 16px; border-radius: 24px; font-size: 12.5px; font-weight: 700;
+  cursor: pointer; border: 1.5px solid transparent; transition: all .15s; text-decoration: none;
+}
+.region-pill.active { background: var(--royal); color: #fff; border-color: var(--royal); }
+.region-pill:not(.active) { background: var(--card); color: var(--navy); border-color: var(--border); }
+.region-pill:hover:not(.active) { background: #EEEEFF; border-color: var(--muted); }
+
+/* ═══════════════════════════════
+   SDLT RATES TABLE
+═══════════════════════════════ */
+.sdlt-table {
+  background: var(--card); border-radius: 16px;
+  box-shadow: var(--sh); border: 1px solid var(--border);
+  overflow: hidden; margin-bottom: 12px;
+}
+.sdlt-table table { width: 100%; border-collapse: collapse; }
+.sdlt-table th {
+  font-size: 10px; font-weight: 800; color: var(--muted);
+  text-transform: uppercase; letter-spacing: .5px;
+  padding: 13px 18px; text-align: left; background: var(--bg);
+  border-bottom: 2px solid var(--border);
+}
+.sdlt-table td {
+  font-size: 13px; font-weight: 600; color: var(--navy);
+  padding: 13px 18px; border-bottom: 1px solid var(--border);
+}
+.sdlt-table tr:last-child td { border-bottom: none; }
+.sdlt-table tr:hover td { background: var(--bg); }
+.rate-chip {
+  display: inline-flex; padding: 3px 10px; border-radius: 20px;
+  font-size: 11px; font-weight: 800;
+}
+
+/* ═══════════════════════════════
+   FOOTER
+═══════════════════════════════ */
+footer {
+  background: var(--navy); color: rgba(255,255,255,0.55);
+  text-align: center; padding: 30px 48px; font-size: 12px; margin-top: 40px;
+}
+.footer-links { display: flex; justify-content: center; gap: 4px; flex-wrap: wrap; margin-bottom: 10px; }
+.footer-links a { color: rgba(255,255,255,0.70); text-decoration: none; padding: 5px 12px; border-radius: 6px; }
+.footer-links a:hover { color: #fff; background: rgba(255,255,255,0.09); }
+
+/* UP / DOWN */
+.up { color: #15803D; } .dn { color: #C8102E; }
+
+/* ═══════════════════════════════
+   RESPONSIVE
+═══════════════════════════════ */
+@media (max-width: 1100px) {
+  .g2 { grid-template-columns: repeat(3, 1fr); }
+  .g3 { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 780px) {
+  .section-hero { padding: 40px 20px 0; }
+  .section-hero::before { font-size: 100px; right: 16px; top: 20px; }
+  .g2 { grid-template-columns: repeat(2, 1fr); }
+  .g3 { grid-template-columns: repeat(3, 1fr); }
+  .ilist { grid-template-columns: 1fr; }
+  .hero-inner { flex-direction: column; align-items: flex-start; }
+  .hero-rate-strip { grid-template-columns: repeat(2, 1fr); }
+  .rate-bar { flex-wrap: wrap; }
+}
+@media (max-width: 480px) {
+  .g2, .g3 { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     STICKY NAV
+══════════════════════════════════════ -->
+<nav>
+  <a href="#" class="nav-brand">
+    <div class="brand-icon">👑</div>
+    <div>
+      <div class="brand-name">UK<span>Pro</span></div>
+      <div class="brand-sub">GBP · BoE Rate · SDLT</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#calculator">Calculator</a></li>
+    <li><a href="#sdlt">Stamp Duty</a></li>
+    <li><a href="#tools">Core Tools</a></li>
+    <li><a href="#regions">Regions</a></li>
+    <li><a href="#investment">Investment</a></li>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="#" class="nav-cta">👑 Get Rate</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════════════════════════════════
+     LIVE RATE BAR
+══════════════════════════════════════ -->
+<div class="rate-bar">
+  <div class="rb-item"><div class="rb-lbl">2-Yr Fixed</div><div class="rb-val red">4.75%</div><div class="rb-note">↑ +0.05</div></div>
+  <div class="rb-item"><div class="rb-lbl">5-Yr Fixed</div><div class="rb-val">4.35%</div><div class="rb-note">BoE</div></div>
+  <div class="rb-item"><div class="rb-lbl">10-Yr Fixed</div><div class="rb-val">4.20%</div><div class="rb-note">Long-term</div></div>
+  <div class="rb-item"><div class="rb-lbl">Tracker</div><div class="rb-val grn">5.25%</div><div class="rb-note">Base + 0.25</div></div>
+  <div class="rb-item"><div class="rb-lbl">SVR (Avg)</div><div class="rb-val red">7.99%</div><div class="rb-note">Revert rate</div></div>
+  <div class="rb-item"><div class="rb-lbl">BoE Base</div><div class="rb-val gold">5.00%</div><div class="rb-note">Current</div></div>
+  <div class="rb-item"><div class="rb-lbl">SONIA</div><div class="rb-val">5.19%</div><div class="rb-note">Overnight</div></div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SECTION HERO
+══════════════════════════════════════ -->
+<div class="section-hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-eyebrow">GBP · Bank of England · SDLT · LTV · FCA Regulated</div>
+      <div class="hero-title">🇬🇧 UK <span>Mortgage Tools</span></div>
+      <div class="hero-sub">Stamp Duty · LTV · Help to Buy · Buy-to-Let · Remortgage · Shared Ownership · 20+ calculators</div>
+    </div>
+  </div>
+  <div class="hero-rate-strip">
+    <div class="hrs"><div class="hrs-l">2-Yr Fixed</div><div class="hrs-v red">4.75%</div><div class="hrs-n">↑ +0.05</div></div>
+    <div class="hrs"><div class="hrs-l">5-Yr Fixed</div><div class="hrs-v">4.35%</div><div class="hrs-n">BoE</div></div>
+    <div class="hrs"><div class="hrs-l">Tracker</div><div class="hrs-v grn">5.25%</div><div class="hrs-n">Base + 0.25</div></div>
+    <div class="hrs"><div class="hrs-l">BoE Base</div><div class="hrs-v gold">5.00%</div><div class="hrs-n">Current</div></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     MAIN CONTENT
+══════════════════════════════════════ -->
+<main class="page-wrap">
+
+  <!-- ── HERO CALCULATOR ── -->
+  <div id="calculator" class="sec-hdr" style="margin-top: 36px;">
+    <h2>Quick Estimate</h2>
+    <a href="#">Advanced Calculator →</a>
+  </div>
+  <div class="hero-calc">
+    <div class="hc-left">
+      <div class="hc-tag">UK Mortgage Calculator</div>
+      <div class="hc-title">Calculate your <span>Stamp Duty</span><br>&amp; monthly payment</div>
+    </div>
+    <div class="hc-fields">
+      <div class="hc-box"><label>Property Value</label><div class="v">£380,000</div></div>
+      <div class="hc-box"><label>Deposit</label><div class="v">15%</div></div>
+      <div class="hc-box"><label>Term</label><div class="v">25 yr</div></div>
+      <div class="hc-box"><label>Rate</label><div class="v">4.75%</div></div>
+    </div>
+    <button class="hc-btn">👑 Calculate UK Mortgage</button>
+  </div>
+
+  <!-- ── BoE RATE BANNER ── -->
+  <div class="sec-hdr">
+    <h2>Bank of England</h2>
+    <a href="#">Rate History →</a>
+  </div>
+  <div class="boe-banner">
+    <div class="boe-icon">🏦</div>
+    <div>
+      <div class="boe-lbl">BoE Base Rate · MPC Decision</div>
+      <div class="boe-val">5.00%</div>
+      <div class="boe-sub">Next MPC meeting: Aug 7, 2026 · Cut probability: 68%</div>
+    </div>
+    <a href="#" class="boe-btn">BoE Live</a>
+  </div>
+
+  <!-- ── STAMP DUTY ── -->
+  <div id="sdlt" class="sec-hdr">
+    <h2>Stamp Duty Land Tax (SDLT)</h2>
+    <a href="#">Full SDLT Guide →</a>
+  </div>
+  <div class="sdlt-banner">
+    <div class="sdlt-icon">🏛️</div>
+    <div>
+      <div class="sdlt-title">Stamp Duty Land Tax</div>
+      <div class="sdlt-sub">First-time buyer relief up to £425,000 · 2nd home surcharge +3% · Calculate your exact SDLT bill</div>
+    </div>
+    <a href="#" class="sdlt-btn">Calculate SDLT</a>
+  </div>
+
+  <!-- SDLT Rates Table -->
+  <div class="sdlt-table">
+    <table>
+      <tr>
+        <th>Property Value Band</th>
+        <th>Standard Rate</th>
+        <th>First-Time Buyer</th>
+        <th>Second Home / BTL</th>
+        <th>Non-Resident</th>
+      </tr>
+      <tr>
+        <td>Up to £250,000</td>
+        <td><span class="rate-chip" style="background:#F0FDF4;color:#15803D;">0%</span></td>
+        <td><span class="rate-chip" style="background:#F0FDF4;color:#15803D;">0%</span></td>
+        <td><span class="rate-chip" style="background:#FFF7ED;color:#C2410C;">3%</span></td>
+        <td><span class="rate-chip" style="background:#FEF2F2;color:#991B1B;">2%</span></td>
+      </tr>
+      <tr>
+        <td>£250,001 – £425,000</td>
+        <td><span class="rate-chip" style="background:#EFF6FF;color:#1D4ED8;">5%</span></td>
+        <td><span class="rate-chip" style="background:#F0FDF4;color:#15803D;">0% (FTB relief)</span></td>
+        <td><span class="rate-chip" style="background:#FFF7ED;color:#C2410C;">8%</span></td>
+        <td><span class="rate-chip" style="background:#FEF2F2;color:#991B1B;">7%</span></td>
+      </tr>
+      <tr>
+        <td>£425,001 – £925,000</td>
+        <td><span class="rate-chip" style="background:#EFF6FF;color:#1D4ED8;">5%</span></td>
+        <td><span class="rate-chip" style="background:#EFF6FF;color:#1D4ED8;">5%</span></td>
+        <td><span class="rate-chip" style="background:#FFF7ED;color:#C2410C;">8%</span></td>
+        <td><span class="rate-chip" style="background:#FEF2F2;color:#991B1B;">7%</span></td>
+      </tr>
+      <tr>
+        <td>£925,001 – £1,500,000</td>
+        <td><span class="rate-chip" style="background:#FFF7ED;color:#C2410C;">10%</span></td>
+        <td><span class="rate-chip" style="background:#FFF7ED;color:#C2410C;">10%</span></td>
+        <td><span class="rate-chip" style="background:#FEF2F2;color:#991B1B;">13%</span></td>
+        <td><span class="rate-chip" style="background:#FEF2F2;color:#991B1B;">12%</span></td>
+      </tr>
+      <tr>
+        <td>Above £1,500,000</td>
+        <td><span class="rate-chip" style="background:#FEF2F2;color:#991B1B;">12%</span></td>
+        <td><span class="rate-chip" style="background:#FEF2F2;color:#991B1B;">12%</span></td>
+        <td><span class="rate-chip" style="background:#FEF2F2;color:#991B1B;">15%</span></td>
+        <td><span class="rate-chip" style="background:#FEF2F2;color:#991B1B;">14%</span></td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ── CORE TOOLS ── -->
+  <div id="tools" class="sec-hdr">
+    <h2>Core Mortgage Tools</h2>
+    <a href="#">All Tools →</a>
+  </div>
+  <div class="g2">
+    <div class="tc dark"><div class="tic">🏠</div><div class="tn">Mortgage Calc</div><div class="td">Monthly repayment</div><div class="badge badge-uk">Repayment</div><div class="ta">›</div></div>
+    <div class="tc"><div class="tic">🏛️</div><div class="tn">Stamp Duty (SDLT)</div><div class="td">Tax on purchase</div><div class="badge badge-r">FTB Relief</div><div class="ta">›</div></div>
+    <div class="tc royal"><div class="tic">📊</div><div class="tn">LTV Calculator</div><div class="td">Loan-to-value ratio</div><div class="ta">›</div></div>
+    <div class="tc"><div class="tic">🔁</div><div class="tn">Remortgage Tool</div><div class="td">Switch &amp; save calc</div><div class="ta">›</div></div>
+    <div class="tc"><div class="tic">💷</div><div class="tn">Affordability</div><div class="td">Max borrowing GBP</div><div class="ta">›</div></div>
+    <div class="tc red"><div class="tic">🏘️</div><div class="tn">Help to Buy</div><div class="td">Equity loan scheme</div><div class="ta">›</div></div>
+    <div class="tc"><div class="tic">📅</div><div class="tn">Amortization</div><div class="td">Repayment schedule</div><div class="ta">›</div></div>
+    <div class="tc gold"><div class="tic">🏢</div><div class="tn">Buy-to-Let Calc</div><div class="td">Rental yield &amp; BTL</div><div class="ta">›</div></div>
+    <div class="tc"><div class="tic">📋</div><div class="tn">Income Multiples</div><div class="td">4x – 4.5x salary check</div><div class="ta">›</div></div>
+    <div class="tc"><div class="tic">🧾</div><div class="tn">SDLT 2nd Home</div><div class="td">Additional 3% surcharge</div><div class="ta">›</div></div>
+    <div class="tc teal"><div class="tic">🤝</div><div class="tn">Shared Ownership</div><div class="td">Part-buy part-rent calc</div><div class="badge badge-g">Scheme</div><div class="ta">›</div></div>
+    <div class="tc"><div class="tic">🔍</div><div class="tn">Mortgage in Principle</div><div class="td">AIP / decision in principle</div><div class="ta">›</div></div>
+  </div>
+
+  <!-- ── REGIONS ── -->
+  <div id="regions" class="sec-hdr">
+    <h2>UK Nations &amp; Regions</h2>
+    <a href="#">All Regions →</a>
+  </div>
+  <div class="region-tabs">
+    <a href="#" class="region-pill active">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</a>
+    <a href="#" class="region-pill">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</a>
+    <a href="#" class="region-pill">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</a>
+    <a href="#" class="region-pill">🇮🇪 Northern Ireland</a>
+    <a href="#" class="region-pill">🏙️ London</a>
+    <a href="#" class="region-pill">🌆 Manchester</a>
+    <a href="#" class="region-pill">🏛️ Edinburgh</a>
+  </div>
+  <div class="g3">
+    <div class="tc"><div class="tic">🏴󠁧󠁢󠁥󠁮󠁧󠁿</div><div class="tn">England SDLT</div><div class="td">Standard rates</div><div class="ta">›</div></div>
+    <div class="tc dark"><div class="tic">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div><div class="tn">Scotland LBTT</div><div class="td">Land &amp; Buildings Tax</div><div class="ta">›</div></div>
+    <div class="tc"><div class="tic">🏴󠁧󠁢󠁷󠁬󠁳󠁿</div><div class="tn">Wales LTT</div><div class="td">Land Transaction Tax</div><div class="ta">›</div></div>
+    <div class="tc red"><div class="tic">🏙️</div><div class="tn">London Prices</div><div class="td">Borough-level HPI data</div><div class="ta">›</div></div>
+    <div class="tc"><div class="tic">🏘️</div><div class="tn">Regional HPI</div><div class="td">HM Land Registry index</div><div class="ta">›</div></div>
+    <div class="tc royal"><div class="tic">🗺️</div><div class="tn">All Regions</div><div class="td">Full UK price map</div><div class="ta">›</div></div>
+  </div>
+
+  <!-- ── INVESTMENT / BTL ── -->
+  <div id="investment" class="sec-hdr">
+    <h2>Buy-to-Let &amp; Investment</h2>
+    <a href="#">All →</a>
+  </div>
+  <div class="g2">
+    <div class="tc gold"><div class="tic">🏢</div><div class="tn">BTL Mortgage Calc</div><div class="td">Rental yield &amp; cash flow</div><div class="ta">›</div></div>
+    <div class="tc"><div class="tic">📈</div><div class="tn">Rental Yield Calc</div><div class="td">Gross &amp; net yield GBP</div><div class="ta">›</div></div>
+    <div class="tc slate"><div class="tic">🧾</div><div class="tn">Section 24 Tax</div><div class="td">Mortgage interest relief</div><div class="badge badge-r">2017 rule</div><div class="ta">›</div></div>
+    <div class="tc"><div class="tic">🏗️</div><div class="tn">HMO Calculator</div><div class="td">House in multiple occ.</div><div class="ta">›</div></div>
+    <div class="tc"><div class="tic">📊</div><div class="tn">Capital Gains Tax</div><div class="td">Property CGT calculator</div><div class="ta">›</div></div>
+    <div class="tc royal"><div class="tic">🔄</div><div class="tn">Portfolio Refinance</div><div class="td">Multi-property analysis</div><div class="ta">›</div></div>
+    <div class="tc"><div class="tic">📋</div><div class="tn">Letting Agent Fees</div><div class="td">Impact on net yield</div><div class="ta">›</div></div>
+    <div class="tc teal"><div class="tic">🌍</div><div class="tn">Non-Resident SDLT</div><div class="td">+2% overseas buyer</div><div class="badge badge-r">+2%</div><div class="ta">›</div></div>
+  </div>
+
+  <!-- ── RESOURCES ── -->
+  <div id="resources" class="sec-hdr">
+    <h2>UK Resources &amp; Government</h2>
+    <a href="#">All →</a>
+  </div>
+  <div class="ilist">
+    <a href="#" class="ic"><div class="ii">📉</div><div><div class="in">BoE Base Rate Tracker</div><div class="is">Live Bank of England rate history</div></div><div class="ich">›</div></a>
+    <a href="#" class="ic"><div class="ii">🏡</div><div><div class="in">UK House Price Index</div><div class="is">HM Land Registry · regional data</div></div><div class="ich">›</div></a>
+    <a href="#" class="ic"><div class="ii">🤝</div><div><div class="in">Shared Ownership Calc</div><div class="is">Part-buy part-rent scheme</div></div><div class="ich">›</div></a>
+    <a href="#" class="ic"><div class="ii">🏛️</div><div><div class="in">HMRC SDLT Guidance</div><div class="is">Official stamp duty rules &amp; reliefs</div></div><div class="ich">›</div></a>
+    <a href="#" class="ic"><div class="ii">🔒</div><div><div class="in">FCA Mortgage Register</div><div class="is">Check lender &amp; broker authorisation</div></div><div class="ich">›</div></a>
+    <a href="#" class="ic"><div class="ii">📊</div><div><div class="in">Rightmove / Zoopla Data</div><div class="is">Live property listings &amp; price trends</div></div><div class="ich">›</div></a>
+    <a href="#" class="ic"><div class="ii">🏠</div><div><div class="in">First Homes Scheme</div><div class="is">30–50% discount for key workers &amp; FTBs</div></div><div class="ich">›</div></a>
+    <a href="#" class="ic"><div class="ii">🤖</div><div><div class="in">UK AI Mortgage Advisor</div><div class="is">FCA-aware guidance · SDLT help</div></div><div class="ich">›</div></a>
+  </div>
+
+</main>
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer>
+  <div class="footer-links">
+    <a href="#calculator">Calculator</a>
+    <a href="#sdlt">Stamp Duty</a>
+    <a href="#tools">Tools</a>
+    <a href="#regions">Regions</a>
+    <a href="#investment">Investment</a>
+    <a href="#resources">Resources</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+  </div>
+  <div>🇬🇧 UK Mortgage Tools · GBP · BoE Rate · SDLT · FCA Regulated · © 2026</div>
+</footer>
+
+<script>
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+  // Region tab toggle
+  document.querySelectorAll('.region-pill').forEach(p => {
+    p.addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelectorAll('.region-pill').forEach(x => x.classList.remove('active'));
+      p.classList.add('active');
+    });
+  });
+  // Active nav on scroll
+  const sections = document.querySelectorAll('[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 90) cur = s.id; });
+    navLinks.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + cur) a.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
