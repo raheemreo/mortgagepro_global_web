@@ -108,4 +108,19 @@
   setActiveNav();
   initHamburger();
   setFooterYear();
+
+  // Initialize GTM on idle/load for better performance (P3 optimization)
+  window.addEventListener('load', () => {
+    const initGTM = () => {
+      const s = document.createElement('script');
+      s.async = true;
+      s.src = "https://www.googletagmanager.com/gtag/js?id=G-1DEVWXRXJP";
+      document.head.appendChild(s);
+    };
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(initGTM);
+    } else {
+      setTimeout(initGTM, 1);
+    }
+  });
 })();

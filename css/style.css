@@ -955,11 +955,11 @@ p {
   display: flex;
   align-items: center;
   gap: 4px;
-  transition: gap 0.15s;
+  transition: transform 0.15s ease;
 }
 
 .calc-card:hover .calc-card-cta {
-  gap: 8px;
+  transform: translateX(4px);
 }
 
 .rates-grid {
@@ -1141,11 +1141,11 @@ p {
   align-items: center;
   gap: 4px;
   margin-top: auto;
-  transition: gap 0.15s;
+  transition: transform 0.15s ease;
 }
 
 .blog-card:hover .blog-card-link {
-  gap: 8px;
+  transform: translateX(4px);
 }
 
 .view-all-link {
@@ -1358,11 +1358,11 @@ p {
   display: flex;
   align-items: center;
   gap: 4px;
-  transition: gap 0.15s;
+  transition: transform 0.15s ease;
 }
 
 .resource-card:hover .resource-card-arrow {
-  gap: 8px;
+  transform: translateX(4px);
 }
 
 .stats-grid {

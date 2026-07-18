@@ -3,7 +3,11 @@
   <div class="container header-inner">
     <a href="/" class="logo" aria-label="MortgagePro Global homepage">
       <div class="logo-icon" aria-hidden="true">
-        <img src="/images/logo-icon.png" alt="MortgagePro Global Logo" width="36" height="36" style="border-radius: 8px; display: block;">
+        <picture>
+          <source srcset="/images/logo-icon.avif" type="image/avif">
+          <source srcset="/images/logo-icon.webp" type="image/webp">
+          <img src="/images/logo-icon.png" width="36" height="36" alt="MortgagePro Global Logo" loading="eager" decoding="async" style="border-radius: 8px; display: block;">
+        </picture>
       </div>
       <div class="logo-text">
         MortgagePro<span class="logo-accent">Global</span>
