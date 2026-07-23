@@ -1,15 +1,4 @@
 # ----------------------------------------------------------------------
-# 0. Correct MIME Types for SVG, Favicons & Web Manifest
-# ----------------------------------------------------------------------
-<IfModule mod_mime.c>
-    AddType image/svg+xml .svg
-    AddType image/x-icon .ico
-    AddType image/png .png
-    AddType application/manifest+json .webmanifest
-    AddType application/json .json
-</IfModule>
-
-# ----------------------------------------------------------------------
 # 1. Enforce HTTPS and Redirect www to non-www (or vice-versa)
 # ----------------------------------------------------------------------
 <IfModule mod_rewrite.c>
