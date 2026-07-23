@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <rect width="512" height="512" rx="128" fill="#0B1D3A"/>
   <!-- Roof Accent -->
   <path d="M 256 96 L 420 228 L 388 254 L 256 148 L 124 254 L 92 228 Z" fill="#B91C1C"/>
