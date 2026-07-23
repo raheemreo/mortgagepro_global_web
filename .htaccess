@@ -38,7 +38,7 @@ Options -Indexes
 </FilesMatch>
 
 # Allow the IndexNow verification key file to be publicly accessible
-<Files "a1b2c3d4e5f6789012345678901234ab.txt">
+<Files "90248fba878891f4c5576dcd43220182.txt">
     <IfModule mod_authz_core.c>
         Require all granted
     </IfModule>
