@@ -236,7 +236,6 @@ p {
   font-size: 0.82rem;
   font-weight: 500;
   border-radius: 6px;
-  transition: background 0.15s, color 0.15s;
   white-space: nowrap;
   font-family: 'Inter', sans-serif;
 }
@@ -603,9 +602,10 @@ p {
   font-weight: 700;
   font-size: 1rem;
   text-decoration: none;
-  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  transition: transform 0.15s ease;
   box-shadow: 0 4px 20px rgba(185, 28, 28, 0.4);
   font-family: 'Inter', sans-serif;
+  will-change: transform;
 }
 
 .btn-hero-primary:hover {
@@ -628,9 +628,10 @@ p {
   font-weight: 600;
   font-size: 0.95rem;
   text-decoration: none;
-  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  transition: transform 0.15s ease;
   font-family: 'Inter', sans-serif;
   backdrop-filter: blur(8px);
+  will-change: transform;
 }
 
 .btn-hero-secondary:hover {
@@ -876,7 +877,7 @@ p {
   padding: 28px;
   border: 1px solid #E5E7EB;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  transition: transform 0.2s ease;
   text-decoration: none;
   color: inherit;
   display: flex;
@@ -884,6 +885,7 @@ p {
   gap: 0;
   position: relative;
   overflow: hidden;
+  will-change: transform;
 }
 
 .calc-card::before {
@@ -896,7 +898,7 @@ p {
   background: linear-gradient(90deg, #B91C1C, #DC2626);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.25s;
+  transition: transform 0.25s ease;
 }
 
 .calc-card:hover {
@@ -1066,11 +1068,12 @@ p {
   overflow: hidden;
   border: 1px solid #E5E7EB;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s ease;
   text-decoration: none;
   color: inherit;
   display: flex;
   flex-direction: column;
+  will-change: transform;
 }
 
 .blog-card:hover {
@@ -1196,8 +1199,9 @@ p {
   padding: 24px 20px;
   border: 1px solid #E5E7EB;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  transition: transform 0.2s ease;
   text-align: center;
+  will-change: transform;
 }
 
 .benefit-card:hover {
@@ -1331,8 +1335,9 @@ p {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  transition: transform 0.2s ease;
   color: inherit;
+  will-change: transform;
 }
 
 .resource-card:hover {
@@ -1709,8 +1714,9 @@ p {
   border: 1px solid rgba(0, 0, 0, 0.06);
   text-decoration: none;
   display: block;
-  transition: transform 0.15s, box-shadow 0.15s;
+  transition: transform 0.15s ease;
   color: inherit;
+  will-change: transform;
 }
 
 .tool-card:hover {

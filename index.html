@@ -32,26 +32,79 @@
 
   <!-- Verification tags -->
   <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
-<meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
+  <!-- Preconnect & DNS Prefetch -->
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://scripts.clarity.ms">
 
-  <!-- DNS Prefetch for performance -->
-<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+  <!-- Preload Critical Fonts -->
+  <link rel="preload" href="/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin>
 
-  <!-- Critical CSS -->
+  <!-- Complete Critical Above-the-Fold CSS -->
   <style>
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('/fonts/inter-400.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url('/fonts/inter-600.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url('/fonts/inter-700.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 800;
+      font-display: swap;
+      src: url('/fonts/inter-800.woff2') format('woff2');
+    }
+
     :root {
       --page-primary: #0B1D3A;
       --page-accent: #B91C1C;
       --page-bg: #FFFFFF;
+      --hero-bg: linear-gradient(135deg, #050E1D 0%, #0B1D3A 40%, #162E5A 70%, #0B1D3A 100%);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
-      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       background: var(--page-bg);
       color: var(--page-primary);
       font-size: 16px;
       line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
 
     .skip-link {
@@ -74,6 +127,147 @@
 
     [data-component] {
       min-height: 60px;
+    }
+
+    /* Site Header Critical */
+    .site-header {
+      background: #0B1D3A;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    /* Hero Section Critical */
+    .hero-v2 {
+      background: var(--hero-bg);
+      color: #fff;
+      padding: 60px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-v2-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 900px) {
+      .hero-v2 {
+        padding: 48px 0 60px;
+      }
+      .hero-v2-inner {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .hero-v2-visual {
+        display: none;
+      }
+    }
+
+    .hero-v2-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(185, 28, 28, 0.18);
+      border: 1px solid rgba(185, 28, 28, 0.35);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #FCA5A5;
+      margin-bottom: 16px;
+    }
+
+    .hero-v2 h1 {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-v2 h1 .accent {
+      background: linear-gradient(90deg, #F87171, #FBBF24);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-v2-desc {
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.82);
+      margin-bottom: 28px;
+      line-height: 1.7;
+      max-width: 520px;
+    }
+
+    .hero-v2-ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .btn-hero-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #B91C1C;
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(185, 28, 28, 0.4);
+      font-family: 'Inter', sans-serif;
+      will-change: transform;
+    }
+
+    .btn-hero-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      padding: 14px 24px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      backdrop-filter: blur(8px);
+      will-change: transform;
+    }
+
+    .hero-trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .trust-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      padding: 5px 12px;
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.85);
+      font-weight: 500;
+      white-space: nowrap;
     }
   </style>
 
@@ -172,17 +366,15 @@
   }
   </script>
 
-  <link rel="preload" href="/fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="/css/style.css">
   </noscript>
 
   <meta name="google-adsense-account" content="ca-pub-1114757923146718">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1114757923146718"
-    crossorigin="anonymous"></script>
-  <!-- Google tag (gtag.js) -->
-<script>
+
+  <!-- High-Performance Deferred Third-Party Loader (AdSense, GTM Analytics, Clarity) -->
+  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('consent', 'default', {
@@ -195,31 +387,47 @@
     });
     gtag('js', new Date());
     gtag('config', 'G-1DEVWXRXJP');
+
+    function initThirdPartyScripts() {
+      if (window.thirdPartyInitialized) return;
+      window.thirdPartyInitialized = true;
+
+      // 1. Google Tag Manager
+      var gtmScript = document.createElement('script');
+      gtmScript.async = true;
+      gtmScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-1DEVWXRXJP';
+      document.head.appendChild(gtmScript);
+
+      // 2. Google AdSense
+      var adsScript = document.createElement('script');
+      adsScript.async = true;
+      adsScript.crossOrigin = 'anonymous';
+      adsScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1114757923146718';
+      document.head.appendChild(adsScript);
+
+      // 3. Microsoft Clarity
+      (function (c, l, a, r, i, t, y) {
+        c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+        t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i + "?ref=bwt";
+        y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "xfuhcofj80");
+    }
+
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(function () {
+        setTimeout(initThirdPartyScripts, 2000);
+      });
+    } else {
+      setTimeout(initThirdPartyScripts, 2500);
+    }
+    ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(function (evt) {
+      window.addEventListener(evt, initThirdPartyScripts, { once: true, passive: true });
+    });
   </script>
-
-  <!-- Clarity tracking code for https://mortgageproglobal.com/ -->
-  <script>
-    (function (c, l, a, r, i, t, y) {
-      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i + "?ref=bwt";
-      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-    })(window, document, "clarity", "script", "xfuhcofj80");
-  </script>
-
-
-
 
   <script src="/js/components.js" defer></script>
   <script src="/js/rates.js" defer></script>
   <script src="/js/accessibility.js" defer></script>
-
-  <!-- Favicon, Apple Touch Icon & Web App Manifest -->
-
-  <!-- Favicon, Apple Touch Icon & Web App Manifest -->
-
-  <!-- Favicon, Apple Touch Icon & Web App Manifest -->
-
-  <!-- Favicon, Apple Touch Icon & Web App Manifest -->
 
   <!-- Favicon, Apple Touch Icon & Web App Manifest -->
   <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
