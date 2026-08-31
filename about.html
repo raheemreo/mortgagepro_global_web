@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About MortgagePro Global | REO Technologies</title>
+  <title>About MortgagePro Global | Team, Methodology & Engineering</title>
   <meta name="description"
-    content="Learn about MortgagePro Global — free mortgage calculators for 7 countries, built by REO Technologies. Our mission, methodology and data sources explained.">
+    content="Learn about MortgagePro Global and REO Technologies. Meet founder and lead systems engineer Abdul Raheem, and explore our deterministic computational methodology, regulatory cross-checks, and quantitative standards.">
 
   <link rel="canonical" href="https://mortgageproglobal.com/about">
 
@@ -14,19 +14,19 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="About Us | MortgagePro Global by REO Technologies">
   <meta property="og:description"
-    content="Discover the mission, methodology, and background of MortgagePro Global and REO Technologies.">
+    content="Discover the team, quantitative methodology, and engineering architecture powering MortgagePro Global.">
   <meta property="og:url" content="https://mortgageproglobal.com/about">
   <meta property="og:image" content="https://mortgageproglobal.com/images/og-home.jpg">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="About MortgagePro Global">
-  <meta name="twitter:description" content="Learn about our calculations methodology and background.">
+  <meta name="twitter:description" content="Meet the team and explore our computational calculation methodology.">
   <meta name="twitter:image" content="https://mortgageproglobal.com/images/og-home.jpg">
 
   <!-- Verification -->
   <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
-<meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
+  <meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
 
   <!-- Critical CSS -->
   <style>
@@ -65,17 +65,113 @@
     [data-component] {
       min-height: 60px;
     }
+
+    .author-card {
+      background: #fff;
+      border: 1px solid #E5E7EB;
+      border-radius: 12px;
+      padding: 24px;
+      margin: 24px 0;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    }
+
+    @media (max-width: 640px) {
+      .author-card {
+        flex-direction: column;
+      }
+    }
+
+    .author-avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: #0B1D3A;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .author-info h3 {
+      margin: 0 0 4px;
+      color: #0B1D3A;
+      font-size: 1.25rem;
+    }
+
+    .author-role {
+      color: #B91C1C;
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+
+    .author-bio {
+      color: #4B5563;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .author-social {
+      display: flex;
+      gap: 12px;
+    }
+
+    .author-social a {
+      color: #0B1D3A;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      background: #F3F4F6;
+      padding: 4px 10px;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+
+    .author-social a:hover {
+      background: #E5E7EB;
+    }
+
+    .methodology-box {
+      background: #fff;
+      border-left: 4px solid #0B1D3A;
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 16px 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+
+    .methodology-box h4 {
+      margin: 0 0 6px;
+      color: #0B1D3A;
+    }
+
+    .methodology-box p {
+      margin: 0;
+      color: #4B5563;
+      font-size: 0.95rem;
+    }
   </style>
 
   <!-- Structured Data: BreadcrumbList -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://mortgageproglobal.com"},
-    {"@type":"ListItem","position":2,"name":"About","item":"https://mortgageproglobal.com/about.html"}
-  ]}
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mortgageproglobal.com" },
+      { "@type": "ListItem", "position": 2, "name": "About", "item": "https://mortgageproglobal.com/about" }
+    ]
+  }
   </script>
 
-  <!-- Structured Data: Organization -->
+  <!-- Structured Data: Organization & Person (E-E-A-T) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -83,7 +179,17 @@
     "name": "REO Technologies",
     "url": "https://mortgageproglobal.com",
     "logo": "https://mortgageproglobal.com/images/logo.svg",
-    "description": "REO Technologies builds free financial calculator tools for home buyers worldwide.",
+    "description": "Financial software company building high-precision international mortgage calculators and planning tools.",
+    "founder": {
+      "@type": "Person",
+      "name": "Abdul Raheem",
+      "jobTitle": "Founder & Lead Financial Systems Engineer",
+      "url": "https://mortgageproglobal.com/about",
+      "sameAs": [
+        "https://www.linkedin.com/in/abdulraheemc/",
+        "https://github.com/raheemreo"
+      ]
+    },
     "contactPoint": {
       "@type": "ContactPoint",
       "email": "support@mortgageproglobal.com",
@@ -92,14 +198,14 @@
   }
   </script>
 
-<link rel="preload" href="/fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
 
   <meta name="google-adsense-account" content="ca-pub-1114757923146718">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1114757923146718" crossorigin="anonymous"></script>
   <!-- Google tag (gtag.js) -->
-<script>
+  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('consent', 'default', {
@@ -113,22 +219,12 @@
     gtag('js', new Date());
     gtag('config', 'G-1DEVWXRXJP');
   </script>
-  
-  
 
-<script src="/js/components.js" defer></script>
+  <script src="/js/components.js" defer></script>
   <script src="/js/rates.js" defer></script>
   <script src="/js/accessibility.js" defer></script>
 
-  <!-- Favicon, Apple Touch Icon & Web App Manifest -->
-
-  <!-- Favicon, Apple Touch Icon & Web App Manifest -->
-
-  <!-- Favicon, Apple Touch Icon & Web App Manifest -->
-
-  <!-- Favicon, Apple Touch Icon & Web App Manifest -->
-
-  <!-- Favicon, Apple Touch Icon & Web App Manifest -->
+  <!-- Favicon & Touch Icons -->
   <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
   <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
   <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
@@ -137,8 +233,6 @@
   <meta name="apple-mobile-web-app-title" content="MortgagePro">
   <meta name="application-name" content="MortgagePro">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#0B1D3A">
   <meta name="msapplication-TileColor" content="#0B1D3A">
@@ -159,8 +253,7 @@
         </ol>
       </nav>
       <h1>About MortgagePro Global</h1>
-      <p class="subtitle">Discover our mission, our mathematical calculator standards, and the team behind REO
-        Technologies.</p>
+      <p class="subtitle">Discover our mission, our mathematical calculation standards, and the engineering team behind REO Technologies.</p>
     </div>
   </section>
 
@@ -170,169 +263,102 @@
         <div class="main-content">
 
           <article class="content-article">
-            <p>Welcome to <strong>Mortgage Pro Global</strong>.</p>
-            <p>Mortgage Pro Global is a modern mortgage and home finance platform designed to help people make more
-              informed property financing decisions through reliable calculators, educational resources, and
-              country-specific mortgage tools.</p>
-            <p>Whether you're buying your first home, refinancing an existing mortgage, comparing loan options, or
-              exploring property investment opportunities, our goal is to make mortgage calculations and home finance
-              planning simpler, faster, and more accessible.</p>
+            <p>Welcome to <strong>MortgagePro Global</strong>.</p>
+            <p>MortgagePro Global is an independent, multi-jurisdiction mortgage calculation and home finance engineering platform developed by <strong>REO Technologies</strong>. Our software empowers prospective home buyers, refinancing borrowers, and real estate professionals across 7 major economies with accurate, mathematically rigorous, and privacy-conscious financial tools.</p>
 
             <h2>Our Mission</h2>
-            <p>Our mission is to provide easy-to-use mortgage calculators and educational financial tools that help
-              users better understand home financing across major international mortgage markets.</p>
-            <p>We believe that financial planning should be accessible to everyone, regardless of experience or
-              location.</p>
-            <p>By offering country-specific tools and educational resources, we aim to help users make informed
-              decisions with greater confidence.</p>
+            <p>Our mission is to eliminate ambiguity in mortgage financing. Buying a home is typically the single largest financial commitment of a lifetime, yet mortgage underwriting rules, compounding conventions, and tax consequences vary drastically across national borders.</p>
+            <p>By engineering localized, browser-based calculators powered by verified central bank data, we provide transparent, instant financial visibility without paywalls, email collection, or commercial bias.</p>
 
-            <h2>What We Offer</h2>
-            <p>Mortgage Pro Global combines a wide range of home finance tools in a single application, including:</p>
+            <h2>Engineering Leadership &amp; Authorship</h2>
+            <p>MortgagePro Global is architected and maintained by quantitative software engineers dedicated to financial accuracy:</p>
+
+            <div class="author-card">
+              <div class="author-avatar" aria-hidden="true">AR</div>
+              <div class="author-info">
+                <h3>Abdul Raheem</h3>
+                <div class="author-role">Founder &amp; Lead Financial Systems Engineer · REO Technologies</div>
+                <div class="author-bio">
+                  Abdul is the founder of REO Technologies and lead architect of MortgagePro Global's mathematical engines. Specializing in financial modeling, deterministic loan amortization algorithms, and cross-border lending mathematics, he oversees all software calculation engines, automated boundary-value testing suites, and regulatory data synchronization pipelines across US, Canadian, UK, Australian, NZ, Indian, and European jurisdictions.
+                </div>
+                <div class="author-social">
+                  <a href="https://www.linkedin.com/in/abdulraheemc/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                  <a href="https://github.com/raheemreo" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                  <a href="mailto:support@mortgageproglobal.com">Contact Directly</a>
+                </div>
+              </div>
+            </div>
+
+            <h2>Computational Methodology &amp; Mathematical Rigor</h2>
+            <p>Unlike generic calculators that apply a one-size-fits-all formula, MortgagePro Global implements jurisdiction-specific mathematical models aligned with each nation's statutory lending standards:</p>
+
+            <div class="methodology-box">
+              <h4>🇺🇸 United States: Standard Actuarial Compounding &amp; Escrow Logic</h4>
+              <p>Computes monthly amortization payments via the standard annuity formula while accurately modeling PITI (Principal, Interest, County Property Taxes, Homeowners Insurance, and FHA MIP / Conventional PMI scales).</p>
+            </div>
+
+            <div class="methodology-box">
+              <h4>🇨🇦 Canada: Statutory Semi-Annual Compounding &amp; OSFI B-20 Stress Testing</h4>
+              <p>Implements Canada's legal semi-annual compounding requirement for fixed-rate mortgages ($r_{eff} = (1 + r_{nominal}/2)^{2/12} - 1$), tiered 5%/10% down payment minimums, and the OSFI qualifying stress test (contract rate + 2.00% or 5.25% floor).</p>
+            </div>
+
+            <div class="methodology-box">
+              <h4>🇬🇧 United Kingdom: SDLT Tiers &amp; Bank of England Tracking</h4>
+              <p>Integrates progressive Stamp Duty Land Tax (SDLT) brackets with First-Time Buyer relief thresholds and Bank of England base rate tracker mechanics.</p>
+            </div>
+
+            <div class="methodology-box">
+              <h4>🇦🇺 Australia: Daily Balance Offset &amp; APRA Serviceability Buffers</h4>
+              <p>Simulates dynamic 100% mortgage offset accounts calculating interest on daily balances ($I = \max(0, P - \text{Offset}) \times \frac{r}{365}$) alongside APRA's 3.00% serviceability stress test buffers.</p>
+            </div>
+
+            <div class="methodology-box">
+              <h4>🇳🇿 New Zealand: RBNZ LVR Speed Limits &amp; KiwiSaver Integration</h4>
+              <p>Models Reserve Bank of New Zealand Loan-to-Value (LVR) restrictions, DTI ratios, and KiwiSaver first-home deposit withdrawals.</p>
+            </div>
+
+            <div class="methodology-box">
+              <h4>🇮🇳 India: Reducing-Balance EMI &amp; Section 24(b) / 80C Tax Optimizers</h4>
+              <p>Computes monthly reducing-balance EMIs linked to RBI Repo Linked Lending Rates (RLLR) and provides detailed breakdowns for Section 24(b) (₹2 Lakh interest exemption) and Section 80C principal deductions.</p>
+            </div>
+
+            <h2>Editorial Governance, Quality &amp; Transparency</h2>
+            <p>Our publishing and software development lifecycle is strictly governed by transparent institutional standards:</p>
             <ul>
-              <li>Mortgage Payment Calculators</li>
-              <li>Home Loan EMI Calculators</li>
-              <li>Mortgage Affordability Calculators</li>
-              <li>Amortization Schedules</li>
-              <li>Refinance Calculators</li>
-              <li>Extra Payment &amp; Early Payoff Calculators</li>
-              <li>Property Tax Calculators</li>
-              <li>Stamp Duty Calculators</li>
-              <li>Debt-to-Income (DTI) Calculators</li>
-              <li>GDS/TDS Calculators</li>
-              <li>Country-specific mortgage tools</li>
-              <li>Housing market resources</li>
-              <li>Reference interest rate information</li>
-              <li>Currency conversion tools</li>
-              <li>Mortgage lender information</li>
+              <li><strong><a href="/editorial-policy">Editorial Policy:</a></strong> Complete documentation of our 4-tier verification protocol, mathematical validation, and monthly audit cadences.</li>
+              <li><strong><a href="/corrections-policy">Corrections Policy:</a></strong> Our formal SLA for reviewing, patching, and logging any mathematical or factual inquiries sent to <a href="mailto:corrections@mortgageproglobal.com">corrections@mortgageproglobal.com</a>.</li>
+              <li><strong><a href="/data-sources">Data Sources Directory:</a></strong> Direct citations and outbound links to sovereign central banks (Federal Reserve, BoC, BoE, RBA, RBNZ, RBI, ECB) and statutory tax regulators.</li>
+              <li><strong><a href="/disclaimer">Legal Disclaimer:</a></strong> Clear disclosures that all outputs are planning estimates and not personalized financial advice.</li>
             </ul>
-            <p>Many core calculators work offline, allowing users to perform calculations without an internet
-              connection.</p>
 
-            <h2>Countries We Support</h2>
-            <p>Mortgage Pro Global currently provides tools and resources for:</p>
+            <h2>Commercial Independence &amp; Privacy</h2>
+            <p>MortgagePro Global does not accept fees to alter rate rankings or favor specific lending institutions. All calculation engines execute directly inside your web browser; we never sell or transmit your financial inputs to external servers. For more details, review our <a href="/privacy-policy">Privacy Policy</a>.</p>
+
+            <h2>Contact Our Team</h2>
+            <p>We welcome inquiries, feedback, and institutional partnership requests:</p>
             <ul>
-              <li>🇺🇸 United States</li>
-              <li>🇨🇦 Canada</li>
-              <li>🇬🇧 United Kingdom</li>
-              <li>🇦🇺 Australia</li>
-              <li>🇳🇿 New Zealand</li>
-              <li>🇪🇺 European Union / EEA</li>
-              <li>🇮🇳 India</li>
-            </ul>
-            <p>We continue to improve and expand our coverage with new tools, calculators, and regional features.</p>
-
-            <h2>Who Mortgage Pro Global Is For</h2>
-            <p>Our platform is designed for:</p>
-            <ul>
-              <li>First-time home buyers</li>
-              <li>Existing homeowners</li>
-              <li>Property investors</li>
-              <li>Homeowners planning to refinance</li>
-              <li>International buyers</li>
-              <li>NRI (Non-Resident Indian) buyers</li>
-              <li>Expats purchasing property abroad</li>
-              <li>Real estate professionals</li>
-              <li>Mortgage brokers</li>
-              <li>Financial advisors</li>
-              <li>Students learning home finance</li>
-            </ul>
-            <p>Whether you're planning your first mortgage or comparing financing options across countries, Mortgage Pro
-              Global is built to support your journey.</p>
-
-            <h2>Our Values</h2>
-            <h3>Accuracy</h3>
-            <p>We strive to provide reliable calculators and educational resources based on widely accepted mortgage
-              calculation methods and publicly available reference information.</p>
-
-            <h3>Simplicity</h3>
-            <p>Financial planning can be complex. We focus on creating clear, intuitive tools that are easy to
-              understand and use.</p>
-
-            <h3>Privacy</h3>
-            <p>We value user privacy. Core calculators do not require an account, and we are committed to handling
-              information responsibly in accordance with applicable privacy laws.</p>
-
-            <h3>Transparency</h3>
-            <p>Mortgage Pro Global is an independent informational platform. We clearly distinguish between educational
-              content, calculator estimates, and professional financial advice.</p>
-
-            <h3>Continuous Improvement</h3>
-            <p>We regularly update our App and Website with new calculators, performance improvements, security
-              enhancements, and additional regional features based on user feedback.</p>
-
-            <h2>Our Commitment</h2>
-            <p>We are committed to providing:</p>
-            <ul>
-              <li>Reliable mortgage calculation tools</li>
-              <li>Country-specific financial resources</li>
-              <li>A fast and user-friendly experience</li>
-              <li>Regular updates and improvements</li>
-              <li>Strong privacy practices</li>
-              <li>Transparent information</li>
-              <li>Accessible educational content</li>
-            </ul>
-            <p>Our objective is to help users better understand mortgage calculations—not to replace professional
-              financial advice.</p>
-
-            <h2>Important Information</h2>
-            <p>Mortgage Pro Global is an informational and educational platform.</p>
-            <p>We are <strong>not</strong>:</p>
-            <ul>
-              <li>A bank</li>
-              <li>A mortgage lender</li>
-              <li>A mortgage broker</li>
-              <li>A financial institution</li>
-              <li>A financial advisor</li>
-              <li>A legal advisor</li>
-              <li>A tax advisor</li>
-              <li>An investment advisor</li>
-            </ul>
-            <p>We do <strong>not</strong>:</p>
-            <ul>
-              <li>Approve loans</li>
-              <li>Process mortgage applications</li>
-              <li>Offer financial products</li>
-              <li>Recommend specific lenders</li>
-              <li>Guarantee mortgage rates</li>
-              <li>Provide personalized financial advice</li>
-            </ul>
-            <p>Calculator results are estimates only and should be used as a planning aid. Always verify important
-              financial information directly with the relevant lender, financial institution, government authority, or a
-              qualified professional before making financial decisions.</p>
-
-            <h2>Looking Ahead</h2>
-            <p>Mortgage Pro Global is continuously evolving.</p>
-            <p>Our long-term vision is to become one of the world's most trusted mortgage and home finance resources by
-              expanding support for additional countries, introducing new calculators, improving educational content,
-              and delivering an even better user experience.</p>
-
-            <h2>Contact Us</h2>
-            <p>We value your feedback and welcome your questions, suggestions, and feature requests. For more
-              information, please visit our <a href="/contact">Contact Us</a> page or reach out to us using the
-              appropriate email address:</p>
-            <ul>
-              <li><strong>Support:</strong> <a
-                  href="mailto:support@mortgageproglobal.com">support@mortgageproglobal.com</a></li>
-              <li><strong>Privacy:</strong> <a
-                  href="mailto:privacy@mortgageproglobal.com">privacy@mortgageproglobal.com</a></li>
-              <li><strong>Business &amp; Partnerships:</strong> <a
-                  href="mailto:business@mortgageproglobal.com">business@mortgageproglobal.com</a></li>
-              <li><strong>Security:</strong> <a
-                  href="mailto:security@mortgageproglobal.com">security@mortgageproglobal.com</a></li>
-              <li><strong>Legal:</strong> <a href="mailto:legal@mortgageproglobal.com">legal@mortgageproglobal.com</a>
-              </li>
-              <li><strong>Feedback:</strong> <a
-                  href="mailto:feedback@mortgageproglobal.com">feedback@mortgageproglobal.com</a></li>
-              <li><strong>Corrections:</strong> <a
-                  href="mailto:corrections@mortgageproglobal.com">corrections@mortgageproglobal.com</a></li>
+              <li><strong>General Support:</strong> <a href="mailto:support@mortgageproglobal.com">support@mortgageproglobal.com</a></li>
+              <li><strong>Corrections &amp; Errata:</strong> <a href="mailto:corrections@mortgageproglobal.com">corrections@mortgageproglobal.com</a></li>
+              <li><strong>Business &amp; Partnerships:</strong> <a href="mailto:business@mortgageproglobal.com">business@mortgageproglobal.com</a></li>
+              <li><strong>Privacy Officer:</strong> <a href="mailto:privacy@mortgageproglobal.com">privacy@mortgageproglobal.com</a></li>
             </ul>
           </article>
 
         </div><!-- .main-content -->
 
         <!-- Sidebar -->
-        <aside class="sidebar" aria-label="Advertisement sidebar">
-          <div class="ad-unit ad-sidebar" aria-label="Advertisement" role="complementary"></div>
+        <aside class="sidebar" aria-label="Sidebar navigation">
+          <div class="card" style="background: #fff; padding: 24px; border-radius: 12px; border: 1px solid #E5E7EB; margin-bottom: 24px;">
+            <h3 style="margin-top: 0; color: #0B1D3A; font-size: 1.15rem;">Trust &amp; Governance</h3>
+            <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
+              <li>📄 <a href="/editorial-policy" style="color: #B91C1C; text-decoration: none;">Editorial Policy</a></li>
+              <li>🔄 <a href="/corrections-policy" style="color: #B91C1C; text-decoration: none;">Corrections Policy</a></li>
+              <li>🏛️ <a href="/data-sources" style="color: #B91C1C; text-decoration: none;">Data Sources Directory</a></li>
+              <li>⚖️ <a href="/disclaimer" style="color: #B91C1C; text-decoration: none;">Legal Disclaimer</a></li>
+              <li>🔒 <a href="/privacy-policy" style="color: #B91C1C; text-decoration: none;">Privacy Policy</a></li>
+              <li>👥 <strong>About REO Technologies</strong></li>
+            </ul>
+          </div>
         </aside>
 
       </div><!-- .page-layout -->
