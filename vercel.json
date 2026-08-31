@@ -37,5 +37,47 @@
       "destination": "/404",
       "statusCode": 404
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/about",
+      "destination": "/pages/about.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/pages/contact.html"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/pages/privacy-policy.html"
+    },
+    {
+      "source": "/terms-and-conditions",
+      "destination": "/pages/terms-and-conditions.html"
+    },
+    {
+      "source": "/disclaimer",
+      "destination": "/pages/disclaimer.html"
+    },
+    {
+      "source": "/editorial-policy",
+      "destination": "/pages/editorial-policy.html"
+    },
+    {
+      "source": "/corrections-policy",
+      "destination": "/pages/corrections-policy.html"
+    },
+    {
+      "source": "/data-sources",
+      "destination": "/pages/data-sources.html"
+    },
+    {
+      "source": "/data-deletion-policy",
+      "destination": "/pages/data-deletion-policy.html"
+    },
+    {
+      "source": "/mortgage-faq",
+      "destination": "/pages/mortgage-faq.html"
+    }
   ]
 }
