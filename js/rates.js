@@ -1,10 +1,10 @@
 // js/rates.js — Single source of truth for all mortgage rate data
-// Update this file monthly. Last updated: June 2026
+// Update this file monthly. Last updated: August 2026
 // REO TECH | MortgagePro Global v2.1
 
 const RATES = {
-  lastUpdated: "June 2026",
-  lastUpdatedISO: "2026-06",
+  lastUpdated: "August 2026",
+  lastUpdatedISO: "2026-08",
 
   usa: {
     fed: "5.25%",
@@ -40,7 +40,7 @@ const RATES = {
     note: "Source: Reserve Bank of Australia"
   },
   newzealand: {
-    ocr: "5.50%",
+    ocr: "2.50%",
     floating: "8.64%",
     fixed1: "7.09%",
     fixed2: "6.75%",
@@ -48,7 +48,7 @@ const RATES = {
     note: "Source: Reserve Bank of New Zealand"
   },
   india: {
-    repo: "6.50%",
+    repo: "5.25%",
     homeLoanSbi: "8.50%",
     homeLoanHdfc: "8.70%",
     homeLoanIcici: "8.75%",
