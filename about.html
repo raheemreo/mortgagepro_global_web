@@ -28,21 +28,37 @@
   <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
   <meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
 
-  <!-- Critical CSS -->
+  <!-- Preload Fonts -->
+  <link rel="preload" href="/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Critical & Typography CSS -->
   <style>
     :root {
       --page-primary: #0B1D3A;
       --page-accent: #B91C1C;
       --page-bg: #F0F4FF;
+      --text-main: #374151;
+      --text-muted: #6B7280;
+      --card-bg: #FFFFFF;
+      --card-border: #E5E7EB;
+      --code-bg: #F1F5F9;
+      --code-text: #0F172A;
+      --code-border: #E2E8F0;
     }
 
     body {
       margin: 0;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       background: var(--page-bg);
       color: var(--page-primary);
       font-size: 16px;
-      line-height: 1.6;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
     }
 
     .skip-link {
@@ -60,27 +76,98 @@
       padding: 12px 24px;
       font-weight: 700;
       text-decoration: none;
+      font-family: inherit;
     }
 
     [data-component] {
       min-height: 60px;
     }
 
+    /* Article & Typography scale */
+    .content-article h1,
+    .content-article h2,
+    .content-article h3,
+    .content-article h4 {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--page-primary);
+      font-weight: 700;
+      letter-spacing: -0.015em;
+    }
+
+    .content-article h2 {
+      font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+      margin: 2.25rem 0 1rem;
+      line-height: 1.3;
+    }
+
+    .content-article h3 {
+      font-size: clamp(1.15rem, 2vw, 1.35rem);
+      margin: 1.75rem 0 0.75rem;
+      line-height: 1.35;
+    }
+
+    .content-article p {
+      color: var(--text-main);
+      margin-bottom: 1.25rem;
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    .content-article ul,
+    .content-article ol {
+      margin: 0 0 1.5rem 1.5rem;
+      color: var(--text-main);
+    }
+
+    .content-article li {
+      margin-bottom: 0.5rem;
+      line-height: 1.65;
+    }
+
+    .content-article a {
+      color: var(--page-accent);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+
+    .content-article a:hover {
+      text-decoration: none;
+    }
+
+    /* Math Code Snippet Styling */
+    code.math-expr {
+      font-family: 'Fira Code', 'Cascadia Code', Consolas, Monaco, monospace;
+      background: var(--code-bg);
+      color: var(--code-text);
+      border: 1px solid var(--code-border);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+      font-weight: 500;
+      letter-spacing: 0;
+      word-break: break-word;
+    }
+
+    /* Author Profile Card */
     .author-card {
-      background: #fff;
-      border: 1px solid #E5E7EB;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
       border-radius: 12px;
       padding: 24px;
       margin: 24px 0;
       display: flex;
       gap: 20px;
       align-items: flex-start;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      transition: border-color 0.2s ease;
     }
 
     @media (max-width: 640px) {
       .author-card {
         flex-direction: column;
+        padding: 20px;
       }
     }
 
@@ -89,73 +176,242 @@
       height: 72px;
       border-radius: 50%;
       background: #0B1D3A;
-      color: #fff;
+      color: #FFFFFF;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 28px;
-      font-weight: 700;
+      font-size: 26px;
+      font-weight: 800;
       flex-shrink: 0;
+      letter-spacing: -0.02em;
     }
 
     .author-info h3 {
       margin: 0 0 4px;
-      color: #0B1D3A;
-      font-size: 1.25rem;
+      color: var(--page-primary);
+      font-size: 1.3rem;
+      font-weight: 700;
     }
 
     .author-role {
-      color: #B91C1C;
+      color: var(--page-accent);
       font-weight: 600;
       font-size: 0.95rem;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
     }
 
     .author-bio {
-      color: #4B5563;
+      color: var(--text-main);
       font-size: 0.95rem;
-      line-height: 1.6;
-      margin-bottom: 12px;
+      line-height: 1.65;
+      margin-bottom: 14px;
     }
 
     .author-social {
       display: flex;
-      gap: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .author-social a {
-      color: #0B1D3A;
+      color: var(--page-primary);
       font-size: 0.85rem;
       font-weight: 600;
       text-decoration: none;
       background: #F3F4F6;
-      padding: 4px 10px;
-      border-radius: 4px;
-      transition: background 0.2s;
+      border: 1px solid #E5E7EB;
+      padding: 5px 12px;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
     }
 
     .author-social a:hover {
       background: #E5E7EB;
+      color: #000;
     }
 
+    /* Methodology Feature Box */
     .methodology-box {
-      background: #fff;
-      border-left: 4px solid #0B1D3A;
-      padding: 16px 20px;
-      border-radius: 0 8px 8px 0;
-      margin: 16px 0;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-left: 4px solid var(--page-primary);
+      padding: 18px 22px;
+      border-radius: 0 10px 10px 0;
+      margin: 18px 0;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
     }
 
     .methodology-box h4 {
-      margin: 0 0 6px;
-      color: #0B1D3A;
+      margin: 0 0 8px;
+      color: var(--page-primary);
+      font-size: 1.08rem;
+      font-weight: 700;
     }
 
     .methodology-box p {
       margin: 0;
-      color: #4B5563;
+      color: var(--text-main);
       font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    /* Sidebar Navigation Card */
+    .trust-nav-card {
+      background: var(--card-bg);
+      padding: 24px;
+      border-radius: 12px;
+      border: 1px solid var(--card-border);
+      margin-bottom: 24px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    }
+
+    .trust-nav-card h3 {
+      margin-top: 0;
+      color: var(--page-primary);
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .trust-nav-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      line-height: 2.1;
+    }
+
+    .trust-nav-card a {
+      color: var(--page-accent);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .trust-nav-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* ==========================================================================
+       DARK THEME STYLING & TYPOGRAPHY FIXES
+       ========================================================================== */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --page-primary: #F9FAFB;
+        --page-accent: #38BDF8;
+        --page-bg: #081326;
+        --text-main: #D1D5DB;
+        --text-muted: #9CA3AF;
+        --card-bg: #111E33;
+        --card-border: rgba(255, 255, 255, 0.12);
+        --code-bg: #0B132B;
+        --code-text: #38BDF8;
+        --code-border: rgba(56, 189, 248, 0.25);
+      }
+
+      body {
+        background: var(--page-bg) !important;
+        color: var(--text-main) !important;
+      }
+
+      .content-article h1,
+      .content-article h2,
+      .content-article h3,
+      .content-article h4 {
+        color: #F9FAFB !important;
+      }
+
+      .content-article p,
+      .content-article li {
+        color: #D1D5DB !important;
+      }
+
+      .content-article a {
+        color: #38BDF8 !important;
+      }
+
+      .content-article a:hover {
+        color: #7DD3FC !important;
+      }
+
+      .author-card {
+        background: #111E33 !important;
+        border-color: rgba(255, 255, 255, 0.12) !important;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+      }
+
+      .author-avatar {
+        background: #1E3A8A !important;
+        color: #FFFFFF !important;
+      }
+
+      .author-info h3 {
+        color: #F9FAFB !important;
+      }
+
+      .author-role {
+        color: #38BDF8 !important;
+      }
+
+      .author-bio {
+        color: #D1D5DB !important;
+      }
+
+      .author-social a {
+        background: rgba(255, 255, 255, 0.08) !important;
+        border-color: rgba(255, 255, 255, 0.15) !important;
+        color: #F3F4F6 !important;
+      }
+
+      .author-social a:hover {
+        background: rgba(255, 255, 255, 0.16) !important;
+        color: #FFFFFF !important;
+      }
+
+      .methodology-box {
+        background: #111E33 !important;
+        border-color: rgba(255, 255, 255, 0.1) !important;
+        border-left: 4px solid #38BDF8 !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+      }
+
+      .methodology-box h4 {
+        color: #F9FAFB !important;
+      }
+
+      .methodology-box p {
+        color: #D1D5DB !important;
+      }
+
+      code.math-expr {
+        background: #0B132B !important;
+        color: #38BDF8 !important;
+        border-color: rgba(56, 189, 248, 0.3) !important;
+      }
+
+      .trust-nav-card {
+        background: #111E33 !important;
+        border-color: rgba(255, 255, 255, 0.12) !important;
+      }
+
+      .trust-nav-card h3 {
+        color: #F9FAFB !important;
+      }
+
+      .trust-nav-card strong {
+        color: #F9FAFB !important;
+      }
+
+      .trust-nav-card a {
+        color: #38BDF8 !important;
+      }
+
+      .trust-nav-card a:hover {
+        color: #7DD3FC !important;
+      }
     }
   </style>
 
@@ -198,7 +454,6 @@
   }
   </script>
 
-  <link rel="preload" href="/fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
 
@@ -299,7 +554,7 @@
 
             <div class="methodology-box">
               <h4>🇨🇦 Canada: Statutory Semi-Annual Compounding &amp; OSFI B-20 Stress Testing</h4>
-              <p>Implements Canada's legal semi-annual compounding requirement for fixed-rate mortgages ($r_{eff} = (1 + r_{nominal}/2)^{2/12} - 1$), tiered 5%/10% down payment minimums, and the OSFI qualifying stress test (contract rate + 2.00% or 5.25% floor).</p>
+              <p>Implements Canada's legal semi-annual compounding requirement for fixed-rate mortgages (<code class="math-expr">r<sub>eff</sub> = (1 + r<sub>nominal</sub> / 2)<sup>2/12</sup> − 1</code>), tiered 5%/10% down payment minimums, and the OSFI qualifying stress test (contract rate + 2.00% or 5.25% floor).</p>
             </div>
 
             <div class="methodology-box">
@@ -309,7 +564,7 @@
 
             <div class="methodology-box">
               <h4>🇦🇺 Australia: Daily Balance Offset &amp; APRA Serviceability Buffers</h4>
-              <p>Simulates dynamic 100% mortgage offset accounts calculating interest on daily balances ($I = \max(0, P - \text{Offset}) \times \frac{r}{365}$) alongside APRA's 3.00% serviceability stress test buffers.</p>
+              <p>Simulates dynamic 100% mortgage offset accounts calculating interest on daily balances (<code class="math-expr">I<sub>daily</sub> = max(0, Balance − Offset) × (r / 365)</code>) alongside APRA's 3.00% serviceability stress test buffers.</p>
             </div>
 
             <div class="methodology-box">
@@ -319,7 +574,7 @@
 
             <div class="methodology-box">
               <h4>🇮🇳 India: Reducing-Balance EMI &amp; Section 24(b) / 80C Tax Optimizers</h4>
-              <p>Computes monthly reducing-balance EMIs linked to RBI Repo Linked Lending Rates (RLLR) and provides detailed breakdowns for Section 24(b) (₹2 Lakh interest exemption) and Section 80C principal deductions.</p>
+              <p>Computes monthly reducing-balance EMIs (<code class="math-expr">EMI = P × r × (1+r)<sup>n</sup> / ((1+r)<sup>n</sup> − 1)</code>) linked to RBI Repo Linked Lending Rates (RLLR) and provides detailed breakdowns for Section 24(b) (₹2 Lakh interest exemption) and Section 80C principal deductions.</p>
             </div>
 
             <h2>Editorial Governance, Quality &amp; Transparency</h2>
@@ -348,14 +603,14 @@
 
         <!-- Sidebar -->
         <aside class="sidebar" aria-label="Sidebar navigation">
-          <div class="card" style="background: #fff; padding: 24px; border-radius: 12px; border: 1px solid #E5E7EB; margin-bottom: 24px;">
-            <h3 style="margin-top: 0; color: #0B1D3A; font-size: 1.15rem;">Trust &amp; Governance</h3>
-            <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
-              <li>📄 <a href="/editorial-policy" style="color: #B91C1C; text-decoration: none;">Editorial Policy</a></li>
-              <li>🔄 <a href="/corrections-policy" style="color: #B91C1C; text-decoration: none;">Corrections Policy</a></li>
-              <li>🏛️ <a href="/data-sources" style="color: #B91C1C; text-decoration: none;">Data Sources Directory</a></li>
-              <li>⚖️ <a href="/disclaimer" style="color: #B91C1C; text-decoration: none;">Legal Disclaimer</a></li>
-              <li>🔒 <a href="/privacy-policy" style="color: #B91C1C; text-decoration: none;">Privacy Policy</a></li>
+          <div class="trust-nav-card">
+            <h3>Trust &amp; Governance</h3>
+            <ul>
+              <li>📄 <a href="/editorial-policy">Editorial Policy</a></li>
+              <li>🔄 <a href="/corrections-policy">Corrections Policy</a></li>
+              <li>🏛️ <a href="/data-sources">Data Sources Directory</a></li>
+              <li>⚖️ <a href="/disclaimer">Legal Disclaimer</a></li>
+              <li>🔒 <a href="/privacy-policy">Privacy Policy</a></li>
               <li>👥 <strong>About REO Technologies</strong></li>
             </ul>
           </div>
