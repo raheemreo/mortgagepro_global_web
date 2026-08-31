@@ -58,10 +58,10 @@
     if (el) el.textContent = new Date().getFullYear();
   }
 
-  // Inject component HTML into placeholder
+  // Inject component HTML into placeholder (only if not already server-rendered/statically present)
   async function injectComponent(selector, url) {
     const target = document.querySelector(selector);
-    if (!target) return;
+    if (!target || target.children.length > 0) return;
     try {
       const res = await fetch(url);
       if (!res.ok) throw new Error(`HTTP ${res.status} loading ${url}`);
@@ -94,7 +94,7 @@
   // Run static initializations immediately
   initFAQ();
 
-  // Load header and footer in parallel
+  // Load header and footer in parallel if placeholders are empty
   try {
     await Promise.all([
       injectComponent('[data-component="header"]', '/components/header.html'),
@@ -108,19 +108,4 @@
   setActiveNav();
   initHamburger();
   setFooterYear();
-
-  // Initialize GTM on idle/load for better performance (P3 optimization)
-  window.addEventListener('load', () => {
-    const initGTM = () => {
-      const s = document.createElement('script');
-      s.async = true;
-      s.src = "https://www.googletagmanager.com/gtag/js?id=G-1DEVWXRXJP";
-      document.head.appendChild(s);
-    };
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(initGTM, { timeout: 1000 });
-    } else {
-      setTimeout(initGTM, 1000);
-    }
-  });
 })();

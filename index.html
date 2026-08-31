@@ -129,13 +129,218 @@
       min-height: 60px;
     }
 
-    /* Site Header Critical */
+    /* Site Header Critical Layout */
     .site-header {
-      background: #0B1D3A;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      background: var(--page-primary, #0B1D3A);
+      color: #fff;
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      min-height: 60px;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      gap: 16px;
+      min-height: 40px;
+    }
+
+    .site-header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .logo-icon {
+      flex-shrink: 0;
+      line-height: 0;
+      width: 36px;
+      height: 36px;
+    }
+
+    .logo-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: #fff;
+    }
+
+    .logo-accent {
+      color: #F87171;
+    }
+
+    .logo-text small {
+      display: block;
+      font-size: 0.6rem;
+      font-weight: 400;
+      opacity: 0.6;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    #main-nav {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .nav-list {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 2px;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-list>li>a {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 10px;
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      border-radius: 6px;
+      white-space: nowrap;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .nav-list>li>a:hover,
+    .nav-list>li>a[aria-current="page"] {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+    }
+
+    .header-flag {
+      width: 18px;
+      height: 12px;
+      object-fit: cover;
+      border-radius: 2px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      flex-shrink: 0;
+    }
+
+    .btn-nav-cta {
+      background: #B91C1C !important;
+      color: #fff !important;
+      padding: 8px 16px !important;
+      border-radius: 8px !important;
+      font-weight: 700 !important;
+      font-size: 0.82rem !important;
+      white-space: nowrap;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+    }
+
+    .btn-nav-cta:hover {
+      background: #991B1B !important;
+      transform: translateY(-1px);
+    }
+
+    .nav-cta-item {
+      margin-left: 6px;
+    }
+
+    .nav-chevron {
+      font-size: 0.65rem;
+      opacity: 0.7;
+    }
+
+    .nav-dropdown {
+      position: relative;
+    }
+
+    .nav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      background: #0F2347;
+      border-radius: 10px;
+      padding: 8px;
+      min-width: 220px;
+      list-style: none;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      z-index: 100;
+      margin: 0;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-menu,
+    .nav-dropdown:focus-within .nav-dropdown-menu {
+      display: block;
+    }
+
+    .nav-dropdown-menu a {
+      display: flex !important;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 12px !important;
+      color: rgba(255, 255, 255, 0.85) !important;
+      border-radius: 6px !important;
+      font-size: 0.83rem !important;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .nav-dropdown-menu a:hover {
+      background: rgba(255, 255, 255, 0.12) !important;
+      color: #fff !important;
+    }
+
+    .hamburger-btn {
+      display: none;
+      background: none;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 900px) {
+      .hamburger-btn {
+        display: block;
+      }
+
+      .nav-list {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #0B1D3A;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      }
+
+      .nav-list.open {
+        display: flex;
+      }
     }
 
     /* Hero Section Critical */
@@ -448,7 +653,61 @@
 
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <div data-component="header"></div>
+  <div data-component="header">
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a href="/" class="logo" aria-label="MortgagePro Global homepage">
+          <div class="logo-icon" aria-hidden="true">
+            <picture>
+              <source srcset="/images/logo-icon.avif" type="image/avif">
+              <source srcset="/images/logo-icon.webp" type="image/webp">
+              <img src="/images/logo-icon.png" width="36" height="36" alt="MortgagePro Global Logo" loading="eager" decoding="async" style="border-radius: 8px; display: block;">
+            </picture>
+          </div>
+          <div class="logo-text">
+            MortgagePro<span class="logo-accent">Global</span>
+            <small>by REO Technologies</small>
+          </div>
+        </a>
+
+        <nav aria-label="Main navigation" id="main-nav">
+          <button class="hamburger-btn" id="hamburger" aria-expanded="false" aria-controls="nav-menu"
+            aria-label="Open navigation menu">
+            <span aria-hidden="true">☰</span>
+          </button>
+          <ul id="nav-menu" role="list" class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li class="nav-dropdown">
+              <a href="#calculators" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Calculators
+                <span class="nav-chevron">▾</span></a>
+              <ul class="nav-dropdown-menu" role="list">
+                <li><a href="/usa-mortgage-calculator"><img src="/images/flags/us.svg" class="header-flag" alt="USA Flag"
+                      aria-hidden="true"> USA Mortgage</a></li>
+                <li><a href="/canada-mortgage-calculator"><img src="/images/flags/ca.svg" class="header-flag"
+                      alt="Canada Flag" aria-hidden="true"> Canada Mortgage</a></li>
+                <li><a href="/uk-mortgage-calculator"><img src="/images/flags/gb.svg" class="header-flag" alt="UK Flag"
+                      aria-hidden="true"> UK Mortgage</a></li>
+                <li><a href="/india-home-loan-emi-calculator"><img src="/images/flags/in.svg" class="header-flag"
+                      alt="India Flag" aria-hidden="true"> India EMI</a></li>
+                <li><a href="/australia-mortgage-calculator"><img src="/images/flags/au.svg" class="header-flag"
+                      alt="Australia Flag" aria-hidden="true"> Australia</a></li>
+                <li><a href="/new-zealand-mortgage-calculator"><img src="/images/flags/nz.svg"
+                      class="header-flag" alt="New Zealand Flag" aria-hidden="true"> New Zealand</a></li>
+                <li><a href="/europe-mortgage-calculator"><img src="/images/flags/eu.svg" class="header-flag"
+                      alt="Europe Flag" aria-hidden="true"> Europe</a></li>
+              </ul>
+            </li>
+            <li><a href="/blog/">Learn</a></li>
+            <li><a href="/mortgage-faq">FAQs</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li class="nav-cta-item"><a href="#calculators" class="btn-nav-cta">Calculate Your Mortgage</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
 
   <main id="main-content">
 
