@@ -2,7 +2,7 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
-    // Redirect www.mortgageproglobal.com to mortgageproglobal.com
+    // Redirect www.mortgageproglobal.com to non-www
     if (url.hostname === "www.mortgageproglobal.com") {
       return Response.redirect(
         "https://mortgageproglobal.com" + url.pathname + url.search,
@@ -10,37 +10,7 @@ export default {
       );
     }
 
-    let pathname = url.pathname.replace(/^\/+|\/+$/g, "");
-    if (pathname.endsWith(".html")) {
-      pathname = pathname.slice(0, -5);
-    }
-
-    const pages = [
-      "about",
-      "contact",
-      "privacy-policy",
-      "terms-and-conditions",
-      "disclaimer",
-      "editorial-policy",
-      "corrections-policy",
-      "data-sources",
-      "data-deletion-policy",
-      "mortgage-faq",
-      "usa-mortgage-calculator",
-      "canada-mortgage-calculator",
-      "uk-mortgage-calculator",
-      "india-home-loan-emi-calculator",
-      "australia-mortgage-calculator",
-      "new-zealand-mortgage-calculator",
-      "europe-mortgage-calculator"
-    ];
-
-    if (pages.includes(pathname)) {
-      const pageUrl = new URL(`/${pathname}.html`, request.url);
-      return env.ASSETS.fetch(new Request(pageUrl, request));
-    }
-
-    // Fallback to serving static assets
+    // Serve static assets directly via Cloudflare Pages / Static Assets
     return env.ASSETS.fetch(request);
   }
 };
