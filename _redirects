@@ -18,28 +18,6 @@
 /data-deletion-policy   /data-deletion-policy.html   200
 /mortgage-faq           /mortgage-faq.html           200
 
-# Redirect old /pages/* URLs to root clean URLs
-/pages/about                    /about                  301
-/pages/about.html               /about                  301
-/pages/contact                  /contact                301
-/pages/contact.html             /contact                301
-/pages/privacy-policy           /privacy-policy         301
-/pages/privacy-policy.html      /privacy-policy         301
-/pages/terms-and-conditions     /terms-and-conditions   301
-/pages/terms-and-conditions.html /terms-and-conditions  301
-/pages/disclaimer               /disclaimer             301
-/pages/disclaimer.html          /disclaimer             301
-/pages/editorial-policy         /editorial-policy       301
-/pages/editorial-policy.html    /editorial-policy       301
-/pages/corrections-policy       /corrections-policy     301
-/pages/corrections-policy.html  /corrections-policy     301
-/pages/data-sources             /data-sources           301
-/pages/data-sources.html        /data-sources           301
-/pages/data-deletion-policy     /data-deletion-policy   301
-/pages/data-deletion-policy.html /data-deletion-policy  301
-/pages/mortgage-faq             /mortgage-faq           301
-/pages/mortgage-faq.html        /mortgage-faq           301
-
 # Country Calculator Pages
 /usa-mortgage-calculator            /usa-mortgage-calculator.html            200
 /canada-mortgage-calculator         /canada-mortgage-calculator.html         200
