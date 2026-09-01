@@ -89,6 +89,25 @@
         }
       });
     });
+
+    // If URL contains a hash pointing to a specific FAQ item, expand it
+    function checkHashTarget() {
+      if (window.location.hash) {
+        const targetId = window.location.hash.substring(1);
+        const item = document.getElementById(targetId);
+        if (item) {
+          const btn = item.querySelector('.faq-question') || (item.classList.contains('faq-question') ? item : null);
+          if (btn) {
+            const answer = btn.nextElementSibling;
+            btn.setAttribute('aria-expanded', 'true');
+            answer?.classList.add('open');
+            item.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }
+      }
+    }
+    checkHashTarget();
+    window.addEventListener('hashchange', checkHashTarget);
   }
 
   // Run static initializations immediately
