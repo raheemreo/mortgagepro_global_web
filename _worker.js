@@ -11,9 +11,6 @@ export default {
     }
 
     let pathname = url.pathname.replace(/^\/+|\/+$/g, "");
-    if (pathname.startsWith("pages/")) {
-      pathname = pathname.substring(6);
-    }
     if (pathname.endsWith(".html")) {
       pathname = pathname.slice(0, -5);
     }
