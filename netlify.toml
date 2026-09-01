@@ -16,50 +16,50 @@
 
 [[redirects]]
   from = "/about"
-  to = "/pages/about.html"
+  to = "/about.html"
   status = 200
 
 [[redirects]]
   from = "/contact"
-  to = "/pages/contact.html"
+  to = "/contact.html"
   status = 200
 
 [[redirects]]
   from = "/privacy-policy"
-  to = "/pages/privacy-policy.html"
+  to = "/privacy-policy.html"
   status = 200
 
 [[redirects]]
   from = "/terms-and-conditions"
-  to = "/pages/terms-and-conditions.html"
+  to = "/terms-and-conditions.html"
   status = 200
 
 [[redirects]]
   from = "/disclaimer"
-  to = "/pages/disclaimer.html"
+  to = "/disclaimer.html"
   status = 200
 
 [[redirects]]
   from = "/editorial-policy"
-  to = "/pages/editorial-policy.html"
+  to = "/editorial-policy.html"
   status = 200
 
 [[redirects]]
   from = "/corrections-policy"
-  to = "/pages/corrections-policy.html"
+  to = "/corrections-policy.html"
   status = 200
 
 [[redirects]]
   from = "/data-sources"
-  to = "/pages/data-sources.html"
+  to = "/data-sources.html"
   status = 200
 
 [[redirects]]
   from = "/data-deletion-policy"
-  to = "/pages/data-deletion-policy.html"
+  to = "/data-deletion-policy.html"
   status = 200
 
 [[redirects]]
   from = "/mortgage-faq"
-  to = "/pages/mortgage-faq.html"
+  to = "/mortgage-faq.html"
   status = 200

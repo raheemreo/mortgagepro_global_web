@@ -8,9 +8,9 @@
     RewriteCond %{HTTPS} off
     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-    # Clean URL rewrites for pages/ directory
-    RewriteCond %{DOCUMENT_ROOT}/pages/$1.html -f
-    RewriteRule ^([^/]+)/?$ pages/$1.html [L]
+    # Clean URL rewrites for root HTML files
+    RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+    RewriteRule ^([^/]+)/?$ $1.html [L]
 </IfModule>
 
 # ----------------------------------------------------------------------

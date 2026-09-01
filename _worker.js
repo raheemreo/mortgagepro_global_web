@@ -29,7 +29,7 @@ export default {
     }
 
     if (pages.includes(pathname)) {
-      const pageUrl = new URL(`/pages/${pathname}.html`, request.url);
+      const pageUrl = new URL(`/${pathname}.html`, request.url);
       return env.ASSETS.fetch(new Request(pageUrl, request));
     }
 
