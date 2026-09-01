@@ -1,10 +1,10 @@
 // js/rates.js — Single source of truth for all mortgage rate data
-// Update this file monthly. Last updated: August 2026
+// Update this file monthly. Last updated: September 2026
 // REO TECH | MortgagePro Global v2.1
 
 const RATES = {
-  lastUpdated: "August 2026",
-  lastUpdatedISO: "2026-08",
+  lastUpdated: "September 2026",
+  lastUpdatedISO: "2026-09",
 
   usa: {
     fed: "5.25%",
