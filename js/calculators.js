@@ -290,18 +290,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalPayment = emi * n;
     const totalInterest = totalPayment - loan;
 
-    // SDLT (Stamp Duty) Calculation
+    // SDLT (Stamp Duty) Calculation (HMRC Post-April 1, 2025 Statutory Bands)
     let sdlt = 0;
-    if (isFirstTime) {
-      if (price <= 625000) {
-        // Relief applies
-        const taxable = Math.max(0, price - 425000);
-        sdlt = taxable * 0.05;
-      } else {
-        // Standard rates apply
-        sdlt = calcStandardSDLT(price);
-      }
+    if (isFirstTime && price <= 500000) {
+      // First-time buyer relief applies up to £500,000
+      const taxable = Math.max(0, price - 300000);
+      sdlt = taxable * 0.05;
     } else {
+      // Standard rates apply (or FTB over £500k where relief is lost)
       sdlt = calcStandardSDLT(price);
     }
 
@@ -317,6 +313,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       if (val > 250000) {
         tax += (val - 250000) * 0.05;
+        val = 250000;
+      }
+      if (val > 125000) {
+        tax += (val - 125000) * 0.02;
       }
       return tax;
     }

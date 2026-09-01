@@ -2058,7 +2058,7 @@
         <li><strong>20.0% or More Down Payment (LTV &le; 80.0%):</strong> No CMHC premium required (Uninsured Mortgage).</li>
       </ul>
       <p>
-        <strong>Statutory Price Cap:</strong> Under CMHC rules, homes priced at <strong>CA$1,000,000 or higher</strong> do not qualify for CMHC insurance and require a minimum 20% down payment.
+        <strong>Statutory Price Cap:</strong> Under CMHC rules, homes priced at <strong>CA$1,500,000 or higher</strong> do not qualify for CMHC insurance and require a minimum 20% down payment (increased from $1,000,000 under federal legislation). Furthermore, 30-year insured amortizations are available to all first-time homebuyers and all buyers of newly constructed homes.
       </p>
 
       <div class="section-header">
@@ -2102,7 +2102,7 @@
         <div class="tip-card">
           <div class="tip-card-icon">🍁</div>
           <div class="tip-card-title">Minimum Down Payment Tiering</div>
-          <p class="tip-card-text">Statutory down payments are tiered under federal law: <strong>5%</strong> on the first $500,000, and <strong>10%</strong> on the portion between $500,001 and $999,999. Homes valued at $1,000,000 or greater require a minimum 20% down payment and cannot be backed by CMHC default insurance.</p>
+          <p class="tip-card-text">Statutory down payments are tiered under federal law: <strong>5%</strong> on the first $500,000, and <strong>10%</strong> on the portion between $500,001 and $1,499,999. Homes valued at $1,500,000 or greater require a minimum 20% down payment and cannot be backed by CMHC default insurance.</p>
         </div>
         <div class="tip-card">
           <div class="tip-card-icon">🏡</div>
@@ -2293,15 +2293,15 @@
       return 0.0400;
     }
 
-    /* Tiered Minimum Down Payment Validator */
+    /* Tiered Minimum Down Payment Validator (Updated to $1.5M Federal Cap) */
     function getMinDownPaymentCAD(price) {
-      if (price >= 1000000) {
-        return price * 0.20; // 20% minimum for 1M+
+      if (price >= 1500000) {
+        return price * 0.20; // 20% minimum for $1.5M+
       }
       if (price <= 500000) {
         return price * 0.05; // 5% minimum
       }
-      // Between 500k and 1M
+      // Between 500k and 1.5M
       const first500 = 500000 * 0.05;
       const remaining = (price - 500000) * 0.10;
       return first500 + remaining;
@@ -2478,16 +2478,16 @@
         return;
       }
 
-      // CMHC Insurance validation
-      if (price >= 1000000 && down < 20) {
+      // CMHC Insurance validation (Updated to statutory $1.5M price cap)
+      if (price >= 1500000 && down < 20) {
         dBox.classList.add('error-box');
-        triggerToast(`⚠️ Properties CA$1,000,000 and above require a minimum 20% down payment (No CMHC allowed).`);
+        triggerToast(`⚠️ Properties CA$1,500,000 and above require a minimum 20% down payment (No CMHC insurance allowed).`);
         return;
       }
 
-      // Maximum 25 years amortization for insured mortgages
-      if (down < 20 && term > 25) {
-        triggerToast('⚠️ Insured mortgages (down payment < 20%) are limited to a maximum of 25 years amortization.');
+      // Maximum 30 years amortization allowed (expanded under federal rules for first-time buyers & new builds)
+      if (down < 20 && term > 30) {
+        triggerToast('⚠️ Mortgages with under 20% down are limited to a maximum of 30 years amortization.');
         return;
       }
 
@@ -2502,8 +2502,8 @@
       // Monthly payment calculation
       const monthlyPayment = calcCADMonthlyPayment(totalLoanAmount, rate, term);
 
-      // OSFI Stress test check: qualify at higher of contract rate + 2% or 7.00% benchmark
-      const stressRate = Math.max(rate + 2.0, 7.00);
+      // OSFI Stress test check: qualify at higher of contract rate + 2.00% or 5.25% statutory floor
+      const stressRate = Math.max(rate + 2.0, 5.25);
       const stressMonthlyPayment = calcCADMonthlyPayment(totalLoanAmount, stressRate, term);
 
       // GDS ratio: (Mortgage + Taxes + Heat) / Gross Income. Estimated heat = $150, taxes = $250.

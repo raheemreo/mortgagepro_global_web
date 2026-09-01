@@ -21,10 +21,13 @@ MortgagePro Global is designed to provide high-precision, client-side financial 
   - 85.01% - 90.00% LTV: 3.10%
   - 80.01% - 85.00% LTV: 2.80%
   - 20%+ Down Payment: No insurance required (uninsured).
-- **Caps & Schemes:** Homes valued at $1,000,000+ require 20% down. Home Buyers' Plan (HBP) allows eligible first-time buyers to withdraw up to $60,000 tax-free from their RRSP.
+- **Caps & Schemes:** Homes valued at $1,500,000+ require 20% down (statutory cap increased from $1,000,000). 30-year insured amortizations apply to all first-time buyers and buyers of new builds. Home Buyers' Plan (HBP) allows eligible first-time buyers to withdraw up to $60,000 tax-free from their RRSP.
 
 ### 3. UK Mortgage Calculator (`/uk-mortgage-calculator`)
-- **Stamp Duty Land Tax (SDLT):** Implements current England & Northern Ireland progressive tax bands, including First-Time Buyer relief thresholds.
+- **Stamp Duty Land Tax (SDLT):** Implements current post-April 1, 2025 England & Northern Ireland HMRC progressive tax bands:
+  - Standard: £0–£125k @ 0%, £125k–£250k @ 2%, £250k–£925k @ 5%, £925k–£1.5M @ 10%, >£1.5M @ 12%.
+  - First-Time Buyer Relief: 0% up to £300,000, 5% on £300,001–£500,000. No relief for properties over £500,000.
+  - Additional Dwellings / BTL: 5% surcharge across all bands (5%, 7%, 10%, 15%, 17%).
 - **Repayment Modes:** Capital repayment and interest-only options.
 - **Regulatory Framework:** Financial Conduct Authority (FCA) mortgage conduct of business (MCOB) disclosure conventions and Bank of England base rate tracking.
 

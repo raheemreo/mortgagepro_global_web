@@ -7,13 +7,13 @@ const RATES = {
   lastUpdatedISO: "2026-09",
 
   usa: {
-    fed: "5.25%",
-    fixed30: "6.82%",
-    fixed15: "6.11%",
-    arm5: "6.45%",
+    fed: "5.25 - 5.50%",
+    fixed30: "6.66%",
+    fixed15: "5.98%",
+    arm5: "6.05%",
     fhaMin: "3.5%",
     pmiThreshold: "80%",
-    note: "Source: Freddie Mac Primary Mortgage Market Survey"
+    note: "Source: Freddie Mac PMMS (August 27, 2026)"
   },
   canada: {
     boc: "4.75%",

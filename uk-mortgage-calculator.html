@@ -52,8 +52,8 @@
 
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":"What is Stamp Duty (SDLT) in the UK?","acceptedAnswer":{"@type":"Answer","text":"Stamp Duty Land Tax (SDLT) is a tax paid when you buy a property or land over a certain threshold in England and Northern Ireland. The tax rate is tiered, meaning you pay different percentages on different bands of the property price. As of 2026, standard stamp duty rates start at 0% for properties up to £250,000, 5% on the portion between £250,001 and £925,000, and up to 12% on portions above £1.5 million."}},
-    {"@type":"Question","name":"Do first-time buyers pay Stamp Duty in the UK?","acceptedAnswer":{"@type":"Answer","text":"First-time buyers in the UK qualify for Stamp Duty relief on properties priced up to £625,000. If eligible, you pay 0% Stamp Duty on properties priced up to £425,000, and a discounted rate of 5% on the portion between £425,001 and £625,000. If the property price exceeds £625,000, no first-time buyer relief applies and you pay standard rates."}},
+    {"@type":"Question","name":"What is Stamp Duty (SDLT) in the UK?","acceptedAnswer":{"@type":"Answer","text":"Stamp Duty Land Tax (SDLT) is a tax paid when you buy a property or land over a certain threshold in England and Northern Ireland. The tax rate is tiered, meaning you pay different percentages on different bands of the property price. Under current post-April 1, 2025 HMRC legislation, standard stamp duty rates start at 0% for properties up to £125,000, 2% on £125,001 to £250,000, 5% on £250,001 to £925,000, 10% on £925,001 to £1.5 million, and 12% on portions above £1.5 million."}},
+    {"@type":"Question","name":"Do first-time buyers pay Stamp Duty in the UK?","acceptedAnswer":{"@type":"Answer","text":"First-time buyers in England and Northern Ireland qualify for Stamp Duty relief on properties priced up to £500,000. Under current post-April 1, 2025 HMRC rules, you pay 0% Stamp Duty on properties priced up to £300,000, and a discounted rate of 5% on the portion between £300,001 and £500,000. If the purchase price exceeds £500,000, no first-time buyer relief applies and you pay standard rates on the full amount."}},
     {"@type":"Question","name":"What is the difference between a repayment and interest-only mortgage?","acceptedAnswer":{"@type":"Answer","text":"A repayment mortgage requires monthly payments that cover both the interest and a portion of the original loan balance, ensuring the loan is completely paid off by the end of the term. An interest-only mortgage requires paying only the interest accrued each month, meaning the monthly payment is lower but the original debt remains fully outstanding and must be repaid via a separate repayment strategy at the end of the term."}}
   ]}
   </script>
@@ -2044,13 +2044,12 @@
       <div class="sdlt-icon">🏛️</div>
       <div>
         <div class="sdlt-title">Stamp Duty Land Tax</div>
-        <div class="sdlt-sub">First-time buyer relief up to £425,000 · 2nd home surcharge +3% · Calculate your exact
-          SDLT bill</div>
+        <div class="sdlt-sub">First-time buyer relief up to £300k/£500k · 2nd home surcharge +5% · Effective post-April 2025 HMRC rates</div>
       </div>
       <a href="#calculator" class="sdlt-btn">Calculate SDLT</a>
     </div>
 
-    <!-- SDLT Rates Table -->
+    <!-- SDLT Rates Table (Post-April 1, 2025 Statutory Regime) -->
     <div class="sdlt-table">
       <table>
         <thead>
@@ -2058,44 +2057,58 @@
             <th>Property Value Band</th>
             <th>Standard Rate</th>
             <th>First-Time Buyer</th>
-            <th>Second Home / BTL</th>
-            <th>Non-Resident</th>
+            <th>Second Home / BTL (+5%)</th>
+            <th>Non-Resident (+2%)</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Up to £250,000</td>
+            <td>Up to £125,000</td>
             <td><span class="rate-chip" style="background:#F0FDF4;color:#15803D;">0%</span></td>
             <td><span class="rate-chip" style="background:#F0FDF4;color:#15803D;">0%</span></td>
-            <td><span class="rate-chip" style="background:#FFF7ED;color:#C2410C;">3%</span></td>
+            <td><span class="rate-chip" style="background:#FFF7ED;color:#C2410C;">5%</span></td>
             <td><span class="rate-chip" style="background:#FEF2F2;color:#991B1B;">2%</span></td>
           </tr>
           <tr>
-            <td>£250,001 – £425,000</td>
+            <td>£125,001 – £250,000</td>
+            <td><span class="rate-chip" style="background:#EFF6FF;color:#1D4ED8;">2%</span></td>
+            <td><span class="rate-chip" style="background:#F0FDF4;color:#15803D;">0% (FTB relief)</span></td>
+            <td><span class="rate-chip" style="background:#FFF7ED;color:#C2410C;">7%</span></td>
+            <td><span class="rate-chip" style="background:#FEF2F2;color:#991B1B;">4%</span></td>
+          </tr>
+          <tr>
+            <td>£250,001 – £300,000</td>
             <td><span class="rate-chip" style="background:#EFF6FF;color:#1D4ED8;">5%</span></td>
             <td><span class="rate-chip" style="background:#F0FDF4;color:#15803D;">0% (FTB relief)</span></td>
-            <td><span class="rate-chip" style="background:#FFF7ED;color:#C2410C;">8%</span></td>
+            <td><span class="rate-chip" style="background:#FFF7ED;color:#C2410C;">10%</span></td>
             <td><span class="rate-chip" style="background:#FEF2F2;color:#991B1B;">7%</span></td>
           </tr>
           <tr>
-            <td>£425,001 – £925,000</td>
+            <td>£300,001 – £500,000</td>
             <td><span class="rate-chip" style="background:#EFF6FF;color:#1D4ED8;">5%</span></td>
+            <td><span class="rate-chip" style="background:#EFF6FF;color:#1D4ED8;">5% (FTB relief)</span></td>
+            <td><span class="rate-chip" style="background:#FFF7ED;color:#C2410C;">10%</span></td>
+            <td><span class="rate-chip" style="background:#FEF2F2;color:#991B1B;">7%</span></td>
+          </tr>
+          <tr>
+            <td>£500,001 – £925,000</td>
             <td><span class="rate-chip" style="background:#EFF6FF;color:#1D4ED8;">5%</span></td>
-            <td><span class="rate-chip" style="background:#FFF7ED;color:#C2410C;">8%</span></td>
+            <td><span class="rate-chip" style="background:#EFF6FF;color:#1D4ED8;">5% (Standard)</span></td>
+            <td><span class="rate-chip" style="background:#FFF7ED;color:#C2410C;">10%</span></td>
             <td><span class="rate-chip" style="background:#FEF2F2;color:#991B1B;">7%</span></td>
           </tr>
           <tr>
             <td>£925,001 – £1,500,000</td>
             <td><span class="rate-chip" style="background:#FFF7ED;color:#C2410C;">10%</span></td>
             <td><span class="rate-chip" style="background:#FFF7ED;color:#C2410C;">10%</span></td>
-            <td><span class="rate-chip" style="background:#FEF2F2;color:#991B1B;">13%</span></td>
+            <td><span class="rate-chip" style="background:#FEF2F2;color:#991B1B;">15%</span></td>
             <td><span class="rate-chip" style="background:#FEF2F2;color:#991B1B;">12%</span></td>
           </tr>
           <tr>
             <td>Above £1,500,000</td>
             <td><span class="rate-chip" style="background:#FEF2F2;color:#991B1B;">12%</span></td>
             <td><span class="rate-chip" style="background:#FEF2F2;color:#991B1B;">12%</span></td>
-            <td><span class="rate-chip" style="background:#FEF2F2;color:#991B1B;">15%</span></td>
+            <td><span class="rate-chip" style="background:#FEF2F2;color:#991B1B;">17%</span></td>
             <td><span class="rate-chip" style="background:#FEF2F2;color:#991B1B;">14%</span></td>
           </tr>
         </tbody>
@@ -2339,17 +2352,16 @@
     <section class="content-article" id="uk-guide" aria-labelledby="uk-guide-h">
       <h2 id="uk-guide-h">Understanding United Kingdom Mortgage Guidelines</h2>
       <div class="definition-para">
-        <strong>Stamp Duty Land Tax (SDLT)</strong> represents a primary property purchase cost for UK buyers.
-        SDLT is calculated in tiers (brackets) on properties valued over £250,000 in England and Northern Ireland.
-        Rates increase progressively up to 12% for the portion above £1.5 million. First-time buyer relief drops the
-        starting threshold rate to 0% up to £425,000.
+        <strong>Stamp Duty Land Tax (SDLT)</strong> represents a primary property purchase cost for UK buyers in England and Northern Ireland.
+        Under current post-April 1, 2025 HMRC legislation, standard SDLT is calculated in progressive tiers: 0% up to £125,000, 2% between £125,001 and £250,000, 5% between £250,001 and £925,000, 10% between £925,001 and £1.5 million, and 12% on portions above £1.5 million.
+        First-time buyer relief exempts purchases up to £300,000.
       </div>
 
-      <h3>First-Time Buyer SDLT Relief Bands</h3>
-      <p>First-time buyers in the UK qualify for Stamp Duty relief on properties priced up to £625,000. If eligible, you
-        pay 0% Stamp Duty on properties priced up to £425,000, and a discounted rate of 5% on the portion between
-        £425,001 and £625,000. If the property price exceeds £625,000, no first-time buyer relief applies and you pay
-        standard rates.</p>
+      <h3>First-Time Buyer SDLT Relief Bands (Post-April 1, 2025)</h3>
+      <p>First-time buyers in England and Northern Ireland qualify for Stamp Duty relief on properties priced up to £500,000. If eligible, you
+        pay 0% Stamp Duty on properties priced up to £300,000, and a discounted rate of 5% on the portion between
+        £300,001 and £500,000. If the property price exceeds £500,000, no first-time buyer relief applies and you pay
+        standard rates on the entire purchase price.</p>
 
       <h3>Repayment vs. Interest-Only Mortgage Options</h3>
       <p>UK lenders primarily offer two payment structures:</p>
@@ -2386,7 +2398,7 @@
         <div class="tip-card">
           <div class="tip-card-icon">📋</div>
           <div class="tip-card-title">Buy-to-Let Stamp Duty Surcharges</div>
-          <p class="tip-card-text">Property investors and second-home purchasers must add a flat 3% surcharge to the
+          <p class="tip-card-text">Property investors and second-home purchasers must add a flat 5% surcharge (updated in the Autumn Budget) to the
             standard SDLT bands. Check Buy-to-Let tax calculators to audit additional cash requirements.</p>
         </div>
       </div>
@@ -2407,8 +2419,8 @@
             <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1">
               <p>Stamp Duty Land Tax (SDLT) is a tax paid when you buy a property or land over a certain threshold in
                 England and Northern Ireland. The tax rate is tiered, meaning you pay different percentages on different
-                bands of the property price. As of 2026, standard stamp duty rates start at 0% for properties up to
-                £250,000, 5% on the portion between £250,001 and £925,000, and up to 12% on portions above £1.5 million.
+                bands of the property price. Under current post-April 1, 2025 HMRC legislation, standard stamp duty rates start at 0% for properties up to
+                £125,000, 2% on £125,001 to £250,000, 5% on £250,001 to £925,000, 10% on £925,001 to £1.5 million, and 12% on portions above £1.5 million.
               </p>
             </div>
           </li>
@@ -2418,10 +2430,7 @@
               <span class="faq-icon" aria-hidden="true">▾</span>
             </button>
             <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2">
-              <p>First-time buyers in the UK qualify for Stamp Duty relief on properties priced up to £625,000. If
-                eligible, you pay 0% Stamp Duty on properties priced up to £425,000, and a discounted rate of 5% on the
-                portion between £425,001 and £625,000. If the property price exceeds £625,000, no first-time buyer
-                relief applies and you pay standard rates.</p>
+              <p>First-time buyers in England and Northern Ireland qualify for Stamp Duty relief on properties priced up to £500,000. Under current post-April 1, 2025 HMRC rules, you pay 0% Stamp Duty on properties priced up to £300,000, and a discounted rate of 5% on the portion between £300,001 and £500,000. If the property price exceeds £500,000, no first-time buyer relief applies and you pay standard rates on the full amount.</p>
             </div>
           </li>
           <li class="faq-item">
@@ -2612,35 +2621,35 @@
       return list;
     }
 
-    /* Est UK Stamp Duty (SDLT) with first-time buyer concessions */
+    /* Est UK Stamp Duty (SDLT) under current post-April 1, 2025 HMRC statutory bands */
     function calcSDLT(price, isFTB) {
-      let tax = 0;
-
-      if (isFTB) {
-        if (price <= 625000) {
-          // Relief applies
-          if (price <= 425000) {
-            return 0;
-          } else {
-            tax = (price - 425000) * 0.05;
-            return tax;
-          }
-        }
+      if (isFTB && price <= 500000) {
+        if (price <= 300000) return 0;
+        return (price - 300000) * 0.05;
       }
 
-      // Standard rates
-      // Band 1: Up to £250k @ 0%
-      // Band 2: £250k - £925k @ 5%
-      // Band 3: £925k - £1.5M @ 10%
-      // Band 4: Above £1.5M @ 12%
-      if (price <= 250000) {
-        return 0;
-      } else if (price <= 925000) {
-        tax = (price - 250000) * 0.05;
-      } else if (price <= 1500000) {
-        tax = (925000 - 250000) * 0.05 + (price - 925000) * 0.10;
-      } else {
-        tax = (925000 - 250000) * 0.05 + (1500000 - 925000) * 0.10 + (price - 1500000) * 0.12;
+      // Standard rates (England & Northern Ireland post-April 1, 2025)
+      // Band 1: Up to £125k @ 0%
+      // Band 2: £125k - £250k @ 2%
+      // Band 3: £250k - £925k @ 5%
+      // Band 4: £925k - £1.5M @ 10%
+      // Band 5: Above £1.5M @ 12%
+      let tax = 0;
+      let val = price;
+      if (val > 1500000) {
+        tax += (val - 1500000) * 0.12;
+        val = 1500000;
+      }
+      if (val > 925000) {
+        tax += (val - 925000) * 0.10;
+        val = 925000;
+      }
+      if (val > 250000) {
+        tax += (val - 250000) * 0.05;
+        val = 250000;
+      }
+      if (val > 125000) {
+        tax += (val - 125000) * 0.02;
       }
       return tax;
     }
