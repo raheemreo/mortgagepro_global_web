@@ -10,6 +10,14 @@ export default {
       );
     }
 
+    let pathname = url.pathname.replace(/^\/+|\/+$/g, "");
+    if (pathname.startsWith("pages/")) {
+      pathname = pathname.substring(6);
+    }
+    if (pathname.endsWith(".html")) {
+      pathname = pathname.slice(0, -5);
+    }
+
     const pages = [
       "about",
       "contact",
@@ -20,13 +28,15 @@ export default {
       "corrections-policy",
       "data-sources",
       "data-deletion-policy",
-      "mortgage-faq"
+      "mortgage-faq",
+      "usa-mortgage-calculator",
+      "canada-mortgage-calculator",
+      "uk-mortgage-calculator",
+      "india-home-loan-emi-calculator",
+      "australia-mortgage-calculator",
+      "new-zealand-mortgage-calculator",
+      "europe-mortgage-calculator"
     ];
-
-    let pathname = url.pathname.replace(/^\/+|\/+$/g, "");
-    if (pathname.endsWith(".html")) {
-      pathname = pathname.slice(0, -5);
-    }
 
     if (pages.includes(pathname)) {
       const pageUrl = new URL(`/${pathname}.html`, request.url);
