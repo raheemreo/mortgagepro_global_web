@@ -6,17 +6,39 @@
 /mortgagepro_website_prompt.md  /404  404!
 /docs/*                         /404  404!
 
-# Informational & Policy Pages (200 Internal Rewrite)
-/about                  /pages/about.html                  200
-/contact                /pages/contact.html                200
-/privacy-policy         /pages/privacy-policy.html         200
-/terms-and-conditions   /pages/terms-and-conditions.html   200
-/disclaimer             /pages/disclaimer.html             200
-/editorial-policy       /pages/editorial-policy.html       200
-/corrections-policy     /pages/corrections-policy.html     200
-/data-sources           /pages/data-sources.html           200
-/data-deletion-policy   /pages/data-deletion-policy.html   200
-/mortgage-faq           /pages/mortgage-faq.html           200
+# Informational & Policy Pages (Root Rewrites)
+/about                  /about.html                  200
+/contact                /contact.html                200
+/privacy-policy         /privacy-policy.html         200
+/terms-and-conditions   /terms-and-conditions.html   200
+/disclaimer             /disclaimer.html             200
+/editorial-policy       /editorial-policy.html       200
+/corrections-policy     /corrections-policy.html     200
+/data-sources           /data-sources.html           200
+/data-deletion-policy   /data-deletion-policy.html   200
+/mortgage-faq           /mortgage-faq.html           200
+
+# Redirect old /pages/* URLs to root clean URLs
+/pages/about                    /about                  301
+/pages/about.html               /about                  301
+/pages/contact                  /contact                301
+/pages/contact.html             /contact                301
+/pages/privacy-policy           /privacy-policy         301
+/pages/privacy-policy.html      /privacy-policy         301
+/pages/terms-and-conditions     /terms-and-conditions   301
+/pages/terms-and-conditions.html /terms-and-conditions  301
+/pages/disclaimer               /disclaimer             301
+/pages/disclaimer.html          /disclaimer             301
+/pages/editorial-policy         /editorial-policy       301
+/pages/editorial-policy.html    /editorial-policy       301
+/pages/corrections-policy       /corrections-policy     301
+/pages/corrections-policy.html  /corrections-policy     301
+/pages/data-sources             /data-sources           301
+/pages/data-sources.html        /data-sources           301
+/pages/data-deletion-policy     /data-deletion-policy   301
+/pages/data-deletion-policy.html /data-deletion-policy  301
+/pages/mortgage-faq             /mortgage-faq           301
+/pages/mortgage-faq.html        /mortgage-faq           301
 
 # Country Calculator Pages
 /usa-mortgage-calculator            /usa-mortgage-calculator.html            200
