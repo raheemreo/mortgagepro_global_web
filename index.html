@@ -53,6 +53,10 @@
       font-weight: 400;
       font-display: swap;
       src: url('/fonts/inter-400.woff2') format('woff2');
+      ascent-override: 90%;
+      descent-override: 22%;
+      line-gap-override: 0%;
+      size-adjust: 100%;
     }
     @font-face {
       font-family: 'Inter';
@@ -60,6 +64,10 @@
       font-weight: 600;
       font-display: swap;
       src: url('/fonts/inter-600.woff2') format('woff2');
+      ascent-override: 90%;
+      descent-override: 22%;
+      line-gap-override: 0%;
+      size-adjust: 100%;
     }
     @font-face {
       font-family: 'Inter';
@@ -67,6 +75,10 @@
       font-weight: 700;
       font-display: swap;
       src: url('/fonts/inter-700.woff2') format('woff2');
+      ascent-override: 90%;
+      descent-override: 22%;
+      line-gap-override: 0%;
+      size-adjust: 100%;
     }
     @font-face {
       font-family: 'Inter';
@@ -74,6 +86,10 @@
       font-weight: 800;
       font-display: swap;
       src: url('/fonts/inter-800.woff2') format('woff2');
+      ascent-override: 90%;
+      descent-override: 22%;
+      line-gap-override: 0%;
+      size-adjust: 100%;
     }
 
     :root {
@@ -474,6 +490,107 @@
       font-weight: 500;
       white-space: nowrap;
     }
+
+    /* Hero Visual Mockup Critical Layout */
+    .hero-v2-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 400px;
+    }
+
+    .hero-calc-mockup {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+      width: 100%;
+      max-width: 440px;
+      box-sizing: border-box;
+    }
+
+    .hero-calc-mockup-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .hero-calc-mockup-header h2,
+    .hero-calc-mockup-header h3 {
+      color: #fff;
+      font-size: 1rem;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+    }
+
+    .mockup-icon {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, #B91C1C, #DC2626);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .mockup-field {
+      margin-bottom: 14px;
+    }
+
+    .mockup-field label {
+      display: block;
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.55);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .mockup-input {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      padding: 10px 14px;
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .mockup-result {
+      background: linear-gradient(135deg, #B91C1C, #DC2626);
+      border-radius: 12px;
+      padding: 18px;
+      margin-top: 16px;
+    }
+
+    .mockup-result-label {
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.75);
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .mockup-result-value {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      font-family: 'Inter', -apple-system, sans-serif;
+      line-height: 1.2;
+    }
   </style>
 
   <!-- Structured Data: WebSite + SearchAction -->
@@ -618,16 +735,21 @@
       })(window, document, "clarity", "script", "xfuhcofj80");
     }
 
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(function () {
-        setTimeout(initThirdPartyScripts, 2000);
-      });
-    } else {
-      setTimeout(initThirdPartyScripts, 2500);
-    }
-    ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(function (evt) {
+    var userEvents = ['scroll', 'mousemove', 'touchstart', 'keydown', 'click', 'wheel', 'pointerdown'];
+    userEvents.forEach(function (evt) {
       window.addEventListener(evt, initThirdPartyScripts, { once: true, passive: true });
     });
+    if ('requestIdleCallback' in window) {
+      window.addEventListener('load', function () {
+        requestIdleCallback(function () {
+          setTimeout(initThirdPartyScripts, 3500);
+        });
+      });
+    } else {
+      window.addEventListener('load', function () {
+        setTimeout(initThirdPartyScripts, 3500);
+      });
+    }
   </script>
 
   <script src="/js/components.js" defer></script>

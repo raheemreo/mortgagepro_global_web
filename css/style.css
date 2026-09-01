@@ -1434,10 +1434,11 @@ p {
 .trust-strip-inner a {
   color: #6B7280;
   text-decoration: none;
-  transition: color 0.15s;
+  transition: opacity 0.15s;
 }
 
 .trust-strip-inner a:hover {
+  opacity: 0.8;
   color: #B91C1C;
 }
 
