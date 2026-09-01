@@ -2,9 +2,18 @@
 # Cloudflare Pages / Netlify Redirects & Rewrites (Clean Extensionless URLs)
 # ==============================================================================
 
-# Protect internal documentation & prompt files
-/mortgagepro_website_prompt.md  /404  404!
-/docs/*                         /404  404!
+# Legacy /pages/ 301 Redirects to Canonical Clean URLs
+/pages/about                  /about                  301
+/pages/contact                /contact                301
+/pages/privacy-policy         /privacy-policy         301
+/pages/terms-and-conditions   /terms-and-conditions   301
+/pages/disclaimer             /disclaimer             301
+/pages/editorial-policy       /editorial-policy       301
+/pages/corrections-policy     /corrections-policy     301
+/pages/data-sources           /data-sources           301
+/pages/data-deletion-policy   /data-deletion-policy   301
+/pages/mortgage-faq           /mortgage-faq           301
+/pages/*                      /:splat                 301
 
 # Informational & Policy Pages (Root Rewrites)
 /about                  /about.html                  200

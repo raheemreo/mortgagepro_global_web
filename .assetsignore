@@ -1,1 +1,15 @@
+# Cloudflare Workers / Pages Static Assets Ignore
 _worker.js
+docs/
+Designs/
+contents/
+scripts/
+*.md
+.git/
+.gitignore
+.assetsignore
+.gemini/
+.agents/
+skills-lock.json
+package.json
+package-lock.json
