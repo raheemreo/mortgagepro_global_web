@@ -1699,8 +1699,8 @@
       <p style="font-size: 14.5px; color: var(--navy); margin: 0; line-height: 1.6;">
         <strong>Quick Summary:</strong> The USA Mortgage Calculator determines your monthly PITI (Principal, Interest,
         Taxes, and Insurance) payment. For a standard <strong>$450,000</strong> home with a <strong>20% down
-          payment</strong> ($90,000) at a <strong>6.82%</strong> fixed rate over 30 years, the monthly payment is
-        approximately <strong>$2,352</strong> (excluding escrow). If down payment is under 20%, Private Mortgage
+          payment</strong> ($90,000) at a <strong>6.66%</strong> fixed rate over 30 years, the monthly payment is
+        approximately <strong>$2,313</strong> (excluding escrow). If down payment is under 20%, Private Mortgage
         Insurance (PMI) is required.
       </p>
     </div>
@@ -1709,7 +1709,7 @@
     <div id="mortgage" class="section-header" style="margin-top:0">
       <h2 id="calc-h">Quick Estimate</h2>
     </div>
-    <div class="hero-calc">
+    <div class="hero-calc" id="calculator">
       <div class="hero-calc-left">
         <div class="h-tag">USA Mortgage Calculator</div>
         <div class="h-title">PITI · DTI · <span>Amortization</span><br>All-in-one payment</div>
@@ -1735,7 +1735,7 @@
           </div>
           <div class="h-box" id="r-box">
             <label for="us-rate">Interest Rate (%)</label>
-            <input type="number" id="us-rate" value="6.82" min="0.1" max="25" step="0.01" required>
+            <input type="number" id="us-rate" value="6.66" min="0.1" max="25" step="0.01" required>
           </div>
         </div>
 
@@ -1767,31 +1767,31 @@
     </div>
 
     <!-- DYNAMIC RESULTS DRAW PANEL -->
-    <section id="us-results" class="results-section" aria-label="Mortgage calculation results" aria-live="polite">
+    <section id="us-results" class="results-section visible" aria-label="Mortgage calculation results" aria-live="polite">
       <div class="results-grid">
         <div class="mrc highlight-result">
           <span class="mrc-icon">💳</span>
           <div class="mrc-lbl">Monthly Payment (PITI)</div>
-          <div class="mrc-val" id="us-monthly-piti" style="font-size: 24px; font-weight: 800;">$0</div>
+          <div class="mrc-val" id="us-monthly-piti" style="font-size: 24px; font-weight: 800;">$2,826</div>
           <div class="mrc-sub" id="piti-breakdown-sub">Principal + Interest + Escrows</div>
         </div>
         <div class="mrc">
           <span class="mrc-icon">🏡</span>
           <div class="mrc-lbl">Principal &amp; Interest</div>
-          <div class="mrc-val" id="us-monthly-pi" style="font-size: 18px; font-weight: 800;">$0</div>
+          <div class="mrc-val" id="us-monthly-pi" style="font-size: 18px; font-weight: 800;">$2,313</div>
           <div class="mrc-sub">Base mortgage repayment</div>
         </div>
         <div class="mrc">
           <span class="mrc-icon">🛡️</span>
           <div class="mrc-lbl">Monthly PMI</div>
           <div class="mrc-val" id="us-monthly-pmi" style="font-size: 18px; font-weight: 800;">$0</div>
-          <div class="mrc-sub" id="pmi-ratio-lbl">LTV ratio breakdown</div>
+          <div class="mrc-sub" id="pmi-ratio-lbl">80.0% LTV (No PMI required)</div>
         </div>
         <div class="mrc">
           <span class="mrc-icon">📋</span>
           <div class="mrc-lbl">Monthly Taxes &amp; Ins.</div>
-          <div class="mrc-val" id="us-monthly-escrow" style="font-size: 18px; font-weight: 800;">$0</div>
-          <div class="mrc-sub">Property Tax + Insurance</div>
+          <div class="mrc-val" id="us-monthly-escrow" style="font-size: 18px; font-weight: 800;">$513</div>
+          <div class="mrc-sub">Property Tax ($413) + Insurance ($100)</div>
         </div>
       </div>
 
@@ -1799,20 +1799,20 @@
       <div class="piti-bar-wrap">
         <div class="piti-bar-title">Monthly Payment proportions (PITI)</div>
         <div class="piti-bar-track" aria-hidden="true">
-          <div class="piti-bar-seg" id="bar-pi" style="background:#0B1D3A; width: 0%;"></div>
-          <div class="piti-bar-seg" id="bar-tax" style="background:#B91C1C; width: 0%;"></div>
-          <div class="piti-bar-seg" id="bar-insurance" style="background:#D97706; width: 0%;"></div>
+          <div class="piti-bar-seg" id="bar-pi" style="background:#0B1D3A; width: 81.8%;"></div>
+          <div class="piti-bar-seg" id="bar-tax" style="background:#B91C1C; width: 14.6%;"></div>
+          <div class="piti-bar-seg" id="bar-insurance" style="background:#D97706; width: 3.6%;"></div>
           <div class="piti-bar-seg" id="bar-pmi" style="background:#1B3F72; width: 0%;"></div>
         </div>
         <div class="piti-bar-legend">
           <div class="piti-leg-item">
-            <div class="piti-leg-dot" style="background:#0B1D3A;"></div>P&amp;I: <span id="leg-pi">$0</span>
+            <div class="piti-leg-dot" style="background:#0B1D3A;"></div>P&amp;I: <span id="leg-pi">$2,313</span>
           </div>
           <div class="piti-leg-item">
-            <div class="piti-leg-dot" style="background:#B91C1C;"></div>Taxes: <span id="leg-tax">$0</span>
+            <div class="piti-leg-dot" style="background:#B91C1C;"></div>Taxes: <span id="leg-tax">$413</span>
           </div>
           <div class="piti-leg-item">
-            <div class="piti-leg-dot" style="background:#D97706;"></div>Insurance: <span id="leg-insurance">$0</span>
+            <div class="piti-leg-dot" style="background:#D97706;"></div>Insurance: <span id="leg-insurance">$100</span>
           </div>
           <div class="piti-leg-item">
             <div class="piti-leg-dot" style="background:#1B3F72;"></div>PMI: <span id="leg-pmi">$0</span>
@@ -1828,12 +1828,12 @@
             <div style="background: var(--bg); padding: 10px 14px; border-radius: 8px;">
               <div style="font-size: 9px; color: var(--muted); font-weight: 700; text-transform: uppercase;">Total
                 Interest Paid</div>
-              <div style="font-size: 15px; font-weight: 800; color: var(--navy);" id="us-total-interest">$0</div>
+              <div style="font-size: 15px; font-weight: 800; color: var(--navy);" id="us-total-interest">$472,836</div>
             </div>
             <div style="background: var(--bg); padding: 10px 14px; border-radius: 8px;">
               <div style="font-size: 9px; color: var(--muted); font-weight: 700; text-transform: uppercase;">Total
                 Payments (PITI)</div>
-              <div style="font-size: 15px; font-weight: 800; color: var(--navy);" id="us-total-payment">$0</div>
+              <div style="font-size: 15px; font-weight: 800; color: var(--navy);" id="us-total-payment">$1,017,336</div>
             </div>
           </div>
         </div>
@@ -1944,14 +1944,14 @@
       <h2>Core Mortgage Tools</h2>
     </div>
     <div class="g2">
-      <a href="/usa-mortgage-calculator" class="tc nv">
+      <a href="/blog/usa-piti-calculator" class="tc nv">
         <div class="ti">📊</div>
         <div class="tn">PITI Calculator</div>
         <div class="td">Principal+Interest+Tax+Ins</div>
         <div class="bge bge-b">Full Breakdown</div>
         <div class="ta">›</div>
       </a>
-      <a href="/usa-mortgage-calculator" class="tc">
+      <a href="#calculator" class="tc">
         <div class="ti">🧮</div>
         <div class="tn">Mortgage Calc</div>
         <div class="td">Monthly payment estimate</div>
@@ -1982,16 +1982,16 @@
         <div class="td">3% · 5% · 10% · 20%</div>
         <div class="ta">›</div>
       </a>
-      <a href="#calc" class="tc">
+      <a href="/blog/how-to-use-mortgage-calculator" class="tc">
         <div class="ti">🔄</div>
-        <div class="tn">Refinance Calc</div>
-        <div class="td">Break-even &amp; savings</div>
+        <div class="tn">Prepayment Savings</div>
+        <div class="td">Principal payoff impact</div>
         <div class="ta">›</div>
       </a>
-      <a href="#calc" class="tc tl">
-        <div class="ti">🏎️</div>
-        <div class="tn">Auto Loan</div>
-        <div class="td">Vehicle financing</div>
+      <a href="/blog/how-to-use-mortgage-calculator" class="tc tl">
+        <div class="ti">⚡</div>
+        <div class="tn">Extra Payments</div>
+        <div class="td">Shorten mortgage term</div>
         <div class="ta">›</div>
       </a>
     </div>
@@ -2015,28 +2015,28 @@
         <div class="bge bge-b">No PMI</div>
         <div class="ta">›</div>
       </a>
-      <a href="#calc" class="tc grn">
+      <a href="#calculator" class="tc grn">
         <div class="ti">🌾</div>
-        <div class="tn">USDA Loan</div>
-        <div class="td">Rural 0% down payment</div>
+        <div class="tn">USDA 0% Down</div>
+        <div class="td">Rural guaranteed financing</div>
         <div class="ta">›</div>
       </a>
-      <a href="#calc" class="tc">
+      <a href="#calculator" class="tc">
         <div class="ti">🏢</div>
-        <div class="tn">Jumbo Loan</div>
-        <div class="td">&gt;$766,550 conforming</div>
+        <div class="tn">Jumbo Mortgage</div>
+        <div class="td">&gt;$766,550 conforming limit</div>
         <div class="ta">›</div>
       </a>
-      <a href="#calc" class="tc rd">
+      <a href="/blog/how-to-use-mortgage-calculator" class="tc rd">
         <div class="ti">🏗️</div>
-        <div class="tn">Construction Loan</div>
-        <div class="td">Build new home</div>
+        <div class="tn">Term Comparison</div>
+        <div class="td">15-year vs 30-year savings</div>
         <div class="ta">›</div>
       </a>
-      <a href="#calc" class="tc">
+      <a href="#calculator" class="tc">
         <div class="ti">🔁</div>
-        <div class="tn">ARM Calculator</div>
-        <div class="td">5/1 · 7/1 · 10/1 ARM</div>
+        <div class="tn">ARM Rates</div>
+        <div class="td">5/1 · 7/1 · 10/1 adjustable</div>
         <div class="ta">›</div>
       </a>
     </div>
@@ -2046,7 +2046,7 @@
       <h2>Insurance &amp; Tax</h2>
     </div>
     <div class="g2">
-      <a href="/blog/usa-mortgage-calculator" class="tc">
+      <a href="/blog/usa-piti-calculator" class="tc">
         <div class="ti">🛡️</div>
         <div class="tn">PMI Calculator</div>
         <div class="td">Private mortgage insurance</div>
@@ -2060,21 +2060,21 @@
         <div class="ta">›</div>
       </a>
       <a href="/blog/usa-piti-calculator" class="tc">
-        <div class="ti">🌊</div>
-        <div class="tn">Flood Insurance</div>
-        <div class="td">NFIP · FEMA flood zones</div>
-        <div class="ta">›</div>
-      </a>
-      <a href="/blog/usa-piti-calculator" class="tc sl">
         <div class="ti">🏛️</div>
         <div class="tn">Property Tax Calc</div>
         <div class="td">By state &amp; county rate</div>
         <div class="ta">›</div>
       </a>
+      <a href="/blog/usa-affordability-calculator" class="tc sl">
+        <div class="ti">🎯</div>
+        <div class="tn">Borrowing Power</div>
+        <div class="td">Max loan pre-approval</div>
+        <div class="ta">›</div>
+      </a>
       <a href="/blog/how-to-use-mortgage-calculator" class="tc">
         <div class="ti">📋</div>
         <div class="tn">Closing Costs</div>
-        <div class="td">2–5% estimate by state</div>
+        <div class="td">2–5% purchase settlement</div>
         <div class="ta">›</div>
       </a>
       <a href="/blog/usa-dti-calculator" class="tc vt">
@@ -2095,106 +2095,106 @@
         <div class="tb-title">Property Tax by State</div>
         <div class="tb-sub">NJ 2.23% · IL 2.08% · TX 1.60% · CA 0.76% · HI 0.29%</div>
       </div>
-      <a href="#calc" class="tb-btn">All States</a>
+      <a href="#calculator" class="tb-btn">Select State</a>
     </div>
     <div class="g3">
-      <a href="#calc" class="tc">
+      <a href="#calculator" class="tc state-btn" data-tax="0.76" data-state="California">
         <div class="ti">🌴</div>
         <div class="tn">California</div>
         <div class="td">Prop 13 · 0.76%</div>
         <div class="ta">›</div>
       </a>
-      <a href="#calc" class="tc nv">
+      <a href="#calculator" class="tc nv state-btn" data-tax="1.60" data-state="Texas">
         <div class="ti">🤠</div>
         <div class="tn">Texas</div>
         <div class="td">No income tax · 1.60%</div>
         <div class="ta">›</div>
       </a>
-      <a href="#calc" class="tc">
+      <a href="#calculator" class="tc state-btn" data-tax="1.72" data-state="New York">
         <div class="ti">🌇</div>
         <div class="tn">New York</div>
         <div class="td">STAR program · 1.72%</div>
         <div class="ta">›</div>
       </a>
-      <a href="#calc" class="tc rd">
+      <a href="#calculator" class="tc rd state-btn" data-tax="0.83" data-state="Florida">
         <div class="ti">🌞</div>
         <div class="tn">Florida</div>
         <div class="td">Homestead · 0.83%</div>
         <div class="ta">›</div>
       </a>
-      <a href="#calc" class="tc">
+      <a href="#calculator" class="tc state-btn" data-tax="2.08" data-state="Illinois">
         <div class="ti">🌆</div>
         <div class="tn">Illinois</div>
         <div class="td">High rate · 2.08%</div>
         <div class="ta">›</div>
       </a>
-      <a href="#calc" class="tc gd">
-        <div class="ti">🍊</div>
-        <div class="tn">All States</div>
-        <div class="td">50 state calculator</div>
+      <a href="#calculator" class="tc gd state-btn" data-tax="2.23" data-state="New Jersey">
+        <div class="ti">🌲</div>
+        <div class="tn">New Jersey</div>
+        <div class="td">Highest avg · 2.23%</div>
         <div class="ta">›</div>
       </a>
     </div>
 
     <!-- Personal Finance -->
     <div id="personal" class="section-header">
-      <h2>Personal Finance</h2>
+      <h2>Personal Finance &amp; Affordability</h2>
     </div>
     <div class="g2">
       <a href="/blog/usa-affordability-calculator" class="tc nv">
         <div class="ti">💳</div>
         <div class="tn">Credit Score Impact</div>
-        <div class="td">FICO · score to rate</div>
+        <div class="td">FICO · score to rate tier</div>
         <div class="bge bge-b">620–850</div>
         <div class="ta">›</div>
       </a>
-      <a href="#calc" class="tc">
-        <div class="ti">🏦</div>
-        <div class="tn">HELOC Calculator</div>
-        <div class="td">Home equity line</div>
+      <a href="/blog/usa-dti-calculator" class="tc">
+        <div class="ti">📊</div>
+        <div class="tn">Debt-to-Income Rules</div>
+        <div class="td">28/36 underwriting ceilings</div>
         <div class="ta">›</div>
       </a>
-      <a href="#calc" class="tc">
-        <div class="ti">💵</div>
-        <div class="tn">Home Equity Loan</div>
-        <div class="td">Lump sum borrowing</div>
+      <a href="/blog/usa-down-payment-calculator" class="tc">
+        <div class="ti">🔑</div>
+        <div class="tn">Down Payment Analysis</div>
+        <div class="td">3% vs 5% vs 20% down</div>
         <div class="ta">›</div>
       </a>
-      <a href="#calc" class="tc tl">
+      <a href="/blog/usa-amortization-calculator" class="tc tl">
         <div class="ti">📉</div>
-        <div class="tn">Debt Payoff Planner</div>
-        <div class="td">Avalanche vs Snowball</div>
+        <div class="tn">Principal Acceleration</div>
+        <div class="td">Early payoff strategies</div>
         <div class="ta">›</div>
       </a>
       <a href="/blog/usa-dti-calculator" class="tc">
         <div class="ti">🎓</div>
         <div class="tn">Student Loan DTI</div>
-        <div class="td">Impact on mortgage</div>
+        <div class="td">Impact on mortgage pre-approval</div>
         <div class="ta">›</div>
       </a>
       <a href="/blog/usa-piti-calculator" class="tc rd">
         <div class="ti">🧾</div>
-        <div class="tn">Tax Deduction Calc</div>
-        <div class="td">Mortgage interest deduction</div>
+        <div class="tn">PITI Escrow Breakdown</div>
+        <div class="td">Taxes, insurance &amp; PMI</div>
         <div class="ta">›</div>
       </a>
-      <a href="#calc" class="tc">
+      <a href="/blog/how-to-use-mortgage-calculator" class="tc">
         <div class="ti">📦</div>
-        <div class="tn">Moving Cost Calc</div>
-        <div class="td">Budget your relocation</div>
+        <div class="tn">Closing Costs Guide</div>
+        <div class="td">Budget your settlement fees</div>
         <div class="ta">›</div>
       </a>
       <a href="/blog/usa-affordability-calculator" class="tc vt">
         <div class="ti">🤝</div>
         <div class="tn">Rent vs Buy</div>
-        <div class="td">True cost comparison</div>
+        <div class="td">Long-term cost comparison</div>
         <div class="ta">›</div>
       </a>
     </div>
 
     <!-- Investment -->
     <div id="investment" class="section-header">
-      <h2>Real Estate Investment</h2>
+      <h2>Real Estate Investment &amp; Valuation</h2>
     </div>
     <div class="g2">
       <a href="/blog/nz-rental-yield-calculator" class="tc grn">
@@ -2203,22 +2203,22 @@
         <div class="td">Cap rate &amp; cash flow</div>
         <div class="ta">›</div>
       </a>
-      <a href="#calc" class="tc">
+      <a href="/blog/how-to-use-mortgage-calculator" class="tc">
         <div class="ti">📊</div>
-        <div class="tn">Cash-on-Cash Return</div>
-        <div class="td">Investment analysis</div>
+        <div class="tn">Mortgage Mathematics</div>
+        <div class="td">Compound interest mechanics</div>
         <div class="ta">›</div>
       </a>
-      <a href="#calc" class="tc sl">
-        <div class="ti">🔨</div>
-        <div class="tn">Fix &amp; Flip Calc</div>
-        <div class="td">ARV · rehab · profit</div>
+      <a href="/blog/usa-amortization-calculator" class="tc sl">
+        <div class="ti">📈</div>
+        <div class="tn">Equity Accumulation</div>
+        <div class="td">Balance amortization curve</div>
         <div class="ta">›</div>
       </a>
-      <a href="#calc" class="tc">
-        <div class="ti">🏙️</div>
-        <div class="tn">1031 Exchange</div>
-        <div class="td">Tax-deferred swap</div>
+      <a href="/data-sources" class="tc">
+        <div class="ti">🏛️</div>
+        <div class="tn">Official Data Directory</div>
+        <div class="td">Fed, BoE, BoC, RBI, RBA</div>
         <div class="ta">›</div>
       </a>
     </div>
@@ -2532,7 +2532,7 @@
     </div>
     <div style="margin-top: 10px;">🇺🇸 USA Financial Tools &nbsp;·&nbsp; USD · FRED · Fed Rate · All 50 States</div>
     <div style="margin-top: 4px; font-size: 10px; color: rgba(255,255,255,0.4);">© <span id="footer-year">2026</span>
-      USA Mortgage Tools. All rates shown are indicative.</div>
+      MortgagePro Global by REO Technologies. All rights reserved.</div>
   </footer>
 
   <!-- Toast alert -->
@@ -2926,6 +2926,31 @@
     // Dynamic current footer year
     const footerYear = document.getElementById('footer-year');
     if (footerYear) footerYear.textContent = new Date().getFullYear();
+
+    // State benchmark quick-select
+    document.querySelectorAll('.state-btn').forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        const taxVal = this.getAttribute('data-tax');
+        const stateName = this.getAttribute('data-state');
+        if (taxVal) {
+          const taxInput = document.getElementById('us-tax');
+          const advPanel = document.getElementById('escrow-panel');
+          const toggleBtn = document.getElementById('btn-toggle-adv');
+          if (taxInput) taxInput.value = taxVal;
+          if (advPanel && !advPanel.classList.contains('open')) {
+            advPanel.classList.add('open');
+            if (toggleBtn) toggleBtn.textContent = '⚙️ Hide Advanced';
+          }
+          executeCalculation();
+          triggerToast(`📍 Applied ${stateName} benchmark property tax: ${taxVal}%`);
+        }
+      });
+    });
+
+    // Run initial calculation & chart render on DOM load
+    window.addEventListener('DOMContentLoaded', function () {
+      executeCalculation();
+    });
 
     // Resize chart dynamically
     let rtimer;
