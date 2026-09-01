@@ -1,0 +1,54 @@
+# MortgagePro Global - Full Context & Documentation
+
+> Complete developer, agent, and user reference documentation for MortgagePro Global (https://mortgageproglobal.com), an international financial calculation platform built by REO Technologies.
+
+## Overview
+MortgagePro Global is designed to provide high-precision, client-side financial calculations across seven major global mortgage markets. The platform prioritizes mathematical accuracy, adherence to statutory compounding and stress-testing regulations, radical user privacy (zero server-side calculation telemetry), and accessible responsive design.
+
+## Core Calculators & Algorithms
+
+### 1. USA Mortgage Calculator (`/usa-mortgage-calculator`)
+- **Standard Compounding:** Monthly compounding with standard French amortization: `M = P * [r(1 + r)^n] / [(1 + r)^n - 1]`.
+- **PITI Elements:** Principal, Interest, Annual Property Taxes divided by 12, Homeowners Insurance (HO-3/HO-6) divided by 12, and Private Mortgage Insurance (PMI) for conventional loans where LTV > 80%.
+- **Loan Types Supported:** 30-Year Fixed, 15-Year Fixed, 5/1 ARM, FHA Loans (with Upfront and Annual MIP), VA Loans (with Funding Fee options), and Jumbo Mortgages exceeding FHFA conforming loan limits.
+
+### 2. Canada Mortgage Calculator (`/canada-mortgage-calculator`)
+- **Semi-Annual Compounding:** Under the federal *Bank Act*, Canadian fixed mortgages compound semi-annually, not in advance. Monthly effective rate: `r = (1 + i/2)^(2/12) - 1`.
+- **OSFI Guideline B-20 Stress Test:** Borrowers must qualify at the greater of the contractual mortgage interest rate + 2.00% or the statutory minimum floor of 5.25%.
+- **Underwriting Caps:** GDS (Gross Debt Service) must not exceed 39%; TDS (Total Debt Service) must not exceed 44% under FCAC guidelines.
+- **CMHC Premium Tiers:** High-ratio mortgages (down payment 5% to 19.99%) require default insurance:
+  - 90.01% - 95.00% LTV: 4.00%
+  - 85.01% - 90.00% LTV: 3.10%
+  - 80.01% - 85.00% LTV: 2.80%
+  - 20%+ Down Payment: No insurance required (uninsured).
+- **Caps & Schemes:** Homes valued at $1,000,000+ require 20% down. Home Buyers' Plan (HBP) allows eligible first-time buyers to withdraw up to $60,000 tax-free from their RRSP.
+
+### 3. UK Mortgage Calculator (`/uk-mortgage-calculator`)
+- **Stamp Duty Land Tax (SDLT):** Implements current England & Northern Ireland progressive tax bands, including First-Time Buyer relief thresholds.
+- **Repayment Modes:** Capital repayment and interest-only options.
+- **Regulatory Framework:** Financial Conduct Authority (FCA) mortgage conduct of business (MCOB) disclosure conventions and Bank of England base rate tracking.
+
+### 4. Australia Mortgage Calculator (`/australia-mortgage-calculator`)
+- **Repayment Frequencies:** Monthly, fortnightly, and weekly repayments.
+- **Offset Accounts:** Daily balance deduction algorithm modeling accelerated equity accumulation.
+- **Serviceability Buffers:** Calibrated against APRA Prudential Standard APS 220 with a 3.00% interest rate buffer above the loan product rate.
+- **Lenders Mortgage Insurance (LMI):** Estimated for LTV > 80% with state stamp duty concessions.
+
+### 5. New Zealand Mortgage Calculator (`/new-zealand-mortgage-calculator`)
+- **LVR Restrictions:** Aligned with Reserve Bank of New Zealand (RBNZ) macroprudential policy settings.
+- **DTI Framework:** Captures debt-to-income caps for owner-occupiers and residential property investors.
+- **Deposit Tools:** KiwiSaver first-home withdrawal and government grant integration.
+
+### 6. India Home Loan EMI Calculator (`/india-home-loan-emi-calculator`)
+- **Reducing Balance Formula:** Calculates Equated Monthly Installments: `EMI = P * r * (1 + r)^n / [(1 + r)^n - 1]`.
+- **Prepayment Modeling:** Demonstrates reduction in loan tenure versus monthly EMI savings upon lump-sum prepayments.
+
+### 7. Europe Mortgage Calculator (`/europe-mortgage-calculator`)
+- **Eurozone Standards:** Fixed, Euribor-variable, and mixed rate structures.
+- **Regional Ancillary Costs:** Notary fees, registry fees, and property transfer taxes across France, Germany, Spain, and Italy.
+
+## Governance, Authorship & E-E-A-T
+- **Author & Engineering Lead:** Abdul Raheem, Lead Systems Engineer at REO Technologies.
+- **Headquarters:** REO Technologies, Kerala, India.
+- **Support & Operations:** support@mortgageproglobal.com with a 24–48 business hour SLA.
+- **Policies:** Complete Editorial Policy (`/editorial-policy`), Corrections Policy (`/corrections-policy`), Data Sources Directory (`/data-sources`), Privacy Policy (`/privacy-policy`), and Cookie Policy (`/cookie-policy`).

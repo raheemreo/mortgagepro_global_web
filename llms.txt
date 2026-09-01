@@ -1,0 +1,36 @@
+# MortgagePro Global
+
+> Free, transparent, and mathematically rigorous mortgage calculators and home financing tools across 7 major countries: USA, Canada, UK, Australia, New Zealand, India, and Europe. Built and maintained by REO Technologies.
+
+MortgagePro Global (https://mortgageproglobal.com) provides deterministic, client-side financial estimation engines, statutory loan amortization schedules, and educational guides for home buyers, refinancers, and mortgage borrowers. All computations run locally on the user's device for privacy.
+
+## Country-Specific Mortgage Calculators
+
+- [USA Mortgage Calculator](https://mortgageproglobal.com/usa-mortgage-calculator): 30-year and 15-year fixed-rate mortgages, 5/1 ARM, FHA loans, VA loans, USDA financing, PMI calculation thresholds, county property tax, and homeowners insurance (full PITI breakdown).
+- [Canada Mortgage Calculator](https://mortgageproglobal.com/canada-mortgage-calculator): Statutory Canadian semi-annual compounding (Bank Act formula `r = (1 + i/2)^(2/12) - 1`), CMHC default insurance tiered premiums (2.80%–4.00%), OSFI Guideline B-20 stress testing (5.25% floor or contract rate + 2.00%), GDS (39%) and TDS (44%) underwriting ratio limits, and Home Buyers' Plan ($60,000 RRSP limit).
+- [UK Mortgage Calculator](https://mortgageproglobal.com/uk-mortgage-calculator): Repayment and interest-only mortgages, progressive Stamp Duty Land Tax (SDLT) slab calculation with First-Time Buyer Relief, Loan-to-Value (LTV) ratios, remortgaging, Buy-to-Let ICR assessments, and Bank of England base rate tracking.
+- [Australia Mortgage Calculator](https://mortgageproglobal.com/australia-mortgage-calculator): Standard Australian monthly/fortnightly/weekly loan repayments, daily balance offset accounts, Lenders Mortgage Insurance (LMI) scale, state stamp duty concessions, and APRA 3.00% serviceability stress buffers.
+- [New Zealand Mortgage Calculator](https://mortgageproglobal.com/new-zealand-mortgage-calculator): Table mortgages, revolving credit, RBNZ Loan-to-Value (LVR) restrictions, Reserve Bank Debt-to-Income (DTI) framework, and KiwiSaver first-home deposit builder.
+- [India Home Loan EMI Calculator](https://mortgageproglobal.com/india-home-loan-emi-calculator): Monthly reducing-balance Equated Monthly Installment (EMI) calculations, prepayment impact analysis, and total interest versus principal amortization schedules.
+- [Europe Mortgage Calculator](https://mortgageproglobal.com/europe-mortgage-calculator): Eurozone fixed-rate and variable mortgages, Euribor benchmark indices, and notary and transfer tax estimates across France, Germany, Spain, and Italy.
+
+## Educational Resources & Technical Documentation
+
+- [Mortgage Frequently Asked Questions](https://mortgageproglobal.com/mortgage-faq): Over 50 detailed technical and consumer answers covering amortization, refinancing, down payments, debt ratios, and government mortgage programs.
+- [Mortgage Guides & Insights](https://mortgageproglobal.com/blog/): 44+ in-depth educational articles and specialized sub-calculators (DTI ratios, LTV, stamp duty, CMHC insurance, prepayment planners).
+- [Official Data Sources Directory](https://mortgageproglobal.com/data-sources): Verified directory linking directly to central banks (Federal Reserve, Bank of England, Bank of Canada, Reserve Bank of Australia, Reserve Bank of New Zealand, Reserve Bank of India, European Central Bank) and statutory regulatory bodies.
+
+## E-E-A-T & Corporate Governance
+
+- [About Us](https://mortgageproglobal.com/about): Lead Systems Engineer Abdul Raheem profile, REO Technologies engineering standards, mathematical methodology, and transparency protocols.
+- [Contact Support](https://mortgageproglobal.com/contact): Support desk (support@mortgageproglobal.com), corporate headquarters, and 24–48 business hour response SLA.
+- [Editorial Policy](https://mortgageproglobal.com/editorial-policy): Algorithmic validation principles, source citation standards, and monthly financial data auditing rules.
+- [Corrections Policy](https://mortgageproglobal.com/corrections-policy): Transparent workflow for reporting mathematical discrepancies, SLA for review, and public correction log.
+
+## Legal, Compliance & Privacy
+
+- [Privacy Policy](https://mortgageproglobal.com/privacy-policy): GDPR, CCPA, and international data minimization practices; zero tracking of calculation inputs or personal mortgage details.
+- [Cookie Policy](https://mortgageproglobal.com/cookie-policy): Comprehensive cookie inventory, Google Consent Mode v2 integration, and opt-out mechanisms.
+- [Terms and Conditions](https://mortgageproglobal.com/terms-and-conditions): Terms of service, intellectual property ownership, and acceptable use guidelines.
+- [Financial Disclaimer](https://mortgageproglobal.com/disclaimer): Explicit statutory disclaimer stating MortgagePro Global is an educational calculation platform and not a licensed mortgage lender, broker, or financial advisor.
+- [Data Deletion Policy](https://mortgageproglobal.com/data-deletion-policy): User guidance on purging client-side local storage preferences.
