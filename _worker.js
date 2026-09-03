@@ -49,7 +49,44 @@ Sitemap: https://mortgageproglobal.com/sitemap.xml
       });
     }
 
-    // 3. Edge API Endpoint: /api/rates
+    // 3. Direct Edge Handler: /ads.txt (Guaranteed 200 OK, Google AdSense verification, full CORS)
+    if (pathname === "/ads.txt") {
+      if (request.method === "OPTIONS") {
+        return new Response(null, {
+          status: 204,
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET, HEAD, OPTIONS",
+            "Access-Control-Max-Age": "86400",
+          },
+        });
+      }
+      const adsContent = "google.com, pub-1114757923146718, DIRECT, f08c47fec0942fa0\n";
+      return new Response(request.method === "HEAD" ? null : adsContent, {
+        status: 200,
+        headers: {
+          "Content-Type": "text/plain; charset=utf-8",
+          "Cache-Control": "public, max-age=86400, s-maxage=86400",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET, HEAD, OPTIONS",
+          "X-Content-Type-Options": "nosniff",
+        },
+      });
+    }
+
+    // 4. Preflight handling for /sitemap.xml
+    if (pathname === "/sitemap.xml" && request.method === "OPTIONS") {
+      return new Response(null, {
+        status: 204,
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET, HEAD, OPTIONS",
+          "Access-Control-Max-Age": "86400",
+        },
+      });
+    }
+
+    // 5. Edge API Endpoint: /api/rates
     if (pathname === "/api/rates") {
       if (request.method === "OPTIONS") {
         return new Response(null, {
