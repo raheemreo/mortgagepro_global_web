@@ -2208,11 +2208,27 @@ section {
   }
 
   .country-card,
-  .tool-card {
+  .tool-card,
+  .content-article {
     background: var(--bg-card) !important;
     color: var(--text-primary) !important;
     border: 1px solid var(--border-color) !important;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .content-article strong {
+    color: var(--text-primary) !important;
+  }
+
+  .content-article code {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #f87171 !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+  }
+
+  .article-meta {
+    color: var(--text-secondary) !important;
+    border-bottom-color: var(--border-color) !important;
   }
 
   .country-card:hover,

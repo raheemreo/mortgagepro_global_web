@@ -68,24 +68,48 @@
     :root {
       --page-primary: #0B1D3A;
       --page-accent: #B91C1C;
-      --page-bg: #F0F4FF;
-      --text-main: #374151;
-      --text-muted: #6B7280;
+      --page-bg: #F8FAFC;
+      --text-main: #334155;
+      --text-muted: #64748B;
+      --card-bg: #FFFFFF;
+      --card-border: #E2E8F0;
+      --highlight-bg: #F0FDF4;
+      --highlight-border: #BBF7D0;
+      --highlight-text: #14532D;
+      --highlight-title: #166534;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --page-primary: #F8FAFC;
+        --page-accent: #38BDF8;
+        --page-bg: #081326;
+        --text-main: #CBD5E1;
+        --text-muted: #94A3B8;
+        --card-bg: #12203A;
+        --card-border: rgba(255, 255, 255, 0.1);
+        --highlight-bg: rgba(22, 101, 52, 0.2);
+        --highlight-border: rgba(34, 197, 94, 0.3);
+        --highlight-text: #DCFCE7;
+        --highlight-title: #86EFAC;
+      }
     }
 
     body {
       margin: 0;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       background: var(--page-bg);
-      color: var(--page-primary);
+      color: var(--text-main);
       font-size: 16px;
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
+      transition: background 0.2s, color 0.2s;
     }
 
     .skip-link {
       position: absolute;
       left: -9999px;
+      top: 0;
     }
 
     .skip-link:focus {
@@ -104,23 +128,55 @@
       min-height: 60px;
     }
 
+    .content-article {
+      background: var(--card-bg);
+      color: var(--text-main);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    @media (max-width: 640px) {
+      .content-article {
+        padding: 24px 18px;
+        border-radius: 12px;
+      }
+    }
+
+    .article-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .article-meta strong {
+      color: var(--page-primary);
+    }
+
     .content-article h1,
     .content-article h2,
     .content-article h3 {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      color: var(--page-primary);
+      color: var(--page-primary) !important;
       font-weight: 700;
     }
 
     .content-article h2 {
       font-size: clamp(1.3rem, 2.2vw, 1.6rem);
       margin: 2rem 0 1rem;
-      border-bottom: 2px solid #E5E7EB;
+      border-bottom: 1px solid var(--card-border);
       padding-bottom: 8px;
     }
 
     .content-article p {
-      color: var(--text-main);
+      color: var(--text-main) !important;
       margin-bottom: 1.25rem;
       font-size: 1rem;
       line-height: 1.75;
@@ -133,12 +189,16 @@
 
     .content-article li {
       margin-bottom: 0.6rem;
-      color: var(--text-main);
+      color: var(--text-main) !important;
+    }
+
+    .content-article strong {
+      color: var(--page-primary) !important;
     }
 
     .highlight-card {
-      background: #F0FDF4;
-      border: 1px solid #BBF7D0;
+      background: var(--highlight-bg);
+      border: 1px solid var(--highlight-border);
       border-radius: 12px;
       padding: 24px;
       margin: 24px 0;
@@ -146,18 +206,17 @@
 
     .highlight-card h3 {
       margin-top: 0;
-      color: #166534;
+      color: var(--highlight-title) !important;
       font-size: 1.15rem;
     }
 
     .highlight-card p {
-      color: #14532D;
+      color: var(--highlight-text) !important;
       margin-bottom: 0;
     }
   </style>
 
-  <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  <link rel="stylesheet" href="/css/style.css">
 
   <!-- Structured Data: BreadcrumbList -->
   <script type="application/ld+json">
@@ -174,7 +233,7 @@
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Affiliate Disclosure",
+        "name": "Commercial Independence & Affiliate Disclosure",
         "item": "https://mortgageproglobal.com/affiliate-disclosure"
       }
     ]
@@ -187,12 +246,12 @@
   <div data-component="header"></div>
 
   <!-- Hero -->
-  <section class="page-hero" aria-label="Page introduction" style="background: linear-gradient(135deg, #0B1D3A 0%, #1B3F72 100%); color: #fff; padding: 48px 0;">
+  <section class="page-hero" aria-label="Page introduction" style="background: linear-gradient(135deg, #050E1D 0%, #0B1D3A 50%, #162E5A 100%); color: #fff; padding: 56px 0;">
     <div class="container" style="max-width: 1100px; margin: 0 auto; padding: 0 20px;">
       <nav aria-label="Breadcrumb" style="font-size: 0.85rem; margin-bottom: 12px; color: rgba(255,255,255,0.7);">
         <a href="/" style="color: rgba(255,255,255,0.7); text-decoration: none;">Home</a> / <span style="color: #fff;">Affiliate Disclosure</span>
       </nav>
-      <h1 style="font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 800; margin: 0 0 12px; letter-spacing: -0.02em;">Commercial Independence &amp; Affiliate Disclosure</h1>
+      <h1 style="font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 800; margin: 0 0 12px; letter-spacing: -0.02em; color: #fff;">Commercial Independence &amp; Affiliate Disclosure</h1>
       <p style="font-size: 1.1rem; color: rgba(255,255,255,0.85); margin: 0; max-width: 750px; line-height: 1.6;">
         Transparency statement regarding commercial affiliations, lender placement fees, and our mathematical objectivity.
       </p>
@@ -202,9 +261,9 @@
   <main id="main-content" style="padding: 48px 0;">
     <div class="container" style="max-width: 1100px; margin: 0 auto; padding: 0 20px;">
       <div class="page-layout" style="display: grid; grid-template-columns: 1fr; gap: 40px;">
-        <article class="content-article" style="background: #fff; padding: 40px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);">
+        <article class="content-article">
           
-          <div class="article-meta" style="font-size: 0.85rem; color: #6B7280; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E7EB; display: flex; gap: 16px; flex-wrap: wrap;">
+          <div class="article-meta">
             <span><strong>Policy Date:</strong> September 2026</span>
             <span><strong>Governing Entity:</strong> REO Technologies</span>
             <span><strong>Status:</strong> Strict Zero-Affiliate Architecture</span>
