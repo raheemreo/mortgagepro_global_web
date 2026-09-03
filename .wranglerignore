@@ -1,4 +1,6 @@
-# Cloudflare Workers / Pages Static Assets Ignore
+wrangler.toml
+.assetsignore
+.wranglerignore
 _worker.js
 docs/
 Designs/
@@ -7,9 +9,6 @@ scripts/
 *.md
 .git/
 .gitignore
-.assetsignore
-.wranglerignore
-wrangler.toml
 .gemini/
 .agents/
 skills-lock.json
