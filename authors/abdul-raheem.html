@@ -36,6 +36,10 @@
       font-weight: 400;
       font-display: swap;
       src: url('/fonts/inter-400.woff2') format('woff2');
+      ascent-override: 90%;
+      descent-override: 22%;
+      line-gap-override: 0%;
+      size-adjust: 100%;
     }
     @font-face {
       font-family: 'Inter';
@@ -43,6 +47,10 @@
       font-weight: 600;
       font-display: swap;
       src: url('/fonts/inter-600.woff2') format('woff2');
+      ascent-override: 90%;
+      descent-override: 22%;
+      line-gap-override: 0%;
+      size-adjust: 100%;
     }
     @font-face {
       font-family: 'Inter';
@@ -50,6 +58,10 @@
       font-weight: 700;
       font-display: swap;
       src: url('/fonts/inter-700.woff2') format('woff2');
+      ascent-override: 90%;
+      descent-override: 22%;
+      line-gap-override: 0%;
+      size-adjust: 100%;
     }
     @font-face {
       font-family: 'Inter';
@@ -57,31 +69,73 @@
       font-weight: 800;
       font-display: swap;
       src: url('/fonts/inter-800.woff2') format('woff2');
+      ascent-override: 90%;
+      descent-override: 22%;
+      line-gap-override: 0%;
+      size-adjust: 100%;
     }
 
     :root {
       --page-primary: #0B1D3A;
       --page-accent: #B91C1C;
-      --page-bg: #F0F4FF;
-      --text-main: #374151;
-      --text-muted: #6B7280;
+      --page-bg: #F8FAFC;
+      --text-main: #334155;
+      --text-muted: #64748B;
       --card-bg: #FFFFFF;
-      --card-border: #E5E7EB;
+      --card-border: #E2E8F0;
+      --badge-bg: #EEF2FF;
+      --badge-color: #1E40AF;
+      --badge-border: #C7D2FE;
+      --btn-bg: #F1F5F9;
+      --btn-border: #CBD5E1;
+      --btn-text: #0B1D3A;
+      --pill-bg: #F8FAFC;
+      --pill-border: #E2E8F0;
+      --pill-title: #0B1D3A;
+      --pill-meta: #64748B;
+      --trans-bg: #F8FAFC;
+      --trans-border: #CBD5E1;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --page-primary: #F8FAFC;
+        --page-accent: #38BDF8;
+        --page-bg: #081326;
+        --text-main: #CBD5E1;
+        --text-muted: #94A3B8;
+        --card-bg: #12203A;
+        --card-border: rgba(255, 255, 255, 0.1);
+        --badge-bg: rgba(30, 64, 175, 0.25);
+        --badge-color: #93C5FD;
+        --badge-border: rgba(96, 165, 250, 0.35);
+        --btn-bg: #1E293B;
+        --btn-border: rgba(255, 255, 255, 0.15);
+        --btn-text: #F8FAFC;
+        --pill-bg: #1E293B;
+        --pill-border: rgba(255, 255, 255, 0.12);
+        --pill-title: #FFFFFF;
+        --pill-meta: #94A3B8;
+        --trans-bg: #12203A;
+        --trans-border: rgba(255, 255, 255, 0.12);
+      }
     }
 
     body {
       margin: 0;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       background: var(--page-bg);
-      color: var(--page-primary);
+      color: var(--text-main);
       font-size: 16px;
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
+      transition: background 0.2s, color 0.2s;
     }
 
     .skip-link {
       position: absolute;
       left: -9999px;
+      top: 0;
     }
 
     .skip-link:focus {
@@ -101,7 +155,7 @@
     }
 
     .author-hero {
-      background: linear-gradient(135deg, #0B1D3A 0%, #1B3F72 100%);
+      background: linear-gradient(135deg, #050E1D 0%, #0B1D3A 50%, #162E5A 100%);
       color: #fff;
       padding: 56px 0;
     }
@@ -121,6 +175,7 @@
       margin-top: -40px;
       position: relative;
       z-index: 10;
+      transition: background 0.2s, border-color 0.2s;
     }
 
     .profile-header {
@@ -145,18 +200,19 @@
       letter-spacing: -0.03em;
       box-shadow: 0 4px 12px rgba(11, 29, 58, 0.2);
       flex-shrink: 0;
+      border: 2px solid rgba(255, 255, 255, 0.2);
     }
 
     .profile-meta h1 {
       margin: 0 0 6px;
       font-size: clamp(1.6rem, 3vw, 2.2rem);
       font-weight: 800;
-      color: var(--page-primary);
+      color: var(--page-primary) !important;
     }
 
     .profile-title {
       font-size: 1.05rem;
-      color: var(--page-accent);
+      color: var(--page-accent) !important;
       font-weight: 700;
       margin-bottom: 8px;
     }
@@ -165,13 +221,13 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: #EEF2FF;
-      color: #1E40AF;
+      background: var(--badge-bg);
+      color: var(--badge-color) !important;
       font-size: 0.85rem;
       font-weight: 600;
       padding: 4px 12px;
       border-radius: 9999px;
-      border: 1px solid #C7D2FE;
+      border: 1px solid var(--badge-border);
     }
 
     .profile-links {
@@ -182,19 +238,22 @@
     }
 
     .profile-links a {
-      color: var(--page-primary);
+      color: var(--btn-text) !important;
       text-decoration: none;
       font-size: 0.88rem;
       font-weight: 600;
-      background: #F3F4F6;
-      border: 1px solid #E5E7EB;
-      padding: 6px 14px;
+      background: var(--btn-bg);
+      border: 1px solid var(--btn-border);
+      padding: 8px 16px;
       border-radius: 8px;
       transition: all 0.2s;
     }
 
     .profile-links a:hover {
-      background: #E5E7EB;
+      background: var(--page-accent);
+      color: #FFFFFF !important;
+      border-color: var(--page-accent);
+      transform: translateY(-1px);
     }
 
     .section-box {
@@ -204,21 +263,38 @@
       padding: 32px;
       margin-bottom: 28px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+      transition: background 0.2s, border-color 0.2s;
     }
 
     .section-box h2 {
       margin-top: 0;
       font-size: 1.35rem;
-      color: var(--page-primary);
-      border-bottom: 2px solid #E5E7EB;
+      color: var(--page-primary) !important;
+      border-bottom: 2px solid var(--card-border);
       padding-bottom: 10px;
       margin-bottom: 18px;
+    }
+
+    .section-box h3 {
+      color: var(--page-primary) !important;
+    }
+
+    .section-box p {
+      color: var(--text-main) !important;
+    }
+
+    .section-box li {
+      color: var(--text-main) !important;
+    }
+
+    .section-box strong {
+      color: var(--page-primary) !important;
     }
 
     .grid-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      gap: 24px;
     }
 
     @media (max-width: 768px) {
@@ -227,6 +303,9 @@
       }
       .profile-header {
         flex-direction: column;
+      }
+      .profile-card {
+        padding: 24px 18px;
       }
     }
 
@@ -238,38 +317,52 @@
     }
 
     .article-pill {
-      background: #F9FAFB;
-      border: 1px solid #E5E7EB;
+      background: var(--pill-bg) !important;
+      border: 1px solid var(--pill-border) !important;
       border-radius: 10px;
-      padding: 14px 18px;
+      padding: 16px 20px;
       text-decoration: none;
-      color: var(--page-primary);
       transition: all 0.2s ease;
       display: flex;
       flex-direction: column;
     }
 
     .article-pill:hover {
-      border-color: var(--page-accent);
+      border-color: var(--page-accent) !important;
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
     .article-pill-title {
       font-weight: 700;
       font-size: 0.95rem;
       margin-bottom: 4px;
-      color: var(--page-primary);
+      color: var(--pill-title) !important;
     }
 
     .article-pill-meta {
-      font-size: 0.8rem;
-      color: var(--text-muted);
+      font-size: 0.82rem;
+      color: var(--pill-meta) !important;
+    }
+
+    /* Transparency & Governance Section */
+    .transparency-box {
+      background: var(--trans-bg) !important;
+      border-color: var(--trans-border) !important;
+    }
+
+    .transparency-box a {
+      color: var(--page-accent) !important;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .transparency-box a:hover {
+      filter: brightness(1.2);
     }
   </style>
 
-  <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  <link rel="stylesheet" href="/css/style.css">
 
   <!-- Structured Data: Person Schema -->
   <script type="application/ld+json">
@@ -409,16 +502,16 @@
       </div>
 
       <!-- Editorial Standards Link -->
-      <div class="section-box" style="background: #F8FAFC; border-color: #CBD5E1;">
+      <div class="section-box transparency-box">
         <h3 style="margin-top: 0; color: var(--page-primary); font-size: 1.15rem;">Institutional Transparency &amp; Contact</h3>
         <p style="color: var(--text-main); font-size: 0.95rem; line-height: 1.65; margin-bottom: 12px;">
           For inquiries regarding computational methodologies, potential errata, or syndication permissions, please refer to our transparent governance documentation:
         </p>
         <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-          <a href="/editorial-policy" style="color: var(--page-accent); font-weight: 600; text-decoration: underline;">Editorial Policy →</a>
-          <a href="/corrections-policy" style="color: var(--page-accent); font-weight: 600; text-decoration: underline;">Corrections Policy →</a>
-          <a href="/data-sources" style="color: var(--page-accent); font-weight: 600; text-decoration: underline;">Data Sources Registry →</a>
-          <a href="/contact" style="color: var(--page-accent); font-weight: 600; text-decoration: underline;">Direct Inquiries →</a>
+          <a href="/editorial-policy">Editorial Policy →</a>
+          <a href="/corrections-policy">Corrections Policy →</a>
+          <a href="/data-sources">Data Sources Registry →</a>
+          <a href="/contact">Direct Inquiries →</a>
         </div>
       </div>
 
