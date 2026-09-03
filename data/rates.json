@@ -1,0 +1,248 @@
+{
+  "version": 2,
+  "generatedAt": "2026-09-03T21:42:26.906Z",
+  "rates": {
+    "usa": {
+      "fixed30": {
+        "rate": 6.71,
+        "formatted": "6.71%",
+        "unit": "%",
+        "instrument": "30-Year Fixed-Rate Mortgage",
+        "source": "Freddie Mac PMMS via FRED",
+        "sourceUrl": "https://fred.stlouisfed.org/series/MORTGAGE30US",
+        "effectiveDate": "2026-09-03",
+        "lastVerified": "2026-09-03",
+        "status": "live",
+        "isLive": true
+      },
+      "fixed15": {
+        "rate": 6.04,
+        "formatted": "6.04%",
+        "unit": "%",
+        "instrument": "15-Year Fixed-Rate Mortgage",
+        "source": "Freddie Mac PMMS via FRED",
+        "sourceUrl": "https://fred.stlouisfed.org/series/MORTGAGE15US",
+        "effectiveDate": "2026-09-03",
+        "lastVerified": "2026-09-03",
+        "status": "live",
+        "isLive": true
+      },
+      "prime": {
+        "rate": 6.75,
+        "formatted": "6.75%",
+        "unit": "%",
+        "instrument": "Bank Prime Loan Rate",
+        "source": "Federal Reserve Board via FRED",
+        "sourceUrl": "https://fred.stlouisfed.org/series/DPRIME",
+        "effectiveDate": "2026-09-02",
+        "lastVerified": "2026-09-03",
+        "status": "live",
+        "isLive": true
+      },
+      "fedEffective": {
+        "rate": 3.63,
+        "formatted": "3.63%",
+        "unit": "%",
+        "instrument": "Effective Federal Funds Rate",
+        "source": "Federal Reserve Bank of New York via FRED",
+        "sourceUrl": "https://fred.stlouisfed.org/series/FEDFUNDS",
+        "effectiveDate": "2026-08-01",
+        "lastVerified": "2026-09-03",
+        "status": "live",
+        "isLive": true
+      },
+      "fed": {
+        "rate": "3.50% – 3.75%",
+        "formatted": "3.50% – 3.75%",
+        "unit": "%",
+        "instrument": "FOMC Federal Funds Target Range",
+        "source": "Federal Reserve Board (FOMC)",
+        "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+        "effectiveDate": "2026-07-30",
+        "lastVerified": "2026-09-04",
+        "status": "reference",
+        "isLive": false
+      }
+    },
+    "canada": {
+      "boc": {
+        "rate": 2.25,
+        "formatted": "2.25%",
+        "unit": "%",
+        "instrument": "Policy Interest Rate (Overnight)",
+        "source": "Bank of Canada Valet API",
+        "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V39079/json",
+        "effectiveDate": "2026-09-01",
+        "lastVerified": "2026-09-03",
+        "status": "live",
+        "isLive": true
+      },
+      "fixed5": {
+        "rate": 6.09,
+        "formatted": "6.09%",
+        "unit": "%",
+        "instrument": "5-Year Conventional Mortgage Benchmark",
+        "source": "Bank of Canada Valet API",
+        "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V80691335/json",
+        "effectiveDate": "2026-08-26",
+        "lastVerified": "2026-09-03",
+        "status": "live",
+        "isLive": true
+      },
+      "prime": {
+        "rate": 4.45,
+        "formatted": "4.45%",
+        "unit": "%",
+        "instrument": "Chartered Bank Prime Business Rate",
+        "source": "Bank of Canada Valet API",
+        "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V80691311/json",
+        "effectiveDate": "2026-08-26",
+        "lastVerified": "2026-09-03",
+        "status": "live",
+        "isLive": true
+      }
+    },
+    "uk": {
+      "boe": {
+        "rate": 3.75,
+        "formatted": "3.75%",
+        "unit": "%",
+        "instrument": "Official Bank Rate",
+        "source": "Bank of England MPC",
+        "sourceUrl": "https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate",
+        "effectiveDate": "2025-12-18",
+        "lastVerified": "2026-09-04",
+        "status": "reference",
+        "isLive": false
+      },
+      "fixed2": {
+        "rate": 4.75,
+        "formatted": "4.75%",
+        "unit": "%",
+        "instrument": "2-Year Fixed-Rate Mortgage Benchmark (75% LTV)",
+        "source": "Bank of England IADB",
+        "sourceUrl": "https://www.bankofengland.co.uk/boeapps/database/",
+        "effectiveDate": "2026-08-01",
+        "lastVerified": "2026-09-04",
+        "status": "reference",
+        "isLive": false
+      },
+      "fixed5": {
+        "rate": 4.35,
+        "formatted": "4.35%",
+        "unit": "%",
+        "instrument": "5-Year Fixed-Rate Mortgage Benchmark (75% LTV)",
+        "source": "Bank of England IADB",
+        "sourceUrl": "https://www.bankofengland.co.uk/boeapps/database/",
+        "effectiveDate": "2026-08-01",
+        "lastVerified": "2026-09-04",
+        "status": "reference",
+        "isLive": false
+      }
+    },
+    "australia": {
+      "rba": {
+        "rate": 4.35,
+        "formatted": "4.35%",
+        "unit": "%",
+        "instrument": "Cash Rate Target",
+        "source": "Reserve Bank of Australia",
+        "sourceUrl": "https://www.rba.gov.au/statistics/cash-rate/",
+        "effectiveDate": "2026-08-05",
+        "lastVerified": "2026-09-04",
+        "status": "reference",
+        "isLive": false
+      },
+      "variable": {
+        "rate": 6.09,
+        "formatted": "6.09%",
+        "unit": "%",
+        "instrument": "Standard Variable Mortgage Rate Average",
+        "source": "Reserve Bank of Australia Statistical Table F5",
+        "sourceUrl": "https://www.rba.gov.au/statistics/tables/",
+        "effectiveDate": "2026-08-01",
+        "lastVerified": "2026-09-04",
+        "status": "reference",
+        "isLive": false
+      }
+    },
+    "newzealand": {
+      "ocr": {
+        "rate": 2.75,
+        "formatted": "2.75%",
+        "unit": "%",
+        "instrument": "Official Cash Rate (OCR)",
+        "source": "Reserve Bank of New Zealand",
+        "sourceUrl": "https://www.rbnz.govt.nz/monetary-policy/official-cash-rate-decisions",
+        "effectiveDate": "2026-09-02",
+        "lastVerified": "2026-09-04",
+        "status": "reference",
+        "isLive": false
+      },
+      "floating": {
+        "rate": 8.64,
+        "formatted": "8.64%",
+        "unit": "%",
+        "instrument": "Floating First Home Loan Average",
+        "source": "Reserve Bank of New Zealand Table B2",
+        "sourceUrl": "https://www.rbnz.govt.nz/statistics/tables",
+        "effectiveDate": "2026-08-01",
+        "lastVerified": "2026-09-04",
+        "status": "reference",
+        "isLive": false
+      }
+    },
+    "india": {
+      "repo": {
+        "rate": 5.25,
+        "formatted": "5.25%",
+        "unit": "%",
+        "instrument": "Policy Repo Rate",
+        "source": "Reserve Bank of India (MPC)",
+        "sourceUrl": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx",
+        "effectiveDate": "2026-08-05",
+        "lastVerified": "2026-09-04",
+        "status": "reference",
+        "isLive": false
+      },
+      "homeLoanSbi": {
+        "rate": 8.5,
+        "formatted": "8.50%",
+        "unit": "%",
+        "instrument": "SBI EBLR Linked Retail Home Loan",
+        "source": "State Bank of India (SBI)",
+        "sourceUrl": "https://sbi.co.in",
+        "effectiveDate": "2026-08-15",
+        "lastVerified": "2026-09-04",
+        "status": "reference",
+        "isLive": false
+      }
+    },
+    "europe": {
+      "ecb": {
+        "rate": 2.4,
+        "formatted": "2.40%",
+        "unit": "%",
+        "instrument": "Main Refinancing Operations (MRO) Rate",
+        "source": "European Central Bank",
+        "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+        "effectiveDate": "2026-06-17",
+        "lastVerified": "2026-09-04",
+        "status": "reference",
+        "isLive": false
+      },
+      "euribor12m": {
+        "rate": 3.17,
+        "formatted": "3.17%",
+        "unit": "%",
+        "instrument": "12-Month Euribor Benchmark",
+        "source": "European Money Markets Institute (EMMI)",
+        "sourceUrl": "https://www.emmi-benchmarks.eu/benchmarks/euribor/",
+        "effectiveDate": "2026-09-01",
+        "lastVerified": "2026-09-04",
+        "status": "reference",
+        "isLive": false
+      }
+    }
+  }
+}

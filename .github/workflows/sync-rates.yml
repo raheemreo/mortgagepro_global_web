@@ -1,0 +1,41 @@
+name: Sync Financial Rates Snapshot
+
+on:
+  schedule:
+    # Run daily at 06:00 UTC and Thursdays at 20:00 UTC (post Freddie Mac release)
+    - cron: '0 6 * * *'
+    - cron: '0 20 * * 4'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-rates:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run Rates Synchronization Script
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: |
+          node scripts/fetch_live_rates.js
+
+      - name: Commit and Push if Changed
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/rates.json
+          if git diff --staged --quiet; then
+            echo "No rate changes observed. Snapshot is up to date."
+          else
+            git commit -m "chore(rates): automated live financial rate snapshot update [skip ci]"
+            git push origin main
+          fi

@@ -2774,3 +2774,67 @@ section {
     border-left-width: 8px;
   }
 }
+
+/* ─── LIVE & REFERENCE RATE STATUS INDICATORS ──────────────────────────────── */
+.rate-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.rate-badge-live {
+  background: #DCFCE7;
+  color: #15803D;
+  border: 1px solid #BBF7D0;
+}
+
+.rate-badge-ref {
+  background: #F1F5F9;
+  color: #475569;
+  border: 1px solid #E2E8F0;
+}
+
+.rate-badge-stale {
+  background: #FEF3C7;
+  color: #B45309;
+  border: 1px solid #FDE68A;
+}
+
+.rate-pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #16A34A;
+  box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7);
+  animation: ratePulse 2s infinite;
+}
+
+@keyframes ratePulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(22, 163, 74, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(22, 163, 74, 0);
+  }
+}
+
+.rate-updated-anim {
+  animation: rateFlash 1.2s ease-out;
+}
+
+@keyframes rateFlash {
+  0% { background-color: rgba(34, 197, 94, 0.25); }
+  100% { background-color: transparent; }
+}
