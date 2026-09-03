@@ -31,7 +31,7 @@
 
     body {
       margin: 0;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
       background: var(--page-bg);
       color: var(--page-primary);
       font-size: 16px;
@@ -140,6 +140,156 @@
       margin-top: 32px;
     }
 
+    /* Interactive Calculator Widgets */
+    .interactive-calc-widget {
+      background: #FFFFFF;
+      border: 1.5px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 24px;
+      margin: 28px 0;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+      font-family: inherit;
+      transition: background 0.3s ease, border-color 0.3s ease;
+    }
+
+    .interactive-calc-widget .widget-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .interactive-calc-widget .widget-title {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #0B1D3A;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .interactive-calc-widget .widget-desc {
+      font-size: 0.95rem;
+      color: #475569;
+      margin-top: 0;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .interactive-calc-widget .widget-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .interactive-calc-widget .widget-field {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .interactive-calc-widget label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #1E293B;
+      margin-bottom: 6px;
+    }
+
+    .interactive-calc-widget input,
+    .interactive-calc-widget select {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1.5px solid #CBD5E1;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: inherit;
+      background-color: #F8FAFC;
+      color: #0F172A;
+      box-sizing: border-box;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    }
+
+    .interactive-calc-widget input:focus,
+    .interactive-calc-widget select:focus {
+      border-color: #0284C7;
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2);
+    }
+
+    .interactive-calc-widget select {
+      cursor: pointer;
+    }
+
+    .interactive-calc-widget select option {
+      background-color: #FFFFFF;
+      color: #0F172A;
+    }
+
+    .interactive-calc-widget .widget-results {
+      background: linear-gradient(135deg, #0B1D3A, #1B3F72);
+      border-radius: 12px;
+      padding: 20px;
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(11, 29, 58, 0.2);
+    }
+
+    .interactive-calc-widget .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      text-align: center;
+    }
+
+    .interactive-calc-widget .result-cell {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 14px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .interactive-calc-widget .result-cell.highlight {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+    }
+
+    .interactive-calc-widget .result-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #94A3B8;
+      margin-bottom: 4px;
+    }
+
+    .interactive-calc-widget .result-value {
+      font-size: 1.85rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .interactive-calc-widget .result-sub {
+      font-size: 0.8rem;
+      color: #CBD5E1;
+      margin-top: 4px;
+    }
+
+    .interactive-calc-widget .widget-footer-meta {
+      margin-top: 14px;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 10px;
+    }
+
+    .interactive-calc-widget .widget-footer-meta strong {
+      color: #FFFFFF;
+    }
+
     /* Dark Mode Overrides */
     @media (prefers-color-scheme: dark) {
       .article-container {
@@ -171,6 +321,47 @@
       thead {
         background: #1E293B;
         border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .interactive-calc-widget {
+        background: #111D33 !important;
+        border-color: rgba(255, 255, 255, 0.12) !important;
+        box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.45) !important;
+      }
+
+      .interactive-calc-widget .widget-title {
+        color: #F8FAFC !important;
+      }
+
+      .interactive-calc-widget .widget-desc {
+        color: #94A3B8 !important;
+      }
+
+      .interactive-calc-widget label {
+        color: #E2E8F0 !important;
+      }
+
+      .interactive-calc-widget input,
+      .interactive-calc-widget select {
+        background-color: #081326 !important;
+        color: #F8FAFC !important;
+        border-color: #334155 !important;
+      }
+
+      .interactive-calc-widget input:focus,
+      .interactive-calc-widget select:focus {
+        border-color: #38BDF8 !important;
+        box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25) !important;
+      }
+
+      .interactive-calc-widget select option {
+        background-color: #081326 !important;
+        color: #F8FAFC !important;
+      }
+
+      .interactive-calc-widget .widget-results {
+        background: linear-gradient(135deg, #071326, #0E203F) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
       }
     }
   </style>
@@ -216,6 +407,8 @@
     ]
   }
   </script>
+<link as="font" crossorigin="" href="/fonts/inter-400.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="/fonts/inter-600.woff2" rel="preload" type="font/woff2"/>
 <link as="font" crossorigin="" href="/fonts/inter-800.woff2" rel="preload" type="font/woff2"/>
 <link as="style" href="/css/style.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="/css/style.css" rel="stylesheet"/></noscript>
@@ -353,57 +546,57 @@
 <p>Most affordability calculators start with income and spit out a home price. That's the easy part. The part that actually moves the number for a large share of US buyers — anyone under 20% down — is PMI, an extra monthly cost that doesn't show up until you dig into the loan terms.</p>
 
 <!-- Interactive Affordability Calculator Widget -->
-<section class="interactive-calc-widget" aria-label="Interactive Home Affordability Calculator" style="background:#FFFFFF;border:2px solid #E2E8F0;border-radius:16px;padding:24px;margin:28px 0;box-shadow:0 10px 25px -5px rgba(0,0,0,0.06);">
-  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px;">
-    <h3 style="margin:0;font-size:1.25rem;color:#0B1D3A;display:flex;align-items:center;gap:8px;">
+<section class="interactive-calc-widget" aria-label="Interactive Home Affordability Calculator">
+  <div class="widget-header">
+    <h3 class="widget-title">
       <span>💰</span> Interactive Home Affordability Calculator
     </h3>
     <span class="rate-badge rate-badge-live"><span class="rate-pulse-dot"></span> 28/36 DTI Qualification Engine</span>
   </div>
-  <p style="font-size:0.95rem;color:#64748B;margin-top:0;margin-bottom:20px;">
+  <p class="widget-desc">
     Calculate your maximum safe purchase price and borrowing capacity based on gross household income, recurring debts, and savings.
   </p>
 
-  <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:16px;margin-bottom:20px;">
-    <div>
-      <label for="afford-income" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Annual Gross Income ($)</label>
-      <input type="number" id="afford-income" value="110000" min="20000" step="5000" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;font-weight:600;box-sizing:border-box;">
+  <div class="widget-grid">
+    <div class="widget-field">
+      <label for="afford-income">Annual Gross Income ($)</label>
+      <input type="number" id="afford-income" value="110000" min="20000" step="5000">
     </div>
-    <div>
-      <label for="afford-debts" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Monthly Recurring Debts ($)</label>
-      <input type="number" id="afford-debts" value="500" min="0" step="50" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;box-sizing:border-box;">
+    <div class="widget-field">
+      <label for="afford-debts">Monthly Recurring Debts ($)</label>
+      <input type="number" id="afford-debts" value="500" min="0" step="50">
     </div>
-    <div>
-      <label for="afford-down" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Available Down Payment ($)</label>
-      <input type="number" id="afford-down" value="60000" min="0" step="5000" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;font-weight:600;box-sizing:border-box;">
+    <div class="widget-field">
+      <label for="afford-down">Available Down Payment ($)</label>
+      <input type="number" id="afford-down" value="60000" min="0" step="5000">
     </div>
-    <div>
-      <label for="afford-rate" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Mortgage Interest Rate (%)</label>
-      <input type="number" id="afford-rate" value="6.71" min="1.0" max="18.0" step="0.01" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;box-sizing:border-box;">
+    <div class="widget-field">
+      <label for="afford-rate">Mortgage Interest Rate (%)</label>
+      <input type="number" id="afford-rate" value="6.71" min="1.0" max="18.0" step="0.01">
     </div>
   </div>
 
   <!-- Live Results -->
-  <div style="background:linear-gradient(135deg, #0B1D3A, #1B3F72);border-radius:12px;padding:20px;color:#FFFFFF;">
-    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:16px;text-align:center;">
-      <div style="background:rgba(255,255,255,0.08);padding:14px;border-radius:8px;">
-        <div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:#94A3B8;margin-bottom:4px;">Max Housing Budget</div>
-        <div id="afford-max-price" style="font-size:1.85rem;font-weight:800;color:#4ADE80;">$424,000</div>
-        <div style="font-size:0.8rem;color:#CBD5E1;margin-top:4px;">Affordability Ceiling</div>
+  <div class="widget-results">
+    <div class="results-grid">
+      <div class="result-cell highlight">
+        <div class="result-label" style="color:#86EFAC;">Max Housing Budget</div>
+        <div id="afford-max-price" class="result-value" style="color:#4ADE80;font-size:1.9rem;">$424,000</div>
+        <div class="result-sub">Affordability Ceiling</div>
       </div>
-      <div style="background:rgba(255,255,255,0.08);padding:14px;border-radius:8px;">
-        <div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:#94A3B8;margin-bottom:4px;">Max Monthly Payment</div>
-        <div id="afford-max-payment" style="font-size:1.85rem;font-weight:800;color:#38BDF8;">$2,567</div>
-        <div style="font-size:0.8rem;color:#CBD5E1;margin-top:4px;">28% Front-End Limit</div>
+      <div class="result-cell">
+        <div class="result-label">Max Monthly Payment</div>
+        <div id="afford-max-payment" class="result-value" style="color:#38BDF8;">$2,567</div>
+        <div class="result-sub">28% Front-End Limit</div>
       </div>
-      <div style="background:rgba(255,255,255,0.08);padding:14px;border-radius:8px;">
-        <div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:#94A3B8;margin-bottom:4px;">Loan Borrowing Limit</div>
-        <div id="afford-max-loan" style="font-size:1.85rem;font-weight:800;color:#FBBF24;">$364,000</div>
-        <div style="font-size:0.8rem;color:#CBD5E1;margin-top:4px;">Financed Principal</div>
+      <div class="result-cell">
+        <div class="result-label">Loan Borrowing Limit</div>
+        <div id="afford-max-loan" class="result-value" style="color:#FBBF24;">$364,000</div>
+        <div class="result-sub">Financed Principal</div>
       </div>
     </div>
-    <div style="margin-top:14px;font-size:0.82rem;color:rgba(255,255,255,0.75);text-align:center;border-top:1px solid rgba(255,255,255,0.12);padding-top:10px;">
-      Monthly Gross Income: <strong id="afford-mo-income" style="color:#FFF;">$9,167</strong> · 36% Total Debt Ceiling: <strong id="afford-max-36" style="color:#FFF;">$3,300/mo</strong>
+    <div class="widget-footer-meta">
+      Monthly Gross Income: <strong id="afford-mo-income">$9,167</strong> · 36% Total Debt Ceiling: <strong id="afford-max-36">$3,300/mo</strong>
     </div>
   </div>
 </section>

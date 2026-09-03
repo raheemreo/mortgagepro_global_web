@@ -38,7 +38,7 @@
 
     body {
       margin: 0;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
       background: var(--page-bg);
       color: var(--page-primary);
       font-size: 16px;
@@ -147,6 +147,156 @@
       margin-top: 32px;
     }
 
+    /* Interactive Calculator Widgets */
+    .interactive-calc-widget {
+      background: #FFFFFF;
+      border: 1.5px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 24px;
+      margin: 28px 0;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+      font-family: inherit;
+      transition: background 0.3s ease, border-color 0.3s ease;
+    }
+
+    .interactive-calc-widget .widget-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .interactive-calc-widget .widget-title {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #0B1D3A;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .interactive-calc-widget .widget-desc {
+      font-size: 0.95rem;
+      color: #475569;
+      margin-top: 0;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .interactive-calc-widget .widget-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .interactive-calc-widget .widget-field {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .interactive-calc-widget label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #1E293B;
+      margin-bottom: 6px;
+    }
+
+    .interactive-calc-widget input,
+    .interactive-calc-widget select {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1.5px solid #CBD5E1;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: inherit;
+      background-color: #F8FAFC;
+      color: #0F172A;
+      box-sizing: border-box;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    }
+
+    .interactive-calc-widget input:focus,
+    .interactive-calc-widget select:focus {
+      border-color: #0284C7;
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2);
+    }
+
+    .interactive-calc-widget select {
+      cursor: pointer;
+    }
+
+    .interactive-calc-widget select option {
+      background-color: #FFFFFF;
+      color: #0F172A;
+    }
+
+    .interactive-calc-widget .widget-results {
+      background: linear-gradient(135deg, #0B1D3A, #1B3F72);
+      border-radius: 12px;
+      padding: 20px;
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(11, 29, 58, 0.2);
+    }
+
+    .interactive-calc-widget .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      text-align: center;
+    }
+
+    .interactive-calc-widget .result-cell {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 14px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .interactive-calc-widget .result-cell.highlight {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+    }
+
+    .interactive-calc-widget .result-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #94A3B8;
+      margin-bottom: 4px;
+    }
+
+    .interactive-calc-widget .result-value {
+      font-size: 1.85rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .interactive-calc-widget .result-sub {
+      font-size: 0.8rem;
+      color: #CBD5E1;
+      margin-top: 4px;
+    }
+
+    .interactive-calc-widget .widget-footer-meta {
+      margin-top: 14px;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 10px;
+    }
+
+    .interactive-calc-widget .widget-footer-meta strong {
+      color: #FFFFFF;
+    }
+
     /* Dark Mode Overrides */
     @media (prefers-color-scheme: dark) {
       .article-container {
@@ -178,6 +328,47 @@
       thead {
         background: #1E293B;
         border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .interactive-calc-widget {
+        background: #111D33 !important;
+        border-color: rgba(255, 255, 255, 0.12) !important;
+        box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.45) !important;
+      }
+
+      .interactive-calc-widget .widget-title {
+        color: #F8FAFC !important;
+      }
+
+      .interactive-calc-widget .widget-desc {
+        color: #94A3B8 !important;
+      }
+
+      .interactive-calc-widget label {
+        color: #E2E8F0 !important;
+      }
+
+      .interactive-calc-widget input,
+      .interactive-calc-widget select {
+        background-color: #081326 !important;
+        color: #F8FAFC !important;
+        border-color: #334155 !important;
+      }
+
+      .interactive-calc-widget input:focus,
+      .interactive-calc-widget select:focus {
+        border-color: #38BDF8 !important;
+        box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25) !important;
+      }
+
+      .interactive-calc-widget select option {
+        background-color: #081326 !important;
+        color: #F8FAFC !important;
+      }
+
+      .interactive-calc-widget .widget-results {
+        background: linear-gradient(135deg, #071326, #0E203F) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
       }
     }
   </style>
@@ -226,7 +417,9 @@
   }
   </script>
 
-<link rel="preload" href="/fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
 
@@ -372,29 +565,29 @@
               <p>On that $371,250 loan at 6.47% from our Mortgage Calculator example, the very first monthly payment of $2,340 breaks down like this: about $2,000 goes to interest, and only $340 actually reduces the loan balance. That ratio doesn't stay fixed — it shifts every single month for 30 years — and understanding the curve changes how people think about extra payments, refinancing timing, and how much equity they're really building.</p>
 
               <!-- Interactive Amortization Calculator Widget -->
-              <section class="interactive-calc-widget" aria-label="Interactive Amortization Calculator" style="background:#FFFFFF;border:2px solid #E2E8F0;border-radius:16px;padding:24px;margin:28px 0;box-shadow:0 10px 25px -5px rgba(0,0,0,0.06);">
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px;">
-                  <h3 style="margin:0;font-size:1.25rem;color:#0B1D3A;display:flex;align-items:center;gap:8px;">
+              <section class="interactive-calc-widget" aria-label="Interactive Amortization Calculator">
+                <div class="widget-header">
+                  <h3 class="widget-title">
                     <span>📈</span> Interactive Amortization Schedule Calculator
                   </h3>
                   <span class="rate-badge rate-badge-live"><span class="rate-pulse-dot"></span> Compound Curve Engine</span>
                 </div>
-                <p style="font-size:0.95rem;color:#64748B;margin-top:0;margin-bottom:20px;">
+                <p class="widget-desc">
                   Model how your monthly mortgage payment shifts from interest-heavy to principal-heavy across every year of your loan term.
                 </p>
 
-                <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:16px;margin-bottom:20px;">
-                  <div>
-                    <label for="amort-loan" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Loan Amount ($)</label>
-                    <input type="number" id="amort-loan" value="371250" min="25000" step="5000" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;font-weight:600;box-sizing:border-box;">
+                <div class="widget-grid">
+                  <div class="widget-field">
+                    <label for="amort-loan">Loan Amount ($)</label>
+                    <input type="number" id="amort-loan" value="371250" min="25000" step="5000">
                   </div>
-                  <div>
-                    <label for="amort-rate" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Interest Rate (%)</label>
-                    <input type="number" id="amort-rate" value="6.71" min="1.0" max="18.0" step="0.01" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;font-weight:600;box-sizing:border-box;">
+                  <div class="widget-field">
+                    <label for="amort-rate">Interest Rate (%)</label>
+                    <input type="number" id="amort-rate" value="6.71" min="1.0" max="18.0" step="0.01">
                   </div>
-                  <div>
-                    <label for="amort-years" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Loan Term</label>
-                    <select id="amort-years" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;background:#FFF;box-sizing:border-box;">
+                  <div class="widget-field">
+                    <label for="amort-years">Loan Term</label>
+                    <select id="amort-years">
                       <option value="30" selected>30 Years (360 Months)</option>
                       <option value="20">20 Years (240 Months)</option>
                       <option value="15">15 Years (180 Months)</option>
@@ -404,26 +597,26 @@
                 </div>
 
                 <!-- Live Results -->
-                <div style="background:linear-gradient(135deg, #0B1D3A, #1B3F72);border-radius:12px;padding:20px;color:#FFFFFF;">
-                  <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:16px;text-align:center;">
-                    <div style="background:rgba(255,255,255,0.08);padding:14px;border-radius:8px;">
-                      <div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:#94A3B8;margin-bottom:4px;">Monthly Payment (P&amp;I)</div>
-                      <div id="amort-pi-val" style="font-size:1.85rem;font-weight:800;color:#38BDF8;">$2,398</div>
-                      <div style="font-size:0.8rem;color:#CBD5E1;margin-top:4px;">Fixed Monthly Amount</div>
+                <div class="widget-results">
+                  <div class="results-grid">
+                    <div class="result-cell">
+                      <div class="result-label">Monthly Payment (P&amp;I)</div>
+                      <div id="amort-pi-val" class="result-value" style="color:#38BDF8;">$2,398</div>
+                      <div class="result-sub">Fixed Monthly Amount</div>
                     </div>
-                    <div style="background:rgba(255,255,255,0.08);padding:14px;border-radius:8px;">
-                      <div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:#94A3B8;margin-bottom:4px;">Lifetime Interest</div>
-                      <div id="amort-interest-val" style="font-size:1.85rem;font-weight:800;color:#FBBF24;">$492,185</div>
-                      <div style="font-size:0.8rem;color:#CBD5E1;margin-top:4px;">Total Cost of Borrowing</div>
+                    <div class="result-cell">
+                      <div class="result-label">Lifetime Interest</div>
+                      <div id="amort-interest-val" class="result-value" style="color:#FBBF24;">$492,185</div>
+                      <div class="result-sub">Total Cost of Borrowing</div>
                     </div>
-                    <div style="background:rgba(255,255,255,0.12);padding:14px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);">
-                      <div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:#86EFAC;margin-bottom:4px;">Total Lifetime Cost</div>
-                      <div id="amort-total-cost" style="font-size:1.85rem;font-weight:800;color:#4ADE80;">$863,435</div>
-                      <div style="font-size:0.8rem;color:#FFFFFF;margin-top:4px;">Principal + All Interest</div>
+                    <div class="result-cell highlight">
+                      <div class="result-label" style="color:#86EFAC;">Total Lifetime Cost</div>
+                      <div id="amort-total-cost" class="result-value" style="color:#4ADE80;font-size:1.9rem;">$863,435</div>
+                      <div class="result-sub" style="color:#FFFFFF;">Principal + All Interest</div>
                     </div>
                   </div>
-                  <div style="margin-top:14px;font-size:0.82rem;color:rgba(255,255,255,0.75);text-align:center;border-top:1px solid rgba(255,255,255,0.12);padding-top:10px;">
-                    Month 1: <span id="amort-m1" style="color:#FFF;">$322 Principal / $2,076 Interest</span> · Year 15: <span id="amort-y15" style="color:#FFF;">$876 Principal / $1,522 Interest</span>
+                  <div class="widget-footer-meta">
+                    Month 1: <span id="amort-m1">$322 Principal / $2,076 Interest</span> · Year 15: <span id="amort-y15">$876 Principal / $1,522 Interest</span>
                   </div>
                 </div>
               </section>

@@ -149,6 +149,166 @@
       margin-top: 32px;
     }
 
+    /* Interactive Calculator Widgets */
+    .interactive-calc-widget {
+      background: #FFFFFF;
+      border: 1.5px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 24px;
+      margin: 28px 0;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+      font-family: inherit;
+      transition: background 0.3s ease, border-color 0.3s ease;
+    }
+
+    .interactive-calc-widget .widget-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .interactive-calc-widget .widget-title {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #0B1D3A;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .interactive-calc-widget .widget-desc {
+      font-size: 0.95rem;
+      color: #475569;
+      margin-top: 0;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .interactive-calc-widget .widget-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .interactive-calc-widget .widget-field {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .interactive-calc-widget label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #1E293B;
+      margin-bottom: 6px;
+    }
+
+    .interactive-calc-widget input,
+    .interactive-calc-widget select {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1.5px solid #CBD5E1;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: inherit;
+      background-color: #F8FAFC;
+      color: #0F172A;
+      box-sizing: border-box;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    }
+
+    .interactive-calc-widget input:focus,
+    .interactive-calc-widget select:focus {
+      border-color: #0284C7;
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2);
+    }
+
+    .interactive-calc-widget select {
+      cursor: pointer;
+    }
+
+    .interactive-calc-widget select option {
+      background-color: #FFFFFF;
+      color: #0F172A;
+    }
+
+    .interactive-calc-widget .widget-results {
+      background: linear-gradient(135deg, #0B1D3A, #1B3F72);
+      border-radius: 12px;
+      padding: 20px;
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(11, 29, 58, 0.2);
+    }
+
+    .interactive-calc-widget .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      text-align: center;
+    }
+
+    .interactive-calc-widget .result-cell {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 14px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .interactive-calc-widget .result-cell.highlight {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+    }
+
+    .interactive-calc-widget .result-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #94A3B8;
+      margin-bottom: 4px;
+    }
+
+    .interactive-calc-widget .result-value {
+      font-size: 1.85rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .interactive-calc-widget .result-sub {
+      font-size: 0.8rem;
+      color: #CBD5E1;
+      margin-top: 4px;
+    }
+
+    .interactive-calc-widget .widget-footer-meta {
+      margin-top: 14px;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 10px;
+    }
+
+    .interactive-calc-widget .widget-footer-meta strong {
+      color: #FFFFFF;
+    }
+
+    .interactive-calc-widget .widget-alert {
+      background: #FEF2F2;
+      border: 1px solid #FCA5A5;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+      font-size: 0.88rem;
+      color: #991B1B;
+    }
+
     /* Dark Mode Overrides */
     @media (prefers-color-scheme: dark) {
       .article-container {
@@ -180,6 +340,53 @@
 
       table {
         background-color: #121B18;
+      }
+
+      .interactive-calc-widget {
+        background: #111D33 !important;
+        border-color: rgba(255, 255, 255, 0.12) !important;
+        box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.45) !important;
+      }
+
+      .interactive-calc-widget .widget-title {
+        color: #F8FAFC !important;
+      }
+
+      .interactive-calc-widget .widget-desc {
+        color: #94A3B8 !important;
+      }
+
+      .interactive-calc-widget label {
+        color: #E2E8F0 !important;
+      }
+
+      .interactive-calc-widget input,
+      .interactive-calc-widget select {
+        background-color: #081326 !important;
+        color: #F8FAFC !important;
+        border-color: #334155 !important;
+      }
+
+      .interactive-calc-widget input:focus,
+      .interactive-calc-widget select:focus {
+        border-color: #38BDF8 !important;
+        box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25) !important;
+      }
+
+      .interactive-calc-widget select option {
+        background-color: #081326 !important;
+        color: #F8FAFC !important;
+      }
+
+      .interactive-calc-widget .widget-results {
+        background: linear-gradient(135deg, #071326, #0E203F) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      }
+
+      .interactive-calc-widget .widget-alert {
+        background: rgba(239, 68, 68, 0.15) !important;
+        border-color: rgba(239, 68, 68, 0.4) !important;
+        color: #FCA5A5 !important;
       }
     }
   </style>
@@ -225,6 +432,8 @@
     ]
   }
   </script>
+<link as="font" crossorigin="" href="/fonts/inter-400.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="/fonts/inter-600.woff2" rel="preload" type="font/woff2"/>
 <link as="font" crossorigin="" href="/fonts/inter-800.woff2" rel="preload" type="font/woff2"/>
 <link as="style" href="/css/style.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="/css/style.css" rel="stylesheet"/></noscript>
@@ -362,58 +571,58 @@
 <p>Put down less than 20% on a Canadian home and mortgage default insurance isn't optional — it's mandatory by law. What surprises a lot of first-time buyers is what the insurance actually protects: not the homeowner, but the lender, in case the borrower defaults. You pay the premium; the lender gets the coverage.</p>
 
 <!-- Interactive CMHC Insurance Calculator Widget -->
-<section class="interactive-calc-widget" aria-label="Interactive CMHC Calculator" style="background:#FFFFFF;border:2px solid #E2E8F0;border-radius:16px;padding:24px;margin:28px 0;box-shadow:0 10px 25px -5px rgba(0,0,0,0.06);">
-  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px;">
-    <h3 style="margin:0;font-size:1.25rem;color:#0B1D3A;display:flex;align-items:center;gap:8px;">
+<section class="interactive-calc-widget" aria-label="Interactive CMHC Calculator">
+  <div class="widget-header">
+    <h3 class="widget-title">
       <span>🍁</span> Interactive CMHC Insurance Calculator
     </h3>
     <span class="rate-badge rate-badge-live"><span class="rate-pulse-dot"></span> CA$1.5M Federal Cap Rules</span>
   </div>
-  <p style="font-size:0.95rem;color:#64748B;margin-top:0;margin-bottom:20px;">
+  <p class="widget-desc">
     Calculate your mandatory Canadian default insurance premium, minimum statutory deposit, and total mortgage balance capitalized with insurance.
   </p>
 
-  <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:16px;margin-bottom:20px;">
-    <div>
-      <label for="cmhc-price" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Purchase Price (CAD $)</label>
-      <input type="number" id="cmhc-price" value="700000" min="100000" max="2500000" step="10000" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;font-weight:600;box-sizing:border-box;">
+  <div class="widget-grid">
+    <div class="widget-field">
+      <label for="cmhc-price">Purchase Price (CAD $)</label>
+      <input type="number" id="cmhc-price" value="700000" min="100000" max="2500000" step="10000">
     </div>
-    <div>
-      <label for="cmhc-down" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Down Payment (CAD $)</label>
-      <input type="number" id="cmhc-down" value="70000" min="5000" step="5000" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;font-weight:600;box-sizing:border-box;">
+    <div class="widget-field">
+      <label for="cmhc-down">Down Payment (CAD $)</label>
+      <input type="number" id="cmhc-down" value="70000" min="5000" step="5000">
     </div>
-    <div>
-      <label for="cmhc-amort" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Amortization Schedule</label>
-      <select id="cmhc-amort" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;background:#FFF;box-sizing:border-box;">
+    <div class="widget-field">
+      <label for="cmhc-amort">Amortization Schedule</label>
+      <select id="cmhc-amort">
         <option value="25" selected>25-Year Standard Amortization</option>
         <option value="30">30-Year Insured (FTB / New Build)</option>
       </select>
     </div>
   </div>
 
-  <div id="cmhc-alert-box" style="display:none;background:#FEF2F2;border:1px solid #FCA5A5;border-radius:8px;padding:12px 16px;margin-bottom:16px;font-size:0.88rem;color:#991B1B;"></div>
+  <div id="cmhc-alert-box" class="widget-alert" style="display:none;"></div>
 
   <!-- Live Results -->
-  <div style="background:linear-gradient(135deg, #0B1D3A, #1B3F72);border-radius:12px;padding:20px;color:#FFFFFF;">
-    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:16px;text-align:center;">
-      <div style="background:rgba(255,255,255,0.08);padding:14px;border-radius:8px;">
-        <div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:#94A3B8;margin-bottom:4px;">CMHC Premium Rate</div>
-        <div id="cmhc-rate-val" style="font-size:1.75rem;font-weight:800;color:#38BDF8;">3.10%</div>
-        <div id="cmhc-ltv-val" style="font-size:0.8rem;color:#CBD5E1;margin-top:4px;">90.0% LTV Tier</div>
+  <div class="widget-results">
+    <div class="results-grid">
+      <div class="result-cell">
+        <div class="result-label">CMHC Premium Rate</div>
+        <div id="cmhc-rate-val" class="result-value" style="color:#38BDF8;">3.10%</div>
+        <div id="cmhc-ltv-val" class="result-sub">90.0% LTV Tier</div>
       </div>
-      <div style="background:rgba(255,255,255,0.08);padding:14px;border-radius:8px;">
-        <div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:#94A3B8;margin-bottom:4px;">Insurance Premium</div>
-        <div id="cmhc-prem-val" style="font-size:1.75rem;font-weight:800;color:#FBBF24;">$19,530</div>
-        <div style="font-size:0.8rem;color:#CBD5E1;margin-top:4px;">Added to Mortgage Loan</div>
+      <div class="result-cell">
+        <div class="result-label">Insurance Premium</div>
+        <div id="cmhc-prem-val" class="result-value" style="color:#FBBF24;">$19,530</div>
+        <div class="result-sub">Added to Mortgage Loan</div>
       </div>
-      <div style="background:rgba(255,255,255,0.12);padding:14px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);">
-        <div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:#86EFAC;margin-bottom:4px;">Total Financed Mortgage</div>
-        <div id="cmhc-total-val" style="font-size:1.9rem;font-weight:800;color:#4ADE80;">$649,530</div>
-        <div style="font-size:0.8rem;color:#FFFFFF;margin-top:4px;">Base + Capitalized Premium</div>
+      <div class="result-cell highlight">
+        <div class="result-label" style="color:#86EFAC;">Total Financed Mortgage</div>
+        <div id="cmhc-total-val" class="result-value" style="color:#4ADE80;font-size:1.9rem;">$649,530</div>
+        <div class="result-sub" style="color:#FFFFFF;">Base + Capitalized Premium</div>
       </div>
     </div>
-    <div style="margin-top:14px;font-size:0.82rem;color:rgba(255,255,255,0.75);text-align:center;border-top:1px solid rgba(255,255,255,0.12);padding-top:10px;">
-      Minimum Statutory Down Payment: <strong id="cmhc-min-down" style="color:#FFF;">$45,000</strong> · Base Loan Amount: <strong id="cmhc-base-loan" style="color:#FFF;">$630,000</strong>
+    <div class="widget-footer-meta">
+      Minimum Statutory Down Payment: <strong id="cmhc-min-down">$45,000</strong> · Base Loan Amount: <strong id="cmhc-base-loan">$630,000</strong>
     </div>
   </div>
 </section>
