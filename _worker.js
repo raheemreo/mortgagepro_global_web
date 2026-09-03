@@ -11,7 +11,45 @@ export default {
 
     const { pathname } = url;
 
-    // 2. Edge API Endpoint: /api/rates
+    // 2. Direct Edge Handler: /robots.txt (Guaranteed 200 OK, instant response, full CORS)
+    if (pathname === "/robots.txt") {
+      if (request.method === "OPTIONS") {
+        return new Response(null, {
+          status: 204,
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET, HEAD, OPTIONS",
+            "Access-Control-Max-Age": "86400",
+          },
+        });
+      }
+      const robotsContent = `User-agent: *
+Allow: /
+Disallow: /Designs/
+
+User-agent: Mediapartners-Google
+Allow: /
+Disallow: /Designs/
+
+User-agent: Googlebot
+Allow: /
+Disallow: /Designs/
+
+Sitemap: https://mortgageproglobal.com/sitemap.xml
+`;
+      return new Response(request.method === "HEAD" ? null : robotsContent, {
+        status: 200,
+        headers: {
+          "Content-Type": "text/plain; charset=utf-8",
+          "Cache-Control": "public, max-age=86400, s-maxage=86400",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET, HEAD, OPTIONS",
+          "X-Content-Type-Options": "nosniff",
+        },
+      });
+    }
+
+    // 3. Edge API Endpoint: /api/rates
     if (pathname === "/api/rates") {
       if (request.method === "OPTIONS") {
         return new Response(null, {
