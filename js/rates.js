@@ -16,7 +16,7 @@ const RATES = {
     note: "Source: Freddie Mac PMMS (August 27, 2026)"
   },
   canada: {
-    boc: "4.75%",
+    boc: "4.25%",
     fixed5: "4.99%",
     fixed3: "5.14%",
     variable: "5.95%",
@@ -55,7 +55,7 @@ const RATES = {
     note: "Source: Reserve Bank of India"
   },
   europe: {
-    ecb: "4.00%",
+    ecb: "3.65%",
     germany10yr: "3.85%",
     france20yr: "3.60%",
     spainVariable: "4.10%",
