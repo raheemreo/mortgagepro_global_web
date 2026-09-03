@@ -28,26 +28,102 @@
   <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
 <meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
 
-  <!-- Critical CSS -->
+  <!-- Preload Critical Fonts -->
+  <link rel="preload" href="/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Critical Typography & Semantic Theme System -->
   <style>
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('/fonts/inter-400.woff2') format('woff2');
+      ascent-override: 90%;
+      descent-override: 22%;
+      line-gap-override: 0%;
+      size-adjust: 100%;
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url('/fonts/inter-600.woff2') format('woff2');
+      ascent-override: 90%;
+      descent-override: 22%;
+      line-gap-override: 0%;
+      size-adjust: 100%;
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url('/fonts/inter-700.woff2') format('woff2');
+      ascent-override: 90%;
+      descent-override: 22%;
+      line-gap-override: 0%;
+      size-adjust: 100%;
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 800;
+      font-display: swap;
+      src: url('/fonts/inter-800.woff2') format('woff2');
+      ascent-override: 90%;
+      descent-override: 22%;
+      line-gap-override: 0%;
+      size-adjust: 100%;
+    }
+
     :root {
       --page-primary: #0B1D3A;
       --page-accent: #B91C1C;
-      --page-bg: #F0F4FF;
+      --page-bg: #F8FAFC;
+      --text-main: #334155;
+      --text-muted: #64748B;
+      --card-bg: #FFFFFF;
+      --card-border: #E2E8F0;
+      --input-bg: #FFFFFF;
+      --input-border: #CBD5E1;
+      --input-focus: #B91C1C;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --page-primary: #F8FAFC;
+        --page-accent: #38BDF8;
+        --page-bg: #081326;
+        --text-main: #CBD5E1;
+        --text-muted: #94A3B8;
+        --card-bg: #12203A;
+        --card-border: rgba(255, 255, 255, 0.1);
+        --input-bg: #0B172E;
+        --input-border: #334155;
+        --input-focus: #38BDF8;
+      }
     }
 
     body {
       margin: 0;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       background: var(--page-bg);
-      color: var(--page-primary);
+      color: var(--text-main);
       font-size: 16px;
-      line-height: 1.6;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      transition: background 0.2s, color 0.2s;
     }
 
     .skip-link {
       position: absolute;
       left: -9999px;
+      top: 0;
     }
 
     .skip-link:focus {
@@ -66,27 +142,161 @@
       min-height: 60px;
     }
 
-    .contact-card {
-      background: #fff;
-      padding: 32px;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    .content-article h1,
+    .content-article h2,
+    .content-article h3,
+    .content-article h4 {
+      color: var(--page-primary) !important;
+      font-weight: 700;
+      letter-spacing: -0.015em;
     }
 
+    .content-article p {
+      color: var(--text-main) !important;
+      line-height: 1.7;
+    }
+
+    .content-article li {
+      color: var(--text-main) !important;
+      line-height: 1.65;
+      margin-bottom: 0.4rem;
+    }
+
+    .content-article strong {
+      color: var(--page-primary) !important;
+    }
+
+    /* Contact Channel Cards */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin: 32px 0;
+    }
+
+    .contact-channel-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .contact-channel-card h2 {
+      font-size: 1.25rem;
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: var(--page-primary) !important;
+    }
+
+    .contact-channel-card p {
+      color: var(--text-main) !important;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .contact-channel-card a {
+      color: var(--page-accent) !important;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      font-weight: 500;
+    }
+
+    .contact-channel-card .response-time {
+      font-size: 0.85rem;
+      color: var(--text-muted) !important;
+      margin-top: 8px;
+      margin-bottom: 0;
+    }
+
+    /* Corporate Headquarters Card */
+    .corporate-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 18px 0 32px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .corporate-card p {
+      margin: 0 0 8px;
+      color: var(--text-main) !important;
+      line-height: 1.6;
+    }
+
+    .corporate-card strong {
+      color: var(--page-primary) !important;
+    }
+
+    .corporate-card a {
+      color: var(--page-accent) !important;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .corporate-card .sla-note {
+      color: var(--text-muted) !important;
+      font-size: 0.88rem;
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+
+    /* Contact Form Card */
+    .contact-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      margin-bottom: 32px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .contact-card h2 {
+      margin-top: 0;
+      color: var(--page-primary) !important;
+    }
+
+    .contact-card p {
+      color: var(--text-main) !important;
+    }
+
+    .form-group label {
+      color: var(--page-primary) !important;
+      font-weight: 600;
+      font-size: 0.92rem;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .form-group input,
     .form-group textarea {
       width: 100%;
-      padding: 11px 14px;
-      border: 2px solid #D1D5DB;
+      padding: 12px 14px;
+      background: var(--input-bg);
+      color: var(--text-main);
+      border: 1.5px solid var(--input-border);
       border-radius: 8px;
       font-size: 1rem;
       font-family: inherit;
-      min-height: 120px;
-      transition: border-color 0.15s;
+      box-sizing: border-box;
+      transition: border-color 0.15s, background 0.15s;
     }
 
+    .form-group textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .form-group input:focus,
     .form-group textarea:focus {
-      border-color: var(--page-accent);
+      border-color: var(--input-focus);
       outline: none;
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
     }
 
     .status-msg {
@@ -102,6 +312,13 @@
       background: #DEF7EC;
       color: #03543F;
       display: block;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .status-msg.success {
+        background: #065F46;
+        color: #DEF7EC;
+      }
     }
   </style>
 
@@ -131,9 +348,7 @@
   }
   </script>
 
-<link rel="preload" href="/fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  <link rel="stylesheet" href="/css/style.css">
 
   <meta name="google-adsense-account" content="ca-pub-1114757923146718">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1114757923146718" crossorigin="anonymous"></script>
@@ -158,14 +373,6 @@
 <script src="/js/components.js" defer></script>
   <script src="/js/rates.js" defer></script>
   <script src="/js/accessibility.js" defer></script>
-
-  <!-- Favicon, Apple Touch Icon & Web App Manifest -->
-
-  <!-- Favicon, Apple Touch Icon & Web App Manifest -->
-
-  <!-- Favicon, Apple Touch Icon & Web App Manifest -->
-
-  <!-- Favicon, Apple Touch Icon & Web App Manifest -->
 
   <!-- Favicon, Apple Touch Icon & Web App Manifest -->
   <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
@@ -371,11 +578,11 @@
             <p>Users from other countries are also welcome to contact us.</p>
 
             <h2>Corporate Headquarters &amp; Operations</h2>
-            <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 10px; padding: 20px 24px; margin: 16px 0 28px;">
-              <p style="margin: 0 0 8px;"><strong>REO Technologies</strong> — Quantitative Systems &amp; Financial Software Engineering</p>
-              <p style="margin: 0 0 8px; color: #4B5563;">Founder &amp; Engineering Lead: <strong>Abdul Raheem</strong></p>
-              <p style="margin: 0 0 8px; color: #4B5563;">Direct Support Desk: <a href="mailto:support@mortgageproglobal.com" style="color: #0B1D3A; font-weight: 600; text-decoration: underline;">support@mortgageproglobal.com</a></p>
-              <p style="margin: 0; color: #6B7280; font-size: 0.88rem;">Operational SLA: Electronic inquiries logged via our contact channels are reviewed and answered within 24–48 business hours.</p>
+            <div class="corporate-card">
+              <p><strong>REO Technologies</strong> — Quantitative Systems &amp; Financial Software Engineering</p>
+              <p>Founder &amp; Engineering Lead: <strong>Abdul Raheem</strong></p>
+              <p>Direct Support Desk: <a href="mailto:support@mortgageproglobal.com">support@mortgageproglobal.com</a></p>
+              <p class="sla-note">Operational SLA: Electronic inquiries logged via our contact channels are reviewed and answered within 24–48 business hours.</p>
             </div>
 
             <h2>Our Commitment</h2>

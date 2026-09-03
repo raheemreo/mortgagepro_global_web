@@ -2403,12 +2403,27 @@ section {
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2) !important;
   }
 
+  .contact-channel-card h2,
   .contact-channel-card h3 {
     color: var(--text-primary) !important;
   }
 
   .contact-channel-card .response-time {
     color: var(--text-secondary) !important;
+  }
+
+  .corporate-card {
+    background: var(--bg-card) !important;
+    border-color: var(--border-color) !important;
+  }
+
+  .corporate-card p,
+  .corporate-card .sla-note {
+    color: var(--text-secondary) !important;
+  }
+
+  .corporate-card strong {
+    color: var(--text-primary) !important;
   }
 
   .contact-card {
