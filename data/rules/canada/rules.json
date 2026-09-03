@@ -1,0 +1,98 @@
+{
+  "jurisdiction": "Canada",
+  "currency": "CAD",
+  "last_verified": "2026-09-04",
+  "verification_status": "verified",
+  "rules": {
+    "insured_purchase_price_limit": {
+      "classification": "regulatory_requirement",
+      "value": 1500000,
+      "unit": "CAD",
+      "source": "Department of Finance Canada / OSFI",
+      "source_url": "https://www.canada.ca/en/department-finance/news/2024/09/government-announces-boldest-mortgage-reforms-in-decades.html",
+      "effective_from": "2024-12-15",
+      "effective_to": null,
+      "description": "Statutory price cap for default-insured mortgages. Properties at or above CA$1,500,000 do not qualify for CMHC, Sagen, or Canada Guaranty insurance and require a minimum 20% down payment."
+    },
+    "minimum_down_payment": {
+      "classification": "regulatory_requirement",
+      "source": "Financial Consumer Agency of Canada (FCAC)",
+      "source_url": "https://www.canada.ca/en/financial-consumer-agency/services/mortgages/down-payment.html",
+      "effective_from": "2024-12-15",
+      "effective_to": null,
+      "tiers": [
+        {
+          "bracket": "up_to_500k",
+          "from": 0,
+          "to": 500000,
+          "rate": 0.05,
+          "description": "5% on the portion up to CA$500,000"
+        },
+        {
+          "bracket": "500k_to_1500k",
+          "from": 500000,
+          "to": 1500000,
+          "rate": 0.10,
+          "description": "10% on the portion between CA$500,001 and CA$1,499,999"
+        },
+        {
+          "bracket": "1500k_and_above",
+          "from": 1500000,
+          "to": null,
+          "rate": 0.20,
+          "description": "Flat 20% minimum on the entire purchase price for homes CA$1,500,000 and above"
+        }
+      ]
+    },
+    "cmhc_premium_schedule": {
+      "classification": "regulatory_requirement",
+      "source": "Canada Mortgage and Housing Corporation (CMHC)",
+      "source_url": "https://www.cmhc-schl.gc.ca/professionals/industry-innovation-and-leadership/industry-expertise/resources-for-mortgage-professionals/mortgage-loan-insurance-and-premiums",
+      "effective_from": "2020-07-01",
+      "effective_to": null,
+      "tiers": [
+        { "min_ltv": 0.00, "max_ltv": 0.65, "premium_rate": 0.0060, "formatted": "0.60%" },
+        { "min_ltv": 0.6501, "max_ltv": 0.75, "premium_rate": 0.0170, "formatted": "1.70%" },
+        { "min_ltv": 0.7501, "max_ltv": 0.80, "premium_rate": 0.0240, "formatted": "2.40%" },
+        { "min_ltv": 0.8001, "max_ltv": 0.85, "premium_rate": 0.0280, "formatted": "2.80%" },
+        { "min_ltv": 0.8501, "max_ltv": 0.90, "premium_rate": 0.0310, "formatted": "3.10%" },
+        { "min_ltv": 0.9001, "max_ltv": 0.95, "premium_rate": 0.0400, "formatted": "4.00%" }
+      ],
+      "surcharge_30_year": 0.0020
+    },
+    "amortization_rules": {
+      "classification": "regulatory_requirement",
+      "source": "Department of Finance Canada",
+      "source_url": "https://www.canada.ca/en/department-finance.html",
+      "effective_from": "2024-12-15",
+      "effective_to": null,
+      "insured_standard_max_years": 25,
+      "insured_extended_max_years": 30,
+      "extended_eligibility_criteria": [
+        "First-time home buyers purchasing any residential property",
+        "All buyers purchasing newly constructed residential properties"
+      ],
+      "uninsured_conventional_max_years": 30
+    },
+    "qualifying_stress_test": {
+      "classification": "regulatory_requirement",
+      "framework": "OSFI Guideline B-20",
+      "source": "Office of the Superintendent of Financial Institutions (OSFI)",
+      "source_url": "https://www.osfi-bsif.gc.ca/en/guidance/guidance-library/residential-mortgage-underwriting-practices-procedures",
+      "effective_from": "2021-06-01",
+      "effective_to": null,
+      "floor_rate": 5.25,
+      "buffer_above_contract": 2.00,
+      "formula": "Math.max(floor_rate, contract_rate + buffer_above_contract)",
+      "applicability": "Mandatory for all federally regulated financial institutions (FRFIs) on insured and uninsured mortgages"
+    },
+    "compounding_standard": {
+      "classification": "regulatory_requirement",
+      "governing_statute": "Canadian Bank Act & Interest Act",
+      "method": "Semi-annual compounding, not in advance",
+      "formula": "r_eff = Math.pow(1 + r_nominal / 2, 2 / 12) - 1",
+      "source": "Bank of Canada Act / Financial Consumer Agency of Canada",
+      "source_url": "https://www.canada.ca/en/financial-consumer-agency.html"
+    }
+  }
+}

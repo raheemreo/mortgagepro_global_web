@@ -1,0 +1,57 @@
+{
+  "jurisdiction": "USA",
+  "currency": "USD",
+  "last_verified": "2026-09-04",
+  "verification_status": "verified",
+  "rules": {
+    "debt_to_income_ratios": {
+      "traditional_28_36_benchmark": {
+        "classification": "guideline",
+        "source": "Fannie Mae / Freddie Mac Underwriting Standards (Traditional Manual Underwriting)",
+        "source_url": "https://selling-guide.fanniemae.com",
+        "front_end_housing_cap": 0.28,
+        "back_end_total_debt_cap": 0.36,
+        "status_notice": "Traditional industry benchmark. Not a universal regulatory requirement; automated underwriting systems (Desktop Underwriter / Loan Product Advisor) routinely approve DTIs up to 45% or 50% with compensating factors."
+      },
+      "qualified_mortgage_atr": {
+        "classification": "regulatory_requirement",
+        "governing_body": "Consumer Financial Protection Bureau (CFPB)",
+        "framework": "Ability-to-Repay / Qualified Mortgage (ATR/QM) Rule (12 CFR § 1026.43)",
+        "source_url": "https://www.consumerfinance.gov/rules-policy/final-rules/qualified-mortgage-definition-under-truth-lending-act-regulation-z/",
+        "general_qm_pricing_threshold": "Loan APR must not exceed Average Prime Offer Rate (APOR) by 2.25 percentage points or more for first-lien mortgages",
+        "legacy_dti_cap_context": "Historical 43% strict DTI limit replaced by CFPB revised General QM pricing-based framework"
+      }
+    },
+    "loan_programs": {
+      "conventional_conforming": {
+        "classification": "loan_program",
+        "source": "Federal Housing Finance Agency (FHFA)",
+        "source_url": "https://www.fhfa.gov",
+        "min_down_payment_first_time_buyer": 0.03,
+        "min_down_payment_standard": 0.05,
+        "private_mortgage_insurance": {
+          "classification": "lender_requirement",
+          "threshold_ltv": 0.80,
+          "statutory_cancellation_ltv": 0.78,
+          "governing_statute": "Homeowners Protection Act of 1998 (HPA)",
+          "typical_annual_cost_rate": "0.40% – 1.00% of loan balance"
+        }
+      },
+      "fha_loan": {
+        "classification": "loan_program",
+        "governing_body": "Federal Housing Administration / HUD",
+        "source_url": "https://www.hud.gov/program_offices/housing/sfh/fharesource",
+        "min_down_payment_580_plus_credit": 0.035,
+        "min_down_payment_sub_580_credit": 0.10,
+        "upfront_mortgage_insurance_premium": 0.0175,
+        "annual_mortgage_insurance_premium": 0.0055
+      }
+    },
+    "compounding_standard": {
+      "classification": "regulatory_requirement",
+      "framework": "Truth in Lending Act (TILA) / Regulation Z",
+      "method": "Monthly compounding standard amortization annuity",
+      "formula": "PITI = P&I (annuity) + Monthly Property Tax + Monthly Home Insurance + Monthly PMI"
+    }
+  }
+}

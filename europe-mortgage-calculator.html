@@ -8,15 +8,15 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1114757923146718" crossorigin="anonymous"></script>
   
   
-  <title>European Mortgage Estimator — Germany, France, Spain &amp; Eurozone | MortgagePro Global</title>
+  <title>European Mortgage Calculator — Selected Countries | MortgagePro Global</title>
   <meta name="description"
-    content="Calculate mortgage repayments and notary fees for selected Eurozone markets: Germany, France, Spain, Italy, Netherlands, and Portugal. Sourced from ECB benchmark rates.">
+    content="Calculate mortgage repayments, notary fees, and transfer taxes for selected European countries: Germany, France, Spain, Italy, and the Netherlands.">
 
   <link rel="canonical" href="https://mortgageproglobal.com/europe-mortgage-calculator">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="European Mortgage Estimator — Germany, France, Spain &amp; Eurozone">
+  <meta property="og:title" content="European Mortgage Calculator — Selected Countries">
   <meta property="og:description"
-    content="Calculate mortgage repayments and notary purchase fees across selected Eurozone countries including Germany, France, and Spain.">
+    content="Calculate mortgage repayments, notary fees, and transfer taxes across selected European countries: Germany, France, Spain, Italy, and the Netherlands.">
   <meta property="og:url" content="https://mortgageproglobal.com/europe-mortgage-calculator">
   <meta property="og:image" content="https://mortgageproglobal.com/images/og-europe.jpg">
 
@@ -42,12 +42,12 @@
   <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
   {"@type":"ListItem","position":1,"name":"Home","item":"https://mortgageproglobal.com"},
-  {"@type":"ListItem","position":2,"name":"Europe Mortgage Calculator","item":"https://mortgageproglobal.com/europe-mortgage-calculator"}
+  {"@type":"ListItem","position":2,"name":"European Mortgage Calculator — Selected Countries","item":"https://mortgageproglobal.com/europe-mortgage-calculator"}
 ]}
 </script>
 
   <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"Europe Mortgage Calculator","url":"https://mortgageproglobal.com/europe-mortgage-calculator","applicationCategory":"FinanceApplication","operatingSystem":"Web","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"creator":{"@type":"Organization","name":"REO Technologies"},"dateModified":"2026-09"}
+{"@context":"https://schema.org","@type":"WebApplication","name":"European Mortgage Calculator — Selected Countries","url":"https://mortgageproglobal.com/europe-mortgage-calculator","applicationCategory":"FinanceApplication","operatingSystem":"Web","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"creator":{"@type":"Organization","name":"REO Technologies"},"dateModified":"2026-09"}
 </script>
 
   <script type="application/ld+json">
@@ -1407,6 +1407,110 @@
       outline: 3px solid var(--blue);
       outline-offset: 2px;
     }
+
+    /* European Country Tabs & Assumptions Panel */
+    .country-tabs-nav {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .cpill {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 9999px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+    .cpill:hover {
+      background: rgba(255, 255, 255, 0.22);
+    }
+    .cpill.active {
+      background: #FFCC00;
+      color: #0B1D3A;
+      border-color: #FFCC00;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    .country-assumptions-card {
+      background: var(--card-bg, #FFFFFF);
+      border: 1px solid var(--card-border, #E5E7EB);
+      border-left: 4px solid var(--blue, #003399);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 24px 0;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    }
+    .country-assumptions-card h3 {
+      margin-top: 0;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--navy, #0B1D3A);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .country-assumptions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+    .assumption-item {
+      background: var(--bg, #F8FAFC);
+      padding: 14px;
+      border-radius: 8px;
+      border: 1px solid var(--card-border, #E2E8F0);
+    }
+    .assumption-label {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted, #64748B);
+      margin-bottom: 4px;
+    }
+    .assumption-value {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--navy, #0B1D3A);
+    }
+    .assumption-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted, #6B7280);
+      margin-top: 4px;
+      line-height: 1.45;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .country-assumptions-card {
+        background: #0B1D3A;
+        border-color: rgba(255, 255, 255, 0.12);
+        border-left-color: #38BDF8;
+      }
+      .country-assumptions-card h3 {
+        color: #F8FAFC;
+      }
+      .assumption-item {
+        background: #081326;
+        border-color: rgba(255, 255, 255, 0.1);
+      }
+      .assumption-value {
+        color: #F8FAFC;
+      }
+      .assumption-desc {
+        color: #94A3B8;
+      }
+    }
   </style>
 
   <!-- Favicon, Apple Touch Icon & Web App Manifest -->
@@ -1458,18 +1562,27 @@
     <div class="wrap">
       <div class="header-inner">
         <div>
-          <div class="hdr-eyebrow">EUR · ECB Benchmark (2.40%) · Selected Eurozone Markets</div>
-          <h1 class="hdr-h1">European Mortgage Estimator:<br><span>Germany, France &amp; Spain</span></h1>
-          <p class="hdr-p">Model country-specific property purchasing costs, notary fees, and loan repayments across Germany (Baufinanzierung), France (Crédit Immobilier), Spain (Hipoteca), Italy, Netherlands, and Portugal.</p>
+          <div class="hdr-eyebrow">EUR · Selected European Countries · Germany · France · Spain · Italy · Netherlands</div>
+          <h1 class="hdr-h1">European Mortgage Calculator:<br><span>Selected Countries</span></h1>
+          <p class="hdr-p">Accurately model country-specific property purchasing costs, notary fees, transfer taxes, and loan repayments across Germany, France, Spain, Italy, and the Netherlands. Each jurisdiction operates under distinct statutory rules and closing fee schedules.</p>
           <div class="hdr-btns">
-            <a href="#calculator" class="btn-primary" style="text-decoration: none;">⭐ Calculate Eurozone Mortgage</a>
+            <a href="#calculator" class="btn-primary" style="text-decoration: none;">⭐ Calculate European Mortgage</a>
           </div>
         </div>
 
         <!-- Interactive Calculator Card -->
         <div class="hero-card" id="calculator">
-          <div class="hc-tag">Eurozone Mortgage Estimator</div>
-          <div class="hc-title">Calculate your <span>National Eurozone</span> mortgage payment in EUR</div>
+          <div class="hc-tag">European Mortgage Calculator</div>
+          <div class="hc-title">Select country &amp; calculate mortgage in EUR</div>
+
+          <!-- Country Tabs Nav -->
+          <div class="country-tabs-nav" id="country-pills" role="tablist" aria-label="Select European Country">
+            <button type="button" class="cpill active" data-val="germany" role="tab" aria-selected="true">🇩🇪 Germany</button>
+            <button type="button" class="cpill" data-val="france" role="tab" aria-selected="false">🇫🇷 France</button>
+            <button type="button" class="cpill" data-val="spain" role="tab" aria-selected="false">🇪🇸 Spain</button>
+            <button type="button" class="cpill" data-val="italy" role="tab" aria-selected="false">🇮🇹 Italy</button>
+            <button type="button" class="cpill" data-val="netherlands" role="tab" aria-selected="false">🇳🇱 Netherlands</button>
+          </div>
 
           <form id="eu-calc-form" novalidate>
             <div class="hc-fields-wrap">
@@ -1501,14 +1614,13 @@
               </div>
               <div class="hc-row">
                 <div class="hc-box" style="flex: 1;">
-                  <label for="eu-country">Country Rules</label>
+                  <label for="eu-country">Selected Country Engine</label>
                   <select id="eu-country">
-                    <option value="germany" selected>Germany (Estimate ~11% buying fees)</option>
-                    <option value="france">France (Estimate ~7.5% buying fees)</option>
-                    <option value="spain">Spain (Estimate ~10% buying fees)</option>
-                    <option value="italy">Italy (Estimate ~9% buying fees)</option>
-                    <option value="netherlands">Netherlands (Estimate ~6% buying fees)</option>
-                    <option value="portugal">Portugal (Estimate ~7.5% buying fees)</option>
+                    <option value="germany" selected>🇩🇪 Germany (Grunderwerbsteuer ~5.0% + Notary ~1.5%)</option>
+                    <option value="france">🇫🇷 France (Frais de notaire ~7.5% + HCSF 35% Cap)</option>
+                    <option value="spain">🇪🇸 Spain (ITP Transfer Tax ~8.0% + Notary ~1.2%)</option>
+                    <option value="italy">🇮🇹 Italy (Imposta di registro 2.0% / 9.0% + Notary ~1.8%)</option>
+                    <option value="netherlands">🇳🇱 Netherlands (Overdrachtsbelasting 2.0% / 0% Starter)</option>
                   </select>
                 </div>
               </div>
@@ -1641,8 +1753,18 @@
             </tbody>
           </table>
         </div>
-      </div>
     </section>
+
+    <!-- Country-Specific Assumptions Panel -->
+    <div class="country-assumptions-card" id="country-assumptions">
+      <h3 id="country-assumptions-title">🇩🇪 Germany: Country-Specific Assumptions &amp; Regulatory Rules</h3>
+      <p style="margin: 0 0 12px; font-size: 0.9rem; color: var(--text-muted);">
+        Every European country maintains distinct closing costs, notary requirements, and lending restrictions. These statutory parameters are applied to your calculation:
+      </p>
+      <div class="country-assumptions-grid" id="country-assumptions-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
 
     <!-- ECB Rate Monitor -->
     <section class="section">
@@ -1993,13 +2115,77 @@
 
     /* Country purchase fee rates lookup table */
     const COUNTRY_FEE_RATES = {
-      germany: 0.11,
-      france: 0.075,
-      spain: 0.10,
-      italy: 0.09,
-      netherlands: 0.06,
-      portugal: 0.075
+      germany: 0.065, // ~5.0% Grunderwerbsteuer + 1.5% Notary/Court
+      france: 0.075,  // ~7.5% Frais de notaire (existing property)
+      spain: 0.092,   // ~8.0% ITP + 1.2% Notary/Registry
+      italy: 0.038,   // ~2.0% Imposta registro (Prima casa) + 1.8% Notary
+      netherlands: 0.032 // ~2.0% Overdrachtsbelasting + 1.2% Notary/Kadaster
     };
+
+    /* Country-Specific Assumptions & Statutory Metadata */
+    const COUNTRY_ASSUMPTIONS = {
+      germany: {
+        title: "🇩🇪 Germany (Deutschland): Country-Specific Assumptions & Statutory Rules",
+        items: [
+          { label: "Transfer Tax (Grunderwerbsteuer)", value: "3.5% – 6.5% (Modeled at 5.0%)", desc: "Levied by state (Bundesland): 3.5% in Bavaria, up to 6.5% in NRW, Brandenburg, and Saarland." },
+          { label: "Notary & Land Registry (GNotKG)", value: "approx 1.5%", desc: "Statutory court and notary deed registration fees under German federal law." },
+          { label: "Financing Structure", value: "Baufinanzierung (Sollzins + Tilgung)", desc: "Fixed interest rate (10–20 yr) with agreed initial principal amortization (Tilgung, 1.5%–3.0%)." },
+          { label: "Cash Closing Requirement", value: "6.5% – 11.5% of purchase price", desc: "Closing costs cannot be financed in the mortgage and must be funded from cash equity." }
+        ]
+      },
+      france: {
+        title: "🇫🇷 France: Country-Specific Assumptions & Statutory Rules",
+        items: [
+          { label: "Notary Fees (Frais de notaire)", value: "approx 7.5% (Existing) / 2.5% (New)", desc: "Includes departmental transfer tax (droits d'enregistrement) and statutory notary emoluments." },
+          { label: "HCSF Legal Borrowing Ceiling", value: "35% Net DTI (Taux d'effort)", desc: "Legally binding French regulation capping total debt service at 35% of net monthly income." },
+          { label: "Maximum Loan Duration", value: "25 Years (27 for new construction)", desc: "HCSF statutory limitation on residential mortgage amortizations." },
+          { label: "Guarantee Framework", value: "Caution Crédit Logement", desc: "Mutual bank guarantee fund widely preferred over traditional mortgage hypothèque." }
+        ]
+      },
+      spain: {
+        title: "🇪🇸 Spain (España): Country-Specific Assumptions & Statutory Rules",
+        items: [
+          { label: "Transfer Tax (ITP)", value: "6.0% – 10.0% (Modeled at 8.0%)", desc: "Applies to resale properties. Set by Autonomous Community (Madrid 6%, Catalonia 10%, Andalucia 7%)." },
+          { label: "Notary & Land Registry", value: "approx 1.2%", desc: "Statutory notary fees (Aranceles notariales) and property registration fees." },
+          { label: "Stamp Duty (AJD)", value: "0.5% – 1.5% (New builds only)", desc: "Actos Jurídicos Documentados applies primarily to newly constructed developments." },
+          { label: "Variable Benchmark", value: "12-Month Euribor + Spread", desc: "Standard floating benchmark for Spanish mortgages (Hipoteca variable)." }
+        ]
+      },
+      italy: {
+        title: "🇮🇹 Italy (Italia): Country-Specific Assumptions & Statutory Rules",
+        items: [
+          { label: "Registration Tax (Imposta di registro)", value: "2.0% (Prima Casa) / 9.0% (Second)", desc: "Favorable 2% rate applies when purchasing a primary residential home from a private seller." },
+          { label: "Notary & Cadastral Fees", value: "approx 1.8%", desc: "Notary deed fees (Onorario) and technical cadastral registration charges." },
+          { label: "Typical Down Payment", value: "20% (Resident) / 30%–40% (Non-Resident)", desc: "Standard criteria for Italian residential mortgages (Mutuo prima casa)." },
+          { label: "Usury Rate Ceiling (Tasso Usura)", value: "Banca d'Italia Statutory Cap", desc: "Quarterly statutory maximum APR established by the Bank of Italy to protect consumers." }
+        ]
+      },
+      netherlands: {
+        title: "🇳🇱 Netherlands (Nederland): Country-Specific Assumptions & Statutory Rules",
+        items: [
+          { label: "Transfer Tax (Overdrachtsbelasting)", value: "2.0% Standard (0% Starter Exemption)", desc: "First-time buyers aged 18–34 qualify for 0% tax under statutory purchase price limits." },
+          { label: "Investor Transfer Tax", value: "10.4%", desc: "Higher statutory tax rate for buy-to-let, holiday homes, and investment acquisitions." },
+          { label: "Notary & Kadaster", value: "approx 1.2%", desc: "Statutory conveyance deed (leveringsakte) and mortgage deed (hypotheekakte)." },
+          { label: "National Guarantee (NHG)", value: "Nationale Hypotheek Garantie", desc: "Government-backed safety net offering interest discounts under national cap." }
+        ]
+      }
+    };
+
+    function renderCountryAssumptions(country) {
+      const data = COUNTRY_ASSUMPTIONS[country] || COUNTRY_ASSUMPTIONS.germany;
+      const titleEl = document.getElementById('country-assumptions-title');
+      const gridEl = document.getElementById('country-assumptions-grid');
+      if (titleEl) titleEl.textContent = data.title;
+      if (gridEl) {
+        gridEl.innerHTML = data.items.map(item => `
+          <div class="assumption-item">
+            <div class="assumption-label">${item.label}</div>
+            <div class="assumption-value">${item.value}</div>
+            <div class="assumption-desc">${item.desc}</div>
+          </div>
+        `).join('');
+      }
+    }
 
     /* Annual amortization summaries */
     function generateSchedule(principal, annualRate, years) {
@@ -2204,6 +2390,7 @@
         totalInterest, totalPayment, tableList
       };
 
+      renderCountryAssumptions(country);
       logEvent('calculation_completed', { tool: 'europe_mortgage_calc', value: Math.round(price) });
     }
 
@@ -2221,6 +2408,7 @@
       document.getElementById('d-box').classList.remove('error-box');
       document.getElementById('r-box').classList.remove('error-box');
       window._euResultBlob = null;
+      renderCountryAssumptions('germany');
       logEvent('calculator_reset', { tool: 'europe_mortgage_calc' });
     });
 
@@ -2276,7 +2464,7 @@
         triggerToast('⚠️ Please perform calculations first.');
         return;
       }
-      const header = ['Year', 'Monthly Payment', 'Principal Paid', 'Interest Paid', 'Remaining Balance'];
+      const header = ['Year', 'Monthly Payment', 'Principal Paid', 'Interest Paid', 'Balance'];
       const rows = cache.tableList.map(i => [i.year, i.emi, i.principal, i.interest, i.balance]);
       const csvContent = [
         `Europe Mortgage Amortization Schedule,,,\n`,
@@ -2314,6 +2502,7 @@
         const select = document.getElementById('eu-country');
         if (select) {
           select.value = val;
+          renderCountryAssumptions(val);
           // Re-execute calculations if results are already visible
           if (document.getElementById('eu-results').classList.contains('visible')) {
             executeCalculation();
@@ -2328,6 +2517,7 @@
       document.querySelectorAll('#country-pills .cpill').forEach(p => {
         p.classList.toggle('active', p.getAttribute('data-val') === val);
       });
+      renderCountryAssumptions(val);
       // Re-execute if results are active
       if (document.getElementById('eu-results').classList.contains('visible')) {
         executeCalculation();
@@ -2352,6 +2542,9 @@
         }
       });
     });
+
+    // Render initial default country assumptions
+    renderCountryAssumptions('germany');
 
     // Dynamic current footer year
     const footerYear = document.getElementById('footer-year');

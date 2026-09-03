@@ -1,0 +1,28 @@
+{
+  "jurisdiction": "Australia",
+  "currency": "AUD",
+  "last_verified": "2026-09-04",
+  "verification_status": "verified",
+  "rules": {
+    "serviceability_stress_buffer": {
+      "classification": "regulatory_requirement",
+      "governing_body": "Australian Prudential Regulation Authority (APRA)",
+      "framework": "Prudential Practice Guide APG 223 Residential Mortgage Lending",
+      "source_url": "https://www.apra.gov.au",
+      "buffer_above_interest_rate": 0.030,
+      "formatted": "+3.00%",
+      "effective_from": "2021-10-31",
+      "description": "ADIs must evaluate borrower debt serviceability against a minimum interest rate buffer of at least 3.00% above the product contract rate."
+    },
+    "lenders_mortgage_insurance": {
+      "classification": "lender_requirement",
+      "standard_threshold_lvr": 0.80,
+      "description": "Lenders Mortgage Insurance (LMI) is typically levied by Australian lenders on home loans with a Loan-to-Value Ratio (LVR) exceeding 80%."
+    },
+    "offset_account_compounding": {
+      "classification": "lender_requirement",
+      "method": "Daily balance offset calculation",
+      "formula": "Interest_daily = Math.max(0, loan_balance - offset_balance) * (annual_rate / 365)"
+    }
+  }
+}

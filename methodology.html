@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculation Methodology &amp; Mathematical Framework | MortgagePro Global</title>
+  <meta name="description"
+    content="Comprehensive technical methodology of MortgagePro Global. Learn our exact actuarial payment formulas, compounding standards, statutory tax rules, rounding conventions, and limitation disclosures.">
+
+  <link rel="canonical" href="https://mortgageproglobal.com/methodology">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Calculation Methodology &amp; Mathematical Framework | MortgagePro Global">
+  <meta property="og:description"
+    content="Detailed documentation of the deterministic actuarial mathematics, jurisdiction-specific compounding methods, and regulatory underwriting standards implemented across our calculators.">
+  <meta property="og:url" content="https://mortgageproglobal.com/methodology">
+  <meta property="og:image" content="https://mortgageproglobal.com/images/og-home.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MortgagePro Global Calculation Methodology">
+  <meta name="twitter:description" content="Technical formulas, compounding rules, and underwriting assumptions.">
+  <meta name="twitter:image" content="https://mortgageproglobal.com/images/og-home.jpg">
+
+  <!-- Google tag (gtag.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH'],
+      'wait_for_update': 500
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-1DEVWXRXJP');
+  </script>
+
+  <!-- Preload Fonts -->
+  <link rel="preload" href="/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin>
+
+  <style>
+    :root {
+      --page-primary: #0B1D3A;
+      --page-accent: #B91C1C;
+      --page-bg: #F0F4FF;
+      --text-main: #374151;
+      --text-muted: #6B7280;
+      --card-bg: #FFFFFF;
+      --card-border: #E5E7EB;
+      --code-bg: #F8FAFC;
+      --code-text: #0F172A;
+      --code-border: #E2E8F0;
+      --formula-bg: #F1F5F9;
+      --table-header-bg: #0B1D3A;
+      --table-header-text: #FFFFFF;
+      --table-row-alt: #F9FAFB;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--page-bg);
+      color: var(--page-primary);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+    .skip-link:focus {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99999;
+      background: #0B1D3A;
+      color: #fff;
+      padding: 12px 24px;
+      font-weight: 700;
+    }
+
+    .page-hero {
+      background: linear-gradient(135deg, #050E1D 0%, #0B1D3A 50%, #162E5A 100%);
+      color: #fff;
+      padding: 56px 0;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .page-hero h1 {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 800;
+      margin: 0 0 12px;
+      letter-spacing: -0.02em;
+      color: #fff;
+    }
+    .page-hero p {
+      font-size: 1.12rem;
+      color: rgba(255, 255, 255, 0.85);
+      margin: 0;
+      max-width: 800px;
+      line-height: 1.6;
+    }
+
+    .page-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 40px;
+      padding: 48px 0;
+    }
+    @media (max-width: 900px) {
+      .page-layout {
+        grid-template-columns: 1fr;
+      }
+      .toc-sidebar {
+        display: none;
+      }
+    }
+
+    .toc-sidebar {
+      position: sticky;
+      top: 24px;
+      height: fit-content;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    }
+    .toc-sidebar h3 {
+      margin-top: 0;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .toc-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.88rem;
+      line-height: 1.8;
+    }
+    .toc-list a {
+      color: var(--text-main);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .toc-list a:hover {
+      color: var(--page-accent);
+      text-decoration: underline;
+    }
+
+    .content-article {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    }
+    .content-article h2 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--page-primary);
+      margin: 40px 0 16px;
+      border-bottom: 2px solid var(--page-bg);
+      padding-bottom: 8px;
+    }
+    .content-article h2:first-of-type {
+      margin-top: 0;
+    }
+    .content-article h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--page-primary);
+      margin: 28px 0 12px;
+    }
+    .content-article p, .content-article li {
+      color: var(--text-main);
+      font-size: 0.98rem;
+      line-height: 1.75;
+    }
+
+    .formula-box {
+      background: var(--formula-bg);
+      border-left: 4px solid var(--page-primary);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      font-family: 'Courier New', monospace;
+      font-size: 0.95rem;
+      color: var(--code-text);
+      margin: 18px 0;
+      overflow-x: auto;
+    }
+    .math-callout {
+      background: #EFF6FF;
+      border: 1px solid #BFDBFE;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 20px 0;
+    }
+    .math-callout h4 {
+      margin: 0 0 8px;
+      color: #1E40AF;
+      font-size: 1rem;
+    }
+
+    .table-responsive {
+      overflow-x: auto;
+      margin: 24px 0;
+    }
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+    table.data-table th, table.data-table td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--card-border);
+    }
+    table.data-table th {
+      background: var(--table-header-bg);
+      color: #fff;
+      font-weight: 600;
+    }
+    table.data-table tr:nth-child(even) {
+      background: var(--table-row-alt);
+    }
+
+    /* Dark Mode */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --page-primary: #F8FAFC;
+        --page-accent: #EF4444;
+        --page-bg: #050E1D;
+        --text-main: #CBD5E1;
+        --text-muted: #94A3B8;
+        --card-bg: #0B1D3A;
+        --card-border: rgba(255, 255, 255, 0.12);
+        --code-bg: #050E1D;
+        --code-text: #E2E8F0;
+        --formula-bg: #08152B;
+        --table-header-bg: #050E1D;
+        --table-row-alt: rgba(255, 255, 255, 0.03);
+      }
+      .math-callout {
+        background: #0E2A47;
+        border-color: #1E3A8A;
+      }
+      .math-callout h4 {
+        color: #93C5FD;
+      }
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Calculation Methodology & Mathematical Framework",
+    "description": "Comprehensive technical documentation detailing the mathematical formulas, compounding mechanics, statutory tax schedules, and limitations governing MortgagePro Global calculators.",
+    "author": {
+      "@type": "Person",
+      "name": "Abdul Raheem",
+      "jobTitle": "Lead Financial Systems Engineer",
+      "url": "https://mortgageproglobal.com/authors/abdul-raheem"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "REO Technologies",
+      "url": "https://mortgageproglobal.com"
+    },
+    "datePublished": "2026-09-04",
+    "dateModified": "2026-09-04"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mortgageproglobal.com" },
+      { "@type": "ListItem", "position": 2, "name": "Methodology", "item": "https://mortgageproglobal.com/methodology" }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-component="header"></div>
+
+  <!-- Page Hero -->
+  <header class="page-hero">
+    <div class="container">
+      <nav aria-label="Breadcrumb" style="font-size: 0.85rem; margin-bottom: 12px; color: rgba(255,255,255,0.7);">
+        <a href="/" style="color: rgba(255,255,255,0.7); text-decoration: none;">Home</a> / <span style="color: #fff;">Methodology</span>
+      </nav>
+      <h1>How MortgagePro Global Calculates</h1>
+      <p>A transparent, mathematically rigorous disclosure of our actuarial equations, compounding conventions, statutory rules, data provenance, and model limitations.</p>
+    </div>
+  </header>
+
+  <!-- Main Body Layout -->
+  <main id="main-content" class="container">
+    <div class="page-layout">
+      <!-- Sticky Table of Contents -->
+      <aside class="toc-sidebar" aria-label="Table of Contents">
+        <h3>Contents</h3>
+        <ul class="toc-list">
+          <li><a href="#payment-math">1. Mortgage Payment Methodology</a></li>
+          <li><a href="#amortization">2. Amortization Methodology</a></li>
+          <li><a href="#interest-calc">3. Interest Calculation Standards</a></li>
+          <li><a href="#escrow-taxes">4. Taxes &amp; Escrow</a></li>
+          <li><a href="#insurance">5. Hazard &amp; Title Insurance</a></li>
+          <li><a href="#mortgage-insurance">6. PMI / CMHC / LMI Default Cover</a></li>
+          <li><a href="#affordability">7. Affordability &amp; DTI Ratios</a></li>
+          <li><a href="#country-rules">8. Country-Specific Rules</a></li>
+          <li><a href="#rate-provenance">9. Rate Data &amp; Ingestion Engine</a></li>
+          <li><a href="#rounding">10. Rounding Standards</a></li>
+          <li><a href="#assumptions">11. Baseline Assumptions</a></li>
+          <li><a href="#limitations">12. Limitations of Models</a></li>
+          <li><a href="#testing">13. Automated Testing Suite</a></li>
+          <li><a href="#verification">14. Source Verification</a></li>
+          <li><a href="#corrections">15. Errata &amp; Correction Process</a></li>
+          <li><a href="#changelog">16. Version History</a></li>
+        </ul>
+      </aside>
+
+      <!-- Content Column -->
+      <article class="content-article">
+        <section id="payment-math">
+          <h2>1. Mortgage Payment Methodology</h2>
+          <p>MortgagePro Global implements deterministic annuity compounding algorithms rather than estimated heuristics. For monthly-compounded jurisdictions (USA, UK, Australia, New Zealand, and India), standard fixed-rate monthly Principal &amp; Interest (P&amp;I) is computed using the closed-form annuity formula:</p>
+          <div class="formula-box">
+            M = P × [ r(1 + r)^n ] / [ (1 + r)^n − 1 ]<br><br>
+            Where:<br>
+            M = Monthly payment (Principal and Interest)<br>
+            P = Principal loan balance (Purchase Price − Down Payment)<br>
+            r = Periodic monthly interest factor (Annual Nominal Interest Rate ÷ 12 ÷ 100)<br>
+            n = Total amortization periods (Loan Term in Years × 12)
+          </div>
+          <p>When the interest rate is precisely 0.00%, the equation cleanly simplifies via algebraic limit to:</p>
+          <div class="formula-box">M = P / n</div>
+        </section>
+
+        <section id="amortization">
+          <h2>2. Amortization Methodology</h2>
+          <p>Our amortization engines track balance evolution on a period-by-period basis. Each period <em>t</em> (month 1 through <em>n</em>) calculates:</p>
+          <ul>
+            <li><strong>Periodic Interest Due:</strong> <code>I_t = Balance_(t-1) × r</code></li>
+            <li><strong>Principal Repayment:</strong> <code>P_t = M − I_t</code></li>
+            <li><strong>Ending Balance:</strong> <code>Balance_t = Balance_(t-1) − P_t</code></li>
+          </ul>
+          <p>This strictly models the characteristic mortgage <em>tilt</em>, where early payments are interest-heavy and late payments are principal-dominant.</p>
+        </section>
+
+        <section id="interest-calc">
+          <h2>3. Interest Calculation Standards</h2>
+          <p>National jurisdictions legally mandate different compounding conventions:</p>
+          <div class="math-callout">
+            <h4>🇨🇦 The Canadian Statutory Semi-Annual Exception</h4>
+            <p>Under the Canadian <em>Bank Act</em> and <em>Interest Act</em>, fixed-rate mortgages must be compounded <strong>semi-annually, not in advance</strong>. To compute the true monthly effective rate <code>r_eff</code> from the quoted nominal annual rate <code>r_nom</code>:</p>
+            <div class="formula-box">r_eff = (1 + r_nom / 2)^(2/12) − 1</div>
+            <p>Applying this exact semi-annual conversion produces identical monthly payments to Canadian chartered banks, eliminating the $15–$50/month discrepancy found on generic US-centric calculators.</p>
+          </div>
+          <div class="math-callout">
+            <h4>🇦🇺 Australian Daily Balance Offset Compounding</h4>
+            <p>Australian mortgages calculate interest on the daily closing balance net of linked 100% offset accounts:</p>
+            <div class="formula-box">Daily_Interest = max(0, Loan_Balance − Offset_Balance) × (Annual_Rate / 365)</div>
+          </div>
+        </section>
+
+        <section id="escrow-taxes">
+          <h2>4. Taxes &amp; Escrow Calculations</h2>
+          <p>Where calculators include property taxes (such as US PITI):</p>
+          <ul>
+            <li><strong>Annual Property Tax:</strong> Either entered as an exact dollar figure or computed as <code>(Assessed Home Value × County Millage Rate) ÷ 100</code>.</li>
+            <li><strong>Monthly Escrow Allocation:</strong> <code>Annual Property Tax ÷ 12</code>, held in reserve by mortgage servicers.</li>
+          </ul>
+        </section>
+
+        <section id="insurance">
+          <h2>5. Hazard &amp; Title Insurance</h2>
+          <p>Standard homeowners hazard insurance is divided into 12 equal monthly installments and added to PITI. Title insurance and lender's title policies are classified as one-time closing costs and excluded from ongoing monthly housing obligations.</p>
+        </section>
+
+        <section id="mortgage-insurance">
+          <h2>6. Mortgage Default Insurance (PMI, CMHC, LMI)</h2>
+          <p>When a borrower's down payment is below statutory or lender thresholds (typically 20% equity), mandatory default insurance is calculated:</p>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Jurisdiction</th>
+                  <th>Instrument</th>
+                  <th>Threshold</th>
+                  <th>Calculation Method</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>🇺🇸 USA</td>
+                  <td>Conventional PMI</td>
+                  <td>LTV &gt; 80%</td>
+                  <td>Annual premium (0.4%–1.0%) divided by 12. Cancellable at 78% LTV under HPA.</td>
+                </tr>
+                <tr>
+                  <td>🇺🇸 USA</td>
+                  <td>FHA MIP</td>
+                  <td>FHA Loans</td>
+                  <td>1.75% Upfront MIP (capitalized) + 0.55% Annual MIP paid monthly.</td>
+                </tr>
+                <tr>
+                  <td>🇨🇦 Canada</td>
+                  <td>CMHC / Sagen / CG</td>
+                  <td>Down payment &lt; 20%</td>
+                  <td>Tiered premium scale (0.60% to 4.00%) capitalized into base mortgage balance.</td>
+                </tr>
+                <tr>
+                  <td>🇦🇺 Australia</td>
+                  <td>Lenders Mortgage Insurance (LMI)</td>
+                  <td>LVR &gt; 80%</td>
+                  <td>Tiered capital charge calculated on loan portion above 80% LVR.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="affordability">
+          <h2>7. Affordability &amp; DTI Ratios</h2>
+          <p>We classify qualification rules into distinct underwriting tiers to prevent false statutory assertions:</p>
+          <ul>
+            <li><strong>Traditional Guidelines (Benchmark):</strong> The US <strong>28/36 rule</strong> is modeled as an illustrative conventional guideline. It is never presented as a universal statutory law, as Fannie Mae DU and FHA programs frequently approve qualified applicants at 43%–50% DTI with compensating factors.</li>
+            <li><strong>Statutory Borrowing Ceilings (Regulatory Mandates):</strong> France's <strong>HCSF 35%</strong> debt-service cap and New Zealand's <strong>RBNZ DTI speed limits</strong> (6x income for owner-occupiers, 7x for investors) are strictly enforced as legal constraints.</li>
+          </ul>
+        </section>
+
+        <section id="country-rules">
+          <h2>8. Country-Specific Rules &amp; Statutory Provenance</h2>
+          <p>Every national calculation engine sources rules from our centralized <code>/data/rules/</code> registry:</p>
+          <ul>
+            <li><strong>Canada:</strong> Statutory $1,500,000 insured purchase price cap; tiered minimum down payments (5% on first $500k, 10% on remainder up to $1.5M, 20% for $1.5M+).</li>
+            <li><strong>UK:</strong> Post-April 2025 HMRC SDLT bands (£125,000 standard nil-rate; £300,000 First-Time Buyer relief up to £500,000 cap). Explicitly decoupled from Scotland (LBTT) and Wales (LTT).</li>
+            <li><strong>India:</strong> Default New Tax Regime (Section 115BAC) modeling zero deduction on self-occupied interest, contrasted with optional Old Tax Regime Section 24(b) (₹2L cap) and Section 80C (₹1.5L cap), with Section 80EEA classified as a historical sunset provision.</li>
+            <li><strong>Europe (Selected Countries):</strong> Independent closing-cost and notary calculators for Germany, France, Spain, Italy, and the Netherlands.</li>
+          </ul>
+        </section>
+
+        <section id="rate-provenance">
+          <h2>9. Rate Data Provenance &amp; Ingestion Architecture</h2>
+          <p>Live benchmark rates are synchronized via automated pipelines connecting directly to official central bank APIs:</p>
+          <ul>
+            <li><strong>Federal Reserve Bank of St. Louis (FRED):</strong> Freddie Mac 30-Year Fixed (<code>MORTGAGE30US</code>) and 15-Year Fixed (<code>MORTGAGE15US</code>).</li>
+            <li><strong>Bank of Canada Valet API:</strong> Overnight Policy Rate (<code>V39079</code>) and 5-Year Conventional Benchmark (<code>V80691335</code>).</li>
+            <li><strong>Central Bank Registries:</strong> Official Bank Rate (Bank of England), Cash Rate Target (RBA), Official Cash Rate (RBNZ), Policy Repo Rate (RBI), and Main Refinancing Operations (ECB).</li>
+          </ul>
+        </section>
+
+        <section id="rounding">
+          <h2>10. Rounding Standards</h2>
+          <p>All intermediate financial calculations are computed with full 64-bit IEEE 754 floating point precision. Final currency displays apply standard <strong>half-up rounding</strong> to the nearest whole currency unit or cent. We do not apply non-standard truncations or aggressive floor algorithms that artificially distort monthly payment outcomes.</p>
+        </section>
+
+        <section id="assumptions">
+          <h2>11. Baseline Assumptions</h2>
+          <ul>
+            <li>Fixed interest rates remain unchanged over the entire illustrated amortization term.</li>
+            <li>Calendar years are assumed to have 12 uniform monthly periods (365 days for Australian daily interest models).</li>
+            <li>Property taxes and insurance premiums are assumed constant over the initial payment schedule unless otherwise configured.</li>
+          </ul>
+        </section>
+
+        <section id="limitations">
+          <h2>12. Mathematical &amp; Model Limitations</h2>
+          <p>While our algorithms achieve deterministic mathematical precision, real-world mortgage underwriting involves discretionary factors that no web calculator can replicate:</p>
+          <ul>
+            <li><strong>Credit Underwriting Spreads:</strong> Actual lender interest rates depend on individual FICO/CIBIL credit scores, loan-to-value tiers, and lender risk margins.</li>
+            <li><strong>Variable Rate Volatility:</strong> Floating-rate loans fluctuate with central bank policy decisions; future payment trajectories cannot be guaranteed.</li>
+            <li><strong>Informational Planning Tool:</strong> MortgagePro Global is an independent software tool and does not provide formal mortgage pre-approvals, financial advice, or underwriting commitments.</li>
+          </ul>
+        </section>
+
+        <section id="testing">
+          <h2>13. Automated Testing Suite</h2>
+          <p>All calculation engines are subjected to automated continuous integration testing:</p>
+          <ul>
+            <li><code>node scripts/validate_rates.js</code>: Verifies data schema, date validity, and numeric ranges on live benchmark series.</li>
+            <li><code>node scripts/validate_rules.js</code>: Verifies statutory tier boundary continuity, down payment sums, and cross-repo consistency.</li>
+            <li><strong>Regression Matrices:</strong> Testing boundary edge cases including 0% interest, 100% down payment, and progressive tax bracket thresholds.</li>
+          </ul>
+        </section>
+
+        <section id="verification">
+          <h2>14. Source Verification &amp; Citations</h2>
+          <p>We maintain an immutable registry of sovereign financial regulators, central banks, and government revenue gazettes. For direct citations and public data links, please visit our <a href="/data-sources" style="color: #B91C1C; text-decoration: underline;">Data Sources Registry</a>.</p>
+        </section>
+
+        <section id="corrections">
+          <h2>15. Errata &amp; Correction Process</h2>
+          <p>If you identify a mathematical discrepancy, updated statutory band, or regulatory amendment, our engineering team commits to reviewing inquiries within 24–48 hours. Review our formal protocol at the <a href="/corrections-policy" style="color: #B91C1C; text-decoration: underline;">Corrections Policy</a> or email <a href="mailto:corrections@mortgageproglobal.com" style="color: #B91C1C;">corrections@mortgageproglobal.com</a>.</p>
+        </section>
+
+        <section id="changelog">
+          <h2>16. Version History &amp; Changelog</h2>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Version</th>
+                  <th>Date</th>
+                  <th>Key Enhancements</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>v2.1</strong></td>
+                  <td>September 2026</td>
+                  <td>Standardized central statutory rule engine (<code>/data/rules/</code>), decoupled UK SDLT from Scotland/Wales, updated Canada CA$1.5M insured cap, implemented European multi-country modules, and published formal Methodology framework.</td>
+                </tr>
+                <tr>
+                  <td><strong>v2.0</strong></td>
+                  <td>September 2026</td>
+                  <td>Integrated live API feeds for Freddie Mac PMMS (FRED) and Bank of Canada Valet with Cloudflare Edge caching and stale-data protection.</td>
+                </tr>
+                <tr>
+                  <td><strong>v1.0</strong></td>
+                  <td>January 2026</td>
+                  <td>Initial global release supporting 7 jurisdictions (USA, Canada, UK, Australia, New Zealand, India, Europe).</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <div data-component="footer"></div>
+  <script src="/js/components.js" defer></script>
+  <script src="/js/accessibility.js" defer></script>
+  <script src="/js/rates.js" defer></script>
+</body>
+
+</html>

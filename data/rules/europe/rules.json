@@ -1,0 +1,121 @@
+{
+  "jurisdiction": "Europe-Selected-Countries",
+  "currency": "EUR",
+  "last_verified": "2026-09-04",
+  "verification_status": "verified",
+  "scope_clarification": "Selected European economies only. National mortgage laws, property taxes, and notary systems vary substantially by sovereign member state and cannot be modeled as a single uniform Eurozone regime.",
+  "countries": {
+    "germany": {
+      "country_name": "Germany (Deutschland)",
+      "closing_costs": {
+        "transfer_tax_grunderwerbsteuer": {
+          "classification": "regulatory_requirement",
+          "range": "3.5% – 6.5%",
+          "typical_average": 0.050,
+          "description": "Levied at state (Bundesland) level: 3.5% in Bavaria, up to 6.5% in NRW, Brandenburg, and Saarland"
+        },
+        "notary_and_land_registry": {
+          "classification": "regulatory_requirement",
+          "rate": 0.015,
+          "description": "Statutory fees under GNotKG (Gerichts- und Notarkostengesetz)"
+        },
+        "total_cash_closing_costs": "7.0% – 12.0% (must be provided upfront in equity; cannot be rolled into mortgage)"
+      },
+      "underwriting_standards": {
+        "repayment_structure": "Baufinanzierung with fixed interest rate (Sollzins) for 10–20 years and agreed initial principal repayment (Tilgung, typically 1.5% – 3.0%)"
+      }
+    },
+    "france": {
+      "country_name": "France",
+      "closing_costs": {
+        "frais_de_notaire_existing_property": {
+          "classification": "regulatory_requirement",
+          "rate": 0.075,
+          "range": "7.0% – 8.0%",
+          "description": "Transfer duties (droits de mutation) and notary fees for existing residential property"
+        },
+        "frais_de_notaire_new_build": {
+          "classification": "regulatory_requirement",
+          "rate": 0.025,
+          "range": "2.0% – 3.0%",
+          "description": "Reduced notary fees for VEFA / newly constructed homes (subject to 20% VAT)"
+        }
+      },
+      "underwriting_standards": {
+        "hcsf_debt_service_cap": {
+          "classification": "regulatory_requirement",
+          "governing_body": "Haut Conseil de Stabilité Financière (HCSF)",
+          "source_url": "https://www.economie.gouv.fr/hcsf",
+          "effective_from": "2022-01-01",
+          "max_debt_service_ratio": 0.35,
+          "max_tenure_years": 25,
+          "description": "Legally binding cap limiting total housing debt payments (taux d'effort) to a maximum 35% of net household income, with a maximum 25-year amortization (extended to 27 years for new build/major work)."
+        }
+      }
+    },
+    "spain": {
+      "country_name": "Spain (España)",
+      "closing_costs": {
+        "transfer_tax_itp": {
+          "classification": "regulatory_requirement",
+          "range": "6.0% – 10.0%",
+          "typical_average": 0.080,
+          "description": "Impuesto sobre Transmisiones Patrimoniales (ITP) for resale property, set by Autonomous Community (e.g., Madrid 6%, Catalonia 10%, Andalucia 7%)"
+        },
+        "notary_and_registry": {
+          "classification": "regulatory_requirement",
+          "rate": 0.012,
+          "description": "Notary and land registry statutory fees"
+        }
+      },
+      "underwriting_standards": {
+        "variable_mortgage_index": "12-month Euribor benchmark plus bank spread (Hipoteca variable)"
+      }
+    },
+    "italy": {
+      "country_name": "Italy (Italia)",
+      "closing_costs": {
+        "imposta_di_registro_prima_casa": {
+          "classification": "regulatory_requirement",
+          "rate": 0.020,
+          "description": "2% registration tax for primary residence (prima casa) purchased from a private seller"
+        },
+        "imposta_di_registro_seconda_casa": {
+          "classification": "regulatory_requirement",
+          "rate": 0.090,
+          "description": "9% registration tax for secondary residence or non-resident purchase"
+        },
+        "notary_fees": {
+          "classification": "regulatory_requirement",
+          "rate": 0.018,
+          "description": "Notary and technical cadastre deed fees"
+        }
+      }
+    },
+    "netherlands": {
+      "country_name": "Netherlands (Nederland)",
+      "closing_costs": {
+        "overdrachtsbelasting_standard": {
+          "classification": "regulatory_requirement",
+          "rate": 0.020,
+          "description": "2% transfer tax for owner-occupier primary residence"
+        },
+        "overdrachtsbelasting_starter_exemption": {
+          "classification": "regulatory_requirement",
+          "rate": 0.000,
+          "description": "0% transfer tax for buyers aged 18–34 purchasing their primary residence up to the statutory statutory value limit"
+        },
+        "overdrachtsbelasting_investor": {
+          "classification": "regulatory_requirement",
+          "rate": 0.104,
+          "description": "10.4% transfer tax for buy-to-let, holiday, and non-owner-occupied investments"
+        },
+        "notary_and_kadaster": {
+          "classification": "regulatory_requirement",
+          "rate": 0.012,
+          "description": "Notary conveyance and mortgage deed registration"
+        }
+      }
+    }
+  }
+}

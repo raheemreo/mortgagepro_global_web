@@ -27,7 +27,7 @@ if (!fredApiKey) {
 }
 if (!fredApiKey) {
   // Fallback to internal known key from flutter core service for local script runs
-  fredApiKey = '3ead1b6ecf35e7a1c1ea79083f117ef3';
+  fredApiKey = '41ba463031771f72c76db7d7140c051e';
 }
 
 // ─── STALE DATA THRESHOLDS (Financial Publication Windows) ─────────────────

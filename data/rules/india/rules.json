@@ -1,0 +1,67 @@
+{
+  "jurisdiction": "India",
+  "currency": "INR",
+  "last_verified": "2026-09-04",
+  "verification_status": "verified",
+  "rules": {
+    "income_tax_regimes": {
+      "default_regime": {
+        "regime_name": "New Tax Regime (Section 115BAC)",
+        "effective_from": "2023-04-01",
+        "status": "Statutory default tax regime under Finance Act",
+        "self_occupied_interest_sec_24b": 0,
+        "principal_repayment_sec_80c": 0,
+        "let_out_property_rules": "Actual interest paid is deductible against rental income; however, net loss under the head 'Income from house property' cannot be set off against salary or other income heads."
+      },
+      "optional_old_regime": {
+        "regime_name": "Old Tax Regime (Requires explicit annual opt-in)",
+        "section_24b_interest_deduction": {
+          "classification": "regulatory_requirement",
+          "max_annual_deduction": 200000,
+          "unit": "INR",
+          "description": "Up to ₹2 Lakhs per financial year on home loan interest for self-occupied residential property"
+        },
+        "section_80c_principal_deduction": {
+          "classification": "regulatory_requirement",
+          "max_annual_deduction": 150000,
+          "unit": "INR",
+          "description": "Up to ₹1.5 Lakhs combined ceiling for loan principal repayment, stamp duty, and registration charges"
+        }
+      },
+      "historical_sunset_provisions": {
+        "section_80eea": {
+          "classification": "regulatory_requirement",
+          "status": "historical_sunset_provision",
+          "max_deduction": 150000,
+          "unit": "INR",
+          "stamp_duty_valuation_cap": 4500000,
+          "statutory_sanction_window": {
+            "from": "2019-04-01",
+            "to": "2022-03-31"
+          },
+          "regulatory_status_notice": "Section 80EEA was a sunset incentive applicable exclusively to first-time buyer loans sanctioned between April 1, 2019 and March 31, 2022. It is not available for new home loan sanctions today."
+        }
+      }
+    },
+    "lending_regulations": {
+      "external_benchmark_linking": {
+        "classification": "regulatory_requirement",
+        "framework": "RBI External Benchmark Linked Lending Rate (RLLR / EBLR)",
+        "source": "Reserve Bank of India (RBI)",
+        "source_url": "https://www.rbi.org.in",
+        "effective_from": "2019-10-01",
+        "mandate": "All floating-rate retail housing loans sanctioned by commercial banks must be linked to an external benchmark, with the RBI Policy Repo Rate being the industry standard."
+      },
+      "zero_prepayment_penalty": {
+        "classification": "regulatory_requirement",
+        "source": "RBI Master Circular on Housing Finance",
+        "mandate": "Banks and Non-Banking Financial Companies (NBFCs) are strictly prohibited from levying foreclosure charges or prepayment penalties on floating-rate home loans sanctioned to individual borrowers."
+      }
+    },
+    "compounding_standard": {
+      "classification": "regulatory_requirement",
+      "method": "Monthly reducing balance EMI formula",
+      "formula": "EMI = P × r × (1+r)^n / ((1+r)^n - 1)"
+    }
+  }
+}
