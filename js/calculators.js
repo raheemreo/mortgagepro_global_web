@@ -197,9 +197,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const initialLoan = price - downAmount;
     const ltv = initialLoan / price * 100;
 
-    // CMHC premium tier
+    // CMHC premium tier (Ineligible for properties CA$1,500,000 or higher)
     let cmhcRate = 0;
-    if (ltv > 80) {
+    if (ltv > 80 && price < 1500000) {
       if (ltv <= 85) cmhcRate = 0.028;
       else if (ltv <= 90) cmhcRate = 0.031;
       else if (ltv <= 95) cmhcRate = 0.040;

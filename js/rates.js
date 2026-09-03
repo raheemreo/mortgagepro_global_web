@@ -25,7 +25,7 @@ const RATES = {
     note: "Source: Bank of Canada"
   },
   uk: {
-    boe: "5.25%",
+    boe: "4.75%",
     fixed2: "4.75%",
     fixed5: "4.35%",
     tracker: "5.50%",
@@ -40,7 +40,7 @@ const RATES = {
     note: "Source: Reserve Bank of Australia"
   },
   newzealand: {
-    ocr: "2.50%",
+    ocr: "4.75%",
     floating: "8.64%",
     fixed1: "7.09%",
     fixed2: "6.75%",
@@ -48,7 +48,7 @@ const RATES = {
     note: "Source: Reserve Bank of New Zealand"
   },
   india: {
-    repo: "5.25%",
+    repo: "6.50%",
     homeLoanSbi: "8.50%",
     homeLoanHdfc: "8.70%",
     homeLoanIcici: "8.75%",

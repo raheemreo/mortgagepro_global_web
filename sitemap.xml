@@ -109,8 +109,26 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://mortgageproglobal.com/authors/abdul-raheem</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mortgageproglobal.com/affiliate-disclosure</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mortgageproglobal.com/app-privacy-policy</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://mortgageproglobal.com/terms-and-conditions</loc>
-    <lastmod>2026-08-15</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

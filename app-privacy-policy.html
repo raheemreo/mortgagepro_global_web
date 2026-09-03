@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile App Privacy Policy | MortgagePro Global</title>
+  <meta name="description"
+    content="Official Mobile Application Privacy Policy for MortgagePro Global Android App (Google Play). Learn about device permissions, Google AdMob, and data protection.">
+
+  <link rel="canonical" href="https://mortgageproglobal.com/app-privacy-policy">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mobile App Privacy Policy | MortgagePro Global by REO Technologies">
+  <meta property="og:description"
+    content="Official Mobile Application Privacy Policy for MortgagePro Global Android App.">
+  <meta property="og:url" content="https://mortgageproglobal.com/app-privacy-policy">
+  <meta property="og:image" content="https://mortgageproglobal.com/images/og-home.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mobile App Privacy Policy">
+  <meta name="twitter:description" content="Official Android App Privacy Policy for MortgagePro Global.">
+  <meta name="twitter:image" content="https://mortgageproglobal.com/images/og-home.jpg">
+
+  <!-- Verification -->
+  <meta name="google-adsense-account" content="ca-pub-1114757923146718">
+  <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
+  <meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
+
+  <!-- Preload Critical Fonts -->
+  <link rel="preload" href="/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Critical & Typography CSS -->
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('/fonts/inter-400.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url('/fonts/inter-600.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url('/fonts/inter-700.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 800;
+      font-display: swap;
+      src: url('/fonts/inter-800.woff2') format('woff2');
+    }
+
+    :root {
+      --page-primary: #0B1D3A;
+      --page-accent: #B91C1C;
+      --page-bg: #F0F4FF;
+      --text-main: #374151;
+      --text-muted: #6B7280;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: var(--page-bg);
+      color: var(--page-primary);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .skip-link:focus {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99999;
+      background: #0B1D3A;
+      color: #fff;
+      padding: 12px 24px;
+      font-weight: 700;
+      text-decoration: none;
+      font-family: inherit;
+    }
+
+    [data-component] {
+      min-height: 60px;
+    }
+
+    .content-article h1,
+    .content-article h2,
+    .content-article h3,
+    .content-article h4 {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--page-primary);
+      font-weight: 700;
+      letter-spacing: -0.015em;
+    }
+
+    .content-article h2 {
+      font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+      margin: 2.25rem 0 1rem;
+      line-height: 1.3;
+    }
+
+    .content-article h3 {
+      font-size: 1.15rem;
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    .content-article p {
+      color: var(--text-main);
+      margin-bottom: 1.25rem;
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    .content-article ul,
+    .content-article ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .content-article li {
+      margin-bottom: 0.6rem;
+      color: var(--text-main);
+    }
+
+    .content-article code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      background: #F3F4F6;
+      color: #B91C1C;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.88em;
+      border: 1px solid #E5E7EB;
+    }
+
+    .content-article a {
+      color: var(--page-accent);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      font-weight: 500;
+    }
+
+    .content-article a:hover {
+      text-decoration: none;
+    }
+  </style>
+
+  <!-- External Stylesheets (compatibility) -->
+  <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://mortgageproglobal.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Mobile App Privacy Policy",
+        "item": "https://mortgageproglobal.com/app-privacy-policy"
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div data-component="header"></div>
+
+  <!-- Hero -->
+  <section class="page-hero" aria-label="Page introduction" style="background: linear-gradient(135deg, #0B1D3A 0%, #1B3F72 100%); color: #fff; padding: 48px 0;">
+    <div class="container" style="max-width: 1100px; margin: 0 auto; padding: 0 20px;">
+      <nav aria-label="Breadcrumb" style="font-size: 0.85rem; margin-bottom: 12px; color: rgba(255,255,255,0.7);">
+        <a href="/" style="color: rgba(255,255,255,0.7); text-decoration: none;">Home</a> / <a href="/privacy-policy" style="color: rgba(255,255,255,0.7); text-decoration: none;">Privacy Policy</a> / <span style="color: #fff;">Mobile App Policy</span>
+      </nav>
+      <h1 style="font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 800; margin: 0 0 12px; letter-spacing: -0.02em;">Mobile Application Privacy Policy</h1>
+      <p style="font-size: 1.1rem; color: rgba(255,255,255,0.85); margin: 0; max-width: 750px; line-height: 1.6;">
+        Official privacy policy for the MortgagePro Global Android Application published on the Google Play Store by REO Technologies.
+      </p>
+    </div>
+  </section>
+
+  <main id="main-content" style="padding: 48px 0;">
+    <div class="container" style="max-width: 1100px; margin: 0 auto; padding: 0 20px;">
+      <div class="page-layout" style="display: grid; grid-template-columns: 1fr; gap: 40px;">
+        <article class="content-article" style="background: #fff; padding: 40px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);">
+          
+          <div class="article-meta" style="font-size: 0.85rem; color: #6B7280; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E5E7EB; display: flex; gap: 16px; flex-wrap: wrap;">
+            <span><strong>Publisher:</strong> REO Technologies</span>
+            <span><strong>Platform:</strong> Google Play Store (Android)</span>
+            <span><strong>Last Updated:</strong> September 2026</span>
+            <span><strong>Web Companion:</strong> <a href="/privacy-policy">Website Privacy Policy</a></span>
+          </div>
+
+          <div class="article-body">
+            <p>This Mobile Application Privacy Policy applies specifically to the <strong>MortgagePro Global Android Application</strong> ("App") developed and distributed by <strong>REO Technologies</strong> via the Google Play Store. For our web platform data practices, please refer to our dedicated <a href="/privacy-policy">Website Privacy Policy</a>.</p>
+
+            <h2>1. Zero Sensitive Permissions & Local Processing</h2>
+            <p>The MortgagePro Global Mobile Application is engineered to prioritize user privacy and offline computational autonomy:</p>
+            <ul>
+              <li><strong>Zero Invasive Device Permissions:</strong> The App does not request access to your device camera, microphone, contacts, photo gallery, external storage, SMS, or precise GPS location.</li>
+              <li><strong>Client-Side Financial Calculations:</strong> All mortgage amortization, loan comparison, and debt-to-income calculations are executed locally on your device hardware using local math libraries. Your financial numbers, loan amounts, and property values are never transmitted to our servers or stored externally.</li>
+            </ul>
+
+            <h2>2. Advertising SDKs & Consent (Google AdMob)</h2>
+            <p>To support continuous development and keep the Mobile Application free for all users worldwide, the App integrates the <strong>Google Mobile Ads SDK (AdMob)</strong>:</p>
+            <ul>
+              <li><strong>Data Collected by AdMob:</strong> Google AdMob may automatically collect coarse diagnostic data, including device identifiers (Google Advertising ID / GAID), coarse IP-derived location, app interaction metrics, and diagnostics to serve contextual or personalized advertisements.</li>
+              <li><strong>Google User Messaging Platform (UMP):</strong> In compliance with Google Play Developer Program Policies, European GDPR, and UK DPA regulations, the App initializes the Google UMP consent framework. Users within covered jurisdictions are prompted to provide explicit consent before any personalized advertising identifiers are utilized.</li>
+              <li><strong>Managing Advertising ID:</strong> You can reset your Google Advertising ID or opt out of personalized ads directly within your Android device settings via <code>Settings → Google → Ads → Delete Advertising ID</code> or <code>Reset Advertising ID</code>.</li>
+            </ul>
+
+            <h2>3. Application Diagnostics & Performance (Firebase)</h2>
+            <p>We utilize trusted Google developer infrastructure to maintain stability and deliver rate benchmark updates:</p>
+            <ul>
+              <li><strong>Firebase Crashlytics:</strong> Collects anonymized crash logs, operating system versions, and device model identifiers when an application crash occurs. This data contains zero personal information and is used strictly to diagnose and fix technical bugs.</li>
+              <li><strong>Firebase Remote Config:</strong> Used to periodically update statutory benchmark defaults (such as current central bank policy rates) without requiring users to download a full application update. Remote Config does not track or collect personal user profiles.</li>
+            </ul>
+
+            <h2>4. Information We Never Collect or Sell</h2>
+            <p>In accordance with our global data protection principles across all platforms:</p>
+            <ul>
+              <li>We do <strong>not</strong> collect personal names, email addresses, phone numbers, or physical addresses through the mobile app.</li>
+              <li>We do <strong>not</strong> require user account registration, login, or social authentication.</li>
+              <li>We do <strong>not</strong> sell, rent, or trade personal data to third-party data brokers or mortgage originators.</li>
+            </ul>
+
+            <h2>5. Data Deletion & Purging Local Preferences</h2>
+            <p>Because MortgagePro Global does not maintain centralized user accounts, cloud databases, or personal profiles, there is no remote user data to delete. To erase all locally cached calculator history and theme preferences, simply clear the App storage via <code>Android Settings → Apps → MortgagePro Global → Storage → Clear Data</code> or uninstall the application. You can review our full <a href="/data-deletion-policy">Data Deletion Policy</a> for additional instructions.</p>
+
+            <h2>6. Contact & Grievance Redressal</h2>
+            <p>If you have any questions, feedback, or legal inquiries regarding our Android Application data practices, please contact our technical and legal team:</p>
+            <ul>
+              <li><strong>Developer / Legal Entity:</strong> REO Technologies</li>
+              <li><strong>Direct Email:</strong> <a href="mailto:privacy@mortgageproglobal.com">privacy@mortgageproglobal.com</a></li>
+              <li><strong>Technical Support:</strong> <a href="mailto:support@mortgageproglobal.com">support@mortgageproglobal.com</a></li>
+              <li><strong>Official Contact Portal:</strong> <a href="/contact">mortgageproglobal.com/contact</a></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <div data-component="footer"></div>
+  <script src="/js/components.js" defer></script>
+  <script src="/js/accessibility.js" defer></script>
+</body>
+
+</html>
