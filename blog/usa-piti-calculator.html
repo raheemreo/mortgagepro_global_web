@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -370,6 +370,127 @@
 
             <div class="article-content">
               <p>A reader ran the numbers on that same $412,500 home from our Mortgage Calculator article and got $2,340 a month. Then their pre-approval letter came back showing $3,140. Nobody had raised their rate. What happened is PITI — Principal, Interest, Taxes, and Insurance — the actual number lenders qualify you against, not just the P&amp;I your calculator first spits out.</p>
+
+              <!-- Interactive PITI Calculator Widget -->
+              <section class="interactive-calc-widget" aria-label="Interactive PITI Calculator" style="background:#FFFFFF;border:2px solid #E2E8F0;border-radius:16px;padding:24px;margin:28px 0;box-shadow:0 10px 25px -5px rgba(0,0,0,0.06);">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px;">
+                  <h3 style="margin:0;font-size:1.25rem;color:#0B1D3A;display:flex;align-items:center;gap:8px;">
+                    <span>🏠</span> Interactive PITI Mortgage Calculator
+                  </h3>
+                  <span class="rate-badge rate-badge-live"><span class="rate-pulse-dot"></span> Full Escrow Breakdown</span>
+                </div>
+                <p style="font-size:0.95rem;color:#64748B;margin-top:0;margin-bottom:20px;">
+                  Enter your property price, financing terms, and escrow estimates to calculate your full monthly PITI housing commitment.
+                </p>
+
+                <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:16px;margin-bottom:20px;">
+                  <div>
+                    <label for="piti-price" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Home Purchase Price ($)</label>
+                    <input type="number" id="piti-price" value="412500" min="50000" step="5000" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;font-weight:600;box-sizing:border-box;">
+                  </div>
+                  <div>
+                    <label for="piti-down" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Down Payment ($)</label>
+                    <input type="number" id="piti-down" value="82500" min="0" step="2500" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;box-sizing:border-box;">
+                  </div>
+                  <div>
+                    <label for="piti-rate" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Interest Rate (%)</label>
+                    <input type="number" id="piti-rate" value="6.71" min="1.0" max="18.0" step="0.01" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;box-sizing:border-box;">
+                  </div>
+                  <div>
+                    <label for="piti-term" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Loan Term (Years)</label>
+                    <select id="piti-term" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;background:#FFF;box-sizing:border-box;">
+                      <option value="30" selected>30-Year Fixed</option>
+                      <option value="20">20-Year Fixed</option>
+                      <option value="15">15-Year Fixed</option>
+                      <option value="10">10-Year Fixed</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="piti-tax" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Annual Property Tax ($)</label>
+                    <input type="number" id="piti-tax" value="4950" min="0" step="100" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;box-sizing:border-box;">
+                  </div>
+                  <div>
+                    <label for="piti-ins" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Annual Home Insurance ($)</label>
+                    <input type="number" id="piti-ins" value="1800" min="0" step="50" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;box-sizing:border-box;">
+                  </div>
+                  <div>
+                    <label for="piti-hoa" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Monthly HOA / PMI ($)</label>
+                    <input type="number" id="piti-hoa" value="0" min="0" step="25" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;box-sizing:border-box;">
+                  </div>
+                </div>
+
+                <!-- Live Results -->
+                <div style="background:linear-gradient(135deg, #0B1D3A, #1B3F72);border-radius:12px;padding:20px;color:#FFFFFF;">
+                  <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:16px;text-align:center;">
+                    <div style="background:rgba(255,255,255,0.08);padding:14px;border-radius:8px;">
+                      <div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:#94A3B8;margin-bottom:4px;">Principal &amp; Interest</div>
+                      <div id="piti-pi-val" style="font-size:1.75rem;font-weight:800;color:#38BDF8;">$2,132</div>
+                      <div style="font-size:0.8rem;color:#CBD5E1;margin-top:4px;">Mortgage Amortization</div>
+                    </div>
+                    <div style="background:rgba(255,255,255,0.08);padding:14px;border-radius:8px;">
+                      <div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:#94A3B8;margin-bottom:4px;">Monthly Taxes &amp; Ins.</div>
+                      <div id="piti-ti-val" style="font-size:1.75rem;font-weight:800;color:#FBBF24;">$563</div>
+                      <div style="font-size:0.8rem;color:#CBD5E1;margin-top:4px;">Escrow Account Reserve</div>
+                    </div>
+                    <div style="background:rgba(255,255,255,0.12);padding:14px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);">
+                      <div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:#86EFAC;margin-bottom:4px;">Total Monthly PITI</div>
+                      <div id="piti-total-val" style="font-size:1.9rem;font-weight:800;color:#4ADE80;">$2,695</div>
+                      <div style="font-size:0.8rem;color:#FFFFFF;margin-top:4px;">True Out-Of-Pocket</div>
+                    </div>
+                  </div>
+                  <div style="margin-top:14px;font-size:0.82rem;color:rgba(255,255,255,0.75);text-align:center;border-top:1px solid rgba(255,255,255,0.12);padding-top:10px;">
+                    Loan Amount: <strong id="piti-loan-amt" style="color:#FFF;">$330,000</strong> · Taxes: <strong id="piti-tax-mo" style="color:#FFF;">$413/mo</strong> · Insurance: <strong id="piti-ins-mo" style="color:#FFF;">$150/mo</strong>
+                  </div>
+                </div>
+              </section>
+
+              <script>
+                (function() {
+                  function calcPiti() {
+                    const price = parseFloat(document.getElementById('piti-price')?.value) || 0;
+                    const down = parseFloat(document.getElementById('piti-down')?.value) || 0;
+                    const rate = (parseFloat(document.getElementById('piti-rate')?.value) || 0) / 100 / 12;
+                    const termYears = parseFloat(document.getElementById('piti-term')?.value) || 30;
+                    const annualTax = parseFloat(document.getElementById('piti-tax')?.value) || 0;
+                    const annualIns = parseFloat(document.getElementById('piti-ins')?.value) || 0;
+                    const hoa = parseFloat(document.getElementById('piti-hoa')?.value) || 0;
+
+                    const loan = Math.max(0, price - down);
+                    const n = termYears * 12;
+
+                    let pi = 0;
+                    if (loan > 0 && rate > 0) {
+                      pi = loan * (rate * Math.pow(1 + rate, n)) / (Math.pow(1 + rate, n) - 1);
+                    } else if (loan > 0) {
+                      pi = loan / n;
+                    }
+
+                    const monthlyTax = annualTax / 12;
+                    const monthlyIns = annualIns / 12;
+                    const totalTi = monthlyTax + monthlyIns + hoa;
+                    const totalPiti = pi + totalTi;
+
+                    const piEl = document.getElementById('piti-pi-val');
+                    const tiEl = document.getElementById('piti-ti-val');
+                    const totalEl = document.getElementById('piti-total-val');
+                    const loanEl = document.getElementById('piti-loan-amt');
+                    const taxMoEl = document.getElementById('piti-tax-mo');
+                    const insMoEl = document.getElementById('piti-ins-mo');
+
+                    if (piEl) piEl.textContent = '$' + Math.round(pi).toLocaleString();
+                    if (tiEl) tiEl.textContent = '$' + Math.round(totalTi).toLocaleString();
+                    if (totalEl) totalEl.textContent = '$' + Math.round(totalPiti).toLocaleString();
+                    if (loanEl) loanEl.textContent = '$' + Math.round(loan).toLocaleString();
+                    if (taxMoEl) taxMoEl.textContent = '$' + Math.round(monthlyTax).toLocaleString() + '/mo';
+                    if (insMoEl) insMoEl.textContent = '$' + Math.round(monthlyIns).toLocaleString() + '/mo';
+                  }
+
+                  ['piti-price', 'piti-down', 'piti-rate', 'piti-term', 'piti-tax', 'piti-ins', 'piti-hoa'].forEach(id => {
+                    document.getElementById(id)?.addEventListener('input', calcPiti);
+                    document.getElementById(id)?.addEventListener('change', calcPiti);
+                  });
+                })();
+              </script>
 
               <h2>What PITI Actually Stands For, and Why It's Bundled</h2>
               <p>In most of the US, when you take out a mortgage, your lender doesn't just collect principal and interest. They also collect a monthly slice toward your annual property tax bill and homeowners insurance premium, hold it in an escrow account, and pay those bills on your behalf when they're due. It's not optional in most cases — lenders require escrow on the majority of conventional loans with less than 20% down, and on virtually all FHA and VA loans regardless of down payment.</p>

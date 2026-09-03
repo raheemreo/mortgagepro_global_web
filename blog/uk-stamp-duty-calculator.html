@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -379,6 +379,142 @@
 
             <div class="article-content">
               <p>A lot of buyers estimate Stamp Duty by multiplying their purchase price by one percentage. That's not how SDLT works. It's a banded, "slice" tax — different rates apply only to the portion of the price that falls within each band, and a single threshold decides whether first-time buyer relief applies at all, or not even a little.</p>
+
+              <!-- Interactive UK SDLT Calculator Widget -->
+              <section class="interactive-calc-widget" aria-label="Interactive UK Stamp Duty Calculator" style="background:#FFFFFF;border:2px solid #E2E8F0;border-radius:16px;padding:24px;margin:28px 0;box-shadow:0 10px 25px -5px rgba(0,0,0,0.06);">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px;">
+                  <h3 style="margin:0;font-size:1.25rem;color:#0B1D3A;display:flex;align-items:center;gap:8px;">
+                    <span>🏛️</span> Interactive UK Stamp Duty (SDLT) Calculator
+                  </h3>
+                  <span class="rate-badge rate-badge-live"><span class="rate-pulse-dot"></span> Current HMRC Bands</span>
+                </div>
+                <p style="font-size:0.95rem;color:#64748B;margin-top:0;margin-bottom:20px;">
+                  Calculate your exact Stamp Duty Land Tax across England &amp; Northern Ireland under the post-April 2025 statutory schedule.
+                </p>
+
+                <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:16px;margin-bottom:20px;">
+                  <div>
+                    <label for="sdlt-price" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Property Price (£)</label>
+                    <input type="number" id="sdlt-price" value="380000" min="50000" max="10000000" step="5000" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;font-weight:600;box-sizing:border-box;">
+                  </div>
+                  <div>
+                    <label for="sdlt-buyer" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Buyer Circumstance</label>
+                    <select id="sdlt-buyer" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;background:#FFF;box-sizing:border-box;">
+                      <option value="ftb">First-Time Buyer (0% to £300k, relief up to £500k)</option>
+                      <option value="next" selected>Moving Home / Next Residential Property</option>
+                      <option value="additional">Additional Property / Buy-to-Let (+5% Surcharge)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div id="sdlt-ftb-notice" style="display:none;background:#EFF6FF;border:1px solid #BFDBFE;border-radius:8px;padding:10px 14px;margin-bottom:16px;font-size:0.85rem;color:#1E40AF;"></div>
+
+                <!-- Live Results -->
+                <div style="background:linear-gradient(135deg, #0B1D3A, #1B3F72);border-radius:12px;padding:20px;color:#FFFFFF;">
+                  <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:16px;text-align:center;">
+                    <div style="background:rgba(255,255,255,0.08);padding:14px;border-radius:8px;">
+                      <div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:#94A3B8;margin-bottom:4px;">Total SDLT Tax Due</div>
+                      <div id="sdlt-tax-val" style="font-size:1.85rem;font-weight:800;color:#FBBF24;">£9,000</div>
+                      <div style="font-size:0.8rem;color:#CBD5E1;margin-top:4px;">Statutory HMRC Liability</div>
+                    </div>
+                    <div style="background:rgba(255,255,255,0.08);padding:14px;border-radius:8px;">
+                      <div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:#94A3B8;margin-bottom:4px;">Effective Tax Rate</div>
+                      <div id="sdlt-eff-val" style="font-size:1.85rem;font-weight:800;color:#38BDF8;">2.37%</div>
+                      <div style="font-size:0.8rem;color:#CBD5E1;margin-top:4px;">% of Total Purchase Price</div>
+                    </div>
+                    <div style="background:rgba(255,255,255,0.12);padding:14px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);">
+                      <div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:#86EFAC;margin-bottom:4px;">Total Acquisition Cost</div>
+                      <div id="sdlt-total-cost" style="font-size:1.85rem;font-weight:800;color:#4ADE80;">£389,000</div>
+                      <div style="font-size:0.8rem;color:#FFFFFF;margin-top:4px;">Purchase Price + SDLT</div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <script>
+                (function() {
+                  function calcUkSdlt() {
+                    const price = parseFloat(document.getElementById('sdlt-price')?.value) || 0;
+                    const buyer = document.getElementById('sdlt-buyer')?.value || 'next';
+                    const notice = document.getElementById('sdlt-ftb-notice');
+
+                    if (price <= 0) return;
+
+                    let tax = 0;
+                    if (buyer === 'ftb') {
+                      if (price <= 500000) {
+                        if (notice) {
+                          notice.style.display = 'block';
+                          notice.innerHTML = '✅ <strong>First-Time Buyer Relief Active:</strong> 0% up to £300,000, and 5% only on the portion between £300,001 and £500,000.';
+                        }
+                        const taxablePortion = Math.max(0, price - 300000);
+                        tax = taxablePortion * 0.05;
+                      } else {
+                        if (notice) {
+                          notice.style.display = 'block';
+                          notice.innerHTML = 'ℹ️ <strong>Relief Cap Exceeded:</strong> Because purchase price exceeds £500,000, First-Time Buyer relief is completely removed. Standard SDLT bands apply.';
+                        }
+                        // Standard bands
+                        tax = calcStandardSdlt(price, 0);
+                      }
+                    } else if (buyer === 'next') {
+                      if (notice) notice.style.display = 'none';
+                      tax = calcStandardSdlt(price, 0);
+                    } else if (buyer === 'additional') {
+                      if (notice) notice.style.display = 'none';
+                      tax = calcStandardSdlt(price, 0.05); // +5% surcharge
+                    }
+
+                    const effRate = price > 0 ? (tax / price) * 100 : 0;
+
+                    const taxEl = document.getElementById('sdlt-tax-val');
+                    const effEl = document.getElementById('sdlt-eff-val');
+                    const totalCostEl = document.getElementById('sdlt-total-cost');
+
+                    if (taxEl) taxEl.textContent = '£' + Math.round(tax).toLocaleString('en-GB');
+                    if (effEl) effEl.textContent = effRate.toFixed(2) + '%';
+                    if (totalCostEl) totalCostEl.textContent = '£' + Math.round(price + tax).toLocaleString('en-GB');
+                  }
+
+                  function calcStandardSdlt(price, surcharge) {
+                    let t = 0;
+                    // Band 1: 0 - 125,000 @ 0% + surcharge
+                    const b1 = Math.min(price, 125000);
+                    t += b1 * (0.00 + surcharge);
+
+                    // Band 2: 125,001 - 250,000 @ 2% + surcharge
+                    if (price > 125000) {
+                      const b2 = Math.min(price, 250000) - 125000;
+                      t += b2 * (0.02 + surcharge);
+                    }
+
+                    // Band 3: 250,001 - 925,000 @ 5% + surcharge
+                    if (price > 250000) {
+                      const b3 = Math.min(price, 925000) - 250000;
+                      t += b3 * (0.05 + surcharge);
+                    }
+
+                    // Band 4: 925,001 - 1,500,000 @ 10% + surcharge
+                    if (price > 925000) {
+                      const b4 = Math.min(price, 1500000) - 925000;
+                      t += b4 * (0.10 + surcharge);
+                    }
+
+                    // Band 5: > 1,500,000 @ 12% + surcharge
+                    if (price > 1500000) {
+                      const b5 = price - 1500000;
+                      t += b5 * (0.12 + surcharge);
+                    }
+
+                    return t;
+                  }
+
+                  ['sdlt-price', 'sdlt-buyer'].forEach(id => {
+                    document.getElementById(id)?.addEventListener('input', calcUkSdlt);
+                    document.getElementById(id)?.addEventListener('change', calcUkSdlt);
+                  });
+                })();
+              </script>
 
               <h2>The Standard Bands (England and Northern Ireland)</h2>
 

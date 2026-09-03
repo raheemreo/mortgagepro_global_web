@@ -1,10 +1,13 @@
 User-agent: *
 Allow: /
+Disallow: /Designs/
 
 User-agent: Mediapartners-Google
 Allow: /
+Disallow: /Designs/
 
 User-agent: Googlebot
 Allow: /
+Disallow: /Designs/
 
 Sitemap: https://mortgageproglobal.com/sitemap.xml

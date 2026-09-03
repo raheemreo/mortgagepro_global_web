@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -370,6 +370,136 @@
 
             <div class="article-content">
               <p>A lender doesn't just look at whether you can afford your mortgage payment in isolation. They check it against your entire monthly debt picture, twice, using two different thresholds. That's what a debt-to-income (DTI) calculator is actually testing — not one ratio, but a front-end and a back-end number, both of which need to clear the bar.</p>
+
+              <!-- Interactive DTI Calculator Widget -->
+              <section class="interactive-calc-widget" aria-label="Interactive DTI Calculator" style="background:#FFFFFF;border:2px solid #E2E8F0;border-radius:16px;padding:24px;margin:28px 0;box-shadow:0 10px 25px -5px rgba(0,0,0,0.06);">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px;">
+                  <h3 style="margin:0;font-size:1.25rem;color:#0B1D3A;display:flex;align-items:center;gap:8px;">
+                    <span>📊</span> Interactive DTI Calculator
+                  </h3>
+                  <span class="rate-badge rate-badge-live"><span class="rate-pulse-dot"></span> 28/36 Rule Engine</span>
+                </div>
+                <p style="font-size:0.95rem;color:#64748B;margin-top:0;margin-bottom:20px;">
+                  Enter your monthly gross income and debt obligations to calculate your front-end and back-end debt-to-income ratios in real time.
+                </p>
+
+                <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:16px;margin-bottom:20px;">
+                  <div>
+                    <label for="dti-gross-income" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Gross Monthly Income ($)</label>
+                    <input type="number" id="dti-gross-income" value="8400" min="500" step="100" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;font-weight:600;box-sizing:border-box;">
+                  </div>
+                  <div>
+                    <label for="dti-housing-piti" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Proposed Housing PITI ($)</label>
+                    <input type="number" id="dti-housing-piti" value="2350" min="0" step="50" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;font-weight:600;box-sizing:border-box;">
+                  </div>
+                  <div>
+                    <label for="dti-car-loans" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Auto Loan Payments ($)</label>
+                    <input type="number" id="dti-car-loans" value="410" min="0" step="25" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;box-sizing:border-box;">
+                  </div>
+                  <div>
+                    <label for="dti-student-loans" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Student Loan Payments ($)</label>
+                    <input type="number" id="dti-student-loans" value="280" min="0" step="25" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;box-sizing:border-box;">
+                  </div>
+                  <div>
+                    <label for="dti-credit-cards" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Credit Card Minimums ($)</label>
+                    <input type="number" id="dti-credit-cards" value="150" min="0" step="25" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;box-sizing:border-box;">
+                  </div>
+                  <div>
+                    <label for="dti-other-debts" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Other Monthly Debts ($)</label>
+                    <input type="number" id="dti-other-debts" value="0" min="0" step="25" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;box-sizing:border-box;">
+                  </div>
+                </div>
+
+                <!-- Live Results -->
+                <div style="background:linear-gradient(135deg, #0B1D3A, #1B3F72);border-radius:12px;padding:20px;color:#FFFFFF;">
+                  <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:16px;text-align:center;">
+                    <div style="background:rgba(255,255,255,0.08);padding:14px;border-radius:8px;">
+                      <div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:#94A3B8;margin-bottom:4px;">Front-End DTI (Housing)</div>
+                      <div id="dti-frontend-val" style="font-size:1.75rem;font-weight:800;color:#38BDF8;">28.0%</div>
+                      <div id="dti-frontend-status" style="font-size:0.8rem;font-weight:700;color:#4ADE80;margin-top:4px;">Safe (≤ 28% Benchmark)</div>
+                    </div>
+                    <div style="background:rgba(255,255,255,0.08);padding:14px;border-radius:8px;">
+                      <div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:#94A3B8;margin-bottom:4px;">Back-End DTI (Total Debt)</div>
+                      <div id="dti-backend-val" style="font-size:1.75rem;font-weight:800;color:#FBBF24;">38.0%</div>
+                      <div id="dti-backend-status" style="font-size:0.8rem;font-weight:700;color:#FCD34D;margin-top:4px;">Qualified Cap (≤ 43% QM)</div>
+                    </div>
+                    <div style="background:rgba(255,255,255,0.08);padding:14px;border-radius:8px;">
+                      <div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:#94A3B8;margin-bottom:4px;">Total Monthly Debt</div>
+                      <div id="dti-total-debt" style="font-size:1.75rem;font-weight:800;color:#FFFFFF;">$3,190</div>
+                      <div style="font-size:0.8rem;color:#CBD5E1;margin-top:4px;">PITI + Auto + Cards + Loans</div>
+                    </div>
+                  </div>
+                  <div style="margin-top:14px;font-size:0.82rem;color:rgba(255,255,255,0.75);text-align:center;border-top:1px solid rgba(255,255,255,0.12);padding-top:10px;">
+                    Conventional 36% Ceiling: <strong id="dti-max-36" style="color:#FFF;">$3,024/mo</strong> · Qualified Mortgage 43% Cap: <strong id="dti-max-43" style="color:#FFF;">$3,612/mo</strong>
+                  </div>
+                </div>
+              </section>
+
+              <script>
+                (function() {
+                  function calcDti() {
+                    const gross = parseFloat(document.getElementById('dti-gross-income')?.value) || 0;
+                    const piti = parseFloat(document.getElementById('dti-housing-piti')?.value) || 0;
+                    const car = parseFloat(document.getElementById('dti-car-loans')?.value) || 0;
+                    const student = parseFloat(document.getElementById('dti-student-loans')?.value) || 0;
+                    const cards = parseFloat(document.getElementById('dti-credit-cards')?.value) || 0;
+                    const other = parseFloat(document.getElementById('dti-other-debts')?.value) || 0;
+
+                    if (gross <= 0) return;
+
+                    const totalDebts = piti + car + student + cards + other;
+                    const frontEnd = (piti / gross) * 100;
+                    const backEnd = (totalDebts / gross) * 100;
+
+                    const frontEl = document.getElementById('dti-frontend-val');
+                    const frontStatus = document.getElementById('dti-frontend-status');
+                    const backEl = document.getElementById('dti-backend-val');
+                    const backStatus = document.getElementById('dti-backend-status');
+                    const totalEl = document.getElementById('dti-total-debt');
+                    const max36El = document.getElementById('dti-max-36');
+                    const max43El = document.getElementById('dti-max-43');
+
+                    if (frontEl) frontEl.textContent = frontEnd.toFixed(1) + '%';
+                    if (backEl) backEl.textContent = backEnd.toFixed(1) + '%';
+                    if (totalEl) totalEl.textContent = '$' + Math.round(totalDebts).toLocaleString();
+                    if (max36El) max36El.textContent = '$' + Math.round(gross * 0.36).toLocaleString() + '/mo';
+                    if (max43El) max43El.textContent = '$' + Math.round(gross * 0.43).toLocaleString() + '/mo';
+
+                    if (frontStatus) {
+                      if (frontEnd <= 28) {
+                        frontStatus.textContent = 'Safe (≤ 28% Benchmark)';
+                        frontStatus.style.color = '#4ADE80';
+                      } else if (frontEnd <= 35) {
+                        frontStatus.textContent = 'Moderate (28–35% Stretch)';
+                        frontStatus.style.color = '#FCD34D';
+                      } else {
+                        frontStatus.textContent = 'High (> 35% Strict Risk)';
+                        frontStatus.style.color = '#F87171';
+                      }
+                    }
+
+                    if (backStatus) {
+                      if (backEnd <= 36) {
+                        backStatus.textContent = 'Ideal (≤ 36% Benchmark)';
+                        backStatus.style.color = '#4ADE80';
+                      } else if (backEnd <= 43) {
+                        backStatus.textContent = 'Qualified Cap (36–43% QM)';
+                        backStatus.style.color = '#FCD34D';
+                      } else if (backEnd <= 50) {
+                        backStatus.textContent = 'FHA / Compensating Factors (>43%)';
+                        backStatus.style.color = '#FB923C';
+                      } else {
+                        backStatus.textContent = 'Critical (> 50% High Risk)';
+                        backStatus.style.color = '#F87171';
+                      }
+                    }
+                  }
+
+                  ['dti-gross-income', 'dti-housing-piti', 'dti-car-loans', 'dti-student-loans', 'dti-credit-cards', 'dti-other-debts'].forEach(id => {
+                    document.getElementById(id)?.addEventListener('input', calcDti);
+                  });
+                })();
+              </script>
 
               <h2>The Two Ratios</h2>
               <p><strong>Front-end ratio (housing ratio):</strong> your total monthly housing payment (PITI) divided by your gross monthly income. Conventional guidance caps this around 28%.</p>

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -360,6 +360,133 @@
 </header>
 <div class="article-content">
 <p>Put down less than 20% on a Canadian home and mortgage default insurance isn't optional — it's mandatory by law. What surprises a lot of first-time buyers is what the insurance actually protects: not the homeowner, but the lender, in case the borrower defaults. You pay the premium; the lender gets the coverage.</p>
+
+<!-- Interactive CMHC Insurance Calculator Widget -->
+<section class="interactive-calc-widget" aria-label="Interactive CMHC Calculator" style="background:#FFFFFF;border:2px solid #E2E8F0;border-radius:16px;padding:24px;margin:28px 0;box-shadow:0 10px 25px -5px rgba(0,0,0,0.06);">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px;">
+    <h3 style="margin:0;font-size:1.25rem;color:#0B1D3A;display:flex;align-items:center;gap:8px;">
+      <span>🍁</span> Interactive CMHC Insurance Calculator
+    </h3>
+    <span class="rate-badge rate-badge-live"><span class="rate-pulse-dot"></span> CA$1.5M Federal Cap Rules</span>
+  </div>
+  <p style="font-size:0.95rem;color:#64748B;margin-top:0;margin-bottom:20px;">
+    Calculate your mandatory Canadian default insurance premium, minimum statutory deposit, and total mortgage balance capitalized with insurance.
+  </p>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:16px;margin-bottom:20px;">
+    <div>
+      <label for="cmhc-price" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Purchase Price (CAD $)</label>
+      <input type="number" id="cmhc-price" value="700000" min="100000" max="2500000" step="10000" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;font-weight:600;box-sizing:border-box;">
+    </div>
+    <div>
+      <label for="cmhc-down" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Down Payment (CAD $)</label>
+      <input type="number" id="cmhc-down" value="70000" min="5000" step="5000" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;font-weight:600;box-sizing:border-box;">
+    </div>
+    <div>
+      <label for="cmhc-amort" style="display:block;font-size:0.85rem;font-weight:700;color:#1E293B;margin-bottom:6px;">Amortization Schedule</label>
+      <select id="cmhc-amort" style="width:100%;padding:10px 14px;border:1.5px solid #CBD5E1;border-radius:8px;font-size:1rem;background:#FFF;box-sizing:border-box;">
+        <option value="25" selected>25-Year Standard Amortization</option>
+        <option value="30">30-Year Insured (FTB / New Build)</option>
+      </select>
+    </div>
+  </div>
+
+  <div id="cmhc-alert-box" style="display:none;background:#FEF2F2;border:1px solid #FCA5A5;border-radius:8px;padding:12px 16px;margin-bottom:16px;font-size:0.88rem;color:#991B1B;"></div>
+
+  <!-- Live Results -->
+  <div style="background:linear-gradient(135deg, #0B1D3A, #1B3F72);border-radius:12px;padding:20px;color:#FFFFFF;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:16px;text-align:center;">
+      <div style="background:rgba(255,255,255,0.08);padding:14px;border-radius:8px;">
+        <div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:#94A3B8;margin-bottom:4px;">CMHC Premium Rate</div>
+        <div id="cmhc-rate-val" style="font-size:1.75rem;font-weight:800;color:#38BDF8;">3.10%</div>
+        <div id="cmhc-ltv-val" style="font-size:0.8rem;color:#CBD5E1;margin-top:4px;">90.0% LTV Tier</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.08);padding:14px;border-radius:8px;">
+        <div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:#94A3B8;margin-bottom:4px;">Insurance Premium</div>
+        <div id="cmhc-prem-val" style="font-size:1.75rem;font-weight:800;color:#FBBF24;">$19,530</div>
+        <div style="font-size:0.8rem;color:#CBD5E1;margin-top:4px;">Added to Mortgage Loan</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.12);padding:14px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);">
+        <div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:#86EFAC;margin-bottom:4px;">Total Financed Mortgage</div>
+        <div id="cmhc-total-val" style="font-size:1.9rem;font-weight:800;color:#4ADE80;">$649,530</div>
+        <div style="font-size:0.8rem;color:#FFFFFF;margin-top:4px;">Base + Capitalized Premium</div>
+      </div>
+    </div>
+    <div style="margin-top:14px;font-size:0.82rem;color:rgba(255,255,255,0.75);text-align:center;border-top:1px solid rgba(255,255,255,0.12);padding-top:10px;">
+      Minimum Statutory Down Payment: <strong id="cmhc-min-down" style="color:#FFF;">$45,000</strong> · Base Loan Amount: <strong id="cmhc-base-loan" style="color:#FFF;">$630,000</strong>
+    </div>
+  </div>
+</section>
+
+<script>
+(function() {
+  function calcCmhc() {
+    const price = parseFloat(document.getElementById('cmhc-price')?.value) || 0;
+    let down = parseFloat(document.getElementById('cmhc-down')?.value) || 0;
+    const amort = parseInt(document.getElementById('cmhc-amort')?.value) || 25;
+
+    if (price <= 0) return;
+
+    // Minimum statutory down payment
+    let minDown = 0;
+    if (price <= 500000) {
+      minDown = price * 0.05;
+    } else if (price < 1500000) {
+      minDown = 25000 + (price - 500000) * 0.10;
+    } else {
+      minDown = price * 0.20; // Over $1.5M, 20% mandatory
+    }
+
+    const alertBox = document.getElementById('cmhc-alert-box');
+    if (price >= 1500000) {
+      alertBox.style.display = 'block';
+      alertBox.innerHTML = '⚠️ <strong>Federal Cap Exceeded:</strong> Homes priced at or above CA$1,500,000 are ineligible for CMHC default insurance. A minimum 20% down payment (CA$' + Math.round(minDown).toLocaleString() + ') is mandatory.';
+    } else if (down < minDown) {
+      alertBox.style.display = 'block';
+      alertBox.innerHTML = '⚠️ <strong>Below Legal Minimum:</strong> For a purchase price of CA$' + Math.round(price).toLocaleString() + ', Canadian regulations mandate a minimum down payment of CA$' + Math.round(minDown).toLocaleString() + ' (5% on first $500k, 10% on remainder).';
+    } else {
+      alertBox.style.display = 'none';
+    }
+
+    const baseLoan = Math.max(0, price - down);
+    const ltv = (baseLoan / price) * 100;
+
+    let premRate = 0;
+    if (ltv > 90 && ltv <= 95) premRate = 0.0400;
+    else if (ltv > 85 && ltv <= 90) premRate = 0.0310;
+    else if (ltv > 80 && ltv <= 85) premRate = 0.0280;
+    else if (ltv <= 80) premRate = 0.0000;
+    else premRate = 0.0400; // Over 95% not permitted standard
+
+    // 30-year surcharge if insured
+    if (premRate > 0 && amort === 30) {
+      premRate += 0.0020; // 0.20% surcharge
+    }
+
+    const premium = baseLoan * premRate;
+    const totalLoan = baseLoan + premium;
+
+    const rateEl = document.getElementById('cmhc-rate-val');
+    const ltvEl = document.getElementById('cmhc-ltv-val');
+    const premEl = document.getElementById('cmhc-prem-val');
+    const totalEl = document.getElementById('cmhc-total-val');
+    const minDownEl = document.getElementById('cmhc-min-down');
+    const baseLoanEl = document.getElementById('cmhc-base-loan');
+
+    if (rateEl) rateEl.textContent = (premRate * 100).toFixed(2) + '%';
+    if (ltvEl) ltvEl.textContent = ltv.toFixed(1) + '% LTV ' + (premRate === 0 ? '(Conventional)' : 'Tier');
+    if (premEl) premEl.textContent = '$' + Math.round(premium).toLocaleString();
+    if (totalEl) totalEl.textContent = '$' + Math.round(totalLoan).toLocaleString();
+    if (minDownEl) minDownEl.textContent = '$' + Math.round(minDown).toLocaleString();
+    if (baseLoanEl) baseLoanEl.textContent = '$' + Math.round(baseLoan).toLocaleString();
+  }
+
+  ['cmhc-price', 'cmhc-down', 'cmhc-amort'].forEach(id => {
+    document.getElementById(id)?.addEventListener('input', calcCmhc);
+    document.getElementById(id)?.addEventListener('change', calcCmhc);
+  });
+})();
+</script>
 <h2>How the Premium is Priced</h2>
 <p>CMHC (along with the two private insurers, Sagen and Canada Guaranty, who price identically) sets premiums as a percentage of the loan amount, tiered by loan-to-value (LTV) — how much you're borrowing relative to the purchase price.</p>
 <table>
