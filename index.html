@@ -32,9 +32,7 @@
 
   <!-- Verification tags -->
   <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
-  <!-- Preconnect & DNS Prefetch -->
-  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
-  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <!-- DNS Prefetch (Third-Party Domains) -->
   <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <link rel="dns-prefetch" href="https://scripts.clarity.ms">
@@ -143,6 +141,10 @@
 
     [data-component] {
       min-height: 60px;
+    }
+
+    .ad-leaderboard {
+      min-height: 90px;
     }
 
     /* Site Header Critical Layout */
@@ -688,10 +690,7 @@
   }
   </script>
 
-  <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="/css/style.css">
-  </noscript>
+  <link rel="stylesheet" href="/css/style.css">
 
   <meta name="google-adsense-account" content="ca-pub-1114757923146718">
 

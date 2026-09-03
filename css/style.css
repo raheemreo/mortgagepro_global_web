@@ -497,7 +497,7 @@ p {
 .hero-v2 {
   background: linear-gradient(135deg, #050E1D 0%, #0B1D3A 40%, #162E5A 70%, #0B1D3A 100%);
   color: #fff;
-  padding: 80px 0 100px;
+  padding: 60px 0 80px;
   position: relative;
   overflow: hidden;
 }
@@ -527,16 +527,20 @@ p {
 .hero-v2-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 50px;
   align-items: center;
   position: relative;
   z-index: 1;
 }
 
 @media (max-width: 900px) {
+  .hero-v2 {
+    padding: 48px 0 60px;
+  }
+
   .hero-v2-inner {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 30px;
   }
 
   .hero-v2-visual {
@@ -557,16 +561,17 @@ p {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #FCA5A5;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .hero-v2 h1 {
-  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: clamp(2rem, 4.5vw, 3.2rem);
   font-weight: 800;
   color: #fff;
   line-height: 1.15;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
 }
 
 .hero-v2 h1 .accent {
@@ -577,9 +582,9 @@ p {
 }
 
 .hero-v2-desc {
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.75);
-  margin-bottom: 32px;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 28px;
   line-height: 1.7;
   max-width: 520px;
 }
