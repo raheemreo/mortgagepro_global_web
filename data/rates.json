@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-09-06T09:53:32.174Z",
+  "generatedAt": "2026-09-07T11:00:09.535Z",
   "rates": {
     "usa": {
       "fixed30": {
@@ -73,7 +73,7 @@
         "source": "Bank of Canada Valet API",
         "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V39079/json",
         "effectiveDate": "2026-09-02",
-        "lastVerified": "2026-09-06",
+        "lastVerified": "2026-09-07",
         "status": "live",
         "isLive": true
       },
@@ -85,7 +85,7 @@
         "source": "Bank of Canada Valet API",
         "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V80691335/json",
         "effectiveDate": "2026-08-26",
-        "lastVerified": "2026-09-06",
+        "lastVerified": "2026-09-07",
         "status": "stale",
         "isLive": false
       },
@@ -97,7 +97,7 @@
         "source": "Bank of Canada Valet API",
         "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V80691311/json",
         "effectiveDate": "2026-08-26",
-        "lastVerified": "2026-09-06",
+        "lastVerified": "2026-09-07",
         "status": "live",
         "isLive": true
       }
