@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-09-07T11:00:09.535Z",
+  "generatedAt": "2026-09-08T10:15:48.865Z",
   "rates": {
     "usa": {
       "fixed30": {
@@ -11,7 +11,7 @@
         "source": "Freddie Mac PMMS via FRED",
         "sourceUrl": "https://fred.stlouisfed.org/series/MORTGAGE30US",
         "effectiveDate": "2026-09-03",
-        "lastVerified": "2026-09-06",
+        "lastVerified": "2026-09-08",
         "status": "live",
         "isLive": true
       },
@@ -23,7 +23,7 @@
         "source": "Freddie Mac PMMS via FRED",
         "sourceUrl": "https://fred.stlouisfed.org/series/MORTGAGE15US",
         "effectiveDate": "2026-09-03",
-        "lastVerified": "2026-09-06",
+        "lastVerified": "2026-09-08",
         "status": "live",
         "isLive": true
       },
@@ -35,7 +35,7 @@
         "source": "Federal Reserve Board via FRED",
         "sourceUrl": "https://fred.stlouisfed.org/series/DPRIME",
         "effectiveDate": "2026-09-02",
-        "lastVerified": "2026-09-06",
+        "lastVerified": "2026-09-08",
         "status": "stale",
         "isLive": false
       },
@@ -47,7 +47,7 @@
         "source": "Federal Reserve Bank of New York via FRED",
         "sourceUrl": "https://fred.stlouisfed.org/series/FEDFUNDS",
         "effectiveDate": "2026-08-01",
-        "lastVerified": "2026-09-06",
+        "lastVerified": "2026-09-08",
         "status": "live",
         "isLive": true
       },
@@ -72,8 +72,8 @@
         "instrument": "Policy Interest Rate (Overnight)",
         "source": "Bank of Canada Valet API",
         "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V39079/json",
-        "effectiveDate": "2026-09-02",
-        "lastVerified": "2026-09-07",
+        "effectiveDate": "2026-09-03",
+        "lastVerified": "2026-09-08",
         "status": "live",
         "isLive": true
       },
@@ -85,7 +85,7 @@
         "source": "Bank of Canada Valet API",
         "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V80691335/json",
         "effectiveDate": "2026-08-26",
-        "lastVerified": "2026-09-07",
+        "lastVerified": "2026-09-08",
         "status": "stale",
         "isLive": false
       },
@@ -97,7 +97,7 @@
         "source": "Bank of Canada Valet API",
         "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V80691311/json",
         "effectiveDate": "2026-08-26",
-        "lastVerified": "2026-09-07",
+        "lastVerified": "2026-09-08",
         "status": "live",
         "isLive": true
       }
