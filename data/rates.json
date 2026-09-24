@@ -1,28 +1,28 @@
 {
   "version": 2,
-  "generatedAt": "2026-09-24T10:43:32.623Z",
+  "generatedAt": "2026-09-24T22:58:11.658Z",
   "rates": {
     "usa": {
       "fixed30": {
-        "rate": 6.95,
-        "formatted": "6.95%",
+        "rate": 7.03,
+        "formatted": "7.03%",
         "unit": "%",
         "instrument": "30-Year Fixed-Rate Mortgage",
         "source": "Freddie Mac PMMS via FRED",
         "sourceUrl": "https://fred.stlouisfed.org/series/MORTGAGE30US",
-        "effectiveDate": "2026-09-17",
+        "effectiveDate": "2026-09-24",
         "lastVerified": "2026-09-24",
         "status": "live",
         "isLive": true
       },
       "fixed15": {
-        "rate": 6.26,
-        "formatted": "6.26%",
+        "rate": 6.42,
+        "formatted": "6.42%",
         "unit": "%",
         "instrument": "15-Year Fixed-Rate Mortgage",
         "source": "Freddie Mac PMMS via FRED",
         "sourceUrl": "https://fred.stlouisfed.org/series/MORTGAGE15US",
-        "effectiveDate": "2026-09-17",
+        "effectiveDate": "2026-09-24",
         "lastVerified": "2026-09-24",
         "status": "live",
         "isLive": true
@@ -72,7 +72,7 @@
         "instrument": "Policy Interest Rate (Overnight)",
         "source": "Bank of Canada Valet API",
         "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V39079/json",
-        "effectiveDate": "2026-09-21",
+        "effectiveDate": "2026-09-22",
         "lastVerified": "2026-09-24",
         "status": "live",
         "isLive": true
@@ -96,7 +96,7 @@
         "instrument": "Chartered Bank Prime Business Rate",
         "source": "Bank of Canada Valet API",
         "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V80691311/json",
-        "effectiveDate": "2026-09-09",
+        "effectiveDate": "2026-09-16",
         "lastVerified": "2026-09-24",
         "status": "live",
         "isLive": true
