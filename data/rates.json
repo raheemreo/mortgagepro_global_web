@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-10-14T10:49:46.797Z",
+  "generatedAt": "2026-10-15T10:32:08.934Z",
   "rates": {
     "usa": {
       "fixed30": {
@@ -11,7 +11,7 @@
         "source": "Freddie Mac PMMS via FRED",
         "sourceUrl": "https://fred.stlouisfed.org/series/MORTGAGE30US",
         "effectiveDate": "2026-10-08",
-        "lastVerified": "2026-10-14",
+        "lastVerified": "2026-10-15",
         "status": "live",
         "isLive": true
       },
@@ -23,7 +23,7 @@
         "source": "Freddie Mac PMMS via FRED",
         "sourceUrl": "https://fred.stlouisfed.org/series/MORTGAGE15US",
         "effectiveDate": "2026-10-08",
-        "lastVerified": "2026-10-14",
+        "lastVerified": "2026-10-15",
         "status": "live",
         "isLive": true
       },
@@ -34,10 +34,10 @@
         "instrument": "Bank Prime Loan Rate",
         "source": "Federal Reserve Board via FRED",
         "sourceUrl": "https://fred.stlouisfed.org/series/DPRIME",
-        "effectiveDate": "2026-10-02",
-        "lastVerified": "2026-10-14",
-        "status": "stale",
-        "isLive": false
+        "effectiveDate": "2026-10-13",
+        "lastVerified": "2026-10-15",
+        "status": "live",
+        "isLive": true
       },
       "fedEffective": {
         "rate": 3.75,
@@ -47,7 +47,7 @@
         "source": "Federal Reserve Bank of New York via FRED",
         "sourceUrl": "https://fred.stlouisfed.org/series/FEDFUNDS",
         "effectiveDate": "2026-09-01",
-        "lastVerified": "2026-10-14",
+        "lastVerified": "2026-10-15",
         "status": "live",
         "isLive": true
       },
@@ -72,22 +72,22 @@
         "instrument": "Policy Interest Rate (Overnight)",
         "source": "Bank of Canada Valet API",
         "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V39079/json",
-        "effectiveDate": "2026-10-09",
-        "lastVerified": "2026-10-14",
+        "effectiveDate": "2026-10-12",
+        "lastVerified": "2026-10-15",
         "status": "live",
         "isLive": true
       },
       "fixed5": {
-        "rate": 6.09,
-        "formatted": "6.09%",
+        "rate": 6.19,
+        "formatted": "6.19%",
         "unit": "%",
         "instrument": "5-Year Conventional Mortgage Benchmark",
         "source": "Bank of Canada Valet API",
         "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V80691335/json",
-        "effectiveDate": "2026-09-30",
-        "lastVerified": "2026-10-14",
-        "status": "stale",
-        "isLive": false
+        "effectiveDate": "2026-10-07",
+        "lastVerified": "2026-10-15",
+        "status": "live",
+        "isLive": true
       },
       "prime": {
         "rate": 4.45,
@@ -97,7 +97,7 @@
         "source": "Bank of Canada Valet API",
         "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V80691311/json",
         "effectiveDate": "2026-09-30",
-        "lastVerified": "2026-10-14",
+        "lastVerified": "2026-10-15",
         "status": "live",
         "isLive": true
       }
