@@ -17,7 +17,7 @@ BOOTSTRAP='''<script data-mpg-consent>
 POLICY={'privacy-policy.html','cookie-policy.html','terms-and-conditions.html','disclaimer.html','data-deletion-policy.html','app-privacy-policy.html','contact.html','404.html','editorial-policy.html','corrections-policy.html','affiliate-disclosure.html'}
 def build():
  digest=hashlib.sha256((ROOT/'js/site-privacy.js').read_bytes()).hexdigest()[:12]
- for path in list(ROOT.glob('*.html'))+list((ROOT/'blog').glob('*.html'))+list((ROOT/'authors').glob('*.html')):
+ for path in list(ROOT.glob('*.html'))+list((ROOT/'blog').glob('*.html'))+list((ROOT/'authors').glob('*.html'))+list((ROOT/'tools').rglob('*.html')):
   s=path.read_text(encoding='utf-8-sig')
   if '<head' not in s:continue
   def clean(m):

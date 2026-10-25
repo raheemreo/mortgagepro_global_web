@@ -1,0 +1,226 @@
+{
+  "repository": "raheemreo/mortgagepro_global",
+  "commit": "9f79ea943e27b6d8b0c1ca411c37fb4cae077f72",
+  "files": [
+    {
+      "path": "lib/core/navigation/tool_id_map.dart",
+      "chars": 18211,
+      "sha": "bf28444e201fa24b7a6530bf17beab4c8674b4d2"
+    },
+    {
+      "path": "lib/core/utils/mortgage_math.dart",
+      "chars": 6838,
+      "sha": "788c3db84e01f016c5a2c63d3b76cf5a62685757"
+    },
+    {
+      "path": "lib/core/utils/pmi_calculator.dart",
+      "chars": 1437,
+      "sha": "ab97e66eca0c58fe572264404549c0d1ee431cda"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_arm_calc.dart",
+      "chars": 52791,
+      "sha": "eed720db8ac3d56de6359ecd6436d00eec9a28c8"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_1031_exchange_calc.dart",
+      "chars": 48617,
+      "sha": "24b26111ac5523514e9afc629f5de6a2166dc0f2"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_amortization_calc.dart",
+      "chars": 60613,
+      "sha": "77f66de50a874f733ea78b57866cb409b26b7dc7"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_cash_on_cash_calc.dart",
+      "chars": 41862,
+      "sha": "0bf0aff2cfe1a078e29fbe6842b893116fa3a5d7"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_closing_costs_calc.dart",
+      "chars": 49356,
+      "sha": "46c0419fbbc043a41984261812296b449cb9821c"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_affordability_calc.dart",
+      "chars": 67645,
+      "sha": "a1fbd68123e0c169d768330953ff1a07121e4f24"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_auto_loan_calc.dart",
+      "chars": 76797,
+      "sha": "6c940696787f6ba3f000d67263015cf26ee59a9f"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_debt_payoff_planner.dart",
+      "chars": 47158,
+      "sha": "637a7dbe2c1c492637024b939c6358d711e62aa6"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_fha_loan_calc.dart",
+      "chars": 63723,
+      "sha": "342dbcbf36c3c491f11023edf6f240a05806af1a"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_credit_score_impact_calc.dart",
+      "chars": 35231,
+      "sha": "c31a13180ea223f0f7ad677fa53fe3b0136332c9"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_construction_loan_calc.dart",
+      "chars": 62450,
+      "sha": "27918515045d3f4d0ce28a2468407896b308bbdc"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_down_payment_calc.dart",
+      "chars": 79452,
+      "sha": "79999da8cd9645d58cd345e8fb659716c115afad"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_dti_calc.dart",
+      "chars": 63383,
+      "sha": "e4b494e2fb69befb34d1cfc84668b70cb9dc360c"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_heloc_calc.dart",
+      "chars": 36416,
+      "sha": "bab51d3b156df7fe858fbc1b1ed425d19295f176"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_fix_flip_calc.dart",
+      "chars": 45634,
+      "sha": "2be8950c94f32e7c54d00128740d23a99f8a1ff2"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_homeowner_insurance_calc.dart",
+      "chars": 43644,
+      "sha": "c7ea7dae61fb240430ecb134b44eac0e89e8a7f8"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_flood_insurance_calc.dart",
+      "chars": 58581,
+      "sha": "021de0eb7ae5c7895a04c03472b73c68975b1f04"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_hoa_fee_impact_calc.dart",
+      "chars": 52409,
+      "sha": "33c3ef93bc2a39b58c8c15e902722968ace2400f"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_home_equity_loan_calc.dart",
+      "chars": 36083,
+      "sha": "3ec8fd24881e2d68b8fda9193adad36e9cce1de6"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_homeowner_insurance_ho1_calc.dart",
+      "chars": 46843,
+      "sha": "a69d3b52dd48afd24803a7be6cf468cc9e87fc79"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_homeowner_insurance_ho3_calc.dart",
+      "chars": 46726,
+      "sha": "5be15ba8e91c8eea76a361e4f1ab4e8bcef46e84"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_homeowner_insurance_ho6_calc.dart",
+      "chars": 50669,
+      "sha": "63bb44be6cfd36fc9f3edfa74c328e5020f61963"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_homeowner_insurance_wildfire_calc.dart",
+      "chars": 56467,
+      "sha": "3a85338f953c9b7b5799c5cd2ea57d0cbac23430"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_homeowner_insurance_ho5_calc.dart",
+      "chars": 43440,
+      "sha": "389921958d63e02d9efff69576ea6abed2ee8317"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_homeowner_insurance_hurricane_calc.dart",
+      "chars": 47398,
+      "sha": "69a7a64bd61d41a10370e4bf16c048fd2f1df09c"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_mortgage_calc.dart",
+      "chars": 65871,
+      "sha": "33f103a7ffcf8d08c074d412ca53d6b2e8d550b0"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_hud_dpa_programs.dart",
+      "chars": 76377,
+      "sha": "8ce9a2cf611be0672cd8479d6860ad3fed40b214"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_jumbo_loan_calc.dart",
+      "chars": 68437,
+      "sha": "c1cbe12ed3c40e69d8de33db2b2b267bfca3de8b"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_moving_cost_calc.dart",
+      "chars": 45065,
+      "sha": "9faf19cf71274b8eae71459fa6bea60958b1a1bd"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_piti_calc.dart",
+      "chars": 74140,
+      "sha": "0d85a854abd2094ed04ec9a4697f439cc59c8c5e"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_piggyback_loan_calc.dart",
+      "chars": 71524,
+      "sha": "3c5a2568fc0f7211ae7ae7df1f257ec2f2f33290"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_rental_yield_calc.dart",
+      "chars": 55356,
+      "sha": "5fb687cf875a9e3b458eb55c3a1c5a6f743054ed"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_pmi_calc.dart",
+      "chars": 50386,
+      "sha": "9e18f8e787ab4d84b8e9108307fc10a61d3cc152"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_rent_vs_buy_calc.dart",
+      "chars": 53870,
+      "sha": "afe294f853f9837e4cdd771f0e83e867c662832e"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_refinance_calc.dart",
+      "chars": 83311,
+      "sha": "b0e4ea9c1ceec5410882c45feb0611f9cb09f1e0"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_student_loan_dti_calc.dart",
+      "chars": 44030,
+      "sha": "8f6bda24b10f48d35ec8307036395687e2a44638"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_property_tax_calc.dart",
+      "chars": 53030,
+      "sha": "e5586af0d461a644e14c31848cd730436627b306"
+    },
+    {
+      "path": "lib/features/usa/usa_screen.dart",
+      "chars": 53962,
+      "sha": "7dfcae167487df66b2a138f4ca075cd7f3f7c336"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_tax_deduction_calc.dart",
+      "chars": 47135,
+      "sha": "e3867b0829426db2c893d35f7799e8182312473c"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_usda_loan_calc.dart",
+      "chars": 64595,
+      "sha": "a33214acead8cf1cf399ba756bf450cb84997757"
+    },
+    {
+      "path": "lib/features/usa/tools/usa_va_loan_calc.dart",
+      "chars": 57532,
+      "sha": "e951631eab7a4ea28979d07062919539e928b5bf"
+    }
+  ]
+}
