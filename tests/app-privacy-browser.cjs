@@ -49,6 +49,7 @@ const packages=['com.reotech.mortgage_calculator','com.reotech.mortgagepro_globa
    assert.ok(contrast.heading>=3&&contrast.link>=4.5,'readable heading/link contrast: '+JSON.stringify(contrast));
    const listed=await page.locator('main table tbody tr td:last-child code').allTextContents();
    assert.deepEqual(listed,packages,'all seven exact package identifiers, preserving Canada dot');
+   assert.equal(await page.locator('main table td').evaluateAll(cells=>cells.some(cell=>cell.scrollWidth>cell.clientWidth+1)),false,'package identifiers fit their cells without clipping');
    const schema=await page.locator('script[type="application/ld+json"]').allTextContents();
    const policy=schema.map(s=>JSON.parse(s)).find(s=>s['@type']==='WebPage');
    assert.deepEqual(policy.about.map(app=>app.identifier),packages,'structured data matches the visible covered-app list');
