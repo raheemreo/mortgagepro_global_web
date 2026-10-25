@@ -38,7 +38,7 @@ Standard owner-occupied one/two-unit traditional-down purchase scope only. Inter
 
 ## Verification
 
-- 55 Canada model/catalog/provenance tests, including official Montreal CAD 700,000 → CAD 9,349 transfer-duty example, other province boundaries, CMHC tiers, payment/conservation, long schedules, fee comparisons, missing/invalid fields and zero interest.
-- Full financial regression suite: 176 tests.
+- 56 Canada model/catalog/provenance tests, including official Montreal CAD 700,000 → CAD 9,349 transfer-duty example, other province boundaries, CMHC tiers, payment/conservation, long schedules, fee comparisons, missing/invalid fields, zero interest and the full supported quote-rate boundary including the qualifying buffer.
+- Full financial regression suite: 177 tests.
 - Browser regression at desktop 1,280 px, mobile 390 px and narrow dark-mode 320 px: all 15 tools, eight widgets and root calculator, explicit submit only, edit/reset clearing, invalid values, zero rates, regional links and CSV export. No external ad requests or financial-input writes allowed.
 - No-JavaScript formulas and references remain readable. Builds are reproducible; generated pages, clean routes, sitemap, metadata, navigation and privacy ordering are checked.
