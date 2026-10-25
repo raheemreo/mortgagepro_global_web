@@ -1,60 +1,56 @@
-# Down Payment Calculator: What Actually Changes at 3%, 5%, 10%, and 20%
+# US Down Payment Calculator: Compare Cash, PMI and Monthly Payments
 
-**Meta description:** See exactly what shifts — PMI, rate access, and monthly payment — at each common US down payment tier, not just the size of the check you write.
+**Meta description:** Compare 3%, 5%, 10% and 20% down payments with explicit PMI assumptions, checked monthly payments and a separate cash-to-close budget.
 
-Down payment size does more than determine your loan amount. At four common thresholds — 3%, 5%, 10%, and 20% — different rules kick in that change your monthly payment beyond simple math.
+A bigger down payment reduces the loan, but it also leaves less cash in your account after closing. Comparing the monthly saving with the extra cash committed is more useful than treating 20% as a target everyone must reach.
 
-## The four tiers, and what each one unlocks
+Use the calculator to try a purchase price and down-payment percentage. PMI is an assumption you can edit, not an insurance quote. The result separates principal and interest from PMI and does not include taxes, homeowners insurance or HOA dues.
 
-**3% down** — the minimum for many conventional conforming loans aimed at first-time buyers. PMI applies, typically at the higher end of the pricing scale since loan-to-value is highest.
+<!-- calculator -->
 
-**5% down** — opens up a broader set of conventional loan programs beyond first-time-buyer-specific options. PMI still applies but usually prices slightly better than 3% down.
+## What changes at the common down-payment levels?
 
-**10% down** — a meaningful jump in loan-to-value that noticeably lowers PMI pricing, and on FHA loans specifically, drops the mortgage insurance duration from life-of-loan to cancelable after 11 years.
+Some conventional programs permit 3% down for eligible buyers. Eligibility can depend on income, property use, education and first-time-buyer status. [Fannie Mae's down-payment overview](https://yourhome.fanniemae.com/buy/homebuyer-down-payment) distinguishes HomeReady from its standard 97% financing option; not every 3%-down program has identical rules.
 
-**20% down** — the traditional threshold that eliminates PMI entirely on a conventional loan and, on many lenders' pricing grids, unlocks marginally better rate pricing on top of the insurance savings.
+At 5% or 10% down, principal is lower and PMI pricing may differ, but the premium depends on the borrower and product. At 20% down on a typical conventional purchase, borrower-paid monthly PMI is generally unnecessary. That threshold does not waive FHA mortgage insurance, establish loan approval or guarantee the best note rate.
 
-## Worked comparison
+## Compare one price with four cash commitments
 
-On a $412,500 home at 6.47%, 30-year fixed:
+This example holds price at **$412,500**, rate at **7.32%**, and term at **30 years**. The rate is an illustrative use of the October 22, 2026 Freddie Mac benchmark cited in the [mortgage guide](/blog/usa-mortgage-calculator). Each PMI rate below is an explicitly chosen scenario input, **not a current market average**.
 
-| Down payment | Loan amount | Est. PMI/month | Est. total monthly (P&I + PMI) |
-|---|---|---|---|
-| 3% ($12,375) | $400,125 | ~$310 | ~$2,835 |
-| 5% ($20,625) | $391,875 | ~$260 | ~$2,730 |
-| 10% ($41,250) | $371,250 | ~$140 | ~$2,480 |
-| 20% ($82,500) | $330,000 | $0 | ~$2,080 |
+| Down payment | Cash down | Principal | Assumed PMI/year | P&I/month | PMI/month | P&I + PMI/month |
+|---|---|---|---|---|---|---|
+| 3% | $12,375 | $400,125 | 0.93% | $2,748.58 | $310.10 | $3,058.68 |
+| 5% | $20,625 | $391,875 | 0.80% | $2,691.91 | $261.25 | $2,953.16 |
+| 10% | $41,250 | $371,250 | 0.45% | $2,550.23 | $139.22 | $2,689.45 |
+| 20% | $82,500 | $330,000 | 0.00% | $2,266.87 | $0.00 | $2,266.87 |
 
-The gap between 3% and 20% down here is roughly $750/month — not just from the smaller loan, but from PMI stacking on top of it at the lower tiers.
+Moving from 3% to 20% down commits an additional **$70,125** and lowers the modeled P&I-plus-PMI cost by **$791.81 a month**. Some of that difference repays a smaller principal balance and some avoids the assumed insurance charge. It is not a simple investment return or a permanent saving: PMI may end, and actual quotes may use different rates.
 
-## Common mistakes
+## Keep closing costs separate
 
-Buyers sometimes assume a bigger down payment is always the right move, without weighing the opportunity cost of tying up that extra cash versus keeping it liquid — especially if the alternative use of that money (an emergency fund, other investments) matters more to their specific situation.
+A $41,250 down payment does not mean $41,250 is the total cash needed. Lender charges, appraisal and title costs, prepaid insurance and initial escrow can add to cash to close. Seller credits, deposits already paid and assistance programs can change it too. Use the lender's [Loan Estimate](https://www.consumerfinance.gov/owning-a-home/loan-estimate/) rather than a fixed national percentage to settle the budget.
 
-Buyers also underestimate how much PMI actually costs over time on the low end. On the 3% down scenario above, PMI alone runs roughly $3,700/year until it's removable — real money that a slightly larger down payment could avoid.
+Try writing down three figures before increasing your deposit: money needed at closing, money needed for immediate repairs or moving, and cash you want left for emergencies. The lowest monthly bill may be a poor fit if it uses the reserve you need to keep the home running.
 
-## Where this calculator has limits
+## Understand how PMI ends
 
-It doesn't factor in down payment assistance programs, which can effectively let a buyer "put down" more than their own cash covers. It also can't model your specific PMI rate without your credit score — the estimates above use average pricing, and your actual quote could run higher or lower.
+For many covered conventional loans, a written cancellation request at 80% of original value has payment-history, lien and value conditions. Scheduled termination at 78% generally requires current payments. Appreciation-based removal follows separate servicer/investor rules; it is not automatic at 20% current equity. See the [CFPB cancellation explanation](https://www.consumerfinance.gov/ask-cfpb/when-can-i-remove-private-mortgage-insurance-pmi-from-my-loan-en-202/) before assuming a removal date.
 
-## FAQ
+## Questions readers often ask
 
-**Is there ever a reason to put down less than I can afford?**
-Yes — keeping cash liquid for emergencies, renovations, or other financial goals is a legitimate reason many buyers choose a lower down payment even when they could put more down.
+### Is FHA's minimum down payment also 3%?
 
-**Does 20% down guarantee the best rate?**
-Not automatically, but it typically improves pricing on most lenders' rate sheets compared to lower down payment tiers, on top of removing PMI.
+No. Standard FHA maximum financing can allow 3.5% down for a qualifying borrower with a decision credit score of at least 580; other requirements and lender standards apply. The [FHA guide](/blog/usa-fha-loan-calculator) explains why the insurance structure also needs a separate comparison.
 
-**Can I remove PMI without refinancing?**
-Yes — once you reach 20% equity through paydown or appreciation, you can typically request PMI cancellation directly from your servicer.
+### Should I enter money from an assistance program?
 
-**What's the minimum down payment for FHA vs. conventional?**
-FHA allows as low as 3.5% down (with a 580+ credit score); conventional loans can go as low as 3% for qualifying first-time buyers.
+Only after confirming how it works. A grant and a repayable second loan affect cash and monthly obligations differently. This tool does not check program eligibility, repayment clauses or whether the lender accepts a funding source.
 
-## Related tools
+### Why did PMI disappear in the result?
 
-FHA Loan Calculator · Mortgage Calculator · Affordability Calculator
+This widget models a conventional loan with borrower-paid monthly PMI. At 20% down or more it sets that charge to zero. A zero-PMI assumption below 20% must be supported by your actual product; some alternatives shift costs into a rate or upfront fee.
 
----
+## Related guides
 
-*Educational content, not financial advice. PMI pricing varies by lender, credit score, and loan-to-value — confirm exact figures with a licensed mortgage lender. Written by the MortgagePro Global team.*
+[Affordability](/blog/usa-affordability-calculator) · [FHA](/blog/usa-fha-loan-calculator) · [Mortgage payment](/blog/usa-mortgage-calculator)

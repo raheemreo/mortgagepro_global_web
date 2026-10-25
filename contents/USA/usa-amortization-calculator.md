@@ -1,60 +1,63 @@
-# Amortization Calculator: Why Your First Payment Is Mostly Interest (And When That Flips)
+# US Mortgage Amortization: Track Principal, Interest and Extra Payments
 
-**Meta description:** See exactly how a 30-year US mortgage payment splits between principal and interest month by month, and why the early years feel so lopsided.
+**Meta description:** Follow a US mortgage balance month by month with a checked amortization example, a full schedule and an extra-payment comparison.
 
-On that $371,250 loan at 6.47% from our Mortgage Calculator example, the very first monthly payment of $2,340 breaks down like this: about $2,000 goes to interest, and only $340 actually reduces the loan balance. That ratio doesn't stay fixed — it shifts every single month for 30 years — and understanding the curve changes how people think about extra payments, refinancing timing, and how much equity they're really building.
+On a $371,250 loan at 7.32% for 30 years, scheduled principal and interest are $2,550.23 a month. In month one, **$2,264.63 is interest and $285.60 repays principal**. That can feel slow when you have just taken on a large monthly bill. The schedule explains where the money goes and lets you test whether an extra payment is worth the loss of cash flexibility.
 
-## Why it's front-loaded
+<!-- calculator -->
 
-Interest is calculated each month on your *remaining* balance, not the original loan amount. Early on, your balance is close to the full $371,250, so the interest portion is large. As principal chips away at that balance, the interest owed each month shrinks — and since your total payment stays flat under a fixed-rate loan, the difference flows into principal instead.
+## Why the split changes each month
 
-## The curve, roughly
+For this fixed-rate example, monthly interest is the balance before the payment multiplied by 7.32% ÷ 12. Subtract that interest from the scheduled payment to find principal repaid. As the balance falls, interest falls too, so more of the next fixed payment reaches principal.
 
-| Month | Principal balance remaining | Monthly interest | Monthly principal |
+This is not a separate interest penalty collected in advance. It is interest on the unpaid balance. The [CFPB Loan Estimate explainer](https://www.consumerfinance.gov/owning-a-home/loan-estimate/) distinguishes the loan's principal-and-interest payment from the total monthly payment with insurance and escrow.
+
+## A schedule you can reproduce
+
+The following rows use $371,250, 7.32%, 360 payments and no extra principal. **Balance remaining is measured after that month's payment**. Internal calculations retain precision; displayed figures are rounded to cents.
+
+| Payment month | Balance after payment | Interest in that payment | Principal in that payment |
 |---|---|---|---|
-| 1 | $371,250 | ~$2,000 | ~$340 |
-| 60 (year 5) | ~$346,000 | ~$1,865 | ~$475 |
-| 180 (year 15) | ~$264,000 | ~$1,425 | ~$915 |
-| 300 (year 25) | ~$99,000 | ~$535 | ~$1,805 |
-| 360 (year 30) | $0 | ~$13 | ~$2,327 |
+| 1 | $370,964.40 | $2,264.63 | $285.60 |
+| 60 | $350,632.46 | $2,141.35 | $408.88 |
+| 180 | $278,162.44 | $1,701.97 | $848.26 |
+| 300 | $127,814.91 | $790.41 | $1,759.82 |
+| 360 | $0.00 | $15.46 | $2,534.77 |
 
-The crossover point — where more of your payment goes to principal than interest — doesn't happen until roughly year 19 on this loan. For the first third of a 30-year mortgage, interest is winning most months.
+Principal first exceeds interest in **payment 248**, about 20 years and 8 months into this particular schedule. There is no universal crossover year: the rate and term both affect it. At a zero rate, every dollar is principal from the first payment.
 
-> **Quick check:** This is also why refinancing resets the clock in a way that matters. Refinance in year 8 into a new 30-year term, and you're back near the top of a fresh interest-heavy curve — even if your rate drops.
+## What an extra $200 changes
 
-## Common mistakes
+If you add $200 toward principal starting with the first payment, keep the same note rate and make every payment on time, this example pays off in **286 months rather than 360**. Modeled interest falls from about **$546,832.77 to $412,939.77**, a difference of about **$133,893**. The final payment is smaller than the regular payment plus $200.
 
-People assume home equity builds in a straight line — it doesn't, especially in the first decade, where price appreciation typically does more work than principal paydown.
+These are model results, not a return guarantee or a suggestion to empty your savings. Before sending extra money, ask the servicer how to mark it as principal-only, whether the loan has a prepayment charge, and how partial payments are handled. The calculator does not include fees, missed payments, interest earned elsewhere or changes to taxes and insurance.
 
-People also underestimate what extra payments do early versus late. An extra $200/month applied in year 2 attacks a much larger interest-heavy balance and can cut years off the loan; the same $200/month extra in year 25 barely moves the needle, since so little of the balance is left.
+## Refinancing changes more than the rate
 
-And people conflate "years into my mortgage" with "percentage paid off" — being 10 years into a 30-year loan (a third of the term) usually means owning meaningfully less than a third of the home, purely because of the front-loaded interest curve.
+A new 30-year loan can reduce the monthly bill while extending the remaining payoff date. Compare the new closing costs and projected balance at the date you expect to sell, not just the first payment. Restarting a schedule does not automatically make refinancing bad; equally, a lower rate does not make every refinance cheaper.
 
-## Where this calculator has limits
+Paying principal down and building equity are related but different. Equity also depends on property value and any other liens. A balance schedule cannot forecast appreciation, selling costs or the proceeds you would actually receive from a sale.
 
-Standard amortization schedules assume a fixed rate for the full term — they don't model an ARM's rate resets. They also don't account for property tax and insurance changes flowing through escrow, or for one-time principal-only payments unless you specifically run a "with extra payments" version.
+## Use the schedule carefully
 
-## FAQ
+The expandable table shows every payment for the entered term, including any recurring extra amount. The zero-extra comparison uses the same principal, rate and term so you can isolate the extra-payment effect. This model assumes monthly payments at the stated fixed rate and adjusts the final payment to clear the balance.
 
-**Does making one extra payment a year actually help that much?**
-Yes — one extra full payment annually on this loan (effectively 13 payments instead of 12) can shave close to 4-5 years off a 30-year term and save tens of thousands in total interest.
+It does not model an ARM reset, a loan modification, escrow, irregular payment dates or your servicer's precise daily-interest and rounding practices. Small differences from an official schedule are possible even when the loan details match.
 
-**Why does refinancing "reset" my amortization?**
-A new loan starts its own fresh schedule at the new balance and new term — even if the new rate is lower, you begin again near the interest-heavy start of the curve.
+## Questions readers often ask
 
-**Is a 15-year mortgage's amortization curve different?**
-Yes — with half the term, principal builds much faster from month one, and the crossover to majority-principal happens in just a few years instead of ~19.
+### Are biweekly payments the same as paying twice a month?
 
-**Can I see my exact schedule instead of these estimates?**
-Yes — your loan servicer provides an exact amortization schedule based on your actual note rate and closing date; the numbers above are illustrative for this specific example.
+No. Twenty-six half-payments total thirteen monthly payments in a year; twenty-four half-payments total twelve. Any saving depends on when extra principal actually reaches the loan. Check for third-party fees and ask your servicer how the plan works.
 
-**Does biweekly payment really make a difference?**
-Splitting your monthly payment into biweekly installments results in 26 half-payments a year — equivalent to 13 full monthly payments instead of 12 — which produces a similar early-payoff effect to one extra annual payment.
+### Does extra principal lower my required monthly payment?
 
-## Related tools
+Usually the scheduled payment stays the same and the loan ends sooner. A lender-approved recast can change the payment under separate terms. This calculator models earlier payoff, not a recast.
 
-Mortgage Calculator · Down Payment Calculator · PITI Calculator
+### Can I use this for my existing loan?
 
----
+Enter your remaining balance and remaining term with the current fixed rate. For a contractual schedule or a payoff quote, contact the servicer.
 
-*Educational content, not financial advice. This example uses a specific loan scenario for illustration; your actual amortization schedule depends on your note rate, closing date, and any extra payments made. Written by the MortgagePro Global team.*
+## Related guides
+
+[Mortgage payment](/blog/usa-mortgage-calculator) · [PITI](/blog/usa-piti-calculator) · [Down payment](/blog/usa-down-payment-calculator)

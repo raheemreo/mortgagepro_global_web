@@ -1,0 +1,50 @@
+name: Validate all mortgage blog articles
+
+on:
+  pull_request:
+    paths:
+      - 'blog/**'
+      - 'contents/**'
+      - 'js/*blog-calculators.js'
+      - 'css/us-blog.css'
+      - 'scripts/*articles.py'
+      - 'tests/*blog-*'
+      - 'sitemap.xml'
+      - '.github/workflows/validate-us-blog.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'blog/**'
+      - 'contents/**'
+      - 'js/*blog-calculators.js'
+      - 'css/us-blog.css'
+      - 'scripts/*articles.py'
+      - 'tests/*blog-*'
+      - 'sitemap.xml'
+      - '.github/workflows/validate-us-blog.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  content-and-calculations:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate country financial fixtures and edge cases
+        run: node --test tests/us-blog-calculators.test.cjs tests/global-blog-calculators.test.cjs
+      - name: Check all 43 articles, metadata, sources and local links
+        run: |
+          python scripts/validate_us_articles.py
+          python scripts/validate_global_articles.py
+      - name: Check reproducible article builds
+        run: |
+          python scripts/build_us_articles.py
+          python scripts/build_global_articles.py
+          git diff --exit-code

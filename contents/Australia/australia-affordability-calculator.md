@@ -1,59 +1,35 @@
-# Affordability Calculator: The 3% Buffer That Shapes Every Australian Loan Approval
+# Australia Affordability: Understand the Serviceability Buffer
 
-**Meta description:** See how APRA's mandated serviceability buffer tests your Australian home loan against a rate 3 percentage points above what you'll actually pay.
+**Meta description:** Explore an Australian monthly repayment allowance at an entered assessment rate, with a clearly scoped APRA three-point buffer reference.
 
-Whatever variable rate you're actually offered on an Australian home loan, that's not the rate your borrowing capacity is tested against. APRA requires every lender to assess serviceability using either your actual rate plus a 3 percentage point buffer, or a lender-set floor — whichever is higher — meaning your real affordability ceiling is set by a rate you'll likely never pay.
+A loan can fit today's payment and still be difficult to service if rates or expenses rise. Banks therefore assess capacity using more than the advertised debit. Your personal budget also needs room for expenses that a simple mortgage formula cannot see.
 
-## How the buffer works
+The tool below asks for a monthly mortgage allowance after living costs. Deduct other debt commitments only if they are not already included in that allowance. It is a sensitivity calculation, not a reconstruction of a bank's assessment.
 
-APRA's guidance, in place since late 2021, requires authorised deposit-taking institutions to test new borrowers' capacity to repay at a rate at least 3 percentage points above the loan's actual interest rate. If you're offered 6.19%, your lender must confirm you could service the loan at roughly 9.19% before approving it — a deliberately conservative test designed to absorb future rate rises and financial shocks.
+<!-- calculator -->
 
-## Worked example
+## Know the current policy and its scope
 
-A borrower offered 6.19% on the $520,000 loan from our Mortgage Calculator example:
+[APRA's May 2026 settings](https://www.apra.gov.au/news-and-publications/apra-maintains-current-macroprudential-policy-settings-highly-uncertain) retain a **three-percentage-point mortgage serviceability buffer**. This is an ADI prudential requirement, not a claim that every lender or loan in Australia follows an identical assessment.
 
-| | Actual rate | Buffered assessment rate |
-|---|---|---|
-| Rate | 6.19% | 9.19% (6.19% + 3%) |
-| Monthly payment (25-yr) | ≈ $3,413 | ≈ $4,405 |
+With an assumed 6.19% rate, adding three points gives 9.19%. On AUD 520,000 over 25 years, the monthly model gives **AUD 3,411.02 at 6.19%** and **AUD 4,431.68 at 9.19%**. The difference is assessment headroom, not a fee added to the actual loan payment.
 
-The lender isn't asking whether you can afford $3,413/month — they're confirming you could still service roughly $4,405/month before approving the $520,000 loan at all. That gap is the entire mechanism behind why headline borrowing capacity often comes in lower than a naive income-based estimate.
+Lenders can apply floors, income shading, living-expense assumptions and policy-specific treatment of liabilities. [APRA's guidance on exceptions](https://www.apra.gov.au/news-and-publications/housing-lending-standards-reinforcing-guidance-exceptions) also means that 'there are never any exceptions' is too absolute. An exception is not something a calculator can grant.
 
-> **Why this buffer exists:** it was raised from 2.5 to 3 percentage points specifically to build in more headroom against rising rates and cost-of-living pressure — a system-wide protection that indirectly shrinks maximum borrowing capacity for every new applicant, regardless of their individual credit strength.
+## What the widget solves
 
-## Common mistakes
+It divides the available monthly allowance by the repayment factor at the entered rate plus buffer. It does not decide whether the allowance is an acceptable share of gross income, whether the deposit is sufficient or whether a loan meets credit or property requirements.
 
-Borrowers frequently estimate their own affordability using their actual quoted rate, then are surprised when a lender's approved amount comes in lower than expected — the buffered rate, not the advertised rate, is what determines the ceiling.
+A higher result from changing the buffer is just arithmetic. Do not change it to a lower number and treat that result as what a bank should approve. Ask the lender which rate floor and policy apply.
 
-Borrowers also assume the buffer is negotiable or waivable for strong applicants — it's a regulatory floor APRA applies system-wide; individual lender risk appetite can affect other parts of the assessment, but not this specific buffer requirement.
+## Use two budgets
 
-A third mistake: not accounting for how existing debts get stressed the same way. A credit card limit (even if unused) or an existing variable-rate loan gets assessed at a buffered rate too, compounding the effect on total borrowing capacity.
+Keep the actual-rate cash budget and the assessed-rate scenario separate. Include council rates, insurance, strata, maintenance and a cash reserve in your household budget. An unused credit facility can also matter to a lender even when its current statement balance is small.
 
-## Where this calculator has limits
+### Does a larger deposit help?
 
-It applies the standard 3% buffer, but individual lenders can and do set their own floor rates on top, which sometimes exceeds the buffered rate depending on the lender's specific risk settings — meaning actual approved amounts can vary between lenders even for identical income and debt profiles. It also can't fully model how existing credit card limits or other liabilities are individually stressed, since that varies by lender policy.
+It can reduce the loan that needs servicing, but it does not remove the rest of the review. Using all savings as a deposit can leave inadequate money for closing costs and unexpected repairs.
 
-## FAQ
+### Is this the same as DTI?
 
-**Is the 3% buffer the same for every lender?**
-The 3-point minimum is set by APRA and applies broadly across authorised lenders, though individual lenders can apply a higher floor if their own risk policy calls for it.
-
-**Does the buffer apply to refinancing too?**
-Yes — refinancing to a new lender generally requires passing the same buffered serviceability test as a new purchase, which is part of why some existing borrowers find refinancing harder than their original approval was.
-
-**Can I ever borrow at the buffered rate itself?**
-No — the buffer is purely an assessment tool; your actual repayments are always calculated at your real contract rate, not the higher stress-tested figure.
-
-**Does a bigger deposit offset the buffer's effect?**
-Indirectly — a bigger deposit means a smaller loan amount, which reduces the buffered monthly payment being tested, potentially bringing an otherwise-tight application back within serviceable range.
-
-**Has the buffer level changed over time?**
-Yes — it moved from 2.5 to 3 percentage points in October 2021 and has stayed there since, though APRA reviews serviceability settings periodically as part of broader financial stability policy.
-
-## Related tools
-
-Mortgage Calculator · DTI Ratio Calculator · LMI Calculator
-
----
-
-*Educational content, not financial advice. Serviceability buffer requirements are set by APRA and can change — confirm your specific borrowing capacity with a licensed Australian mortgage broker. Written by the MortgagePro Global team.*
+No. [DTI](/blog/australia-dti-ratio-calculator) compares debt balances with annual income. Serviceability considers repayment capacity. Passing one model does not establish the other.

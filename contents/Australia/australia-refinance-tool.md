@@ -1,62 +1,35 @@
-# Refinance Tool: What a Cashback Offer Actually Costs If You Move Again Too Soon
+# Australia Refinance: Compare the Rate, Fees and Any Cashback Conditions
 
-**Meta description:** See how Australian refinance cashback offers work, why lenders attach a clawback clause, and how to work out if switching is genuinely worth it.
+**Meta description:** Compare Australian refinancing cash flow on the same remaining term and distinguish borrower cashback conditions from broker commission clawback.
 
-Refinance cashback offers — often $2,000 to $4,000 paid to you for switching lenders — sound like straightforward free money. Attached to most of them is a clawback clause: switch away again within a set window, commonly 2-4 years, and you may have to repay some or all of that cashback. It's worth understanding before treating the headline figure as a clean win.
+A cashback headline can distract from the cost of the loan itself. Start with the current balance and remaining term, then compare actual rates, fees, LMI if relevant and any written incentive conditions. A larger headline payment does not establish a better deal.
 
-## How refinance cashback offers actually work
+The tool compares two constant-rate scenarios on the same principal and remaining term. Cashback, any cashback repayment and exit or break costs are separate inputs; a repayment condition is not assumed to exist on every offer.
 
-A lender offers a cash payment — commonly in the $2,000-$4,000 range, sometimes higher on larger loans — as an incentive to bring your mortgage to them. It's usually paid shortly after settlement, separate from any rate discount on the loan itself. The clawback clause, buried in the offer terms, typically requires repaying the cashback (in full or on a declining scale) if you refinance away from that lender again within the specified period.
+<!-- calculator -->
 
-## Worked example: is switching actually worth it?
+## Read whose money can be clawed back
 
-A borrower on the $520,000 loan considering a move from 6.19% to a competitor's 5.85% rate, with a $3,000 cashback offer and a 3-year clawback:
+A lender's cashback paid to a borrower may have conditions in the offer. A broker commission clawback is a different arrangement involving the broker's remuneration. Do not assume a broker's commission condition automatically makes the borrower repay the advertised cashback.
 
-| Factor | Value |
-|---|---|
-| Rate saving | 0.34 percentage points |
-| Approx. monthly saving | ~$95 |
-| Cashback offered | $3,000 |
-| Discharge/exit fees on current loan | ~$350-$600 |
-| **Net benefit if staying 3+ years** | Rate savings (~$1,140/year) + cashback − exit costs |
+Ask for the incentive's eligibility, payment date, minimum balance or holding conditions, and any repayment clause. Use the actual offer rather than a supposedly standard two-to-four-year borrower clawback.
 
-If this borrower stays with the new lender past the 3-year clawback window, the full $3,000 is genuinely kept, on top of the ongoing rate savings. If they refinance away again within that window — say, to chase another cashback deal elsewhere — some or all of the $3,000 may need to be repaid, which can wipe out much of the apparent benefit of switching at all.
+## Compare costs at the same horizon
 
-> **The "serial refinancer" trap:** cashback offers can look attractive every time a new one appears, but stacking multiple refinances in quick succession — chasing each new cashback — risks triggering clawback repayments, discharge fees, and new establishment costs repeatedly, sometimes leaving a borrower worse off than simply staying with a stable, moderately competitive rate.
+Enter discharge, legal, establishment and relevant break costs. Deduct only cashback you qualify to retain, and include any known repayment obligation. The model calculates monthly payment difference and a simple payment-based break-even.
 
-## Common mistakes
+Use both offers on the same remaining repayment term and keep every amount in AUD. The old and new rates remain assumptions. If there is no positive monthly saving, the tool does not invent a break-even time from savings.
 
-Borrowers frequently focus on the cashback amount without checking the clawback window's length — a $4,000 cashback attached to a 4-year clawback is a genuinely different offer from a $2,000 cashback with no clawback at all, even though the first number looks more attractive.
+The result is cash-flow arithmetic, not a total economic return. Remaining balances can differ even on equal terms, and future variable rates can move. If fees are capitalized or the term is extended, ask for a fuller side-by-side loan illustration rather than forcing the transaction into this upfront-cash model.
 
-Borrowers also forget to account for discharge fees on their *current* loan when refinancing away — these are typically modest ($350-$600) but do reduce the net benefit of switching, and are separate from any cashback or clawback consideration on the new loan.
+## Ask the current lender too
 
-A third mistake: chasing a cashback-heavy lender without comparing the underlying ongoing rate — a slightly higher rate paired with a large cashback can cost more over several years than a lower rate with no cashback at all, depending on how long the loan is held.
+[Moneysmart's switching guidance](https://moneysmart.gov.au/home-loans/switching-home-loans) recommends comparing the existing lender's offer, switching costs and possible LMI. A competitive retention offer may avoid some transaction costs, but is not guaranteed to be the cheapest choice.
 
-## Where this tool has limits
+### Should I reset to 30 years to lower the payment?
 
-It uses a general framework — actual cashback amounts, clawback terms, and discharge fees vary significantly by lender and change frequently as lenders compete for refinance volume. It also can't predict how many times a specific borrower might realistically refinance again, which is the key variable in whether a clawback clause ever actually gets triggered.
+Calculate the effect separately. A lower debit caused by repaying more slowly is not the same as a lower rate on the remaining term, and can increase lifetime interest.
 
-## FAQ
+### Can the calculator quote a fixed-rate break cost?
 
-**Do all refinance offers have a clawback clause?**
-Not all, but many do — it's specifically written into the cashback offer terms, so it's worth reading before assuming the cash is unconditional.
-
-**Is a bigger cashback always the better deal?**
-Not necessarily — the underlying interest rate, ongoing fees, and clawback terms all affect the real value more than the headline cashback figure alone.
-
-**Does refinancing always involve exit fees on my current loan?**
-Discharge fees are common and modest, but break costs can apply separately if you're exiting a fixed-rate term early — those can be considerably larger and are worth checking before committing to a switch.
-
-**How long should I plan to stay with a new lender to make refinancing worthwhile?**
-It depends on the specific offer, but generally long enough to clear any clawback window and recover discharge/establishment costs through the ongoing rate saving — often a minimum of 1-2 years, sometimes longer.
-
-**Can I negotiate a better rate with my current lender instead of switching?**
-Often worth trying first — a "retention" call asking your current lender to match a competitor's rate can sometimes achieve a similar benefit without any refinancing costs or clawback exposure at all.
-
-## Related tools
-
-Mortgage Calculator · Offset Account Calculator · Affordability Calculator
-
----
-
-*Educational content, not financial advice. Cashback offers, clawback terms, and fees vary significantly by lender and change frequently — confirm current offer terms directly with the lender or a licensed Australian mortgage broker. Written by the MortgagePro Global team.*
+No. Obtain a dated quote from the lender. A percentage guess is not a reliable substitute for the product's actual calculation.

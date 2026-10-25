@@ -1,64 +1,31 @@
-# Affordability Calculator: How Much House the Stress Test Actually Lets You Buy
+# Canada Affordability: Test an Uninsured Purchase Budget
 
-**Meta description:** See how Canada's stress-tested qualifying rate — not your real mortgage rate — sets the ceiling on how much home you can actually afford.
+**Meta description:** Explore a Canadian uninsured purchase budget using explicit housing costs, debt ratios, a qualifying rate and a separate 20% deposit constraint.
 
-Ask a Canadian affordability calculator "how much house can I afford" and the honest answer depends less on the rate you'll actually pay and more on the higher, stress-tested rate a lender is required to test you against. That single rule can shrink a buyer's maximum purchase price by 15-25% compared to a naive calculation using the real contract rate.
+A useful first estimate starts with your monthly commitments, not a headline purchase price. Tax, heat and condo costs can use the same income allowance that you intended for the mortgage. Other debts can make the total-debt allowance the tighter constraint.
 
-## The chain of math
+This tool models an **uninsured purchase with at least 20% down**. It does not silently leave mortgage insurance out of an insured-loan estimate. For a smaller deposit, calculate the premium first and ask the lender to assess the financed balance.
 
-Canadian affordability works backward through four steps: gross income → maximum qualifying payment (using GDS's 39% ceiling) → maximum loan amount (using the *stressed* qualifying rate, not the contract rate) → maximum home price (adding back the down payment).
+<!-- calculator -->
 
-The stress test is the step that catches people off guard, because it's applied before the loan amount is calculated — not as an afterthought once you already know what you can borrow.
+## Follow the constraints separately
 
-## Worked example
+The payment allowance is the smaller of 39% of monthly gross income and 44% minus other monthly debts. The tool deducts annual tax divided by 12, monthly heat and half the condo fee. These are CMHC reference ratios used as planning settings here, not universal OSFI approval limits; see [CMHC's ratio method](https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/calculating-gds-tds).
 
-A household with $150,000 gross annual income ($12,500/month), no other debt, targeting the 39% GDS ceiling, offered a 3.99% five-year fixed contract rate, 25-year amortization, 20% down payment:
+A CAD 150,000 annual income with no other debt, CAD 3,600 annual tax, CAD 100 monthly heat and no condo fee leaves CAD 4,475 for a qualifying mortgage payment under those assumptions. The tool solves principal using semiannual compounding and the higher of 5.25% or the entered rate plus two percentage points.
 
-| Step | Value |
-|---|---|
-| Max monthly housing cost (39% GDS) | $4,875 |
-| Less estimated property tax + heat | −$400 |
-| Max mortgage payment | $4,475 |
-| Qualifying rate (3.99% + 2%) | 5.99% |
-| **Max loan amount at 5.99%** | **≈ $700,000** |
-| Add 20% down payment | +$175,000 |
-| **Max home price** | **≈ $875,000** |
+The result also respects a separate price limit of five times the entered cash deposit, keeping the modeled LTV at or below 80%. If deposit is CAD 175,000, that separate constraint is CAD 875,000. A loan supported by the monthly allowance does not override the deposit constraint.
 
-If the same household were qualified at their real 3.99% contract rate instead of the stressed 5.99%, that same $4,475 monthly payment would support a loan closer to $850,000 — roughly $150,000 more borrowing power. The stress test is the single biggest lever in this entire calculation.
+## Qualification and comfort are different
 
-## Common mistakes
+[OSFI's qualifying-rate page](https://www.osfi-bsif.gc.ca/en/supervision/financial-institutions/banks/minimum-qualifying-rate-uninsured-mortgages) describes the uninsured framework. A lender can use different income and expense treatment, additional floors and eligibility rules. This page does not reproduce a complete underwriting system.
 
-Buyers frequently run "how much can I afford" using online tools that skip the stress test entirely, then get a real pre-approval that comes in noticeably lower — often the first time they realize the qualifying rate and the contract rate are two different numbers.
+Set aside closing costs and emergency savings before entering the deposit. Childcare, utilities and savings goals can make the modeled payment uncomfortable even when ratios look manageable.
 
-Buyers also forget that TDS, not just GDS, can be the actual limiting factor — a household that clears the 39% GDS ceiling easily can still get capped by other debt pushing TDS past 44%, even with no other housing-related expense.
+### What is excluded?
 
-A third mistake: treating "maximum affordability" as a target rather than a ceiling. The math above shows what a lender will approve, not necessarily what's comfortable to pay every month for the next 25 years.
+Insurance premiums, site rent, assistance-program debt, rate changes and lender-specific income assessment. Add such obligations separately with the lender. The figure is not a preapproval or an instruction to spend up to it.
 
-## Where this calculator has limits
+### Where should a low-deposit buyer start?
 
-It uses standard GDS/TDS ceilings and the current stress test formula, but doesn't capture lender-specific overlays, self-employment income adjustments, or the Loan-to-Income cap some lenders apply on top of the standard ratios. Local property tax and condo fee estimates also vary significantly by municipality and building.
-
-## FAQ
-
-**Does a bigger down payment always mean more affordability?**
-Yes, in two ways — it directly reduces the loan needed, and depending on the LTV tier, it can eliminate CMHC insurance costs above 20% down, freeing up more room in your debt ratios.
-
-**Why does my afford­ability number keep changing with rates?**
-Because the qualifying rate is contract rate + 2% (or the 5.25% floor) — every time contract rates move, your qualifying rate and therefore your maximum loan amount move with it.
-
-**Is 25-year or 30-year amortization better for affordability?**
-30-year amortization (where eligible) lowers the monthly qualifying payment and increases maximum affordability, at the cost of more total interest paid over the life of the loan.
-
-**Does combining income with a partner change this significantly?**
-Yes — combined gross income directly raises the GDS/TDS ceiling in dollar terms, often the most effective way to increase maximum affordability for joint applicants.
-
-**Is this the same number my bank will pre-approve me for?**
-It's a close estimate using the standard federal formula — actual pre-approval also factors in credit score, employment history, and specific lender overlays not captured here.
-
-## Related tools
-
-Stress Test Calculator · GDS/TDS Ratio Calculator · Mortgage Calculator
-
----
-
-*Educational content, not financial advice. Stress test rules, GDS/TDS ceilings, and lending criteria change periodically — confirm your actual affordability with a licensed Canadian mortgage professional. Written by the MortgagePro Global team.*
+Use the [CMHC guide](/blog/cmhc-insurance-canada-guide), then the [GDS/TDS tool](/blog/canada-gds-tds-calculator) with the applicable qualifying payment including financed premium.

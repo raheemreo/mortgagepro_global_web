@@ -1,67 +1,36 @@
-# UK Mortgage Calculator: Why Your Rate Has an Expiry Date
+# UK Mortgage Calculator: Repayments and the End of a Fixed Deal
 
-**Meta description:** See how a UK mortgage payment is calculated on a 5-year fixed rate, and why — unlike a US 30-year fixed — that rate doesn't last the life of the loan.
+**Meta description:** Calculate a UK repayment mortgage with explicit rate assumptions and plan for the remaining balance when a fixed deal expires.
 
-Take a £350,000 home, 25% down (£87,500), and a 5-year fixed rate of 4.48% — a rate MortgagePro Global draws from Bank of England context — on a 25-year repayment mortgage. The £262,500 loan works out to roughly £1,456 a month. That number is solid for exactly five years. After that, it resets to whatever rate is available at the time, because UK mortgages don't lock a rate for the full term the way US mortgages typically do.
+A five-year fixed deal does not normally mean a five-year repayment term. You might repay over 25 years while the initial rate lasts for five. The mortgage balance remaining then needs another rate arrangement, a product transfer or whatever follow-on terms the contract specifies.
 
-## Fixed terms, not fixed loans
+For a £350,000 property with an £87,500 deposit, principal is £262,500. At an **assumed 4.48%** over 25 years, modeled monthly P&I are **£1,456.08**. This is not a current Bank of England mortgage offer. A central-bank policy rate or statistical series is not your lender's personalised quote.
 
-A UK "5-year fixed" mortgage means the rate is fixed for 5 years, against a repayment schedule that's usually spread over 25-35 years. When the fixed period ends, the mortgage doesn't finish — it rolls onto the lender's standard variable rate (SVR), typically much higher, unless you actively remortgage or take a product transfer beforehand. Two-year fixes are just as common as five-year ones in the UK market, meaning some borrowers reprice even more often.
+<!-- calculator -->
 
-## The math
+## What the monthly model assumes
 
-Standard UK repayment mortgages use monthly compounding, the same amortization formula used elsewhere:
+The payment uses an annual note rate divided by 1200 to obtain a monthly decimal rate and 300 equal monthly periods. It holds the rate fixed for the calculation. Actual daily-interest dates, first payments, fees and product rules may produce a different statement amount.
 
-**M = P × [r(1+r)ⁿ] / [(1+r)ⁿ − 1]**
+The model excludes buildings insurance, council tax, service charges, ground rent, maintenance and product fees. A fee added to the mortgage increases principal and may affect the LTV. Treat the rate and fees together when comparing offers.
 
-Where P is the loan amount, r is the monthly rate (annual ÷ 12), and n is the number of monthly payments.
+## Model the end of the deal properly
 
-## Worked example
+Do not reuse the original principal as the balance after five years. Amortize the payments already made, then use the remaining 20 years for a five-year-end comparison. Our [remortgage guide](/blog/uk-remortgage-tool) separates transaction costs from the payment comparison.
 
-| Input | Value |
-|---|---|
-| Property price | £350,000 |
-| Deposit (25%) | £87,500 |
-| Mortgage amount | £262,500 |
-| Rate | 4.48% (5-yr fixed) |
-| Term | 25 years (300 payments) |
-| **Monthly payment** | **≈ £1,456** |
+A follow-on rate, early repayment charge and product-transfer process are contract-specific. Many UK products fix for only part of the mortgage term, but longer or full-term fixed products should not be described as impossible. Use the [MoneyHelper mortgage guidance](https://www.moneyhelper.org.uk/en/homes/buying-a-home) to understand the alternatives before relying on one product pattern.
 
-> **The rate-shock scenario:** if this borrower's 5-year fix ends and rates have moved to, say, 5.8%, the same remaining balance reprices to roughly £1,610/month — a jump of over £150 with no change to the loan itself, purely from the fix expiring into a higher-rate environment.
+## Questions to ask about a quote
 
-## Common mistakes
+- When does the introductory rate end, and how is the follow-on rate set?
+- What fees are paid in cash or added to principal?
+- When does an early repayment charge cease, and what overpayments are permitted?
+- Does the quoted payment use the term you actually intend to keep?
 
-Borrowers frequently treat their fixed rate as permanent and don't plan for what happens when it ends — letting the mortgage lapse onto the lender's SVR is usually the most expensive outcome available, often several percentage points above any fixed deal on the market.
+### Is the lower payment always the cheaper deal?
 
-Borrowers also compare only headline rates between a 2-year and 5-year fix without weighing the tradeoff: a 2-year fix often has a slightly lower rate but exposes you to repricing risk twice as often over a decade; a 5-year fix trades a bit of rate for more payment certainty.
+No. A longer repayment term can lower the debit while leaving more principal outstanding. Compare fees, balance at a common date and expected time in the loan.
 
-A third mistake: forgetting product fees. Many UK mortgage deals carry an arrangement fee (often £999-£2,000, sometimes a percentage of the loan) that changes the true cost comparison between two seemingly similar rates.
+### Where does purchase tax fit?
 
-## Where this calculator has limits
-
-It assumes a standard repayment mortgage — interest-only mortgages calculate very differently (see our Amortization tool for that distinction). It also can't predict what rate will be available when this fix ends, which is the single biggest variable in the true lifetime cost of a UK mortgage.
-
-## FAQ
-
-**Does my rate ever stay fixed for the whole mortgage?**
-Not on a standard UK residential mortgage — fixed periods of 2, 3, 5, or occasionally 10 years are common, but the underlying mortgage term (25-35 years) is much longer than any single fix.
-
-**What happens if I do nothing when my fix ends?**
-You automatically roll onto the lender's standard variable rate, which is usually higher than available fixed or tracker deals — most borrowers remortgage or take a product transfer before this happens.
-
-**Is a 5-year fix always safer than a 2-year fix?**
-It offers more payment certainty, but if rates fall during your fixed period, you're locked out of the lower rate until your term ends — there's a genuine tradeoff either way.
-
-**Does a bigger deposit always get me a better rate?**
-Generally yes — crossing certain loan-to-value thresholds (75%, 60%, etc.) typically unlocks better pricing tiers, covered in our LTV Calculator.
-
-**Can I overpay a fixed-rate mortgage?**
-Usually yes, up to an annual allowance (commonly 10% of the balance) without penalty — exceeding it can trigger an early repayment charge.
-
-## Related tools
-
-Stamp Duty (SDLT) Calculator · LTV Calculator · Remortgage Tool · Affordability Calculator
-
----
-
-*Educational content, not financial advice. Rates and figures are illustrative and change regularly — confirm current numbers with a licensed UK mortgage adviser or lender. Written by the MortgagePro Global team.*
+It is normally a separate purchase cost. Use the [SDLT calculator](/blog/uk-stamp-duty-calculator) for its supported England/Northern Ireland scenario; Scotland and Wales use different taxes.

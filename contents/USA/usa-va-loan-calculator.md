@@ -1,73 +1,66 @@
-# VA Loan Calculator: Why Zero Down Doesn't Mean Zero Insurance Cost
+# VA Loan Funding Fee: Calculate Purchase Costs and Check Exemptions
 
-**Meta description:** See how the VA funding fee replaces monthly mortgage insurance on a $0-down VA loan, and why "first use" versus "subsequent use" changes the fee significantly.
+**Meta description:** Calculate VA purchase funding fees, financed balances and payments, with accurate first-use tiers and clear limits on exemption and eligibility estimates.
 
-VA loans are the only major US loan program that routinely allows $0 down with no monthly mortgage insurance at all. That's a real advantage over FHA and conventional financing. What it doesn't mean is $0 cost for the insurance-like protection lenders require — it means that cost gets collected once, upfront, as the VA funding fee, instead of monthly for years.
+A VA-backed purchase loan can let an eligible borrower buy without a down payment or monthly mortgage insurance. That does not mean the purchase has no closing costs. A funding fee may apply, and financing that fee increases both the loan balance and interest paid over time.
 
-## How the funding fee works
+The fee supports the VA loan program; it is not a PMI policy bought by the borrower. Before comparing fee rates, check whether you are exempt. A calculator can model the answer you enter, but it cannot establish your VA status.
 
-The VA funding fee is a one-time percentage of the loan amount, paid at closing or financed into the loan. Three things determine the rate: whether it's a purchase or refinance, your down payment size, and whether this is your first use of VA loan benefits or a subsequent use.
+<!-- calculator -->
 
-| Down payment | First-time use | Subsequent use |
+## Use the purchase fee table for a purchase
+
+The [VA funding-fee schedule](https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/), checked October 25, 2026, lists these purchase/construction rates, effective April 7, 2023. The down-payment tier is measured against the purchase price in this model. The fee is charged on the base loan after down payment, before adding the fee itself.
+
+| Down payment | First use | Subsequent use |
 |---|---|---|
 | Less than 5% | 2.15% | 3.30% |
-| 5% – 9.99% | 1.50% | 1.50% |
-| 10% or more | 1.25% | 1.25% |
+| At least 5%, less than 10% | 1.50% | 1.50% |
+| At least 10% | 1.25% | 1.25% |
 
-Above 5% down, first-time and subsequent-use borrowers pay the same rate — the penalty for repeat use only bites at the lowest down payment tier. A VA Interest Rate Reduction Refinance Loan (IRRRL, the VA's streamline refinance) carries a flat 0.5% fee regardless of down payment or prior use.
+Do not use this purchase widget for a cash-out refinance, IRRRL, assumption or Native American Direct Loan. Those have separate fee schedules. Also, restoring entitlement does not generally reset fee history to first use; ask the lender or VA to determine your classification.
 
-## Who's exempt entirely
+## Compare the fee and the financed principal
 
-Veterans receiving VA disability compensation, veterans who would receive it but instead receive retirement or active-duty pay, certain surviving spouses, and Purple Heart recipients on active duty typically pay no funding fee at all. Given how large this fee can get on a full-price loan, checking exemption status before closing is worth doing carefully — it's not something a lender will always flag proactively.
+For a $400,000 purchase with no down payment and no exemption, the first-use fee is $8,600. If financed, starting principal becomes $408,600. Subsequent use at the same price produces a $13,200 fee and $413,200 financed principal. The fee difference is **$4,600**, not $5,150.
 
-## Worked example
+| Same $400,000 purchase, no down payment | First use | Subsequent use |
+|---|---|---|
+| Base loan | $400,000.00 | $400,000.00 |
+| Funding fee | $8,600.00 | $13,200.00 |
+| Principal if fee is financed | $408,600.00 | $413,200.00 |
+| Illustrative P&I at 7.32%, 30 years | $2,806.80 | $2,838.40 |
 
-A $400,000 purchase, $0 down, first-time VA loan use:
+The rate is a hypothetical VA loan assumption here, not a VA rate survey or lender offer. No monthly PMI or FHA MIP is added. Taxes, homeowners insurance, HOA and other closing costs remain separate.
 
-| Item | Amount |
-|---|---|
-| Loan amount | $400,000 |
-| Funding fee (2.15%, first use, <5% down) | $8,600 |
-| Financed into loan | Typically yes |
-| Monthly mortgage insurance | **$0** |
+If the first-use borrower pays the $8,600 fee in cash instead, principal stays at $400,000 and P&I at the same assumed rate is $2,747.72. That illustrates the financing tradeoff: about $59.08 more P&I each month when the fee is financed, in exchange for not paying it in cash at closing. It does not mean financing the fee is best for every borrower.
 
-Compare that to an FHA loan on the same price at 3.5% down: roughly $6,755 upfront MIP *plus* an ongoing monthly MIP charge for the life of the loan (see our FHA Loan Calculator for the full breakdown). The VA loan's single, larger upfront charge often works out cheaper over a multi-year holding period specifically because there's no recurring monthly insurance line at all.
+## Check exemption status before closing
 
-> **The subsequent-use trap:** A veteran who's used a VA loan before and puts down less than 5% again pays 3.30%, not 2.15% — a real cost difference ($5,150 higher on this same $400,000 loan) that a 5% down payment fully erases, since the rate resets to 1.50% for both first-time and subsequent borrowers at that tier.
+VA lists several qualifying situations, including receipt of service-connected disability compensation, eligibility for that compensation while receiving retirement or active-duty pay instead, certain surviving spouses receiving DIC, specified pre-discharge ratings, and qualifying active-duty Purple Heart recipients. A disability rating alone is not a sufficient explanation of every case. Have the lender verify documentation and the Certificate of Eligibility.
 
-## Common mistakes
+If a later disability-compensation award has an effective date before closing, a refund may be possible under VA's rules. Keep the fee confirmation and award documentation and ask VA about the specific case rather than assuming every later award produces a refund.
 
-Veterans sometimes assume a prior VA loan that's since been paid off or sold still counts as "first use" for fee purposes — it generally doesn't, unless entitlement was formally restored, and even after restoration, usage is still classified as subsequent.
+## Zero down still has conditions
 
-Veterans also skip checking disability exemption status because they don't think of it as related to their loan — but a service-connected disability rating, even a partial one, can eliminate a $6,000-$10,000+ fee on a typical loan.
+The [VA purchase-loan guidance](https://www.va.gov/housing-assistance/home-loans/loan-types/purchase-loan/) explains eligibility, occupancy and lender standards. With full entitlement, VA does not impose a county loan limit, but ability to repay and the appraisal still matter. [Remaining entitlement](https://www.va.gov/housing-assistance/home-loans/loan-limits/) can change down-payment requirements. If price exceeds appraised value, cash may be needed for the gap.
 
-A third mistake: comparing VA loans to FHA/conventional purely on interest rate, without accounting for the fact that VA loans require no monthly mortgage insurance at all — a factor that can outweigh a slightly higher rate on another loan type once the full monthly payment is compared.
+The widget does not verify entitlement, credit, residual income, occupancy or appraisal. Selecting a zero down payment is a calculation input, not confirmation that a no-down-payment loan is available to you.
 
-## Where this calculator has limits
+## Questions readers often ask
 
-It uses standard purchase-loan funding fee tiers — cash-out refinances use a different, flatter fee structure that doesn't scale down with home equity the way purchase loans scale with down payment. It also can't verify your specific exemption eligibility; that requires documentation through the VA, not a calculator input.
+### Does 5% down make the whole purchase cheaper?
 
-## FAQ
+It changes both the base loan and the fee tier. For example, $20,000 down on a $400,000 purchase leaves a $380,000 base loan; a 1.50% fee is $5,700. Compare the lower payment with the extra cash committed, plus closing costs and reserves.
 
-**Do I have to pay the funding fee in cash?**
-No — most VA borrowers finance it into the loan balance, which raises the loan amount and total interest paid, but avoids an out-of-pocket cost at closing.
+### Can I finance every closing cost?
 
-**Am I exempt if I have any disability rating at all?**
-Generally, a service-connected disability compensation rating of any level qualifies for the exemption — confirm your specific status with the VA before closing, since documentation timing matters.
+For a VA purchase, the funding fee can be financed, but other closing charges generally must be covered at closing through allowable arrangements. Review the lender's Loan Estimate rather than treating 'zero down' as 'zero cash to close.'
 
-**Is the VA funding fee the same as PMI or FHA's MIP?**
-No — it's a one-time fee, not a recurring monthly charge, which is the core structural difference from both conventional PMI and FHA MIP.
+### Is the funding fee automatically tax deductible?
 
-**Does a VA loan ever require a down payment?**
-Not typically for eligible borrowers within their entitlement limits — $0 down remains the standard VA loan structure, though a down payment does lower the funding fee.
+Do not assume a tax saving in this estimate. Check the rules for your filing year in current [IRS Publication 936](https://www.irs.gov/publications/p936) and obtain tax advice for your circumstances. This guide does not assert a universal 2026 deduction.
 
-**Is the funding fee tax deductible?**
-As of the 2026 tax year, the VA funding fee is deductible for taxpayers who itemize, similar to other upfront mortgage insurance premiums — confirm specifics with a tax professional.
+## Related guides
 
-## Related tools
-
-FHA Loan Calculator · Down Payment Calculator · Mortgage Calculator
-
----
-
-*Educational content, not financial advice. VA funding fee rates and exemption criteria are set by the Department of Veterans Affairs and can change — confirm your specific fee and eligibility with the VA or a VA-approved lender. Written by the MortgagePro Global team; funding fee figures referenced against 2026 VA published rate charts.*
+[FHA costs](/blog/usa-fha-loan-calculator) · [Down payment](/blog/usa-down-payment-calculator) · [PITI](/blog/usa-piti-calculator)

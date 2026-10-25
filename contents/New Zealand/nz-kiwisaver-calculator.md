@@ -1,64 +1,35 @@
-# KiwiSaver Calculator: The Three-Year Rule That Catches First-Time Buyers Out
+# KiwiSaver First-Home Withdrawal: Confirm Eligible Funds and Retention
 
-**Meta description:** See how much of your KiwiSaver balance you can actually withdraw for a first home, the three-year membership rule, and the $1,000 you can never touch.
+**Meta description:** Estimate eligible KiwiSaver savings after required retention while keeping membership, transferred funds and provider approval separate.
 
-KiwiSaver's first-home withdrawal is, for most New Zealand first-time buyers, the single largest source of deposit funds available — genuinely more significant than any current government grant, since there isn't one anymore (see our First Home Buyer article for that specific correction). What trips people up isn't the amount available; it's the eligibility clock that starts ticking from your very first contribution, not from when you start seriously planning to buy.
+A statement balance is not always the amount available for a first home. Membership duration, non-withdrawable transfers, purchase conditions and the provider's processing rules matter. Get an estimate early enough for the solicitor and provider to act before the relevant payment deadline.
 
-## The core eligibility rule
+<!-- calculator -->
 
-You must have been a KiwiSaver member for **at least three years** before you can apply for a first-home withdrawal. That three-year clock starts from your first contribution — including contributions made automatically through an employer before you were paying close attention — not from whenever you decide to start house-hunting. Checking your actual membership start date early is worth doing well before you begin seriously looking at properties.
+## Start with eligible savings, not an assumed entitlement
 
-## What you can and can't withdraw
+[IRD's first-home withdrawal guidance](https://www.ird.govt.nz/kiwisaver/kiwisaver-individuals/getting-my-kiwisaver-funds-early/getting-my-kiwisaver-for-my-first-home) states that membership must be at least three years, NZD 1,000 must remain, and funds transferred from an Australian complying superannuation scheme cannot be withdrawn for this purpose.
 
-You can withdraw most of your KiwiSaver balance — your own contributions, your employer's contributions, and investment returns — for a first-home deposit. You must leave a minimum of **$1,000** in your account afterward; this can't be withdrawn under any circumstances. Some longer-term members who received the government's old $1,000 "kick-start" contribution (discontinued for new members back in 2015) also can't withdraw that specific portion.
+The widget therefore asks for **provider-confirmed eligible savings before required retention**, not the unadjusted statement balance. Exclude amounts the provider identifies as non-withdrawable. It subtracts NZD 1,000 from that entered eligible amount once the membership input reaches three years. The provider determines the actual retention and exclusions; do not use the tool to double-count or guess them.
 
-## Worked example
+With NZD 62,000 eligible before retention and no other provider adjustment, the simple illustration gives **NZD 61,000**. With less than three membership years entered, it does not show that amount as available. Meeting the input check is not a full eligibility decision.
 
-A member with a $62,000 KiwiSaver balance after several years of contributions and growth:
+## Check the treatment of the former kick-start contribution
 
-| Item | Amount |
-|---|---|
-| Total KiwiSaver balance | $62,000 |
-| Minimum balance required to remain | $1,000 |
-| **Maximum withdrawal available** | **$61,000** |
+The former kick-start contribution should not automatically be deducted separately from the required retention as though every recipient has another NZD 1,000 locked away. Ask the provider which parts of your actual balance can be released.
 
-That $61,000, combined with other savings, can materially change what's achievable — especially paired with a Kāinga Ora First Home Loan, which reduces the deposit required to just 5% of the purchase price.
+Likewise, 'leave NZD 1,000 for this withdrawal' does not mean that money can never be withdrawn for any purpose under any circumstances. Other lawful withdrawal routes have different rules.
 
-> **The property has to be your first home, and you have to live in it.** KiwiSaver first-home withdrawals can't be used to buy an investment property — the fund provider requires evidence you intend to live in the property as your primary residence, and the funds are paid directly to your solicitor, not into your personal bank account.
+## Confirm the membership and transaction requirements
 
-## Common mistakes
+Ask the provider for the recognized membership period, including any relevant complying-fund history, instead of assuming the first contribution date always settles it. The withdrawal is for a qualifying home purchase, not an investment-property deposit chosen through a simple calculator field.
 
-Buyers frequently assume the three-year clock starts when they decide to buy, not when they first joined KiwiSaver — checking your actual membership start date (via your provider, not just guessing) well ahead of a purchase timeline avoids a late, unpleasant surprise.
+Funds normally pass through the solicitor or conveyancer under the required process. Processing time varies; do not treat a generic fifteen-working-day estimate as a guaranteed provider deadline.
 
-Buyers also confuse the discontinued First Home Grant with the KiwiSaver withdrawal itself — these were always two separate things, and while the grant closed in May 2024, the KiwiSaver first-home withdrawal remains fully available and unaffected by that closure.
+### Can a previous homeowner apply?
 
-A third mistake: not accounting for processing time. Applications typically need to be submitted with your provider well ahead of settlement — commonly at least 15 working days — since funds are released to your solicitor as part of the settlement process, not on demand.
+Additional assessment can apply in permitted circumstances. Follow the provider/Kāinga Ora process and avoid assuming first-home status from the absence of a current mortgage.
 
-## Where this calculator has limits
+### Does this project future KiwiSaver growth?
 
-It uses standard eligibility rules — "second chance" withdrawals for previous home owners who are now in a similar financial position to a first-time buyer follow additional, more detailed criteria (including an asset test) that this simplified calculator doesn't fully model. It also can't confirm your specific fund provider's processing timeline or any complying-fund-specific rules if you're not in a standard KiwiSaver scheme.
-
-## FAQ
-
-**Does the three-year clock reset if I change KiwiSaver providers?**
-No — it's based on total KiwiSaver membership time, not time with your current specific provider, though you'll need to provide evidence of your full membership history when applying.
-
-**Can I withdraw KiwiSaver funds to buy land to build on?**
-Yes, provided it's for your first home and you intend to live there — this includes land purchases for building, not just existing dwellings.
-
-**What if I've owned a home before — am I locked out entirely?**
-Not necessarily — a "second chance" withdrawal may be available if you no longer own any property interest and meet an asset test showing you're in a similar financial position to a first-time buyer.
-
-**Is the KiwiSaver withdrawal the same as the old First Home Grant?**
-No — they were always separate. The grant was abolished in May 2024; the KiwiSaver withdrawal is your own savings and remains fully available.
-
-**How long does the withdrawal process take?**
-Providers generally recommend applying well in advance of your settlement date — commonly at least 15 working days — since funds need to be processed and paid to your solicitor.
-
-## Related tools
-
-First Home Buyer · Mortgage Calculator · LVR Calculator
-
----
-
-*Educational content, not financial advice. KiwiSaver withdrawal rules are set under the KiwiSaver Act and administered by individual scheme providers — confirm your specific eligibility and balance with your KiwiSaver provider or Kāinga Ora. Written by the MortgagePro Global team.*
+No. It does not assume contribution rates, employer deductions, investment returns, government contributions or tax. It works from the eligible balance you enter, not a forecast.

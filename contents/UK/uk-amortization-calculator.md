@@ -1,61 +1,35 @@
-# Amortization Calculator: Repayment vs. Interest-Only, and Why the Choice Still Exists in the UK
+# UK Repayment Versus Interest-Only: Compare the Balance as Well as the Bill
 
-**Meta description:** See how a repayment mortgage's amortization schedule compares to an interest-only structure, and what UK lenders now require before allowing the interest-only route.
+**Meta description:** Compare UK repayment and interest-only scenarios, including the outstanding principal and a later switch to repayment at an assumed unchanged rate.
 
-Most countries have quietly standardized on repayment mortgages, where every payment chips away at both interest and principal. The UK is one of the few markets where interest-only is still a genuine, live choice for some borrowers — not just a legacy product from decades past — provided you can satisfy the lender's repayment vehicle requirements.
+An interest-only payment can look attractive beside a repayment payment, but the two are buying different progress on the debt. Repayment clears some principal each month. Interest-only leaves principal to be repaid by another arrangement or at the end.
 
-## The two structures, side by side
+On £262,500 at an assumed 4.48%, a 25-year repayment model costs **£1,456.08 monthly**. Interest-only costs **£980 monthly** in this simplified calculation. The £476.08 difference is not a permanent saving: the interest-only borrower has not repaid that principal through those payments.
 
-**Repayment mortgage:** each monthly payment covers interest plus a portion of principal, following the same amortization curve used elsewhere — heavily interest-weighted early on, shifting toward principal over time. By the end of the term, the balance is fully cleared.
+<!-- calculator -->
 
-**Interest-only mortgage:** each monthly payment covers interest alone. The original loan balance never reduces through the payment itself — at the end of the term, the full amount is still owed, and needs to be repaid through some separate means: savings, investments, or sale of the property.
+## Make the remaining balance visible
 
-## Worked example
+The widget compares the repayment balance after the selected interest-only period with the unchanged interest-only principal. It also calculates the payment needed to clear that full principal over the shorter remaining term at the same assumed rate. The future rate may differ.
 
-On the £262,500 loan from our Mortgage Calculator example, at 4.48% over 25 years:
+For an interest-only period lasting the whole mortgage term, the principal remains due at maturity. This transition model instead requires at least a year of repayment after the selected interest-only phase. It does not imply a lender will offer that transition or permit extending the phase.
 
-| Structure | Monthly payment | Balance at year 25 |
-|---|---|---|
-| Repayment | ≈ £1,456 | £0 |
-| Interest-only | ≈ £980 | £262,500 (unchanged) |
+## A repayment strategy needs evidence
 
-The interest-only payment is noticeably lower month to month — but the entire original balance is still due at the end, which is exactly why lenders now require documented proof of a credible repayment strategy before approving it.
+[MoneyHelper's interest-only guidance](https://www.moneyhelper.org.uk/en/homes/buying-a-home/mortgage-repayment-options) explains the need to repay capital separately. A lender determines whether a proposed savings, investment, sale or other repayment strategy is acceptable. It is not enough for a calculator to assume future property appreciation or an investment return.
 
-> **Why lenders tightened this up:** after widespread concern about borrowers reaching the end of interest-only terms without a way to actually clear the balance, most UK lenders now require evidence of a specific, credible repayment vehicle — an investment portfolio, pension lump sum, or planned property sale — rather than simply hoping for future property appreciation to cover it.
+A part-and-part mortgage, a retirement interest-only product and a standard buy-to-let loan can have materially different rules. Do not treat the example as approval criteria for all of them.
 
-## Common mistakes
+## Compare the complete cost
 
-Borrowers sometimes choose interest-only purely for the lower monthly payment without a concrete repayment plan, which is precisely the pattern lenders now screen against — an application without a credible, evidenced repayment vehicle is likely to be declined outright, not just questioned.
+If principal does not shrink, more interest normally accumulates than under an otherwise identical repayment path. That does not establish the best choice for a particular household. Fees, future rates, tax, investment risk, age and the ability to make a final repayment are outside this model.
 
-Borrowers also confuse "interest-only" with "buy-to-let default" — while interest-only is more common on BTL mortgages (where rental income services the interest and the property itself is often the exit strategy), it's not exclusive to buy-to-let, and residential interest-only still exists for qualifying borrowers.
+Add ownership costs such as council tax, insurance and repairs separately; neither displayed payment is a complete housing budget.
 
-A third mistake: underestimating how much total interest an interest-only mortgage costs over a long holding period, since the balance never shrinks — every year's interest is calculated on the full original amount, unlike a repayment mortgage where the interest charge shrinks as the balance does.
+### Does interest-only protect me from a rate increase?
 
-## Where this calculator has limits
+No. Interest charges can change when the rate arrangement changes. In this model monthly interest is principal multiplied by the entered annual rate divided by 1200.
 
-It shows the two structures at their simplest — many borrowers actually use part-and-part mortgages, splitting a portion on repayment and a portion on interest-only, which this comparison doesn't model directly. It also can't verify whether a specific repayment vehicle would satisfy a given lender's requirements — that's a case-by-case underwriting decision.
+### Can a lower first payment cause a later jump?
 
-## FAQ
-
-**Can I still get an interest-only mortgage in the UK?**
-Yes, for qualifying borrowers who can evidence a credible repayment strategy — it's more restricted than it was pre-financial crisis, but it hasn't disappeared.
-
-**Is interest-only cheaper overall?**
-Monthly payments are lower, but total interest paid over the loan's life is typically higher, since the balance being charged interest never reduces.
-
-**What counts as a credible repayment vehicle?**
-Commonly an investment portfolio, pension lump sum, ISA, or a planned property sale — each lender sets its own acceptable list and evidence requirements.
-
-**Does switching from interest-only to repayment mid-term reset my amortization?**
-It restructures your remaining payments to start clearing principal from that point forward — your lender can model the new schedule based on the remaining balance and term.
-
-**Is interest-only more common on buy-to-let than residential mortgages?**
-Yes, considerably — many BTL mortgages are structured as interest-only by default, since rental income is intended to cover the interest while the property itself (or its sale) is the repayment plan.
-
-## Related tools
-
-Mortgage Calculator · Buy-to-Let Calculator · Remortgage Tool
-
----
-
-*Educational content, not financial advice. Interest-only eligibility and repayment vehicle requirements vary significantly by lender — confirm your specific options with a licensed UK mortgage adviser. Written by the MortgagePro Global team.*
+Yes. If full principal must be repaid over fewer remaining years, the later repayment can be substantially higher even at an unchanged rate. Review the plan well before the interest-only period ends.

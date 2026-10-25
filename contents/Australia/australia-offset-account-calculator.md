@@ -1,62 +1,35 @@
-# Offset Account Calculator: The Everyday Account That Quietly Cuts Your Interest
+# Australia Offset Accounts: Estimate Interest Reduction After Fees
 
-**Meta description:** See how an Australian mortgage offset account reduces the interest you're charged daily, and how much a typical balance actually saves over the life of a loan.
+**Meta description:** Model a constant offset balance and partial-offset percentage, separate fees from interest reduction, and avoid unsupported lifetime or tax-return claims.
 
-An offset account is one of the more distinctly Australian mortgage features — a everyday transaction account linked to your home loan, where every dollar sitting in it reduces the loan balance your interest is calculated on, without actually paying down the mortgage itself. It's a genuinely different mechanism from a US or UK redraw facility, and it rewards simply keeping your everyday cash in the right place.
+An offset account changes the balance on which loan interest is calculated; it does not directly pay principal down merely because money is sitting there. The benefit depends on actual daily balances, the offset percentage, the linked loan and product costs.
 
-## How the offset actually works
+The estimator below is an **annualized constant-balance approximation**. It does not claim a six-figure lifetime saving from one year's account balance.
 
-Interest on most Australian home loans is calculated daily on the outstanding balance. An offset account sits alongside the loan, and its balance is subtracted from the loan balance before that daily interest calculation runs — but the money in the offset account remains fully accessible, unlike a redraw or extra repayment, which requires a request to get the funds back out.
+<!-- calculator -->
 
-## Worked example
+## Check how much balance is actually offset
 
-On the $520,000 loan at 6.19% from our Mortgage Calculator, with an average offset balance of $40,000 sitting in a linked account:
+With AUD 520,000 outstanding, an AUD 40,000 constant balance and 100% offset, interest is modeled on AUD 480,000. At an assumed 6.19%, the simple annual reduction is **AUD 2,476** before extra product fees. If the offset feature costs an additional AUD 395 each year compared with the alternative product, the simple net figure is **AUD 2,081**.
 
-| Item | Value |
-|---|---|
-| Loan balance | $520,000 |
-| Offset account balance | $40,000 |
-| Interest calculated on | $480,000 (not $520,000) |
-| Approx. annual interest saved | ~$2,480 |
-| Approx. interest saved over 25 years (assuming balance maintained) | Well into six figures, compounding as the loan balance itself also shrinks faster |
+A 50% offset would offset only AUD 20,000 of that balance. The tool caps the interest reduction at the loan balance; it does not assume a credit balance earns negative loan interest.
 
-That $40,000 doesn't need to be a dedicated "extra payment" — it can simply be a salary account, an emergency fund, or savings sitting there day to day, offsetting interest the entire time it's present, then available instantly if needed.
+[ASIC Moneysmart's offset guidance](https://moneysmart.gov.au/home-loans/mortgage-offset-accounts) explains why linked-account terms, fees and rates need comparison. An offset loan with a higher rate can cost more on the rest of the principal even when the account reduces some interest.
 
-> **Why this beats a savings account for most people:** a 6.19% loan means the "return" on money sitting in an offset account is effectively 6.19%, tax-free, since it's a reduction in interest paid rather than income earned — almost always better than the after-tax return on the same money sitting in a standard savings account at a lower advertised rate.
+## Daily cash flow changes the answer
 
-## Common mistakes
+Salary arrives, bills leave and savings move. A peak balance on payday is not the same as maintaining it every day. Use a realistic average for this simplified estimate, then compare the lender's daily calculation and annual statements.
 
-Borrowers frequently confuse an offset account with a redraw facility — redraw requires withdrawing extra payments back out through the lender, often with a delay or fee; an offset account is a normal transaction account with instant access, functioning entirely differently under the hood despite a similar-sounding benefit.
+An offset account and redraw have different legal and practical arrangements. Access can depend on product terms, transaction limits and account arrangements; neither should be described as always unrestricted or identical to extra principal.
 
-Borrowers also let large balances sit in a separate high-interest savings account instead of the offset, missing out on the effectively tax-free "return" the offset provides — especially relevant for anyone in a higher tax bracket, where the after-tax return on a savings account often falls well below the offset's effective benefit.
+## Avoid treating the saving as a universal tax-free return
 
-A third mistake: not checking whether the offset is a "100% offset" — some products offer only partial offset benefits, or apply to a linked account with monthly fees that erode the advantage if the average balance is small.
+Reducing interest is different from receiving savings-account interest, but the after-tax comparison depends on borrowing purpose and circumstances. Investment-property deductions and redraw use can complicate it. This tool does not calculate tax or recommend an account as always better than another use of cash.
 
-## Where this calculator has limits
+### Will an offset shorten the loan?
 
-It assumes a constant offset balance for illustration — in reality, most people's account balance fluctuates through the month (salary in, bills and spending out), so the actual daily-average benefit is usually lower than a simple "balance times rate" estimate suggests, unless you can maintain a consistently high balance.
+It can if reduced interest lets more of unchanged payments reach principal, but rates, balances and payment rules matter. This annual model does not simulate the full repayment path.
 
-## FAQ
+### Does moving the balance out increase my principal?
 
-**Does money in my offset account actually pay down my mortgage?**
-No — it reduces the interest calculated, but the loan balance itself doesn't decrease from offset funds sitting there; withdrawing the money simply removes the offset benefit, with no change to the loan.
-
-**Is an offset account the same as extra repayments?**
-No — extra repayments actually reduce your loan balance and typically require a redraw request to access again; an offset account keeps the funds fully liquid while still reducing interest.
-
-**Does offsetting affect my loan term?**
-It effectively shortens the real payoff time if the balance is maintained, since less of each payment goes to interest and more effectively goes toward principal reduction over time — though the mechanism is interest savings, not direct extra principal payments.
-
-**Is there a fee for an offset account?**
-Often yes, sometimes bundled into a package home loan's annual fee — worth comparing the fee against the actual interest savings your typical balance would generate.
-
-**Can I have multiple offset accounts against one loan?**
-Some lenders allow this, useful for keeping different savings goals (e.g., a house deposit for a second property, an emergency fund) all offsetting the same loan while remaining separately tracked.
-
-## Related tools
-
-Mortgage Calculator · Refinance Tool · Affordability Calculator
-
----
-
-*Educational content, not financial advice. Offset account terms, fees, and offset percentages vary by lender and product — confirm your specific product's terms with your lender. Written by the MortgagePro Global team.*
+It normally removes the modeled offset benefit rather than reversing a principal repayment. Read the product terms and distinguish loan balance from the linked deposit account balance.
