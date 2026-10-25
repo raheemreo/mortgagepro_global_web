@@ -3,7 +3,7 @@
 (function(root,factory){const a=factory();if(typeof module==='object'&&module.exports)module.exports=a;else root.CanadaMortgageTools=a;})(typeof globalThis!=='undefined'?globalThis:this,function(){
 'use strict';
 function check(v,label,min=0,max=1e9){if(!Number.isFinite(v)||v<min||v>max)throw Error(label+' is outside the supported range.');return v;}
-function periodic(rate,frequency=12,comp='semiannual'){check(rate,'Annual rate',0,40);if(!['semiannual','monthly'].includes(comp))throw Error('Unsupported compounding convention.');if(![12,24,26,52].includes(frequency))throw Error('Unsupported payment frequency.');return Math.expm1(Math.log1p(rate/(comp==='semiannual'?200:1200))*(comp==='semiannual'?2:12)/frequency);}
+function periodic(rate,frequency=12,comp='semiannual'){check(rate,'Annual rate',0,42);if(!['semiannual','monthly'].includes(comp))throw Error('Unsupported compounding convention.');if(![12,24,26,52].includes(frequency))throw Error('Unsupported payment frequency.');return Math.expm1(Math.log1p(rate/(comp==='semiannual'?200:1200))*(comp==='semiannual'?2:12)/frequency);}
 function payment(loan,rate,years,frequency=12,comp='semiannual'){check(loan,'Principal');check(years,'Amortization',1,40);if(!Number.isInteger(years))throw Error('Enter whole amortization years.');const r=periodic(rate,frequency,comp),n=years*frequency;return r?loan*r/-Math.expm1(-n*Math.log1p(r)):loan/n;}
 function schedule(loan,rate,years,{frequency=12,comp='semiannual',extra=0,lump=0,lumpPeriod=0,annualLump=0,accelerated=false}={}){
  if(accelerated&&![26,52].includes(frequency))throw Error('Accelerated plans require 26 or 52 payments per year.');
