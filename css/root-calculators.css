@@ -1,0 +1,11 @@
+/* Keep result cards and controls within narrow screens without clipping tables. */
+.results-panel,.results-grid,.results-panel .mrc,.results-panel .ticker{min-width:0!important;max-width:100%;box-sizing:border-box}
+.mpg-table-scroll{max-width:100%;min-width:0;overflow-x:auto}.mpg-table-scroll:focus{outline:2px solid #2466a8;outline-offset:3px}.mpg-table-scroll table{min-width:520px;width:100%}
+@media(max-width:480px){.results-panel .mrc,.results-panel .ticker{width:100%}.results-panel [style*="grid-template-columns"]{grid-template-columns:minmax(0,1fr)!important}.results-panel [style*="display: flex"]{flex-wrap:wrap}.results-panel [style*="display: flex"]>div{min-width:0;overflow-wrap:anywhere}.sb,.ks,.stress-banner,.ks-banner{flex-wrap:wrap;min-width:0;gap:12px}.sb-btn,.ks-btn{max-width:100%;white-space:normal!important;margin-left:0!important}.country-pills,#country-pills{flex-wrap:wrap;max-width:100%}select{min-width:0;max-width:100%}}
+@media(max-width:480px){.results-panel .ticker,.results-panel .results-lead{flex-wrap:wrap;gap:1rem}.results-panel canvas{max-width:100%;height:auto}.results-panel .ticker>div{min-width:0;max-width:100%}}
+.mrc,.ticker{min-width:0!important;max-width:100%;box-sizing:border-box}
+@media(max-width:480px){.mrc [style*="grid-template-columns"],.ticker [style*="grid-template-columns"]{grid-template-columns:minmax(0,1fr)!important}.mrc [style*="display: flex"],.ticker [style*="display: flex"]{flex-wrap:wrap}.mrc,.ticker{overflow-wrap:anywhere}}
+@media(max-width:480px){.results-panel>div[style*="display: flex"]>.mrc,.results-panel>div[style*="display:flex"]>.mrc,.results-panel>div[style*="display: flex"]>.ticker{flex:1 1 100%!important;width:100%}}
+
+/* The Australian hero link shares the visible primary action treatment. */
+.hdr-btns a.btn-primary{display:inline-flex;align-items:center;justify-content:center;background:#123f78;color:#fff;padding:12px 18px;border-radius:10px;font-weight:700;max-width:100%;box-sizing:border-box}

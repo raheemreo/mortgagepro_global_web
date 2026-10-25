@@ -100,137 +100,82 @@ Sitemap: https://mortgageproglobal.com/sitemap.xml
         });
       }
 
-      // Check Cloudflare Edge Cache
-      const cache = caches.default;
-      const cacheKey = new Request(url.toString(), request);
-      let cachedResponse = await cache.match(cacheKey);
-      if (cachedResponse) {
-        return cachedResponse;
-      }
-
-      // Load static base snapshot from env.ASSETS
+      // Read the deployed snapshot before selecting its versioned edge cache.
       let snapshot;
       try {
-        const assetRes = await env.ASSETS.fetch(
-          new Request(new URL("/data/rates.json", url).toString())
-        );
-        if (assetRes.ok) {
-          snapshot = await assetRes.json();
-        }
+        const res = await env.ASSETS.fetch(new Request(new URL('/data/rates.json', url)));
+        if (res.ok) snapshot = await res.json();
       } catch (_) {}
-
-      // Fallback base if file read fails
-      if (!snapshot || !snapshot.rates) {
-        snapshot = {
-          version: 2,
-          generatedAt: new Date().toISOString(),
-          rates: {
-            usa: {
-              fixed30: { rate: 6.71, formatted: "6.71%", unit: "%", instrument: "30-Year Fixed-Rate Mortgage", source: "Freddie Mac PMMS via FRED", effectiveDate: "2026-09-03", lastVerified: "2026-09-04", status: "live", isLive: true },
-              fixed15: { rate: 6.04, formatted: "6.04%", unit: "%", instrument: "15-Year Fixed-Rate Mortgage", source: "Freddie Mac PMMS via FRED", effectiveDate: "2026-09-03", lastVerified: "2026-09-04", status: "live", isLive: true },
-              fed: { rate: "3.50% – 3.75%", formatted: "3.50% – 3.75%", unit: "%", instrument: "FOMC Federal Funds Target Range", source: "Federal Reserve Board", effectiveDate: "2026-07-30", lastVerified: "2026-09-04", status: "reference", isLive: false }
-            },
-            canada: {
-              boc: { rate: 2.25, formatted: "2.25%", unit: "%", instrument: "Policy Interest Rate (Overnight)", source: "Bank of Canada Valet API", effectiveDate: "2026-09-02", lastVerified: "2026-09-04", status: "live", isLive: true },
-              fixed5: { rate: 6.09, formatted: "6.09%", unit: "%", instrument: "5-Year Conventional Mortgage Benchmark", source: "Bank of Canada Valet API", effectiveDate: "2026-09-02", lastVerified: "2026-09-04", status: "live", isLive: true }
-            },
-            uk: { boe: { rate: 3.75, formatted: "3.75%", unit: "%", instrument: "Official Bank Rate", source: "Bank of England MPC", effectiveDate: "2025-12-18", lastVerified: "2026-09-04", status: "reference", isLive: false } },
-            australia: { rba: { rate: 4.35, formatted: "4.35%", unit: "%", instrument: "Cash Rate Target", source: "Reserve Bank of Australia", effectiveDate: "2026-08-05", lastVerified: "2026-09-04", status: "reference", isLive: false } },
-            newzealand: { ocr: { rate: 2.75, formatted: "2.75%", unit: "%", instrument: "Official Cash Rate (OCR)", source: "Reserve Bank of New Zealand", effectiveDate: "2026-09-02", lastVerified: "2026-09-04", status: "reference", isLive: false } },
-            india: { repo: { rate: 5.25, formatted: "5.25%", unit: "%", instrument: "Policy Repo Rate", source: "Reserve Bank of India (MPC)", effectiveDate: "2026-08-05", lastVerified: "2026-09-04", status: "reference", isLive: false } },
-            europe: { ecb: { rate: 2.40, formatted: "2.40%", unit: "%", instrument: "Main Refinancing Operations Rate", source: "European Central Bank", effectiveDate: "2026-06-17", lastVerified: "2026-09-04", status: "reference", isLive: false } }
-          }
-        };
+      if (!snapshot || snapshot.version !== 2 || !snapshot.rates) {
+        return new Response(JSON.stringify({error: 'Rates temporarily unavailable'}), {
+          status: 503, headers: {'Content-Type': 'application/json', 'Cache-Control': 'no-store'}
+        });
+      }
+      const cache = caches.default;
+      const cacheUrl = new URL('/api/rates', url);
+      cacheUrl.searchParams.set('snapshot', snapshot.generatedAt);
+      const cacheKey = new Request(cacheUrl);
+      const cachedResponse = await cache.match(cacheKey);
+      if (cachedResponse) return cachedResponse;
+      // Reassess stored observations even when an upstream service is unavailable.
+      for (const items of Object.values(snapshot.rates)) for (const item of Object.values(items)) {
+        if (item.kind === 'historical') { item.status = 'stale'; item.isLive = false; }
+        else if (item.kind === 'policy') { item.status = Date.parse(item.reviewAfter) >= Date.now() ? 'reference' : 'stale'; item.isLive = false; }
+        else {
+          const days = (Date.now() - Date.parse(item.effectiveDate)) / 86400000;
+          const limit = item.cadence === 'weekly' || /Mortgage|5-Year/.test(item.instrument) ? 10 : 4;
+          item.isLive = Number.isFinite(days) && days >= -1 && days <= limit;
+          item.status = item.isLive ? 'live' : 'stale';
+        }
       }
 
-      // Upstream Live Refresh (timeout protected)
+      // Public-source refresh. Never expose credentials in JSON or logs.
       const now = Date.now();
-      const checkStale = (dateStr, maxAgeMs) => {
-        const obs = new Date(dateStr).getTime();
-        return isNaN(obs) || (now - obs > maxAgeMs) ? { status: "stale", isLive: false } : { status: "live", isLive: true };
+      const today = new Date(now).toISOString().slice(0, 10);
+      const valid = (value, date) => {
+        if (!['string', 'number'].includes(typeof value) || String(value).trim() === '' || !/^\d{4}-\d{2}-\d{2}$/.test(date || '')) return false;
+        const number = Number(value), time = Date.parse(date);
+        return Number.isFinite(number) && number >= 0 && number <= 50 && Number.isFinite(time)
+          && new Date(time).toISOString().slice(0, 10) === date && time <= now + 86400000;
       };
-
-      const fetchTimeout = (uri, ms = 3200) => {
+      const specs = [
+        {country: 'canada', name: 'boc', series: 'V39079', cadence: 'daily'},
+        {country: 'canada', name: 'fixed5', series: 'V80691335', cadence: 'weekly'},
+        {country: 'canada', name: 'prime', series: 'V80691311', cadence: 'weekly'}
+      ];
+      if (env.FRED_API_KEY) {
+        for (const [series, name, cadence] of [['MORTGAGE30US', 'fixed30', 'weekly'], ['MORTGAGE15US', 'fixed15', 'weekly'], ['DPRIME', 'prime', 'daily'], ['DFF', 'fedEffective', 'daily']]) specs.push({country: 'usa', series, name, cadence});
+      }
+      await Promise.all(specs.map(async spec => {
         const controller = new AbortController();
-        const timer = setTimeout(() => controller.abort(), ms);
-        return fetch(uri, { signal: controller.signal, headers: { "User-Agent": "MortgageProGlobal/2.0" } })
-          .then(res => res.ok ? res.json() : null)
-          .catch(() => null)
-          .finally(() => clearTimeout(timer));
-      };
-
-      try {
-        const promises = [];
-
-        // Bank of Canada (no API key required)
-        promises.push(
-          fetchTimeout("https://www.bankofcanada.ca/valet/observations/V39079/json?recent=1").then(json => {
-            const obs = json?.observations?.[0];
-            const val = parseFloat(obs?.V39079?.v);
-            if (!isNaN(val) && val > 0 && snapshot.rates.canada?.boc) {
-              const freshness = checkStale(obs.d, 60 * 24 * 3600 * 1000);
-              snapshot.rates.canada.boc.rate = val;
-              snapshot.rates.canada.boc.formatted = `${val.toFixed(2)}%`;
-              snapshot.rates.canada.boc.effectiveDate = obs.d;
-              snapshot.rates.canada.boc.status = freshness.status;
-              snapshot.rates.canada.boc.isLive = freshness.isLive;
-            }
-          })
-        );
-
-        promises.push(
-          fetchTimeout("https://www.bankofcanada.ca/valet/observations/V80691335/json?recent=1").then(json => {
-            const obs = json?.observations?.[0];
-            const val = parseFloat(obs?.V80691335?.v);
-            if (!isNaN(val) && val > 0 && snapshot.rates.canada?.fixed5) {
-              const freshness = checkStale(obs.d, 10 * 24 * 3600 * 1000);
-              snapshot.rates.canada.fixed5.rate = val;
-              snapshot.rates.canada.fixed5.formatted = `${val.toFixed(2)}%`;
-              snapshot.rates.canada.fixed5.effectiveDate = obs.d;
-              snapshot.rates.canada.fixed5.status = freshness.status;
-              snapshot.rates.canada.fixed5.isLive = freshness.isLive;
-            }
-          })
-        );
-
-        // FRED API (if credential configured in Worker env)
-        if (env.FRED_API_KEY) {
-          const fred = (id) => `https://api.stlouisfed.org/fred/series/observations?series_id=${id}&api_key=${env.FRED_API_KEY}&file_type=json&sort_order=desc&limit=1`;
-          promises.push(
-            fetchTimeout(fred("MORTGAGE30US")).then(json => {
-              const obs = json?.observations?.[0];
-              const val = parseFloat(obs?.value);
-              if (!isNaN(val) && val > 0 && snapshot.rates.usa?.fixed30) {
-                const freshness = checkStale(obs.date, 10 * 24 * 3600 * 1000);
-                snapshot.rates.usa.fixed30.rate = val;
-                snapshot.rates.usa.fixed30.formatted = `${val.toFixed(2)}%`;
-                snapshot.rates.usa.fixed30.effectiveDate = obs.date;
-                snapshot.rates.usa.fixed30.status = freshness.status;
-                snapshot.rates.usa.fixed30.isLive = freshness.isLive;
-              }
-            })
-          );
-          promises.push(
-            fetchTimeout(fred("MORTGAGE15US")).then(json => {
-              const obs = json?.observations?.[0];
-              const val = parseFloat(obs?.value);
-              if (!isNaN(val) && val > 0 && snapshot.rates.usa?.fixed15) {
-                const freshness = checkStale(obs.date, 10 * 24 * 3600 * 1000);
-                snapshot.rates.usa.fixed15.rate = val;
-                snapshot.rates.usa.fixed15.formatted = `${val.toFixed(2)}%`;
-                snapshot.rates.usa.fixed15.effectiveDate = obs.date;
-                snapshot.rates.usa.fixed15.status = freshness.status;
-                snapshot.rates.usa.fixed15.isLive = freshness.isLive;
-              }
-            })
-          );
-        }
-
-        await Promise.all(promises);
-      } catch (_) {}
+        const timer = setTimeout(() => controller.abort(), 3200);
+        try {
+          let sourceUrl, upstream;
+          if (spec.country === 'usa') {
+            sourceUrl = 'https://fred.stlouisfed.org/series/' + spec.series;
+            upstream = new URL('https://api.stlouisfed.org/fred/series/observations');
+            for (const [key, value] of Object.entries({series_id: spec.series, api_key: env.FRED_API_KEY, file_type: 'json', sort_order: 'desc', limit: '5'})) upstream.searchParams.set(key, value);
+          } else {
+            sourceUrl = 'https://www.bankofcanada.ca/valet/observations/' + spec.series + '/json';
+            upstream = sourceUrl + '?recent=5';
+          }
+          const response = await fetch(upstream, {signal: controller.signal});
+          if (!response.ok) return;
+          const json = await response.json();
+          const observations = spec.country === 'usa' ? json.observations : json.observations?.slice().reverse();
+          const obs = observations?.find(o => valid(spec.country === 'usa' ? o.value : o[spec.series]?.v, o.date || o.d));
+          if (!obs || !snapshot.rates[spec.country]?.[spec.name]) return;
+          const rate = Number(spec.country === 'usa' ? obs.value : obs[spec.series].v), date = obs.date || obs.d;
+          const item = snapshot.rates[spec.country][spec.name];
+          const days = (now - Date.parse(date)) / 86400000, fresh = days <= (spec.cadence === 'weekly' ? 10 : 4);
+          Object.assign(item, {rate, formatted: rate.toFixed(2) + '%', effectiveDate: date, lastVerified: today, sourceUrl, kind: 'observation', cadence: spec.cadence, status: fresh ? 'live' : 'stale', isLive: fresh});
+        } catch (_) {
+          // Keep the original value and its actual last-verified date on failure.
+        } finally { clearTimeout(timer); }
+      }));
 
       // Update snapshot metadata
-      snapshot.generatedAt = new Date().toISOString();
+      snapshot.servedAt = new Date().toISOString();
 
       const apiResponse = new Response(JSON.stringify(snapshot), {
         status: 200,

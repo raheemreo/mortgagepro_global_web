@@ -1,27 +1,33 @@
-name: Validate all mortgage blog articles
+name: Validate mortgage website
 
 on:
   pull_request:
     paths:
-      - 'blog/**'
+      - '**.html'
       - 'contents/**'
-      - 'js/*blog-calculators.js'
-      - 'css/us-blog.css'
-      - 'scripts/*articles.py'
-      - 'tests/*blog-*'
+      - 'js/**'
+      - 'css/**'
+      - 'data/**'
+      - 'lib/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - '_worker.js'
       - 'sitemap.xml'
-      - '.github/workflows/validate-us-blog.yml'
+      - '.github/workflows/**'
   push:
     branches: [main]
     paths:
-      - 'blog/**'
+      - '**.html'
       - 'contents/**'
-      - 'js/*blog-calculators.js'
-      - 'css/us-blog.css'
-      - 'scripts/*articles.py'
-      - 'tests/*blog-*'
+      - 'js/**'
+      - 'css/**'
+      - 'data/**'
+      - 'lib/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - '_worker.js'
       - 'sitemap.xml'
-      - '.github/workflows/validate-us-blog.yml'
+      - '.github/workflows/**'
 
 permissions:
   contents: read
@@ -37,14 +43,20 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Validate country financial fixtures and edge cases
-        run: node --test tests/us-blog-calculators.test.cjs tests/global-blog-calculators.test.cjs
-      - name: Check all 43 articles, metadata, sources and local links
+      - name: Validate financial models, observations and edge behavior
+        run: node --test tests/us-blog-calculators.test.cjs tests/global-blog-calculators.test.cjs tests/site-rates.test.cjs
+      - name: Check articles, public pages, privacy tags and navigation
         run: |
+          node scripts/validate_rates.js
           python scripts/validate_us_articles.py
           python scripts/validate_global_articles.py
-      - name: Check reproducible article builds
+          python scripts/validate_site_readiness.py
+      - name: Check reproducible website builds
         run: |
           python scripts/build_us_articles.py
           python scripts/build_global_articles.py
+          python scripts/build_site_documents.py
+          python scripts/build_root_guides.py
+          node scripts/build_rate_assets.cjs
+          python scripts/apply_site_privacy.py
           git diff --exit-code

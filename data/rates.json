@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-10-24T09:58:12.019Z",
+  "generatedAt": "2026-10-25T08:36:29.823Z",
   "rates": {
     "usa": {
       "fixed30": {
@@ -13,7 +13,8 @@
         "effectiveDate": "2026-10-22",
         "lastVerified": "2026-10-24",
         "status": "live",
-        "isLive": true
+        "isLive": true,
+        "kind": "observation"
       },
       "fixed15": {
         "rate": 6.68,
@@ -25,7 +26,8 @@
         "effectiveDate": "2026-10-22",
         "lastVerified": "2026-10-24",
         "status": "live",
-        "isLive": true
+        "isLive": true,
+        "kind": "observation"
       },
       "prime": {
         "rate": 7,
@@ -37,7 +39,8 @@
         "effectiveDate": "2026-10-21",
         "lastVerified": "2026-10-24",
         "status": "live",
-        "isLive": true
+        "isLive": true,
+        "kind": "observation"
       },
       "fedEffective": {
         "rate": 3.75,
@@ -48,20 +51,23 @@
         "sourceUrl": "https://fred.stlouisfed.org/series/FEDFUNDS",
         "effectiveDate": "2026-09-01",
         "lastVerified": "2026-10-24",
-        "status": "live",
-        "isLive": true
+        "status": "stale",
+        "isLive": false,
+        "kind": "observation"
       },
       "fed": {
-        "rate": "3.50% – 3.75%",
-        "formatted": "3.50% – 3.75%",
+        "rate": "3.75% – 4.00%",
+        "formatted": "3.75% – 4.00%",
         "unit": "%",
         "instrument": "FOMC Federal Funds Target Range",
-        "source": "Federal Reserve Board (FOMC)",
-        "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
-        "effectiveDate": "2026-07-30",
-        "lastVerified": "2026-09-04",
+        "source": "Federal Reserve Board",
+        "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a1.htm",
+        "effectiveDate": "2026-09-17",
+        "lastVerified": "2026-10-25",
         "status": "reference",
-        "isLive": false
+        "isLive": false,
+        "kind": "policy",
+        "reviewAfter": "2026-10-28"
       }
     },
     "canada": {
@@ -75,7 +81,8 @@
         "effectiveDate": "2026-10-21",
         "lastVerified": "2026-10-24",
         "status": "live",
-        "isLive": true
+        "isLive": true,
+        "kind": "observation"
       },
       "fixed5": {
         "rate": 6.19,
@@ -87,7 +94,8 @@
         "effectiveDate": "2026-10-14",
         "lastVerified": "2026-10-24",
         "status": "stale",
-        "isLive": false
+        "isLive": false,
+        "kind": "historical"
       },
       "prime": {
         "rate": 4.45,
@@ -99,7 +107,8 @@
         "effectiveDate": "2026-10-14",
         "lastVerified": "2026-10-24",
         "status": "live",
-        "isLive": true
+        "isLive": true,
+        "kind": "observation"
       }
     },
     "uk": {
@@ -108,12 +117,14 @@
         "formatted": "3.75%",
         "unit": "%",
         "instrument": "Official Bank Rate",
-        "source": "Bank of England MPC",
+        "source": "Bank of England",
         "sourceUrl": "https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate",
         "effectiveDate": "2025-12-18",
-        "lastVerified": "2026-09-04",
+        "lastVerified": "2026-10-25",
         "status": "reference",
-        "isLive": false
+        "isLive": false,
+        "kind": "policy",
+        "reviewAfter": "2026-10-28"
       },
       "fixed2": {
         "rate": 4.75,
@@ -124,8 +135,9 @@
         "sourceUrl": "https://www.bankofengland.co.uk/boeapps/database/",
         "effectiveDate": "2026-08-01",
         "lastVerified": "2026-09-04",
-        "status": "reference",
-        "isLive": false
+        "status": "stale",
+        "isLive": false,
+        "kind": "historical"
       },
       "fixed5": {
         "rate": 4.35,
@@ -136,22 +148,25 @@
         "sourceUrl": "https://www.bankofengland.co.uk/boeapps/database/",
         "effectiveDate": "2026-08-01",
         "lastVerified": "2026-09-04",
-        "status": "reference",
-        "isLive": false
+        "status": "stale",
+        "isLive": false,
+        "kind": "historical"
       }
     },
     "australia": {
       "rba": {
-        "rate": 4.35,
-        "formatted": "4.35%",
+        "rate": 4.6,
+        "formatted": "4.60%",
         "unit": "%",
         "instrument": "Cash Rate Target",
         "source": "Reserve Bank of Australia",
         "sourceUrl": "https://www.rba.gov.au/statistics/cash-rate/",
-        "effectiveDate": "2026-08-05",
-        "lastVerified": "2026-09-04",
+        "effectiveDate": "2026-09-30",
+        "lastVerified": "2026-10-25",
         "status": "reference",
-        "isLive": false
+        "isLive": false,
+        "kind": "policy",
+        "reviewAfter": "2026-10-28"
       },
       "variable": {
         "rate": 6.09,
@@ -162,8 +177,9 @@
         "sourceUrl": "https://www.rba.gov.au/statistics/tables/",
         "effectiveDate": "2026-08-01",
         "lastVerified": "2026-09-04",
-        "status": "reference",
-        "isLive": false
+        "status": "stale",
+        "isLive": false,
+        "kind": "historical"
       }
     },
     "newzealand": {
@@ -173,11 +189,13 @@
         "unit": "%",
         "instrument": "Official Cash Rate (OCR)",
         "source": "Reserve Bank of New Zealand",
-        "sourceUrl": "https://www.rbnz.govt.nz/monetary-policy/official-cash-rate-decisions",
+        "sourceUrl": "https://www.rbnz.govt.nz/monetary-policy/about-monetary-policy/the-official-cash-rate",
         "effectiveDate": "2026-09-02",
-        "lastVerified": "2026-09-04",
+        "lastVerified": "2026-10-25",
         "status": "reference",
-        "isLive": false
+        "isLive": false,
+        "kind": "policy",
+        "reviewAfter": "2026-10-28"
       },
       "floating": {
         "rate": 8.64,
@@ -188,22 +206,25 @@
         "sourceUrl": "https://www.rbnz.govt.nz/statistics/tables",
         "effectiveDate": "2026-08-01",
         "lastVerified": "2026-09-04",
-        "status": "reference",
-        "isLive": false
+        "status": "stale",
+        "isLive": false,
+        "kind": "historical"
       }
     },
     "india": {
       "repo": {
-        "rate": 5.25,
-        "formatted": "5.25%",
+        "rate": 5.5,
+        "formatted": "5.50%",
         "unit": "%",
         "instrument": "Policy Repo Rate",
-        "source": "Reserve Bank of India (MPC)",
-        "sourceUrl": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx",
-        "effectiveDate": "2026-08-05",
-        "lastVerified": "2026-09-04",
+        "source": "Reserve Bank of India",
+        "sourceUrl": "https://www.rbi.org.in/",
+        "effectiveDate": "2026-10-07",
+        "lastVerified": "2026-10-25",
         "status": "reference",
-        "isLive": false
+        "isLive": false,
+        "kind": "policy",
+        "reviewAfter": "2026-10-28"
       },
       "homeLoanSbi": {
         "rate": 8.5,
@@ -214,22 +235,25 @@
         "sourceUrl": "https://sbi.co.in",
         "effectiveDate": "2026-08-15",
         "lastVerified": "2026-09-04",
-        "status": "reference",
-        "isLive": false
+        "status": "stale",
+        "isLive": false,
+        "kind": "historical"
       }
     },
     "europe": {
       "ecb": {
-        "rate": 2.4,
-        "formatted": "2.40%",
+        "rate": 2.65,
+        "formatted": "2.65%",
         "unit": "%",
         "instrument": "Main Refinancing Operations (MRO) Rate",
         "source": "European Central Bank",
         "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
-        "effectiveDate": "2026-06-17",
-        "lastVerified": "2026-09-04",
+        "effectiveDate": "2026-09-16",
+        "lastVerified": "2026-10-25",
         "status": "reference",
-        "isLive": false
+        "isLive": false,
+        "kind": "policy",
+        "reviewAfter": "2026-10-28"
       },
       "euribor12m": {
         "rate": 3.17,
@@ -240,8 +264,9 @@
         "sourceUrl": "https://www.emmi-benchmarks.eu/benchmarks/euribor/",
         "effectiveDate": "2026-09-01",
         "lastVerified": "2026-09-04",
-        "status": "reference",
-        "isLive": false
+        "status": "stale",
+        "isLive": false,
+        "kind": "historical"
       }
     }
   }

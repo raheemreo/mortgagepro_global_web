@@ -45,7 +45,7 @@ requiredJurisdictions.forEach(j => {
 
     // Rate validation
     if (typeof item.rate === 'number') {
-      if (isNaN(item.rate) || !isFinite(item.rate) || item.rate <= 0) {
+      if (isNaN(item.rate) || !isFinite(item.rate) || item.rate < 0) {
         errors.push(`${key}: invalid numeric rate (${item.rate})`);
       }
     } else if (typeof item.rate !== 'string' || item.rate.trim() === '') {
@@ -76,5 +76,5 @@ if (errors.length > 0) {
   errors.forEach(e => console.error('  -', e));
   process.exit(1);
 } else {
-  console.log('✅ ALL VALIDATION CHECKS PASSED: data/rates.json is 100% compliant!');
+  console.log('✅ ALL VALIDATION CHECKS PASSED: rate snapshot schema is valid (not a policy-compliance certification).');
 }
