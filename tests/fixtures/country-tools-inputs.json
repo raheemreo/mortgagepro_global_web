@@ -1,0 +1,143 @@
+{
+  "uk": {
+    "mortgage": {
+      "price": 350000,
+      "down": 87500,
+      "rate": 4.48,
+      "years": 25,
+      "type": "repayment",
+      "financed": 0,
+      "cashFees": 0
+    },
+    "amortization": {
+      "loan": 262500,
+      "rate": 4.48,
+      "years": 25,
+      "frequency": "12",
+      "extra": 0,
+      "lump": 0,
+      "lumpPeriod": 1,
+      "annualLump": 0,
+      "accelerated": "no"
+    },
+    "overpayment": {
+      "loan": 262500,
+      "rate": 4.48,
+      "years": 25,
+      "frequency": "12",
+      "extra": 0,
+      "lump": 0,
+      "lumpPeriod": 1,
+      "annualLump": 0,
+      "accelerated": "no"
+    },
+    "interest-only": {
+      "loan": 262500,
+      "rate": 4.48,
+      "years": 25,
+      "ioYears": 5
+    },
+    "affordability": {
+      "net": 5000,
+      "living": 2000,
+      "debts": 0,
+      "down": 87500,
+      "rate": 4.48,
+      "buffer": 0,
+      "years": 25
+    },
+    "income-multiples": {
+      "income": 60000,
+      "otherIncome": 0,
+      "multiple": 4.5,
+      "price": 350000,
+      "down": 87500
+    },
+    "ltv": {
+      "value": 350000,
+      "loan": 262500,
+      "target": 75
+    },
+    "remortgage": {
+      "loan": 262500,
+      "oldRate": 4.75,
+      "rate": 4.48,
+      "years": 25,
+      "newYears": 25,
+      "horizon": 60,
+      "fees": 0,
+      "penalty": 0,
+      "repayCashback": 0,
+      "cashback": 0
+    },
+    "rate-comparison": {
+      "loan": 262500,
+      "oldRate": 4.75,
+      "rate": 4.48,
+      "years": 25,
+      "newYears": 25,
+      "horizon": 60,
+      "fees": 0,
+      "penalty": 0,
+      "repayCashback": 0,
+      "cashback": 0
+    },
+    "sdlt": {
+      "price": 350000,
+      "buyer": "standard",
+      "nonresident": "no"
+    },
+    "lbtt": {
+      "price": 350000,
+      "buyer": "standard",
+      "nonresident": "no"
+    },
+    "ltt": {
+      "price": 350000,
+      "buyer": "standard",
+      "nonresident": "no"
+    },
+    "buy-to-let": {
+      "price": 350000,
+      "down": 87500,
+      "rate": 4.48,
+      "years": 25,
+      "rent": 400,
+      "weeks": 52,
+      "management": 0,
+      "costs": 0,
+      "stress": 5.5,
+      "icr": 145
+    },
+    "rental-yield": {
+      "price": 350000,
+      "down": 87500,
+      "rate": 4.48,
+      "years": 25,
+      "rent": 400,
+      "weeks": 52,
+      "management": 0,
+      "costs": 0,
+      "stress": 5.5,
+      "icr": 145
+    },
+    "shared-ownership": {
+      "price": 350000,
+      "share": 25,
+      "down": 14000,
+      "rate": 4.48,
+      "years": 25,
+      "rentRate": 2.75,
+      "service": 200,
+      "tax": 0,
+      "fees": 0
+    },
+    "help-to-buy": {
+      "originalPrice": 200000,
+      "equity": 20,
+      "currentValue": 300000,
+      "feeRate": 1.75,
+      "management": 0
+    }
+  }
+}
