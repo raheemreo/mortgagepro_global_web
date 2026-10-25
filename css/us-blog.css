@@ -1,0 +1,27 @@
+/* Scoped to the eight US article calculators and their readable data tables. */
+.us-calc { margin: 2rem 0; padding: 1.25rem; border: 1px solid #94a3b8; border-radius: 12px; background: #f8fafc; color: #0b1d3a; }
+.us-calc h2 { margin-top: 0; }
+.us-calc .us-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 1rem; }
+.us-calc label { display: flex; flex-direction: column; gap: .35rem; font-weight: 600; }
+.us-calc input, .us-calc select { box-sizing: border-box; width: 100%; min-height: 44px; padding: .65rem; border: 1px solid #64748b; border-radius: 6px; background: white; color: #0b1d3a; font: inherit; }
+.us-calc :is(input, select, summary):focus-visible { outline: 3px solid #b91c1c; outline-offset: 3px; }
+.us-calc [data-results] { margin-top: 1rem; }
+.us-calc dl { display: grid; gap: .65rem; }
+.us-calc .us-result { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .3rem 1rem; }
+.us-calc dd { margin: 0; font-weight: 700; font-variant-numeric: tabular-nums; }
+.us-calc .us-error { color: #991b1b; font-weight: 600; }
+.us-calc summary { cursor: pointer; padding: .75rem 0; font-weight: 600; }
+.us-table-scroll { max-width: 100%; overflow-x: auto; margin: 1rem 0; }
+.us-table-scroll table { min-width: 520px; margin: 0; }
+.article-content :is(a, code) { overflow-wrap: anywhere; }
+.article-content code { white-space: normal; }
+.article-meta a { text-decoration: underline; }
+.article-content .us-calc p, .article-content .us-calc li { color: inherit; }
+@media (max-width: 600px) { .article-container { padding: 18px; } .us-calc { padding: 1rem; } }
+@media (prefers-color-scheme: dark) {
+  .us-calc { background: #152238; color: #f1f5f9; }
+  .us-calc input, .us-calc select { background: #0f172a; color: #f1f5f9; border-color: #94a3b8; }
+  .us-calc .us-error { color: #fca5a5; }
+  .article-content .us-table-scroll :is(td, th) { color: #f1f5f9; background: #152238; }
+  .article-content .us-table-scroll thead th { background: #0b1d3a; }
+}

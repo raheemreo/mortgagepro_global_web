@@ -1,62 +1,67 @@
-# DTI Calculator: What the 28/36 Rule Actually Checks (And Why It's Two Numbers, Not One)
+# US DTI Calculator: Measure Housing Costs and Total Monthly Debt
 
-**Meta description:** Understand the 28% and 36% rule lenders use to qualify US mortgage borrowers, and why your housing ratio and total debt ratio get checked separately.
+**Meta description:** Calculate front-end and back-end debt-to-income ratios, understand the limits of the 28/36 guideline, and avoid outdated approval labels.
 
-A lender doesn't just look at whether you can afford your mortgage payment in isolation. They check it against your entire monthly debt picture, twice, using two different thresholds. That's what a debt-to-income (DTI) calculator is actually testing — not one ratio, but a front-end and a back-end number, both of which need to clear the bar.
+Two households can earn the same salary and have very different room for a mortgage. A car payment, student loan or support obligation changes how much of that income is already committed. Debt-to-income, or DTI, is a way to put those commitments on the same scale.
 
-## The two ratios
+The calculator divides the monthly amounts you enter by gross monthly qualifying income. It shows ratios, not an underwriting decision. A result above a planning benchmark does not automatically mean rejection, and one below it does not establish approval.
 
-**Front-end ratio (housing ratio):** your total monthly housing payment (PITI) divided by your gross monthly income. Conventional guidance caps this around 28%.
+<!-- calculator -->
 
-**Back-end ratio (total debt ratio):** your total housing payment *plus* every other recurring debt — car loans, student loans, minimum credit card payments, child support — divided by gross monthly income. The commonly cited ceiling is 36%, though many conventional lenders will approve up to 43-45% with strong compensating factors like a high credit score or large reserves, and FHA loans can sometimes stretch further.
+## Calculate the two ratios
 
-## Worked example
+**Housing ratio = monthly housing obligations ÷ gross monthly income × 100.** Include principal, interest, taxes, property insurance, mortgage insurance, HOA dues and other required housing charges as applicable. Some costs are paid outside escrow but still matter to qualifying.
 
-Take a household with $8,400 gross monthly income (roughly $100,800/year combined).
+**Total DTI = (housing obligations + other counted monthly debt payments) ÷ gross monthly income × 100.** Count monthly payments rather than outstanding balances. Avoid adding the proposed mortgage twice: once in housing is enough.
 
-| Item | Monthly | % of income |
-|---|---|---|
-| Proposed PITI | $2,350 | 28.0% |
-| Car loan | $410 | |
-| Student loan | $280 | |
-| Credit card minimums | $150 | |
-| **Total debt (incl. housing)** | **$3,190** | **38.0%** |
+| Item | Monthly example |
+|---|---|
+| Gross qualifying income | $8,400 |
+| Total proposed housing cost | $2,350 |
+| Auto payment | $410 |
+| Student loan qualifying payment | $280 |
+| Credit-card minimums | $150 |
+| Other counted debts | $0 |
+| Total housing and debt payments | **$3,190** |
+| Housing ratio | **27.98%** |
+| Total DTI | **37.98%** |
 
-This household clears the 28% front-end threshold exactly but sits above the classic 36% back-end guideline at 38%. That doesn't automatically mean rejection — it means the lender is now looking at compensating factors: credit score, cash reserves, employment stability, or a slightly smaller loan amount to bring the ratio down.
+A 36% planning allowance on that income is $3,024, so the example's obligations exceed it by $166. Paying off a genuine $200 monthly obligation would lower modeled total DTI to 35.60%. Whether a lender can exclude that payment depends on documentation and the applicable loan rules.
 
-## Common mistakes
+## What the 28/36 guideline can and cannot tell you
 
-The most frequent one: calculating DTI using take-home (net) pay instead of gross income. Lenders use gross, pre-tax income — using net pay understates your actual ratio and can lead to a nasty surprise during underwriting.
+The often-quoted 28% housing and 36% total-debt figures are planning reference points. They are not a federal approval rule for every mortgage. In particular, **43% is not a universal current Qualified Mortgage DTI cap**; the old blanket label should not be used to approve or reject a reader.
 
-Second: forgetting a debt that shows up on a credit report but doesn't feel like "real" debt to the borrower — things like a co-signed loan, a 401(k) loan, or an installment plan for furniture. If it reports to the credit bureaus with a minimum monthly payment, underwriting will count it.
+[Fannie Mae's B3-6-02 guidance](https://selling-guide.fanniemae.com/sel/b3-6-02/debt-income-ratios) describes a 36% manual-underwriting maximum, possible increases to 45% with required credit/reserve conditions, and a 50% maximum through Desktop Underwriter, with exceptions and other eligibility requirements. Those figures describe that program's framework, not every lender or a right to borrow at the maximum.
 
-Third: assuming DTI is fixed. Paying off a car loan or a credit card balance before applying can meaningfully move the back-end ratio and open up loan options that weren't available a month earlier.
+The widget deliberately avoids a green 'safe' or 'qualified' status. You still need a lender's review of credit, documented income, assets, property and the loan program. A sustainable personal budget can require more breathing room than underwriting does.
 
-## Where this calculator has limits
+## Debt is not limited to a credit report
 
-It's a snapshot using the debts and income you enter — it can't account for income that's hard to document (some bonus, commission, or self-employment income gets averaged or discounted by underwriters in ways a simple calculator won't replicate). It also doesn't reflect that different loan programs apply different caps: FHA is generally more flexible than conventional, and VA loans use a different residual-income test entirely rather than a strict DTI cutoff.
+Court-ordered support and other obligations may count even when absent from a report. Student loans, co-signed debts and payments made by another party have program-specific rules. A small remaining balance is not by itself enough to delete a payment.
 
-## FAQ
+Likewise, a loan secured by a documented retirement or other financial asset is not automatically treated like an unsecured installment debt. [Fannie Mae B3-6-05](https://selling-guide.fanniemae.com/sel/b3-6-05/monthly-debt-obligations) provides conditions for excluding certain asset-secured obligations. That does not remove their effect on your actual cash flow or available reserves.
 
-**Is 36% a hard cutoff?**
-No. It's a widely cited guideline, not a universal rule. Many lenders approve well above it, especially for FHA loans or borrowers with strong credit and reserves.
+## Gross income is not take-home pay
 
-**Does DTI include utilities or groceries?**
-No — DTI only counts debts that appear on your credit report with a fixed monthly obligation, not day-to-day living expenses.
+If you divide the same debts by lower take-home pay, the percentage **increases**, not decreases. Underwriting uses qualifying income under its rules, while your spending plan should also account for taxes, healthcare deductions and savings.
 
-**What's a good DTI to aim for before applying?**
-Under 36% total gives you the most flexibility across lenders and loan types, but plenty of buyers close successfully in the low-to-mid 40s.
+For a joint application, do not count income without the related borrower obligations. For an individual application, spouse debts can still require review under applicable community-property and program rules. Ask the lender rather than assuming a spouse's name being absent removes every obligation.
 
-**Does my spouse's income and debt count if we're applying together?**
-Only if both names are on the loan application — the calculation uses combined income and combined debt for joint applicants.
+## Questions readers often ask
 
-**Can paying off a small debt actually change my approval?**
-Yes — even a $200/month obligation can shift your back-end ratio by a couple of percentage points, sometimes enough to move you from "needs compensating factors" to "clears easily."
+### Should I include groceries and utilities?
 
-## Related tools
+They are generally living expenses rather than the debt payments used in this ratio. Keep them in your household budget anyway. A low DTI does not mean those bills are small.
 
-Affordability Calculator · PITI Calculator · Mortgage Calculator
+### What about irregular income or deferred student loans?
 
----
+Enter the qualifying amounts confirmed by the lender. A simple field cannot decide averaging periods, continuance, repayment-plan treatment or documentation requirements.
 
-*Educational content, not financial or credit advice. DTI thresholds vary by lender and loan program and change over time — confirm your specific ratio and eligibility with a licensed mortgage lender. Written by the MortgagePro Global team.*
+### What happens if income is zero or a field is blank?
+
+The tool asks for a valid input and clears the result. A ratio with a zero income denominator is undefined; it should not display 0% or keep an earlier answer.
+
+## Related guides
+
+[Affordability](/blog/usa-affordability-calculator) · [PITI](/blog/usa-piti-calculator) · [Mortgage payment](/blog/usa-mortgage-calculator)

@@ -1,63 +1,60 @@
-# Affordability Calculator: How PMI Changes "How Much House" Once You're Under 20% Down
+# US Home Affordability Calculator: Include PMI, Taxes and Other Debts
 
-**Meta description:** See how private mortgage insurance shifts US home affordability math for buyers putting down less than 20%, and where the real ceiling on "how much house" actually sits.
+**Meta description:** Estimate a US home price from your housing budget with editable tax, insurance, HOA and PMI assumptions. Understand why an estimate is not preapproval.
 
-Most affordability calculators start with income and spit out a home price. That's the easy part. The part that actually moves the number for a large share of US buyers — anyone under 20% down — is PMI, an extra monthly cost that doesn't show up until you dig into the loan terms.
+Before asking how much a lender might approve, decide what monthly payment would fit your life. Childcare, commuting and savings can take a substantial part of take-home pay even when they do not count as mortgage debts. An affordability estimate should leave those choices visible.
 
-## The basic affordability math
+The calculator below uses two adjustable planning ratios, then deducts the housing costs you enter. Unlike a flat allowance for taxes and insurance, this lets you see what a larger local tax bill or a PMI quote does to the result.
 
-Lenders generally work backward from your gross income and target DTI ratios (see our DTI Calculator for the full breakdown) to find a maximum PITI payment, then work forward from that payment, your rate, and your down payment to a maximum home price.
+<!-- calculator -->
 
-Roughly: Max monthly housing payment (28% of gross income) → Max loan amount at your rate and term → Add back your down payment → Max home price.
+## Build a monthly budget before a home price
 
-## Where PMI enters the picture
+Start with gross qualifying income and recurring debts. With the default planning settings, monthly housing room is the smaller of **28% of gross income** and **36% of gross income minus other debt payments**. These settings are budgeting assumptions, not universal lending limits. You can change both percentages.
 
-If your down payment is under 20% on a conventional loan, PMI gets added on top of principal, interest, taxes, and insurance — and it counts against your DTI ratio, which means it directly shrinks the loan amount you can qualify for, not just adds a cost after the fact.
+From that housing room, the tool subtracts annual property tax and homeowners insurance divided by 12, monthly HOA dues, and an estimated monthly PMI charge. It solves for the loan principal that fits what remains, then adds your cash down payment.
 
-| Down payment | PMI (approx, avg credit) | Effect on affordability |
+The tax input is an annual dollar estimate for the property you are considering. It stays fixed when the tool solves for a price; the tool is not deriving a county's tax assessment from that price. If you move to a different property, replace the tax and insurance estimates and run it again.
+
+## See what PMI changes, without inventing a market average
+
+Here is a transparent sensitivity example: **$8,400 gross monthly income, $500 other monthly debts, $41,250 down, $6,000 annual tax, $1,800 annual insurance, no HOA, 7.32% interest and a 30-year term**. The rate is a dated benchmark used for illustration, not an offer. At the 28/36 planning settings, the housing allowance is $2,352 and $1,702 remains before PMI and P&I are allocated.
+
+| Assumed annual PMI rate | Estimated loan | Estimated home price |
 |---|---|---|
-| 20%+ | $0 | Full affordability ceiling from income/DTI |
-| 10% | ~0.55%/year | Reduces max loan by roughly 3-5% vs. no-PMI scenario |
-| 5% | ~0.85%/year | Reduces max loan more, plus a larger loan balance to insure |
-| 3% | ~1.1%+/year | Largest PMI drag, though the lowest cash-to-close |
+| 0.00% | $247,768.84 | $289,018.84 |
+| 0.50% | $233,599.55 | $274,849.55 |
 
-PMI rates aren't flat — they scale with credit score and loan-to-value, so a 620 credit score borrower at 5% down can pay meaningfully more in PMI than a 760 credit score borrower at the identical down payment.
+The no-PMI row holds other inputs constant to isolate one cost. It does **not** mean a lender would waive PMI at that down payment. Both rows use the same cash down payment, not the same down-payment percentage. The 0.50% input is a made-up scenario rate, not an average premium or insurance quote.
 
-## Worked example
+For the PMI scenario, the model treats annual PMI as the entered percentage of starting principal, divided by 12. It does not price insurance from a credit score or model future cancellation. If the resulting down payment reaches 20% of price, this conventional-loan model removes borrower-paid monthly PMI and explains that switch in the output.
 
-A household with $8,400 gross monthly income and minimal other debt, targeting a 28% front-end ratio, has roughly $2,350/month available for PITI (plus PMI if applicable). At 6.47% on a 30-year fixed with 10% down and PMI factored in, that translates to a maximum home price in the high $300,000s to low $400,000s, depending on local tax rates. The same income with 20%+ down, no PMI drag, can typically support a price 5-8% higher.
+## Qualification is a separate calculation
 
-## Common mistakes
+Lenders use documented qualifying income, which may differ from your current paycheck or total household income. Variable earnings, debts paid by someone else and student loans can require special treatment. The [DTI guide](/blog/usa-dti-calculator) explains why a credit-report total alone is not enough.
 
-Buyers frequently run affordability numbers assuming 20% down "because that's what everyone says," then get pre-approved at a smaller amount than the calculator showed once PMI enters actual underwriting.
+For context, [Fannie Mae's DTI guidance](https://selling-guide.fanniemae.com/sel/b3-6-02/debt-income-ratios) distinguishes manual underwriting from Desktop Underwriter and permits different maximums subject to conditions. A planning ratio is not a lender commitment, and a calculator cannot establish those conditions.
 
-Buyers also forget that affordability calculators use *gross* income, and treat the output as a hard target rather than a ceiling — comfortable spending and maximum qualifying capacity are usually two different numbers, and it's worth deciding which one you're actually solving for.
+## Save room for cash to close
 
-## Where this calculator has limits
+Down payment is only one cash need. Ask for a Loan Estimate so you can budget lender charges, third-party fees, prepaid items and initial escrow separately. Subtract your emergency reserve from available savings before deciding what to enter as the down payment. Putting every dollar into the purchase can leave a perfectly plausible ratio attached to a fragile household budget.
 
-It can't fully model credit-score-tiered PMI pricing without your actual score. It also doesn't factor in local cost-of-living pressures outside the mortgage itself — two buyers who "afford" the identical house on paper can have very different comfort levels depending on childcare, commute costs, or other fixed expenses the DTI math never sees.
+If the tool shows that no loan fits your assumptions, first inspect the debt, tax and insurance entries. It is reporting a shortfall under those inputs, not rejecting a mortgage application.
 
-## FAQ
+## Questions readers often ask
 
-**Does a higher down payment always mean I can afford more house?**
-Usually yes, for two reasons — it shrinks the loan you need, and it can eliminate PMI entirely above 20% down, freeing up more of your DTI room for the loan itself.
+### Can I remove PMI once the home rises in value?
 
-**Can PMI be removed later even if I start under 20%?**
-Yes — once you reach 20% equity through paydown or appreciation, you can typically request PMI cancellation on a conventional loan.
+Appreciation does not automatically satisfy statutory cancellation rules. For many covered conventional loans, [CFPB guidance](https://www.consumerfinance.gov/ask-cfpb/when-can-i-remove-private-mortgage-insurance-pmi-from-my-loan-en-202/) describes requesting cancellation at 80% of original value, subject to conditions, and scheduled automatic termination at 78% when current. Ask your servicer about separate current-value rules.
 
-**Is affordability the same as what a lender will pre-approve me for?**
-It's an estimate. Actual pre-approval also weighs credit score, employment history, and asset documentation that a simple calculator doesn't capture.
+### Should I use take-home pay here?
 
-**Does this account for closing costs?**
-No — closing costs (typically 2-5% of loan amount) are a separate cash requirement on top of the down payment, not part of the ongoing affordability math.
+Use gross qualifying income for the ratios, then test the resulting housing expense against a separate take-home-pay budget. A result that fits one may fail the other.
 
-**Should I max out what I qualify for?**
-Not necessarily — qualifying capacity is a ceiling based on debt ratios, not a recommendation for comfortable monthly spending.
+### What is missing from this estimate?
 
-## Related tools
+Maintenance, utilities, moving costs, special assessments and changes in future bills are not modeled. Neither are lender eligibility decisions, future rate changes or down-payment assistance terms.
 
-DTI Calculator · Down Payment Calculator · PITI Calculator
+## Related guides
 
----
-
-*Educational content, not financial advice. PMI rates vary by lender, credit score, and loan-to-value ratio — confirm your exact affordability figures with a licensed mortgage lender. Written by the MortgagePro Global team.*
+[DTI](/blog/usa-dti-calculator) · [Down payment](/blog/usa-down-payment-calculator) · [PITI](/blog/usa-piti-calculator)

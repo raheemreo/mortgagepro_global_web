@@ -1,75 +1,74 @@
-# FHA Loan Calculator: The Mortgage Insurance That Doesn't Work Like Everyone Expects
+# FHA Loan Costs: Down Payment, Upfront MIP and Monthly Insurance
 
-**Meta description:** See how FHA MIP actually costs money over the life of the loan, including the part most FHA calculators don't explain: it often doesn't cancel the way conventional PMI does.
+**Meta description:** Estimate a standard FHA purchase loan with upfront MIP, a labeled monthly MIP approximation, and clear limits on insurance duration and eligibility.
 
-A 580 credit score and 3.5% down get a lot of buyers into an FHA loan who wouldn't qualify for conventional financing on the same terms. What the app's "580+ Score" badge doesn't show on the surface is the tradeoff: FHA's mortgage insurance premium (MIP) is structured completely differently from private mortgage insurance (PMI) on a conventional loan, and for most FHA borrowers, it doesn't go away just because home values rise.
+An FHA loan can reduce the cash needed for a down payment, but the insurance deserves its own line in your comparison. There is an upfront mortgage insurance premium, or MIP, and a separate annual premium collected monthly. Financing the upfront amount also increases the balance on which you pay loan interest.
 
-## How FHA MIP is actually structured
+The calculator below models a **standard 30-year FHA purchase**, not every FHA product. It uses the standard 1.75% upfront premium and the annual tiers described below. It is not a loan-limit or eligibility checker.
 
-Every FHA loan carries two separate mortgage insurance charges:
+<!-- calculator -->
 
-**Upfront MIP:** 1.75% of the loan amount, charged once at closing. Most borrowers finance it into the loan rather than paying cash, which raises the loan balance and the interest paid on it.
+## Check the premium tier before comparing a payment
 
-**Annual MIP:** paid monthly, currently 0.55%/year for the most common scenario — under 5% down, loan amount at or below the standard FHA limit, 30-year term. The exact rate shifts slightly by loan-to-value, loan term, and loan size, generally ranging from about 0.15% to 0.75% annually.
+[HUD Handbook 4000.1, Appendix 1.0](https://www.hud.gov/sites/default/files/Housing/documents/40001-hsgh-Update-18.pdf#page=1774), printed page 1749 in the August 12, 2026 edition, contains the premium schedule used here. For terms over 15 years, the table distinguishes a base loan amount of **$726,200 or less** from larger base loans. That is a premium-table threshold, not the annually adjusted county FHA lending limit.
 
-## The part that surprises people: cancellation
+| Base loan | Initial LTV | Annual MIP rate used by this model |
+|---|---|---|
+| $726,200 or less | 95% or less | 0.50% |
+| $726,200 or less | More than 95% | 0.55% |
+| More than $726,200 | 95% or less | 0.70% |
+| More than $726,200 | More than 95% | 0.75% |
 
-This is the single biggest difference from conventional PMI, and it's where the "580+ Score" convenience has a real long-term cost:
+Shorter terms, special programs and older loans can have different treatment. Verify the applicable rate and loan eligibility with the lender using [HUD's current handbook](https://www.hud.gov/hud-partners/single-family-handbook-4000-1). A number fitting this table does not mean the property or amount is eligible for FHA financing.
 
-- **Down payment under 10%:** Annual MIP runs for the *entire loan term* — there's no automatic cancellation point, regardless of how much equity you build through paydown or appreciation.
-- **Down payment 10% or more:** MIP cancels automatically after 11 years of payments.
-- **Loans originated before June 3, 2013:** Different, older rules apply, where MIP cancels once you reach 78% loan-to-value.
+## Follow a $300,000 purchase
 
-Compare that to conventional PMI, which cancels automatically at 78% LTV and can be requested for removal at 80% LTV, regardless of down payment size. On a 3.5%-down FHA loan, that structural difference can mean paying mortgage insurance for years — sometimes decades — longer than an equivalent conventional borrower would.
+Assume 3.5% down and that the full upfront MIP is financed. The following arithmetic uses the base loan for the upfront premium and for a simple opening-balance monthly MIP approximation.
 
-## Worked example
-
-A $300,000 purchase price, 3.5% down ($10,500), loan amount $289,500.
-
-| Item | Amount |
+| Item | Example amount |
 |---|---|
-| Upfront MIP (1.75%) | $5,066 (typically financed into loan) |
-| Financed loan balance | ~$294,566 |
-| Annual MIP (0.55%) | ~$1,620/year → ~$135/month |
-| **MIP duration** | **Life of loan** (down payment under 10%) |
+| Purchase price | $300,000.00 |
+| Down payment, 3.5% | $10,500.00 |
+| Base loan | $289,500.00 |
+| Upfront MIP, 1.75% of base loan | **$5,066.25** |
+| Loan plus upfront MIP, before whole-dollar rounding | $294,566.25 |
+| Modeled financed principal after rounding | **$294,566.00** |
+| Upfront MIP remainder paid in cash | $0.25 |
+| Annual MIP tier | 0.55% |
+| Opening-balance monthly MIP approximation | **$132.69** |
 
-Over 30 years, if the loan runs its full term, that's roughly $48,600 in annual MIP alone, on top of the upfront charge — a real number worth weighing against the accessibility FHA financing provides.
+HUD requires the mortgage amount to be rounded down to whole dollars. The widget rounds the base loan down, calculates upfront MIP to cents, and rounds financed principal down; any unfinanced premium remainder is shown as cash due. The example therefore finances $5,066 of the $5,066.25 premium. This is described in Handbook 4000.1 II.A.2.e.i(A), page 182.
 
-> **The exit strategy most FHA borrowers use:** refinance into a conventional loan once you've built 20% equity through paydown and appreciation. That eliminates FHA MIP entirely, though it comes with its own closing costs and depends on qualifying for conventional financing at that point.
+The monthly approximation is $289,500 × 0.0055 ÷ 12. It is **not an exact servicer billing amount**. HUD's [periodic MIP calculation method](https://www.hud.gov/hud-partners/housing-premium-calculation) uses an annual average scheduled outstanding balance and adjustments for financed upfront MIP. The historic premium rates in that method's examples should not be mistaken for today's tier table.
 
-## Common mistakes
+Because the scheduled balance declines, multiplying one estimated monthly premium by 360 overstates the total on a normal amortizing loan. This tool therefore does not present a flat first-month premium as a 30-year insurance cost. Its displayed P&I-plus-MIP amount also excludes property tax, homeowners insurance and HOA dues.
 
-Borrowers frequently compare only the interest rate between FHA and conventional offers, without factoring in MIP's total cost — an FHA loan can carry a lower rate and a lower credit score requirement, yet still cost more per month than a conventional loan with PMI, once insurance is included.
+## How long does annual MIP continue?
 
-Borrowers also assume MIP works like conventional PMI and expect it to drop off once they hit 20% equity — it generally doesn't, on FHA loans with under 10% down, without an active refinance.
+For the standard loans modeled here with **FHA case numbers assigned on or after June 3, 2013**, an initial LTV of 90% or less generally means MIP for 11 years, or the shorter loan term; above 90%, it generally lasts for the loan term. Paying the loan off earlier ends its future premiums. [HUD's MIP duration guidance](https://entp.hud.gov/sfohlp/f17updbal.cfm) explains that distinction.
 
-A third mistake: not accounting for the credit-score-independent nature of FHA MIP pricing. Conventional PMI penalizes lower credit scores heavily; FHA MIP is set by HUD and doesn't vary with your score, which can actually make FHA the cheaper insurance option for borrowers in the 580-660 range, even though the coverage lasts longer.
+That is based on the initial LTV and case assignment, not merely the date you signed closing papers. Older FHA loans have separate rules and conditions. Rising home value by itself does not switch this loan into conventional PMI cancellation treatment.
 
-## Where this calculator has limits
+Refinancing to a conventional loan may remove FHA insurance, but the new rate, PMI if any, closing costs and remaining term matter. Compare written offers rather than assuming a refinance will be available or worthwhile later.
 
-It uses the standard, most common MIP tier — actual rates shift slightly for loan amounts above the standard limit or unusual loan-to-value combinations. It also can't predict future HUD rate changes; MIP rates have moved before (a 2023 reduction lowered annual MIP by 0.30 percentage points for most borrowers) and could move again.
+## Minimum down payment is not approval
 
-## FAQ
+Under FHA's standard framework, a decision credit score of 580 or higher can permit maximum financing with 3.5% down; scores from 500 to 579 generally require at least 10% down. Lender overlays and the rest of underwriting still apply. This calculator does not collect a score or decide creditworthiness.
 
-**Can I remove FHA MIP without refinancing?**
-Only if your loan originated before June 3, 2013 and you've reached 78% LTV under the older rules. Loans since then generally require refinancing into a conventional loan to remove MIP before the 11-year mark (if eligible at all).
+## Questions readers often ask
 
-**Is FHA MIP tax deductible?**
-The annual MIP portion may be deductible for taxpayers who itemize, subject to current tax law — confirm with a tax professional for your specific situation.
+### Why is P&I calculated on more than the base loan?
 
-**What credit score do I actually need?**
-580+ qualifies for the 3.5% down payment option; some lenders allow scores as low as 500 with a 10% down payment, though fewer lenders offer this tier.
+When upfront MIP is financed, it becomes part of principal. If you choose to pay it in cash instead, principal and P&I fall, while cash needed at closing rises. The premium itself does not disappear.
 
-**Does a bigger down payment reduce the MIP rate?**
-It can move you into a slightly lower annual MIP tier and, critically, gets you the 11-year cancellation window instead of life-of-loan MIP if you cross the 10% down threshold.
+### Will the 11-year rule change if I later make an extra payment?
 
-**Is FHA always more expensive than conventional in the long run?**
-Not always — for borrowers with lower credit scores, FHA's flat-rate, score-independent MIP can beat conventional PMI pricing, even though it lasts longer. The right comparison depends on your specific credit profile and how long you expect to hold the loan.
+Extra principal does not turn an initial LTV above 90% into the lower-duration category. Ask the servicer about the actual case and payoff rules before projecting a cancellation date.
 
-## Related tools
+### Can I count on a tax deduction for MIP?
 
-Down Payment Calculator · VA Loan Calculator · Mortgage Calculator
+This estimate assumes no tax saving. Tax treatment depends on the applicable year and your circumstances. Check current [IRS Publication 936](https://www.irs.gov/publications/p936) and a tax adviser instead of treating the insurance charge as automatically deductible.
 
----
+## Related guides
 
-*Educational content, not financial advice. MIP rates and FHA loan limits are set by HUD and change periodically — confirm current rates and eligibility with a licensed FHA-approved lender. Written by the MortgagePro Global team; MIP figures referenced against HUD Mortgagee Letter guidance in effect for 2026.*
+[Down payment](/blog/usa-down-payment-calculator) · [VA loans](/blog/usa-va-loan-calculator) · [PITI](/blog/usa-piti-calculator)

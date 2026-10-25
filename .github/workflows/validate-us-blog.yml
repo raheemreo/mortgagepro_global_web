@@ -1,0 +1,47 @@
+name: Validate US blog articles
+
+on:
+  pull_request:
+    paths:
+      - 'blog/usa-*.html'
+      - 'blog/index.html'
+      - 'contents/USA/**'
+      - 'js/us-blog-calculators.js'
+      - 'css/us-blog.css'
+      - 'scripts/build_us_articles.py'
+      - 'scripts/validate_us_articles.py'
+      - 'tests/us-blog-*'
+      - 'sitemap.xml'
+      - '.github/workflows/validate-us-blog.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'blog/usa-*.html'
+      - 'contents/USA/**'
+      - 'js/us-blog-calculators.js'
+      - 'scripts/*us_articles.py'
+      - 'tests/us-blog-*'
+      - '.github/workflows/validate-us-blog.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  content-and-calculations:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate financial fixtures and edge cases
+        run: node --test tests/us-blog-calculators.test.cjs
+      - name: Check metadata, sources and local links
+        run: python scripts/validate_us_articles.py
+      - name: Check reproducible article build
+        run: |
+          python scripts/build_us_articles.py
+          git diff --exit-code
