@@ -32,7 +32,7 @@ for p,h in pages.items():
  if ads and s.index("gtag('consent', 'default'")>s.index('src="https://pagead2'):issues.append((name,'ad before consent'))
  if re.search(r'gtag\(["\x27]config|clarity\.ms/(?:tag|script)|googletagmanager\.com/(?:gtag|gtm)',s):issues.append((name,'optional analytics loader/config'))
  if re.search(r"logEvent\([^\n]+value:",s):issues.append((name,'financial event payload'))
- if p.name!='app-privacy-policy.html' and re.search(r'Lead Financial Systems Engineer|Verified Lead Technical Reviewer|WCAG 2\.1 AA compliance|strict Service Level',s):issues.append((name,'unverified claim'))
+ if re.search(r'Lead Financial Systems Engineer|Verified Lead Technical Reviewer|WCAG 2\.1 AA compliance|strict Service Level',s):issues.append((name,'unverified claim'))
  for link in h.links:
   u=urlsplit(link)
   if u.scheme and u.netloc!='mortgageproglobal.com':continue
