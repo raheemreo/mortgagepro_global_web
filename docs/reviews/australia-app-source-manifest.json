@@ -1,0 +1,86 @@
+{
+  "repository": "raheemreo/mortgagepro_global",
+  "commit": "9f79ea943e27b6d8b0c1ca411c37fb4cae077f72",
+  "files": [
+    {
+      "path": "lib/features/australia/australia_screen.dart",
+      "sha": "0afe71104f3b0c2a42ff0c073a33b47a6162f356",
+      "bytes": 19826
+    },
+    {
+      "path": "lib/features/australia/tools/au_affordability.dart",
+      "sha": "9f0bab8eca1cdaf321d338ebdd6699b621722284",
+      "bytes": 34738
+    },
+    {
+      "path": "lib/features/australia/tools/au_ai_advisor.dart",
+      "sha": "2c526eb31efb4e403bf1587742234a182dc613dc",
+      "bytes": 39218
+    },
+    {
+      "path": "lib/features/australia/tools/au_amortization.dart",
+      "sha": "1cf47a7d7c047f21955ee5aa5d37863e1b1ddabd",
+      "bytes": 36359
+    },
+    {
+      "path": "lib/features/australia/tools/au_construction_loan.dart",
+      "sha": "c46f4cba4a41edfd9989602d445a43be6d225919",
+      "bytes": 61069
+    },
+    {
+      "path": "lib/features/australia/tools/au_dti_ratio.dart",
+      "sha": "cd775e52af1493d270cf43721bc1d873a800444d",
+      "bytes": 33780
+    },
+    {
+      "path": "lib/features/australia/tools/au_extra_repayments.dart",
+      "sha": "9f3406b31b8e20eb0449bc7e80223a02c0296eab",
+      "bytes": 49983
+    },
+    {
+      "path": "lib/features/australia/tools/au_first_home_grant.dart",
+      "sha": "17ad656207e9b55993a2faa23ffcf898dc81bcf8",
+      "bytes": 47151
+    },
+    {
+      "path": "lib/features/australia/tools/au_lmi_calc.dart",
+      "sha": "8609e092a062d4d0fc3081eb6b1c5dbde04c2e62",
+      "bytes": 17012
+    },
+    {
+      "path": "lib/features/australia/tools/au_lmi_calculator.dart",
+      "sha": "7b436cce66e48280f58db1ebbf076b3ba0f1217b",
+      "bytes": 43997
+    },
+    {
+      "path": "lib/features/australia/tools/au_mortgage_calc.dart",
+      "sha": "7cf65cdb8f2079af3d3e5a2bfd7cfb0243f43d0a",
+      "bytes": 41334
+    },
+    {
+      "path": "lib/features/australia/tools/au_offset_account.dart",
+      "sha": "fe628cde4a825cf8daafe905f87cfc7fa24309d2",
+      "bytes": 34672
+    },
+    {
+      "path": "lib/features/australia/tools/au_rba_rate_history.dart",
+      "sha": "f3c578df0a4b46bb49dcf59ba8b4012ac759fd33",
+      "bytes": 42994
+    },
+    {
+      "path": "lib/features/australia/tools/au_refinance.dart",
+      "sha": "8cc644217249c05ecb17c8202aa025f2ad8df620",
+      "bytes": 49518
+    },
+    {
+      "path": "lib/features/australia/tools/au_stamp_duty.dart",
+      "sha": "0edb484c744939bad80f59167d1495a330efbf34",
+      "bytes": 41580
+    },
+    {
+      "path": "lib/features/australia/tools/au_stamp_duty_by_state.dart",
+      "sha": "97ffe6f62e439ecb661b6560d81d02ad34f1c00e",
+      "bytes": 54617
+    }
+  ]
+}

@@ -78,7 +78,7 @@ ${footer}
 function referenceTitle(u){if(u.includes('bankofengland'))return 'Lending policy — check scope and effective date';if(u.includes('revenue.scot'))return 'Scottish purchase tax and relief rules';if(u.includes('gov.wales'))return 'Welsh purchase tax rates and rules';if(u.includes('moneyhelper'))return 'Mortgage guidance from MoneyHelper';return 'Official rules, rates and eligibility guidance';}
 function card(c){return `<a href="${url(c.id)}" class="tc"><div class="tic" aria-hidden="true">🌐</div><div class="tn">${esc(c.title)}</div><div class="td">${esc(c.description)}</div><div class="ta" aria-hidden="true">›</div></a>`;}
 let sections='<!-- COUNTRY TOOLS START -->\n';
-for(const group of Object.keys(groupIDs))sections+=`<section class="section" id="${groupIDs[group]}"><div class="sec-hdr"><h2>${esc(group)}</h2></div><p>Enter current figures and press Calculate estimate. Editing or resetting clears the previous result.</p><div class="g2 country-tools-directory">${catalog.filter(c=>c.group===group).map(card).join('\n')}</div></section>\n`;
+for(const group of Object.keys(groupIDs))sections+=`<section class="section country-tools-section" id="${groupIDs[group]}"><div class="sec-hdr"><h2>${esc(group)}</h2></div><p>Enter current figures and press Calculate estimate. Editing or resetting clears the previous result.</p><div class="g2 country-tools-directory">${catalog.filter(c=>c.group===group).map(card).join('\n')}</div></section>\n`;
 sections+='<!-- COUNTRY TOOLS END -->\n';
 const landing=path.join(root,C.landing+'.html');let s=fs.readFileSync(landing,'utf8');
 if(s.includes('<!-- COUNTRY TOOLS START -->'))s=s.replace(/<!-- COUNTRY TOOLS START -->[\s\S]*?<!-- COUNTRY TOOLS END -->\s*/,sections);

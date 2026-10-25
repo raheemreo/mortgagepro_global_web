@@ -4,15 +4,15 @@
 
 ## Keep the inputs distinct
 
-The loan starts with price minus deposit. If a premium is financed, principal is larger. The LMI field is a percentage assumption you can replace with a lender quote; it is not an insurer tariff or a promise that a particular guarantee applies.
+The loan starts with price minus deposit. If a premium is financed, principal is larger. The LMI field requires an actual all-in lender quote, including applicable charges once. Enter zero to explicitly exclude a charge. A quote is not a promise that a particular guarantee applies.
 
 A monthly P&I illustration divides the annual percentage by twelve. Actual Australian products commonly accrue interest daily, so payment dates, fees, offset balances and rounding matter. At AUD 520,000, an assumed 6.19% and 25 years, the monthly model gives AUD 3,411.02.
 
 ## Transfer duty needs the correct category
 
-Without an entered assessment, this tool supports Queensland and Victoria general non-concession schedules only. It does not apply home-occupier or first-home concessions, foreign surcharges, special transactions or registration charges. [Queensland Revenue Office](https://qro.qld.gov.au/duties/transfer-duty/calculate/rates/) and [State Revenue Office Victoria](https://www.sro.vic.gov.au/about-us/rates-and-statistics/current-rates/land-transfer-duty-non-principal-place-residence-current-rates) publish those schedules.
+Without an entered assessment, the root tool budgets published general residential schedules for all eight states/territories. NSW uses 2026/27 thresholds and premium duty for a wholly residential property of no more than two hectares. ACT uses the non-owner-occupier base schedule; other owner-occupier and first-home concessions are not inferred. The [state duty tool](/tools/australia/duty-by-state) publishes the source schedules and confirmed adjustment inputs.
 
-For another state or territory, or where a concession/special category applies, enter an official assessment or conveyancer's quote. A blank unsupported duty is shown as not estimated, not as a zero tax bill. Entering a quote overrides the general calculation, so check that it belongs to the same transaction.
+For a concession or special category, enter an official assessment or conveyancer’s quote. A blank concession assessment is shown as not estimated. An entered quote overrides the general calculation; check its transaction date, legal dutiable value and applicable foreign surcharges.
 
 ## Offset savings remain a scenario
 
