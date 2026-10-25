@@ -36,6 +36,10 @@ MODEL_FIELDS={
 'car':[n('loan','Original car principal (NZD)',35000,.01),n('rate','Annual car rate assumption (%)',9,0,30),n('years','Car-loan years',5,1,20,1),n('elapsed','Payments already made (whole months)',24,0,240,1)],
 'yield':[n('value','Property value / price denominator (NZD)',650000,.01),n('rent','Weekly rent (NZD)',650),n('weeks','Occupied paid weeks per year',52,0,52),n('costs','Other annual operating costs excluding management (NZD)',7000),n('management','Management fee assumption (% of collected rent)',8,0,100)]
 }
+MANUAL_COUNTRIES={'Canada'}
+COUNTRY_KEYS={'UK':'uk','Australia':'australia','New Zealand':'newzealand'}
+for key in json.loads((ROOT/'data/country-tools-config.json').read_text())['enabled']:
+ MANUAL_COUNTRIES.update(name for name,value in COUNTRY_KEYS.items()if value==key)
 CONFIG={}
 def add(country,currency,slug,model=None,defaults=None):
  folder={'Canada':'Canada','UK':'UK','Australia':'Australia','New Zealand':'New Zealand','General':'General'}[country]
@@ -57,17 +61,19 @@ def fields(slug):
 
 def widget(slug):
  c=CONFIG[slug];kind=c['model'];out=[f'<section class="us-calc" data-global-calculator="{kind}" data-currency="{c["currency"]}" data-compounding="{c["comp"]}" aria-labelledby="global-calc-title">', '<h2 id="global-calc-title">Try the assumptions</h2>',f'<p>Amounts are in {c["currency"]}. Change the inputs to recalculate locally. No loan, tax or scheme approval is established by the result.</p>','<div class="us-fields">']
- if c['country']=='Canada':out[-1]='<form data-canada-form novalidate><div class="us-fields">';out[2]='<p>Amounts are CAD. Enter your current figures, then press Calculate estimate. The tool does not establish approval.</p>'
+ if c['country'] in MANUAL_COUNTRIES:
+  attr='data-canada-form'if c['country']=='Canada'else'data-manual-form'
+  out[-1]=f'<form {attr} novalidate><div class="us-fields">';out[2]=f'<p>Amounts are {c["currency"]}. Enter your current figures, then press Calculate estimate. The tool does not establish approval.</p>'
  for f in fields(slug):
   name,label=f[:2];out.append(f'<label for="global-{name}">{html.escape(label)}')
   if len(f)==3:out.append(f'<select id="global-{name}" name="{name}">'+''.join(f'<option value="{v}">{html.escape(t)}</option>' for v,t in f[2])+'</select>')
   else:
    _,_,value,low,high,step=f
-   if c['country']=='Canada' and name not in {'years'} and value!=0:value=''
+   if c['country'] in MANUAL_COUNTRIES and name not in {'years','ioYears'} and value!=0:value=''
    out.append(f'<input id="global-{name}" name="{name}" type="number" required value="{value}" min="{low}" max="{high}" step="{step}">')
   out.append('</label>')
  out+=['</div>','<div data-results role="status" aria-live="polite" aria-atomic="true"><p>Enable JavaScript for the interactive estimate. The worked explanations and sources remain available below.</p></div>']
- if c['country']=='Canada':
+ if c['country'] in MANUAL_COUNTRIES:
   out.insert(-1,'<div class="us-actions"><button type="submit" hidden>Calculate estimate</button><button type="reset">Reset example</button></div></form>');out[-1]=out[-1].replace('<div data-results','<div hidden tabindex="-1" data-results')
  if kind=='amort':out.append('<details><summary>Show monthly model schedule</summary><div data-schedule class="us-table-scroll" tabindex="0" role="region" aria-label="Scrollable monthly schedule"></div></details>')
  out+=['<noscript><p>The interactive estimate requires JavaScript. Read the worked examples and sources below.</p></noscript>','</section>']
@@ -104,10 +110,11 @@ def build():
   ad=re.search(r'<script[^>]*src="https://pagead2\.googlesyndication\.com/[^>]*></script>',page);consent=re.search(r'<script>\s*window\.dataLayer[\s\S]*?</script>',page)
   if ad and consent and ad.start()<consent.start():
    tag=ad[0];page=page[:ad.start()]+page[ad.end():];consent=re.search(r'<script>\s*window\.dataLayer[\s\S]*?</script>',page);page=page[:consent.end()]+'\n'+tag+page[consent.end():]
-  if c['country']=='Canada':
-   page=re.sub(r'<link[^>]*href="/css/canada-calculators\.css[^"]*"[^>]*>\s*','',page)
-   css_hash=hashlib.sha256((ROOT/'css/canada-calculators.css').read_bytes()).hexdigest()[:12]
-   page=page.replace('</head>',f'<link rel="stylesheet" href="/css/canada-calculators.css?v={css_hash}">\n</head>')
+  if c['country'] in MANUAL_COUNTRIES:
+   style='canada-calculators'if c['country']=='Canada'else'country-tools'
+   page=re.sub(r'<link[^>]*href="/css/'+style+r'\.css[^"]*"[^>]*>\s*','',page)
+   css_hash=hashlib.sha256((ROOT/('css/'+style+'.css')).read_bytes()).hexdigest()[:12]
+   page=page.replace('</head>',f'<link rel="stylesheet" href="/css/{style}.css?v={css_hash}">\n</head>')
    for asset in ['js/global-blog-calculators.js','css/us-blog.css']:
     version=hashlib.sha256((ROOT/asset).read_bytes()).hexdigest()[:12];page=re.sub(r'((?:src|href)="/'+re.escape(asset)+r')(?:\?[^"]*)?"',lambda m:m[1]+'?v='+version+'"',page)
   page=re.sub(r'(?m)^[\t ]+$','',page);p.write_text(page)

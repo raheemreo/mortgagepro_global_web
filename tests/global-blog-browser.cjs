@@ -35,9 +35,9 @@ const base=process.env.QA_BASE_URL || 'http://127.0.0.1:8765';
     assert.ok((await page.locator('article').innerText()).length>1500,`${slug}: missing article`);
     assert.ok(await page.locator('article a[href^="https:"]').count()>0,`${slug}: missing sources`);
     if(await widget.count()) {
-      if(await widget.locator('[data-canada-form]').count()){
+      if(await widget.locator('[data-canada-form],[data-manual-form]').count()){
         assert.equal(await results.isVisible(),false);
-        const values=require('./fixtures/canada-blog-inputs.json')[slug.replace(/\.html$/,'')];
+        const values={...require('./fixtures/canada-blog-inputs.json'),...require('./fixtures/country-blog-inputs.json')}[slug.replace(/\.html$/,'')];
         for(const[key,value]of Object.entries(values)){const e=widget.locator('[name='+key+']');if(await e.evaluate(e=>e.tagName==='SELECT'))await e.selectOption(String(value));else await e.fill(String(value));}
         assert.equal(await results.isVisible(),false);await widget.locator('[type=submit]').click();await results.locator('dl').waitFor();
         assert.doesNotMatch(await results.innerText(),/NaN|Infinity/);

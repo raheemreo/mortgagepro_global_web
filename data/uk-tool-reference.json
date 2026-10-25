@@ -1,0 +1,12 @@
+{
+  "reviewedOn": "2026-10-25",
+  "appCommit": "9f79ea943e27b6d8b0c1ca411c37fb4cae077f72",
+  "sdltEffective": "2025-04-01",
+  "additionalSDLTRatePercent": 5,
+  "nonResidentSDLTRatePercent": 2,
+  "sdltFirstBuyerThreshold": 300000,
+  "sdltFirstBuyerMaximumPrice": 500000,
+  "scotlandADSPercent": 8,
+  "walesHigherRatesEffective": "2024-12-11",
+  "scope": "Ordinary individual residential transactions only. Special cases and eligibility require conveyancer review. Lender ratios and rates are entered rather than inferred."
+}

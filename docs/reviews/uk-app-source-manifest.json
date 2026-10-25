@@ -1,0 +1,86 @@
+{
+  "repository": "raheemreo/mortgagepro_global",
+  "commit": "9f79ea943e27b6d8b0c1ca411c37fb4cae077f72",
+  "files": [
+    {
+      "path": "lib/features/uk/screens/uk_ai_mortgage_advisor.dart",
+      "sha": "eba6f2c617d1e339768e0c1e452da4f34792a70d",
+      "bytes": 23889
+    },
+    {
+      "path": "lib/features/uk/screens/uk_boe_base_rate_tracker.dart",
+      "sha": "89f3f3128a79b496bc5a0f6ecab9b5cde22e8f22",
+      "bytes": 31938
+    },
+    {
+      "path": "lib/features/uk/screens/uk_house_price_index.dart",
+      "sha": "82e6d494014b0e6bb9f6f0a534d608f7c9893e33",
+      "bytes": 29486
+    },
+    {
+      "path": "lib/features/uk/screens/uk_shared_ownership.dart",
+      "sha": "e7f7a611a895fa625bc4ed5b93ac760d2b79b29a",
+      "bytes": 40332
+    },
+    {
+      "path": "lib/features/uk/tools/uk_affordability.dart",
+      "sha": "b07a3c011fe8e3adb8d33a996a47ac22423058f7",
+      "bytes": 36823
+    },
+    {
+      "path": "lib/features/uk/tools/uk_amortization.dart",
+      "sha": "2af4ee596c93b6c9e1ad8cb920c01fd5c908d190",
+      "bytes": 34069
+    },
+    {
+      "path": "lib/features/uk/tools/uk_buy_to_let.dart",
+      "sha": "0eecce60dade0ee6e312748f2f03e62a17df735b",
+      "bytes": 40982
+    },
+    {
+      "path": "lib/features/uk/tools/uk_help_to_buy.dart",
+      "sha": "7fe9137fca33429bdd49e84a2de6cdda22ad7218",
+      "bytes": 36591
+    },
+    {
+      "path": "lib/features/uk/tools/uk_income_multiples.dart",
+      "sha": "0a78dde94cfcef8effb16da22e0a0afe058b0293",
+      "bytes": 42074
+    },
+    {
+      "path": "lib/features/uk/tools/uk_ltv_calculator.dart",
+      "sha": "c564fcfd589656b761561c470875dd3da8ba6499",
+      "bytes": 28972
+    },
+    {
+      "path": "lib/features/uk/tools/uk_mortgage_calc.dart",
+      "sha": "a823c533df6a77b42070b9f67528981fb53bd0cf",
+      "bytes": 41927
+    },
+    {
+      "path": "lib/features/uk/tools/uk_remortgage.dart",
+      "sha": "7b66c4e7d156b5f735bc5ba224e8f5bfc4e1a0f1",
+      "bytes": 30950
+    },
+    {
+      "path": "lib/features/uk/tools/uk_sdlt_calc.dart",
+      "sha": "45de3e4872883f51da6bdb86f850b572a311281d",
+      "bytes": 17680
+    },
+    {
+      "path": "lib/features/uk/tools/uk_sdlt_calculator.dart",
+      "sha": "71af1697c97ff6e81f191920803706e5d927a01a",
+      "bytes": 39954
+    },
+    {
+      "path": "lib/features/uk/tools/uk_stamp_duty.dart",
+      "sha": "a38bc109bcd180c1d1d084ae7266fd1c977f7a08",
+      "bytes": 34735
+    },
+    {
+      "path": "lib/features/uk/uk_screen.dart",
+      "sha": "4483cead8f54e010722a02bce6d72db020d823ea",
+      "bytes": 20604
+    }
+  ]
+}

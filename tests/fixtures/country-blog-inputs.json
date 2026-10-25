@@ -1,0 +1,47 @@
+{
+  "uk-mortgage-calculator": {
+    "loan": 262500,
+    "rate": 4.48,
+    "years": 25
+  },
+  "uk-affordability-calculator": {
+    "budget": 2000,
+    "debts": 350,
+    "rate": 4.48,
+    "buffer": 0,
+    "years": 25
+  },
+  "uk-amortization-calculator": {
+    "loan": 262500,
+    "rate": 4.48,
+    "years": 25,
+    "ioYears": 5
+  },
+  "uk-buy-to-let-calculator": {
+    "loan": 300000,
+    "stress": 5.5,
+    "icr": 145,
+    "rent": 1800
+  },
+  "uk-ltv-calculator": {
+    "value": 350000,
+    "loan": 262500,
+    "target": 75
+  },
+  "uk-remortgage-tool": {
+    "loan": 262500,
+    "oldRate": 4.48,
+    "rate": 4,
+    "years": 20,
+    "fees": 1500,
+    "penalty": 0,
+    "cashback": 0,
+    "repayCashback": 0,
+    "horizon": 36
+  },
+  "uk-stamp-duty-calculator": {
+    "price": 500000,
+    "buyer": "standard",
+    "nonresident": "no"
+  }
+}

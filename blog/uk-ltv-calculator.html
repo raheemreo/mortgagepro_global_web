@@ -295,8 +295,9 @@
   <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#0B1D3A">
   <meta name="msapplication-TileColor" content="#0B1D3A">
   <meta name="theme-color" content="#0B1D3A">
-<link rel="stylesheet" href="/css/us-blog.css">
-<script src="/js/global-blog-calculators.js" defer></script>
+<link rel="stylesheet" href="/css/us-blog.css?v=8de0ab0f445c">
+<script src="/js/global-blog-calculators.js?v=712bf186bf22" defer></script>
+<link rel="stylesheet" href="/css/country-tools.css?v=d13237000dd2">
 </head>
 
 <body>
@@ -384,19 +385,20 @@
 <p>The calculator reports the entered LTV and the principal reduction needed to reach a target percentage. The target is your planning assumption, not a rate band guaranteed by a lender.</p>
 <section class="us-calc" data-global-calculator="ltv" data-currency="GBP" data-compounding="monthly" aria-labelledby="global-calc-title">
 <h2 id="global-calc-title">Try the assumptions</h2>
-<p>Amounts are in GBP. Change the inputs to recalculate locally. No loan, tax or scheme approval is established by the result.</p>
-<div class="us-fields">
+<p>Amounts are GBP. Enter your current figures, then press Calculate estimate. The tool does not establish approval.</p>
+<form data-manual-form novalidate><div class="us-fields">
 <label for="global-value">Assessed property value
-<input id="global-value" name="value" type="number" required value="350000" min="0.01" max="100000000" step="any">
+<input id="global-value" name="value" type="number" required value="" min="0.01" max="100000000" step="any">
 </label>
 <label for="global-loan">Mortgage principal including financed fees
-<input id="global-loan" name="loan" type="number" required value="262500" min="0" max="100000000" step="any">
+<input id="global-loan" name="loan" type="number" required value="" min="0" max="100000000" step="any">
 </label>
 <label for="global-target">Target LTV / LVR (%) — planning assumption
-<input id="global-target" name="target" type="number" required value="75" min="0.01" max="100" step="any">
+<input id="global-target" name="target" type="number" required value="" min="0.01" max="100" step="any">
 </label>
 </div>
-<div data-results role="status" aria-live="polite" aria-atomic="true"><p>Enable JavaScript for the interactive estimate. The worked explanations and sources remain available below.</p></div>
+<div class="us-actions"><button type="submit" hidden>Calculate estimate</button><button type="reset">Reset example</button></div></form>
+<div hidden tabindex="-1" data-results role="status" aria-live="polite" aria-atomic="true"><p>Enable JavaScript for the interactive estimate. The worked explanations and sources remain available below.</p></div>
 <noscript><p>The interactive estimate requires JavaScript. Read the worked examples and sources below.</p></noscript>
 </section>
 <h2>Compare deposits against one property value</h2>
