@@ -8,7 +8,8 @@ CONFIG={name:name for name in ['about','editorial-policy','corrections-policy','
 CONFIG['authors/abdul-raheem']='authors-abdul-raheem'
 CONFIG['app-privacy-policy']='app-privacy-policy'
 APP_SECTIONS={
- 'About this app':'app-privacy',
+ 'About these apps':'app-privacy',
+ 'Covered apps and package identifiers':'covered-apps',
  'Calculator inputs, saved results and exports':'local-data',
  'Advertising through Google AdMob mediation':'advertising',
  'Google AdMob':'google-admob',
@@ -27,7 +28,7 @@ APP_SECTIONS={
  'Policy changes':'policy-changes',
 }
 def mobile_links():
- links=[('app-privacy','Full app policy'),('google-admob','Google AdMob'),('meta-audience-network','Meta'),('liftoff-monetize','Liftoff / Vungle'),('unity-ads','Unity Ads'),('privacy-choices','App privacy choices'),('ai-assistant','AI assistant'),('ai-reporting','AI reporting'),('data-deletion','App data deletion')]
+ links=[('app-privacy','Full app policy'),('covered-apps','Apps and package IDs'),('google-admob','Google AdMob'),('meta-audience-network','Meta'),('liftoff-monetize','Liftoff / Vungle'),('unity-ads','Unity Ads'),('privacy-choices','App privacy choices'),('ai-assistant','AI assistant'),('ai-reporting','AI reporting'),('data-deletion','App data deletion')]
  return '<nav class="privacy-jump-links" aria-label="Mobile app privacy sections">'+''.join('<a href="/app-privacy-policy#'+key+'">'+label+'</a>' for key,label in links)+'</nav>'
 def build():
  for slug,source in CONFIG.items():
@@ -71,6 +72,10 @@ def build():
   s=re.sub(r'<script\b[^>]*type=["\x27]application/ld\+json["\x27][^>]*>[\s\S]*?</script>','',s)
   schema={'@context':'https://schema.org','@type':'ProfilePage' if slug.startswith('authors/') else 'WebPage','name':title,'description':desc,'url':'https://mortgageproglobal.com/'+slug,'dateModified':'2026-10-25','publisher':{'@type':'Organization','name':'REO Technologies','url':'https://mortgageproglobal.com/about'}}
   if slug.startswith('authors/'):schema['mainEntity']={'@type':'Person','name':'Abdul Raheem'}
+  if slug=='app-privacy-policy':
+   apps=re.findall(r'^\|\s*(.*?)\s*\|\s*`(com\.reotech\.[^`]+)`\s*\|$',md,re.M)
+   assert len(apps)==7 and len({package for _,package in apps})==7,'Expected seven distinct covered app packages'
+   schema['about']=[{'@type':'SoftwareApplication','name':name,'identifier':package,'operatingSystem':'Android'} for name,package in apps]
   s=s.replace('</head>','<script type="application/ld+json">'+json.dumps(schema,ensure_ascii=False)+'</script>\n</head>')
   if '/css/site-documents.css' not in s:s=s.replace('</head>','<link rel="stylesheet" href="/css/site-documents.css">\n</head>')
   if slug=='app-privacy-policy':
