@@ -12,11 +12,7 @@ const fmtUSD = (n) => '$' + Math.round(n).toLocaleString('en-US');
 const pct = (n) => n.toFixed(2) + '%';
 
 // GA4 event helper (fires only if gtag is loaded)
-function fireEvent(name, params = {}) {
-  if (typeof gtag !== 'undefined') {
-    gtag('event', name, params);
-  }
-}
+function fireEvent() { /* Optional usage analytics is disabled. */ }
 
 // ===== EMI FORMULA (Standard Compound Interest) =====
 // EMI = P × r × (1+r)^n / ((1+r)^n - 1)

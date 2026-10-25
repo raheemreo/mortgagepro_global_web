@@ -2,6 +2,19 @@
 <html lang="en">
 
 <head>
+  <script data-mpg-consent>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'analytics_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'wait_for_update': 500
+    });
+  </script>
+  <script src="/js/site-privacy.js?v=7e398101cb01" defer></script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>England and Northern Ireland SDLT Calculator: Bands and Surcharges | MortgagePro Global</title>
@@ -449,23 +462,8 @@
   <meta name="google-adsense-account" content="ca-pub-1114757923146718">
 
   <!-- Google tag (gtag.js) -->
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'default', {
-      'ad_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied',
-      'analytics_storage': 'denied',
-      'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH'],
-      'wait_for_update': 500
-    });
-    gtag('js', new Date());
-    gtag('config', 'G-1DEVWXRXJP');
-  </script>
+
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1114757923146718" crossorigin="anonymous"></script>
-
-
 
 <script src="/js/components.js" defer></script>
   <script src="/js/accessibility.js" defer></script>
@@ -662,8 +660,8 @@
           <li><a href="/data-deletion-policy">Data Deletion Policy</a></li>
           <li><a href="/terms-and-conditions">Terms and Conditions</a></li>
           <li><a href="/disclaimer">Disclaimer</a></li>
-          <li><a href="#"
-              onclick="if(window.googlefc){googlefc.callbackQueue.push(googlefc.showRevocationMessage)}else{alert('Privacy settings are not loaded yet.')}; return false;">Privacy
+          <li><a href="/privacy-policy#privacy-controls"
+              onclick="return window.MPGPrivacy ? MPGPrivacy.open(event) : true;">Privacy
               Settings</a></li>
         </ul>
       </div>

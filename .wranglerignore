@@ -14,3 +14,6 @@ scripts/
 skills-lock.json
 package.json
 package-lock.json
+
+lib/
+tests/

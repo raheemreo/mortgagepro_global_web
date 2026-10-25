@@ -15,3 +15,6 @@ wrangler.toml
 skills-lock.json
 package.json
 package-lock.json
+
+lib/
+tests/
