@@ -5,6 +5,7 @@ const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypt
 const root=path.resolve(__dirname,'..'),{catalog,states}=require('../js/us-tools-catalog.js');
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const asset=file=>'/'+file+'?v='+crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex').slice(0,12);
+const references=JSON.parse(fs.readFileSync(path.join(root,'data/us-tool-reference.json'),'utf8'));
 const url=id=>'/tools/usa/'+id;
 const groupIDs={'Core Mortgage Tools':'tools','Loan Programs':'loans','Insurance & Tax':'insurance','Personal Finance':'personal','Real Estate Investment':'investment'};
 const consent=`<script data-mpg-consent>
@@ -25,7 +26,7 @@ function field(f){const id='input-'+f.key,help=f.help?`<small id="${id}-help">${
 const footer=`<footer class="tool-footer"><div><p><strong>MortgagePro Global · REO Technologies</strong></p><nav aria-label="Footer"><a href="/about">About</a><a href="/methodology">Methodology</a><a href="/contact">Contact</a><a href="/privacy-policy">Privacy</a><a href="/cookie-policy">Cookies</a><a href="/terms-and-conditions">Terms</a><a href="/disclaimer">Disclaimer</a><a href="/privacy-policy#privacy-controls" onclick="return window.MPGPrivacy ? MPGPrivacy.open(event) : true;">Privacy choices</a></nav><p>Educational scenario estimates. Confirm lender, insurer, assessor and tax terms before making financial decisions.</p></div></footer>`;
 const dir=path.join(root,'tools/usa');fs.mkdirSync(dir,{recursive:true});
 for(const c of catalog){
- const state=c.id==='property-tax'?`<div class="tool-state"><label for="state-reference">State reference example (optional)</label><select id="state-reference" data-state class="tool-state-picker"><option value="">Enter my local rate</option>${Object.entries(states).sort((a,b)=>a[1].name.localeCompare(b[1].name)).map(([code,v])=>`<option value="${code}">${esc(v.name)} — ${v.rate.toFixed(2)}% example</option>`).join('')}</select><p data-state-note>Choose an illustrative reference, or enter your own local rate.</p></div>`:'';
+ const state=c.id==='property-tax'?`<div class="tool-state"><label for="state-reference">Property location (optional)</label><select id="state-reference" data-state class="tool-state-picker"><option value="">Enter my local rate</option>${Object.entries(states).sort((a,b)=>a[1].name.localeCompare(b[1].name)).map(([code,v])=>`<option value="${code}">${esc(v.name)}</option>`).join('')}</select><p data-state-note>Select a location, then enter the actual local rate. No rate is filled automatically.</p></div>`:'';
  const schema={'@context':'https://schema.org','@type':'WebApplication',name:'US '+c.title,url:'https://mortgageproglobal.com'+url(c.id),applicationCategory:'FinanceApplication',operatingSystem:'Web browser',description:c.description,author:{'@type':'Organization',name:'REO Technologies'},dateModified:'2026-10-25'};
  const related=catalog.filter(d=>d.group===c.group&&d.id!==c.id).slice(0,6);
  const html=`<!DOCTYPE html>
@@ -56,10 +57,11 @@ for(const c of catalog){
 <nav class="tool-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/usa-mortgage-calculator#${groupIDs[c.group]}">US ${esc(c.group)}</a> / ${esc(c.title)}</nav>
 <p class="tool-eyebrow">United States · USD · ${esc(c.group)}</p>
 <h1>${esc(c.title)}</h1><p class="tool-intro">${esc(c.description)}</p>
-<p class="tool-meta">Updated October 25, 2026 · Example assumptions, not live quotes. Inputs stay in this tab and are not saved or sent by the calculator.</p>
+<p class="tool-meta">Updated October 25, 2026 · Enter current figures from your documents and quotes. Budget settings are editable. Inputs stay in this tab and are not saved or sent by the calculator.</p>
+${c.fields.some(f=>f.key==='rate')&&c.id!=='auto-loan'&&c.id!=='down-payment-assistance'?`<p class="tool-notice">Published mortgage reference: <a href="${references.mortgageSurvey.source}">Freddie Mac PMMS, ${references.mortgageSurvey.publishedOn}</a> — 30-year ${references.mortgageSurvey.fixed30.toFixed(2)}%, 15-year ${references.mortgageSurvey.fixed15.toFixed(2)}%. These are dated conventional national averages, not your lender’s quote. Enter the applicable offered rate below.</p>`:''}
 <div data-us-tool="${c.id}" class="tool-workspace">
 <section class="tool-panel" aria-labelledby="inputs-heading"><h2 id="inputs-heading">Your inputs</h2>${state}<form novalidate autocomplete="off"><div class="tool-inputs">${c.fields.map(field).join('\n')}</div><div class="tool-actions"><button type="submit" class="tool-primary" hidden>Calculate estimate</button><button type="reset" class="tool-secondary">Reset example</button></div><p data-error class="tool-error" role="alert" tabindex="-1" hidden></p><p data-status class="tool-live-status" role="status" aria-live="polite"></p></form><noscript><p class="tool-notice">Enable JavaScript to calculate in your browser. The formulas and assumptions below remain available without JavaScript.</p></noscript></section>
-<section class="tool-panel" aria-labelledby="results-heading"><h2 id="results-heading">Your estimate</h2><div data-results tabindex="-1"><p class="tool-empty">Enter your figures and enable JavaScript to calculate an estimate.</p></div><p class="tool-meta">Rounded display amounts may not add exactly. Calculations use unrounded intermediate values.</p></section>
+<section class="tool-panel" data-result-panel hidden aria-labelledby="results-heading"><h2 id="results-heading">Your estimate</h2><div data-results tabindex="-1"><p class="tool-empty">Press Calculate estimate after entering your figures.</p></div><p class="tool-meta">Rounded display amounts may not add exactly. Calculations use unrounded intermediate values.</p></section>
 </div>
 <section class="tool-method" aria-labelledby="method-heading"><h2 id="method-heading">How this estimate works</h2><p>${esc(c.method)}</p><h2>Assumptions and limits</h2><ul>${c.notes.map(n=>'<li>'+esc(n)+'</li>').join('')}</ul><h2>References and further reading</h2><ul>${c.refs.map((u,i)=>`<li><a href="${esc(u)}" rel="noopener noreferrer">${esc(new URL(u).hostname.replace('www.',''))} — ${esc(referenceTitle(u))}</a></li>`).join('')}<li><a href="/methodology">Calculation methodology and rounding</a></li><li><a href="/corrections-policy">Report a calculation or content error</a></li></ul></section>
 <section aria-labelledby="related-heading"><h2 id="related-heading">Related US tools</h2><nav aria-label="Related calculators" class="tool-related">${related.map(r=>`<a href="${url(r.id)}">${esc(r.title)}</a>`).join('')}<a href="/usa-mortgage-calculator#tools">All US calculators</a></nav></section>
@@ -75,10 +77,10 @@ function card(c){return `<a href="${url(c.id)}" class="tc"><div class="ti" aria-
 let sections='    <!-- Core Mortgage Tools -->\n';
 for(const group of Object.keys(groupIDs)){
  sections+=`    <div id="${groupIDs[group]}" class="section-header"><h2>${esc(group)}</h2></div>\n`;
- if(group==='Core Mortgage Tools')sections+='<p>Choose a calculator for its own inputs, estimates and calculation details. Example assumptions are editable; tools do not use live rate feeds.</p>\n';
+ if(group==='Core Mortgage Tools')sections+='<p>Choose a calculator for its own inputs, estimates and calculation details. Enter current personal figures and quotes, then press Calculate estimate. Results appear only after submission.</p>\n';
  sections+='<div class="g2 us-tools-directory">'+catalog.filter(c=>c.group===group).map(card).join('\n')+'</div>\n';
  if(group==='Insurance & Tax'){
-  sections+='    <div id="states" class="section-header"><h2>State-by-State Tools</h2></div>\n<p>Open a property-tax scenario with an illustrative state reference. Confirm your actual assessed value, exemption and local rate; these are not current tax quotations.</p>\n<div class="g3 us-tools-directory">';
+  sections+='    <div id="states" class="section-header"><h2>State-by-State Tools</h2></div>\n<p>Choose a location, then enter your actual assessed value, exemption and local tax rate. No statewide average is substituted for your local rate.</p>\n<div class="g3 us-tools-directory">';
   for(const code of ['CA','TX','NY','FL','IL','NJ'])sections+=`<a href="${url('property-tax')}?state=${code}" class="tc"><div class="ti" aria-hidden="true">🗺️</div><div class="tn">${esc(states[code].name)}</div><div class="td">Assessed value, exemption and editable tax rate</div><div class="ta" aria-hidden="true">›</div></a>`;
   sections+=`</div><p><a href="${url('property-tax')}">Other states / enter my local property-tax rate</a></p>\n`;
  }

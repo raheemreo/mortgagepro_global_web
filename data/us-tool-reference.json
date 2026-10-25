@@ -1,0 +1,9 @@
+{
+  "reviewedOn": "2026-10-25",
+  "mortgageSurvey": {"publishedOn":"2026-10-22","fixed30":7.32,"fixed15":6.68,"source":"https://www.freddiemac.com/pmms","scope":"Weekly national conventional averages, not personal quotes or APRs. No automatic future update is claimed."},
+  "usda": {"fiscalYear":2027,"upfrontPercent":1,"annualPercent":0.35,"source":"https://content.govdelivery.com/accounts/USDARD/bulletins/42b1054"},
+  "va": {"firstUseBelow5PercentDown":2.15,"subsequentUseBelow5PercentDown":3.3,"atLeast5PercentDown":1.5,"atLeast10PercentDown":1.25,"source":"https://www.va.gov/housing-assistance/home-loans/funding-fee-and-closing-costs/"},
+  "fha": {"upfrontPercent":1.75,"mipTierBaseThreshold":726200,"source":"https://www.hud.gov/sites/dfiles/OCHCO/documents/2023-05hsgml.pdf"},
+  "conformingLimit": {"year":2026,"oneUnitBaseline":832750,"source":"https://www.fhfa.gov/news/news-release/fhfa-announces-conforming-loan-limit-values-for-2026"},
+  "personalInputs": "Home prices, income, loan quotes, PMI, insurance premiums, moving and closing costs, local taxes and forecasts have no invented market defaults. Enter current documents or explicit planning assumptions."
+}

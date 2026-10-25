@@ -1,7 +1,8 @@
 'use strict';
 const {test}=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
 const C=require('../js/us-tools-catalog'),M=require('../js/us-tools-models');
-const run=(id,overrides={})=>M.calculate(id,C.validate(id,{...C.defaults(id),...overrides}));
+const fixtures=require('./fixtures/us-tools-inputs.json');
+const run=(id,overrides={})=>M.calculate(id,C.validate(id,{...fixtures[id],...overrides}));
 const near=(a,b,tol=1e-7)=>assert.ok(Math.abs(a-b)<=tol,`${a} != ${b}`);
 // Fixed numeric reference examples, hand-evaluated from the cited Dart formulas.
 // The reference was inspected as source; these are not claimed to execute Flutter.
@@ -15,7 +16,7 @@ const references=[
  ['pmi','monthly',0],['property-tax','annual',4494],['closing-costs','gross',7894],['hoa','total',2719.4467738842436],
  ['homeowner-insurance','annual',1710],['ho1','annual',1240],['ho3','annual',1710],['ho5','annual',2050],['ho6','annual',600],['hurricane','annual',2400],['wildfire','annual',1170],['flood','annual',1160],
  ['credit-score','rate',6.72],['debt-payoff','months',42],['heloc','capacity',175000],['home-equity','capacity',175000],['student-dti','housing',2719.4467738842436],
- ['rent-vs-buy','buyMonthly',2894.4467738842436],['moving','total',1901],['tax-deduction','interest',24000],['rental-yield','noi',23170],['cash-on-cash','cashflow',4200],['fix-flip','profit',48000],['exchange-1031','gain',530000]
+ ['rent-vs-buy','buyMonthly',2894.4467738842436],['moving','total',1900.8],['tax-deduction','interest',24000],['rental-yield','noi',23170],['cash-on-cash','cashflow',4200],['fix-flip','profit',48000],['exchange-1031','gain',530000]
 ];
 for(const [id,key,expected] of references)test(`${id}: reference calculation`,()=>near(run(id,id==='tax-deduction'?{standard:16100,saltLimit:40400}:{}).values[key],expected,1e-6));
 test('all 40 app calculator source paths are represented once, plus three amortization/term views',()=>{
@@ -60,9 +61,9 @@ test('ARM caps constrain the first reset and zero interest is allowed',()=>{
  const r=run('arm',{rate:4,adjusted:20,initialCap:2,lifeCap:1});assert.equal(r.values.resetRate,5);assert.ok(r.values.adjusted>r.values.initial);
  assert.equal(run('arm',{rate:0,adjusted:0}).values.initial,336000/360);
 });
-test('PMI uses LTV and credit bands, and no PMI at 20% down',()=>{
- assert.equal(run('pmi',{down:5,score:760}).values.annualRate,.55);assert.equal(run('pmi',{down:10,score:720}).values.annualRate,.58);assert.equal(run('pmi',{down:15,score:650}).values.annualRate,.65);assert.equal(run('pmi',{down:20,score:650}).values.months,0);
- assert.equal(run('pmi',{down:5,score:760,rate:0}).values.months,57);
+test('PMI uses the entered quote and charges no PMI at 20% down',()=>{
+ assert.equal(run('pmi',{down:5,pmi:.55}).values.annualRate,.55);assert.equal(run('pmi',{down:10,pmi:.58}).values.annualRate,.58);assert.equal(run('pmi',{down:15,pmi:.65}).values.annualRate,.65);assert.equal(run('pmi',{down:20,pmi:.65}).values.months,0);
+ assert.equal(run('pmi',{down:5,pmi:.55,rate:0}).values.months,57);
 });
 test('refinancing deducts closing costs even when financed and reports no simple break-even with no savings',()=>{
  const r=run('refinance',{finance:'yes'});near(r.values.netSaving,r.values.oldInterest-r.values.newInterest-6000);assert.equal(run('refinance',{rate:20,years:25}).values.breakEven,null);
@@ -100,14 +101,28 @@ test('tax deduction requires tax-year inputs; benefit compares itemizing with st
 });
 test('every numeric field rejects blank, nonfinite, out-of-range or fractional integer inputs',()=>{
  for(const c of C.catalog)for(const f of c.fields.filter(f=>f.type==='number')){
-  const base={...C.defaults(c.id),...(c.id==='tax-deduction'?{standard:16100,saltLimit:40400}:{})};
+  const base={...fixtures[c.id],...(f.key==='pmi'?{down:5}:{}),...(c.id==='down-payment-assistance'&&f.key==='rate'?{type:'loan'}:{}),...(c.id==='tax-deduction'?{standard:16100,saltLimit:40400}:{})};
   for(const value of ['',null,Infinity,NaN,f.max+1,f.min-1,...(f.step===1?[f.min+.5]:[])])assert.throws(()=>C.validate(c.id,{...base,[f.key]:value}),`${c.id} ${f.key} ${value}`);
  }
 });
-test('all default outputs and tables are finite and every model handles zero interest',()=>{
+test('all supplied-input outputs and tables are finite and every model handles zero interest',()=>{
  for(const c of C.catalog){const input={...(c.id==='tax-deduction'?{standard:16100,saltLimit:40400}:{}),...Object.fromEntries(c.fields.filter(f=>f.key==='rate').map(f=>[f.key,0]))};const r=run(c.id,input);for(const metric of r.metrics)assert.ok(metric.value===null||Number.isFinite(metric.value),c.id);for(const t of r.tables)for(const row of t.rows)for(const v of row)assert.ok(v===null||typeof v==='string'||Number.isFinite(v),c.id);}
 });
 test('every generated tool canonical and directory URL is deployable through the edge worker',async()=>{
  const context={module:{exports:{}},URL,Request,Response,Headers};vm.runInNewContext(fs.readFileSync(__dirname+'/../_worker.js','utf8').replace('export default','module.exports='),context);const worker=context.module.exports;
  for(const c of C.catalog){const pathname='/tools/usa/'+c.id;let requested;const r=await worker.fetch(new Request('https://mortgageproglobal.com'+pathname),{ASSETS:{fetch:async req=>{requested=new URL(req.url).pathname;return new Response(fs.readFileSync(__dirname+'/..'+requested,'utf8'),{headers:{'Content-Type':'text/html'}});}}});assert.equal(r.status,200);assert.equal(requested,pathname+'.html');const html=await r.text();assert.ok(html.includes(`data-us-tool="${c.id}"`));assert.ok(html.includes(`href="https://mortgageproglobal.com${pathname}"`));}
+});
+
+test('personal financial values are blank; only documented policy or planning settings default',()=>{
+ for(const c of C.catalog){const d=C.defaults(c.id);for(const f of c.fields){if(f.type==='number'&&f.key==='price')assert.equal(d.price,'');if(f.key==='rate')assert.ok(d.rate===''||d.rate===0);}assert.throws(()=>C.validate(c.id,d),c.id);}
+ assert.equal(C.defaults('usda').upfront,1);assert.equal(C.defaults('usda').annualFee,.35);assert.equal(C.defaults('jumbo').limit,832750);for(const state of Object.values(C.states))assert.equal(state.rate,undefined);
+});
+test('insurance budgets preserve the supplied quote, without inferred risk pricing or whole-dollar rounding',()=>{
+ for(const id of ['homeowner-insurance','ho1','ho3','ho5','ho6','flood','hurricane','wildfire']){const r=run(id,{annualPremium:1234.56});near(r.values.monthly,102.88);assert.equal(r.values.annual,1234.56);}
+ assert.equal(run('hurricane',{value:300000,deductible:2}).values.deductible,6000);
+});
+test('quote and itemized-cost changes affect results without hidden market factors',()=>{
+ const a=run('moving'),b=run('moving',{base:2250});near(b.values.subtotal-a.values.subtotal,1000);near(b.values.total-a.values.total,1100);
+ near(run('closing-costs',{appraisal:1600}).values.gross-run('closing-costs').values.gross,1000);
+ near(run('credit-score',{comparisonRate:6.72}).values.difference,0);
 });

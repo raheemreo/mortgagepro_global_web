@@ -153,9 +153,11 @@
           if (schedule) schedule.replaceChildren();
         }
       }
-      widget.addEventListener('input', calculate);
-      widget.addEventListener('change', calculate);
-      calculate();
+      const form=widget.querySelector('[data-us-form]'),button=form.querySelector('[type=submit]');button.hidden=false;
+      function clear(){output.hidden=true;output.replaceChildren();output.classList.remove('us-error');if(schedule){schedule.replaceChildren();schedule.closest('details').hidden=true;}}
+      form.addEventListener('input',clear);form.addEventListener('change',clear);
+      form.addEventListener('submit',event=>{event.preventDefault();clear();calculate();output.hidden=false;if(schedule&&!output.classList.contains('us-error'))schedule.closest('details').hidden=false;output.focus({preventScroll:true});output.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});});
+      form.addEventListener('reset',()=>setTimeout(clear,0));clear();
     });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();

@@ -25,3 +25,4 @@
   .article-content .us-table-scroll :is(td, th) { color: #f1f5f9; background: #152238; }
   .article-content .us-table-scroll thead th { background: #0b1d3a; }
 }
+.us-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin:1rem 0}.us-actions button{font:inherit;font-weight:650;padding:.7rem 1rem;background:#155f50;color:#fff;border:0;border-radius:8px;cursor:pointer;min-height:44px}.us-actions button[type=reset]{background:#e6edf5;color:#133c66}[data-us-calculator] [hidden]{display:none!important}[data-us-calculator] [data-results]{scroll-margin-top:90px}

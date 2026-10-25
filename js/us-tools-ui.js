@@ -2,13 +2,13 @@
 (function(){
 'use strict';
 const host=document.querySelector('[data-us-tool]');if(!host)return;
-const id=host.dataset.usTool,C=window.USMortgageCatalog,M=window.USMortgageTools,config=C.catalog.find(c=>c.id===id),form=host.querySelector('form'),summary=host.querySelector('[data-error]'),results=host.querySelector('[data-results]'),status=host.querySelector('[data-status]');
+const id=host.dataset.usTool,C=window.USMortgageCatalog,M=window.USMortgageTools,config=C.catalog.find(c=>c.id===id),form=host.querySelector('form'),summary=host.querySelector('[data-error]'),results=host.querySelector('[data-results]'),status=host.querySelector('[data-status]'),panel=host.querySelector('[data-result-panel]');
 if(!config)return;
 const format=(v,unit='money')=>v===null?'Not reached / not applicable':typeof v==='string'?v:new Intl.NumberFormat('en-US',{...(unit==='money'?{style:'currency',currency:'USD'}:{}),minimumFractionDigits:unit==='integer'?0:unit==='money'?2:2,maximumFractionDigits:unit==='integer'?0:2}).format(v)+(unit==='percent'?'%':'');
 const node=(tag,text,className)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(className)n.className=className;return n;};
 
 function render(){
- summary.hidden=true;summary.textContent='';results.replaceChildren();
+ clear();
  for(const input of form.querySelectorAll('[aria-invalid]'))input.removeAttribute('aria-invalid');
  const values=Object.fromEntries(new FormData(form));
  try{
@@ -29,24 +29,40 @@ function render(){
    }
    results.append(details);
   }
-  status.textContent='Estimate updated from the current inputs.';
+  panel.hidden=false;status.textContent='Estimate calculated. Changing inputs will clear this result.';
  }catch(error){
   summary.textContent=error.message;summary.hidden=false;
   for(const field of config.fields){const input=form.elements.namedItem(field.key);if(input&&(!input.checkValidity()||String(input.value).trim()===''))input.setAttribute('aria-invalid','true');}
-  results.append(node('p','No estimate is shown until the inputs are valid.','tool-empty'));status.textContent='Check the inputs. Previous results have been cleared.';
+  status.textContent='Check the inputs, then press Calculate estimate.';
  }
 }
+function clear(message='Enter your figures, then press Calculate estimate.'){
+ panel.hidden=true;results.replaceChildren();summary.hidden=true;summary.textContent='';status.textContent=message;
+ for(const input of form.querySelectorAll('[aria-invalid]'))input.removeAttribute('aria-invalid');
+}
 form.querySelector('[type=submit]').hidden=false;
-form.addEventListener('submit',event=>{event.preventDefault();render();if(!summary.hidden)summary.focus();else results.focus();});
-form.addEventListener('input',event=>{if(event.target.name==='tax'&&picker){picker.value='';host.querySelector('[data-state-note]').textContent='Custom local rate entered. State reference examples are optional.';}render();});form.addEventListener('reset',()=>setTimeout(()=>{resetState();render();},0));
-// Query parameters are restricted to a state code. Financial figures are never read
-// from or written into URLs, and arbitrary query keys are ignored.
-const states=C.states;
-function resetState(){const picker=host.querySelector('[data-state]');if(picker){picker.value='';host.querySelector('[data-state-note]').textContent='Choose an illustrative reference, or enter your own local rate.';}}
-const picker=host.querySelector('[data-state]');
+form.addEventListener('submit',event=>{
+ event.preventDefault();render();
+ if(!summary.hidden)summary.focus();else{
+  results.focus({preventScroll:true});
+  panel.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});
+ }
+});
+const states=C.states,picker=host.querySelector('[data-state]');
+function clearOnEdit(event){
+ if(event.target.name==='tax'&&picker){picker.value='';host.querySelector('[data-state-note]').textContent='Use the local rate on your current assessment notice.';}
+ clear('Inputs changed. Press Calculate estimate to see the new result.');
+}
+form.addEventListener('input',clearOnEdit);form.addEventListener('change',clearOnEdit);
+form.addEventListener('reset',()=>setTimeout(()=>{
+ if(picker)picker.value='';
+ if(picker)host.querySelector('[data-state-note]').textContent='Select a location, then enter the actual local rate. No rate is filled automatically.';
+ clear('Inputs reset. Enter your figures, then press Calculate estimate.');
+},0));
+// Only a location is accepted from URLs; no financial input is saved or restored.
 if(picker){
- const apply=()=>{const state=states[picker.value],note=host.querySelector('[data-state-note]');if(state){form.elements.tax.value=state.rate;note.textContent=state.name+': '+state.rate.toFixed(2)+'% illustrative reference. Confirm and edit using your local assessment notice.';}else note.textContent='Use the actual rate from your assessment notice.';render();};
+ const apply=()=>{const state=states[picker.value];host.querySelector('[data-state-note]').textContent=state?state.name+': enter the local assessed value, exemption and tax rate from your current notice.':'Enter the actual local rate. No state average is applied.';clear();};
  picker.addEventListener('change',apply);const requested=new URLSearchParams(location.search).get('state');if(states[requested]){picker.value=requested;apply();}
 }
-render();
+clear();
 })();

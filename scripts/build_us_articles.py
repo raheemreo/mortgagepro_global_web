@@ -6,7 +6,7 @@ inline code and links. This is deliberately restricted to the editorial source
 files in contents/USA; unsupported markdown should be added here before use.
 """
 from pathlib import Path
-import re, html, json
+import re, html, json, hashlib
 ROOT = Path(__file__).resolve().parents[1]
 DATE = '2026-10-25'
 DISPLAY_DATE = 'October 25, 2026'
@@ -38,7 +38,7 @@ CONFIG = {
 
 def widget(slug):
     kind, title, fields = CONFIG[slug]
-    out = [f'<section class="us-calc" data-us-calculator="{kind}" aria-labelledby="us-calculator-title">',f'<h2 id="us-calculator-title">{title}</h2>', '<p>Change the assumptions to recalculate. These inputs are processed locally by this calculator and are not submitted by it. Estimates are not loan offers or approval decisions.</p>', '<div class="us-fields">']
+    out = [f'<section class="us-calc" data-us-calculator="{kind}" aria-labelledby="us-calculator-title">',f'<h2 id="us-calculator-title">{title}</h2>', '<p>Enter your current figures, then press Calculate estimate. These inputs are processed locally by this calculator and are not submitted by it. Estimates are not loan offers or approval decisions.</p>', '<form data-us-form novalidate><div class="us-fields">']
     for f in fields:
         name, label = f[:2]
         field_id = f'us-{name}'
@@ -48,11 +48,12 @@ def widget(slug):
             out.append(f'<select id="{field_id}" name="{name}">{options}</select>')
         else:
             _, _, value, minimum, maximum, step = f
+            if name not in {'years','percent','front','back'} and value != 0:value = ''
             out.append(f'<input id="{field_id}" name="{name}" type="number" required value="{value}" min="{minimum}" max="{maximum}" step="{step}">')
         out.append('</label>')
-    out += ['</div>', '<div data-results role="status" aria-live="polite" aria-atomic="true"><p>Enable JavaScript to calculate. The worked example below remains available without it.</p></div>']
+    out += ['</div><div class="us-actions"><button type="submit" hidden>Calculate estimate</button><button type="reset">Reset example</button></div></form>', '<div hidden tabindex="-1" data-results role="status" aria-live="polite" aria-atomic="true"><p>Enable JavaScript to calculate. The worked example below remains available without it.</p></div>']
     if kind == 'amortization':
-        out.append('<details><summary>Show all monthly payments</summary><div data-schedule class="us-table-scroll" tabindex="0" role="region" aria-label="Scrollable monthly schedule"></div></details>')
+        out.append('<details hidden><summary>Show all monthly payments</summary><div data-schedule class="us-table-scroll" tabindex="0" role="region" aria-label="Scrollable monthly schedule"></div></details>')
     out += ['<noscript><p>The interactive tool needs JavaScript. You can still read the assumptions, tables and sources below.</p></noscript>', '</section>']
     return '\n'.join(out)
 
@@ -134,6 +135,9 @@ def build():
         # These articles use explicit dated assumptions, not the shared rate hydration feed.
         page=re.sub(r'<script[^>]*src="/js/rates\.js"[^>]*></script>\s*','',page)
         page=re.sub(r"(?m)^[\t ]+$", "", page)
+        for asset in ['js/us-blog-calculators.js','css/us-blog.css']:
+            version=hashlib.sha256((ROOT/asset).read_bytes()).hexdigest()[:12]
+            page=re.sub(r'((?:src|href)="/'+re.escape(asset)+r')(?:\?[^"]*)?"',lambda m:m[1]+'?v='+version+'"',page)
         path.write_text(page)
         card_re=r'<a href="/blog/'+re.escape(slug)+r'" class="blog-card"[\s\S]*?</a>'
         def card_replace(m):

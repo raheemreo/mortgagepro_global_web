@@ -25,8 +25,6 @@ const m=(key,label,value,unit)=>[key,label,value,unit];
 const table=(title,headers,rows,units)=>({title,headers,rows,units});
 const mortgage=x=>x.price*(1-x.down/100);
 const loanMetrics=(loan,rate,years)=>{const pi=payment(loan,rate,years*12);return [m('loan','Loan amount',loan),m('pi','Monthly principal & interest',pi),m('interest','Total scheduled interest',max(0,pi*years*12-loan))];};
-const pmiTable={95:{low:1.25,mid:.78,high:.55},90:{low:.85,mid:.58,high:.38},85:{low:.65,mid:.40,high:.24}};
-function pmiRate(down,score){const ltv=100-down;if(ltv<=80)return 0;return pmiTable[ltv>90?95:ltv>85?90:85][score<680?'low':score>=760?'high':'mid'];}
 function monthsToLtv(loan,price,rate,years,threshold=.8){if(loan<=price*threshold)return 0;const rows=schedule(loan,rate,years*12);return (rows.find(r=>r.balance<=price*threshold)||rows.at(-1))?.month||0;}
 function annualSummary(rows){const years=[];for(const r of rows){const y=Math.floor((r.month-1)/12);if(!years[y])years[y]=[y+1,0,0,0];years[y][1]+=r.principal;years[y][2]+=r.interest;years[y][3]=r.balance;}return table('Annual repayment summary',['Year','Principal','Interest','Ending balance'],years,['number','money','money','money']);}
 function payoff(debts,extra,strategy){
@@ -69,7 +67,7 @@ function calculate(id,x){
   const housing=max(0,min(income*x.front/100,income*x.back/100-x.debts)),available=max(0,housing-x.taxIns),loan=available/(payment(1,x.rate,x.years*12)+pmiFactor),price=loan/(1-x.down/100),pi=payment(loan,x.rate,x.years*12),pmi=loan*pmiFactor;
   return result([m('price','Modeled maximum purchase price',price),m('loan','Modeled loan budget',loan),m('downCash','Down payment needed',price*x.down/100),m('housing','Monthly housing budget',housing),m('pi','Monthly principal & interest',pi),m('pmi','Monthly PMI estimate',pmi),m('front','Resulting housing ratio',(pi+pmi+x.taxIns)/income*100,'percent'),m('back','Resulting total DTI',(pi+pmi+x.taxIns+x.debts)/income*100,'percent')],[],housing<=x.taxIns?['Entered taxes and insurance consume the housing budget. No loan payment fits these assumptions.']:[]);}
  case 'down-payment':{
-  const rows=[3,5,10,20].map(d=>{const loan=x.price*(1-d/100),pmi=d<20?loan*(d<5?.0085:d<10?.0065:.005)/12:0,needed=max(0,x.price*d/100-x.saved);return [d,x.price*d/100,payment(loan,x.rate,360),pmi,needed===0?0:x.saving>0?Math.ceil(needed/x.saving):null];});
+  const rows=[3,5,10,20].map(d=>{const loan=x.price*(1-d/100),pmi=d<20?loan*(d===3?x.pmi3:d===5?x.pmi5:x.pmi10)/100/12:0,needed=max(0,x.price*d/100-x.saved);return [d,x.price*d/100,payment(loan,x.rate,360),pmi,needed===0?0:x.saving>0?Math.ceil(needed/x.saving):null];});
   const cash=x.price*x.down/100,needed=max(0,cash-x.saved);
   return result([m('downCash','Selected down payment',cash),m('loan','Loan amount',mortgage(x)),m('needed','Additional savings needed',needed),m('months','Months to selected savings goal',needed===0?0:x.saving>0?Math.ceil(needed/x.saving):null,'integer')],[table('Down payment scenarios (30 years)',['Down %','Cash down','Monthly P&I','PMI estimate / month','Months to save'],rows,['percent','money','money','money','integer'])],needed>0&&x.saving===0?['The savings goal cannot be reached with a zero monthly contribution. Closing costs and reserves are additional.']:[]);}
  case 'fha':{
@@ -96,26 +94,26 @@ function calculate(id,x){
   const contingency=x.build*x.contingency/100,project=x.land+x.build+contingency,loan=project*(1-x.down/100),io=loan*.5*x.rate/1200;
   return result([m('project','Total project budget',project),m('contingency','Construction contingency',contingency),m('downCash','Cash down',project*x.down/100),m('loan','Construction loan',loan),m('interestOnly','Average interest-only payment (50% drawn)',io),m('buildInterest','Estimated construction interest',io*x.buildMonths),m('permanent','Permanent monthly P&I (30 years)',payment(loan,x.permRate,360))],[table('Draw balance sensitivity',['Drawn %','Monthly interest'],[25,50,75,100].map(d=>[d,loan*d/100*x.rate/1200]),['percent','money'])]);}
  case 'piggyback':{
-  const first=x.price*.8,second=x.price*(.2-x.down/100),one=payment(first,x.rate,360),two=payment(second,x.secondRate,120),single=mortgage(x),pmi=single*pmiRate(x.down,x.score)/1200,months=monthsToLtv(single,x.price,x.rate,30),singlePI=payment(single,x.rate,360);
+  const first=x.price*.8,second=x.price*(.2-x.down/100),one=payment(first,x.rate,360),two=payment(second,x.secondRate,120),single=mortgage(x),pmi=single*(x.down>=20?0:x.pmi)/1200,months=monthsToLtv(single,x.price,x.rate,30),singlePI=payment(single,x.rate,360);
   const cost10=singlePI*120+pmi*min(months,120)-(one+two)*120;
   return result([m('first','First mortgage (80%)',first),m('second','Second mortgage',second),m('firstPayment','First mortgage payment (30 years)',one),m('secondPayment','Second mortgage payment (10 years)',two),m('combined','Combined monthly P&I',one+two),m('single','Single-loan initial P&I plus PMI',singlePI+pmi),m('difference','Single-loan minus piggyback cash payments, first 10 years',cost10)],[],['Cash payment comparison excludes different remaining loan balances, taxes, closing costs and tax effects. PMI is assumed to end at the modeled 80% balance date, subject to servicer approval.']);}
  case 'pmi':{
-  const loan=mortgage(x),annual=pmiRate(x.down,x.score),monthly=loan*annual/1200,months=monthsToLtv(loan,x.price,x.rate,x.years);
-  return result([m('ltv','Original loan-to-value',100-x.down,'percent'),m('annualRate','Annual PMI model rate',annual,'percent'),m('monthly','Estimated monthly PMI',monthly),m('equity','Principal reduction to 80% original value',max(0,loan-x.price*.8)),m('months','Modeled months to 80% balance',months,'integer'),m('paid','PMI paid through modeled date',monthly*months)],[],['The app rate table is an illustrative estimate, not an insurer quote. Reaching 80% original value can support a cancellation request; it is not automatic termination. Contact your servicer for conditions.']);}
+  const loan=mortgage(x),annual=x.down>=20?0:x.pmi,monthly=loan*annual/1200,months=monthsToLtv(loan,x.price,x.rate,x.years);
+  return result([m('ltv','Original loan-to-value',100-x.down,'percent'),m('annualRate','Quoted annual PMI rate',annual,'percent'),m('monthly','Estimated monthly PMI',monthly),m('equity','Principal reduction to 80% original value',max(0,loan-x.price*.8)),m('months','Modeled months to 80% balance',months,'integer'),m('paid','PMI paid through modeled date',monthly*months)],[],['Uses your entered PMI quote. Reaching 80% original value can support a cancellation request; it is not automatic termination. Contact your servicer for conditions.']);}
  case 'property-tax':{
   const taxable=max(0,x.value-x.exemption),annual=Math.round(taxable*x.tax/100),full=Math.round(x.value*x.tax/100);
   return result([m('taxable','Taxable assessed value',taxable),m('annual','Estimated annual property tax',annual),m('monthly','Monthly tax budget (annual / 12)',annual/12),m('saved','Annual exemption effect',full-annual)],[table('Assessment-growth scenario',['Year','Annual tax'],[1,2,3,4,5].map(y=>[y,Math.round(max(0,x.value*pow(1+x.growth/100,y)-x.exemption)*x.tax/100)]),['integer','money'])]);}
  case 'closing-costs':{
-  const loan=mortgage(x),orig=Math.round(loan*x.origination/100),points=Math.round(loan*x.points/100),owner=Math.round(x.price*.003),lender=Math.round(loan*.0018),transfer=Math.round(x.price*x.transfer/100),interest=Math.round(loan*x.rate/100/365*x.days),escrow=Math.round(x.price*x.tax/1200*x.escrowMonths);
-  const gross=orig+points+630+owner+lender+1000+transfer+200+interest+x.insurance+escrow,credit=min(x.credit,gross),net=gross-credit;
-  return result([m('gross','Costs before seller credit',gross),m('credit','Seller credit applied to costs',credit),m('costs','Net closing cost budget',net),m('downCash','Down payment',x.price*x.down/100),m('cash','Estimated cash to close',x.price*x.down/100+net)],[table('Closing budget breakdown',['Item','Amount'],[['Origination',orig],['Points',points],['Appraisal and credit report',630],['Owner title',owner],['Lender title',lender],['Settlement',1000],['Transfer tax',transfer],['Recording',200],['Prepaid interest',interest],['Insurance prepaid',x.insurance],['Tax escrow',escrow],['Seller credit',-credit]],['text','money'])]);}
+  const loan=mortgage(x),orig=Math.round(loan*x.origination/100),points=Math.round(loan*x.points/100),owner=x.ownerTitle,lender=x.lenderTitle,transfer=Math.round(x.price*x.transfer/100),interest=Math.round(loan*x.rate/100/365*x.days),escrow=Math.round(x.price*x.tax/1200*x.escrowMonths);
+  const gross=orig+points+x.appraisal+x.creditReport+owner+lender+x.settlement+transfer+x.recording+interest+x.insurance+escrow,credit=min(x.credit,gross),net=gross-credit;
+  return result([m('gross','Costs before seller credit',gross),m('credit','Seller credit applied to costs',credit),m('costs','Net closing cost budget',net),m('downCash','Down payment',x.price*x.down/100),m('cash','Estimated cash to close',x.price*x.down/100+net)],[table('Closing budget breakdown',['Item','Amount'],[['Origination',orig],['Points',points],['Appraisal',x.appraisal],['Credit report',x.creditReport],['Owner title',owner],['Lender title',lender],['Settlement',x.settlement],['Transfer tax',transfer],['Recording',x.recording],['Prepaid interest',interest],['Insurance prepaid',x.insurance],['Tax escrow',escrow],['Seller credit',-credit]],['text','money'])]);}
  case 'hoa':{
   const loan=mortgage(x),pi=payment(loan,x.rate,360),tax=x.price*x.tax/1200,ins=x.insurance/12,base=pi+tax+ins,total=base+x.hoa,budget=x.income*x.back/100-x.debts,fac=(1-x.down/100)*payment(1,x.rate,360)+x.tax/1200,without=max(0,(budget-ins)/fac),withHoa=max(0,(budget-ins-x.hoa)/fac);
   return result([m('without','Monthly housing before HOA',base),m('total','Monthly housing including HOA',total),m('dtiWithout','DTI before HOA',(base+x.debts)/x.income*100,'percent'),m('dti','DTI including HOA',(total+x.debts)/x.income*100,'percent'),m('priceLoss','Modeled purchase-budget reduction',without-withHoa)],[],['This HOA comparison excludes PMI and special assessments. Add those to your housing budget when applicable.']);}
  case 'credit-score':{
-  const bands=[[760,6.48],[720,6.72],[700,6.96],[680,7.14],[660,7.38],[640,7.74],[620,8.22]],rate=(bands.find(b=>x.score>=b[0])||bands.at(-1))[1]+x.shift,base=6.48+x.shift;
-  if(base<0)throw new Error('The rate adjustment makes an example rate negative.');const pi=payment(x.loan,rate,360),best=payment(x.loan,base,360);
-  return result([m('rate','Selected illustrative rate',rate,'percent'),m('pi','Monthly P&I at example tier',pi),m('best','Monthly P&I at top example tier',best),m('difference','Monthly difference',pi-best),m('life','30-year interest difference',(pi-best)*360)],[table('Illustrative app rate tiers (not lender offers)',['Minimum score','Example rate','Monthly P&I'],bands.map(([score,r])=>[score,r+x.shift,payment(x.loan,r+x.shift,360)]),['integer','percent','money'])]);}
+  const first=payment(x.loan,x.rate,x.years*12),second=payment(x.loan,x.comparisonRate,x.years*12),difference=first-second;
+  return result([m('rate','First quoted rate',x.rate,'percent'),m('pi','Monthly P&I at first quote',first),m('second','Monthly P&I at second quote',second),m('difference','First minus second monthly payment',difference),m('life','Scheduled interest difference',difference*x.years*12)]);
+ }
  case 'debt-payoff':{
   const ds=[1,2,3].map(i=>({balance:x['balance'+i],rate:x['rate'+i],minimum:x['minimum'+i]}));
   for(const d of ds)if(d.balance>0&&d.minimum<=0)throw new Error('Each active debt needs a minimum payment greater than zero.');
@@ -144,8 +142,9 @@ function calculate(id,x){
   const row=comparisons[x.hold-1];
   return result([m('buyMonthly','Initial monthly ownership budget',base),m('rentMonthly','Initial rent plus renters insurance',x.rent+x.rentersInsurance),m('buyWealth','Net sale equity at selected year',row[1]),m('rentWealth','Modeled renter investment at selected year',row[2]),m('difference','Buying minus renting modeled wealth',row[3]),m('breakEven','First modeled buying crossover year',breakEven,'integer')],[table('Net wealth scenario by year',['Year','Owner net sale equity','Renter investment','Buying minus renting'],comparisons,['integer','money','money','money'])],['Both positive and negative monthly cash differences affect the renter investment; a negative value means the modeled rental budget requires additional funds. Taxes, PMI, changing maintenance and investment volatility are excluded. A crossover may reverse in later years.']);}
  case 'moving':{
-  const matrix={local:{studio:950,'2br':1250,'4br':1900,office:2200},long:{studio:2800,'2br':4200,'4br':6800,office:9000},cross:{studio:4500,'2br':7200,'4br':11500,office:14000}},base=matrix[x.distance][x.size]*(x.season==='peak'?1.2:1),fuel={local:80,long:320,cross:580}[x.distance],insurance=Math.round(base*.03),materials={self:180,partial:450,full:900}[x.packing],packing={self:0,partial:350,full:900}[x.packing],storage={no:0,'1mo':180,'3mo':540,'6mo':1080}[x.storage],travel={local:80,long:350,cross:650}[x.distance],subtotal=base+fuel+insurance+materials+packing+storage+travel+100,buffer=Math.round(subtotal*.1);
-  return result([m('total','Moving budget including buffer',subtotal+buffer),m('subtotal','Budget before buffer',subtotal),m('buffer','10% contingency',buffer)],[table('Illustrative app cost breakdown',['Item','Amount'],[['Base move',base],['Fuel',fuel],['Insurance allowance',insurance],['Materials',materials],['Packing service',packing],['Storage',storage],['Travel',travel],['Tips allowance',100]],['text','money'])]);}
+  const items=[['Moving service',x.base],['Fuel',x.fuel],['Insurance / valuation',x.insurance],['Materials',x.materials],['Packing service',x.packing],['Storage',x.storage],['Travel',x.travel],['Tips',x.tips]],subtotal=items.reduce((sum,item)=>sum+item[1],0),buffer=subtotal*x.bufferPct/100;
+  return result([m('total','Moving budget including contingency',subtotal+buffer),m('subtotal','Quoted costs before contingency',subtotal),m('buffer','Contingency budget',buffer)],[table('Your itemized moving costs',['Item','Amount'],items,['text','money'])]);
+ }
  case 'rental-yield':{
   const loan=mortgage(x),annualDebt=payment(loan,x.rate,360)*12,gross=x.rent*12,vacancy=gross*x.vacancy/100,egi=gross-vacancy,mgmt=egi*x.management/100,opex=x.annualTax+x.insurance+mgmt+x.maintenance+x.other,noi=egi-opex,cf=noi-annualDebt,down=x.price*x.down/100;
   return result([m('noi','Net operating income / year',noi),m('cashflow','Annual cash flow after debt',cf),m('monthly','Monthly cash flow',cf/12),m('cap','Cap rate',noi/x.price*100,'percent'),m('grossYield','Gross rental yield',gross/x.price*100,'percent'),m('coc','Cash-on-cash (down payment only)',down>0?cf/down*100:null,'percent'),m('dscr','Debt service coverage ratio',annualDebt>0?noi/annualDebt:null,'number')],[table('Annual income and expenses',['Item','Amount'],[['Gross rent',gross],['Vacancy allowance',-vacancy],['Operating expenses',-opex],['NOI',noi],['Debt service',-annualDebt],['Cash flow',cf]],['text','money'])]);}
@@ -164,25 +163,12 @@ function calculate(id,x){
  case 'down-payment-assistance':{
   const down=x.price*x.down/100,usable=min(x.assistance,down+x.closing),cash=max(0,down+x.closing-usable);
   return result([m('downCash','Required down payment budget',down),m('closing','Closing cost budget',x.closing),m('assistance','Assistance applied to budget',usable),m('cash','Cash remaining to fund',cash),m('secondPayment','Assistance-loan monthly P&I',x.type==='loan'?payment(usable,x.rate,x.years*12):0)],[],['Budget illustration using a program amount you have independently confirmed. This does not search available grants or verify first-time-buyer, income, credit, property or funding eligibility. Forgivable assistance may become repayable.']);}
- case 'flood':{
-  const rates={V:{'-2':3800,0:2800,1:2200,3:1600},AE:{'-2':2400,0:1620,1:888,3:580},A:{'-2':1800,0:1200,1:720,3:450},X:{'-2':600,0:450,1:350,3:280}},base=rates[x.zone][x.elevation],building=Math.round(base*x.building/250000/10)*10,contents=Math.round(base*.3*x.contents/100000/10)*10;
-  return result([m('annual','Illustrative annual flood premium',building+contents),m('monthly','Rounded monthly budget',Math.round((building+contents)/12)),m('building','Building premium component',building),m('contents','Contents premium component',contents)],[],['Uses a simplified zone/elevation table from the app. It does not implement FEMA Risk Rating 2.0 or quote NFIP/private coverage. Enter actual premiums in your mortgage budget when available.']);}
- case 'homeowner-insurance':case 'ho1':case 'ho3':case 'ho5':case 'ho6':case 'hurricane':case 'wildfire':{
-  let annual=0,deductible=Number(x.deductible),coverage=x.value;
-  if(id==='hurricane'){
-   const base={FL:.008,TX:.0066,LA:.0072,NC:.0052}[x.state],location={coast:1.35,near:1,inland:.62}[x.location],ded={1:.1,2:0,3:-.08,5:-.18}[x.deductible],construction={wood:0,masonry:-.1,fortified:-.28}[x.construction];annual=x.value*base*location*(1+ded)*(1+construction);deductible=x.value*Number(x.deductible)/100;
-  }else if(id==='wildfire'){
-   const rate={low:.0028,ca_std:.0039,ca_sra:.0072,extreme:.013}[x.risk],age=x.age>40?1.2:x.age>20?1.1:1,disc={1000:0,2500:-.08,5000:-.15,10000:-.22}[x.deductible]+{none:0,partial:-.08,full:-.18}[x.mitigation];annual=x.value*rate*age*(1+disc);
-  }else if(id==='ho6'){
-   coverage=x.value+x.contents;annual=coverage*.004*{low:.7,medium:1,high:1.4,fl:1.8}[x.risk]*(1+{500:.04,1000:0,2500:-.08,5000:-.15}[x.deductible]);
-  }else{
-   const factor=id==='ho1'?.7:id==='ho5'?1.2:1,age=x.age>50?1.35:x.age>30?1.18:x.age>15?1.08:1,risk={low:.75,medium:1,high:1.45,extreme:1.95}[x.risk];
-   const discount=id==='ho1'?{500:.04,1000:0,2000:-.08,5000:-.16}:id==='ho5'?{1000:0,2500:-.08,5000:-.15,10000:-.22}:{500:0,1000:-.05,2000:-.12,5000:-.2};annual=x.value*.0057*factor*age*risk*(1+discount[x.deductible]);
-  }
-  annual=Math.round(annual/10)*10;if(id==='ho6')annual=max(150,annual);
-  return result([m('annual','Illustrative annual premium',annual),m('monthly','Rounded monthly premium',Math.round(annual/12)),m('coverage','Entered coverage basis',coverage),m('deductible','Selected deductible amount',deductible)],[],['Illustrative app pricing model, not an insurer quote or assurance of coverage. State, catastrophe risk, underwriting and policy wording can materially change price and exclusions.']);}
+ case 'flood':case 'homeowner-insurance':case 'ho1':case 'ho3':case 'ho5':case 'ho6':case 'hurricane':case 'wildfire':{
+  const coverage=x.value+(x.contents||0),deductible=id==='hurricane'?x.value*x.deductible/100:x.deductible;
+  return result([m('annual','Quoted annual premium',x.annualPremium),m('monthly','Monthly premium budget',x.annualPremium/12),m('coverage','Entered coverage basis',coverage),m('deductible','Policy deductible amount',deductible)]);
+ }
  default:throw new Error('Unknown US calculator.');
  }
 }
-return {payment,schedule,pv,pmiRate,monthsToLtv,payoff,calculate};
+return {payment,schedule,pv,monthsToLtv,payoff,calculate};
 });

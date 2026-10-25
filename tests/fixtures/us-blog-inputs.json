@@ -1,0 +1,67 @@
+{
+  "usa-mortgage-calculator": {
+    "price": 412500,
+    "down": 41250,
+    "rate": 7.32,
+    "years": 30
+  },
+  "usa-affordability-calculator": {
+    "income": 100800,
+    "debts": 500,
+    "down": 41250,
+    "rate": 7.32,
+    "years": 30,
+    "tax": 6000,
+    "insurance": 1800,
+    "hoa": 0,
+    "pmiRate": 0.5,
+    "front": 28,
+    "back": 36
+  },
+  "usa-amortization-calculator": {
+    "loan": 371250,
+    "rate": 7.32,
+    "years": 30,
+    "extra": 0
+  },
+  "usa-down-payment-calculator": {
+    "price": 412500,
+    "percent": 10,
+    "rate": 7.32,
+    "years": 30,
+    "pmiRate": 0.45
+  },
+  "usa-dti-calculator": {
+    "income": 8400,
+    "housing": 2350,
+    "auto": 410,
+    "student": 280,
+    "cards": 150,
+    "other": 0
+  },
+  "usa-fha-loan-calculator": {
+    "price": 300000,
+    "percent": 3.5,
+    "rate": 6.5,
+    "finance": "yes"
+  },
+  "usa-piti-calculator": {
+    "price": 412500,
+    "down": 41250,
+    "rate": 7.32,
+    "years": 30,
+    "tax": 6187.5,
+    "insurance": 1740,
+    "pmi": 139.22,
+    "hoa": 0
+  },
+  "usa-va-loan-calculator": {
+    "price": 400000,
+    "percent": 0,
+    "use": "first",
+    "exempt": "no",
+    "finance": "yes",
+    "rate": 7.32,
+    "years": 30
+  }
+}
