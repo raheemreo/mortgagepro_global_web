@@ -1,0 +1,18 @@
+{
+ "reviewedOn":"2026-10-25",
+ "cmhc":"https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/premium-information-for-homeowner-and-small-rental-loans",
+ "osfi":"https://www.osfi-bsif.gc.ca/en/supervision/financial-institutions/banks/minimum-qualifying-rate-uninsured-mortgages",
+ "purchasePriceInsuranceCapExclusive":1500000,
+ "downPaymentBands":[[500000,5],[1500000,10]],
+ "minimumUninsuredDownPercentAtCap":20,
+ "highRatioPremiumPercent":[2.8,3.1,4],
+ "over25YearPremiumSurchargePercentagePoints":0.2,
+ "standardMQR":{"floorPercent":5.25,"contractBufferPercentagePoints":2},
+ "hbpPerIndividualWithdrawalLimit":60000,
+ "fhsaAnnualContributionLimit":8000,
+ "fhsaLifetimeContributionLimit":40000,
+ "torontoHighValueRatesEffective":"2026-04-01",
+ "montrealBandsEffective":"2026-01-01",
+ "albertaTitleScheduleEffective":"2026-10-01",
+ "scope":"Dated policy references; no future automatic verification is claimed. Borrower prices, rates and costs must be entered. Exceptions and program eligibility require lender, insurer, CRA or conveyancer confirmation."
+}

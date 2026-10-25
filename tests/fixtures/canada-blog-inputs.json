@@ -1,0 +1,57 @@
+{
+  "canada-mortgage-calculator": {
+    "loan": 520000,
+    "rate": 3.99,
+    "years": 25
+  },
+  "canada-affordability-calculator": {
+    "income": 150000,
+    "debts": 0,
+    "down": 175000,
+    "rate": 3.99,
+    "years": 25,
+    "tax": 3600,
+    "heat": 100,
+    "condo": 0
+  },
+  "canada-amortization-calculator": {
+    "loan": 520000,
+    "rate": 3.99,
+    "years": 25
+  },
+  "canada-cmhc-insurance-calculator": {
+    "price": 700000,
+    "down": 70000,
+    "years": 25,
+    "eligible": "no",
+    "taxRate": 0
+  },
+  "canada-gds-tds-calculator": {
+    "income": 12500,
+    "mortgage": 3323.9,
+    "tax": 220,
+    "heat": 120,
+    "condo": 300,
+    "ground": 0,
+    "debts": 630
+  },
+  "canada-prepayment-calculator": {
+    "loan": 520000,
+    "rate": 3.99,
+    "years": 25,
+    "lump": 30000,
+    "month": 36
+  },
+  "canada-renewal-planner": {
+    "loan": 500000,
+    "oldRate": 1.89,
+    "rate": 3.99,
+    "years": 25,
+    "elapsed": 5
+  },
+  "canada-stress-test-calculator": {
+    "loan": 520000,
+    "rate": 3.99,
+    "years": 25
+  }
+}

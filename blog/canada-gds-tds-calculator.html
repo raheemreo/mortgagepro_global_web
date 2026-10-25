@@ -295,8 +295,9 @@
   <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#0B1D3A">
   <meta name="msapplication-TileColor" content="#0B1D3A">
   <meta name="theme-color" content="#0B1D3A">
-<link rel="stylesheet" href="/css/us-blog.css">
-<script src="/js/global-blog-calculators.js" defer></script>
+<link rel="stylesheet" href="/css/us-blog.css?v=8de0ab0f445c">
+<script src="/js/global-blog-calculators.js?v=2dbfd274f03c" defer></script>
+<link rel="stylesheet" href="/css/canada-calculators.css?v=7c2f7f6c9e9c">
 </head>
 
 <body>
@@ -384,31 +385,32 @@
 <p>This tool takes a <strong>monthly qualifying mortgage payment</strong> as an input. If a stress test applies, enter the assessed payment rather than the lower contractual debit. If a premium is financed, the assessed principal needs to include it.</p>
 <section class="us-calc" data-global-calculator="ca-ratios" data-currency="CAD" data-compounding="semiannual" aria-labelledby="global-calc-title">
 <h2 id="global-calc-title">Try the assumptions</h2>
-<p>Amounts are in CAD. Change the inputs to recalculate locally. No loan, tax or scheme approval is established by the result.</p>
-<div class="us-fields">
+<p>Amounts are CAD. Enter your current figures, then press Calculate estimate. The tool does not establish approval.</p>
+<form data-canada-form novalidate><div class="us-fields">
 <label for="global-income">Monthly qualifying income (CAD)
-<input id="global-income" name="income" type="number" required value="12500" min="0.01" max="100000000" step="any">
+<input id="global-income" name="income" type="number" required value="" min="0.01" max="100000000" step="any">
 </label>
 <label for="global-mortgage">Monthly qualifying mortgage payment incl. financed premium (CAD)
-<input id="global-mortgage" name="mortgage" type="number" required value="3323.9" min="0" max="100000000" step="any">
+<input id="global-mortgage" name="mortgage" type="number" required value="" min="0" max="100000000" step="any">
 </label>
 <label for="global-tax">Monthly property tax (CAD)
-<input id="global-tax" name="tax" type="number" required value="220" min="0" max="100000000" step="any">
+<input id="global-tax" name="tax" type="number" required value="" min="0" max="100000000" step="any">
 </label>
 <label for="global-heat">Monthly heat (CAD)
-<input id="global-heat" name="heat" type="number" required value="120" min="0" max="100000000" step="any">
+<input id="global-heat" name="heat" type="number" required value="" min="0" max="100000000" step="any">
 </label>
 <label for="global-condo">Full monthly condo fee (CAD)
-<input id="global-condo" name="condo" type="number" required value="300" min="0" max="100000000" step="any">
+<input id="global-condo" name="condo" type="number" required value="" min="0" max="100000000" step="any">
 </label>
 <label for="global-ground">Monthly site / ground rent (CAD)
 <input id="global-ground" name="ground" type="number" required value="0" min="0" max="100000000" step="any">
 </label>
 <label for="global-debts">Other monthly debt payments (CAD)
-<input id="global-debts" name="debts" type="number" required value="630" min="0" max="100000000" step="any">
+<input id="global-debts" name="debts" type="number" required value="" min="0" max="100000000" step="any">
 </label>
 </div>
-<div data-results role="status" aria-live="polite" aria-atomic="true"><p>Enable JavaScript for the interactive estimate. The worked explanations and sources remain available below.</p></div>
+<div class="us-actions"><button type="submit" hidden>Calculate estimate</button><button type="reset">Reset example</button></div></form>
+<div hidden tabindex="-1" data-results role="status" aria-live="polite" aria-atomic="true"><p>Enable JavaScript for the interactive estimate. The worked explanations and sources remain available below.</p></div>
 <noscript><p>The interactive estimate requires JavaScript. Read the worked examples and sources below.</p></noscript>
 </section>
 <h2>Use a consistent monthly unit</h2>

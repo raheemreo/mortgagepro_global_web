@@ -1584,9 +1584,10 @@
   <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#0B1D3A">
   <meta name="msapplication-TileColor" content="#0B1D3A">
   <meta name="theme-color" content="#0B1D3A">
-<script src="/js/global-blog-calculators.js?v=008025ab8d60"></script>
 <script src="/js/root-calculator-state.js?v=f80377ee5785" defer></script>
 <link rel="stylesheet" href="/css/root-calculators.css?v=5469b7825823">
+<script src="/js/canada-tools-models.js?v=e60df0ebd3e7"></script>
+<link rel="stylesheet" href="/css/canada-calculators.css?v=7c2f7f6c9e9c">
 </head>
 
 <body>
@@ -1648,11 +1649,11 @@
             <div class="hc-row">
               <div class="hc-box" id="p-box">
                 <label for="can-price">Property Price ($)</label>
-                <input type="number" id="can-price" value="650000" min="50000" max="10000000" step="5000" required>
+                <input type="number" id="can-price" value="" min="50000" max="10000000" step="any" required>
               </div>
               <div class="hc-box" id="d-box">
                 <label for="can-down">Down Payment (%)</label>
-                <input type="number" id="can-down" value="20" min="5" max="99" step="0.5" required>
+                <input type="number" id="can-down" value="" min="5" max="99" step="any" required>
               </div>
             </div>
             <div class="hc-row">
@@ -1668,16 +1669,16 @@
               </div>
               <div class="hc-box" id="r-box">
                 <label for="can-rate">Interest Rate (%)</label>
-                <input type="number" id="can-rate" value="4.99" min="0" max="25" step="0.01" required>
+                <input type="number" id="can-rate" value="" min="0" max="25" step="0.01" required>
               </div>
             </div>
             <div class="hc-row">
               <div class="hc-box" id="i-box" style="flex: 1;">
                 <label for="can-income">Household Income (Gross $/year)</label>
-                <input type="number" id="can-income" value="120000" min="10000" max="10000000" step="1000" required>
+                <input type="number" id="can-income" value="" min="10000" max="10000000" step="any" required>
               </div>
             </div>
-            <button type="submit" class="hc-btn">🍁 Calculate Canadian Mortgage</button>
+            <p>Enter your current quote and actual costs. Zero explicitly excludes a cost. Premium tax and closing costs are paid separately in cash.</p><div class="hc-box"><label for="can-tax">Annual property tax (CAD)</label><input id="can-tax" type="number" value="" min="0" max="100000000" step="any" required></div><div class="hc-box"><label for="can-heat">Monthly heating (CAD)</label><input id="can-heat" type="number" value="" min="0" max="100000000" step="any" required></div><div class="hc-box"><label for="can-condo">Full monthly condo fee (CAD)</label><input id="can-condo" type="number" value="0" min="0" max="100000000" step="any" required></div><div class="hc-box"><label for="can-ground">Monthly ground rent (CAD)</label><input id="can-ground" type="number" value="0" min="0" max="100000000" step="any" required></div><div class="hc-box"><label for="can-debts">Other monthly debt payments (CAD)</label><input id="can-debts" type="number" value="0" min="0" max="100000000" step="any" required></div><div class="hc-box"><label for="can-premium-tax">Provincial premium tax (%)</label><input id="can-premium-tax" type="number" value="0" min="0" max="30" step="any" required></div><button type="submit" class="hc-btn">🍁 Calculate Canadian Mortgage</button>
             <button type="button" id="can-calc-reset" class="hc-btn"
               style="background: transparent; border: 1px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.7); box-shadow: none; padding: 10px; font-size: 13px; margin-top: 5px;">Reset
               Values</button>
@@ -1845,88 +1846,21 @@
     </section>
 
     <!-- CORE TOOLS -->
-    <section class="section" id="tools">
-      <div class="sec-hdr">
-        <h2>Core Mortgage Tools</h2>
-      </div>
-      <div class="g2">
-        <a href="#calculator" class="tc dark">
-          <div class="tic">🏠</div>
-          <div class="tn">Mortgage Calc</div>
-          <div class="td">Monthly payment + CMHC</div>
-          <div class="badge badge-ca">30yr Eligible</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/canada-cmhc-insurance-calculator" class="tc">
-          <div class="tic">🛡️</div>
-          <div class="tn">CMHC Insurance</div>
-          <div class="td">Premium calculator &amp; cap</div>
-          <div class="badge badge-warn">&lt;20% down</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/canada-gds-tds-calculator" class="tc">
-          <div class="tic">📊</div>
-          <div class="tn">GDS / TDS Ratio</div>
-          <div class="td">Gross debt service guide</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/canada-stress-test-calculator" class="tc red">
-          <div class="tic">🧪</div>
-          <div class="tn">Stress Test Calc</div>
-          <div class="td">BoC benchmark test</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/canada-affordability-calculator" class="tc">
-          <div class="tic">💰</div>
-          <div class="tn">Affordability</div>
-          <div class="td">Max home price, CAD</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/canada-amortization-calculator" class="tc maple">
-          <div class="tic">📅</div>
-          <div class="tn">Amortization</div>
-          <div class="td">Bi-weekly schedule</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/canada-renewal-planner" class="tc">
-          <div class="tic">🔄</div>
-          <div class="tn">Renewal Planner</div>
-          <div class="td">Term renewal analysis</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/canada-prepayment-calculator" class="tc">
-          <div class="tic">📈</div>
-          <div class="tn">Prepayment Calc</div>
-          <div class="td">Lump sum savings</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/canada-affordability-calculator" class="tc teal">
-          <div class="tic">💳</div>
-          <div class="tn">Credit Score Impact</div>
-          <div class="td">Score to rate mapping</div>
-          <div class="badge badge-b">600–850</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/cmhc-insurance-canada-guide" class="tc">
-          <div class="tic">🏘️</div>
-          <div class="tn">CMHC Guide</div>
-          <div class="td">Complete federal rules</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/canada-renewal-planner" class="tc navy">
-          <div class="tic">🔁</div>
-          <div class="tn">Refinance Tool</div>
-          <div class="td">Break fee &amp; savings</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/canada-mortgage-calculator" class="tc">
-          <div class="tic">🏗️</div>
-          <div class="tn">Compounding Guide</div>
-          <div class="td">Semi-annual Interest Act</div>
-          <div class="ta">›</div>
-        </a>
-      </div>
-    </section>
+<section class="section" id="tools"><div class="sec-hdr"><h2>Mortgage &amp; qualification</h2></div><p>Enter current figures and press Calculate estimate. Results stay hidden until you calculate; editing or resetting clears them.</p><div class="g2 canada-tools-directory"><a href="/tools/canada/mortgage" class="tc"><div class="tic" aria-hidden="true">🍁</div><div class="tn">Canada Mortgage Calculator</div><div class="td">Calculate a Canadian purchase payment with CMHC, cash/financed premiums and regular payment frequencies.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/canada/cmhc" class="tc"><div class="tic" aria-hidden="true">🍁</div><div class="tn">CMHC Insurance Calculator</div><div class="td">Find the modeled minimum down payment, insurance tier, premium and cash premium tax.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/canada/gds-tds" class="tc"><div class="tic" aria-hidden="true">🍁</div><div class="tn">GDS / TDS Ratio Calculator</div><div class="td">Calculate housing and total-debt ratios from actual qualifying payments and living costs.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/canada/stress-test" class="tc"><div class="tic" aria-hidden="true">🍁</div><div class="tn">Mortgage Stress Test</div><div class="td">Compare contract-rate payments with a standard qualifying-rate scenario and GDS/TDS.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/canada/affordability" class="tc"><div class="tic" aria-hidden="true">🍁</div><div class="tn">Canada Home Affordability</div><div class="td">Solve a purchase budget using down payment, insurance, debt-service budgets and actual housing costs.</div><div class="ta" aria-hidden="true">›</div></a></div></section>
+<section class="section" id="repayment"><div class="sec-hdr"><h2>Repayment &amp; renewal</h2></div><p>Enter current figures and press Calculate estimate. Results stay hidden until you calculate; editing or resetting clears them.</p><div class="g2 canada-tools-directory"><a href="/tools/canada/amortization" class="tc"><div class="tic" aria-hidden="true">🍁</div><div class="tn">Canadian Amortization Schedule</div><div class="td">Review every repayment and annual principal/interest totals with the final payment capped.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/canada/prepayment" class="tc"><div class="tic" aria-hidden="true">🍁</div><div class="tn">Prepayment Savings Calculator</div><div class="td">Compare permitted recurring, annual and one-time extra principal payments with the same baseline.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/canada/payment-frequency" class="tc"><div class="tic" aria-hidden="true">🍁</div><div class="tn">Payment Frequency Comparison</div><div class="td">Compare regular monthly, biweekly, weekly and accelerated repayment plans.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/canada/renewal" class="tc"><div class="tic" aria-hidden="true">🍁</div><div class="tn">Mortgage Renewal Planner</div><div class="td">Compare renewal offers over a common horizon, including payments, interest and remaining balances.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/canada/refinance" class="tc"><div class="tic" aria-hidden="true">🍁</div><div class="tn">Mortgage Refinance Comparison</div><div class="td">Compare an existing mortgage with a refinance offer after known fees, penalties and cashback.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/canada/credit-quote" class="tc"><div class="tic" aria-hidden="true">🍁</div><div class="tn">Credit Score Quote Comparison</div><div class="td">Compare two actual lender offers rather than guessing a rate from a credit score.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/canada/rate-comparison" class="tc"><div class="tic" aria-hidden="true">🍁</div><div class="tn">Mortgage Rate Impact Comparison</div><div class="td">Measure the payment impact of two actual mortgage rates without treating a policy rate as a loan quote.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/canada/compounding" class="tc"><div class="tic" aria-hidden="true">🍁</div><div class="tn">Canadian Compounding Comparison</div><div class="td">Compare monthly repayments under semiannual and monthly nominal compounding conventions.</div><div class="ta" aria-hidden="true">›</div></a></div></section>
+<section class="section" id="purchase"><div class="sec-hdr"><h2>Purchase costs &amp; programs</h2></div><p>Enter current figures and press Calculate estimate. Results stay hidden until you calculate; editing or resetting clears them.</p><div class="g2 canada-tools-directory"><a href="/tools/canada/first-home-buyer" class="tc"><div class="tic" aria-hidden="true">🍁</div><div class="tn">First-Home Buyer Funding Budget</div><div class="td">Combine confirmed FHSA/HBP withdrawals, savings and co-buyer funds against a target purchase.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/canada/land-transfer-tax" class="tc"><div class="tic" aria-hidden="true">🍁</div><div class="tn">Land Transfer Tax &amp; Title Costs</div><div class="td">Budget supported transfer taxes or title levies and confirmed local additions/rebates.</div><div class="ta" aria-hidden="true">›</div></a></div></section>
 
     <!-- RESOURCES -->
     <section class="section" id="resources">
@@ -1934,7 +1868,7 @@
         <h2>Resources &amp; Government Programs</h2>
       </div>
       <div class="ilist">
-        <a href="/mortgage-faq" class="ic">
+        <a href="/tools/canada/land-transfer-tax" class="ic">
           <div class="ii">🏛️</div>
           <div>
             <div class="in">Land Transfer Tax</div>
@@ -1942,11 +1876,11 @@
           </div>
           <div class="ich">›</div>
         </a>
-        <a href="/mortgage-faq" class="ic">
+        <a href="/tools/canada/first-home-buyer" class="ic">
           <div class="ii">🏡</div>
           <div>
-            <div class="in">First-Home Buyer Incentive</div>
-            <div class="is">FHBI · RRSP Home Buyers' Plan</div>
+            <div class="in">First-Home Buyer Funding</div>
+            <div class="is">Confirmed FHSA · HBP · savings budget</div>
           </div>
           <div class="ich">›</div>
         </a>
@@ -1974,7 +1908,7 @@
           </div>
           <div class="ich">›</div>
         </a>
-        <a href="/mortgage-faq" class="ic">
+        <a href="/tools/canada/first-home-buyer" class="ic">
           <div class="ii">🏠</div>
           <div>
             <div class="in">First Home Savings Account (FHSA)</div>
@@ -1990,11 +1924,11 @@
           </div>
           <div class="ich">›</div>
         </a>
-        <a href="/mortgage-faq" class="ic">
+        <a href="/methodology" class="ic">
           <div class="ii">🤖</div>
           <div>
-            <div class="in">Canada AI Advisor</div>
-            <div class="is">CMHC rules · stress test guidance</div>
+            <div class="in">Calculation Methodology</div>
+            <div class="is">Formulas, assumptions and limits</div>
           </div>
           <div class="ich">›</div>
         </a>
@@ -2010,7 +1944,7 @@
 <p>Selecting the eligibility field does not prove it. At 20% down this model assumes no borrower-paid high-ratio premium; it does not say low-ratio lender insurance cannot exist. Any provincial premium tax or closing charge remains a separate cash item. See <a href="https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/purchase">CMHC Purchase</a> and the <a href="/blog/canada-cmhc-insurance-calculator">premium calculator</a>.</p>
 <h2>Read the qualifying illustration carefully</h2>
 <p>The standard uninsured federally regulated assessment uses the higher of contract rate plus two percentage points and 5.25%. <a href="https://www.osfi-bsif.gc.ca/en/supervision/financial-institutions/banks/minimum-qualifying-rate-uninsured-mortgages">OSFI</a> describes its scope and the qualifying straight-switch exception.</p>
-<p>The displayed GDS illustration adds assumed CAD 250 monthly tax and CAD 150 heat. It omits other debts, condo fees and a full income assessment, so it is not a pass/fail decision. For an explicit entered-cost comparison, use the <a href="/blog/canada-gds-tds-calculator">GDS/TDS guide</a>.</p>
+<p>The GDS/TDS illustration uses your entered property tax, heating, half condominium fees, full ground rent and other debt payments. It does not assess lender eligibility or give a pass/fail decision. For an explicit entered-cost comparison, use the <a href="/blog/canada-gds-tds-calculator">GDS/TDS guide</a>.</p>
 <h2>Before accepting a renewal</h2>
 <p>A new rate belongs with the remaining balance and remaining amortization, not the original loan and a reset repayment timeline. Confirm transfer costs, prepayment restrictions and lender assessment. The <a href="/blog/canada-renewal-planner">renewal planner</a> shows that calculation separately.</p></section>
 
@@ -2147,7 +2081,7 @@
 
     /* Canadian semi-annual compounding interest formula */
     function calcCADMonthlyPayment(principal, annualRate, years) {
-      return GlobalBlogCalculators.payment(principal, annualRate, years, 'semiannual');
+      return CanadaMortgageTools.payment(principal, annualRate, years);
     }
 
     /* Dynamic CMHC Premium Finder */
@@ -2294,6 +2228,10 @@
 
     /* Run Canada Calculations */
     function executeCalculation() {
+      document.getElementById('canada-results').classList.remove('visible'); window._canadaResultBlob = null;
+      const form = document.getElementById('canada-calc-form');
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      const actualCosts = Object.fromEntries(['tax','heat','condo','ground','debts','premium-tax'].map(k=>[k, Number(document.getElementById('can-'+k).value)]));
       const priceInput = document.getElementById('can-price');
       const downInput = document.getElementById('can-down');
       const rateInput = document.getElementById('can-rate');
@@ -2356,8 +2294,8 @@
 
       let insurance;
       try {
-        insurance = GlobalBlogCalculators.cmhc(price, downPaymentAmount, term > 25 ? 30 : 25,
-          document.getElementById('can-eligible30').value === 'yes');
+        insurance = CanadaMortgageTools.insurance(price, downPaymentAmount, term,
+          document.getElementById('can-eligible30').value === 'yes', Number(document.getElementById('can-premium-tax').value));
       } catch (error) {
         document.getElementById('canada-results').classList.remove('visible'); window._canadaResultBlob = null;
         triggerToast(error.message); return;
@@ -2373,13 +2311,13 @@
       const stressRate = Math.max(rate + 2.0, 5.25);
       const stressMonthlyPayment = calcCADMonthlyPayment(totalLoanAmount, stressRate, term);
 
-      // GDS ratio: (Mortgage + Taxes + Heat) / Gross Income. Estimated heat = $150, taxes = $250.
+      // Qualifying housing costs use entered tax, heat, half condo and full ground rent.
       const monthlyGrossIncome = income / 12;
-      const monthlyHousingCosts = stressMonthlyPayment + 250 + 150;
+      const monthlyHousingCosts = stressMonthlyPayment + actualCosts.tax / 12 + actualCosts.heat + actualCosts.condo / 2 + actualCosts.ground;
       const gdsRatio = (monthlyHousingCosts / monthlyGrossIncome) * 100;
 
       const stressStatusPill = document.getElementById('can-stress-status');
-      stressStatusPill.textContent = 'Illustrative GDS: ' + gdsRatio.toFixed(2) + '%';
+      stressStatusPill.textContent = 'Illustrative GDS: ' + gdsRatio.toFixed(2) + '% · TDS: ' + ((monthlyHousingCosts + actualCosts.debts) / monthlyGrossIncome * 100).toFixed(2) + '%; not an approval';
       stressStatusPill.className = 'status-pill';
 
       const totalInterest = (monthlyPayment * term * 12) - totalLoanAmount;
@@ -2390,7 +2328,7 @@
       document.getElementById('can-cmhc-premium').textContent = fmtCAD(cmhcPremiumAmount);
       document.getElementById('cmhc-pct-lbl').textContent = `${(cmhcPremiumRate * 100).toFixed(2)}% premium rate`;
       document.getElementById('can-loan-amount').textContent = fmtCAD(totalLoanAmount);
-      document.getElementById('ltv-percentage-lbl').textContent = `LTV Ratio: ${((totalLoanAmount / price) * 100).toFixed(1)}%`;
+      document.getElementById('ltv-percentage-lbl').textContent = `Base LTV: ${(insurance.ltv).toFixed(1)}% · Cash premium tax: ${fmtCAD(insurance.cashTax)}`;
       document.getElementById('can-gds-val').textContent = gdsRatio.toFixed(2) + '%';
 
       document.getElementById('can-total-interest').textContent = fmtCAD(totalInterest);
@@ -2402,7 +2340,8 @@
       // Show Results block
       const resultsContainer = document.getElementById('canada-results');
       resultsContainer.classList.add('visible');
-      // Keep the page position stable during calculation and initial load.
+      resultsContainer.tabIndex = -1; resultsContainer.focus({preventScroll:true});
+      resultsContainer.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});
 
       // Draw donut
       requestAnimationFrame(() => {
@@ -2416,7 +2355,7 @@
       // Save calculations in window for export features
       window._canadaResultBlob = {
         price, down, downPaymentAmount, baseLoanAmount, totalLoanAmount, cmhcPremiumAmount, rate, term, income,
-        monthlyPayment, totalInterest, totalPayment, tableList, gdsRatio
+        monthlyPayment, totalInterest, totalPayment, tableList, gdsRatio, actualCosts, premiumTax: insurance.cashTax
       };
 
       logEvent('calculation_completed', { tool: 'canada_mortgage_calc' });
@@ -2517,16 +2456,6 @@
     document.getElementById('btn-print').addEventListener('click', function () {
       window.print();
       logEvent('results_printed', { tool: 'canada_mortgage_calc' });
-    });
-
-    // Province tab pill toggles
-    document.querySelectorAll('#prov-pills .prov-pill').forEach(pill => {
-      pill.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelectorAll('#prov-pills .prov-pill').forEach(p => p.classList.remove('active'));
-        this.classList.add('active');
-        triggerToast(`📍 Switched rules to province: ${this.getAttribute('data-val')}`);
-      });
     });
 
     // FAQ Expand/Collapse

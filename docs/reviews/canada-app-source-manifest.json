@@ -1,0 +1,76 @@
+{
+  "repository": "raheemreo/mortgagepro_global",
+  "commit": "9f79ea943e27b6d8b0c1ca411c37fb4cae077f72",
+  "files": [
+    {
+      "path": "lib/features/canada/canada_screen.dart",
+      "sha": "0f3912b6c3be7cc31d74f63be3f890872080e991",
+      "bytes": 25542
+    },
+    {
+      "path": "lib/features/canada/tools/ca_affordability.dart",
+      "sha": "d291d6320f3cadb130abe0981434182a25782d27",
+      "bytes": 38709
+    },
+    {
+      "path": "lib/features/canada/tools/ca_ai_advisor.dart",
+      "sha": "0d0bf46172bc98f7292c05fa6ffbe7b0656b775c",
+      "bytes": 30757
+    },
+    {
+      "path": "lib/features/canada/tools/ca_amortization.dart",
+      "sha": "d05a0a79dcd0b577b72f07d03eec2b784181b40d",
+      "bytes": 44821
+    },
+    {
+      "path": "lib/features/canada/tools/ca_boc_rate_history.dart",
+      "sha": "6cb62618c8d9a2c1e090286df655326a2f08ddfa",
+      "bytes": 38102
+    },
+    {
+      "path": "lib/features/canada/tools/ca_cmhc_insurance.dart",
+      "sha": "2a5996b8eb9fc4183b12878c516028ebe6950961",
+      "bytes": 38821
+    },
+    {
+      "path": "lib/features/canada/tools/ca_first_home_buyer.dart",
+      "sha": "099d360fc21e8e4be1ce6771add53c97b0809b30",
+      "bytes": 42823
+    },
+    {
+      "path": "lib/features/canada/tools/ca_gds_tds_ratio.dart",
+      "sha": "6eb67a1ffc5a082eac449174c51eeec45cd142f7",
+      "bytes": 43403
+    },
+    {
+      "path": "lib/features/canada/tools/ca_land_transfer_tax.dart",
+      "sha": "f91d11fbca108cff0ed1f9f4881ea95e5c3461d8",
+      "bytes": 39489
+    },
+    {
+      "path": "lib/features/canada/tools/ca_mortgage_calc.dart",
+      "sha": "714c31d4c040281804d37da1b586416e41f43c51",
+      "bytes": 67730
+    },
+    {
+      "path": "lib/features/canada/tools/ca_prepayment.dart",
+      "sha": "fcf226f22f620f1dc29ef2a80c706e5ac0f7234f",
+      "bytes": 53363
+    },
+    {
+      "path": "lib/features/canada/tools/ca_renewal_planner.dart",
+      "sha": "3d9d22ece34a7461e6ef675fba559ef6b141cfc6",
+      "bytes": 42811
+    },
+    {
+      "path": "lib/features/canada/tools/ca_stress_test.dart",
+      "sha": "7587dcaf5dc1e166eba16a978052e84ce85fef63",
+      "bytes": 39553
+    },
+    {
+      "path": "lib/core/utils/cmhc_calculator.dart",
+      "sha": "9c6362ebfe63d69fd2a52d0fbb5374d85c485147",
+      "bytes": 3077
+    }
+  ]
+}
