@@ -13,7 +13,7 @@ class Page(HTMLParser):
   if t=='a':self.links.append(a.get('href',''))
   if t=='script' and 'src' in a:self.scripts.append(a['src'])
   if t=='h1':self.h1+=1
-paths=list(ROOT.glob('*.html'))+list((ROOT/'blog').glob('*.html'))+list((ROOT/'authors').glob('*.html'))
+paths=list(ROOT.glob('*.html'))+list((ROOT/'blog').glob('*.html'))+list((ROOT/'authors').glob('*.html'))+list((ROOT/'tools').rglob('*.html'))
 pages={p:Page() for p in paths}
 for p,h in pages.items():h.feed(p.read_text())
 issues=[]

@@ -407,4 +407,50 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
+<!-- US TOOLS START -->
+  <url><loc>https://mortgageproglobal.com/tools/usa/mortgage</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/piti</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/amortization</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/prepayment</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/extra-payments</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/term-comparison</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/dti</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/affordability</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/down-payment</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/auto-loan</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/refinance</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/fha</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/va</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/usda</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/jumbo</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/arm</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/construction</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/piggyback</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/down-payment-assistance</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/pmi</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/property-tax</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/closing-costs</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/hoa</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/homeowner-insurance</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/ho1</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/ho3</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/ho5</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/ho6</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/hurricane</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/wildfire</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/flood</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/credit-score</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/debt-payoff</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/heloc</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/home-equity</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/student-dti</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/rent-vs-buy</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/moving</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/tax-deduction</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/rental-yield</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/cash-on-cash</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/fix-flip</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://mortgageproglobal.com/tools/usa/exchange-1031</loc><lastmod>2026-10-25</lastmod></url>
+<!-- US TOOLS END -->
 </urlset>
