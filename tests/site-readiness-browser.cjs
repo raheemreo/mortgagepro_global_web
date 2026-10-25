@@ -23,6 +23,7 @@ const docs=['about','authors/abdul-raheem','privacy-policy','cookie-policy','edi
    assert.equal(await p.locator('h1').count(),1,slug+' H1');
    if(calculators[slug]){
     const[id,field,cache]=calculators[slug];const form=p.locator('#'+id+'-calc-form');
+    if(id==='canada'){for(const [k,v]of Object.entries({price:700000,down:10,rate:3.99,income:150000,tax:3000,heat:120}))await form.locator('#can-'+k).fill(String(v));}
     if(id==='us'){assert.equal(await p.evaluate(()=>window._usResultBlob||null),null);await form.locator('#us-price').fill('450000');await form.locator('#us-rate').fill('7.32');}
     await p.evaluate(()=>executeCalculation());assert.ok(await p.evaluate(k=>!!window[k],cache),slug+' initial result');
     const first=form.locator('input[type=number]').first(),initial=await first.inputValue();

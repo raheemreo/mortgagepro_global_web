@@ -1,0 +1,165 @@
+{
+  "mortgage": {
+    "price": 700000,
+    "down": 70000,
+    "years": 25,
+    "eligible": "no",
+    "finance": "yes",
+    "premiumTax": 0,
+    "rate": 3.99,
+    "comp": "semiannual",
+    "frequency": "12"
+  },
+  "cmhc": {
+    "price": 700000,
+    "down": 70000,
+    "years": 25,
+    "eligible": "no",
+    "finance": "yes",
+    "premiumTax": 0
+  },
+  "gds-tds": {
+    "income": 12500,
+    "mortgage": 2800,
+    "tax": 3000,
+    "heat": 120,
+    "condo": 0,
+    "ground": 0,
+    "debts": 0
+  },
+  "stress-test": {
+    "price": 700000,
+    "down": 70000,
+    "years": 25,
+    "eligible": "no",
+    "finance": "yes",
+    "premiumTax": 0,
+    "rate": 3.99,
+    "comp": "semiannual",
+    "income": 150000,
+    "tax": 3000,
+    "heat": 120,
+    "condo": 0,
+    "ground": 0,
+    "debts": 0
+  },
+  "affordability": {
+    "income": 150000,
+    "down": 70000,
+    "rate": 3.99,
+    "years": 25,
+    "comp": "semiannual",
+    "eligible": "no",
+    "tax": 3000,
+    "heat": 120,
+    "condo": 0,
+    "ground": 0,
+    "debts": 0,
+    "gds": 39,
+    "tds": 44
+  },
+  "amortization": {
+    "loan": 520000,
+    "rate": 3.99,
+    "years": 25,
+    "comp": "semiannual",
+    "frequency": "12",
+    "extra": 0,
+    "lump": 0,
+    "lumpPeriod": 1,
+    "annualLump": 0,
+    "accelerated": "no"
+  },
+  "prepayment": {
+    "loan": 520000,
+    "rate": 3.99,
+    "years": 25,
+    "comp": "semiannual",
+    "frequency": "12",
+    "extra": 0,
+    "lump": 0,
+    "lumpPeriod": 1,
+    "annualLump": 0,
+    "accelerated": "no"
+  },
+  "payment-frequency": {
+    "loan": 520000,
+    "rate": 3.99,
+    "years": 25,
+    "comp": "semiannual"
+  },
+  "renewal": {
+    "loan": 520000,
+    "oldRate": 3.99,
+    "rate": 3.49,
+    "years": 25,
+    "newYears": 25,
+    "comp": "semiannual",
+    "horizon": 60,
+    "fees": 0,
+    "penalty": 0,
+    "repayCashback": 0,
+    "cashback": 0
+  },
+  "refinance": {
+    "loan": 520000,
+    "oldRate": 3.99,
+    "rate": 3.49,
+    "years": 25,
+    "newYears": 25,
+    "comp": "semiannual",
+    "horizon": 60,
+    "fees": 0,
+    "penalty": 0,
+    "repayCashback": 0,
+    "cashback": 0
+  },
+  "credit-quote": {
+    "loan": 520000,
+    "oldRate": 3.99,
+    "rate": 3.49,
+    "years": 25,
+    "newYears": 25,
+    "comp": "semiannual",
+    "horizon": 60,
+    "fees": 0,
+    "penalty": 0,
+    "repayCashback": 0,
+    "cashback": 0
+  },
+  "rate-comparison": {
+    "loan": 520000,
+    "oldRate": 3.99,
+    "rate": 3.49,
+    "years": 25,
+    "newYears": 25,
+    "comp": "semiannual",
+    "horizon": 60,
+    "fees": 0,
+    "penalty": 0,
+    "repayCashback": 0,
+    "cashback": 0
+  },
+  "compounding": {
+    "loan": 520000,
+    "rate": 3.99,
+    "years": 25
+  },
+  "first-home-buyer": {
+    "price": 700000,
+    "fhsa": 0,
+    "hbp": 0,
+    "savings": 70000,
+    "cobuyer": 0,
+    "closing": 12000
+  },
+  "land-transfer-tax": {
+    "value": 700000,
+    "region": "ON",
+    "localRate": 0,
+    "confirmedTax": 0,
+    "surcharge": 0,
+    "rebate": 0,
+    "registration": 0
+  }
+}

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the 35 non-US articles. Run alongside build_us_articles.py; stdlib only."""
 from pathlib import Path
-import re, html, json
+import re, html, json, hashlib
 import build_us_articles as shared
 ROOT=Path(__file__).resolve().parents[1]
 DATE='2026-10-25'; DISPLAY='October 25, 2026'; BASE='https://mortgageproglobal.com'
@@ -57,13 +57,18 @@ def fields(slug):
 
 def widget(slug):
  c=CONFIG[slug];kind=c['model'];out=[f'<section class="us-calc" data-global-calculator="{kind}" data-currency="{c["currency"]}" data-compounding="{c["comp"]}" aria-labelledby="global-calc-title">', '<h2 id="global-calc-title">Try the assumptions</h2>',f'<p>Amounts are in {c["currency"]}. Change the inputs to recalculate locally. No loan, tax or scheme approval is established by the result.</p>','<div class="us-fields">']
+ if c['country']=='Canada':out[-1]='<form data-canada-form novalidate><div class="us-fields">';out[2]='<p>Amounts are CAD. Enter your current figures, then press Calculate estimate. The tool does not establish approval.</p>'
  for f in fields(slug):
   name,label=f[:2];out.append(f'<label for="global-{name}">{html.escape(label)}')
   if len(f)==3:out.append(f'<select id="global-{name}" name="{name}">'+''.join(f'<option value="{v}">{html.escape(t)}</option>' for v,t in f[2])+'</select>')
   else:
-   _,_,value,low,high,step=f;out.append(f'<input id="global-{name}" name="{name}" type="number" required value="{value}" min="{low}" max="{high}" step="{step}">')
+   _,_,value,low,high,step=f
+   if c['country']=='Canada' and name not in {'years'} and value!=0:value=''
+   out.append(f'<input id="global-{name}" name="{name}" type="number" required value="{value}" min="{low}" max="{high}" step="{step}">')
   out.append('</label>')
  out+=['</div>','<div data-results role="status" aria-live="polite" aria-atomic="true"><p>Enable JavaScript for the interactive estimate. The worked explanations and sources remain available below.</p></div>']
+ if c['country']=='Canada':
+  out.insert(-1,'<div class="us-actions"><button type="submit" hidden>Calculate estimate</button><button type="reset">Reset example</button></div></form>');out[-1]=out[-1].replace('<div data-results','<div hidden tabindex="-1" data-results')
  if kind=='amort':out.append('<details><summary>Show monthly model schedule</summary><div data-schedule class="us-table-scroll" tabindex="0" role="region" aria-label="Scrollable monthly schedule"></div></details>')
  out+=['<noscript><p>The interactive estimate requires JavaScript. Read the worked examples and sources below.</p></noscript>','</section>']
  return '\n'.join(out)
@@ -99,6 +104,12 @@ def build():
   ad=re.search(r'<script[^>]*src="https://pagead2\.googlesyndication\.com/[^>]*></script>',page);consent=re.search(r'<script>\s*window\.dataLayer[\s\S]*?</script>',page)
   if ad and consent and ad.start()<consent.start():
    tag=ad[0];page=page[:ad.start()]+page[ad.end():];consent=re.search(r'<script>\s*window\.dataLayer[\s\S]*?</script>',page);page=page[:consent.end()]+'\n'+tag+page[consent.end():]
+  if c['country']=='Canada':
+   page=re.sub(r'<link[^>]*href="/css/canada-calculators\.css[^"]*"[^>]*>\s*','',page)
+   css_hash=hashlib.sha256((ROOT/'css/canada-calculators.css').read_bytes()).hexdigest()[:12]
+   page=page.replace('</head>',f'<link rel="stylesheet" href="/css/canada-calculators.css?v={css_hash}">\n</head>')
+   for asset in ['js/global-blog-calculators.js','css/us-blog.css']:
+    version=hashlib.sha256((ROOT/asset).read_bytes()).hexdigest()[:12];page=re.sub(r'((?:src|href)="/'+re.escape(asset)+r')(?:\?[^"]*)?"',lambda m:m[1]+'?v='+version+'"',page)
   page=re.sub(r'(?m)^[\t ]+$','',page);p.write_text(page)
   def card_replace(m):
    card=m[0];card=re.sub(r'aria-label="[^"]*"',lambda _:'aria-label="Read: '+html.escape(title,quote=True)+'"',card,count=1)

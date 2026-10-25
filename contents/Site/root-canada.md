@@ -18,7 +18,7 @@ Selecting the eligibility field does not prove it. At 20% down this model assume
 
 The standard uninsured federally regulated assessment uses the higher of contract rate plus two percentage points and 5.25%. [OSFI](https://www.osfi-bsif.gc.ca/en/supervision/financial-institutions/banks/minimum-qualifying-rate-uninsured-mortgages) describes its scope and the qualifying straight-switch exception.
 
-The displayed GDS illustration adds assumed CAD 250 monthly tax and CAD 150 heat. It omits other debts, condo fees and a full income assessment, so it is not a pass/fail decision. For an explicit entered-cost comparison, use the [GDS/TDS guide](/blog/canada-gds-tds-calculator).
+The GDS/TDS illustration uses your entered property tax, heating, half condominium fees, full ground rent and other debt payments. It does not assess lender eligibility or give a pass/fail decision. For an explicit entered-cost comparison, use the [GDS/TDS guide](/blog/canada-gds-tds-calculator).
 
 ## Before accepting a renewal
 
