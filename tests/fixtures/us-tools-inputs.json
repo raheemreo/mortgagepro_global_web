@@ -1,0 +1,403 @@
+{
+  "mortgage": {
+    "price": 420000,
+    "down": 20,
+    "rate": 6.82,
+    "years": 30
+  },
+  "piti": {
+    "price": 420000,
+    "down": 20,
+    "rate": 6.82,
+    "years": 30,
+    "tax": 1.07,
+    "insurance": 1800,
+    "pmi": 0.85,
+    "hoa": 0,
+    "income": 8500
+  },
+  "amortization": {
+    "price": 420000,
+    "downCash": 84000,
+    "rate": 6.82,
+    "years": 30,
+    "extra": 0
+  },
+  "prepayment": {
+    "price": 420000,
+    "downCash": 84000,
+    "rate": 6.82,
+    "years": 30,
+    "extra": 0
+  },
+  "extra-payments": {
+    "price": 420000,
+    "downCash": 84000,
+    "rate": 6.82,
+    "years": 30,
+    "extra": 0
+  },
+  "term-comparison": {
+    "price": 420000,
+    "down": 20,
+    "rate": 6.82
+  },
+  "dti": {
+    "income": 8500,
+    "coIncome": 0,
+    "otherIncome": 0,
+    "incomeFactor": 75,
+    "pi": 2195,
+    "taxMonthly": 375,
+    "insMonthly": 150,
+    "pmiMonthly": 0,
+    "hoa": 0,
+    "debts": 500
+  },
+  "affordability": {
+    "income": 102000,
+    "debts": 500,
+    "taxIns": 525,
+    "rate": 6.82,
+    "years": 30,
+    "down": 20,
+    "pmi": 0.85,
+    "front": 28,
+    "back": 36
+  },
+  "down-payment": {
+    "price": 420000,
+    "down": 20,
+    "rate": 6.82,
+    "saved": 20000,
+    "saving": 1500,
+    "pmi3": 0.85,
+    "pmi5": 0.65,
+    "pmi10": 0.5
+  },
+  "auto-loan": {
+    "price": 35000,
+    "downCash": 5000,
+    "trade": 0,
+    "rebate": 0,
+    "rate": 6.5,
+    "months": 60,
+    "tax": 6,
+    "fees": 500,
+    "registration": 200,
+    "finance": "yes"
+  },
+  "refinance": {
+    "balance": 300000,
+    "oldRate": 7.5,
+    "oldYears": 25,
+    "rate": 6.82,
+    "years": 30,
+    "costs": 6000,
+    "finance": "yes"
+  },
+  "fha": {
+    "price": 420000,
+    "down": 3.5,
+    "rate": 6.82,
+    "years": 30,
+    "annualTax": 4494,
+    "insurance": 1800,
+    "finance": "yes"
+  },
+  "va": {
+    "price": 420000,
+    "down": 0,
+    "rate": 6.82,
+    "years": 30,
+    "annualTax": 4494,
+    "insurance": 1800,
+    "use": "first",
+    "finance": "yes"
+  },
+  "usda": {
+    "price": 420000,
+    "rate": 6.82,
+    "annualTax": 4494,
+    "insurance": 1800,
+    "upfront": 1,
+    "annualFee": 0.35,
+    "finance": "yes"
+  },
+  "jumbo": {
+    "price": 420000,
+    "down": 20,
+    "rate": 6.82,
+    "years": 30,
+    "annualTax": 4494,
+    "insurance": 1800,
+    "pmi": 0.8,
+    "income": 250000,
+    "limit": 832750
+  },
+  "arm": {
+    "price": 420000,
+    "down": 20,
+    "rate": 6.05,
+    "fixedYears": 5,
+    "adjusted": 7.5,
+    "initialCap": 2,
+    "lifeCap": 5
+  },
+  "construction": {
+    "land": 100000,
+    "build": 300000,
+    "contingency": 10,
+    "down": 20,
+    "rate": 8.5,
+    "permRate": 6.82,
+    "buildMonths": 12
+  },
+  "piggyback": {
+    "price": 420000,
+    "down": 10,
+    "rate": 6.82,
+    "secondRate": 9,
+    "score": 720,
+    "pmi": 0.78
+  },
+  "down-payment-assistance": {
+    "price": 420000,
+    "down": 3,
+    "closing": 10000,
+    "assistance": 10000,
+    "type": "grant",
+    "rate": 0,
+    "years": 10
+  },
+  "pmi": {
+    "price": 420000,
+    "down": 20,
+    "score": 720,
+    "rate": 6.82,
+    "years": 30,
+    "pmi": 0.78
+  },
+  "property-tax": {
+    "value": 420000,
+    "exemption": 0,
+    "tax": 1.07,
+    "growth": 3
+  },
+  "closing-costs": {
+    "price": 420000,
+    "down": 20,
+    "rate": 6.82,
+    "origination": 0.3,
+    "points": 0,
+    "transfer": 0,
+    "tax": 1.07,
+    "days": 15,
+    "escrowMonths": 2,
+    "insurance": 1500,
+    "credit": 0,
+    "appraisal": 600,
+    "creditReport": 30,
+    "ownerTitle": 1260,
+    "lenderTitle": 605,
+    "settlement": 1000,
+    "recording": 200
+  },
+  "hoa": {
+    "price": 420000,
+    "down": 20,
+    "rate": 6.82,
+    "hoa": 0,
+    "income": 8500,
+    "debts": 500,
+    "tax": 1.07,
+    "insurance": 1800,
+    "back": 43
+  },
+  "homeowner-insurance": {
+    "annualPremium": 1710,
+    "value": 300000,
+    "contents": 50000,
+    "deductible": 1000
+  },
+  "ho1": {
+    "annualPremium": 1240,
+    "value": 300000,
+    "contents": 50000,
+    "deductible": 1000
+  },
+  "ho3": {
+    "annualPremium": 1710,
+    "value": 300000,
+    "contents": 50000,
+    "deductible": 1000
+  },
+  "ho5": {
+    "annualPremium": 2050,
+    "value": 300000,
+    "contents": 50000,
+    "deductible": 1000
+  },
+  "ho6": {
+    "annualPremium": 600,
+    "value": 300000,
+    "contents": 50000,
+    "deductible": 1000
+  },
+  "hurricane": {
+    "annualPremium": 2400,
+    "value": 300000,
+    "contents": 50000,
+    "deductible": 2
+  },
+  "wildfire": {
+    "annualPremium": 1170,
+    "value": 300000,
+    "contents": 50000,
+    "deductible": 1000
+  },
+  "flood": {
+    "annualPremium": 1160,
+    "value": 300000,
+    "contents": 50000,
+    "deductible": 1000
+  },
+  "credit-score": {
+    "loan": 336000,
+    "score": 720,
+    "shift": 0,
+    "rate": 6.72,
+    "comparisonRate": 6.48,
+    "years": 30
+  },
+  "debt-payoff": {
+    "balance1": 5000,
+    "rate1": 22,
+    "minimum1": 150,
+    "balance2": 12000,
+    "rate2": 8,
+    "minimum2": 250,
+    "balance3": 3000,
+    "rate3": 15,
+    "minimum3": 100,
+    "extra": 200,
+    "strategy": "avalanche"
+  },
+  "heloc": {
+    "value": 500000,
+    "balance": 250000,
+    "loan": 50000,
+    "cltv": 85,
+    "rate": 9,
+    "years": 20,
+    "drawYears": 10
+  },
+  "home-equity": {
+    "value": 500000,
+    "balance": 250000,
+    "loan": 50000,
+    "cltv": 85,
+    "rate": 9,
+    "years": 20
+  },
+  "student-dti": {
+    "income": 8500,
+    "price": 420000,
+    "down": 20,
+    "rate": 6.82,
+    "tax": 1.07,
+    "insurance": 1800,
+    "debts": 500,
+    "student": 350,
+    "back": 43
+  },
+  "rent-vs-buy": {
+    "price": 420000,
+    "down": 20,
+    "rate": 6.82,
+    "years": 30,
+    "tax": 1.07,
+    "insurance": 1800,
+    "hoa": 0,
+    "maintenance": 2100,
+    "rent": 2200,
+    "rentersInsurance": 20,
+    "rentGrowth": 3,
+    "appreciation": 3,
+    "investment": 5,
+    "buyCosts": 3,
+    "sellCosts": 6,
+    "hold": 10
+  },
+  "moving": {
+    "base": 1250,
+    "fuel": 80,
+    "insurance": 38,
+    "materials": 180,
+    "packing": 0,
+    "storage": 0,
+    "travel": 80,
+    "tips": 100,
+    "bufferPct": 10
+  },
+  "tax-deduction": {
+    "income": 150000,
+    "balance": 400000,
+    "interest": 24000,
+    "debtLimit": 750000,
+    "propertyTax": 6000,
+    "stateTax": 6000,
+    "saltLimit": "",
+    "charity": 2000,
+    "medical": 0,
+    "other": 0,
+    "standard": "",
+    "marginal": 22
+  },
+  "rental-yield": {
+    "price": 420000,
+    "down": 25,
+    "rate": 6.82,
+    "rent": 3000,
+    "annualTax": 4494,
+    "insurance": 1800,
+    "vacancy": 5,
+    "management": 8,
+    "maintenance": 2000,
+    "other": 0
+  },
+  "cash-on-cash": {
+    "cash": 100000,
+    "gross": 36000,
+    "vacancy": 5,
+    "expenses": 12000,
+    "debtService": 18000,
+    "price": 420000,
+    "appreciation": 3,
+    "hold": 5
+  },
+  "fix-flip": {
+    "purchase": 250000,
+    "arv": 400000,
+    "rehab": 50000,
+    "months": 6,
+    "ltv": 80,
+    "rate": 12,
+    "buyCosts": 2,
+    "sellCosts": 6,
+    "holding": 1000,
+    "other": 5000
+  },
+  "exchange-1031": {
+    "sale": 850000,
+    "sellingCosts": 0,
+    "basis": 400000,
+    "depreciation": 80000,
+    "replacement": 950000,
+    "debtBoot": 0,
+    "capitalRate": 20,
+    "niit": 3.8,
+    "recaptureRate": 25,
+    "stateRate": 0
+  }
+}

@@ -1646,7 +1646,7 @@
   <meta name="theme-color" content="#0B1D3A">
 <script src="/js/root-calculator-state.js?v=f80377ee5785" defer></script>
 <link rel="stylesheet" href="/css/root-calculators.css?v=5469b7825823">
-<link rel="stylesheet" href="/css/us-tools-directory.css?v=68e912337dcd">
+<link rel="stylesheet" href="/css/us-tools-directory.css?v=c06ed4555262">
 </head>
 
 <body>
@@ -1696,7 +1696,7 @@
         <div class="hero-calc-fields">
           <div class="h-box" id="p-box">
             <label for="us-price">Home Price ($)</label>
-            <input type="number" id="us-price" value="450000" min="10000" max="25000000" step="5000" required>
+            <input type="number" id="us-price" value="" min="10000" max="25000000" step="5000" required>
           </div>
           <div class="h-box" id="d-box">
             <label for="us-down">Down Payment (%)</label>
@@ -1712,24 +1712,25 @@
             </select>
           </div>
           <div class="h-box" id="r-box">
-            <label for="us-rate">Interest Rate (%)</label>
-            <input type="number" id="us-rate" value="6.66" min="0" max="25" step="0.01" required>
+            <label for="us-rate">Your quoted interest rate (%)</label>
+            <input type="number" id="us-rate" value="" min="0" max="25" step="0.01" required>
           </div>
         </div>
 
+        <p style="font-size:12px;color:#fff">Enter your current price and lender quote. Advanced costs start at zero (excluded); enter actual tax, insurance and PMI to include them.</p>
         <!-- Collapsible Advanced Escrow Options -->
         <div class="advanced-panel" id="escrow-panel">
           <div class="h-box">
             <label for="us-tax">Property Tax (% / year)</label>
-            <input type="number" id="us-tax" value="1.1" min="0" max="10" step="0.05">
+            <input type="number" id="us-tax" value="0" min="0" max="10" step="0.05">
           </div>
           <div class="h-box">
             <label for="us-insurance">Home Insurance ($ / year)</label>
-            <input type="number" id="us-insurance" value="1200" min="0" max="10000" step="50">
+            <input type="number" id="us-insurance" value="0" min="0" max="10000" step="50">
           </div>
           <div class="h-box">
             <label for="us-pmi">PMI Rate (% / year)</label>
-            <input type="number" id="us-pmi" value="0.85" min="0" max="5" step="0.05">
+            <input type="number" id="us-pmi" value="0" min="0" max="5" step="0.05">
           </div>
         </div>
 
@@ -1745,30 +1746,30 @@
     </div>
 
     <!-- DYNAMIC RESULTS DRAW PANEL -->
-    <section id="us-results" class="results-section visible" aria-label="Mortgage calculation results" aria-live="polite">
+    <section id="us-results" tabindex="-1" class="results-section" aria-label="Mortgage calculation results" aria-live="polite">
       <div class="results-grid">
         <div class="mrc highlight-result">
           <span class="mrc-icon">💳</span>
           <div class="mrc-lbl">Monthly Payment (PITI)</div>
-          <div class="mrc-val" id="us-monthly-piti" style="font-size: 24px; font-weight: 800;">$2,826</div>
+          <div class="mrc-val" id="us-monthly-piti" style="font-size: 24px; font-weight: 800;">—</div>
           <div class="mrc-sub" id="piti-breakdown-sub">Principal + Interest + Escrows</div>
         </div>
         <div class="mrc">
           <span class="mrc-icon">🏡</span>
           <div class="mrc-lbl">Principal &amp; Interest</div>
-          <div class="mrc-val" id="us-monthly-pi" style="font-size: 18px; font-weight: 800;">$2,313</div>
+          <div class="mrc-val" id="us-monthly-pi" style="font-size: 18px; font-weight: 800;">—</div>
           <div class="mrc-sub">Base mortgage repayment</div>
         </div>
         <div class="mrc">
           <span class="mrc-icon">🛡️</span>
           <div class="mrc-lbl">Monthly PMI</div>
-          <div class="mrc-val" id="us-monthly-pmi" style="font-size: 18px; font-weight: 800;">$0</div>
+          <div class="mrc-val" id="us-monthly-pmi" style="font-size: 18px; font-weight: 800;">—</div>
           <div class="mrc-sub" id="pmi-ratio-lbl">80.0% LTV (No PMI required)</div>
         </div>
         <div class="mrc">
           <span class="mrc-icon">📋</span>
           <div class="mrc-lbl">Monthly Taxes &amp; Ins.</div>
-          <div class="mrc-val" id="us-monthly-escrow" style="font-size: 18px; font-weight: 800;">$513</div>
+          <div class="mrc-val" id="us-monthly-escrow" style="font-size: 18px; font-weight: 800;">—</div>
           <div class="mrc-sub">Property Tax ($413) + Insurance ($100)</div>
         </div>
       </div>
@@ -1919,7 +1920,7 @@
 
     <!-- Core Mortgage Tools -->
     <div id="tools" class="section-header"><h2>Core Mortgage Tools</h2></div>
-<p>Choose a calculator for its own inputs, estimates and calculation details. Example assumptions are editable; tools do not use live rate feeds.</p>
+<p>Choose a calculator for its own inputs, estimates and calculation details. Enter current personal figures and quotes, then press Calculate estimate. Results appear only after submission.</p>
 <div class="g2 us-tools-directory"><a href="/tools/usa/mortgage" class="tc"><div class="ti" aria-hidden="true">🧮</div><div class="tn">Mortgage Calculator</div><div class="td">Estimate principal and interest for a fixed-rate US home loan.</div><div class="ta" aria-hidden="true">›</div></a>
 <a href="/tools/usa/piti" class="tc"><div class="ti" aria-hidden="true">🧮</div><div class="tn">PITI Calculator</div><div class="td">See principal, interest, tax and insurance, with PMI and HOA shown separately.</div><div class="ta" aria-hidden="true">›</div></a>
 <a href="/tools/usa/amortization" class="tc"><div class="ti" aria-hidden="true">🧮</div><div class="tn">Amortization Calculator</div><div class="td">Inspect every monthly payment and the annual principal, interest and balance totals.</div><div class="ta" aria-hidden="true">›</div></a>
@@ -1945,25 +1946,25 @@
 <a href="/tools/usa/property-tax" class="tc"><div class="ti" aria-hidden="true">🛡️</div><div class="tn">Property Tax Calculator</div><div class="td">Estimate a tax budget using assessed value, an exemption and the applicable local rate.</div><div class="ta" aria-hidden="true">›</div></a>
 <a href="/tools/usa/closing-costs" class="tc"><div class="ti" aria-hidden="true">🛡️</div><div class="tn">Closing Costs Calculator</div><div class="td">Build an itemized purchase closing-cost budget and calculate cash to close.</div><div class="ta" aria-hidden="true">›</div></a>
 <a href="/tools/usa/hoa" class="tc"><div class="ti" aria-hidden="true">🛡️</div><div class="tn">HOA Fee Impact Calculator</div><div class="td">See how monthly dues change a housing budget, DTI and modeled purchasing power.</div><div class="ta" aria-hidden="true">›</div></a>
-<a href="/tools/usa/homeowner-insurance" class="tc"><div class="ti" aria-hidden="true">🛡️</div><div class="tn">Homeowner Insurance Estimate</div><div class="td">Explore how replacement coverage, age, risk and deductible assumptions affect an illustrative premium.</div><div class="ta" aria-hidden="true">›</div></a>
-<a href="/tools/usa/ho1" class="tc"><div class="ti" aria-hidden="true">🛡️</div><div class="tn">HO-1 Insurance Estimate</div><div class="td">Explore how replacement coverage, age, risk and deductible assumptions affect an illustrative premium.</div><div class="ta" aria-hidden="true">›</div></a>
-<a href="/tools/usa/ho3" class="tc"><div class="ti" aria-hidden="true">🛡️</div><div class="tn">HO-3 Insurance Estimate</div><div class="td">Explore how replacement coverage, age, risk and deductible assumptions affect an illustrative premium.</div><div class="ta" aria-hidden="true">›</div></a>
-<a href="/tools/usa/ho5" class="tc"><div class="ti" aria-hidden="true">🛡️</div><div class="tn">HO-5 Insurance Estimate</div><div class="td">Explore how replacement coverage, age, risk and deductible assumptions affect an illustrative premium.</div><div class="ta" aria-hidden="true">›</div></a>
-<a href="/tools/usa/ho6" class="tc"><div class="ti" aria-hidden="true">🛡️</div><div class="tn">HO-6 Condo Insurance Estimate</div><div class="td">Model a condo-unit premium from interior and personal-property coverage.</div><div class="ta" aria-hidden="true">›</div></a>
-<a href="/tools/usa/hurricane" class="tc"><div class="ti" aria-hidden="true">🛡️</div><div class="tn">Hurricane / Wind Premium Scenario</div><div class="td">Explore a wind-premium scenario and the dollar cost of a percentage deductible.</div><div class="ta" aria-hidden="true">›</div></a>
-<a href="/tools/usa/wildfire" class="tc"><div class="ti" aria-hidden="true">🛡️</div><div class="tn">Wildfire Premium Scenario</div><div class="td">Explore a wildfire-cost scenario with age, deductible and mitigation assumptions.</div><div class="ta" aria-hidden="true">›</div></a>
-<a href="/tools/usa/flood" class="tc"><div class="ti" aria-hidden="true">🛡️</div><div class="tn">Flood Insurance Scenario</div><div class="td">Compare coverage amounts in a simplified flood zone and elevation scenario.</div><div class="ta" aria-hidden="true">›</div></a></div>
+<a href="/tools/usa/homeowner-insurance" class="tc"><div class="ti" aria-hidden="true">🛡️</div><div class="tn">Homeowner Insurance Budget</div><div class="td">Convert your current insurance quote into a monthly budget and show the policy deductible.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/usa/ho1" class="tc"><div class="ti" aria-hidden="true">🛡️</div><div class="tn">HO-1 Insurance Budget</div><div class="td">Convert your current insurance quote into a monthly budget and show the policy deductible.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/usa/ho3" class="tc"><div class="ti" aria-hidden="true">🛡️</div><div class="tn">HO-3 Insurance Budget</div><div class="td">Convert your current insurance quote into a monthly budget and show the policy deductible.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/usa/ho5" class="tc"><div class="ti" aria-hidden="true">🛡️</div><div class="tn">HO-5 Insurance Budget</div><div class="td">Convert your current insurance quote into a monthly budget and show the policy deductible.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/usa/ho6" class="tc"><div class="ti" aria-hidden="true">🛡️</div><div class="tn">HO-6 Condo Insurance Budget</div><div class="td">Convert your current insurance quote into a monthly budget and show the policy deductible.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/usa/hurricane" class="tc"><div class="ti" aria-hidden="true">🛡️</div><div class="tn">Hurricane / Wind Insurance Budget</div><div class="td">Convert your current insurance quote into a monthly budget and show the policy deductible.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/usa/wildfire" class="tc"><div class="ti" aria-hidden="true">🛡️</div><div class="tn">Wildfire Insurance Budget</div><div class="td">Convert your current insurance quote into a monthly budget and show the policy deductible.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/usa/flood" class="tc"><div class="ti" aria-hidden="true">🛡️</div><div class="tn">Flood Insurance Budget</div><div class="td">Convert your current insurance quote into a monthly budget and show the policy deductible.</div><div class="ta" aria-hidden="true">›</div></a></div>
     <div id="states" class="section-header"><h2>State-by-State Tools</h2></div>
-<p>Open a property-tax scenario with an illustrative state reference. Confirm your actual assessed value, exemption and local rate; these are not current tax quotations.</p>
+<p>Choose a location, then enter your actual assessed value, exemption and local tax rate. No statewide average is substituted for your local rate.</p>
 <div class="g3 us-tools-directory"><a href="/tools/usa/property-tax?state=CA" class="tc"><div class="ti" aria-hidden="true">🗺️</div><div class="tn">California</div><div class="td">Assessed value, exemption and editable tax rate</div><div class="ta" aria-hidden="true">›</div></a><a href="/tools/usa/property-tax?state=TX" class="tc"><div class="ti" aria-hidden="true">🗺️</div><div class="tn">Texas</div><div class="td">Assessed value, exemption and editable tax rate</div><div class="ta" aria-hidden="true">›</div></a><a href="/tools/usa/property-tax?state=NY" class="tc"><div class="ti" aria-hidden="true">🗺️</div><div class="tn">New York</div><div class="td">Assessed value, exemption and editable tax rate</div><div class="ta" aria-hidden="true">›</div></a><a href="/tools/usa/property-tax?state=FL" class="tc"><div class="ti" aria-hidden="true">🗺️</div><div class="tn">Florida</div><div class="td">Assessed value, exemption and editable tax rate</div><div class="ta" aria-hidden="true">›</div></a><a href="/tools/usa/property-tax?state=IL" class="tc"><div class="ti" aria-hidden="true">🗺️</div><div class="tn">Illinois</div><div class="td">Assessed value, exemption and editable tax rate</div><div class="ta" aria-hidden="true">›</div></a><a href="/tools/usa/property-tax?state=NJ" class="tc"><div class="ti" aria-hidden="true">🗺️</div><div class="tn">New Jersey</div><div class="td">Assessed value, exemption and editable tax rate</div><div class="ta" aria-hidden="true">›</div></a></div><p><a href="/tools/usa/property-tax">Other states / enter my local property-tax rate</a></p>
     <div id="personal" class="section-header"><h2>Personal Finance</h2></div>
-<div class="g2 us-tools-directory"><a href="/tools/usa/credit-score" class="tc"><div class="ti" aria-hidden="true">📊</div><div class="tn">Credit Score Payment Sensitivity</div><div class="td">Compare payment differences across illustrative score and rate tiers.</div><div class="ta" aria-hidden="true">›</div></a>
+<div class="g2 us-tools-directory"><a href="/tools/usa/credit-score" class="tc"><div class="ti" aria-hidden="true">📊</div><div class="tn">Credit Score Quote Comparison</div><div class="td">Compare two actual lender rate quotes for the same loan and term.</div><div class="ta" aria-hidden="true">›</div></a>
 <a href="/tools/usa/debt-payoff" class="tc"><div class="ti" aria-hidden="true">📊</div><div class="tn">Debt Payoff Planner</div><div class="td">Compare avalanche and snowball repayment for up to three debts.</div><div class="ta" aria-hidden="true">›</div></a>
 <a href="/tools/usa/heloc" class="tc"><div class="ti" aria-hidden="true">📊</div><div class="tn">HELOC Calculator</div><div class="td">Compare interest-only draw payments and amortizing repayment for an assumed fixed HELOC balance.</div><div class="ta" aria-hidden="true">›</div></a>
 <a href="/tools/usa/home-equity" class="tc"><div class="ti" aria-hidden="true">📊</div><div class="tn">Home Equity Loan Calculator</div><div class="td">Estimate an equity-loan payment and compare borrowing with a combined-LTV budget.</div><div class="ta" aria-hidden="true">›</div></a>
 <a href="/tools/usa/student-dti" class="tc"><div class="ti" aria-hidden="true">📊</div><div class="tn">Student Loan DTI Impact</div><div class="td">Measure how an entered student-loan payment changes DTI and a mortgage purchase budget.</div><div class="ta" aria-hidden="true">›</div></a>
 <a href="/tools/usa/rent-vs-buy" class="tc"><div class="ti" aria-hidden="true">📊</div><div class="tn">Rent vs Buy Calculator</div><div class="td">Compare modeled owner equity and renter investments over an entered holding period.</div><div class="ta" aria-hidden="true">›</div></a>
-<a href="/tools/usa/moving" class="tc"><div class="ti" aria-hidden="true">📊</div><div class="tn">Moving Cost Budget</div><div class="td">Build an illustrative moving budget from distance, household size, packing and storage.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/usa/moving" class="tc"><div class="ti" aria-hidden="true">📊</div><div class="tn">Moving Cost Budget</div><div class="td">Add current mover quotes and your actual packing, travel and storage costs.</div><div class="ta" aria-hidden="true">›</div></a>
 <a href="/tools/usa/tax-deduction" class="tc"><div class="ti" aria-hidden="true">📊</div><div class="tn">Mortgage Tax Deduction Planner</div><div class="td">Compare qualified itemized expenses with the standard deduction you enter.</div><div class="ta" aria-hidden="true">›</div></a></div>
     <div id="investment" class="section-header"><h2>Real Estate Investment</h2></div>
 <div class="g2 us-tools-directory"><a href="/tools/usa/rental-yield" class="tc"><div class="ti" aria-hidden="true">🏘️</div><div class="tn">Rental Yield &amp; Cash Flow</div><div class="td">Separate rental operating return from debt service and cash-on-cash return.</div><div class="ta" aria-hidden="true">›</div></a>
@@ -2480,6 +2481,7 @@
     document.getElementById('us-calc-form').addEventListener('submit', function (e) {
       e.preventDefault();
       executeCalculation();
+      if(window._usResultBlob){const output=document.getElementById('us-results');output.focus({preventScroll:true});output.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});}
     });
 
     // Handle Reset button action
@@ -2601,10 +2603,7 @@
     const footerYear = document.getElementById('footer-year');
     if (footerYear) footerYear.textContent = new Date().getFullYear();
 
-    // Run initial calculation & chart render on DOM load
-    window.addEventListener('DOMContentLoaded', function () {
-      executeCalculation();
-    });
+    // Calculate only after an explicit form submission; editing clears exports/results.
 
     // Resize chart dynamically
     let rtimer;

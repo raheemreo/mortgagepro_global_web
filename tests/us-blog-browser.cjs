@@ -6,6 +6,7 @@ const fs=require('node:fs');
 const path=require('node:path');
 const http=require('node:http');
 const {chromium}=require('playwright');
+const fixtures=require('./fixtures/us-blog-inputs.json');
 const slugs=fs.readdirSync(path.join(__dirname,'../blog')).filter(x=>/^usa-.*\.html$/.test(x));
 const base=process.env.QA_BASE_URL || 'http://127.0.0.1:8765';
 (async()=>{
@@ -26,34 +27,32 @@ const base=process.env.QA_BASE_URL || 'http://127.0.0.1:8765';
  let pages=0;
  try {
   for(const width of [1280,390,320]) {
-   const context=await browser.newContext({viewport:{width,height:900},colorScheme:width===320?'dark':'light'});
+   const context=await browser.newContext({viewport:{width,height:900},colorScheme:width===320?'dark':'light',reducedMotion:'reduce'});
    await context.route('**/*',route=>new URL(route.request().url()).origin===new URL(base).origin?route.continue():route.abort());
    for(const slug of slugs) {
     const page=await context.newPage(); const errors=[];page.on('pageerror',e=>errors.push(e.message));
-    await page.goto(`${base}/blog/${slug}`,{waitUntil:'networkidle'});
+    await page.goto(`${base}/blog/${slug}`,{waitUntil:'domcontentloaded'});
     const widget=page.locator('[data-us-calculator]'), results=widget.locator('[data-results]');
-    await results.locator('dl').waitFor();
-    assert.doesNotMatch(await results.innerText(),/NaN|Infinity|Enable JavaScript/);
-    const before=await results.innerText();
-    const first=widget.locator('input').first(), initial=await first.inputValue();
-    await first.fill('');assert.match(await results.innerText(),/valid|must|positive|greater/i);assert.equal(await results.locator('dl').count(),0);
-    await first.fill('-1');assert.equal(await results.locator('dl').count(),0);
-    await first.fill(initial);assert.equal(await results.innerText(),before);
-    const rate=widget.locator('input[name="rate"]');
-    if(await rate.count()) {const old=await rate.inputValue();await rate.fill('0');assert.equal(await results.locator('dl').count(),1);assert.doesNotMatch(await results.innerText(),/NaN|Infinity/);await rate.fill(old);}
+    assert.equal(await results.isVisible(),false);const form=widget.locator('form');const values=fixtures[slug.replace('.html','')];
+    for(const [key,value]of Object.entries(values)){const field=form.locator('[name="'+key+'"]');if(await field.evaluate(n=>n.tagName==='SELECT'))await field.selectOption(String(value));else await field.fill(String(value));}
+    assert.equal(await results.isVisible(),false);const submit=async()=>{await form.locator('[type=submit]').click();await results.locator('dl').waitFor();assert.doesNotMatch(await results.innerText(),/NaN|Infinity/);};await submit();
+    const first=widget.locator('input').first(),initial=await first.inputValue();await first.fill('');assert.equal(await results.isVisible(),false);await form.locator('[type=submit]').click();assert.match(await results.innerText(),/valid|must|positive|greater/i);assert.equal(await results.locator('dl').count(),0);
+    await first.fill('-1');assert.equal(await results.isVisible(),false);await first.fill(initial);await submit();
+    const rate=widget.locator('input[name="rate"]');if(await rate.count()){const old=await rate.inputValue();await rate.fill('0');assert.equal(await results.isVisible(),false);await submit();await rate.fill(old);await submit();}
     const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1);
     assert.equal(overflow,false,`${slug} at ${width}px overflows page`);
     if(slug==='usa-amortization-calculator.html') {
       assert.equal(await widget.locator('[data-schedule] tbody tr').count(),360);
-      await widget.locator('input[name="extra"]').fill('200');assert.equal(await widget.locator('[data-schedule] tbody tr').count(),286);
+      await widget.locator('input[name="extra"]').fill('200');await submit();assert.equal(await widget.locator('[data-schedule] tbody tr').count(),286);
     }
     if(slug==='usa-piti-calculator.html') {
       const total=await results.innerText(); assert.match(total,/3,210\.85/);assert.match(total,/3,350\.07/);
-      await widget.locator('[name="hoa"]').fill('200');assert.match(await results.innerText(),/3,550\.07/);assert.match(await results.innerText(),/3,210\.85/);
+      await widget.locator('[name="hoa"]').fill('200');await submit();assert.match(await results.innerText(),/3,550\.07/);assert.match(await results.innerText(),/3,210\.85/);
     }
     if(slug==='usa-va-loan-calculator.html') {
-      await widget.locator('[name="exempt"]').selectOption('yes');assert.match(await results.innerText(),/Funding fee tier\n0\.00%/);
+      await widget.locator('[name="exempt"]').selectOption('yes');await submit();assert.match(await results.innerText(),/Funding fee tier\n0\.00%/);
     }
+    await form.locator('[type=reset]').click();await page.waitForFunction(()=>document.querySelector('[data-us-calculator] [data-results]').hidden);assert.equal(await results.locator('dl').count(),0);
     assert.deepEqual(errors,[],`${slug} JS errors`);
     if(process.env.QA_SCREENSHOT_DIR && width!==320 && ['usa-affordability-calculator.html','usa-piti-calculator.html','usa-mortgage-calculator.html','usa-fha-loan-calculator.html'].includes(slug)) {
       fs.mkdirSync(process.env.QA_SCREENSHOT_DIR,{recursive:true});

@@ -286,8 +286,8 @@
   <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#0B1D3A">
   <meta name="msapplication-TileColor" content="#0B1D3A">
   <meta name="theme-color" content="#0B1D3A">
-<link rel="stylesheet" href="/css/us-blog.css">
-<script src="/js/us-blog-calculators.js" defer></script>
+<link rel="stylesheet" href="/css/us-blog.css?v=8de0ab0f445c">
+<script src="/js/us-blog-calculators.js?v=194bde48c11d" defer></script>
 </head>
 
 <body>
@@ -375,22 +375,22 @@
 <p>This guide uses a $412,500 home and a $41,250 down payment. The resulting loan is $371,250. You can change those assumptions below; the calculator estimates a fixed-rate, fully amortizing loan rather than an approval or a lender offer.</p>
 <section class="us-calc" data-us-calculator="mortgage" aria-labelledby="us-calculator-title">
 <h2 id="us-calculator-title">Try the fixed-rate payment calculation</h2>
-<p>Change the assumptions to recalculate. These inputs are processed locally by this calculator and are not submitted by it. Estimates are not loan offers or approval decisions.</p>
-<div class="us-fields">
+<p>Enter your current figures, then press Calculate estimate. These inputs are processed locally by this calculator and are not submitted by it. Estimates are not loan offers or approval decisions.</p>
+<form data-us-form novalidate><div class="us-fields">
 <label for="us-price">Purchase price (USD)
-<input id="us-price" name="price" type="number" required value="412500" min="0.01" max="100000000" step="any">
+<input id="us-price" name="price" type="number" required value="" min="0.01" max="100000000" step="any">
 </label>
 <label for="us-down">Cash down payment (USD)
-<input id="us-down" name="down" type="number" required value="41250" min="0" max="100000000" step="any">
+<input id="us-down" name="down" type="number" required value="" min="0" max="100000000" step="any">
 </label>
 <label for="us-rate">Annual note rate (%) — editable assumption
-<input id="us-rate" name="rate" type="number" required value="7.32" min="0" max="30" step="any">
+<input id="us-rate" name="rate" type="number" required value="" min="0" max="30" step="any">
 </label>
 <label for="us-years">Term (whole years)
 <input id="us-years" name="years" type="number" required value="30" min="1" max="40" step="1">
 </label>
-</div>
-<div data-results role="status" aria-live="polite" aria-atomic="true"><p>Enable JavaScript to calculate. The worked example below remains available without it.</p></div>
+</div><div class="us-actions"><button type="submit" hidden>Calculate estimate</button><button type="reset">Reset example</button></div></form>
+<div hidden tabindex="-1" data-results role="status" aria-live="polite" aria-atomic="true"><p>Enable JavaScript to calculate. The worked example below remains available without it.</p></div>
 <noscript><p>The interactive tool needs JavaScript. You can still read the assumptions, tables and sources below.</p></noscript>
 </section>
 <h2>Which interest rate should you enter?</h2>
