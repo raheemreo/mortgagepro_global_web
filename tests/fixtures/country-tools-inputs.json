@@ -139,5 +139,166 @@
       "feeRate": 1.75,
       "management": 0
     }
+  },
+  "australia": {
+    "mortgage": {
+      "price": 700000,
+      "down": 140000,
+      "rate": 6.19,
+      "years": 25,
+      "type": "repayment",
+      "financed": 0,
+      "cashFees": 0
+    },
+    "amortization": {
+      "loan": 520000,
+      "rate": 6.19,
+      "years": 25,
+      "frequency": "12",
+      "extra": 0,
+      "lump": 0,
+      "lumpPeriod": 1,
+      "annualLump": 0,
+      "accelerated": "no"
+    },
+    "overpayment": {
+      "loan": 520000,
+      "rate": 6.19,
+      "years": 25,
+      "frequency": "12",
+      "extra": 0,
+      "lump": 0,
+      "lumpPeriod": 1,
+      "annualLump": 0,
+      "accelerated": "no"
+    },
+    "frequency": {
+      "loan": 520000,
+      "rate": 6.19,
+      "years": 25
+    },
+    "interest-only": {
+      "loan": 520000,
+      "rate": 6.19,
+      "years": 25,
+      "ioYears": 5
+    },
+    "affordability": {
+      "net": 9000,
+      "living": 3500,
+      "debts": 0,
+      "down": 140000,
+      "rate": 6.19,
+      "buffer": 3,
+      "years": 25
+    },
+    "dti": {
+      "loan": 520000,
+      "other": 0,
+      "income": 150000,
+      "rate": 6.19,
+      "buffer": 3,
+      "years": 25
+    },
+    "ltv": {
+      "value": 700000,
+      "loan": 520000,
+      "target": 80
+    },
+    "lmi": {
+      "price": 700000,
+      "down": 140000,
+      "quote": 12000,
+      "finance": "yes",
+      "rate": 6.19,
+      "years": 25
+    },
+    "lmi-rate": {
+      "price": 700000,
+      "down": 140000,
+      "premiumRate": 2,
+      "other": 0,
+      "finance": "yes",
+      "rate": 6.19,
+      "years": 25
+    },
+    "stamp-duty": {
+      "value": 700000,
+      "state": "NSW",
+      "actOwner": "no",
+      "rebate": 0,
+      "surcharge": 0,
+      "fees": 0
+    },
+    "duty-by-state": {
+      "value": 700000,
+      "state": "NSW",
+      "actOwner": "no",
+      "rebate": 0,
+      "surcharge": 0,
+      "fees": 0
+    },
+    "first-home": {
+      "price": 700000,
+      "savings": 70000,
+      "grant": 0,
+      "release": 0,
+      "other": 0,
+      "costs": 20000,
+      "target": 80
+    },
+    "offset": {
+      "loan": 520000,
+      "rate": 6.19,
+      "years": 25,
+      "offset": 40000,
+      "percent": 100,
+      "contribution": 0,
+      "withdrawal": 0,
+      "fees": 0
+    },
+    "refinance": {
+      "loan": 520000,
+      "oldRate": 6.54,
+      "rate": 6.19,
+      "years": 25,
+      "newYears": 25,
+      "horizon": 60,
+      "fees": 0,
+      "penalty": 0,
+      "repayCashback": 0,
+      "cashback": 0
+    },
+    "rate-comparison": {
+      "loan": 520000,
+      "oldRate": 6.54,
+      "rate": 6.19,
+      "years": 25,
+      "newYears": 25,
+      "horizon": 60,
+      "fees": 0,
+      "penalty": 0,
+      "repayCashback": 0,
+      "cashback": 0
+    },
+    "construction": {
+      "loan": 520000,
+      "initial": 100000,
+      "rate": 6.19,
+      "buildMonths": 12,
+      "draw1": 80000,
+      "month1": 1,
+      "draw2": 80000,
+      "month2": 2,
+      "draw3": 80000,
+      "month3": 3,
+      "draw4": 80000,
+      "month4": 4,
+      "draw5": 80000,
+      "month5": 5,
+      "repayRate": 6.19,
+      "years": 25,
+      "fees": 0
+    }
   }
 }

@@ -25,6 +25,7 @@ const docs=['about','authors/abdul-raheem','privacy-policy','cookie-policy','edi
     const[id,field,cache]=calculators[slug];const form=p.locator('#'+id+'-calc-form');
     if(id==='canada'){for(const [k,v]of Object.entries({price:700000,down:10,rate:3.99,income:150000,tax:3000,heat:120}))await form.locator('#can-'+k).fill(String(v));}
     if(id==='uk'){for(const[k,v]of Object.entries({price:380000,down:15,rate:4.75}))await form.locator('#uk-'+k).fill(String(v));}
+    if(id==='au'){for(const[k,v]of Object.entries({price:700000,down:20,rate:6.19,'lmi-quote':0}))await form.locator('#au-'+k).fill(String(v));}
     if(id==='us'){assert.equal(await p.evaluate(()=>window._usResultBlob||null),null);await form.locator('#us-price').fill('450000');await form.locator('#us-rate').fill('7.32');}
     await p.evaluate(()=>executeCalculation());assert.ok(await p.evaluate(k=>!!window[k],cache),slug+' initial result');
     const first=form.locator('input[type=number]').first(),initial=await first.inputValue();
@@ -46,11 +47,11 @@ const docs=['about','authors/abdul-raheem','privacy-policy','cookie-policy','edi
       await p.locator('#uk-price').fill('500001');await p.evaluate(()=>executeCalculation());assert.ok(Math.abs(await p.evaluate(k=>window[k].stampDuty,cache)-15000.05)<.001);
      }
      if(id==='au'){
-      assert.equal(await p.evaluate(k=>window[k].stampDuty,cache),null);
+      assert.ok(Math.abs(await p.evaluate(k=>window[k].stampDuty,cache)-25687)<.01);
       await p.locator('#au-price').fill('700000');await p.locator('#au-state').selectOption('QLD');await p.evaluate(()=>executeCalculation());assert.equal(await p.evaluate(k=>window[k].stampDuty,cache),24525);
       await p.locator('#au-state').selectOption('VIC');await p.evaluate(()=>executeCalculation());assert.equal(await p.evaluate(k=>window[k].stampDuty,cache),37070);
       await p.locator('#au-ftb').check();await p.evaluate(()=>executeCalculation());assert.equal(await p.evaluate(k=>window[k].stampDuty,cache),null);
-      await p.locator('#au-duty-quote').fill('0');await p.locator('#au-down').fill('10');await p.evaluate(()=>executeCalculation());assert.equal(await p.evaluate(k=>window[k].stampDuty,cache),0);assert.equal(await p.evaluate(k=>window[k].lmiPremium,cache),12600);
+      await p.locator('#au-duty-quote').fill('0');await p.locator('#au-lmi-quote').fill('12600');await p.locator('#au-down').fill('10');await p.evaluate(()=>executeCalculation());assert.equal(await p.evaluate(k=>window[k].stampDuty,cache),0);assert.equal(await p.evaluate(k=>window[k].lmiPremium,cache),12600);
      }
      if(id==='us'){await p.locator('#btn-toggle-adv').click();await p.locator('#us-down').fill('10');await p.locator('#us-pmi').fill('0');await p.evaluate(()=>executeCalculation());assert.equal(await p.evaluate(k=>window[k].monthlyPMI,cache),0);}
      if(id==='eu'){await p.locator('#eu-fee-rate').fill('15');await p.evaluate(()=>executeCalculation());const r=await p.evaluate(k=>window[k],cache);assert.equal(r.notaryFees,r.price*.15);}

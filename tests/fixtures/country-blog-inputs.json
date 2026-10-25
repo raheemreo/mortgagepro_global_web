@@ -43,5 +43,54 @@
     "price": 500000,
     "buyer": "standard",
     "nonresident": "no"
+  },
+  "australia-mortgage-calculator": {
+    "loan": 520000,
+    "rate": 6.19,
+    "years": 25
+  },
+  "australia-affordability-calculator": {
+    "budget": 5000,
+    "debts": 0,
+    "rate": 6.19,
+    "buffer": 3,
+    "years": 25
+  },
+  "australia-amortization-calculator": {
+    "loan": 520000,
+    "rate": 6.19,
+    "years": 25
+  },
+  "australia-dti-ratio-calculator": {
+    "income": 95000,
+    "loan": 520000,
+    "other": 0
+  },
+  "australia-lmi-calculator": {
+    "price": 700000,
+    "down": 70000,
+    "premiumRate": 2
+  },
+  "australia-offset-account-calculator": {
+    "loan": 520000,
+    "offset": 40000,
+    "percent": 100,
+    "rate": 6.19,
+    "fees": 395
+  },
+  "australia-refinance-tool": {
+    "loan": 520000,
+    "oldRate": 6.19,
+    "rate": 5.85,
+    "years": 25,
+    "fees": 1500,
+    "penalty": 0,
+    "cashback": 0,
+    "repayCashback": 0,
+    "horizon": 36
+  },
+  "australia-stamp-duty-calculator": {
+    "price": 700000,
+    "state": "qld"
   }
 }

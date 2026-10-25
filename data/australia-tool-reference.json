@@ -1,0 +1,12 @@
+{
+  "reviewedOn": "2026-10-25",
+  "appCommit": "9f79ea943e27b6d8b0c1ca411c37fb4cae077f72",
+  "serviceabilityBufferPercentagePoints": 3,
+  "highDTIThreshold": 6,
+  "highDTIFlowLimitPercent": 20,
+  "highDTIEffective": "2026-02-01",
+  "NSWYear": "2026/2027",
+  "NSWPremiumThreshold": 3870000,
+  "ACTRateSchedule": "on or after 2025-07-01, confirmed current October 2026",
+  "scope": "Ordinary general residential budgets. Actual lender/insurer quotes and confirmed concessions, grants and foreign taxes must be entered; no eligibility is inferred."
+}
