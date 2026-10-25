@@ -3,7 +3,8 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),http=require('node:http');
 const {chromium}=require('playwright');
 const root=path.resolve(__dirname,'..'),base='http://127.0.0.1:8876';
-const anchors=['app-privacy','google-admob','meta-audience-network','liftoff-monetize','unity-ads','privacy-choices','ai-assistant','ai-reporting','data-deletion'];
+const anchors=['app-privacy','covered-apps','google-admob','meta-audience-network','liftoff-monetize','unity-ads','privacy-choices','ai-assistant','ai-reporting','data-deletion'];
+const packages=['com.reotech.mortgage_calculator','com.reotech.mortgagepro_global','com.reotech.mortgage_calculator_au','com.reotech.mortgage_calculator.canada','com.reotech.mortgage_calculator_in','com.reotech.mortgage_calculator_nz','com.reotech.mortgage_calculator_eu'];
 (async()=>{
  const server=http.createServer((req,res)=>{
   const pathname=decodeURIComponent(new URL(req.url,base).pathname);
@@ -46,7 +47,13 @@ const anchors=['app-privacy','google-admob','meta-audience-network','liftoff-mon
     const heading=document.getElementById('unity-ads');return {heading:ratio(heading),link:ratio(heading.nextElementSibling.nextElementSibling.querySelector('a'))};
    });
    assert.ok(contrast.heading>=3&&contrast.link>=4.5,'readable heading/link contrast: '+JSON.stringify(contrast));
-   assert.match(await page.locator('main').innerText(),/com\.reotech\.mortgage_calculator/);
+   const listed=await page.locator('main table tbody tr td:last-child code').allTextContents();
+   assert.deepEqual(listed,packages,'all seven exact package identifiers, preserving Canada dot');
+   const schema=await page.locator('script[type="application/ld+json"]').allTextContents();
+   const policy=schema.map(s=>JSON.parse(s)).find(s=>s['@type']==='WebPage');
+   assert.deepEqual(policy.about.map(app=>app.identifier),packages,'structured data matches the visible covered-app list');
+   assert.match(await page.locator('main').innerText(),/Each listed package has its own app storage/);
+   assert.match(await page.locator('main').innerText(),/does not announce a launch/);
    assert.match(await page.locator('#ai-reporting + p').innerText(),/Google Forms/);
    assert.equal(await page.locator('a[href="mailto:privacy@mortgageproglobal.com"]').count(),0,'only confirmed privacy contact');
    assert.deepEqual(errors,[]);

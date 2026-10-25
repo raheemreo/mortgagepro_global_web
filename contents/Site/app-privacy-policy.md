@@ -1,16 +1,34 @@
 # Mobile App Privacy Policy
 
-**Meta description:** Privacy information for Mortgage Calculator USA - PITI: AdMob mediation with Meta, Liftoff and Unity, Firebase, Gemini/Groq AI, feedback, privacy choices and deletion.
+**Meta description:** Shared privacy policy for REO Technologies mortgage calculator apps: USA, Global, Australia, Canada, India, New Zealand and Europe. Advertising, AI, data and choices.
 
-This policy explains the Android app's data practices. For browsing this website, read the separate [website privacy policy](/privacy-policy). Opening a section below does not change your advertising consent inside the app.
+This is the **shared Mobile App Privacy Policy** for the seven REO Technologies Android mortgage calculator apps listed below. For browsing this website, read the separate [website privacy policy](/privacy-policy). Opening a section below does not change your advertising consent inside an app.
 
 MOBILE_PRIVACY_LINKS
 
-## About this app
+## About these apps
 
-**Mortgage Calculator USA - PITI** is an Android financial-planning app published by **REO Technologies**. Its package name is `com.reotech.mortgage_calculator`. The publisher contact is Abdul Raheem, reachable at [support@mortgageproglobal.com](mailto:support@mortgageproglobal.com).
+These mortgage calculator apps are published by **REO Technologies**. The publisher contact is Abdul Raheem, reachable at [support@mortgageproglobal.com](mailto:support@mortgageproglobal.com). The same policy URL covers all seven listed apps.
 
-You can use the calculators without creating a publisher account. The app also includes online services: advertising, Firebase services, optional AI assistance and optional feedback. Those services can process data even though the repayment calculation itself runs on your device.
+In this policy, **“the app” means the listed app you are using**. Available calculators, currencies, online features and advertising partners can differ by app, version, region and settings. Advertising, Firebase, AI, reporting and feedback sections apply when that feature or service is included and enabled in your installed version. Listing an app or provider does not mean that every app uses every feature or sends data to every provider.
+
+The calculators do not require a publisher account. Online services can process data even though the repayment calculation itself runs on your device. If a release introduces a materially different data practice, its disclosures must be updated before that practice is used; this common notice does not authorize undisclosed collection.
+
+## Covered apps and package identifiers
+
+Use the package identifier to identify the app, even if its display name is translated or changes between versions. This policy covers the following packages, including their released versions when available. Inclusion here does not announce a launch or guarantee current availability in Google Play or your country.
+
+| App / regional edition | Android package identifier |
+|---|---|
+| Mortgage Calculator USA - PITI | `com.reotech.mortgage_calculator` |
+| Mortgage Calculator Global | `com.reotech.mortgagepro_global` |
+| Mortgage Calculator Australia | `com.reotech.mortgage_calculator_au` |
+| Mortgage Calculator Canada | `com.reotech.mortgage_calculator.canada` |
+| Mortgage Calculator India | `com.reotech.mortgage_calculator_in` |
+| Mortgage Calculator New Zealand | `com.reotech.mortgage_calculator_nz` |
+| Mortgage Calculator Europe / EU | `com.reotech.mortgage_calculator_eu` |
+
+The advertising, AI, storage, support, privacy-choice and deletion information below is shared across these listed apps, subject to the feature scope above. A regional edition's financial rules, currency and calculator defaults do not by themselves mean a different privacy consent choice. Consent and permissions are handled in the app you use; installing another edition does not automatically transfer your choices.
 
 ## Calculator inputs, saved results and exports
 
@@ -20,7 +38,7 @@ If you use export, print or share, the chosen file or content can leave the app 
 
 ## Advertising through Google AdMob mediation
 
-The app uses **Google AdMob as its mediation platform**, with **Meta Audience Network**, **Liftoff Monetize (Vungle)** and **Unity Ads** as advertising partners. Partner availability varies with app version, region, privacy choices and the ad request. Listing a partner does not mean that every partner receives every request or shows an ad in every session.
+Where advertising is included, the apps use **Google AdMob as their mediation platform**, with **Meta Audience Network**, **Liftoff Monetize (Vungle)** and **Unity Ads** as advertising partners where integrated. Partner availability varies with the app, version, region, privacy choices and the ad request. Listing a partner does not mean that every app integrates it, that every partner receives every request or that an ad appears in every session.
 
 Advertising services may process IP addresses and approximate IP-derived location, advertising or app-instance identifiers, device/OS/app information, ad requests, impressions, clicks, video interactions and diagnostics. They use this information to deliver and measure ads, select permitted advertising, limit frequency, detect fraud and maintain their services. Applicable consent or opt-out signals and SDK/account settings affect processing. Some processing can continue for permitted non-personalized, security or measurement purposes; rejecting personalization does not guarantee that no data is processed.
 
@@ -52,7 +70,7 @@ Read [Unity's Game Player and App User Privacy Policy](https://unity.com/legal/g
 
 ## Advertising choices and consent
 
-In the app, open **Settings → Privacy & Legal → Consent Settings** to revisit the Google UMP privacy-options form when it is required and available. Labels can vary with language or app version. The app uses region-dependent messages, so available choices and whether a form appears depend on the app's published message configuration and your location. If the control is unavailable or fails, contact support with the app version and a brief description.
+In supported app versions, open **Settings → Privacy & Legal → Consent Settings** to revisit the Google UMP privacy-options form when it is required and available. Labels can vary by app, language or version. Available choices and whether a form appears depend on that app's published message configuration and your location. If the control is unavailable or fails, contact support with the app name or package identifier, version and a brief description.
 
 Changing a choice affects subsequent applicable processing; it does not recall an earlier request or erase previously collected records. You can also review Android's advertising-ID/privacy controls and the partners' controls linked above. Android menu names vary by version. A device advertising-ID change does not erase feedback, AI requests or other provider records.
 
@@ -60,7 +78,7 @@ The links on this webpage explain the app's controls. They do not operate the na
 
 ## Firebase services and notifications
 
-The app integrates Google Firebase services for operation and improvement:
+Where included in an app version, Google Firebase services support operation and improvement:
 
 - **Analytics:** app-instance/device information, app usage and events such as opening a calculator or screen can be processed for usage analysis. Usage information can be pseudonymous and should not be treated as guaranteed anonymous.
 - **Crashlytics:** crash/error reports, stack traces, app/OS versions, device information and installation-related identifiers help diagnose failures. Error reports can contain technical context; we do not promise that every report is free of personal information.
@@ -71,7 +89,7 @@ See [Privacy and Security in Firebase](https://firebase.google.com/support/priva
 
 ## AI assistant: Gemini and Groq
 
-AI assistance is an optional online feature. When you submit a question, the question, conversation context needed to answer it and app-provided instructions are sent over HTTPS to **Google's Gemini API**. **Groq** may be used as a fallback, for example when the primary request fails or is rate-limited. In a fallback, both services may have received a request; the first request is not recalled. Network/service metadata, including an IP address, can also be processed.
+AI assistance is an optional online feature in editions and versions that provide it. Where this Gemini/Groq assistant is enabled, submitting a question sends the question, conversation context needed to answer it and app-provided instructions over HTTPS to **Google's Gemini API**. **Groq** may be used as a fallback, for example when the primary request fails or is rate-limited. In a fallback, both services may have received a request; the first request is not recalled. Network/service metadata, including an IP address, can also be processed. An edition without the AI feature does not send an AI question merely because it is listed in this policy.
 
 Anything you type into the conversation, including income or loan details, can therefore leave your device. Do not submit passwords, account/card numbers, identity documents, another person's information or sensitive/confidential financial records. Use fictional or rounded examples. Calculator results are not automatically included merely because you used a calculator.
 
@@ -91,7 +109,7 @@ If your installed app does not offer a reporting control, you can contact suppor
 
 ## Feedback and support messages
 
-The optional feedback form sends your selected rating, category, message and optional email to the publisher using Google Forms over HTTPS. An email is useful if you want a reply, but need not be supplied to describe a software problem. Google can process request metadata when receiving the form.
+Where provided, the optional feedback form sends your selected rating, category, message and optional email to the publisher using Google Forms over HTTPS. An email is useful if you want a reply, but need not be supplied to describe a software problem. Google can process request metadata when receiving the form.
 
 Emails sent to [support@mortgageproglobal.com](mailto:support@mortgageproglobal.com) are forwarded to the publisher's Gmail inbox. Your address, message, attachments and correspondence are handled by the publisher and email provider. We use feedback and correspondence to respond, investigate issues and maintain necessary support records. Please do not send financial statements or identity documents. See [Google's privacy policy](https://policies.google.com/privacy).
 
@@ -103,11 +121,11 @@ Requests for rate/reference data, configuration, updates and third-party content
 
 ## Retention and deletion
 
-Local saved calculations and preferences remain until you remove/reset the relevant data or clear the app's storage. Use the app's saved-calculation deletion controls where available. For a full local reset, use Android **Settings → Apps → Mortgage Calculator USA - PITI → Storage → Clear storage / Clear data**; wording varies by device. Uninstalling normally removes the app's local storage, but exported/shared files, operating-system backups and records held by providers require separate management. We do not promise deletion of backup copies through an app reset.
+Local saved calculations and preferences remain until you remove/reset the relevant data or clear that app's storage. Use its saved-calculation deletion controls where available. For a full local reset, use Android **Settings → Apps → select the mortgage calculator app you use → Storage → Clear storage / Clear data**; wording varies by device. Each listed package has its own app storage: clearing one edition does not clear another edition. Uninstalling normally removes the selected app's local storage, but exported/shared files, operating-system backups and records held by providers require separate management. We do not promise deletion of backup copies through an app reset.
 
 Clearing the AI conversation removes the visible local conversation state; it does not recall requests already sent to Gemini or Groq. Feedback and AI reports already submitted, support emails, advertising records, FCM identifiers, analytics and crash reports are also separate from local saved calculations.
 
-To request access, correction or deletion of publisher-held feedback/report/correspondence, email [support@mortgageproglobal.com](mailto:support@mortgageproglobal.com) with enough non-sensitive information to identify the record, such as an approximate submission date. We may need proportionate verification. We review requests under applicable law and provider capabilities. We retain support/report records while needed for the request, safety, service maintenance or legal obligations; we do not assert an unverified fixed retention deadline or immediate erasure of all copies. Provider-controlled records follow their own notices, legal duties and request mechanisms. This app does not require a publisher account to use the calculators, so a local reset is not an account-deletion request.
+To request access, correction or deletion of publisher-held feedback/report/correspondence, email [support@mortgageproglobal.com](mailto:support@mortgageproglobal.com) with the **app name or package identifier**, an approximate submission date and enough non-sensitive information to identify the record. We may need proportionate verification. We review requests under applicable law and provider capabilities. We retain support/report records while needed for the request, safety, service maintenance or legal obligations; we do not assert an unverified fixed retention deadline or immediate erasure of all copies. Provider-controlled records follow their own notices, legal duties and request mechanisms. The listed apps do not require a publisher account to use the calculators, so a local reset is not an account-deletion request.
 
 ## Children and eligibility
 
