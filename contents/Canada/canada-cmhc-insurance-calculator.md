@@ -1,72 +1,36 @@
-# CMHC Insurance Calculator: The Premium That Protects Your Lender, Not You
+# CMHC Premium Calculator: Base Loan, Surcharge and Cash Tax
 
-**Meta description:** See exactly how CMHC mortgage default insurance is priced by loan-to-value tier, and why the premium exists even though it doesn't cover you as the borrower.
+**Meta description:** Estimate a standard Canadian high-ratio purchase premium with verified CMHC tiers, a 30-year surcharge and explicit eligibility limits.
 
-Put down less than 20% on a Canadian home and mortgage default insurance isn't optional — it's mandatory by law. What surprises a lot of first-time buyers is what the insurance actually protects: not the homeowner, but the lender, in case the borrower defaults. You pay the premium; the lender gets the coverage.
+Mortgage default insurance protects the lender, not the buyer's ability to keep making payments. A premium passed to you can be paid at closing or added to principal. Financing it means interest is charged on a larger balance.
 
-## How the premium is priced
+This calculator covers a traditional-down-payment, owner-occupied one- or two-unit purchase. It does not price every insurer, property type, non-traditional deposit or refinance.
 
-CMHC (along with the two private insurers, Sagen and Canada Guaranty, who price identically) sets premiums as a percentage of the loan amount, tiered by loan-to-value (LTV) — how much you're borrowing relative to the purchase price.
+<!-- calculator -->
 
-| Down payment | LTV | Premium rate |
+## Apply the tier to the base loan
+
+For the supported high-ratio scenario, CMHC's published purchase tiers are 2.80% above 80% through 85% LTV, 3.10% above 85% through 90%, and 4.00% above 90% through 95%. Amortization beyond 25 years adds **0.20 percentage points**, where the buyer qualifies for that longer insured amortization. See the [CMHC premium schedule](https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/premium-information-for-homeowner-and-small-rental-loans).
+
+| CAD 700,000 price, CAD 70,000 down | 25 years | Eligible 30 years |
 |---|---|---|
-| 5% | 95% | 4.00% |
-| 10% | 90% | 3.10% |
-| 15% | 85% | 2.80% |
-| 20%+ | 80% or less | Not required |
+| Base loan | CAD 630,000 | CAD 630,000 |
+| Premium rate | 3.10% | 3.30% |
+| Premium | CAD 19,530 | CAD 20,790 |
+| Principal if premium financed | CAD 649,530 | CAD 650,790 |
 
-The lower your down payment, the higher the percentage — and it's applied to a larger loan balance at the same time, so the gap between tiers compounds fast.
+The rate is applied before adding the premium, not recursively to the financed total. At 20% down the widget sets this borrower-paid high-ratio charge to zero; low-ratio lender insurance is a different question.
 
-## Worked example
+## Check eligibility before treating the number as a quote
 
-A $700,000 home with a 10% down payment ($70,000):
+[CMHC Purchase](https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/purchase) specifies a purchase/lending value **below CAD 1,500,000**. The standard minimum equity rule for the modeled property is 5% of the first CAD 500,000 and 10% of the remainder. At CAD 1,500,000 the high-ratio insured scenario is not available here.
 
-| Item | Amount |
-|---|---|
-| Purchase price | $700,000 |
-| Down payment (10%) | $70,000 |
-| Loan-to-value | 90% |
-| Premium rate | 3.10% |
-| Insured loan amount | $630,000 |
-| **CMHC premium** | **$19,530** |
+Thirty-year insured amortization requires the applicable first-time-buyer or new-build eligibility, confirmed through [CMHC Home Start](https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/home-start). Selecting a field does not establish that eligibility.
 
-That premium is typically added to your mortgage principal rather than paid in cash, which means you're also paying interest on it for the life of the loan — the $19,530 above can grow to roughly $30,000+ in total cost once compounded over a 25-year amortization at a typical rate.
+## Separate cash tax from financed premium
 
-> **The minimum down payment isn't a flat 5%.** Canada's rule is 5% on the first $500,000 of purchase price, then 10% on the portion between $500,000 and the $1.5 million insured-price cap. On that same $700,000 home, the actual minimum down payment is $45,000 (5% of $500,000 + 10% of $200,000) — not $35,000.
+The premium-tax field is an explicit assumption: use the rate applicable to your transaction, or zero where none applies. Provincial tax on the premium cannot simply be financed with it. The model does not determine the province's tax treatment, portability credits, insurer refunds or energy-efficiency incentives.
 
-## Common mistakes
+### Do all insurers charge the same price?
 
-Buyers often calculate their down payment as a flat percentage of the full price and are surprised the legal minimum is higher once the home crosses $500,000 — the tiered rule catches people specifically in the $500,000-$1,000,000 range.
-
-Buyers also forget that in Ontario, Quebec, and Saskatchewan, provincial sales tax applies to the CMHC premium itself — and unlike the premium, that tax **cannot** be rolled into the mortgage. It's due in cash at closing.
-
-A third mistake: assuming a 30-year amortization is free. It's available to first-time buyers and buyers of new builds, but it adds a 0.20% surcharge on top of the standard premium rate.
-
-## Where this calculator has limits
-
-It doesn't account for the portability credit, which can reduce or eliminate the premium on a subsequent insured purchase if you're porting an existing insured mortgage within a certain window. It also can't apply the Eco program discount (up to 25% off) for energy-efficient homes without that qualification being confirmed separately.
-
-## FAQ
-
-**Can I avoid CMHC insurance without 20% down?**
-Not on an insured mortgage — it's legally required below 20% down for homes under the $1.5 million cap. Above that price, insured mortgages aren't available at all, and 20% down is required regardless.
-
-**Does a higher premium mean a worse mortgage rate?**
-Not necessarily — insured mortgages often qualify for *better* rate pricing than uninsured ones, since the lender's risk is covered. The rate savings can partially offset the premium cost over the life of the loan.
-
-**Is the premium refundable if I pay off the mortgage early?**
-No — it's a one-time charge for the life of that specific insured loan, not a recurring or refundable policy.
-
-**Do all three insurers (CMHC, Sagen, Canada Guaranty) charge the same rate?**
-Yes — pricing is standardized across all three; your lender selects which insurer underwrites your specific file.
-
-**Can I add extra down payment later to get a refund?**
-No — the premium is fixed at the LTV tier that applied when the mortgage was insured; increasing equity afterward doesn't trigger a refund.
-
-## Related tools
-
-Mortgage Calculator · Affordability Calculator · GDS/TDS Ratio Calculator
-
----
-
-*Educational content, not financial advice. CMHC premium rates, price caps, and provincial tax rules change periodically — confirm current figures with a licensed Canadian mortgage lender. Written by the MortgagePro Global team; premium tiers referenced against CMHC's published 2026 rate schedule.*
+Do not assume so. Ask the lender to identify the insurer, premium, eligibility and any credit in writing. Use the [insurance checklist](/blog/cmhc-insurance-canada-guide) to prepare that conversation.

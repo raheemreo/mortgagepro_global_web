@@ -1,65 +1,31 @@
-# Affordability Calculator: Why "4.5 Times Salary" Isn't a Fixed Rule
+# UK Affordability: Use a Budget, Not a Promised Income Multiple
 
-**Meta description:** See how UK lenders actually calculate affordability beyond the 4.5x income headline, including the professional multiples and the debt deductions that shrink it.
+**Meta description:** Explore UK borrowing from an explicit monthly allowance and assessment-rate assumption, with income, spending and lender checks kept separate.
 
-"You can borrow 4.5 times your salary" is the number most UK buyers walk in expecting. It's a reasonable starting point, but it's not a fixed ceiling — some lenders offer meaningfully more to specific borrowers, and a regulatory limit shapes how much of that higher lending is actually available at all.
+Multiplying salary by 4.5 is not a mortgage offer. A lender also assesses documented income, spending, debts, dependants, credit and the property. Those details can make the affordable amount quite different for two households earning the same salary.
 
-## The income multiple landscape
+This tool asks what monthly mortgage allowance you want to test after other living costs. Enter debts separately only if they have not already been deducted from that allowance. An optional rate buffer is a sensitivity assumption, not a universal UK stress-test setting.
 
-Standard high-street lending typically caps most applicants around 4-4.5x income. Above that, a genuine second tier exists: lenders offer 5-5.5x to higher earners (often above £75,000) and to specific professionals — doctors, lawyers, accountants, and similar roles — viewed as lower default risk. A smaller top tier, 6x and above, exists mainly through private banks for very high earners, outside the standard affordability framework entirely.
+<!-- calculator -->
 
-None of this is unlimited, though. The Bank of England's Financial Policy Committee caps the *share* of each lender's new mortgage lending that can go above 4.5x income at 15% of their book — so higher multiples exist, but they're rationed, not universally available on demand.
+## What the result means
 
-## Worked example
+If the allowance is £2,000 and other monthly commitments not already deducted are £350, the modeled payment room is £1,650. The tool inverts the repayment formula at the entered assessment rate and term. It does not turn each £100 of debt into an assumed £10,000–£15,000 lending deduction.
 
-A couple with £110,000 joint income, £75,000 deposit, and a £350/month car finance payment, offered a standard 4.5x multiple:
+Keep deposit, purchase tax, fees and emergency savings separate. A mathematical principal amount is useful for comparing scenarios but does not establish an acceptable LTV or a lender's willingness to lend it.
 
-| Step | Value |
-|---|---|
-| Income multiple offer | 4.5x |
-| Initial headline capacity | £110,000 × 4.5 = £495,000 |
-| Less: debt and living-cost stress deductions | −£65,000 |
-| **Realistic maximum loan** | **≈ £430,000** |
-| Plus deposit | +£75,000 |
-| **Maximum purchase price** | **≈ £505,000** |
+## Keep regulatory dates attached
 
-The gap between the headline "4.5x income" figure and the actual approved amount here is significant — roughly £65,000 — almost entirely from the lender's affordability stress test deducting the car finance payment and standardized living costs before finalizing the number.
+The [PRA/FCA October 2026 policy statement](https://www.bankofengland.co.uk/prudential-regulation/publication/2026/october/high-loan-to-income-lending-policy-statement) announces removal of the firm-specific 15% high-LTI cap from **28 October 2026**, while retaining an aggregate framework. Before that commencement, interim modifications/guidance can apply to participating firms. As checked on October 25, describing every lender as unconditionally limited to 15% is therefore misleading.
 
-> **The £350/month debt effect:** that single car finance payment reduced this couple's borrowing capacity by tens of thousands of pounds — a rough rule of thumb many brokers use is that each £100/month in existing debt commitments reduces maximum mortgage capacity by roughly £10,000-£15,000, depending on the lender's specific stress rate.
+These arrangements concern lender flows; they do not give an individual borrower an entitlement to a particular income multiple. The calculator intentionally does not award an approval status at 4.5x, 5x or 6x.
 
-## Common mistakes
+## Prepare a realistic budget
 
-Buyers frequently anchor on the headline income multiple without realizing the lender's affordability stress test — which layers in existing debt, dependents, and standardized living-cost assumptions — almost always produces a lower final number than the simple multiplication suggests.
+Use take-home income for a household spending plan, while letting the lender determine its qualifying-income figures. Add childcare, transport, utilities, maintenance and savings. Check whether interest, council tax or service-charge changes would leave enough margin.
 
-Buyers also assume professional income multiples (5-5.5x) are available at any lender, when in practice they're offered by specific lenders to specific qualifying professions, and usually require a lower LTV or stronger overall credit profile to access.
+The [MoneyHelper mortgage overview](https://www.moneyhelper.org.uk/en/homes/buying-a-home) provides a starting point for repayment and product choices. Ask an appropriately authorised adviser about the lenders and products actually available to your circumstances rather than relying on a professional-occupation label.
 
-A third mistake: not accounting for how paying off a small existing debt before applying can meaningfully change the outcome — clearing that £350/month car finance in the example above could restore a meaningful chunk of the £65,000 gap.
+### Does a bigger deposit guarantee a larger multiple?
 
-## Where this calculator has limits
-
-It uses illustrative standard-tier assumptions — actual affordability varies significantly by lender, and a broker with access to the whole market can often identify a lender whose specific affordability model suits an individual's circumstances better than the "average" outcome shown here. It also can't apply professional or high-earner multiples without confirming eligibility for those specific lender programs.
-
-## FAQ
-
-**Is 4.5x a hard cap everywhere?**
-No — it's the common standard-tier default, but higher multiples exist for specific borrower profiles, subject to the Bank of England's 15% portfolio-wide limit on lending above 4.5x.
-
-**Does the old 3%-above-SVR stress test still apply?**
-No — the Bank of England withdrew that specific mandatory stress test in August 2022. Lenders still apply their own internal affordability stress tests under FCA rules, just without that uniform benchmark.
-
-**Do buy-to-let mortgages use the same income multiple rules?**
-No — BTL affordability is driven by rental coverage ratios (see our Buy-to-Let Calculator), not a personal income multiple.
-
-**Does a bigger deposit increase my income multiple?**
-Not directly, but a lower resulting LTV can make a lender more willing to stretch to a higher multiple as part of their overall risk assessment.
-
-**Can two applicants combine income for a joint mortgage?**
-Yes — most lenders assess joint applications on combined income, generally capped at the two highest earners if more than two people are on the application.
-
-## Related tools
-
-Mortgage Calculator · LTV Calculator · Stamp Duty (SDLT) Calculator
-
----
-
-*Educational content, not financial advice. Income multiples, affordability rules, and lending criteria vary significantly by lender and change with regulation — confirm your specific borrowing capacity with a licensed UK mortgage adviser. Written by the MortgagePro Global team.*
+No. It reduces the required loan and changes LTV, but affordability and lender policy remain separate. A deposit taken from all your reserves can improve one ratio while weakening the cash buffer you need after moving.

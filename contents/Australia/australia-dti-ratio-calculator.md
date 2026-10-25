@@ -1,64 +1,29 @@
-# DTI Ratio Calculator: The 6x Threshold Regulators Watch, Not a Rule Applied to You Personally
+# Australia DTI: The High-Debt Lending Limit in Force Since February 2026
 
-**Meta description:** See how Australia's debt-to-income monitoring actually works — a portfolio-wide regulatory watch point, not a hard borrower cap the way it functions in New Zealand or Canada.
+**Meta description:** Calculate an Australian debt-to-income ratio and understand APRA's current lender-level limits for lending at six times income or more.
 
-Australia's approach to debt-to-income (DTI) ratio is genuinely different from several other markets covered on MortgagePro Global. There's no legal DTI cap applied to individual borrowers the way New Zealand enforces a hard limit or Canada runs its stress test. Instead, APRA — the prudential regulator — monitors what share of each lender's *overall* new lending sits above a DTI of 6x, treating high-DTI volume as a system-wide risk signal rather than an individual borrower rule.
+Australia's high-DTI framework is now more than monitoring. From **February 1, 2026**, APRA limits the share of new lending at debt-to-income ratios **greater than or equal to six**. That limits a lender's high-debt business; it does not make six a personal statutory borrowing maximum.
 
-## What DTI actually measures here
+<!-- calculator -->
 
-DTI = total debt (the new mortgage plus any other debts) ÷ gross annual income. A single applicant borrowing $480,000 against $80,000 income sits at a 6.0x DTI. It's a simpler ratio than the US's split front-end/back-end system or Canada's GDS/TDS — one number, not two — but the way it's used at the system level is what makes Australia distinct.
+## Calculate debt relative to annual income
 
-## How this actually affects an individual borrower
+A basic ratio is total assessed debt divided by gross annual qualifying income. With AUD 520,000 mortgage debt, no other debt and AUD 95,000 income, the simple result is **5.47 times**. Adding AUD 50,000 assessed other debt gives **6.00 times**. Exactly six is within APRA's high-DTI category, not below it.
 
-Because APRA's focus is portfolio-wide, not case-by-case, an individual lender can still approve a loan above 6x DTI for a specific borrower with a strong overall profile — but if too many of a lender's total new loans cross that threshold, APRA applies supervisory pressure on the *lender*, which can flow through to tighter individual lending standards across the board, especially at banks already running close to their internal risk limits.
+The widget reports only entered debt and income. Ask the lender how liabilities, limits, joint applicants and qualifying income are defined under its reporting and credit policies. Do not add monthly repayment amounts to loan balances.
 
-## Worked example
+## What APRA limits
 
-A single applicant earning $95,000/year, seeking a $520,000 loan with no other debt:
+[APRA's activation notice](https://www.apra.gov.au/news-and-publications/activation-debt-income-limits-macroprudential-policy-tool) permits up to 20% of new owner-occupier lending and separately up to 20% of new investment lending at DTI of six or more, subject to its scope and implementation requirements. [The May 2026 settings review](https://www.apra.gov.au/news-and-publications/apra-maintains-current-macroprudential-policy-settings-highly-uncertain) maintained the settings.
 
-| Item | Value |
-|---|---|
-| Gross annual income | $95,000 |
-| Proposed loan | $520,000 |
-| **DTI ratio** | **5.5x** |
+These are limits on lenders' lending flows, not an entitlement for an applicant to access the remaining high-DTI allowance. A lender may apply tighter criteria, and the policy's scope, exclusions and implementation details matter. The tool cannot observe available lender headroom.
 
-This sits comfortably under the 6x watch point. The same applicant seeking a $600,000 loan against the same income would sit at 6.3x — not automatically declined, but the kind of application that draws closer individual scrutiny, particularly at a lender already carrying a higher share of high-DTI loans in its book.
+## DTI does not replace repayment capacity
 
-> **Why this matters more in expensive cities:** in Sydney and Melbourne, where property prices are highest relative to typical incomes, a larger share of otherwise-qualified borrowers naturally land above 6x DTI just from local price levels — which is part of why lender-level DTI monitoring interacts differently with serviceability outcomes depending on where in Australia you're buying.
+The [serviceability-buffer guide](/blog/australia-affordability-calculator) examines repayment capacity at a higher-rate assumption. A low balance ratio does not make an otherwise unaffordable payment safe; a ratio of six or more does not by itself establish an automatic rejection under this portfolio rule.
 
-## Common mistakes
+New Zealand's DTI speed limits are also lender-level restrictions, although its thresholds and detailed rules differ. Do not describe another country's system as a hard individual cap to explain this one.
 
-Buyers frequently assume 6x DTI is a hard personal cutoff, the way it functions in New Zealand — in Australia it's a lender-level supervisory metric, meaning individual approval above 6x is genuinely possible depending on the lender's current portfolio position and your specific financial strength.
+### What should I do with the number?
 
-Buyers also conflate DTI with the separate serviceability assessment every lender runs regardless of DTI — passing a comfortable DTI ratio doesn't guarantee approval if the serviceability buffer test (see our Affordability Calculator) shows the loan isn't affordable at a stressed rate.
-
-A third mistake: not accounting for existing debts properly — DTI includes all debt, not just the new mortgage, so an applicant with an existing car loan or credit card balance has a higher DTI than the mortgage amount alone would suggest.
-
-## Where this calculator has limits
-
-It can't predict how a specific lender will treat an above-6x application, since that depends on the lender's current portfolio composition relative to APRA's monitoring thresholds — information not publicly available in real time. It also doesn't replace the separate serviceability stress test, which is the more binding constraint for most individual applications.
-
-## FAQ
-
-**Is 6x DTI a legal limit in Australia?**
-No — unlike New Zealand's enforced DTI cap, Australia's 6x threshold is a system-wide monitoring metric APRA uses to watch lender risk, not a rule directly blocking individual borrower approval.
-
-**Can I still get approved above 6x DTI?**
-Yes, depending on the lender and your broader financial profile — it's more likely to draw additional scrutiny than an automatic decline, unlike a hard regulatory cap.
-
-**Does DTI include my partner's debt on a joint application?**
-Yes — joint applications use combined income and combined debt, the same way most other affordability metrics work.
-
-**How is this different from the serviceability buffer test?**
-DTI measures the debt-to-income ratio itself; the serviceability buffer (see our Affordability Calculator) tests whether you could still afford repayments at a stressed interest rate — they're related but separate checks.
-
-**Does APRA ever tighten this further?**
-It's a metric APRA reviews periodically as part of broader macroprudential policy — thresholds and monitoring intensity can shift with the housing market and financial stability conditions.
-
-## Related tools
-
-Affordability Calculator · Mortgage Calculator · LMI Calculator
-
----
-
-*Educational content, not financial advice. DTI monitoring practices and thresholds are set by APRA and individual lender risk policy, both of which can change — confirm your specific situation with a licensed Australian mortgage broker. Written by the MortgagePro Global team.*
+Use it to understand why additional debt can affect an application, then obtain a lender assessment. Decisions about repaying debt, increasing a deposit or preserving savings need the full cash-flow and eligibility picture.

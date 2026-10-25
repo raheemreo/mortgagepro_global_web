@@ -1,69 +1,33 @@
-# LVR Calculator: The "Speed Limit" That Caps Banks, Not Just Borrowers
+# New Zealand LVR: Calculate Equity and Understand Bank Speed Limits
 
-**Meta description:** See how New Zealand's LVR restrictions actually work as a bank-wide speed limit, why new builds are exempt, and what changed on 1 December 2025.
+**Meta description:** Calculate New Zealand LVR and a target deposit while distinguishing bank high-LVR speed limits from individual lending approval.
 
-New Zealand's loan-to-value ratio (LVR) restrictions don't work quite the way most people assume. They're not a hard rule blocking any individual borrower with a small deposit — they're a cap on how much of each **bank's total new lending** can go to high-LVR borrowers, known as a "speed limit." Individual approval still depends on the bank's own criteria and how much of that speed-limit headroom they have left.
+Loan-to-value, or LVR, compares assessed debt with the property value used for lending. The percentage is straightforward; what a bank can offer at that percentage is a separate decision involving serviceability, property, policy and lending-flow limits.
 
-## The current settings
+<!-- calculator -->
 
-**Owner-occupiers:** loans above 80% LVR (deposits under 20%) are classed as high-LVR. As of 1 December 2025, banks can direct up to **25%** of their new owner-occupier lending to high-LVR borrowers (eased from 20%).
+## Calculate the ratio before discussing an exception
 
-**Investors:** loans above 70% LVR (deposits under 30%) are classed as high-LVR for this category. As of 1 December 2025, banks can direct up to **10%** of new investor lending to high-LVR borrowers (eased from 5%).
+On an NZD 700,000 property, an NZD 630,000 loan gives **90% LVR** and NZD 70,000 modeled equity. Reaching an 80% target at the same valuation would require principal of no more than NZD 560,000—a further NZD 70,000 reduction.
 
-Both settings have loosened meaningfully over the past two years as part of the Reserve Bank's broader easing cycle — worth checking for further changes, since these thresholds move periodically based on financial stability conditions.
+A lender valuation lower than the agreed price changes the ratio. Fees included in principal can also change it. The tool reports the entered position and a target reduction; it does not quote low-equity fees or decide which deposit a bank will accept.
 
-## New builds get a genuine exemption
+## Use the current policy scope
 
-New build properties (houses and units under new title) are generally exempt from LVR restrictions entirely, for both owner-occupiers and investors — an explicit policy choice to support new housing supply. In practice: owner-occupiers can borrow up to 90% LVR (10% deposit) on a new build without touching the bank's high-LVR allowance; investors can borrow up to 80% LVR (20% deposit) on a new build without hitting the standard 70% investor threshold.
+[RBNZ's LVR restrictions](https://www.rbnz.govt.nz/regulation-and-supervision/oversight-of-banks/standards-and-requirements-for-banks/macroprudential-policy/loan-to-value-ratio-restrictions) distinguish owner-occupier high-LVR lending above 80% from investor lending above 70%. Settings effective from December 1, 2025 permit up to **25%** of new owner-occupier lending and **10%** of new investor lending in those high-LVR categories, subject to the framework's definitions and exemptions.
 
-## Worked example
+These are bank speed limits, not a promise that every individual can obtain that percentage. A bank can apply tighter limits and may have different headroom at different times.
 
-A first home buyer purchasing a $700,000 property:
+## Exempt does not mean approved
 
-| Scenario | Deposit needed | LVR | Counts against bank's speed limit? |
-|---|---|---|---|
-| Existing home, standard lending | $140,000 (20%) | 80% | No — under threshold |
-| Existing home, low deposit | $70,000 (10%) | 90% | Yes — high-LVR, uses speed-limit headroom |
-| New build, low deposit | $70,000 (10%) | 90% | **No — new build exemption applies** |
-| Kāinga Ora First Home Loan | As little as $35,000 (5%) | 95% | **No — First Home Loans are exempt entirely** |
+Certain qualifying construction, supported-loan and refinancing arrangements can be exempt. The conditions for a new-build or construction exemption must be checked; a property being marketed as new does not by itself establish the regulatory category.
 
-The same 90% LVR looks completely different depending on whether it's an existing home (uses up scarce speed-limit allowance, harder to get approved) or a new build (exempt, easier to access at the same deposit level).
+An exemption also does not prescribe a universal 90% owner-occupier or 80% investor loan entitlement. Ask the bank to identify the exemption, lending valuation, deposit requirement and affordability assessment in writing.
 
-> **Why this matters for negotiating with a bank:** if you're a low-deposit buyer and your bank says no to an existing-home purchase, asking whether a comparable new-build option is available — or whether you qualify for a Kāinga Ora First Home Loan — can access a completely different lending pathway that doesn't compete for the same restricted allowance.
+### Is DTI another name for LVR?
 
-## Common mistakes
+No. [DTI](/blog/nz-dti-calculator) compares assessed debt with income. LVR compares debt with security value. A deposit that fits one model does not resolve the other.
 
-Buyers frequently think LVR restrictions are a personal rule applied to their specific loan — it's actually a portfolio-wide cap on the bank, meaning your individual approval odds depend partly on how much high-LVR lending that particular bank has already done that quarter, not just your own financial profile.
+### What if value is below the loan balance?
 
-Buyers also miss the new-build exemption entirely, assuming a 10% deposit purchase is equally hard to finance whether it's an existing home or a newly built one — the exemption can make a real, practical difference in which properties are realistically accessible at a given deposit level.
-
-A third mistake: not checking whether refinancing (without increasing the loan) is exempt — it generally is, since it doesn't add new leverage to the system, which matters for existing high-LVR borrowers looking to switch lenders.
-
-## Where this calculator has limits
-
-It reflects the current RBNZ-set thresholds and speed limits, which are reviewed periodically and have changed multiple times in recent years — always confirm current settings before relying on this for a live purchase. It also can't predict which individual banks currently have speed-limit headroom available, since that varies by lender and time of year.
-
-## FAQ
-
-**Is the LVR restriction the same as a hard deposit requirement?**
-Not exactly — it's a cap on how much high-LVR lending each bank can do overall, so approval for a specific low-deposit loan depends on the bank's current lending mix, not just a fixed rule.
-
-**Are new builds always exempt from LVR restrictions?**
-Generally yes, which is a deliberate policy choice to support housing supply — confirm the exact definition of "new build" your bank is applying, since it typically requires the property to be under new title or newly constructed within a set window.
-
-**Does the LVR restriction apply to refinancing?**
-Refinancing without increasing the loan amount is generally exempt, since it doesn't add new leverage to the system.
-
-**When did the settings last change?**
-Most recently on 1 December 2025, when both the owner-occupier and investor speed limits were eased — worth checking for further updates given how often these settings have moved historically.
-
-**Are Kāinga Ora First Home Loans subject to LVR restrictions?**
-No — they're explicitly exempt, which is part of why they're such a significant tool for genuinely low-deposit first home buyers.
-
-## Related tools
-
-DTI Calculator · Mortgage Calculator · First Home Buyer
-
----
-
-*Educational content, not financial advice. LVR thresholds and speed limits are set by the Reserve Bank of New Zealand and reviewed periodically — confirm current settings with a licensed New Zealand mortgage adviser. Written by the MortgagePro Global team; settings referenced against the RBNZ's rules in effect from 1 December 2025.*
+The calculator can show LVR above 100% and negative modeled equity. That is a financial position, not advice to sell or a guarantee of refinancing access. Obtain product-specific guidance for your actual loan.

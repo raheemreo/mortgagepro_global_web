@@ -1,65 +1,38 @@
-# LTV Calculator: The Number That Sets Your Mortgage Rate Tier, Not Just Your Deposit
+# UK LTV Calculator: Deposit, Valuation and a Target Band
 
-**Meta description:** See how loan-to-value bands directly move UK mortgage pricing, and why crossing from 76% to 75% LTV can unlock a noticeably better rate.
+**Meta description:** Calculate UK loan-to-value and the principal reduction needed to reach an assumed target, without promising a lender rate tier.
 
-Ask most buyers what their deposit percentage is, and they'll answer easily. Ask what their loan-to-value (LTV) is, and fewer will — even though LTV, not deposit size on its own, is the number that actually sets which rate tier a UK lender offers.
+A £50,000 deposit does not describe a loan's risk position unless the property value is also known. Loan-to-value, or LTV, is principal divided by the value used for lending. A valuation below the agreed price can therefore change the result even when the cash deposit has not changed.
 
-## LTV is the mirror image of your deposit
+The calculator reports the entered LTV and the principal reduction needed to reach a target percentage. The target is your planning assumption, not a rate band guaranteed by a lender.
 
-LTV = mortgage amount ÷ property value, expressed as a percentage. A 25% deposit means a 75% LTV. It sounds like the same information stated differently, but lenders publish entire rate sheets organized by LTV band — 95%, 90%, 85%, 80%, 75%, 60% — not by deposit percentage, and pricing often steps down noticeably at each threshold rather than moving smoothly.
+<!-- calculator -->
 
-## Why the bands matter
+## Compare deposits against one property value
 
-Each LTV band represents a different risk tier to the lender. A 95% LTV mortgage (5% deposit) leaves very little equity cushion if property values dip, so lenders price that risk in with a higher rate. Crossing into a lower band — say, from 80% to 75% LTV — often unlocks a meaningfully better rate, sometimes enough to justify finding a few thousand extra pounds of deposit specifically to clear the threshold.
+| £350,000 property | Principal before fees | LTV |
+|---|---|---|
+| £17,500 deposit | £332,500 | 95% |
+| £52,500 deposit | £297,500 | 85% |
+| £87,500 deposit | £262,500 | 75% |
+| £140,000 deposit | £210,000 | 60% |
 
-## Worked example
+These rows are arithmetic, not current rate quotes. Lenders can price differently by LTV, but a lower percentage does not automatically guarantee the lowest total cost once product fees, credits and eligibility are included. [MoneyHelper's mortgage overview](https://www.moneyhelper.org.uk/en/homes/buying-a-home) explains how product choices affect the comparison.
 
-A £350,000 property at three different deposit levels:
+## Check the lending valuation
 
-| Deposit | LTV | Mortgage amount | Typical rate tier |
-|---|---|---|---|
-| 5% (£17,500) | 95% | £332,500 | Highest tier — smallest cushion for the lender |
-| 15% (£52,500) | 85% | £297,500 | Meaningfully better than 90-95% tier |
-| 25% (£87,500) | 75% | £262,500 | Widely considered a "sweet spot" threshold |
-| 40% (£140,000) | 60% | £210,000 | Best available tier at most lenders |
+If a £262,500 loan is assessed against £330,000 rather than £350,000, LTV rises from 75% to about 79.55%. To reach 75% of the lower valuation, principal would need to be no more than £247,500—a £15,000 reduction from that loan amount.
 
-The exact rate gap between tiers moves with the market, but the pattern — meaningfully better pricing as LTV drops, especially at 90%, 80%, 75%, and 60% — holds consistently across lenders.
+Fees added to principal can move the ratio too. Ask what valuation and loan amount the lender will use and whether a proposed overpayment changes product eligibility or incurs a charge.
 
-> **Quick check:** If you're sitting at 76% LTV and can find even a small amount of extra deposit to drop to 75%, it's worth checking whether that crosses into a better published rate band — the savings can outweigh the effort of finding the extra funds, depending on the specific lender's rate sheet.
+## Keep cash flexibility in view
 
-## Common mistakes
+Using savings to cross a published band can reduce a quoted rate, but compare the actual offers and preserve money for completion, tax, moving and repairs. Borrowing extra expensive debt to create a larger apparent deposit can worsen the affordability assessment.
 
-Buyers frequently focus on the deposit amount in isolation without checking which LTV band it lands them in — two buyers with £50,000 deposits on different-priced homes can land in completely different LTV tiers with very different rate offers.
+### Does LTV fall automatically if prices rise?
 
-Buyers also forget that LTV is recalculated at remortgage based on the *current* property valuation, not the original purchase price — rising property values can push an existing borrower into a better LTV band naturally, without any extra payment at all, which is worth checking before assuming your rate options haven't changed.
+Only a valuation accepted under the lender's process can establish the value for a new product. A property website's estimate is not necessarily that valuation.
 
-A third mistake: not accounting for the mortgage default insurance-adjacent products some 90%+ LTV lenders build into pricing (distinct from the mortgage guarantee scheme mechanics that support them) — the headline rate on very high-LTV products sometimes includes costs that aren't obvious from the rate alone.
+### Is negative equity possible?
 
-## Where this calculator has limits
-
-It shows the general pattern of LTV bands, but exact rate differences between tiers vary by lender, product type, and current market conditions — it can't quote you a specific rate without checking live lender rate sheets. It also doesn't account for how a valuation coming in lower than the purchase price can shift your actual LTV at completion, even if your deposit percentage against the *agreed price* looked fine on paper.
-
-## FAQ
-
-**Is a lower LTV always better?**
-For rate pricing, generally yes — but it means committing more cash upfront, which has its own opportunity cost worth weighing.
-
-**Does LTV change over the life of my mortgage?**
-Yes — as you pay down the balance and/or the property value changes, your LTV shifts, which can open up better remortgage options over time.
-
-**What's considered a "good" LTV in the UK market?**
-75% or below is widely treated as a meaningful pricing threshold, with 60% typically unlocking the very best available rates.
-
-**Can a low valuation at completion change my LTV unexpectedly?**
-Yes — if the property is valued below the agreed purchase price, your LTV against that lower valuation is higher than you planned, potentially moving you into a worse rate tier or requiring a larger deposit to compensate.
-
-**Does LTV affect buy-to-let mortgages the same way?**
-The concept is the same, but BTL affordability is driven primarily by rental coverage (see our Buy-to-Let Calculator), with LTV as a secondary factor rather than the primary qualifying test.
-
-## Related tools
-
-Mortgage Calculator · Remortgage Tool · Buy-to-Let Calculator
-
----
-
-*Educational content, not financial advice. LTV rate tiers vary by lender and change with market conditions — confirm current rate bands with a licensed UK mortgage adviser. Written by the MortgagePro Global team.*
+Yes. Entering a loan greater than the property value produces LTV above 100% and negative modeled equity. The tool reports that position; it does not imply a lender will refinance it or tell you to sell.

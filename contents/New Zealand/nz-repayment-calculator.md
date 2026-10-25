@@ -1,61 +1,35 @@
-# Repayment Calculator: Principal & Interest vs. Interest-Only in New Zealand
+# New Zealand Repayments: Table Loan and an Interest-Only Phase
 
-**Meta description:** See how a standard table loan compares to an interest-only structure on an NZ mortgage, and why banks now restrict interest-only more tightly than before.
+**Meta description:** Compare New Zealand table-loan and interest-only balances, then estimate the repayment needed after an interest-only period ends.
 
-Every New Zealand mortgage repayment falls into one of two structures: a standard table loan, where each payment reduces both interest and principal, or interest-only, where the loan balance doesn't move at all until the interest-only period ends. Banks here have tightened who qualifies for the second option considerably in recent years — it's still available, but it's no longer a default choice the way it once was.
+An interest-only phase lowers the initial payment by postponing principal repayment. That can leave a larger balance to clear over fewer years later. Compare the balance and the later payment alongside the first monthly figure.
 
-## The two structures
+The tool models a table loan from the outset and an interest-only phase followed by repayment at the same assumed rate. It does not say these are the only mortgage structures available in New Zealand; [Sorted's mortgage-types guide](https://sorted.org.nz/guides/home-buying/mortgage-types/) describes others.
 
-**Table loan (principal & interest):** the standard NZ mortgage structure. Each payment is a fixed amount, split between interest and principal, following the familiar amortization curve — interest-heavy early on, shifting toward principal over the term.
+<!-- calculator -->
 
-**Interest-only:** payments cover interest alone, typically for a defined period (commonly 1-5 years) rather than the whole loan term. The balance stays exactly where it started until the interest-only period ends, at which point payments step up to a table-loan structure recalculated against the remaining term.
+## Follow one balance for five years
 
-## Worked example
+On NZD 520,000 at an assumed 5.99% with 30 years to repay, the monthly table-loan model gives **NZD 3,114.32**. Interest-only in the same simplified monthly convention gives **NZD 2,595.67**.
 
-On the $520,000 loan at 5.99% from our Mortgage Calculator example, over a 30-year table loan:
+After 60 table-loan payments, modeled principal is **NZD 483,822.82**. After five years of interest-only payments with no principal reductions, it remains **NZD 520,000**. The approximately NZD 36,177.18 difference is debt already repaid by the table-loan borrower, not a gain that the interest-only borrower receives.
 
-| Structure | Monthly payment | Balance after 5 years |
-|---|---|---|
-| Table loan (P&I) | ≈ $3,114 | ≈ $493,000 |
-| Interest-only (5-yr period) | ≈ $2,596 | $520,000 (unchanged) |
+The widget then calculates how much the unchanged interest-only balance would need each month over the remaining 25 years at the entered rate. Future rates, fees and product terms can differ. Actual daily-interest dates and lender rounding can also change statement figures.
 
-The interest-only payment is lower month to month, but at the 5-year mark, the table loan borrower has paid down roughly $27,000 of principal, while the interest-only borrower still owes the full original amount — and their payment steps up sharply once the interest-only period ends and the remaining balance is re-amortized over a shorter remaining term.
+## Agree the exit plan with the lender
 
-> **Why the step-up at the end of an interest-only period can be steep:** if a $520,000 balance switches to table-loan repayments with only 25 years left instead of the original 30, the new payment is calculated to clear the same balance in less time — often a noticeably bigger jump than borrowers expect going in.
+Ask when the interest-only phase ends, how the repayment will be recalculated and what happens if the intended repayment strategy does not work. An extension is not automatic. The lender can require a fresh review of income, expenses, property and policy.
 
-## Common mistakes
+[Sorted's mortgage calculator](https://sorted.org.nz/tools/mortgage-calculator/) can help explore another scenario. Do not choose interest-only solely because the first debit is smaller, or assume it creates a tax advantage for every property investor.
 
-Borrowers frequently choose interest-only purely to lower their monthly payment without a specific plan for what happens when the period ends — banks increasingly require evidence of a credible strategy (a lump sum, planned sale, or investment vehicle) before approving it, particularly for owner-occupied lending.
+## Budget beyond the modeled payment
 
-Borrowers also assume interest-only is mainly for investment properties — while it is more common there (since it can maximise the tax-deductible interest component relative to rental income), it remains available for owner-occupied lending too, just under tighter conditions than in the past.
+Rates, insurance, maintenance and body-corporate charges remain outside both loan-payment figures. Property value may fall as well as rise, so a planned sale is not a guaranteed way to clear principal without a shortfall.
 
-A third mistake: not budgeting for the payment step-up at the end of the interest-only period — treating the lower initial payment as the permanent number, rather than a temporary phase with a known, calculable increase coming.
+### Is interest-only cheaper overall?
 
-## Where this calculator has limits
+On an otherwise identical rate path, keeping principal outstanding generally increases interest. Total cost also depends on actual rates, timing, fees and repayment strategy; the model is not a personalized recommendation.
 
-It shows the two structures at their simplest — some borrowers use a part table-loan, part interest-only split, which this direct comparison doesn't model. It also can't confirm whether a specific lender will approve an interest-only application without knowing your full financial picture and their current lending policy.
+### Does this verify eligibility?
 
-## FAQ
-
-**Is interest-only still available for owner-occupied homes in New Zealand?**
-Yes, though banks apply tighter criteria than in the past, generally requiring a credible plan for repaying the principal once the interest-only period ends.
-
-**Does interest-only cost more overall?**
-Yes — since the balance doesn't reduce during the interest-only period, more total interest accrues over the life of the loan compared to an equivalent table loan.
-
-**What happens automatically when my interest-only period ends?**
-Payments switch to a table-loan structure, recalculated to fully repay the remaining balance over whatever term is left — this step-up is worth planning for well in advance.
-
-**Is interest-only more common for investment properties?**
-Yes, considerably — many investors use it to maximise the interest-deductible portion of their loan while relying on rental income and property appreciation as the underlying strategy.
-
-**Can I extend my interest-only period when it ends?**
-Sometimes, subject to your bank's current lending policy and your financial circumstances at the time — it's not automatic and generally requires a fresh application or review.
-
-## Related tools
-
-Mortgage Calculator · Rental Yield Calculator · LVR Calculator
-
----
-
-*Educational content, not financial advice. Interest-only eligibility and lending criteria vary by bank and change over time — confirm your specific options with a licensed New Zealand mortgage adviser. Written by the MortgagePro Global team.*
+No. It demonstrates repayment structure using your inputs, not a lender offer or a prediction that the interest-only phase can be approved or extended.

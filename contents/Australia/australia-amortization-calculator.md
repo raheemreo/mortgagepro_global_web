@@ -1,59 +1,35 @@
-# Amortization Calculator: What Switching to Fortnightly Payments Actually Saves
+# Australia Fortnightly Repayments: Count the Extra Annual Payment
 
-**Meta description:** See how fortnightly mortgage payments — matched to Australia's common fortnightly pay cycle — quietly shave years off a home loan compared to monthly payments.
+**Meta description:** Compare Australian monthly and half-monthly fortnightly repayments with the extra annual cash commitment made explicit.
 
-Many Australian employers pay fortnightly, and a lot of lenders default mortgage repayments to a monthly schedule anyway — a mismatch that, once corrected, turns out to meaningfully shorten a loan's life without requiring a single extra dollar of annual budget.
+Half a monthly payment every fortnight is not just a different way of slicing the same annual budget. At 26 half-payments a year, it totals thirteen monthly payments rather than twelve. The extra scheduled cash is **8.33%** of the original annual repayment amount.
 
-## The fortnightly math
+On AUD 520,000 at an assumed 6.19% over 25 years, the monthly model gives **AUD 3,411.02**. The half-monthly fortnightly amount is about AUD 1,705.51. The accelerated pattern commits approximately another AUD 3,411.02 across a modeled year.
 
-Twelve monthly payments a year is straightforward. Twenty-six fortnightly payments a year — matching a fortnightly pay cycle — is not simply "half the monthly amount, doubled." A year has slightly more than 24 fortnights, so paying half your monthly amount every fortnight results in the equivalent of 13 monthly payments annually, not 12 — one full extra payment a year, applied directly to principal, purely from aligning payment frequency to a fortnightly income cycle.
+<!-- calculator -->
 
-## Worked example
+## Separate frequency from amount
 
-On the $520,000 loan at 6.19%, 25-year term, from our Mortgage Calculator:
+A lender can instead calculate a fortnightly amount intended to preserve the annual payment total. More frequent reductions can still slightly change interest timing; the much larger acceleration from the half-monthly arrangement comes from the extra money.
 
-| Payment schedule | Payment amount | Effective annual payments | Payoff time |
-|---|---|---|---|
-| Standard monthly | $3,413/month | 12 | 25 years |
-| Fortnightly (half of monthly) | $1,707/fortnight | 26 (= 13 monthly equivalents) | ≈ 21.5 years |
+[Moneysmart's faster-repayment guidance](https://moneysmart.gov.au/home-loans/pay-off-your-mortgage-faster) discusses the choices. Confirm the actual debit amount, dates, loan restrictions and the way your lender applies partial or additional payments.
 
-That's roughly 3.5 years cut from the loan term, and a real reduction in total interest paid — purely from a payment frequency change that matches how most people's income actually arrives.
+## Read the model assumptions
 
-> **The distinction that matters:** this only works if the fortnightly payment is set as exactly half the monthly amount, paid every fortnight (26 times a year). Some lenders offer a "fortnightly" option that simply divides the annual total by 26 evenly — mathematically identical to monthly payments with no early-payoff benefit at all. Confirm which version your lender is actually offering.
+The tool converts the monthly-model rate to an equivalent rate for 26 periods a year, then simulates half-monthly repayments until the balance is cleared. The final payment can be smaller. It assumes a constant rate and no fees or offset balance.
 
-## Common mistakes
+This is not the lender's daily accrual schedule. A year contains slightly more than 26 exact two-week periods, and actual dates, rounding and product terms can affect interest. The result is a comparison under a stated convention, not a guaranteed payoff date.
 
-Borrowers frequently assume any fortnightly option automatically accelerates payoff — as above, only the "half-of-monthly" structure does; the evenly-divided version doesn't produce the extra-payment effect, even though it feels similar in practice.
+## Match the commitment to real cash flow
 
-Borrowers also don't reassess this when their pay frequency changes — someone who moves from a fortnightly-paid role to a monthly-paid one (or vice versa) sometimes keeps a mismatched repayment schedule that's harder to manage against actual cash flow, even if the loan math itself is unaffected.
+A smaller fortnightly debit can fit a pay cycle more conveniently, but check annual cash and retain an emergency reserve. A change in payroll frequency does not create extra salary relative to the same annual earnings.
 
-A third mistake: not combining this with an offset account. Since interest is calculated daily on most Australian loans, timing extra funds into an offset account between fortnightly pay cycles compounds the benefit further than the amortization effect alone.
+If extra repayments are restricted during a fixed period, ask about allowances and break costs before changing the debit. [Offset accounts](/blog/australia-offset-account-calculator) have another mechanism and should not be silently combined with this model's savings.
 
-## Where this calculator has limits
+### Will a future rate change affect the result?
 
-It assumes a constant variable rate for the full term, which isn't realistic on a variable-rate loan where the rate can move at any time — actual total interest saved will depend on the rate path over the full loan life, not just the current rate. It also doesn't factor in an offset account running alongside the loan, which many Australian borrowers use in combination with accelerated payment frequency.
+Yes. Required repayments or the path to payoff can change under the contract. A fixed-rate simulation cannot predict the total interest on a future variable-rate path.
 
-## FAQ
+### Can I rely on the scheduled end date for a discharge?
 
-**Does fortnightly payment cost more per year than monthly?**
-Yes, slightly — it's mathematically equivalent to one extra monthly payment annually, which is the entire mechanism behind the faster payoff.
-
-**How do I know if my lender's fortnightly option actually accelerates payoff?**
-Check whether the fortnightly amount equals exactly half your monthly repayment — if it's calculated as 1/26th of the annual total instead, there's no acceleration effect.
-
-**Can I switch payment frequency without refinancing?**
-Usually yes — most lenders allow a frequency change as a simple account adjustment, not a full refinance, though it's worth confirming there's no fee attached.
-
-**Does this work the same way with weekly payments?**
-Yes — weekly payments set at exactly a quarter of the monthly amount (52 payments = 13 monthly equivalents) produce nearly identical results to the fortnightly approach.
-
-**Does my variable rate changing affect the payoff timeline shown here?**
-Yes — a rate rise extends the effective payoff time (or increases required payments to hold the same timeline); a rate cut shortens it, since amortization schedules recalculate against whatever rate is currently in effect.
-
-## Related tools
-
-Mortgage Calculator · Offset Account Calculator · Refinance Tool
-
----
-
-*Educational content, not financial advice. This example uses a specific loan scenario for illustration — confirm your actual repayment schedule and options with your lender. Written by the MortgagePro Global team.*
+Use the lender's actual statement and payout quote. This tool does not include arrears, fees, an irregular payment history or exact daily settlement interest.

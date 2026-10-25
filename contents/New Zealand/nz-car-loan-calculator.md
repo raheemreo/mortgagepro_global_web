@@ -1,60 +1,31 @@
-# Car Loan Calculator: Why a Vehicle Loan Sits Inside a Mortgage App
+# New Zealand Car Loans: Track the Outstanding Debt Before a Mortgage
 
-**Meta description:** See exactly how much a car loan reduces your New Zealand mortgage borrowing capacity, using the same dollar-for-dollar DTI math the banks apply.
+**Meta description:** Model a car-loan payment and remaining balance, then understand its separate effects on mortgage DTI, cash flow and deposit savings.
 
-It might seem odd to find a car loan calculator inside a mortgage app — until you see how directly a vehicle loan affects New Zealand mortgage serviceability. Under the country's debt-to-income restrictions, a car loan doesn't just show up as "another bill" in a general affordability check — it subtracts directly, dollar for dollar, from the maximum mortgage a bank can offer.
+A car loan affects a home purchase in more than one way. Its assessed outstanding debt can raise DTI, its monthly payment uses cash flow, and paying cash for the car instead can reduce the deposit. None of those changes alone determines the mortgage outcome.
 
-## The direct connection to DTI
+The calculator estimates a monthly amortizing car loan with no fees or balloon. It reports the balance after the entered number of payments rather than assuming the original loan amount is always the relevant debt.
 
-New Zealand's DTI restrictions (see our DTI Calculator) cap most owner-occupier lending at 6 times gross income and investor lending at 7 times — calculated on **total** debt, not just the mortgage. A car loan balance is included in that total exactly the same way an existing mortgage or personal loan would be.
+<!-- calculator -->
 
-## Worked example
+## Use the balance at the assessment date
 
-A household with $150,000 gross annual income considering a new car loan before applying for a mortgage:
+A new NZD 35,000 loan and a loan partly repaid over two years are different debt positions. The remaining balance depends on the rate, payment term and payment history. An arbitrary NZD 16,000 year-two balance should not be presented without those inputs.
 
-| Scenario | Max mortgage calculation | Max mortgage |
-|---|---|---|
-| No car loan | 6 × $150,000 − $0 | $900,000 |
-| $35,000 car loan (5-yr term) | 6 × $150,000 − $35,000 | $865,000 |
-| $35,000 car loan, 2 years into term (~$16,000 remaining) | 6 × $150,000 − $16,000 | $884,000 |
+The widget first calculates the scheduled payment, then reduces principal each month. At month zero it reports the starting amount; at the end of a fully paid modeled term it reports zero. For an actual payout, obtain the lender's settlement quote, which can include fees or accrued interest not in this schedule.
 
-That $35,000 car loan costs this household $35,000 of mortgage borrowing capacity when it's new — but as the loan balance pays down, so does its drag on DTI. Timing a mortgage application for after a car loan is substantially paid off (rather than right after taking one out) can meaningfully change the outcome.
+## Put the figure into the right mortgage model
 
-> **The monthly repayment matters too, separately from DTI:** beyond the DTI calculation, the car loan's monthly repayment also factors into the bank's standard serviceability assessment — a $500/month car payment reduces the surplus income a bank sees as available for mortgage repayments, on top of the DTI effect on the maximum loan size itself.
+[RBNZ's DTI guidance](https://www.rbnz.govt.nz/education/explainers/dti) describes lender speed limits on high-DTI lending. At a chosen six-times planning ratio, another NZD 35,000 of assessed debt uses NZD 35,000 of that ratio's debt room. That is arithmetic, not a universal dollar-for-dollar reduction in an approved mortgage.
 
-## Common mistakes
+Monthly serviceability can be the tighter constraint. A short car-loan term can require a substantial payment even when its balance is relatively modest. Ask how the bank treats vehicle finance, leases, credit limits and any co-borrower obligations.
 
-Buyers frequently take out a car loan shortly before applying for a mortgage, not realizing the full original loan balance (not just the outstanding amount at time of purchase) is what shows on credit records and gets factored into DTI at that point.
+## Consider the deposit tradeoff
 
-Buyers also assume paying cash for a car has zero mortgage impact — while it avoids the DTI effect entirely, it does reduce available deposit funds, which affects LVR (see our LVR Calculator) instead. There's a genuine tradeoff between the two approaches, not a clearly "free" option.
+Paying the car loan off can release a monthly obligation but uses cash. Paying cash for a replacement car avoids new finance but may lower the house deposit and change LVR. Use the [LVR guide](/blog/nz-lvr-calculator) and a full spending plan rather than assuming one option has no mortgage impact.
 
-A third mistake: not accounting for a novated lease or a car loan taken out just before refixing or refinancing an existing mortgage — even without a new home purchase, additional debt can affect a bank's willingness to approve favourable terms at your next refix.
+[Sorted's borrowing guidance](https://sorted.org.nz/guides/home-buying/how-much-can-we-borrow/) is a useful starting point for the broader assessment.
 
-## Where this calculator has limits
+### Does ordinary refixing always require the same review as new borrowing?
 
-It applies the standard DTI subtraction method, but doesn't account for a specific bank's individual serviceability policy around vehicle finance, which can vary — some lenders may treat certain lease structures differently from a standard loan. It also can't predict future DTI threshold changes, which the Reserve Bank reviews periodically.
-
-## FAQ
-
-**Does a car loan affect my DTI even if I'm not currently applying for a mortgage?**
-It affects your DTI position at any point it's assessed — if you plan to buy or refix in the near future, it's worth factoring in even before you formally apply.
-
-**Is a car lease treated the same as a car loan for DTI purposes?**
-Generally treated similarly as a debt obligation, though specific treatment can vary by lender and lease structure — worth confirming with your bank or mortgage adviser directly.
-
-**Does paying off a car loan early before applying help?**
-Yes — since DTI is calculated on the outstanding balance, paying down or clearing a car loan before applying directly restores that borrowing capacity.
-
-**Is it better to pay cash for a car before buying a home?**
-It avoids the DTI effect but reduces available deposit funds, shifting the tradeoff to LVR instead of DTI — the better choice depends on which constraint is more binding for your specific application.
-
-**Does a car loan affect investor DTI the same way?**
-Yes, the same dollar-for-dollar subtraction applies, just against the higher 7x investor threshold rather than the 6x owner-occupier cap.
-
-## Related tools
-
-DTI Calculator · Mortgage Calculator · LVR Calculator
-
----
-
-*Educational content, not financial advice. DTI calculation methods and lending criteria are set by the Reserve Bank of New Zealand and individual banks, and can change — confirm your specific situation with a licensed New Zealand mortgage adviser. Written by the MortgagePro Global team.*
+No blanket treatment is assumed here. A simple rate refix, a lender switch and borrowing more can be assessed differently. Confirm the actual proposed transaction with the bank.
