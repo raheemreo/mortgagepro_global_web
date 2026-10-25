@@ -1,0 +1,7 @@
+/* App policy only: immediate, accessible section navigation. */
+html{scroll-behavior:auto!important}
+.privacy-jump-links{display:flex;flex-wrap:wrap;gap:.65rem;margin:1rem 0 1.5rem}
+.site-document .privacy-jump-links a{display:inline-flex;align-items:center;border:1px solid #b7c8db;border-radius:.5rem;padding:.55rem .8rem;background:#edf3fa;color:#123f68!important;font-weight:600;text-decoration:none;max-width:100%;box-sizing:border-box}
+.privacy-jump-links a:hover{background:#dce9f7}.privacy-jump-links a:focus-visible{outline:3px solid #2466a8;outline-offset:3px}
+.site-document h2:target{outline:2px solid #2466a8;outline-offset:.4rem;background:#edf3fa}
+@media(prefers-color-scheme:dark){.site-document a{color:#9be5db!important}.site-document h2:target{background:#244464;outline-color:#91bbef}}
