@@ -1,0 +1,7 @@
+{
+  "description": "Illustrative US fixed-rate scenario, not a current lender offer",
+  "price": 450000,
+  "down": 20,
+  "rate": 6.66,
+  "years": 30
+}

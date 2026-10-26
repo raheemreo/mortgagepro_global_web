@@ -1883,13 +1883,13 @@
     <div class="rate-cards">
       <div class="mrc"><span class="mrc-icon">🏠</span>
         <div class="mrc-lbl">30-Yr Fixed</div>
-        <div class="mrc-val" data-rate="usa.fixed30">7.32%</div>
+        <div class="mrc-val" data-rate="usa.fixed30">7.32%</div><small class="rate-provenance" data-rate-meta="usa.fixed30"><a href="https://fred.stlouisfed.org/series/MORTGAGE30US">Freddie Mac PMMS via FRED</a> · Observed 2026-10-22 · Source checked 2026-10-26</small>
         <div class="mrc-sub">Freddie Mac PMMS</div>
         <div class="mrc-chg dn">↓ -0.04</div>
       </div>
       <div class="mrc"><span class="mrc-icon">🏡</span>
         <div class="mrc-lbl">15-Yr Fixed</div>
-        <div class="mrc-val" data-rate="usa.fixed15">6.68%</div>
+        <div class="mrc-val" data-rate="usa.fixed15">6.68%</div><small class="rate-provenance" data-rate-meta="usa.fixed15"><a href="https://fred.stlouisfed.org/series/MORTGAGE15US">Freddie Mac PMMS via FRED</a> · Observed 2026-10-22 · Source checked 2026-10-26</small>
         <div class="mrc-sub">Freddie Mac PMMS</div>
         <div class="mrc-chg dn">↓ -0.05</div>
       </div>
@@ -2076,7 +2076,8 @@
     </div>
 
     <!-- ===== EDUCATIONAL CONTENT SECTION ===== -->
-    <section class="content-article" id="usa-guide" aria-labelledby="usa-guide-h"><h2 id="usa-guide-h">US Mortgage Budget Planning</h2><p>Updated October 25, 2026 · Scenario estimates; confirm actual lender and transaction terms.</p><h2>Read the payment components</h2>
+    <!-- BENCHMARK PROVENANCE --><section class="content-article benchmark-reference" aria-label="Dated policy benchmark"><p>FOMC Federal Funds Target Range: <strong data-rate="usa.fed">3.75% – 4.00%</strong><small class="rate-provenance" data-rate-meta="usa.fed"><a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a1.htm">Federal Reserve Board</a> · Effective 2026-09-17 · Source checked 2026-10-26</small></p><p>This is a dated policy reference, not a mortgage offer. Enter your lender's quote for the calculation. <a href="/data-sources">Sources and observation dates</a>.</p></section><!-- END BENCHMARK PROVENANCE -->
+<section class="content-article" id="usa-guide" aria-labelledby="usa-guide-h"><h2 id="usa-guide-h">US Mortgage Budget Planning</h2><p>Updated October 25, 2026 · Scenario estimates; confirm actual lender and transaction terms.</p><h2>Read the payment components</h2>
 <p>The base repayment spreads financed principal over monthly periods at the entered annual rate. Property tax, homeowners insurance and assumed monthly PMI are shown separately. HOA, maintenance and closing expenses are outside this root tool's payment.</p>
 <p>PITI means principal, interest, property taxes and homeowners insurance. Mortgage insurance is an additional item; it should not be confused with homeowners insurance. Use the <a href="/blog/usa-piti-calculator">PITI guide</a> to compare the categories with a lender disclosure.</p>
 <h2>PMI is an assumption, not an insurer quote</h2>
@@ -2215,8 +2216,8 @@
 
   <!-- External JS (compatibility) -->
   <script src="/js/components.js" defer></script>
-  <script src="/js/rate-snapshot.js?v=e6b148f65b8b" defer></script>
-<script src="/js/rates.js?v=024c1314e60e" defer></script>
+  <script src="/js/rate-snapshot.js?v=d5e821e48b18" defer></script>
+<script src="/js/rates.js?v=ce30a282355e" defer></script>
   <script src="/js/charts.js" defer></script>
   <script src="/js/accessibility.js" defer></script>
 

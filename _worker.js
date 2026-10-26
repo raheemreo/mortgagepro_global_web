@@ -162,13 +162,15 @@ Sitemap: https://mortgageproglobal.com/sitemap.xml
           const response = await fetch(upstream, {signal: controller.signal});
           if (!response.ok) return;
           const json = await response.json();
-          const observations = spec.country === 'usa' ? json.observations : json.observations?.slice().reverse();
-          const obs = observations?.find(o => valid(spec.country === 'usa' ? o.value : o[spec.series]?.v, o.date || o.d));
+          const obs = (json.observations || [])
+            .filter(o => valid(spec.country === 'usa' ? o.value : o[spec.series]?.v, o.date || o.d))
+            .reduce((latest, o) => !latest || (o.date || o.d) > (latest.date || latest.d) ? o : latest, null);
           if (!obs || !snapshot.rates[spec.country]?.[spec.name]) return;
           const rate = Number(spec.country === 'usa' ? obs.value : obs[spec.series].v), date = obs.date || obs.d;
           const item = snapshot.rates[spec.country][spec.name];
+          if (item.effectiveDate && date < item.effectiveDate) return;
           const days = (now - Date.parse(date)) / 86400000, fresh = days <= (spec.cadence === 'weekly' ? 10 : 4);
-          Object.assign(item, {rate, formatted: rate.toFixed(2) + '%', effectiveDate: date, lastVerified: today, sourceUrl, kind: 'observation', cadence: spec.cadence, status: fresh ? 'live' : 'stale', isLive: fresh});
+          Object.assign(item, {rate, formatted: rate.toFixed(2) + '%', effectiveDate: date, lastVerified: today, sourceUrl, source: spec.country === 'usa' ? (spec.name.startsWith('fixed') ? 'Freddie Mac PMMS via FRED' : 'Federal Reserve Board H.15 via FRED') : 'Bank of Canada Valet API', kind: 'observation', cadence: spec.cadence, status: fresh ? 'live' : 'stale', isLive: fresh});
         } catch (_) {
           // Keep the original value and its actual last-verified date on failure.
         } finally { clearTimeout(timer); }

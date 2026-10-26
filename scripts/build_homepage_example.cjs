@@ -1,0 +1,11 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path');
+const root=path.resolve(__dirname,'..'),example=require('../data/homepage-example.json');
+const {calculate}=require('../js/us-tools-models.js');
+const values=calculate('mortgage',example).values;
+const money=x=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',minimumFractionDigits:2,maximumFractionDigits:2}).format(x);
+const file=path.join(root,'index.html');let s=fs.readFileSync(file,'utf8');
+const fields={price:money(example.price),down:money(example.price*example.down/100)+' ('+example.down+'%)',rate:example.rate+'% ('+example.years+'-yr fixed assumption)',payment:money(values.pi),interest:money(values.interest)};
+for(const [key,value]of Object.entries(fields))s=s.replace(new RegExp('(<[^>]+data-home-example="'+key+'"[^>]*>)[^<]*(<\\/[^>]+>)'),(_,a,b)=>a+value+b);
+fs.writeFileSync(file,s);
+module.exports={fields};

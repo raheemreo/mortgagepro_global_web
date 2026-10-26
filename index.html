@@ -625,8 +625,8 @@
   <!-- Advertising uses the single loader after the consent defaults. -->
 
   <script src="/js/components.js" defer></script>
-  <script src="/js/rate-snapshot.js?v=e6b148f65b8b" defer></script>
-<script src="/js/rates.js?v=024c1314e60e" defer></script>
+  <script src="/js/rate-snapshot.js?v=d5e821e48b18" defer></script>
+<script src="/js/rates.js?v=ce30a282355e" defer></script>
   <script src="/js/accessibility.js" defer></script>
 
   <!-- Favicon, Apple Touch Icon & Web App Manifest -->
@@ -748,28 +748,28 @@
             <div class="hero-calc-mockup">
               <div class="hero-calc-mockup-header">
                 <div class="mockup-icon">🏠</div>
-                <h2>Mortgage Calculator</h2>
+                <h2>Illustrative Mortgage</h2>
               </div>
               <div class="mockup-field">
                 <label>Home Price</label>
-                <div class="mockup-input">$450,000</div>
+                <div class="mockup-input" data-home-example="price">$450,000.00</div>
               </div>
               <div class="mockup-field">
                 <label>Down Payment</label>
-                <div class="mockup-input">$90,000 (20%)</div>
+                <div class="mockup-input" data-home-example="down">$90,000.00 (20%)</div>
               </div>
               <div class="mockup-field">
                 <label>Interest Rate</label>
-                <div class="mockup-input">6.66% (30-yr fixed)</div>
+                <div class="mockup-input" data-home-example="rate">6.66% (30-yr fixed assumption)</div>
               </div>
               <div class="mockup-result">
                 <div class="mockup-result-label">Monthly Payment</div>
-                <div class="mockup-result-value">$2,313</div>
+                <div class="mockup-result-value" data-home-example="payment">$2,313.46</div>
                 <div class="mockup-result-sub">Principal + Interest</div>
               </div>
               <div class="hero-floating-cards">
                 <div class="hero-float-card">
-                  <div class="hero-float-value">$250K</div>
+                  <div class="hero-float-value" data-home-example="interest">$472,844.50</div>
                   <div class="hero-float-label">Total Interest</div>
                 </div>
                 <div class="hero-float-card">

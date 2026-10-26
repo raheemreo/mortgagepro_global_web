@@ -14,7 +14,20 @@ function build(){
   if(!/src="\/js\/rates\.js/.test(s))continue;
   s=s.replace(/<script[^>]+src="\/js\/rate-snapshot\.js[^\"]*"[^>]*><\/script>\s*/g,'');
   s=s.replace(/<script[^>]+src="\/js\/rates\.js[^\"]*"[^>]*><\/script>/g,`<script src="${snapshotUrl}" defer></script>\n<script src="${ratesUrl}" defer></script>`);
+  const countryHubs={'usa-mortgage-calculator.html':['usa','fed'],'canada-mortgage-calculator.html':['canada','boc'],'uk-mortgage-calculator.html':['uk','boe'],'australia-mortgage-calculator.html':['australia','rba'],'new-zealand-mortgage-calculator.html':['newzealand','ocr'],'india-home-loan-emi-calculator.html':['india','repo'],'europe-mortgage-calculator.html':['europe','ecb']};
+  const hub=countryHubs[name];
+  if(hub){
+   s=s.replace(/<!-- BENCHMARK PROVENANCE -->[\s\S]*?<!-- END BENCHMARK PROVENANCE -->\s*/g,'');
+   const[c,k]=hub,item=data.rates[c][k];
+   const note=`<!-- BENCHMARK PROVENANCE --><section class="content-article benchmark-reference" aria-label="Dated policy benchmark"><p>${esc(item.instrument)}: <strong data-rate="${c}.${k}">${esc(item.formatted)}</strong></p><p>This is a dated policy reference, not a mortgage offer. Enter your lender's quote for the calculation. <a href="/data-sources">Sources and observation dates</a>.</p></section><!-- END BENCHMARK PROVENANCE -->`;
+   s=s.replace(/(?=<section class="content-article")/,note+'\n');
+  }
   s=s.replace(/(<([a-z][\w-]*)\b[^>]*\bdata-rate(?:-unavailable)?="([\w]+)\.([\w]+)"[^>]*>)[^<]*(<\/\2>)/gi,(all,start,tag,country,key,end)=>data.rates[country]?.[key]?start.replace('data-rate-unavailable=', 'data-rate=')+esc(data.rates[country][key].formatted)+end:start.replace(/data-rate(?:-unavailable)?=/, 'data-rate-unavailable=')+'Lender quote'+end);
+  s=s.replace(/<small class="rate-provenance" data-rate-meta="[^"]*">[\s\S]*?<\/small>/g,'');
+  s=s.replace(/(<([a-z][\w-]*)\b[^>]*\bdata-rate="([\w]+)\.([\w]+)"[^>]*>)[^<]*(<\/\2>)/gi,(all,start,tag,country,key)=>{
+   const item=data.rates[country]?.[key];if(!item)return all;
+   return all+`<small class="rate-provenance" data-rate-meta="${country}.${key}"><a href="${esc(item.sourceUrl)}">${esc(item.source)}</a> · ${item.kind==='policy'?'Effective':'Observed'} ${item.effectiveDate} · Source checked ${item.lastVerified}</small>`;
+  });
   fs.writeFileSync(file,s);
  }
  console.log('Built browser rate snapshot and synchronized labeled HTML rates.');

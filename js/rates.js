@@ -16,8 +16,9 @@ function render(data){
  document.querySelectorAll('[data-rate-meta]').forEach(el=>{
   const[c,k]=el.dataset.rateMeta.split('.'),item=data.rates[c]?.[k];if(!item)return;
   const status=ageStatus(item),badge=document.createElement('span');badge.className='rate-badge rate-badge-'+(status==='live'?'live':status==='stale'?'stale':'ref');
-  badge.textContent=(status==='stale'?'Historical / review due':status==='reference'?'Policy reference':'Latest observation')+' · '+item.source+' · '+item.effectiveDate;
-  badge.title='Last checked '+item.lastVerified+'. '+(item.kind==='policy'?'Policy reference; not a mortgage quote.':'Dated source observation; not a personalized quote.');el.replaceChildren(badge);
+  const link=document.createElement('a');link.href=item.sourceUrl;link.textContent=item.source;
+  badge.append(link,document.createTextNode(' · '+(item.kind==='policy'?'Effective ':'Observed ')+item.effectiveDate+' · Source checked '+item.lastVerified+(status==='stale'?' · Review due':'')));
+  badge.title=item.kind==='policy'?'Policy reference; not a mortgage quote.':'Dated source observation; not a personalized quote.';el.replaceChildren(badge);
  });
  document.querySelectorAll('[data-rate-updated]').forEach(el=>{el.textContent='Dated benchmarks and policy references. Check each source date; calculator rates are editable assumptions.';});
  document.dispatchEvent(new CustomEvent('ratesUpdated',{detail:{rates:window.RATES,detail:data}}));
