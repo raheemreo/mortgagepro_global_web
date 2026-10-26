@@ -36,6 +36,10 @@ Google's published privacy messages and regional controls, when available for th
 
 Advertising consent signals are initialized to denied before the ad loader runs. That technical default is not a substitute for a published consent message or a declaration of legal certification. The consent message and available ad modes depend on Google's regional and account configuration; declining a choice does not guarantee one particular type of advertisement.
 
+AdSense requests also start paused. If the applicable provider state is unknown or fails, the site does not resume requests. Where EU regulations apply, the additional gate requires a completed provider decision with storage and Google's vendor permission; refusing those permissions keeps requests paused. AdSense evaluates the actual TCF signal for permitted processing. We do not create consent strings or grant consent on your behalf.
+
+The separate [Privacy Settings page](/privacy-settings) loads the existing publisher tag only to make published Google controls available. That page never resumes advertising requests and has no ad units. It remains useful from documents that do not load advertising code. Availability still depends on the actual published provider configuration; this website does not claim to have certified the owner's dashboard setup.
+
 If the provider interface is unavailable, contact us about the issue. You can block cookies or scripts in your browser, although some advertising or security features may then change.
 
 ## Browser preferences

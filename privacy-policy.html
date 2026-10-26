@@ -12,8 +12,9 @@
       'ad_personalization': 'denied',
       'wait_for_update': 500
     });
+    (window.adsbygoogle = window.adsbygoogle || []).pauseAdRequests = 1;
   </script>
-  <script src="/js/site-privacy.js?v=7e398101cb01" defer></script>
+  <script src="/js/site-privacy.js?v=9c8a7f7229bb" defer></script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -168,8 +169,8 @@
 
   <!-- Structured Data: BreadcrumbList -->
 
-  <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  <link rel="preload" href="/css/style.css?v=88c170b2957a" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/style.css?v=88c170b2957a"></noscript>
 
   <meta name="google-adsense-account" content="ca-pub-1114757923146718">
   <!-- Google tag (gtag.js) -->
@@ -297,6 +298,8 @@
 <h2 id="privacy-controls">Privacy controls</h2>
 <p>Google's published privacy messages and regional controls, when available for this site and your location, let you make or change advertising choices. The Privacy Settings links use the provider's settings interface when it is available and otherwise lead to this section. You can also use <a href="https://myadcenter.google.com/">Google's ad controls</a> and your browser's cookie controls.</p>
 <p>Advertising consent signals are initialized to denied before the ad loader runs. That technical default is not a substitute for a published consent message or a declaration of legal certification. The consent message and available ad modes depend on Google's regional and account configuration; declining a choice does not guarantee one particular type of advertisement.</p>
+<p>AdSense requests also start paused. If the applicable provider state is unknown or fails, the site does not resume requests. Where EU regulations apply, the additional gate requires a completed provider decision with storage and Google's vendor permission; refusing those permissions keeps requests paused. AdSense evaluates the actual TCF signal for permitted processing. We do not create consent strings or grant consent on your behalf.</p>
+<p>The separate <a href="/privacy-settings">Privacy Settings page</a> loads the existing publisher tag only to make published Google controls available. That page never resumes advertising requests and has no ad units. It remains useful from documents that do not load advertising code. Availability still depends on the actual published provider configuration; this website does not claim to have certified the owner's dashboard setup.</p>
 <p>If the provider interface is unavailable, contact us about the issue. You can block cookies or scripts in your browser, although some advertising or security features may then change.</p>
 <h2>Browser preferences</h2>
 <p>The current publisher-controlled calculator code does not save financial inputs or a borrower profile in localStorage or sessionStorage. Browser settings can remove site data and provider cookies where present. We do not use a website login to run the calculators. See the <a href="/cookie-policy">cookie policy</a> for the distinction between display preferences, security and advertising technologies.</p>
@@ -349,7 +352,7 @@
           <li><a href="/data-deletion-policy">Data Deletion Policy</a></li>
           <li><a href="/terms-and-conditions">Terms and Conditions</a></li>
           <li><a href="/disclaimer">Disclaimer</a></li>
-          <li><a href="/privacy-policy#privacy-controls"
+          <li><a href="/privacy-settings"
               onclick="return window.MPGPrivacy ? MPGPrivacy.open(event) : true;">Privacy
               Settings</a></li>
         </ul>

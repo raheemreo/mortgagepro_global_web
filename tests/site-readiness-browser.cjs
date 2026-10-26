@@ -69,7 +69,7 @@ const docs=['about','authors/abdul-raheem','privacy-policy','cookie-policy','edi
   // Both real-provider APIs and the no-provider fallback remain usable.
   const p=await context.newPage();await p.goto(base+'/privacy-policy.html');
   assert.equal(await p.evaluate(()=>MPGPrivacy.open()),true);
-  assert.equal(await p.evaluate(()=>{let called=0;googlefc.showRevocationMessage=()=>called++;const r=MPGPrivacy.open({preventDefault(){}});return !r&&called===1;}),true);await p.close();
+  assert.equal(await p.evaluate(()=>{let called=0;window.__tcfapi=()=>{};googlefc.callbackQueue.find(x=>x.CONSENT_API_READY).CONSENT_API_READY();googlefc.showRevocationMessage=()=>called++;const r=MPGPrivacy.open({preventDefault(){}});googlefc.callbackQueue.at(-1).CONSENT_API_READY();return !r&&called===1;}),true);await p.close();
   await context.close();
  }
  console.log('PASS: '+count+' page/viewport checks; seven calculator invalid/zero/scenario/telemetry checks; privacy controls. External traffic blocked.');

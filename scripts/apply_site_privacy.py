@@ -13,6 +13,7 @@ BOOTSTRAP='''<script data-mpg-consent>
       'ad_personalization': 'denied',
       'wait_for_update': 500
     });
+    (window.adsbygoogle = window.adsbygoogle || []).pauseAdRequests = 1;
   </script>'''
 POLICY={'privacy-policy.html','cookie-policy.html','terms-and-conditions.html','disclaimer.html','data-deletion-policy.html','app-privacy-policy.html','contact.html','404.html','editorial-policy.html','corrections-policy.html','affiliate-disclosure.html'}
 def build():
@@ -38,19 +39,20 @@ def build():
    tag=re.sub(r'onclick="[^"]*"','onclick="return window.MPGPrivacy ? MPGPrivacy.open(event) : true;"',m[0])
    return re.sub(r'href="[^"]*"','href="/privacy-policy#privacy-controls"',tag,count=1)
   s=re.sub(r'<a\b[^>]*onclick="[^"]*googlefc[^\"]*"[^>]*>',privacy_link,s,flags=re.S)
-  for asset in ['js/root-calculator-state.js','css/root-calculators.css','css/site-documents.css']:
+  for asset in ['js/root-calculator-state.js','css/root-calculators.css','css/site-documents.css','css/style.css','css/us-tools.css']:
    version=hashlib.sha256((ROOT/asset).read_bytes()).hexdigest()[:12]
    s=re.sub(r'((?:src|href)="/'+re.escape(asset)+r')(?:\?[^"]*)?"',lambda m:m[1]+'?v='+version+'"',s)
   if path.name in {'usa-mortgage-calculator.html','canada-mortgage-calculator.html','uk-mortgage-calculator.html','australia-mortgage-calculator.html','new-zealand-mortgage-calculator.html','india-home-loan-emi-calculator.html','europe-mortgage-calculator.html'}:
    v=hashlib.sha256((ROOT/'css/tool-cards.css').read_bytes()).hexdigest()[:12]
    s=re.sub(r'<link[^>]+href="/css/tool-cards\.css[^"]*"[^>]*>\s*','',s)
    s=s.replace('</head>','<link rel="stylesheet" href="/css/tool-cards.css?v='+v+'">\n</head>')
+  if path.name!='privacy-settings.html':s=re.sub(r'href="/privacy-policy#privacy-controls"(?=[^>]*onclick=)', 'href="/privacy-settings"',s)
   s=re.sub(r'(?m)^[ \t]+$','',s)
   s=re.sub(r'\n{3,}','\n\n',s)
   path.write_text(s)
  # Shared footer for pages which inject it rather than including the static copy.
  p=ROOT/'components/footer.html'
  if p.exists():
-  s=p.read_text();s=re.sub(r'<a\b[^>]*onclick="[^"]*googlefc[^\"]*"[^>]*>',privacy_link,s,flags=re.S);p.write_text(s)
+  s=p.read_text();s=re.sub(r'<a\b[^>]*onclick="[^"]*googlefc[^\"]*"[^>]*>',privacy_link,s,flags=re.S);s=re.sub(r'href="/privacy-policy#privacy-controls"(?=[^>]*onclick=)', 'href="/privacy-settings"',s);p.write_text(s)
  print('Normalized consent ordering, privacy links and optional tracking across published HTML.')
 if __name__=='__main__':build()

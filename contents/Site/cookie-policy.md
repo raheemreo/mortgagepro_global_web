@@ -28,7 +28,9 @@ This website release does not load Google Analytics or Microsoft Clarity from pu
 
 ## Change your choices
 
-Use Privacy Settings to reopen the advertising provider's controls when they are available for your location. If those controls have not loaded, the link opens the [privacy controls section](/privacy-policy#privacy-controls), where you can find provider and browser options. The availability of a message depends on the site's published provider configuration and regional rules.
+Use Privacy Settings to reopen the advertising provider's controls when they are available for your location. If those controls have not loaded on the current page, the link opens the [Privacy Settings page](/privacy-settings), which also links to policy and browser guidance. The availability of a message depends on the site's published provider configuration and regional rules.
+
+The [Privacy Settings entry point](/privacy-settings) can load the published Google interface from an ad-free document. It keeps ad requests paused even if consent has already been granted. On eligible content pages, unknown or failed provider state does not resume ad requests, and refusing required storage/vendor permission keeps them paused. These controls do not invent a consent record or prove that an account message has been published.
 
 You can block or clear cookies in your browser and use [Google's ad controls](https://myadcenter.google.com/). Clearing cookies may also remove saved choices, causing a provider to ask again. Blocking scripts can affect ads or security features.
 
