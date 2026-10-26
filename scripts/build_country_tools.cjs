@@ -94,3 +94,5 @@ const sitemap=path.join(root,'sitemap.xml'),marker=country.toUpperCase()+' TOOLS
 sm=sm.replace('</urlset>','\n<!-- '+marker+' START -->\n'+catalog.map(c=>`  <url><loc>https://mortgageproglobal.com${url(c.id)}</loc><lastmod>${C.reviewedOn}</lastmod></url>`).join('\n')+'\n<!-- '+marker+' END -->\n</urlset>');fs.writeFileSync(sitemap,sm);
 console.log(`Built ${catalog.length} ${C.label} tool pages from ${new Set(catalog.map(c=>c.source)).size} app sources.`);
 }
+
+require('./publish_tool_content.cjs').build();

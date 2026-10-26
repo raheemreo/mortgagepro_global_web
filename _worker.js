@@ -1,3 +1,43 @@
+// TOOL REDIRECTS START
+const TOOL_REDIRECTS = {
+  "/tools/usa/prepayment": "/tools/usa/amortization",
+  "/tools/usa/extra-payments": "/tools/usa/amortization",
+  "/tools/usa/ho1": "/tools/usa/homeowner-insurance",
+  "/tools/usa/ho3": "/tools/usa/homeowner-insurance",
+  "/tools/usa/ho5": "/tools/usa/homeowner-insurance",
+  "/tools/usa/wildfire": "/tools/usa/homeowner-insurance",
+  "/tools/canada/prepayment": "/tools/canada/amortization",
+  "/tools/canada/refinance": "/tools/canada/renewal",
+  "/tools/canada/credit-quote": "/tools/canada/renewal",
+  "/tools/canada/rate-comparison": "/tools/canada/renewal",
+  "/tools/uk/overpayment": "/tools/uk/amortization",
+  "/tools/uk/rate-comparison": "/tools/uk/remortgage",
+  "/tools/uk/rental-yield": "/tools/uk/buy-to-let",
+  "/tools/australia/overpayment": "/tools/australia/amortization",
+  "/tools/australia/duty-by-state": "/tools/australia/stamp-duty",
+  "/tools/australia/rate-comparison": "/tools/australia/refinance",
+  "/tools/newzealand/purchase-budget": "/tools/newzealand/mortgage",
+  "/tools/newzealand/first-home-loan": "/tools/newzealand/mortgage",
+  "/tools/newzealand/overpayment": "/tools/newzealand/amortization",
+  "/tools/newzealand/preapproval-budget": "/tools/newzealand/affordability",
+  "/tools/newzealand/lvr-band": "/tools/newzealand/ltv",
+  "/tools/newzealand/confirmed-support": "/tools/newzealand/first-home",
+  "/tools/newzealand/deposit-builder": "/tools/newzealand/deposit",
+  "/tools/newzealand/kiwisaver-home": "/tools/newzealand/kiwisaver-withdrawal",
+  "/tools/newzealand/investment": "/tools/newzealand/rental-yield",
+  "/tools/newzealand/lender-comparison": "/tools/newzealand/refinance",
+  "/tools/india/personal-loan": "/tools/india/emi",
+  "/tools/india/overpayment": "/tools/india/amortization",
+  "/tools/india/bank-comparison": "/tools/india/refinance",
+  "/tools/india/bank-hfc": "/tools/india/refinance",
+  "/tools/india/credit-quote": "/tools/india/refinance",
+  "/tools/india/duty-by-state": "/tools/india/stamp-duty",
+  "/tools/india/gst-purchase": "/tools/india/gst",
+  "/tools/india/tax-comparison": "/tools/india/income-tax",
+  "/tools/india/pmay-housing": "/tools/india/pmay-subsidy",
+  "/tools/europe/overpayment": "/tools/europe/amortization"
+};
+// TOOL REDIRECTS END
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -10,6 +50,12 @@ export default {
     }
 
     const { pathname } = url;
+    const toolPath = pathname.replace(/\.html$/, '').replace(/\/$/, '');
+    if (TOOL_REDIRECTS[toolPath]) {
+      const target = new URL(TOOL_REDIRECTS[toolPath], url);
+      target.search = url.search;
+      return Response.redirect(target.toString(), 301);
+    }
 
     // 2. Direct Edge Handler: /robots.txt (Guaranteed 200 OK, instant response, full CORS)
     if (pathname === "/robots.txt") {

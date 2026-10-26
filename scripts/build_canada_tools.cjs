@@ -80,3 +80,6 @@ for(const group of Object.keys(groupIDs))sections+=`<section class="section" id=
 const landing=path.join(root,'canada-mortgage-calculator.html');let s=fs.readFileSync(landing,'utf8');s=s.replace(/    <!-- CORE TOOLS -->[\s\S]*?(?=    <!-- RESOURCES -->)/,sections+'\n');s=s.replace(/<link[^>]+href="\/css\/canada-calculators\.css[^"]*"[^>]*>\s*/g,'');s=s.replace(/<script src="\/js\/canada-tools-models\.js[^"]*"><\/script>\s*/g,'');s=s.replace('</head>',`<script src="${asset('js/canada-tools-models.js')}"></script>\n<link rel="stylesheet" href="${asset('css/canada-calculators.css')}">\n</head>`);fs.writeFileSync(landing,s);
 const sitemap=path.join(root,'sitemap.xml');let sm=fs.readFileSync(sitemap,'utf8').replace(/\s*<!-- CANADA TOOLS START -->[\s\S]*?<!-- CANADA TOOLS END -->/,'');sm=sm.replace('</urlset>','\n<!-- CANADA TOOLS START -->\n'+catalog.map(c=>`  <url><loc>https://mortgageproglobal.com${url(c.id)}</loc><lastmod>2026-10-25</lastmod></url>`).join('\n')+'\n<!-- CANADA TOOLS END -->\n</urlset>');fs.writeFileSync(sitemap,sm);
 console.log(`Built ${catalog.length} Canada tool pages from ${new Set(catalog.map(c=>c.source)).size} app source calculators; updated Canada directory and sitemap.`);
+
+// Always retain the reviewed content and index/redirect decisions on regeneration.
+require('./publish_tool_content.cjs').build({country:'canada'});

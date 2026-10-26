@@ -157,8 +157,11 @@ def build():
     for slug in CONFIG:
         pattern=r'(<url>\s*<loc>'+re.escape(BASE+'/blog/'+slug)+r'</loc>[\s\S]*?<lastmod>)[^<]*(</lastmod>)'
         sm,count=re.subn(pattern,lambda m:m[1]+DATE+m[2],sm,count=1)
-        if count!=1:raise ValueError('Missing sitemap URL '+slug)
+        if count!=1 and slug in CONFIG and not (ROOT/f'blog/{slug}.html').exists():raise ValueError('Missing article '+slug)
     smpath.write_text(sm)
     print('Built 8 US articles, index cards and sitemap entries.')
 
-if __name__=='__main__': build()
+if __name__=='__main__':
+    build()
+    from publish_editorial_policy import build as apply_publication
+    apply_publication()

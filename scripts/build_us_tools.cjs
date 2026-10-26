@@ -89,3 +89,6 @@ for(const group of Object.keys(groupIDs)){
 const landing=path.join(root,'usa-mortgage-calculator.html');let s=fs.readFileSync(landing,'utf8');s=s.replace(/    <!-- Core Mortgage Tools -->[\s\S]*?(?=    <!-- Gov\. Programs -->)/,sections+'\n');s=s.replace(/<link[^>]+href="\/css\/us-tools-directory\.css[^"]*"[^>]*>\s*/g,'');s=s.replace('</head>',`<link rel="stylesheet" href="${asset('css/us-tools-directory.css')}">\n</head>`);fs.writeFileSync(landing,s);
 const sitemap=path.join(root,'sitemap.xml');let sm=fs.readFileSync(sitemap,'utf8').replace(/\s*<!-- US TOOLS START -->[\s\S]*?<!-- US TOOLS END -->/,'');sm=sm.replace('</urlset>','\n<!-- US TOOLS START -->\n'+catalog.map(c=>`  <url><loc>https://mortgageproglobal.com${url(c.id)}</loc><lastmod>2026-10-25</lastmod></url>`).join('\n')+'\n<!-- US TOOLS END -->\n</urlset>');fs.writeFileSync(sitemap,sm);
 console.log(`Built ${catalog.length} US tool pages from ${new Set(catalog.map(c=>c.source)).size} app source calculators; updated US directory and sitemap.`);
+
+// Always retain the reviewed content and index/redirect decisions on regeneration.
+require('./publish_tool_content.cjs').build({country:'usa'});
