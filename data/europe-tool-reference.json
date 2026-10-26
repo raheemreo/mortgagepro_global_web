@@ -1,0 +1,20 @@
+{
+  "reviewedOn": "2026-10-26",
+  "appCommit": "9f79ea943e27b6d8b0c1ca411c37fb4cae077f72",
+  "scope": "EUR nominal-rate scenarios using actual lender/assessor/notary quotes. No universal EU tax/LTV/DTI policy, static bank tariff or live rate feed is invented.",
+  "corrections": [
+    "Zero-interest amortization and capped last payment",
+    "No automatic seven-percent savings haircut or statutory income multiple",
+    "No universal 35% approval grade or non-resident rate uplift",
+    "No automatic 20% deposit or average notary/transfer tax",
+    "No random FX trends or synthetic benchmark historical peaks",
+    "Euribor input is a contractual fixing plus margin, not ECB policy rate; only a selected actual all-in floor applies",
+    "ECB reference FX is informational, not an executable transfer rate"
+  ],
+  "references": [
+    "https://europa.eu/youreurope/citizens/consumers/financial-products-and-services/mortgages/index_en.htm",
+    "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html",
+    "https://www.emmi-benchmarks.eu/benchmarks/euribor/",
+    "https://www.notariesofeurope.eu/en/faq4/buying-property-in-europe/"
+  ]
+}

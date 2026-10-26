@@ -1519,6 +1519,9 @@
   <meta name="theme-color" content="#0B1D3A">
 <script src="/js/root-calculator-state.js?v=f80377ee5785" defer></script>
 <link rel="stylesheet" href="/css/root-calculators.css?v=34ceab807414">
+<script src="/js/mortgage-tools-core.js?v=50af78e1c3be"></script>
+<script src="/js/europe-tools-models.js?v=f32a613c2331"></script>
+<link rel="stylesheet" href="/css/country-tools.css?v=427a948ffcf4">
 <link rel="stylesheet" href="/css/tool-cards.css?v=fb8536599a1d">
 </head>
 
@@ -1573,11 +1576,11 @@
               <div class="hc-row">
                 <div class="hc-box" id="p-box">
                   <label for="eu-price">Property Price (€)</label>
-                  <input type="number" id="eu-price" value="420000" min="30000" max="10000000" step="5000" required>
+                  <input type="number" id="eu-price" value="" min="1" max="1000000000" step="any" required>
                 </div>
                 <div class="hc-box" id="d-box">
                   <label for="eu-down">Down Payment (%)</label>
-                  <input type="number" id="eu-down" value="20" min="5" max="99" step="0.5" required>
+                  <input type="number" id="eu-down" value="" min="0" max="100" step="any" required>
                 </div>
               </div>
               <div class="hc-row">
@@ -1593,27 +1596,28 @@
                 </div>
                 <div class="hc-box" id="r-box">
                   <label for="eu-rate">Interest Rate (%)</label>
-                  <input type="number" id="eu-rate" value="3.85" min="0" max="25" step="0.01" required>
+                  <input type="number" id="eu-rate" value="" min="0" max="25" step="0.01" required>
                 </div>
               </div>
               <div class="hc-row">
                 <div class="hc-box" style="flex: 1;">
-                  <label for="eu-country">Selected Country Engine</label>
+                  <label for="eu-country">Country label — enter local costs separately</label>
                   <select id="eu-country">
-                    <option value="germany" selected>🇩🇪 Germany (Grunderwerbsteuer ~5.0% + Notary ~1.5%)</option>
-                    <option value="france">🇫🇷 France (Frais de notaire ~7.5% + HCSF 35% Cap)</option>
-                    <option value="spain">🇪🇸 Spain (ITP Transfer Tax ~8.0% + Notary ~1.2%)</option>
-                    <option value="italy">🇮🇹 Italy (Imposta di registro 2.0% / 9.0% + Notary ~1.8%)</option>
-                    <option value="netherlands">🇳🇱 Netherlands (Overdrachtsbelasting 2.0% / 0% Starter)</option>
+                    <option value="germany" selected>🇩🇪 Germany</option>
+                    <option value="france">🇫🇷 France</option>
+                    <option value="spain">🇪🇸 Spain</option>
+                    <option value="italy">🇮🇹 Italy</option>
+                    <option value="netherlands">🇳🇱 Netherlands</option>
                   </select>
                 </div>
               </div>
+              <div class="hc-box" style="margin-top:12px"><label for="eu-fee-rate">Buying-cost allowance (%) — your planning assumption</label><input id="eu-fee-rate" type="number" min="0" max="30" step="any" value="" required></div><p style="font-size:.85rem">This allowance is not a tax or notary tariff. Replace it with costs confirmed for your country and transaction.</p>
               <button type="submit" class="hc-btn">⭐ Calculate European Mortgage</button>
               <button type="button" id="eu-calc-reset" class="hc-btn"
                 style="background: transparent; border: 1px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.7); box-shadow: none; padding: 10px; font-size: 13px; margin-top: 5px;">Reset
                 Values</button>
             </div>
-          <div class="hc-box" style="margin-top:12px"><label for="eu-fee-rate">Buying-cost allowance (%) — your planning assumption</label><input id="eu-fee-rate" type="number" min="0" max="30" step="any" value="8"></div><p style="font-size:.85rem">This allowance is not a tax or notary tariff. Replace it with costs confirmed for your country and transaction.</p></form>
+          </form>
         </div>
       </div>
     </div>
@@ -1641,7 +1645,7 @@
           <span class="mrc-icon">📜</span>
           <div class="mrc-lbl">Buying-cost allowance</div>
           <div class="mrc-val" id="eu-notary-fees" style="font-size: 18px; font-weight: 800;">€0</div>
-          <div class="mrc-sub" id="buying-fees-lbl">Taxes + Notary</div>
+          <div class="mrc-sub" id="buying-fees-lbl">Entered allowance only</div>
         </div>
         <div class="mrc">
           <span class="mrc-icon">💶</span>
@@ -1761,78 +1765,20 @@
       </div>
     </section>
 
-    <!-- Core Tools -->
-    <section class="section" id="tools">
-      <div class="sec-head">
-        <span class="sec-lbl">Core Tools</span>
-      </div>
-      <div class="grid-tools">
-        <a href="/europe-mortgage-calculator" class="tcard dark">
-          <div class="tic">🏠</div>
-          <div class="tname">Mortgage Calc</div>
-          <div class="tdesc">EUR monthly payment</div>
-          <div class="badge badge-eu">Multi-country</div>
-          <div class="tarr">›</div>
-        </a>
-        <a href="/mortgage-faq" class="tcard">
-          <div class="tic">📊</div>
-          <div class="tname">DTI Ratio EUR</div>
-          <div class="tdesc">Debt-to-income Europe</div>
-          <div class="tarr">›</div>
-        </a>
-        <a href="/mortgage-faq" class="tcard violet">
-          <div class="tic">🏛️</div>
-          <div class="tname">Property Tax Calc</div>
-          <div class="tdesc">Country-specific taxes</div>
-          <div class="tarr">›</div>
-        </a>
-        <a href="/mortgage-faq" class="tcard">
-          <div class="tic">💶</div>
-          <div class="tname">Affordability EUR</div>
-          <div class="tdesc">Borrowing capacity</div>
-          <div class="badge badge-g">Per country</div>
-          <div class="tarr">›</div>
-        </a>
-        <a href="/europe-mortgage-calculator" class="tcard">
-          <div class="tic">📅</div>
-          <div class="tname">Amortization</div>
-          <div class="tdesc">European schedule</div>
-          <div class="tarr">›</div>
-        </a>
-        <a href="/mortgage-faq" class="tcard gold-eu">
-          <div class="tic">🔄</div>
-          <div class="tname">Euribor Tracker</div>
-          <div class="tdesc">Variable rate index</div>
-          <div class="tarr">›</div>
-        </a>
-        <a href="/mortgage-faq" class="tcard teal">
-          <div class="tic">🌍</div>
-          <div class="tname">Country Comparison</div>
-          <div class="tdesc">Compare EU rates</div>
-          <div class="tarr">›</div>
-        </a>
-        <a href="/mortgage-faq" class="tcard">
-          <div class="tic">📜</div>
-          <div class="tname">Notary Fee Calc</div>
-          <div class="tdesc">DE/FR/ES closing costs</div>
-          <div class="tarr">›</div>
-        </a>
-        <a href="/mortgage-faq" class="tcard slate">
-          <div class="tic">🏘️</div>
-          <div class="tname">Non-Resident Calc</div>
-          <div class="tdesc">Foreign buyer guide</div>
-          <div class="tarr">›</div>
-        </a>
-        <a href="/mortgage-faq" class="tcard">
-          <div class="tic">💱</div>
-          <div class="tname">Currency Converter</div>
-          <div class="tdesc">EUR · GBP · USD · CHF</div>
-          <div class="tarr">›</div>
-        </a>
-      </div>
-    </section>
-
-    <!-- ===== EDUCATIONAL CONTENT SECTION ===== -->
+<!-- COUNTRY TOOLS START -->
+<section class="section country-tools-section" id="tools"><div class="sec-hdr"><h2>Mortgage and repayment</h2></div><p>Enter current figures and press Calculate estimate. Editing or resetting clears the previous result.</p><div class="g2 country-tools-directory"><a href="/tools/europe/mortgage" class="tc" data-tone="emerald"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11 12 3l9 8M5 10v11h14V10M9 21v-7h6v7"/></svg></div><div class="tn">European Mortgage Calculator</div><div class="td">Calculate EUR purchase payments with actual deposit, fees and a stated mortgage quote.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/europe/amortization" class="tc" data-tone="violet"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 5h14v16H5zM8 3v4m8-4v4M5 10h14M9 14h1m4 0h1m-6 3h1"/></svg></div><div class="tn">European Amortization and CSV Schedule</div><div class="td">Inspect full principal/interest schedules and the effect of permitted extra payments.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/europe/overpayment" class="tc" data-tone="emerald"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V4m0 16h17M7 15l5-5 4 2 5-7m-5 0h5v5"/></svg></div><div class="tn">European Extra Repayment Scenario</div><div class="td">Inspect full principal/interest schedules and the effect of permitted extra payments.</div><div class="ta" aria-hidden="true">›</div></a></div></section>
+<section class="section country-tools-section" id="budgets"><div class="sec-hdr"><h2>Budget and quote comparison</h2></div><p>Enter current figures and press Calculate estimate. Editing or resetting clears the previous result.</p><div class="g2 country-tools-directory"><a href="/tools/europe/affordability" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7V5h14v3M4 8h17v12H4zM16 12h5v4h-5z"/></svg></div><div class="tn">European Household Borrowing Budget</div><div class="td">Compare actual household cash capacity with an explicitly entered income-multiple scenario.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/europe/dti" class="tc" data-tone="violet"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 18 12-12M8 7a2 2 0 1 1-4 0 2 2 0 0 1 4 0m12 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0"/></svg></div><div class="tn">European Debt-Service to Income Ratio</div><div class="td">Combine actual monthly obligations using the income definition and target you supply.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/europe/country-comparison" class="tc" data-tone="teal"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4"/></svg></div><div class="tn">Compare Actual European Mortgage Quotes</div><div class="td">Compare two actual EUR quotes from your chosen countries/providers on one principal and horizon.</div><div class="ta" aria-hidden="true">›</div></a></div></section>
+<section class="section country-tools-section" id="costs"><div class="sec-hdr"><h2>Purchase and local costs</h2></div><p>Enter current figures and press Calculate estimate. Editing or resetting clears the previous result.</p><div class="g2 country-tools-directory"><a href="/tools/europe/nonresident" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7V5h14v3M4 8h17v12H4zM16 12h5v4h-5z"/></svg></div><div class="tn">Non-Resident Mortgage Quote Budget</div><div class="td">Check payment, cash shortfall and a lender-confirmed LTV scenario for a EUR purchase.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/europe/notary-costs" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6m-6 4h6"/></svg></div><div class="tn">Notary and Purchase Closing-Cost Quotes</div><div class="td">Combine itemized tax-inclusive legal, registration and closing quotes with your actual deposit.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/europe/property-tax" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6m-6 4h6"/></svg></div><div class="tn">Confirmed Local Property-Tax Budget</div><div class="td">Keep upfront transfer/VAT budgets separate from ongoing assessed-property charges.</div><div class="ta" aria-hidden="true">›</div></a></div></section>
+<section class="section country-tools-section" id="rates"><div class="sec-hdr"><h2>Rates and currency</h2></div><p>Enter current figures and press Calculate estimate. Editing or resetting clears the previous result.</p><div class="g2 country-tools-directory"><a href="/tools/europe/currency" class="tc" data-tone="teal"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4"/></svg></div><div class="tn">Executable Currency Quote and Fee Budget</div><div class="td">Convert a stated amount using your actual destination-per-source quote and separate fees.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/europe/euribor" class="tc" data-tone="violet"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 18 12-12M8 7a2 2 0 1 1-4 0 2 2 0 0 1 4 0m12 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0"/></svg></div><div class="tn">Euribor Quote, Margin and Payment Scenario</div><div class="td">Model a confirmed contractual benchmark fixing plus margin and optional actual all-in floor.</div><div class="ta" aria-hidden="true">›</div></a></div></section>
+<!-- COUNTRY TOOLS END -->
+<!-- ===== EDUCATIONAL CONTENT SECTION ===== -->
     <section class="content-article" id="eu-guide" aria-labelledby="eu-guide-h"><h2 id="eu-guide-h">European Mortgage Budget Planning</h2><p>Updated October 25, 2026 · Scenario estimates; confirm actual lender and transaction terms.</p><h2>A common payment formula is only a starting point</h2>
 <p>The monthly model uses financed principal, the entered annual rate and repayment years. A fixed period, daily-interest convention, financed fees or later rate reset can change the lender's actual disclosure. A constant-rate lifetime total does not forecast every future payment.</p>
 <p>The ECB main refinancing rate and Euribor are different references; neither is a personal mortgage offer. Check which index and spread a variable-rate contract uses, how often it resets and what fees apply. The <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html">ECB rate table</a> identifies its policy instruments.</p>
@@ -2111,7 +2057,7 @@
       const rOuter = size / 2 - 4;
       const rInner = rOuter * 0.65;
       const sum = principal + interest;
-      const angleP = (principal / sum) * Math.PI * 2;
+      const angleP = (sum > 0 ? principal / sum : 0) * Math.PI * 2;
 
       const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -2140,7 +2086,7 @@
       ctx.fill();
 
       // Text label
-      const percent = Math.round(principal / sum * 100);
+      const percent = sum > 0 ? Math.round(principal / sum * 100) : 0;
       ctx.fillStyle = isDark ? '#ffffff' : '#1A0040';
       ctx.font = `bold ${Math.round(size * 0.13)}px sans-serif`;
       ctx.textAlign = 'center';
@@ -2198,8 +2144,8 @@
 
       let flag = true;
 
-      if (!Number.isFinite(price) || price < 30000) { pBox.classList.add('error-box'); flag = false; }
-      if (!Number.isFinite(down) || down < 5 || down >= 100) { dBox.classList.add('error-box'); flag = false; }
+      if (!Number.isFinite(price) || price < 1) { pBox.classList.add('error-box'); flag = false; }
+      if (!Number.isFinite(down) || down < 0 || down > 100) { dBox.classList.add('error-box'); flag = false; }
       if (!Number.isFinite(rate) || rate < 0 || rate > 25) { rBox.classList.add('error-box'); flag = false; }
 
       if (!flag) {
@@ -2208,6 +2154,7 @@
         return;
       }
 
+      if (!document.getElementById('eu-calc-form').checkValidity()) { document.getElementById('eu-results').classList.remove('visible'); window._euResultBlob = null; triggerToast('Enter all required current figures within their limits.'); return; }
       const downPaymentAmount = price * down / 100;
       const loanAmount = price - downPaymentAmount;
       const monthlyPayment = calcEMI(loanAmount, rate, term);
@@ -2236,7 +2183,7 @@
       // Show Results block
       const resultsContainer = document.getElementById('eu-results');
       resultsContainer.classList.add('visible');
-      // Keep the page position stable during calculation and initial load.
+      resultsContainer.tabIndex = -1; resultsContainer.focus({preventScroll:true}); resultsContainer.scrollIntoView({behavior:'auto',block:'start'});
 
       // Draw donut
       requestAnimationFrame(() => {
@@ -2272,6 +2219,7 @@
       document.getElementById('d-box').classList.remove('error-box');
       document.getElementById('r-box').classList.remove('error-box');
       window._euResultBlob = null;
+      document.querySelectorAll('#country-pills .cpill').forEach(p=>{const active=p.getAttribute('data-val')==='germany';p.classList.toggle('active',active);p.setAttribute('aria-selected',String(active));});
       renderCountryAssumptions('germany');
       logEvent('calculator_reset', { tool: 'europe_mortgage_calc' });
     });
@@ -2362,15 +2310,13 @@
         e.preventDefault();
         document.querySelectorAll('#country-pills .cpill').forEach(p => p.classList.remove('active'));
         this.classList.add('active');
+        document.querySelectorAll('#country-pills .cpill').forEach(p => p.setAttribute('aria-selected', String(p === this)));
         const val = this.getAttribute('data-val');
         const select = document.getElementById('eu-country');
         if (select) {
           select.value = val;
           renderCountryAssumptions(val);
-          // Re-execute calculations if results are already visible
-          if (document.getElementById('eu-results').classList.contains('visible')) {
-            executeCalculation();
-          }
+          document.getElementById('eu-results').classList.remove('visible'); window._euResultBlob = null;
         }
       });
     });
@@ -2379,13 +2325,10 @@
     document.getElementById('eu-country').addEventListener('change', function () {
       const val = this.value;
       document.querySelectorAll('#country-pills .cpill').forEach(p => {
-        p.classList.toggle('active', p.getAttribute('data-val') === val);
+        p.classList.toggle('active', p.getAttribute('data-val') === val); p.setAttribute('aria-selected', String(p.getAttribute('data-val') === val));
       });
       renderCountryAssumptions(val);
-      // Re-execute if results are active
-      if (document.getElementById('eu-results').classList.contains('visible')) {
-        executeCalculation();
-      }
+      document.getElementById('eu-results').classList.remove('visible'); window._euResultBlob = null;
     });
 
     // FAQ Expand/Collapse
