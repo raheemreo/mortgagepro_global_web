@@ -26,3 +26,16 @@ form[id$="calc-form"],form[id$="calc-form"] :is(.hc-row,.h-row,.hero-calc-fields
 form[id$="calc-form"] :is(input,select,button){max-width:100%;min-width:0;box-sizing:border-box}
 form[id$="calc-form"] button{white-space:normal!important;overflow-wrap:anywhere;min-height:44px}
 @media(max-width:520px){form[id$="calc-form"] :is(.hc-row,.h-row,.hero-calc-fields){display:grid!important;grid-template-columns:minmax(0,1fr)!important}form[id$="calc-form"] :is(.h-box,.hc-box){width:100%}form[id$="calc-form"] :is(.hc-btn,.h-btn){width:100%;flex:1 1 100%}}
+
+/* Canada identity uses a flat red tile and a white, monochrome maple silhouette. */
+.canada-brand-leaf{background:#c8102e!important;color:#fff!important;background-image:none!important;flex:none}
+.canada-brand-leaf svg{display:block;width:29px;height:29px}
+.canada-hero-maple{display:grid;place-items:center;width:116px;height:132px;margin:0 0 24px;border-radius:18px;background:#c8102e;color:#fff;box-shadow:0 6px 20px #0002}
+.canada-hero-maple svg{width:92px;height:108px}
+@media(max-width:900px){.canada-hero-maple{width:60px;height:64px;margin-bottom:16px;border-radius:12px}.canada-hero-maple svg{width:45px;height:51px}}
+/* Group Canada's detailed quote fields into a compact desktop form. */
+#canada-calc-form .hc-fields-wrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+#canada-calc-form .hc-row{display:contents}
+#canada-calc-form .hc-fields-wrap>p,#canada-calc-form .hc-fields-wrap>button{grid-column:1/-1}
+#canada-calc-form .hc-fields-wrap>p{color:#e0eee7;font-size:13px;line-height:1.6;margin:0}
+@media(max-width:520px){#canada-calc-form .hc-fields-wrap{grid-template-columns:minmax(0,1fr)}#canada-calc-form .hc-row{display:contents!important}}

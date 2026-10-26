@@ -1,0 +1,32 @@
+{
+  "reviewedOn": "2026-10-26",
+  "appCommit": "9f79ea943e27b6d8b0c1ca411c37fb4cae077f72",
+  "scope": "Actual quotes; no market feed or automatic eligibility. Ordinary resident under-60 tax year 2026\u201327 up to INR 50 lakh; no special-rate income/surcharge.",
+  "newTaxBandsINR": [
+    400000,
+    800000,
+    1200000,
+    1600000,
+    2000000,
+    2400000
+  ],
+  "newRebateIncomeINR": 1200000,
+  "newRebateCapINR": 60000,
+  "cessPercent": 4,
+  "pmayISS": {
+    "incomeMax": 900000,
+    "loanMax": 2500000,
+    "propertyMax": 3500000,
+    "areaMaxSqm": 120,
+    "tenureMustExceedYears": 5,
+    "releaseCap": 180000,
+    "automaticAward": false
+  },
+  "rates": "Personal quotes and held-constant investment assumptions must be entered; no lender/FX/gold/PPF/EPF live rate is invented.",
+  "references": [
+    "https://www.incometaxindia.gov.in/documents/d/guest/income_tax_act_2025_as_amended_by_fa_act_2026-pdf",
+    "https://www.incometax.gov.in/iec/foportal/help/all-topics/e-filing-services/form-141-faqs",
+    "https://pmaymis.gov.in/PMAYMIS2_2024/PmayISS.aspx",
+    "https://centralbank.bank.in/en/PUBLIC-PROVIDENT-FUND-SCHEME"
+  ]
+}

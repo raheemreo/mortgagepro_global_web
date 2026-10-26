@@ -82,7 +82,7 @@ for(const group of Object.keys(groupIDs)){
  sections+='<div class="g2 us-tools-directory">'+catalog.filter(c=>c.group===group).map(card).join('\n')+'</div>\n';
  if(group==='Insurance & Tax'){
   sections+='    <div id="states" class="section-header"><h2>State-by-State Tools</h2></div>\n<p>Choose a location, then enter your actual assessed value, exemption and local tax rate. No statewide average is substituted for your local rate.</p>\n<div class="g3 us-tools-directory">';
-  for(const code of ['CA','TX','NY','FL','IL','NJ'])sections+=`<a href="${url('property-tax')}?state=${code}" class="tc"><div class="ti" aria-hidden="true">🗺️</div><div class="tn">${esc(states[code].name)}</div><div class="td">Assessed value, exemption and editable tax rate</div><div class="ta" aria-hidden="true">›</div></a>`;
+  for(const code of ['CA','TX','NY','FL','IL','NJ']){const p=presentation({id:'state-map',title:states[code].name});sections+=`<a href="${url('property-tax')}?state=${code}" class="tc" data-tone="${p.tone}"><div class="ti" aria-hidden="true">${p.icon}</div><div class="tn">${esc(states[code].name)}</div><div class="td">Assessed value, exemption and editable tax rate</div><div class="ta" aria-hidden="true">›</div></a>`;}
   sections+=`</div><p><a href="${url('property-tax')}">Other states / enter my local property-tax rate</a></p>\n`;
  }
 }

@@ -1,0 +1,231 @@
+{
+  "repository": "raheemreo/mortgagepro_global",
+  "commit": "9f79ea943e27b6d8b0c1ca411c37fb4cae077f72",
+  "files": [
+    {
+      "path": "lib/features/india/india_screen.dart",
+      "sha": "5d043d09e82c82f20eb56991dd7a74fee17fea02",
+      "bytes": 54988
+    },
+    {
+      "path": "lib/features/india/tools/in_80c_24b_guide.dart",
+      "sha": "75b7d11eb7fa0eca06cf0dbd7353ac354e0f56af",
+      "bytes": 30521
+    },
+    {
+      "path": "lib/features/india/tools/in_amortization.dart",
+      "sha": "6c8fd7645d64ac7fd3b845b50ac2f351f9779fdd",
+      "bytes": 42843
+    },
+    {
+      "path": "lib/features/india/tools/in_balance_transfer.dart",
+      "sha": "0b839bf28c494ccc9664b311eb13719e2562b38e",
+      "bytes": 40365
+    },
+    {
+      "path": "lib/features/india/tools/in_banks_hfcs_compare.dart",
+      "sha": "9097a318662837bee71c60f8b47db7c4e074f2fc",
+      "bytes": 81608
+    },
+    {
+      "path": "lib/features/india/tools/in_capital_gains_tax.dart",
+      "sha": "cebe651c337bf5903aec0057c734d197ad7700dd",
+      "bytes": 59676
+    },
+    {
+      "path": "lib/features/india/tools/in_car_loan_emi.dart",
+      "sha": "f194b505ace4733d49ae4979d450d559e6c53d2d",
+      "bytes": 42256
+    },
+    {
+      "path": "lib/features/india/tools/in_cibil_score_impact.dart",
+      "sha": "442ca020558502915cff2c7e40a7e65c87bb29bc",
+      "bytes": 38759
+    },
+    {
+      "path": "lib/features/india/tools/in_city_property_prices.dart",
+      "sha": "db5300dc3f2bf27571295f49b896aaf2f7a25c15",
+      "bytes": 52821
+    },
+    {
+      "path": "lib/features/india/tools/in_compare_banks.dart",
+      "sha": "e8414732aaaf208c2a6f5f7acbabde072c63d835",
+      "bytes": 52321
+    },
+    {
+      "path": "lib/features/india/tools/in_education_loan.dart",
+      "sha": "bc1c04633a471514273ada6ec02f60853396a7f6",
+      "bytes": 41827
+    },
+    {
+      "path": "lib/features/india/tools/in_emi_calculator.dart",
+      "sha": "7edf6531a4c0b8f5a3bd948043f9b94ba2dbe2a5",
+      "bytes": 28627
+    },
+    {
+      "path": "lib/features/india/tools/in_epf_calculator.dart",
+      "sha": "a60aae4dee2fcfde269a2787e439c7396df43aef",
+      "bytes": 57104
+    },
+    {
+      "path": "lib/features/india/tools/in_fema_compliance.dart",
+      "sha": "6750af00b7841d10f8bf36bf797d9289cd98d347",
+      "bytes": 30817
+    },
+    {
+      "path": "lib/features/india/tools/in_first_home_buyer.dart",
+      "sha": "1b6f8a8498b7f3568cdba83648e742e821398014",
+      "bytes": 40413
+    },
+    {
+      "path": "lib/features/india/tools/in_floating_vs_fixed.dart",
+      "sha": "0afbe17d757b32a1530e3f03d5432bd178eab3e7",
+      "bytes": 49715
+    },
+    {
+      "path": "lib/features/india/tools/in_foir_calculator.dart",
+      "sha": "c0c02d00259be2df229ee59c68cc69fef49d04ec",
+      "bytes": 28653
+    },
+    {
+      "path": "lib/features/india/tools/in_gold_loan_calculator.dart",
+      "sha": "dbb4b7772d3535b405a9ab8b4c8770cf98dbe517",
+      "bytes": 48948
+    },
+    {
+      "path": "lib/features/india/tools/in_gst_calculator.dart",
+      "sha": "ef283fbd05997fe17d1b54ca077348a505755539",
+      "bytes": 24097
+    },
+    {
+      "path": "lib/features/india/tools/in_gst_property.dart",
+      "sha": "ee37561e946ae4df8b1c12774e69cfc20a114753",
+      "bytes": 45463
+    },
+    {
+      "path": "lib/features/india/tools/in_income_tax_calculator.dart",
+      "sha": "f358007d656a5519c4e7593a161299fa17f47f2f",
+      "bytes": 52007
+    },
+    {
+      "path": "lib/features/india/tools/in_india_ai_advisor.dart",
+      "sha": "94e36ad5a33a5fb74650545f491ddc7df3036e79",
+      "bytes": 49775
+    },
+    {
+      "path": "lib/features/india/tools/in_joint_loan.dart",
+      "sha": "17a59d08b1941795df58286749aece5f519a260b",
+      "bytes": 48865
+    },
+    {
+      "path": "lib/features/india/tools/in_lap_calculator.dart",
+      "sha": "f04f943d3b0199879b7a2c93586f8b76fa4f372a",
+      "bytes": 46364
+    },
+    {
+      "path": "lib/features/india/tools/in_loan_eligibility.dart",
+      "sha": "6d5b234246bd328513f57c13a3d57db22c604300",
+      "bytes": 41105
+    },
+    {
+      "path": "lib/features/india/tools/in_nhb_residex.dart",
+      "sha": "dba2e0a6c71cec250d2a4ac87fe5bf556320ee9f",
+      "bytes": 36593
+    },
+    {
+      "path": "lib/features/india/tools/in_nps_calculator.dart",
+      "sha": "ffad0967220b552371583297a992d2e0f8c8b028",
+      "bytes": 58748
+    },
+    {
+      "path": "lib/features/india/tools/in_nre_nro_account.dart",
+      "sha": "7ce5843033b62bc1bcd90b1dece6e730718b7be2",
+      "bytes": 44559
+    },
+    {
+      "path": "lib/features/india/tools/in_nri_home_loan.dart",
+      "sha": "2bd924c769e1383cc7cc1073c546ace920ec39e1",
+      "bytes": 45855
+    },
+    {
+      "path": "lib/features/india/tools/in_personal_loan_emi.dart",
+      "sha": "50467c17c9a0fbd7d4b7b333dbbb82b69a204e2f",
+      "bytes": 45397
+    },
+    {
+      "path": "lib/features/india/tools/in_pmay_eligibility.dart",
+      "sha": "29bd0fd3c41068ae1d90953262768084ce678c57",
+      "bytes": 42118
+    },
+    {
+      "path": "lib/features/india/tools/in_pmay_housing_for_all.dart",
+      "sha": "5ca33b42ced9b5952a2c997f4a9659f8125e8d6b",
+      "bytes": 31309
+    },
+    {
+      "path": "lib/features/india/tools/in_pmay_subsidy.dart",
+      "sha": "585c089a267ce8a7127eafdee2589a63557dba0c",
+      "bytes": 20778
+    },
+    {
+      "path": "lib/features/india/tools/in_ppf_calculator.dart",
+      "sha": "cd57f9bbb20a4788a0a37981c4afe4ccb743b8b1",
+      "bytes": 51208
+    },
+    {
+      "path": "lib/features/india/tools/in_prepayment_calc.dart",
+      "sha": "f3df621ab9827970a6e2fe006a377403519afe54",
+      "bytes": 37347
+    },
+    {
+      "path": "lib/features/india/tools/in_rbi_monetary_policy.dart",
+      "sha": "5dc1c19ae6f9eaefbb72351369bb5a257032e699",
+      "bytes": 37252
+    },
+    {
+      "path": "lib/features/india/tools/in_rbi_repo_rate_history.dart",
+      "sha": "6c8d26b4f01120f2de09f2a5191a775f83236e8e",
+      "bytes": 37522
+    },
+    {
+      "path": "lib/features/india/tools/in_section_24b.dart",
+      "sha": "b1d40e39367c62d2727d183aa2d45840321cc5e0",
+      "bytes": 21335
+    },
+    {
+      "path": "lib/features/india/tools/in_section_80c.dart",
+      "sha": "583c87005ce65eedcf0a7aad49d2abfc8cc8c372",
+      "bytes": 21873
+    },
+    {
+      "path": "lib/features/india/tools/in_sip_calculator.dart",
+      "sha": "6cdac1be98c14cb0175347100de3b499845def8c",
+      "bytes": 53263
+    },
+    {
+      "path": "lib/features/india/tools/in_stamp_duty_all_states.dart",
+      "sha": "7e44748f1cd4a4f300c7beeab6ede03e2c8d9aaa",
+      "bytes": 73266
+    },
+    {
+      "path": "lib/features/india/tools/in_stamp_duty_calc.dart",
+      "sha": "b50cadd898171e9cd6001253ec74650d5bd992f8",
+      "bytes": 22719
+    },
+    {
+      "path": "lib/features/india/tools/in_tds_on_property.dart",
+      "sha": "92a943329ddae3e744aa5bcd667703739cdd3555",
+      "bytes": 41188
+    },
+    {
+      "path": "lib/features/india/tools/in_under_construction.dart",
+      "sha": "873773f3cd6a3da49a9bc6791faf6802e6ac332b",
+      "bytes": 40802
+    },
+    {
+      "path": "lib/features/india/tools/in_usd_inr_converter.dart",
+      "sha": "01505ed638e01331e0de35d8fbe641372e90cd99",
+      "bytes": 33673
+    }
+  ]
+}
