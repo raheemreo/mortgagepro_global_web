@@ -14,6 +14,8 @@ The current calculator code does not save a borrower profile or financial entrie
 
 Cloudflare delivers the website and may use security technologies to manage requests and detect abuse. Their operation can depend on the site's hosting settings and the request. We do not claim that a security cookie is set on every visit or that it contains no personal data. See [Cloudflare's privacy policy](https://www.cloudflare.com/privacypolicy/).
 
+The live host also injects a Cloudflare performance beacon. Its measurement requests are distinct from storing your calculator inputs. Read the provider's [Web Analytics documentation](https://developers.cloudflare.com/web-analytics/about/) for its service description. The statement below about no publisher-loaded Google Analytics or Clarity does not mean that this hosting-provider measurement is absent.
+
 ## Advertising technologies
 
 Google AdSense code is present on content pages. Google and its partners may use cookies and identifiers to provide, measure or personalize ads, subject to the applicable settings and choices. These technologies are not required to calculate principal and interest.

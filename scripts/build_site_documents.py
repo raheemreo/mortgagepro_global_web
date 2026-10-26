@@ -31,7 +31,9 @@ def mobile_links():
  links=[('app-privacy','Full app policy'),('covered-apps','Apps and package IDs'),('google-admob','Google AdMob'),('meta-audience-network','Meta'),('liftoff-monetize','Liftoff / Vungle'),('unity-ads','Unity Ads'),('privacy-choices','App privacy choices'),('ai-assistant','AI assistant'),('ai-reporting','AI reporting'),('data-deletion','App data deletion')]
  return '<nav class="privacy-jump-links" aria-label="Mobile app privacy sections">'+''.join('<a href="/app-privacy-policy#'+key+'">'+label+'</a>' for key,label in links)+'</nav>'
 def build():
+ revisions=json.loads((ROOT/'data/document-revisions.json').read_text())
  for slug,source in CONFIG.items():
+  revision=revisions.get(slug,revisions['default'])
   p=ROOT/(slug+'.html');s=p.read_text();md=(ROOT/f'contents/Site/{source}.md').read_text();title=re.search(r'^# (.+)',md)[1];desc=re.search(r'^\*\*Meta description:\*\* (.+)',md,re.M)[1]
   s=re.sub(r'<title>[\s\S]*?</title>',lambda _:'<title>'+html.escape(title)+' | MortgagePro Global</title>',s,count=1)
   for attr,key,value in [('name','description',desc),('property','og:title',title),('property','og:description',desc),('name','twitter:title',title),('name','twitter:description',desc)]:
@@ -44,7 +46,7 @@ def build():
   if slug=='app-privacy-policy':
    before=before.replace('<li>Privacy Policy</li>','<li><a href="/privacy-policy">Website Privacy</a></li><li>Mobile App Privacy</li>')
   if 'POLICY_RATE_TABLE' in md:
-   d=json.loads((ROOT/'data/rates.json').read_text());rows=['| Jurisdiction | Policy reference | Effective | Checked | Source |','|---|---|---|---|---|']
+   d=json.loads((ROOT/'data/rates.json').read_text());rows=['| Jurisdiction | Policy reference | Effective / observed | Source checked | Source |','|---|---|---|---|---|']
    for country,key in [('usa','fed'),('canada','boc'),('uk','boe'),('australia','rba'),('newzealand','ocr'),('india','repo'),('europe','ecb')]:
     a=d['rates'][country][key];rows.append('| '+country+' | '+a['formatted']+' | '+a['effectiveDate']+' | '+a['lastVerified']+' | [Official source]('+a['sourceUrl']+') |')
    md=md.replace('POLICY_RATE_TABLE','\n'.join(rows))
@@ -58,7 +60,7 @@ def build():
     original='<h2>'+html.escape(heading,quote=False)+'</h2>'
     assert original in body,heading
     body=body.replace(original,'<h2 id="'+anchor+'" tabindex="-1">'+html.escape(heading,quote=False)+'</h2>')
-  content='<main id="main-content"><article class="site-document content-article">'+('' if has_hero else '<h1>'+html.escape(title)+'</h1>')+'<p class="document-date">Updated October 25, 2026 · Publisher: REO Technologies</p>'+body+'</article></main>'
+  content='<main id="main-content"><article class="site-document content-article">'+('' if has_hero else '<h1>'+html.escape(title)+'</h1>')+'<p class="document-date">Document revision '+revision+' · Publisher: REO Technologies. Source observations have their own dates.</p>'+body+'</article></main>'
   s=before+content+s[main.end():]
   if slug=='app-privacy-policy':
    # This legal page has no rate display; avoid an unrelated API request.
@@ -70,7 +72,7 @@ def build():
     return footer
    s=re.sub(r'<footer\b[\s\S]*?</footer>',add_app_link,s)
   s=re.sub(r'<script\b[^>]*type=["\x27]application/ld\+json["\x27][^>]*>[\s\S]*?</script>','',s)
-  schema={'@context':'https://schema.org','@type':'ProfilePage' if slug.startswith('authors/') else 'WebPage','name':title,'description':desc,'url':'https://mortgageproglobal.com/'+slug,'dateModified':'2026-10-25','publisher':{'@type':'Organization','name':'REO Technologies','url':'https://mortgageproglobal.com/about'}}
+  schema={'@context':'https://schema.org','@type':'ProfilePage' if slug.startswith('authors/') else 'WebPage','name':title,'description':desc,'url':'https://mortgageproglobal.com/'+slug,'dateModified':revision,'publisher':{'@type':'Organization','name':'REO Technologies','url':'https://mortgageproglobal.com/about'}}
   if slug.startswith('authors/'):schema['mainEntity']={'@type':'Person','name':'Abdul Raheem'}
   if slug=='app-privacy-policy':
    apps=re.findall(r'^\|\s*(.*?)\s*\|\s*`(com\.reotech\.[^`]+)`\s*\|$',md,re.M)
@@ -85,7 +87,7 @@ def build():
   s=re.sub(r'\n{3,}','\n\n',s);p.write_text(s)
  sm=ROOT/'sitemap.xml';text=sm.read_text()
  for slug in ['',*CONFIG]:
-  text=re.sub(r'(<url>\s*<loc>https://mortgageproglobal\.com/'+re.escape(slug)+r'</loc>[\s\S]*?<lastmod>)[^<]*(</lastmod>)',lambda m:m[1]+'2026-10-25'+m[2],text)
+  text=re.sub(r'(<url>\s*<loc>https://mortgageproglobal\.com/'+re.escape(slug)+r'</loc>[\s\S]*?<lastmod>)[^<]*(</lastmod>)',lambda m:m[1]+revisions.get(slug,revisions['default'])+m[2],text)
  sm.write_text(text)
  print(f'Built {len(CONFIG)} publisher, privacy and methodology documents.')
 if __name__=='__main__':build()

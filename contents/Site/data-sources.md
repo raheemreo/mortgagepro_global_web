@@ -8,7 +8,7 @@ A central bank's policy rate, a published mortgage survey and a personal lender 
 
 POLICY_RATE_TABLE
 
-The effective date is when the recorded rate took effect. The last-checked date records a source review. An unchanged policy rate can have an older effective date; a fresh page-load timestamp does not make an old figure newly verified. Policy references are flagged for review after their recorded review date.
+For a policy decision, the effective date is when the recorded rate took effect. For a daily or weekly series, the date is the source's observation date; it is not necessarily the date of a rate change. The source-checked date records retrieval or review, not a new market observation. An unchanged policy rate can have an older effective date; a fresh page-load timestamp does not make an old figure newly verified. Policy references are flagged for review after their recorded review date.
 
 ## Published mortgage and banking observations
 

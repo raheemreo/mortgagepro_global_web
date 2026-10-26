@@ -22,6 +22,8 @@ The website uses Cloudflare delivery infrastructure. A request can reveal an IP 
 
 We do not claim that all hosting data is anonymous, that every IP address is truncated, or that the source code establishes a particular provider-side retention period. Provider processing is described in [Cloudflare's privacy policy](https://www.cloudflare.com/privacypolicy/). Request data and security settings must be considered separately from calculator inputs.
 
+Cloudflare also injects a performance-measurement beacon on the live website. The browser sends requests to Cloudflare's measurement endpoint, including page and browser performance information. This is separate from the publisher's calculator arithmetic and from Google Analytics or Microsoft Clarity. Cloudflare's [Web Analytics documentation](https://developers.cloudflare.com/web-analytics/about/) describes the service. The source repository does not establish every provider-side account setting or retention period, and we do not describe all hosting telemetry as absent.
+
 ## Advertising and Google services
 
 The site includes Google AdSense code on content pages. Ad availability depends on Google's account and serving decisions. Google and its partners may use cookies, identifiers, IP addresses and information about visits to this and other sites when providing, measuring or personalizing advertisements, subject to applicable choices and requirements.
