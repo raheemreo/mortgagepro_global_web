@@ -5,6 +5,7 @@ on:
     paths:
       - '**.html'
       - 'contents/**'
+      - 'audit/**'
       - 'js/**'
       - 'css/**'
       - 'data/**'
@@ -19,6 +20,7 @@ on:
     paths:
       - '**.html'
       - 'contents/**'
+      - 'audit/**'
       - 'js/**'
       - 'css/**'
       - 'data/**'

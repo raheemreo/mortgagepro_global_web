@@ -1,0 +1,1 @@
+PASS: 69 page/viewport checks; seven calculator invalid/zero/scenario/telemetry checks; privacy controls. External traffic blocked.

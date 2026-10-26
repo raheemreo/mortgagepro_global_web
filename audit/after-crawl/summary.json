@@ -1,0 +1,17 @@
+{
+  "full_documents": 254,
+  "html_files": 256,
+  "partial_files": 2,
+  "tool_pages": 179,
+  "blog_articles": 43,
+  "ad_loader_pages": 18,
+  "manual_slot_pages": 0,
+  "manual_slots": 0,
+  "duplicate_description_groups": 0,
+  "duplicate_body_pairs": 79,
+  "internal_missing": 0,
+  "broken_fragments": 0,
+  "prompt_link_candidates": 278,
+  "tool_pages_under_600_method": 179,
+  "tool_pages_missing_author": 0
+}

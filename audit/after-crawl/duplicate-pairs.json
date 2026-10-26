@@ -1,0 +1,476 @@
+[
+  {
+    "first": "tools/australia/amortization.html",
+    "second": "tools/australia/overpayment.html",
+    "main_similarity": 0.9731,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/australia/duty-by-state.html",
+    "second": "tools/australia/stamp-duty.html",
+    "main_similarity": 0.9704,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/australia/frequency.html",
+    "second": "tools/australia/interest-only.html",
+    "main_similarity": 0.7476,
+    "editorial_similarity": 0.626
+  },
+  {
+    "first": "tools/australia/lmi-rate.html",
+    "second": "tools/australia/lmi.html",
+    "main_similarity": 0.721,
+    "editorial_similarity": 0.5923
+  },
+  {
+    "first": "tools/australia/rate-comparison.html",
+    "second": "tools/australia/refinance.html",
+    "main_similarity": 0.9712,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/canada/amortization.html",
+    "second": "tools/canada/prepayment.html",
+    "main_similarity": 0.9453,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/canada/credit-quote.html",
+    "second": "tools/canada/rate-comparison.html",
+    "main_similarity": 0.9416,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/canada/credit-quote.html",
+    "second": "tools/canada/refinance.html",
+    "main_similarity": 0.9482,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/canada/credit-quote.html",
+    "second": "tools/canada/renewal.html",
+    "main_similarity": 0.9455,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/canada/rate-comparison.html",
+    "second": "tools/canada/refinance.html",
+    "main_similarity": 0.9466,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/canada/rate-comparison.html",
+    "second": "tools/canada/renewal.html",
+    "main_similarity": 0.944,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/canada/refinance.html",
+    "second": "tools/canada/renewal.html",
+    "main_similarity": 0.9506,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/europe/amortization.html",
+    "second": "tools/europe/overpayment.html",
+    "main_similarity": 0.9724,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/india/amortization.html",
+    "second": "tools/india/overpayment.html",
+    "main_similarity": 0.9738,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/india/bank-comparison.html",
+    "second": "tools/india/bank-hfc.html",
+    "main_similarity": 0.9684,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/india/bank-comparison.html",
+    "second": "tools/india/credit-quote.html",
+    "main_similarity": 0.9718,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/india/bank-comparison.html",
+    "second": "tools/india/refinance.html",
+    "main_similarity": 0.9701,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/india/bank-hfc.html",
+    "second": "tools/india/credit-quote.html",
+    "main_similarity": 0.9718,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/india/bank-hfc.html",
+    "second": "tools/india/refinance.html",
+    "main_similarity": 0.9736,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/india/car-loan.html",
+    "second": "tools/india/mortgage.html",
+    "main_similarity": 0.4278,
+    "editorial_similarity": 0.7068
+  },
+  {
+    "first": "tools/india/credit-quote.html",
+    "second": "tools/india/refinance.html",
+    "main_similarity": 0.9735,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/india/duty-by-state.html",
+    "second": "tools/india/stamp-duty.html",
+    "main_similarity": 0.9681,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/india/emi.html",
+    "second": "tools/india/personal-loan.html",
+    "main_similarity": 0.9667,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/india/gst-purchase.html",
+    "second": "tools/india/gst.html",
+    "main_similarity": 0.9667,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/india/income-tax.html",
+    "second": "tools/india/tax-comparison.html",
+    "main_similarity": 0.9653,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/india/joint-loan.html",
+    "second": "tools/india/loan-eligibility.html",
+    "main_similarity": 0.7992,
+    "editorial_similarity": 0.6423
+  },
+  {
+    "first": "tools/india/lap.html",
+    "second": "tools/india/mortgage.html",
+    "main_similarity": 0.3958,
+    "editorial_similarity": 0.7068
+  },
+  {
+    "first": "tools/india/nps.html",
+    "second": "tools/india/sip.html",
+    "main_similarity": 0.7219,
+    "editorial_similarity": 0.5355
+  },
+  {
+    "first": "tools/india/pmay-housing.html",
+    "second": "tools/india/pmay-subsidy.html",
+    "main_similarity": 0.963,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/india/section-24b.html",
+    "second": "tools/india/section-80c.html",
+    "main_similarity": 0.9766,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/newzealand/affordability.html",
+    "second": "tools/newzealand/preapproval-budget.html",
+    "main_similarity": 0.9685,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/newzealand/amortization.html",
+    "second": "tools/newzealand/overpayment.html",
+    "main_similarity": 0.9765,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/newzealand/confirmed-support.html",
+    "second": "tools/newzealand/first-home.html",
+    "main_similarity": 0.9692,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/newzealand/deposit-builder.html",
+    "second": "tools/newzealand/deposit.html",
+    "main_similarity": 0.9729,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/newzealand/first-home-loan.html",
+    "second": "tools/newzealand/mortgage.html",
+    "main_similarity": 0.6023,
+    "editorial_similarity": 0.947
+  },
+  {
+    "first": "tools/newzealand/first-home-loan.html",
+    "second": "tools/newzealand/purchase-budget.html",
+    "main_similarity": 0.9533,
+    "editorial_similarity": 0.947
+  },
+  {
+    "first": "tools/newzealand/investment.html",
+    "second": "tools/newzealand/rental-yield.html",
+    "main_similarity": 0.9691,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/newzealand/kiwisaver-home.html",
+    "second": "tools/newzealand/kiwisaver-withdrawal.html",
+    "main_similarity": 0.968,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/newzealand/lender-comparison.html",
+    "second": "tools/newzealand/refinance.html",
+    "main_similarity": 0.9734,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/newzealand/ltv.html",
+    "second": "tools/newzealand/lvr-band.html",
+    "main_similarity": 0.9601,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/newzealand/mortgage.html",
+    "second": "tools/newzealand/purchase-budget.html",
+    "main_similarity": 0.6159,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/uk/amortization.html",
+    "second": "tools/uk/overpayment.html",
+    "main_similarity": 0.9725,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/uk/buy-to-let.html",
+    "second": "tools/uk/rental-yield.html",
+    "main_similarity": 0.9672,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/uk/lbtt.html",
+    "second": "tools/uk/ltt.html",
+    "main_similarity": 0.8962,
+    "editorial_similarity": 0.9189
+  },
+  {
+    "first": "tools/uk/lbtt.html",
+    "second": "tools/uk/sdlt.html",
+    "main_similarity": 0.8697,
+    "editorial_similarity": 0.8994
+  },
+  {
+    "first": "tools/uk/ltt.html",
+    "second": "tools/uk/sdlt.html",
+    "main_similarity": 0.8906,
+    "editorial_similarity": 0.9189
+  },
+  {
+    "first": "tools/uk/rate-comparison.html",
+    "second": "tools/uk/remortgage.html",
+    "main_similarity": 0.9752,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/usa/amortization.html",
+    "second": "tools/usa/extra-payments.html",
+    "main_similarity": 0.938,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/usa/amortization.html",
+    "second": "tools/usa/prepayment.html",
+    "main_similarity": 0.9402,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/usa/extra-payments.html",
+    "second": "tools/usa/prepayment.html",
+    "main_similarity": 0.9391,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/usa/flood.html",
+    "second": "tools/usa/ho1.html",
+    "main_similarity": 0.8719,
+    "editorial_similarity": 0.9005
+  },
+  {
+    "first": "tools/usa/flood.html",
+    "second": "tools/usa/ho3.html",
+    "main_similarity": 0.8719,
+    "editorial_similarity": 0.9005
+  },
+  {
+    "first": "tools/usa/flood.html",
+    "second": "tools/usa/ho5.html",
+    "main_similarity": 0.8662,
+    "editorial_similarity": 0.9005
+  },
+  {
+    "first": "tools/usa/flood.html",
+    "second": "tools/usa/ho6.html",
+    "main_similarity": 0.8762,
+    "editorial_similarity": 0.9005
+  },
+  {
+    "first": "tools/usa/flood.html",
+    "second": "tools/usa/homeowner-insurance.html",
+    "main_similarity": 0.8719,
+    "editorial_similarity": 0.9005
+  },
+  {
+    "first": "tools/usa/flood.html",
+    "second": "tools/usa/hurricane.html",
+    "main_similarity": 0.82,
+    "editorial_similarity": 0.9005
+  },
+  {
+    "first": "tools/usa/flood.html",
+    "second": "tools/usa/wildfire.html",
+    "main_similarity": 0.8719,
+    "editorial_similarity": 0.9005
+  },
+  {
+    "first": "tools/usa/heloc.html",
+    "second": "tools/usa/home-equity.html",
+    "main_similarity": 0.8714,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/usa/ho1.html",
+    "second": "tools/usa/ho3.html",
+    "main_similarity": 0.9273,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/usa/ho1.html",
+    "second": "tools/usa/ho5.html",
+    "main_similarity": 0.9215,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/usa/ho1.html",
+    "second": "tools/usa/ho6.html",
+    "main_similarity": 0.8764,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/usa/ho1.html",
+    "second": "tools/usa/homeowner-insurance.html",
+    "main_similarity": 0.9273,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/usa/ho1.html",
+    "second": "tools/usa/hurricane.html",
+    "main_similarity": 0.8658,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/usa/ho1.html",
+    "second": "tools/usa/wildfire.html",
+    "main_similarity": 0.9273,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/usa/ho3.html",
+    "second": "tools/usa/ho5.html",
+    "main_similarity": 0.9215,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/usa/ho3.html",
+    "second": "tools/usa/ho6.html",
+    "main_similarity": 0.8764,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/usa/ho3.html",
+    "second": "tools/usa/homeowner-insurance.html",
+    "main_similarity": 0.9709,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/usa/ho3.html",
+    "second": "tools/usa/hurricane.html",
+    "main_similarity": 0.8658,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/usa/ho3.html",
+    "second": "tools/usa/wildfire.html",
+    "main_similarity": 0.9302,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/usa/ho5.html",
+    "second": "tools/usa/ho6.html",
+    "main_similarity": 0.8764,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/usa/ho5.html",
+    "second": "tools/usa/homeowner-insurance.html",
+    "main_similarity": 0.9215,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/usa/ho5.html",
+    "second": "tools/usa/hurricane.html",
+    "main_similarity": 0.8687,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/usa/ho5.html",
+    "second": "tools/usa/wildfire.html",
+    "main_similarity": 0.9215,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/usa/ho6.html",
+    "second": "tools/usa/homeowner-insurance.html",
+    "main_similarity": 0.8764,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/usa/ho6.html",
+    "second": "tools/usa/hurricane.html",
+    "main_similarity": 0.8302,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/usa/ho6.html",
+    "second": "tools/usa/wildfire.html",
+    "main_similarity": 0.8764,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/usa/homeowner-insurance.html",
+    "second": "tools/usa/hurricane.html",
+    "main_similarity": 0.8658,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/usa/homeowner-insurance.html",
+    "second": "tools/usa/wildfire.html",
+    "main_similarity": 0.9302,
+    "editorial_similarity": 1.0
+  },
+  {
+    "first": "tools/usa/hurricane.html",
+    "second": "tools/usa/wildfire.html",
+    "main_similarity": 0.8658,
+    "editorial_similarity": 1.0
+  }
+]

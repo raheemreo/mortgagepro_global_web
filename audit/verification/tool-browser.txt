@@ -1,0 +1,22 @@
+Passed usa at 320px; cumulative 37
+Passed canada at 320px; cumulative 48
+Passed uk at 320px; cumulative 61
+Passed australia at 320px; cumulative 75
+Passed newzealand at 320px; cumulative 103
+Passed india at 320px; cumulative 133
+Passed europe at 320px; cumulative 143
+Passed usa at 390px; cumulative 144
+Passed canada at 390px; cumulative 145
+Passed uk at 390px; cumulative 146
+Passed australia at 390px; cumulative 147
+Passed newzealand at 390px; cumulative 148
+Passed india at 390px; cumulative 149
+Passed europe at 390px; cumulative 150
+Passed usa at 1280px; cumulative 151
+Passed canada at 1280px; cumulative 152
+Passed uk at 1280px; cumulative 153
+Passed australia at 1280px; cumulative 154
+Passed newzealand at 1280px; cumulative 155
+Passed india at 1280px; cumulative 156
+Passed europe at 1280px; cumulative 157
+PASS: 157 tool/viewport checks; all 143 surviving tools at 320px and seven principal tools also at 390px/1280px; submit-only, invalidation/reset, no overflow/JS errors; permanently paused privacy settings. External network blocked.
