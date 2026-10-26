@@ -295,8 +295,9 @@
   <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#0B1D3A">
   <meta name="msapplication-TileColor" content="#0B1D3A">
   <meta name="theme-color" content="#0B1D3A">
-<link rel="stylesheet" href="/css/us-blog.css">
-<script src="/js/global-blog-calculators.js" defer></script>
+<link rel="stylesheet" href="/css/us-blog.css?v=8de0ab0f445c">
+<script src="/js/global-blog-calculators.js?v=712bf186bf22" defer></script>
+<link rel="stylesheet" href="/css/country-tools.css?v=427a948ffcf4">
 </head>
 
 <body>
@@ -384,13 +385,13 @@
 <p>The tool models a table loan from the outset and an interest-only phase followed by repayment at the same assumed rate. It does not say these are the only mortgage structures available in New Zealand; <a href="https://sorted.org.nz/guides/home-buying/mortgage-types/">Sorted's mortgage-types guide</a> describes others.</p>
 <section class="us-calc" data-global-calculator="io" data-currency="NZD" data-compounding="monthly" aria-labelledby="global-calc-title">
 <h2 id="global-calc-title">Try the assumptions</h2>
-<p>Amounts are in NZD. Change the inputs to recalculate locally. No loan, tax or scheme approval is established by the result.</p>
-<div class="us-fields">
+<p>Amounts are NZD. Enter your current figures, then press Calculate estimate. The tool does not establish approval.</p>
+<form data-manual-form novalidate><div class="us-fields">
 <label for="global-loan">Starting principal
-<input id="global-loan" name="loan" type="number" required value="520000" min="0.01" max="100000000" step="any">
+<input id="global-loan" name="loan" type="number" required value="" min="0.01" max="100000000" step="any">
 </label>
 <label for="global-rate">Annual rate (%) — assumed, not a quote
-<input id="global-rate" name="rate" type="number" required value="5.99" min="0" max="30" step="any">
+<input id="global-rate" name="rate" type="number" required value="" min="0" max="30" step="any">
 </label>
 <label for="global-years">Remaining repayment years
 <input id="global-years" name="years" type="number" required value="30" min="1" max="40" step="1">
@@ -399,7 +400,8 @@
 <input id="global-ioYears" name="ioYears" type="number" required value="5" min="1" max="39" step="1">
 </label>
 </div>
-<div data-results role="status" aria-live="polite" aria-atomic="true"><p>Enable JavaScript for the interactive estimate. The worked explanations and sources remain available below.</p></div>
+<div class="us-actions"><button type="submit" hidden>Calculate estimate</button><button type="reset">Reset example</button></div></form>
+<div hidden tabindex="-1" data-results role="status" aria-live="polite" aria-atomic="true"><p>Enable JavaScript for the interactive estimate. The worked explanations and sources remain available below.</p></div>
 <noscript><p>The interactive estimate requires JavaScript. Read the worked examples and sources below.</p></noscript>
 </section>
 <h2>Follow one balance for five years</h2>

@@ -9,7 +9,7 @@ const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'
 const asset=file=>'/'+file+'?v='+crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex').slice(0,12);
 const references={reviewedOn:C.reviewedOn};
 const url=id=>'/tools/'+C.country+'/'+id;
-const groupIDs=Object.fromEntries([...new Set(catalog.map(c=>c.group))].map((g,i)=>[g,['tools','repayment','regions','investment','programs','taxes'][i]||'group-'+i]));
+const groupIDs=C.groupIDs||Object.fromEntries([...new Set(catalog.map(c=>c.group))].map((g,i)=>[g,['tools','repayment','regions','investment','programs','taxes'][i]||'group-'+i]));
 const consent=`<script data-mpg-consent>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -76,7 +76,8 @@ ${footer}
  fs.writeFileSync(path.join(dir,c.id+'.html'),html);
 }
 function referenceTitle(u){if(u.includes('bankofengland'))return 'Lending policy — check scope and effective date';if(u.includes('revenue.scot'))return 'Scottish purchase tax and relief rules';if(u.includes('gov.wales'))return 'Welsh purchase tax rates and rules';if(u.includes('moneyhelper'))return 'Mortgage guidance from MoneyHelper';return 'Official rules, rates and eligibility guidance';}
-function card(c){return `<a href="${url(c.id)}" class="tc"><div class="tic" aria-hidden="true">🌐</div><div class="tn">${esc(c.title)}</div><div class="td">${esc(c.description)}</div><div class="ta" aria-hidden="true">›</div></a>`;}
+const presentation=require('./tool-card-presentation.cjs');
+function card(c){const p=presentation(c);return `<a href="${url(c.id)}" class="tc" data-tone="${p.tone}"><div class="tic" aria-hidden="true">${p.icon}</div><div class="tn">${esc(c.title)}</div><div class="td">${esc(c.description)}</div><div class="ta" aria-hidden="true">›</div></a>`;}
 let sections='<!-- COUNTRY TOOLS START -->\n';
 for(const group of Object.keys(groupIDs))sections+=`<section class="section country-tools-section" id="${groupIDs[group]}"><div class="sec-hdr"><h2>${esc(group)}</h2></div><p>Enter current figures and press Calculate estimate. Editing or resetting clears the previous result.</p><div class="g2 country-tools-directory">${catalog.filter(c=>c.group===group).map(card).join('\n')}</div></section>\n`;
 sections+='<!-- COUNTRY TOOLS END -->\n';

@@ -1,0 +1,18 @@
+{
+  "reviewedOn": "2026-10-25",
+  "appCommit": "9f79ea943e27b6d8b0c1ca411c37fb4cae077f72",
+  "kiwisaverStandardEmployeeEmployerRatePercent": 3.5,
+  "kiwisaverRateEffective": "2026-04-01",
+  "governmentContributionMax": 260.72,
+  "governmentMatchPercent": 25,
+  "governmentTaxableIncomeCap": 180000,
+  "firstHomeRetention": 1000,
+  "firstHomeRecognizedMembershipYears": 3,
+  "firstHomeGrantNewApplicationsClosed": "2024-05-22",
+  "rentalInterestLimitRestoredPercent": 100,
+  "rentalInterestEffective": "2025-04-01",
+  "taxYearEnding": "2027-03-31",
+  "ACCLevyPercent": 1.75,
+  "ACCIncomeCap": 156641,
+  "scope": "Dated statutory references only. Lender ratios are lending-flow controls; provider eligibility, quotes, special tax and legal cases are not inferred."
+}

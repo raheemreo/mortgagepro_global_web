@@ -300,5 +300,339 @@
       "years": 25,
       "fees": 0
     }
+  },
+  "newzealand": {
+    "mortgage": {
+      "price": 700000,
+      "down": 140000,
+      "rate": 5.99,
+      "years": 30,
+      "type": "repayment",
+      "financed": 0,
+      "cashFees": 0
+    },
+    "purchase-budget": {
+      "price": 700000,
+      "down": 140000,
+      "rate": 5.99,
+      "years": 30,
+      "type": "repayment",
+      "financed": 0,
+      "cashFees": 0
+    },
+    "first-home-loan": {
+      "price": 700000,
+      "down": 140000,
+      "rate": 5.99,
+      "years": 30,
+      "type": "repayment",
+      "financed": 0,
+      "cashFees": 0
+    },
+    "repayment": {
+      "loan": 520000,
+      "rate": 5.99,
+      "years": 30,
+      "ioYears": 5
+    },
+    "amortization": {
+      "loan": 520000,
+      "rate": 5.99,
+      "years": 30,
+      "frequency": "12",
+      "extra": 0,
+      "lump": 0,
+      "lumpPeriod": 1,
+      "annualLump": 0,
+      "accelerated": "no"
+    },
+    "overpayment": {
+      "loan": 520000,
+      "rate": 5.99,
+      "years": 30,
+      "frequency": "12",
+      "extra": 0,
+      "lump": 0,
+      "lumpPeriod": 1,
+      "annualLump": 0,
+      "accelerated": "no"
+    },
+    "affordability": {
+      "net": 8000,
+      "living": 3000,
+      "debts": 0,
+      "down": 140000,
+      "rate": 5.99,
+      "buffer": 0,
+      "years": 30
+    },
+    "preapproval-budget": {
+      "net": 8000,
+      "living": 3000,
+      "debts": 0,
+      "down": 140000,
+      "rate": 5.99,
+      "buffer": 0,
+      "years": 30
+    },
+    "budget": {
+      "net": 8000,
+      "partner": 0,
+      "housing": 2500,
+      "food": 0,
+      "transport": 0,
+      "utilities": 0,
+      "health": 0,
+      "debts": 0,
+      "other": 0
+    },
+    "dti": {
+      "loan": 520000,
+      "other": 0,
+      "income": 150000,
+      "rate": 5.99,
+      "years": 30
+    },
+    "ltv": {
+      "value": 700000,
+      "loan": 520000,
+      "target": 80
+    },
+    "lvr-band": {
+      "value": 700000,
+      "loan": 520000,
+      "target": 80
+    },
+    "low-equity": {
+      "loan": 520000,
+      "rate": 5.99,
+      "margin": 0.5,
+      "years": 30,
+      "horizon": 36,
+      "fees": 0
+    },
+    "first-home": {
+      "price": 700000,
+      "savings": 70000,
+      "withdrawal": 0,
+      "support": 0,
+      "closing": 20000,
+      "target": 20
+    },
+    "confirmed-support": {
+      "price": 700000,
+      "savings": 70000,
+      "withdrawal": 0,
+      "support": 0,
+      "closing": 20000,
+      "target": 20
+    },
+    "deposit": {
+      "price": 700000,
+      "target": 20,
+      "closing": 20000,
+      "savings": 70000,
+      "withdrawal": 0,
+      "monthly": 1000,
+      "returnRate": 3,
+      "months": 120
+    },
+    "deposit-builder": {
+      "price": 700000,
+      "target": 20,
+      "closing": 20000,
+      "savings": 70000,
+      "withdrawal": 0,
+      "monthly": 1000,
+      "returnRate": 3,
+      "months": 120
+    },
+    "kiwisaver-withdrawal": {
+      "eligibleBalance": 62000,
+      "membership": 3,
+      "confirmed": "yes"
+    },
+    "kiwisaver-home": {
+      "eligibleBalance": 62000,
+      "membership": 3,
+      "confirmed": "yes"
+    },
+    "employer": {
+      "salary": 100000,
+      "employeeRate": 3.5,
+      "employerRate": 3.5,
+      "esct": 17.5
+    },
+    "government-contribution": {
+      "ownContributions": 1042.86,
+      "taxableIncome": 100000,
+      "confirmed": "yes"
+    },
+    "kiwisaver-growth": {
+      "balance": 50000,
+      "salary": 100000,
+      "employeeRate": 3.5,
+      "employerRate": 3.5,
+      "esct": 17.5,
+      "monthly": 0,
+      "government": 0,
+      "returnRate": 3,
+      "years": 10
+    },
+    "rental-yield": {
+      "value": 700000,
+      "loan": 520000,
+      "rate": 5.99,
+      "years": 30,
+      "rent": 650,
+      "weeks": 52,
+      "management": 0,
+      "costs": 0
+    },
+    "investment": {
+      "value": 700000,
+      "loan": 520000,
+      "rate": 5.99,
+      "years": 30,
+      "rent": 650,
+      "weeks": 52,
+      "management": 0,
+      "costs": 0
+    },
+    "interest-deduction": {
+      "interest": 30000,
+      "businessUse": 100,
+      "taxRate": 33
+    },
+    "ring-fencing": {
+      "rent": 650,
+      "otherRentalIncome": 0,
+      "costs": 8000,
+      "interest": 30000,
+      "carried": 0
+    },
+    "income-tax": {
+      "gross": 100000,
+      "credits": 0,
+      "acc": "yes",
+      "kiwiRate": 3.5,
+      "other": 0
+    },
+    "property-sale": {
+      "purchase": 600000,
+      "sale": 800000,
+      "costs": 8000,
+      "loan": 0,
+      "tax": 0
+    },
+    "investment-tax": {
+      "taxable": 10000,
+      "taxRate": 33,
+      "credit": 0,
+      "cashReturn": 8000
+    },
+    "refinance": {
+      "loan": 520000,
+      "oldRate": 6.49,
+      "rate": 5.99,
+      "years": 30,
+      "newYears": 30,
+      "horizon": 36,
+      "fees": 0,
+      "penalty": 0,
+      "repayCashback": 0,
+      "cashback": 0
+    },
+    "lender-comparison": {
+      "loan": 520000,
+      "oldRate": 6.49,
+      "rate": 5.99,
+      "years": 30,
+      "newYears": 30,
+      "horizon": 36,
+      "fees": 0,
+      "penalty": 0,
+      "repayCashback": 0,
+      "cashback": 0
+    },
+    "refix": {
+      "loan": 520000,
+      "share": 50,
+      "rate": 5.99,
+      "secondRate": 6.29,
+      "years": 30
+    },
+    "revolving": {
+      "limit": 50000,
+      "drawn": 20000,
+      "rate": 5.99,
+      "net": 8000,
+      "expenses": 5000,
+      "months": 60
+    },
+    "consolidation": {
+      "loan": 520000,
+      "oldRate": 6.49,
+      "years": 30,
+      "debt1": 10000,
+      "debtRate1": 12,
+      "debtMonths1": 36,
+      "debt2": 5000,
+      "debtRate2": 12,
+      "debtMonths2": 36,
+      "debt3": 0,
+      "debtRate3": 12,
+      "debtMonths3": 36,
+      "rate": 5.99,
+      "newYears": 30,
+      "horizon": 36,
+      "fees": 0
+    },
+    "car-loan": {
+      "price": 35000,
+      "down": 5000,
+      "financed": 0,
+      "cashFees": 0,
+      "rate": 9,
+      "years": 5,
+      "balloon": 0,
+      "elapsed": 0
+    },
+    "construction": {
+      "loan": 520000,
+      "initial": 100000,
+      "rate": 5.99,
+      "buildMonths": 12,
+      "draw1": 80000,
+      "month1": 1,
+      "draw2": 80000,
+      "month2": 2,
+      "draw3": 80000,
+      "month3": 3,
+      "draw4": 80000,
+      "month4": 4,
+      "draw5": 80000,
+      "month5": 5,
+      "repayRate": 5.99,
+      "years": 30,
+      "fees": 0
+    },
+    "closing-costs": {
+      "legal": 1800,
+      "inspection": 0,
+      "lim": 0,
+      "title": 0,
+      "bank": 0,
+      "moving": 0,
+      "other": 0
+    },
+    "healthy-home": {
+      "heating": 5000,
+      "insulation": 0,
+      "ventilation": 0,
+      "moisture": 0,
+      "draught": 0,
+      "other": 0
+    }
   }
 }

@@ -1,0 +1,221 @@
+{
+  "repository": "raheemreo/mortgagepro_global",
+  "commit": "9f79ea943e27b6d8b0c1ca411c37fb4cae077f72",
+  "files": [
+    {
+      "path": "lib/features/newzealand/nz_screen.dart",
+      "sha": "46e76083715f063a4029cdd12ba500065360f84f",
+      "bytes": 43314
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_affordability_calc.dart",
+      "sha": "cfb8a47d49f6b6a17a1b3b173faaa88e863ad3a1",
+      "bytes": 41050
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_ai_advisor.dart",
+      "sha": "51620612198171e2f6148b83ca0038cc488437a2",
+      "bytes": 27471
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_all_regions.dart",
+      "sha": "ecef7ee05c1f5e94eecb92e1fa168297eaf1ef56",
+      "bytes": 27258
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_amortization.dart",
+      "sha": "739c1b1c853b84f7f29adc0a55defc8d290c0f1f",
+      "bytes": 41389
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_budget_planner.dart",
+      "sha": "d5e1daea2bce3adcb640d8d512ab8b7c75a7d50c",
+      "bytes": 51215
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_car_loan_calc.dart",
+      "sha": "e39790870bc1943d129dc543af7ce511397752eb",
+      "bytes": 53106
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_compare_lenders.dart",
+      "sha": "464df4b29c0be41e565aff7fde3778dbfe58fdd7",
+      "bytes": 37540
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_construction_loan.dart",
+      "sha": "0687b564672ea2edc67685aa507faf5ce0f53c5e",
+      "bytes": 45321
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_credit_score_nz.dart",
+      "sha": "de8bb549374bc1719206d65ce1262aa47ef19393",
+      "bytes": 27450
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_debt_consolidation.dart",
+      "sha": "09f7d3dd5ed3873101b65c125835f815ce88a18d",
+      "bytes": 41605
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_deposit_builder.dart",
+      "sha": "533eaf6208f34eb60b71a17eaeb4e904560b6314",
+      "bytes": 49774
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_deposit_calc.dart",
+      "sha": "30ba31c4e1a27d84852e5aaf4e067dc11ce13546",
+      "bytes": 47254
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_dti_calculator.dart",
+      "sha": "087b87a8b68c954b148bc157a504cb671bc56032",
+      "bytes": 47739
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_employer_contrib.dart",
+      "sha": "038daf9ec46279e952db4db6c4f386ecf71313bd",
+      "bytes": 47085
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_extra_repayments.dart",
+      "sha": "3f94ba73aeba03ccc8a596cf28503e7f856603bf",
+      "bytes": 37757
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_first_home_buyer.dart",
+      "sha": "83dc2edcdac6ca783c2376167430906f9941e57b",
+      "bytes": 50329
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_healthy_homes.dart",
+      "sha": "385dc3e9cfdbbff6c91ad6a4db36f750d5aa41b1",
+      "bytes": 48923
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_homestart_grant.dart",
+      "sha": "1d4981ac708183db503acbd2053c272867017f11",
+      "bytes": 36626
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_income_tax_calc.dart",
+      "sha": "8b3bcf624f38513d498f7d3e2e5ffd70e0151a28",
+      "bytes": 37142
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_interest_deductibility.dart",
+      "sha": "90968a3af0e4ec23f5d00e17ee4719168d2a09bc",
+      "bytes": 37475
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_investment_property.dart",
+      "sha": "332dc3296a9bc4fdeec0466ae155e190229a899a",
+      "bytes": 42983
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_kainga_ora.dart",
+      "sha": "1f3a02ab5040ed194ccf1d140c17fec71dcb2ad5",
+      "bytes": 53364
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_kiwisaver_balance.dart",
+      "sha": "75e9a5e64954f3e44455cddda558519db983da95",
+      "bytes": 47201
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_kiwisaver_calc.dart",
+      "sha": "2c02cede31b7e8c1495c41d29bd811674ca08b4d",
+      "bytes": 40189
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_kiwisaver_withdrawal.dart",
+      "sha": "31bb11b66abf4b86474ed47c84cab1e9c8b84bc7",
+      "bytes": 41580
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_low_equity_margin.dart",
+      "sha": "a94bf835ad84264d89f5a10d6f3bc54e2fa84bfa",
+      "bytes": 38077
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_lvr_band_tool.dart",
+      "sha": "8b52ec3b7ee8f0168076328dfd9e8792a8a146ab",
+      "bytes": 33340
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_lvr_calculator.dart",
+      "sha": "3d23603e14efdea3d70427c68862209ae82df727",
+      "bytes": 56142
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_moneyhub_mortgage.dart",
+      "sha": "719beb17bf8c8e26c77714fc75d12c18f88c63f6",
+      "bytes": 86636
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_mortgage_calc.dart",
+      "sha": "c8ed98a55ecd22c612f033beacd4a8bd5a3ce217",
+      "bytes": 38476
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_nzx_investor_calc.dart",
+      "sha": "47e72b8212e3fddcb93a8efcd6a81aa4d4acdfea",
+      "bytes": 58660
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_ocr_history.dart",
+      "sha": "251d33eb70088752d7652d884393e3283aea352f",
+      "bytes": 37090
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_overseas_investment_act.dart",
+      "sha": "c42bdd509755c776c1da9c0df59a747a672cdb0c",
+      "bytes": 38568
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_preapproval_guide.dart",
+      "sha": "c0223af772447540f4d762cf1330a00518202b47",
+      "bytes": 48708
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_refinance_calc.dart",
+      "sha": "e01d6570cae74a4e269ab8debd2905b5a9b6bf57",
+      "bytes": 40152
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_refixing_calc.dart",
+      "sha": "9a8fc8bfd42be9914c7cbf123049a295aa5c2dce",
+      "bytes": 33373
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_reinz_hpi.dart",
+      "sha": "4bd43dffd9318f75ae51468af94e02034931c342",
+      "bytes": 36085
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_rental_yield.dart",
+      "sha": "961c207c90fd03d964c9152b57b3a7990beb469c",
+      "bytes": 39386
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_repayment_calc.dart",
+      "sha": "54f030c342dd66b78c3ec48a68a812460b2ef156",
+      "bytes": 30661
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_revolving_credit.dart",
+      "sha": "24f4fe7370d7124eb2a63e0a67f8ec69c6850e73",
+      "bytes": 41582
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_ring_fencing.dart",
+      "sha": "1baaf87715f1a883398a58769643f6a7f845caf9",
+      "bytes": 37324
+    },
+    {
+      "path": "lib/features/newzealand/tools/nz_solicitor_costs.dart",
+      "sha": "99677442b20baf1546bb9a22ce3b9a97daf98f88",
+      "bytes": 42086
+    }
+  ]
+}

@@ -92,5 +92,43 @@
   "australia-stamp-duty-calculator": {
     "price": 700000,
     "state": "qld"
+  },
+  "nz-mortgage-calculator": {
+    "loan": 520000,
+    "rate": 5.99,
+    "years": 30
+  },
+  "nz-dti-calculator": {
+    "income": 150000,
+    "loan": 520000,
+    "other": 0
+  },
+  "nz-car-loan-calculator": {
+    "loan": 35000,
+    "rate": 9,
+    "years": 5,
+    "elapsed": 24
+  },
+  "nz-kiwisaver-calculator": {
+    "eligibleBalance": 62000,
+    "membership": 3
+  },
+  "nz-lvr-calculator": {
+    "value": 700000,
+    "loan": 630000,
+    "target": 80
+  },
+  "nz-rental-yield-calculator": {
+    "value": 650000,
+    "rent": 650,
+    "weeks": 52,
+    "costs": 7000,
+    "management": 8
+  },
+  "nz-repayment-calculator": {
+    "loan": 520000,
+    "rate": 5.99,
+    "years": 30,
+    "ioYears": 5
   }
 }
