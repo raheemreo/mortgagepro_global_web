@@ -1,1 +1,8 @@
-{"enabled": ["uk", "australia", "newzealand"]}
+{
+  "enabled": [
+    "uk",
+    "australia",
+    "newzealand",
+    "india"
+  ]
+}

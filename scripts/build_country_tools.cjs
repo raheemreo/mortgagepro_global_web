@@ -8,6 +8,7 @@ const C=require('../js/'+country+'-tools-catalog.js'),{catalog}=C;
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const asset=file=>'/'+file+'?v='+crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex').slice(0,12);
 const references={reviewedOn:C.reviewedOn};
+const updatedLabel=new Date(C.reviewedOn+'T00:00:00Z').toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric',timeZone:'UTC'});
 const url=id=>'/tools/'+C.country+'/'+id;
 const groupIDs=C.groupIDs||Object.fromEntries([...new Set(catalog.map(c=>c.group))].map((g,i)=>[g,['tools','repayment','regions','investment','programs','taxes'][i]||'group-'+i]));
 const consent=`<script data-mpg-consent>
@@ -29,7 +30,7 @@ const footer=`<footer class="tool-footer"><div><p><strong>MortgagePro Global · 
 const dir=path.join(root,'tools',C.country);fs.mkdirSync(dir,{recursive:true});
 for(const c of catalog){
  const state='';
- const schema={'@context':'https://schema.org','@type':'WebApplication',name:c.title,url:'https://mortgageproglobal.com'+url(c.id),applicationCategory:'FinanceApplication',operatingSystem:'Web browser',description:c.description,author:{'@type':'Organization',name:'REO Technologies'},dateModified:'2026-10-25'};
+ const schema={'@context':'https://schema.org','@type':'WebApplication',name:c.title,url:'https://mortgageproglobal.com'+url(c.id),applicationCategory:'FinanceApplication',operatingSystem:'Web browser',description:c.description,author:{'@type':'Organization',name:'REO Technologies'},dateModified:C.reviewedOn};
  const related=catalog.filter(d=>d.group===c.group&&d.id!==c.id).slice(0,6);
  const html=`<!DOCTYPE html>
 <html lang="en">
@@ -60,7 +61,7 @@ for(const c of catalog){
 <nav class="tool-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/${C.landing}#${groupIDs[c.group]}">${C.label} ${esc(c.group)}</a> / ${esc(c.title)}</nav>
 <p class="tool-eyebrow">${C.label} · ${C.currency} · ${esc(c.group)}</p>
 <h1>${esc(c.title)}</h1><p class="tool-intro">${esc(c.description)}</p>
-<p class="tool-meta">Updated October 25, 2026 · Enter current figures from your documents and quotes. Budget settings are editable. Inputs stay in this tab and are not saved or sent by the calculator.</p>
+<p class="tool-meta">Updated ${updatedLabel} · Enter current figures from your documents and quotes. Budget settings are editable. Inputs stay in this tab and are not saved or sent by the calculator.</p>
 <p class="tool-notice">Rules reviewed ${C.reviewedOn}. ${esc(C.rules)}</p>
 <div data-country-tool="${c.id}" class="tool-workspace">
 <section class="tool-panel" aria-labelledby="inputs-heading"><h2 id="inputs-heading">Your inputs</h2>${state}<form novalidate autocomplete="off"><div class="tool-inputs">${c.fields.map(field).join('\n')}</div><div class="tool-actions"><button type="submit" class="tool-primary" hidden>Calculate estimate</button><button type="reset" class="tool-secondary">Reset example</button></div><p data-error class="tool-error" role="alert" tabindex="-1" hidden></p><p data-status class="tool-live-status" role="status" aria-live="polite"></p></form><noscript><p class="tool-notice">Enable JavaScript to calculate in your browser. The formulas and assumptions below remain available without JavaScript.</p></noscript></section>

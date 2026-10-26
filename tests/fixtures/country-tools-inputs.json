@@ -634,5 +634,342 @@
       "draught": 0,
       "other": 0
     }
+  },
+  "india": {
+    "mortgage": {
+      "price": 6500000,
+      "down": 1500000,
+      "rate": 8.5,
+      "years": 20,
+      "type": "repayment",
+      "financed": 0,
+      "cashFees": 0
+    },
+    "emi": {
+      "loan": 5000000,
+      "rate": 8.5,
+      "years": 20,
+      "financed": 0,
+      "fees": 0
+    },
+    "personal-loan": {
+      "loan": 5000000,
+      "rate": 8.5,
+      "years": 20,
+      "financed": 0,
+      "fees": 0
+    },
+    "amortization": {
+      "loan": 5000000,
+      "rate": 8.5,
+      "years": 20,
+      "frequency": "12",
+      "extra": 0,
+      "lump": 0,
+      "lumpPeriod": 1,
+      "annualLump": 0,
+      "accelerated": "no"
+    },
+    "overpayment": {
+      "loan": 5000000,
+      "rate": 8.5,
+      "years": 20,
+      "frequency": "12",
+      "extra": 0,
+      "lump": 0,
+      "lumpPeriod": 1,
+      "annualLump": 0,
+      "accelerated": "no"
+    },
+    "refinance": {
+      "loan": 5000000,
+      "oldRate": 9.5,
+      "rate": 8.5,
+      "years": 20,
+      "newYears": 20,
+      "horizon": 36,
+      "fees": 0,
+      "penalty": 0,
+      "repayCashback": 0,
+      "cashback": 0
+    },
+    "bank-comparison": {
+      "loan": 5000000,
+      "oldRate": 9.5,
+      "rate": 8.5,
+      "years": 20,
+      "newYears": 20,
+      "horizon": 36,
+      "fees": 0,
+      "penalty": 0,
+      "repayCashback": 0,
+      "cashback": 0
+    },
+    "bank-hfc": {
+      "loan": 5000000,
+      "oldRate": 9.5,
+      "rate": 8.5,
+      "years": 20,
+      "newYears": 20,
+      "horizon": 36,
+      "fees": 0,
+      "penalty": 0,
+      "repayCashback": 0,
+      "cashback": 0
+    },
+    "credit-quote": {
+      "loan": 5000000,
+      "oldRate": 9.5,
+      "rate": 8.5,
+      "years": 20,
+      "newYears": 20,
+      "horizon": 36,
+      "fees": 0,
+      "penalty": 0,
+      "repayCashback": 0,
+      "cashback": 0
+    },
+    "floating-fixed": {
+      "loan": 5000000,
+      "rate": 8.5,
+      "fixedRate": 9.5,
+      "resetRate": 9,
+      "years": 20,
+      "resetMonth": 24,
+      "fees": 0,
+      "fixedFees": 0
+    },
+    "loan-eligibility": {
+      "net": 150000,
+      "debts": 10000,
+      "living": 50000,
+      "down": 1500000,
+      "foir": 50,
+      "rate": 8.5,
+      "years": 20
+    },
+    "joint-loan": {
+      "net": 150000,
+      "debts": 10000,
+      "living": 50000,
+      "down": 1500000,
+      "foir": 50,
+      "rate": 8.5,
+      "years": 20,
+      "partner": 0,
+      "partnerDebts": 0
+    },
+    "foir": {
+      "net": 150000,
+      "partner": 0,
+      "debts": 10000,
+      "other": 0,
+      "proposed": 40000,
+      "target": 50
+    },
+    "lap": {
+      "value": 8000000,
+      "ltv": 60,
+      "rate": 8.5,
+      "years": 20,
+      "fees": 0
+    },
+    "nri-loan": {
+      "price": 6500000,
+      "down": 1500000,
+      "rate": 8.5,
+      "years": 20,
+      "incomeForeign": 5000,
+      "fx": 83,
+      "remittanceFees": 0,
+      "fees": 0
+    },
+    "car-loan": {
+      "price": 1000000,
+      "down": 200000,
+      "financed": 0,
+      "rate": 8.5,
+      "years": 5,
+      "fees": 0
+    },
+    "education-loan": {
+      "loan": 5000000,
+      "rate": 8.5,
+      "courseMonths": 48,
+      "graceMonths": 12,
+      "treatment": "capitalize",
+      "years": 10,
+      "fees": 0
+    },
+    "gold-loan": {
+      "weight": 50,
+      "pricePerGram": 7000,
+      "ltv": 75,
+      "rate": 8.5,
+      "months": 12,
+      "type": "repayment",
+      "fees": 0
+    },
+    "construction": {
+      "loan": 5000000,
+      "initial": 1000000,
+      "rate": 8.5,
+      "buildMonths": 12,
+      "draw1": 0,
+      "month1": 2,
+      "draw2": 0,
+      "month2": 4,
+      "draw3": 0,
+      "month3": 6,
+      "draw4": 0,
+      "month4": 8,
+      "draw5": 0,
+      "month5": 10,
+      "repayRate": 8.5,
+      "years": 20,
+      "fees": 0
+    },
+    "stamp-duty": {
+      "price": 6500000,
+      "assessed": 6800000,
+      "dutyRate": 5,
+      "registrationRate": 0,
+      "registrationFixed": 0,
+      "concession": 0,
+      "surcharge": 0,
+      "fees": 0
+    },
+    "duty-by-state": {
+      "price": 6500000,
+      "assessed": 6800000,
+      "dutyRate": 5,
+      "registrationRate": 0,
+      "registrationFixed": 0,
+      "concession": 0,
+      "surcharge": 0,
+      "fees": 0
+    },
+    "gst": {
+      "price": 6500000,
+      "gstRate": 5,
+      "inclusive": "no",
+      "fees": 0
+    },
+    "gst-purchase": {
+      "price": 6500000,
+      "gstRate": 5,
+      "inclusive": "no",
+      "fees": 0
+    },
+    "tds": {
+      "price": 6500000,
+      "assessed": 6800000,
+      "share": 100,
+      "confirmed": "no"
+    },
+    "capital-gains": {
+      "sale": 9000000,
+      "cost": 5000000,
+      "improvements": 0,
+      "selling": 0,
+      "settlement": 0,
+      "confirmedTaxable": 2000000,
+      "taxRate": 13
+    },
+    "income-tax": {
+      "newTaxable": 1500000,
+      "oldTaxable": 1300000
+    },
+    "tax-comparison": {
+      "newTaxable": 1500000,
+      "oldTaxable": 1300000
+    },
+    "section-80c": {
+      "taxable": 1500000,
+      "confirmedDeduction": 150000,
+      "limit": 150000,
+      "regime": "old"
+    },
+    "section-24b": {
+      "taxable": 1500000,
+      "confirmedDeduction": 150000,
+      "limit": 150000,
+      "regime": "old"
+    },
+    "ppf": {
+      "contribution": 120000,
+      "balance": 250000,
+      "rate": 7.1,
+      "years": 15,
+      "mode": "annual",
+      "depositMonth": 1,
+      "timing": "early"
+    },
+    "sip": {
+      "balance": 250000,
+      "monthly": 5000,
+      "returnRate": 6,
+      "step": 0,
+      "years": 20,
+      "timing": "end"
+    },
+    "nps": {
+      "balance": 250000,
+      "monthly": 5000,
+      "returnRate": 6,
+      "step": 0,
+      "years": 20,
+      "timing": "end",
+      "annuityShare": 40,
+      "annuityRate": 6
+    },
+    "epf": {
+      "balance": 250000,
+      "employee": 3000,
+      "employer": 917,
+      "rate": 8.5,
+      "step": 0,
+      "years": 20
+    },
+    "nre-nro": {
+      "deposit": 1000000,
+      "rate": 8.5,
+      "years": 5,
+      "frequency": "4",
+      "taxRate": 13,
+      "fees": 0
+    },
+    "currency": {
+      "amount": 5000,
+      "fx": 83,
+      "sourceFee": 0,
+      "spread": 0,
+      "destinationFee": 0
+    },
+    "city-price": {
+      "area": 1000,
+      "pricePerUnit": 7000,
+      "fees": 0
+    },
+    "pmay-screen": {
+      "income": 600000,
+      "loan": 2500000,
+      "price": 3500000,
+      "area": 100,
+      "years": 20,
+      "confirmed": "no"
+    },
+    "pmay-subsidy": {
+      "loan": 5000000,
+      "rate": 8.5,
+      "years": 20,
+      "credited": 0
+    },
+    "pmay-housing": {
+      "loan": 5000000,
+      "rate": 8.5,
+      "years": 20,
+      "credited": 0
+    }
   }
 }
