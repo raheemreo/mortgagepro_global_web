@@ -1,6 +1,6 @@
 # VA Loan Funding Fee: Calculate Purchase Costs and Check Exemptions
 
-**Meta description:** Calculate VA purchase funding fees, financed balances and payments, with accurate first-use tiers and clear limits on exemption and eligibility estimates.
+**Meta description:** Calculate VA purchase funding fees, financed balances and payments, with first-use tiers and clear limits on exemption and eligibility estimates.
 
 A VA-backed purchase loan can let an eligible borrower buy without a down payment or monthly mortgage insurance. That does not mean the purchase has no closing costs. A funding fee may apply, and financing that fee increases both the loan balance and interest paid over time.
 

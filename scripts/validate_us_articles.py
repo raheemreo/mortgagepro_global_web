@@ -41,8 +41,8 @@ for path in sorted((ROOT/'blog').glob('usa-*.html')):
     for key,value in [('description',desc),('og:title',heading),('og:description',desc),('twitter:title',heading),('twitter:description',desc)]:assert page.metas[key]==value,(path,key)
     assert page.canonical=='https://mortgageproglobal.com/blog/'+path.stem
     a=next(s for s in page.scripts if s.get('@type')=='Article')
-    assert a['headline']==heading and a['description']==desc and a['dateModified']=='2026-10-25'
-    assert a['datePublished']<'2026-10-25'
+    assert a['headline']==heading and a['description']==desc and a['dateModified']=='2026-10-26'
+    assert 'datePublished' not in a
     assert a['author']=={'@type':'Organization','name':'REO Technologies','url':'https://mortgageproglobal.com/about'}
     assert len(page.ids)==len(set(page.ids)),(path,'duplicate IDs')
     assert page.calc==1

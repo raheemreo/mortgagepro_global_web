@@ -19,7 +19,7 @@ def build():
      d['accountablePerson']={'@type':'Person','name':'Abdul Raheem','url':'https://mortgageproglobal.com/authors/abdul-raheem'}
     return '<script type="application/ld+json">'+json.dumps(d,ensure_ascii=False)+'</script>'
    s=re.sub(r'<script[^>]+type="application/ld\+json"[^>]*>([\s\S]*?)</script>',schema,s)
-   s=re.sub(r'Linked primary/public-authority references checked [^.]*\.', 'References below describe the relevant framework; confirm the source date and the rules for your own transaction.',s)
+   s=re.sub(r'Linked (?:primary/public-authority|official) references checked [^.]*\.', 'References below describe the relevant framework; confirm the source date and the rules for your own transaction.',s)
    if p.stem not in REVIEWED_BLOGS:
     s=re.sub(r'<meta name="robots" content="[^"]*">\s*','',s)
     s=s.replace('</head>','<meta name="robots" content="noindex,follow">\n</head>')

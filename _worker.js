@@ -43,9 +43,10 @@ export default {
     const url = new URL(request.url);
 
     // 1. Canonical hostname: www → non-www (301, no loop possible)
-    if (url.hostname === "www.mortgageproglobal.com") {
+    if (url.hostname === "www.mortgageproglobal.com" || (url.hostname === "mortgageproglobal.com" && url.protocol !== "https:")) {
       const canonical = new URL(request.url);
       canonical.hostname = "mortgageproglobal.com";
+      canonical.protocol = "https:";
       return Response.redirect(canonical.toString(), 301);
     }
 

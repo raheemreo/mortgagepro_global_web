@@ -39,3 +39,7 @@ form[id$="calc-form"] button{white-space:normal!important;overflow-wrap:anywhere
 #canada-calc-form .hc-fields-wrap>p,#canada-calc-form .hc-fields-wrap>button{grid-column:1/-1}
 #canada-calc-form .hc-fields-wrap>p{color:#e0eee7;font-size:13px;line-height:1.6;margin:0}
 @media(max-width:520px){#canada-calc-form .hc-fields-wrap{grid-template-columns:minmax(0,1fr)}#canada-calc-form .hc-row{display:contents!important}}
+
+/* Dated reference labels wrap alongside their source controls. */
+.fed-banner,.boe-banner,.boc-banner{flex-wrap:wrap}.fed-banner>div,.boe-banner>div,.boc-banner>div{min-width:0;max-width:100%}.fb-btn,.boe-btn,.boc-btn{max-width:100%;white-space:normal;overflow-wrap:anywhere}
+@media(max-width:480px){.fed-banner>.fb-btn,.boe-banner>.boe-btn,.boc-banner>.boc-btn{flex-basis:100%;margin-left:0;text-align:center}}

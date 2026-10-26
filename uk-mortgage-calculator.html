@@ -32,13 +32,13 @@
   <meta property="og:image" content="https://mortgageproglobal.com/images/og-uk.jpg">
 
   <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
-<meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
+<meta name="indexnow-key" content="90248fba878891f4c5576dcd43220182">
 
   <!-- Google tag (gtag.js) -->
 
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mortgageproglobal.com"}, {"@type": "ListItem", "position": 2, "name": "UK Mortgage Calculator", "item": "https://mortgageproglobal.com/uk-mortgage-calculator"}]}</script>
 
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "UK Mortgage Calculator", "url": "https://mortgageproglobal.com/uk-mortgage-calculator", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "GBP"}, "creator": {"@type": "Organization", "name": "REO Technologies"}, "dateModified": "2026-10-25", "description": "Estimate repayment and supported England/Northern Ireland SDLT scenarios while keeping lender eligibility and purchase-tax relief separate.", "author": {"@type": "Organization", "name": "REO Technologies"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "UK Mortgage Calculator", "url": "https://mortgageproglobal.com/uk-mortgage-calculator", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "GBP"}, "creator": {"@type": "Organization", "name": "REO Technologies"}, "dateModified": "2026-10-26", "description": "Estimate repayment and supported England/Northern Ireland SDLT scenarios while keeping lender eligibility and purchase-tax relief separate.", "author": {"@type": "Organization", "name": "REO Technologies"}}</script>
 
 <!-- External Stylesheets (compatibility) -->
   <link rel="preload" href="/fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin>
@@ -1796,7 +1796,7 @@
   <meta name="msapplication-TileColor" content="#0B1D3A">
   <meta name="theme-color" content="#0B1D3A">
 <script src="/js/root-calculator-state.js?v=f80377ee5785" defer></script>
-<link rel="stylesheet" href="/css/root-calculators.css?v=34ceab807414">
+<link rel="stylesheet" href="/css/root-calculators.css?v=9bae25761362">
 <script src="/js/mortgage-tools-core.js?v=50af78e1c3be"></script>
 <script src="/js/uk-tools-models.js?v=033aa2dfe7aa"></script>
 <link rel="stylesheet" href="/css/country-tools.css?v=427a948ffcf4">
@@ -1916,7 +1916,7 @@
           <span class="mrc-icon">🏢</span>
           <div class="mrc-lbl">Mortgage Loan size</div>
           <div class="mrc-val" id="uk-loan-amount" style="font-size: 18px; font-weight: 800;">£0</div>
-          <div class="mrc-sub" id="ltv-ratio">85.0% LTV ratio</div>
+          <div class="mrc-sub" id="ltv-ratio">Calculated LTV ratio</div>
         </div>
       </div>
 
@@ -2005,7 +2005,7 @@
     <!-- BoE Base Rate Banner -->
     <div id="market" class="sec-hdr">
       <h2>Bank of England</h2>
-      <a href="https://www.bankofengland.co.uk" target="_blank" rel="noopener noreferrer"></a>
+
     </div>
     <div class="boe-banner">
       <div class="boe-icon">🏛️</div>
@@ -2027,10 +2027,11 @@
         <div class="sdlt-title">Stamp Duty Land Tax</div>
         <div class="sdlt-sub">First-time buyer relief up to £300k/£500k · 2nd home surcharge +5% · Effective post-April 2025 HMRC rates</div>
       </div>
-      <a href="#calculator" class="sdlt-btn">Calculate SDLT</a>
+      <a href="/tools/uk/sdlt" class="sdlt-btn">Calculate SDLT</a>
     </div>
 
-    <!-- SDLT Rates Table (Post-April 1, 2025 Statutory Regime) -->
+<p class="sdlt-scope-note">England and Northern Ireland residential purchases only. First-time relief is unavailable for the entire purchase above £500,000; use standard rates on every band in that case. Non-residence can combine with additional-property rates. A buy-to-let label alone does not establish the surcharge. Companies, linked purchases, reliefs and lease rent need separate assessment. Source: <a href="https://www.gov.uk/stamp-duty-land-tax/residential-property-rates">HMRC residential rates</a>, observed 2026-10-26.</p>
+<!-- SDLT Rates Table (Post-April 1, 2025 Statutory Regime) -->
     <div class="sdlt-table">
       <table>
         <thead>
@@ -2038,8 +2039,8 @@
             <th>Property Value Band</th>
             <th>Standard Rate</th>
             <th>First-Time Buyer</th>
-            <th>Second Home / BTL (+5%)</th>
-            <th>Non-Resident (+2%)</th>
+            <th>Additional property (+5pp)</th>
+            <th>Non-resident only (+2pp)</th>
           </tr>
         </thead>
         <tbody>
@@ -2156,7 +2157,7 @@
 
     <!-- ===== EDUCATIONAL CONTENT SECTION ===== -->
     <!-- BENCHMARK PROVENANCE --><section class="content-article benchmark-reference" aria-label="Dated policy benchmark"><p>Official Bank Rate: <strong data-rate="uk.boe">3.75%</strong><small class="rate-provenance" data-rate-meta="uk.boe"><a href="https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate">Bank of England</a> · Effective 2025-12-18 · Source checked 2026-10-26</small></p><p>This is a dated policy reference, not a mortgage offer. Enter your lender's quote for the calculation. <a href="/data-sources">Sources and observation dates</a>.</p></section><!-- END BENCHMARK PROVENANCE -->
-<section class="content-article" id="uk-guide" aria-labelledby="uk-guide-h"><h2 id="uk-guide-h">UK Mortgage Planning</h2><p>Updated October 25, 2026 · Scenario estimates; confirm actual lender and transaction terms.</p><h2>Compare the same repayment timeline</h2>
+<section class="content-article" id="uk-guide" aria-labelledby="uk-guide-h"><h2 id="uk-guide-h">UK Mortgage Planning</h2><p>Page revision 2026-10-26 · Scenario estimates; confirm actual lender and transaction terms.</p><h2>Compare the same repayment timeline</h2>
 <p>Enter the financed principal, the rate you want to test and the repayment years. A short fixed-rate deal can expire before the mortgage is repaid. Constant-rate lifetime interest is an illustration, not a prediction of every future refix.</p>
 <p>At GBP 262,500, an assumed 4.48% and 25 years, the monthly repayment model gives GBP 1,456.08. Actual daily accrual, dates, financed product fees and lender rounding can change the disclosure figures. Keep council tax, insurance, service charges and maintenance outside the P&amp;I number.</p>
 <h2>SDLT has a limited scope here</h2>

@@ -44,22 +44,15 @@ jobs:
         with:
           python-version: '3.12'
       - name: Validate financial models, observations and edge behavior
-        run: node --test tests/us-blog-calculators.test.cjs tests/global-blog-calculators.test.cjs tests/site-rates.test.cjs tests/us-tools.test.cjs tests/canada-tools.test.cjs tests/country-tools.test.cjs
+        run: node --test tests/*.test.cjs
       - name: Check articles, public pages, privacy tags and navigation
         run: |
           node scripts/validate_rates.js
           python scripts/validate_us_articles.py
           python scripts/validate_global_articles.py
           python scripts/validate_site_readiness.py
+          python scripts/validate_publisher_release.py
       - name: Check reproducible website builds
         run: |
-          python scripts/build_us_articles.py
-          python scripts/build_global_articles.py
-          python scripts/build_site_documents.py
-          python scripts/build_root_guides.py
-          node scripts/build_us_tools.cjs
-          node scripts/build_canada_tools.cjs
-          node scripts/build_country_tools.cjs
-          node scripts/build_rate_assets.cjs
-          python scripts/apply_site_privacy.py
+          python scripts/build_publisher_release.py
           git diff --exit-code

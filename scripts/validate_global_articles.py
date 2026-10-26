@@ -46,7 +46,7 @@ for slug,c in CONFIG.items():
     schemas=[s for s in page.scripts if s.get('@type')=='Article'];assert len(schemas)==1
     a=schemas[0]
     assert a['headline']==heading and a['description']==desc and a['dateModified']=='2026-10-25',(slug,'Article schema')
-    assert a['datePublished']<'2026-10-25',(slug,'original date')
+    assert 'datePublished' not in a,(slug,'original date')
     assert a['author']=={'@type':'Organization','name':'REO Technologies','url':'https://mortgageproglobal.com/about'},slug
     assert len(page.ids)==len(set(page.ids)),(slug,'duplicate IDs')
     assert len(page.widgets)==bool(c['model']),(slug,'widget count')
@@ -61,12 +61,10 @@ for slug,c in CONFIG.items():
     assert any(urlparse(link).hostname and urlparse(link).hostname.removeprefix('www.') in authorities for link in re.findall(r'href="(https://[^"]+)"',article)),(slug,'no public/primary authority')
     assert 'No independent licensed financial review is claimed.' in article
     assert not re.search(r'<!-- calculator -->|\{\{|Lead Financial Systems Engineer|Math\.pow|data-rate-',article),(slug,'stale body')
-    assert raw.index("gtag('consent', 'default'")<raw.index('src="https://pagead2.googlesyndication.com'),(slug,'consent order')
+    assert "adsbygoogle.js" not in raw and page.metas.get("robots")=="noindex,follow",(slug,"editorial exclusion")
     card=re.search(r'<a href="/blog/'+slug+r'" class="blog-card"[\s\S]*?</a>',index)[0]
     assert html.escape(heading) in card and html.escape(desc) in card and 'Updated October 2026' in card,(slug,'index card')
-    assert sitemap.count('https://mortgageproglobal.com/blog/'+slug+'<')==1,(slug,'sitemap')
-    entry=re.search(r'<url>\s*<loc>https://mortgageproglobal\.com/blog/'+re.escape(slug)+r'</loc>[\s\S]*?</url>',sitemap)[0]
-    assert '<lastmod>2026-10-25</lastmod>' in entry,(slug,'sitemap date')
+    assert sitemap.count('https://mortgageproglobal.com/blog/'+slug+'<')==0,(slug,'excluded sitemap')
     count+=1
 assert countries=={'Canada':9,'UK':9,'Australia':8,'New Zealand':8,'General':1},countries
 assert count==35 and widgets==30,(count,widgets)

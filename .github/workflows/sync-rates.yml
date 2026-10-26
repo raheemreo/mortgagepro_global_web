@@ -28,16 +28,18 @@ jobs:
         run: |
           node scripts/fetch_live_rates.js
           python scripts/build_site_documents.py
+          python scripts/publish_editorial_policy.py
           python scripts/apply_site_privacy.py
           node scripts/build_rate_assets.cjs
           node scripts/validate_rates.js
           python scripts/validate_site_readiness.py
+          python scripts/validate_publisher_release.py
 
       - name: Commit and Push if Changed
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/rates.json js/rate-snapshot.js
+          git add data/rates.json js/rate-snapshot.js sitemap.xml
           git add -u -- '*.html'
           if git diff --staged --quiet; then
             echo "No rate changes observed. Snapshot is up to date."

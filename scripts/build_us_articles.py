@@ -8,8 +8,8 @@ files in contents/USA; unsupported markdown should be added here before use.
 from pathlib import Path
 import re, html, json, hashlib
 ROOT = Path(__file__).resolve().parents[1]
-DATE = '2026-10-25'
-DISPLAY_DATE = 'October 25, 2026'
+DATE = '2026-10-26'
+DISPLAY_DATE = 'October 26, 2026'
 BASE = 'https://mortgageproglobal.com'
 
 # (name, label, default, minimum, maximum, step); select defaults are explicit.
@@ -105,7 +105,7 @@ def build():
         path=ROOT/f'blog/{slug}.html'; page=path.read_text(encoding='utf-8-sig')
         schemas=re.findall(r'<script[^>]+type=[\"\x27]application/ld\+json[\"\x27][^>]*>([\s\S]*?)</script>',page)
         article_schema=next(json.loads(s) for s in schemas if json.loads(s).get('@type')=='Article')
-        original_date=article_schema['datePublished']
+        original_date=article_schema.get('datePublished','')
         def schema_replace(m):
             value=json.loads(m[1])
             if value.get('@type')=='Article':

@@ -12,7 +12,7 @@ This guide uses a $412,500 home and a $41,250 down payment. The resulting loan i
 
 Use the note rate on a lender's quote when you have one. For context, [Freddie Mac's Primary Mortgage Market Survey](https://www.freddiemac.com/pmms) reported **7.32% for a 30-year fixed mortgage and 6.68% for a 15-year fixed mortgage on October 22, 2026**, the latest weekly observation checked for this update. Those are national benchmarks, not a promise of your rate. Credit, loan features, discount points and the date of a quote can change your offer.
 
-The examples below keep that observation date attached to the rates. They will not become a new market quote when the next survey is released. The editable rate field starts at 7.32%; replace it with your own quote before making a budget.
+The examples below keep that observation date attached to the rates. They will not become a new market quote when the next survey is released. The editable rate field starts blank; enter your own quote before making a budget.
 
 ## Follow one purchase through the calculation
 
