@@ -12,8 +12,9 @@
       'ad_personalization': 'denied',
       'wait_for_update': 500
     });
+    (window.adsbygoogle = window.adsbygoogle || []).pauseAdRequests = 1;
   </script>
-  <script src="/js/site-privacy.js?v=7e398101cb01" defer></script>
+  <script src="/js/site-privacy.js?v=9c8a7f7229bb" defer></script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,18 +32,18 @@
   <meta property="og:image" content="https://mortgageproglobal.com/images/og-canada.jpg">
 
   <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
-<meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
+<meta name="indexnow-key" content="90248fba878891f4c5576dcd43220182">
 
   <!-- Google tag (gtag.js) -->
 
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mortgageproglobal.com"}, {"@type": "ListItem", "position": 2, "name": "Canada Mortgage Calculator", "item": "https://mortgageproglobal.com/canada-mortgage-calculator"}]}</script>
 
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Canada Mortgage Calculator", "url": "https://mortgageproglobal.com/canada-mortgage-calculator", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CAD"}, "creator": {"@type": "Organization", "name": "REO Technologies"}, "dateModified": "2026-10-25", "description": "Estimate Canadian monthly payments and a scoped insurance scenario, with separate qualifying-rate and lender eligibility checks.", "author": {"@type": "Organization", "name": "REO Technologies"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Canada Mortgage Calculator", "url": "https://mortgageproglobal.com/canada-mortgage-calculator", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CAD"}, "creator": {"@type": "Organization", "name": "REO Technologies"}, "dateModified": "2026-10-26", "description": "Estimate Canadian monthly payments and a scoped insurance scenario, with separate qualifying-rate and lender eligibility checks.", "author": {"@type": "Organization", "name": "REO Technologies"}}</script>
 
 <!-- External Stylesheets (compatibility) -->
   <link rel="preload" href="/fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  <link rel="preload" href="/css/style.css?v=88c170b2957a" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/style.css?v=88c170b2957a"></noscript>
   <link rel="stylesheet" href="/css/calculators.css">
 <style>
     :root {
@@ -1585,7 +1586,7 @@
   <meta name="msapplication-TileColor" content="#0B1D3A">
   <meta name="theme-color" content="#0B1D3A">
 <script src="/js/root-calculator-state.js?v=f80377ee5785" defer></script>
-<link rel="stylesheet" href="/css/root-calculators.css?v=34ceab807414">
+<link rel="stylesheet" href="/css/root-calculators.css?v=9bae25761362">
 <script src="/js/canada-tools-models.js?v=b34f983e72ca"></script>
 <link rel="stylesheet" href="/css/canada-calculators.css?v=7c2f7f6c9e9c">
 <link rel="stylesheet" href="/css/tool-cards.css?v=fb8536599a1d">
@@ -1691,7 +1692,7 @@
     </section>
 
     <!-- DYNAMIC RESULTS SECTION -->
-    <section id="canada-results" class="results-panel" aria-label="Calculation results" aria-live="polite">
+    <section id="canada-results" class="results-panel" aria-label="Calculation results" aria-live="polite"><p class="root-result-education">Educational estimate, not financial advice. <a href="/disclaimer">Disclaimer</a> · <a href="/methodology">Methodology</a> · <a href="/corrections-policy">Corrections</a>.</p>
       <div class="results-grid">
         <div class="mrc results-lead">
           <span class="mrc-icon">💳</span>
@@ -1824,7 +1825,7 @@
         <div class="boc-icon">🏛️</div>
         <div>
           <div class="boc-lbl">Bank of Canada · Policy Interest Rate</div>
-          <div class="boc-val" data-rate="canada.boc">2.25%</div>
+          <div class="boc-val" data-rate="canada.boc">2.25%</div><small class="rate-provenance" data-rate-meta="canada.boc"><a href="https://www.bankofcanada.ca/valet/observations/V39079/json">Bank of Canada Valet API</a> · Observed 2026-10-23 · Source checked 2026-10-26</small>
           <div class="boc-sub">Target for the Overnight Rate · Source: Bank of Canada</div>
         </div>
         <a href="https://www.bankofcanada.ca" class="boc-btn" target="_blank" rel="noopener noreferrer">BoC Live</a>
@@ -1847,6 +1848,7 @@
       </div>
     </section>
 
+<p class="canada-rule-source">Rule references observed 2026-10-26: <a href="https://www.osfi-bsif.gc.ca/en/supervision/financial-institutions/banks/minimum-qualifying-rate-uninsured-mortgages">OSFI uninsured minimum qualifying rate</a> and <a href="https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/premium-information-for-homeowner-and-small-rental-loans">CMHC insurance premium schedule</a>. An eligible uninsured straight switch without an increased loan or amortization has a distinct OSFI scope.</p>
     <!-- CORE TOOLS -->
 <section class="section" id="tools"><div class="sec-hdr"><h2>Mortgage &amp; qualification</h2></div><p>Enter current figures and press Calculate estimate. Results stay hidden until you calculate; editing or resetting clears them.</p><div class="g2 canada-tools-directory"><a href="/tools/canada/mortgage" class="tc" data-tone="emerald"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11 12 3l9 8M5 10v11h14V10M9 21v-7h6v7"/></svg></div><div class="tn">Canada Mortgage Calculator</div><div class="td">Calculate a Canadian purchase payment with CMHC, cash/financed premiums and regular payment frequencies.</div><div class="ta" aria-hidden="true">›</div></a>
 <a href="/tools/canada/cmhc" class="tc" data-tone="blue"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6zM8 12l3 3 5-6"/></svg></div><div class="tn">CMHC Insurance Calculator</div><div class="td">Find the modeled minimum down payment, insurance tier, premium and cash premium tax.</div><div class="ta" aria-hidden="true">›</div></a>
@@ -1854,12 +1856,10 @@
 <a href="/tools/canada/stress-test" class="tc" data-tone="emerald"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11 12 3l9 8M5 10v11h14V10M9 21v-7h6v7"/></svg></div><div class="tn">Mortgage Stress Test</div><div class="td">Compare contract-rate payments with a standard qualifying-rate scenario and GDS/TDS.</div><div class="ta" aria-hidden="true">›</div></a>
 <a href="/tools/canada/affordability" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7V5h14v3M4 8h17v12H4zM16 12h5v4h-5z"/></svg></div><div class="tn">Canada Home Affordability</div><div class="td">Solve a purchase budget using down payment, insurance, debt-service budgets and actual housing costs.</div><div class="ta" aria-hidden="true">›</div></a></div></section>
 <section class="section" id="repayment"><div class="sec-hdr"><h2>Repayment &amp; renewal</h2></div><p>Enter current figures and press Calculate estimate. Results stay hidden until you calculate; editing or resetting clears them.</p><div class="g2 canada-tools-directory"><a href="/tools/canada/amortization" class="tc" data-tone="violet"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 5h14v16H5zM8 3v4m8-4v4M5 10h14M9 14h1m4 0h1m-6 3h1"/></svg></div><div class="tn">Canadian Amortization Schedule</div><div class="td">Review every repayment and annual principal/interest totals with the final payment capped.</div><div class="ta" aria-hidden="true">›</div></a>
-<a href="/tools/canada/prepayment" class="tc" data-tone="emerald"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V4m0 16h17M7 15l5-5 4 2 5-7m-5 0h5v5"/></svg></div><div class="tn">Prepayment Savings Calculator</div><div class="td">Compare permitted recurring, annual and one-time extra principal payments with the same baseline.</div><div class="ta" aria-hidden="true">›</div></a>
+
 <a href="/tools/canada/payment-frequency" class="tc" data-tone="teal"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4"/></svg></div><div class="tn">Payment Frequency Comparison</div><div class="td">Compare regular monthly, biweekly, weekly and accelerated repayment plans.</div><div class="ta" aria-hidden="true">›</div></a>
 <a href="/tools/canada/renewal" class="tc" data-tone="emerald"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11 12 3l9 8M5 10v11h14V10M9 21v-7h6v7"/></svg></div><div class="tn">Mortgage Renewal Planner</div><div class="td">Compare renewal offers over a common horizon, including payments, interest and remaining balances.</div><div class="ta" aria-hidden="true">›</div></a>
-<a href="/tools/canada/refinance" class="tc" data-tone="teal"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4"/></svg></div><div class="tn">Mortgage Refinance Comparison</div><div class="td">Compare an existing mortgage with a refinance offer after known fees, penalties and cashback.</div><div class="ta" aria-hidden="true">›</div></a>
-<a href="/tools/canada/credit-quote" class="tc" data-tone="teal"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4"/></svg></div><div class="tn">Credit Score Quote Comparison</div><div class="td">Compare two actual lender offers rather than guessing a rate from a credit score.</div><div class="ta" aria-hidden="true">›</div></a>
-<a href="/tools/canada/rate-comparison" class="tc" data-tone="teal"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4"/></svg></div><div class="tn">Mortgage Rate Impact Comparison</div><div class="td">Measure the payment impact of two actual mortgage rates without treating a policy rate as a loan quote.</div><div class="ta" aria-hidden="true">›</div></a>
+
 <a href="/tools/canada/compounding" class="tc" data-tone="teal"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4"/></svg></div><div class="tn">Canadian Compounding Comparison</div><div class="td">Compare monthly repayments under semiannual and monthly nominal compounding conventions.</div><div class="ta" aria-hidden="true">›</div></a></div></section>
 <section class="section" id="purchase"><div class="sec-hdr"><h2>Purchase costs &amp; programs</h2></div><p>Enter current figures and press Calculate estimate. Results stay hidden until you calculate; editing or resetting clears them.</p><div class="g2 canada-tools-directory"><a href="/tools/canada/first-home-buyer" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7V5h14v3M4 8h17v12H4zM16 12h5v4h-5z"/></svg></div><div class="tn">First-Home Buyer Funding Budget</div><div class="td">Combine confirmed FHSA/HBP withdrawals, savings and co-buyer funds against a target purchase.</div><div class="ta" aria-hidden="true">›</div></a>
 <a href="/tools/canada/land-transfer-tax" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6m-6 4h6"/></svg></div><div class="tn">Land Transfer Tax &amp; Title Costs</div><div class="td">Budget supported transfer taxes or title levies and confirmed local additions/rebates.</div><div class="ta" aria-hidden="true">›</div></a></div></section>
@@ -1886,43 +1886,36 @@
           </div>
           <div class="ich">›</div>
         </a>
-        <a href="https://www.bankofcanada.ca" class="ic" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.bankofcanada.ca/valet/observations/V39079/json" class="ic" target="_blank" rel="noopener noreferrer">
           <div class="ii">📉</div>
           <div>
-            <div class="in">BoC Rate History</div>
-            <div class="is">Official Bank of Canada policy rate tracker</div>
+            <div class="in">Bank of Canada Overnight Observations</div>
+            <div class="is">Official dated overnight-rate data in JSON format</div>
           </div>
           <div class="ich">›</div>
         </a>
-        <a href="https://www.cmhc-schl.gc.ca" class="ic" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/mortgage-loan-insurance/mortgage-loan-insurance-homeownership-programs/premium-information-for-homeowner-and-small-rental-loans" class="ic" target="_blank" rel="noopener noreferrer">
           <div class="ii">🛡️</div>
           <div>
-            <div class="in">CMHC Eligibility Guide</div>
-            <div class="is">Rules, caps &amp; premium tables</div>
+            <div class="in">CMHC Insurance Premium Schedule</div>
+            <div class="is">Official premiums, surcharges and scope</div>
           </div>
           <div class="ich">›</div>
         </a>
-        <a href="https://www.osfi-bsif.gc.ca" class="ic" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.osfi-bsif.gc.ca/en/supervision/financial-institutions/banks/minimum-qualifying-rate-uninsured-mortgages" class="ic" target="_blank" rel="noopener noreferrer">
           <div class="ii">📋</div>
           <div>
-            <div class="in">OSFI B-20 Guideline</div>
-            <div class="is">Stress test rules &amp; lender requirements</div>
+            <div class="in">OSFI Minimum Qualifying Rate</div>
+            <div class="is">Uninsured mortgage assessment and straight-switch scope</div>
           </div>
           <div class="ich">›</div>
         </a>
-        <a href="/tools/canada/first-home-buyer" class="ic">
-          <div class="ii">🏠</div>
-          <div>
-            <div class="in">First Home Savings Account (FHSA)</div>
-            <div class="is">Tax-free savings for first home purchase</div>
-          </div>
-          <div class="ich">›</div>
-        </a>
+
         <a href="https://www.crea.ca" class="ic" target="_blank" rel="noopener noreferrer">
           <div class="ii">📊</div>
           <div>
-            <div class="in">Canada House Price Index</div>
-            <div class="is">CREA · CMHC national &amp; city data</div>
+            <div class="in">Canadian Real Estate Association</div>
+            <div class="is">Visit the industry association’s own publications</div>
           </div>
           <div class="ich">›</div>
         </a>
@@ -1938,7 +1931,8 @@
     </section>
 
     <!-- ===== EDUCATIONAL CONTENT SECTION ===== -->
-    <section class="content-article" id="india-guide" aria-labelledby="ca-guide-h"><h2 id="ca-guide-h">Canada Mortgage Planning</h2><p>Updated October 25, 2026 · Scenario estimates; confirm actual lender and transaction terms.</p><h2>Start with the contract balance</h2>
+    <!-- BENCHMARK PROVENANCE --><section class="content-article benchmark-reference" aria-label="Dated policy benchmark"><p>Policy Interest Rate (Overnight): <strong data-rate="canada.boc">2.25%</strong><small class="rate-provenance" data-rate-meta="canada.boc"><a href="https://www.bankofcanada.ca/valet/observations/V39079/json">Bank of Canada Valet API</a> · Observed 2026-10-23 · Source checked 2026-10-26</small></p><p>This is a dated policy reference, not a mortgage offer. Enter your lender's quote for the calculation. <a href="/data-sources">Sources and observation dates</a>.</p></section><!-- END BENCHMARK PROVENANCE -->
+<section class="content-article" id="india-guide" aria-labelledby="ca-guide-h"><h2 id="ca-guide-h">Canada Mortgage Planning</h2><p>Page revision 2026-10-26 · Scenario estimates; confirm actual lender and transaction terms.</p><h2>Start with the contract balance</h2>
 <p>Use the property price, cash deposit, rate and remaining amortization. A financed mortgage-insurance premium increases the balance on which interest is charged. Taxes, heating, condo costs and closing cash are outside the principal-and-interest payment.</p>
 <p>This fixed-rate illustration converts a nominal semiannual rate to monthly periods. On CAD 520,000 at an assumed 3.99% over 25 years, principal and interest are CAD 2,732.49 monthly. The input is a scenario, not a current bank offer. Variable-rate and daily-interest contracts may use different conventions.</p>
 <h2>Insurance and 30-year eligibility</h2>
@@ -1962,73 +1956,49 @@
               What is CMHC insurance in Canada?
               <span class="faq-icon" aria-hidden="true">▾</span>
             </button>
-            <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1">
-              <p>CMHC insurance is mortgage default insurance required by Canadian law when buying a home with a down
-                payment between 5% and less than 20% of the purchase price. The insurance is provided by the Canada
-                Mortgage and Housing Corporation and protects the lender in case of default. The premium is tiered based
-                on the loan-to-value ratio (ranging from 2.80% to 4.00% of loan value) and is typically added to the total mortgage principal balance.</p>
-            </div>
+            <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1"><p>Mortgage default insurance protects the lender and is separate from property insurance. A purchase may require an insurer-approved premium depending on the loan and deposit. The supported CMHC calculation has a stated product scope; it does not establish approval, and other insurers or special products can differ. Check CMHC&#x27;s published premium and purchase requirements.</p></div>
           </li>
           <li class="faq-item">
             <button class="faq-q" aria-expanded="false" id="faq-q2" aria-controls="faq-a2">
               How does the mortgage stress test work in Canada?
               <span class="faq-icon" aria-hidden="true">▾</span>
             </button>
-            <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2">
-              <p>The Canadian mortgage stress test requires home buyers to qualify at a higher interest rate than their
-                actual contract rate to ensure they can manage payments if rates rise. The qualifying rate is either
-                your contract rate plus 2.00% or the OSFI benchmark floor (5.25%), whichever is higher.
-                Borrowers must pass debt service ratio thresholds (GDS under 39% and TDS under 44%) at this higher rate.
-              </p>
-            </div>
+            <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2"><p>A qualifying payment tests an assessment scenario and need not equal the contractual debit. OSFI&#x27;s uninsured framework, insurer rules and lender policies have different scope and exceptions. Use the standard qualifying-rate tool with the applicable framework, then include counted housing costs, debts and documented income. Do not treat one ratio as an automatic pass.</p></div>
           </li>
           <li class="faq-item">
             <button class="faq-q" aria-expanded="false" id="faq-q3" aria-controls="faq-a3">
               What is the minimum down payment for a home in Canada?
               <span class="faq-icon" aria-hidden="true">▾</span>
             </button>
-            <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3">
-              <p>The minimum down payment for a home in Canada is tiered: 5% on the first $500,000 of the purchase
-                price, and 10% on the portion between $500,001 and $1,499,999. Under current CMHC regulations, homes priced at CA$1,500,000 or higher
-                require a minimum 20% down payment and are not eligible for government-backed default insurance.
-              </p>
-            </div>
+            <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3"><p>The minimum down payment is graduated for eligible insured purchases and changes with the purchase-price category. Check the official FCAC/CMHC requirements for the transaction, including the insured-purchase ceiling. The model does not verify the source of funds or replace the separate cash needed for closing and premium tax.</p></div>
           </li>
           <li class="faq-item">
             <button class="faq-q" aria-expanded="false" id="faq-q4" aria-controls="faq-a4">
               Can I choose a 30-year amortization period in Canada?
               <span class="faq-icon" aria-hidden="true">▾</span>
             </button>
-            <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4">
-              <p>Under current federal rules, 30-year amortizations are available for: (1) All first-time homebuyers purchasing any home (insured or uninsured), (2) All buyers of newly constructed homes, and (3) Conventional buyers with a 20% or greater down payment. For other insured resale purchases by repeat buyers, the statutory maximum amortization remains 25 years.</p>
-            </div>
+            <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4"><p>Longer insured amortization depends on the applicable first-time-buyer or new-build criteria and lender/insurer acceptance. It is not automatically available to every purchaser. Uninsured products have their own terms. Confirm eligibility before selecting a longer insured scenario; the relevant premium surcharge and higher lifetime interest also matter.</p></div>
           </li>
           <li class="faq-item">
             <button class="faq-q" aria-expanded="false" id="faq-q5" aria-controls="faq-a5">
               What is the Home Buyers' Plan (HBP)?
               <span class="faq-icon" aria-hidden="true">▾</span>
             </button>
-            <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5">
-              <p>The Home Buyers' Plan (HBP) is a federal program administered by the Canada Revenue Agency (CRA) that allows eligible first-time home buyers to withdraw up to <strong>$60,000 tax-free</strong> (up to $120,000 for qualifying couples purchasing together) from their Registered Retirement Savings Plan (RRSP) toward their down payment. The withdrawn amount must be repaid back to your RRSP within 15 years.</p>
-            </div>
+            <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5"><p>The Home Buyers&#x27; Plan is a CRA program for eligible RRSP withdrawals with participation and repayment conditions. Do not treat an account balance as an automatically available withdrawal, or assume every withdrawal is permanently tax-free. Use the current CRA guidance and provider-confirmed amount, and keep FHSA and RRSP funds from being counted twice.</p></div>
           </li>
           <li class="faq-item">
             <button class="faq-q" aria-expanded="false" id="faq-q6" aria-controls="faq-a6">
               Do variable rate mortgages in Canada also compound semi-annually?
               <span class="faq-icon" aria-hidden="true">▾</span>
             </button>
-            <div class="faq-a" id="faq-a6" role="region" aria-labelledby="faq-q6">
-              <p>Unlike fixed-rate mortgages, Canadian variable-rate mortgages are often compounded monthly. However,
-                this varies by bank contract. Fixed-rate mortgages are legally required to compound semi-annually under
-                the federal Interest Act. Always check your bank's disclosure document for compounding frequencies.</p>
-            </div>
+            <div class="faq-a" id="faq-a6" role="region" aria-labelledby="faq-q6"><p>A fixed-rate agreement and a variable-rate agreement can have different accrual, payment-adjustment and break-cost terms. Use the stated nominal compounding convention and the actual quote. A Bank of Canada policy observation is monetary-policy context, not a personal mortgage offer or a prediction of the next renewal payment.</p></div>
           </li>
         </ul>
       </div>
     </section>
 
     <!-- ===== TRUST SECTION ===== -->
-    <div class="trust-section" role="note"><h2>Sources and limits</h2><p>Published by <a href="/about">REO Technologies</a>. This page provides educational estimates under stated assumptions. No independent licensed financial review is claimed. Read our <a href="/methodology">methodology</a>, <a href="/editorial-policy">editorial policy</a> and <a href="/corrections-policy">corrections process</a>.</p></div>
+    <div class="trust-section" role="note"><p><span class="publisher-contact">Publisher contact: <a href="/authors/abdul-raheem">Abdul Raheem</a></span></p><h2>Sources and limits</h2><p>Published by <a href="/about">REO Technologies</a>. This page provides educational estimates under stated assumptions. No independent licensed financial review is claimed. Read our <a href="/methodology">methodology</a>, <a href="/editorial-policy">editorial policy</a> and <a href="/corrections-policy">corrections process</a>.</p></div>
 
     <!-- ===== CTA BANNER ===== -->
     <div class="cta-banner" role="complementary" aria-label="Explore more tools">
@@ -2064,8 +2034,8 @@
 
   <!-- External JS (compatibility) -->
   <script src="/js/components.js" defer></script>
-  <script src="/js/rate-snapshot.js?v=e6b148f65b8b" defer></script>
-<script src="/js/rates.js?v=024c1314e60e" defer></script>
+  <script src="/js/rate-snapshot.js?v=d5e821e48b18" defer></script>
+<script src="/js/rates.js?v=ce30a282355e" defer></script>
   <script src="/js/charts.js" defer></script>
   <script src="/js/accessibility.js" defer></script>
 

@@ -1,0 +1,9 @@
+{
+  "usa": {"prepayment":"amortization","extra-payments":"amortization","ho1":"homeowner-insurance","ho3":"homeowner-insurance","ho5":"homeowner-insurance","wildfire":"homeowner-insurance"},
+  "canada": {"prepayment":"amortization","refinance":"renewal","credit-quote":"renewal","rate-comparison":"renewal"},
+  "uk": {"overpayment":"amortization","rate-comparison":"remortgage","rental-yield":"buy-to-let"},
+  "australia": {"overpayment":"amortization","duty-by-state":"stamp-duty","rate-comparison":"refinance"},
+  "newzealand": {"purchase-budget":"mortgage","first-home-loan":"mortgage","overpayment":"amortization","preapproval-budget":"affordability","lvr-band":"ltv","confirmed-support":"first-home","deposit-builder":"deposit","kiwisaver-home":"kiwisaver-withdrawal","investment":"rental-yield","lender-comparison":"refinance"},
+  "india": {"personal-loan":"emi","overpayment":"amortization","bank-comparison":"refinance","bank-hfc":"refinance","credit-quote":"refinance","duty-by-state":"stamp-duty","gst-purchase":"gst","tax-comparison":"income-tax","pmay-housing":"pmay-subsidy"},
+  "europe": {"overpayment":"amortization"}
+}

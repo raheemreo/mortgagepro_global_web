@@ -1,0 +1,1 @@
+PASS: the complete build pipeline regenerated identical files without changing source-verification dates.

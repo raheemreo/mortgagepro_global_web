@@ -87,7 +87,7 @@ def build():
   assert source.count('<!-- calculator -->')==(1 if c['model'] else 0),slug
   p=ROOT/f'blog/{slug}.html';page=p.read_text(encoding='utf-8-sig')
   schemas=re.findall(r'<script[^>]+type=[\"\x27]application/ld\+json[\"\x27][^>]*>([\s\S]*?)</script>',page)
-  original=next(json.loads(s)['datePublished'] for s in schemas if json.loads(s).get('@type')=='Article')
+  original=next(json.loads(s).get('datePublished','') for s in schemas if json.loads(s).get('@type')=='Article')
   def schema_replace(m):
    d=json.loads(m[1]);typ=d.get('@type')
    if typ=='HowTo':return '' # Old steps no longer describe the rewritten multi-country workflow.
@@ -126,7 +126,10 @@ def build():
  index_path.write_text(index)
  smpath=ROOT/'sitemap.xml';sm=smpath.read_text()
  for slug in CONFIG:
-  pattern=r'(<url>\s*<loc>'+re.escape(BASE+'/blog/'+slug)+r'</loc>[\s\S]*?<lastmod>)[^<]*(</lastmod>)';sm,count=re.subn(pattern,lambda m:m[1]+DATE+m[2],sm,count=1);assert count==1,slug
+  pattern=r'(<url>\s*<loc>'+re.escape(BASE+'/blog/'+slug)+r'</loc>[\s\S]*?<lastmod>)[^<]*(</lastmod>)';sm,count=re.subn(pattern,lambda m:m[1]+DATE+m[2],sm,count=1);assert count==1 or 'noindex,follow' in p.read_text(),slug
  smpath.write_text(sm)
  print('Built 35 non-US articles: Canada 9, UK 9, Australia 8, New Zealand 8, general 1.')
-if __name__=='__main__':build()
+if __name__=='__main__':
+ build()
+ from publish_editorial_policy import build as apply_publication
+ apply_publication()

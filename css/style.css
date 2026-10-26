@@ -3098,3 +3098,8 @@ section {
   font-size: 0.85rem;
   color: #1E40AF;
 }
+/* Keep the provenance of each public benchmark readable at narrow widths. */
+.rate-provenance{display:block;max-width:100%;font-size:.7rem;font-weight:400;line-height:1.5;color:inherit;white-space:normal;overflow-wrap:anywhere;margin-top:.5rem}.rate-provenance a{color:inherit;text-decoration:underline}.rate-provenance .rate-badge{white-space:normal}
+
+.page-layout.editorial-layout{grid-template-columns:minmax(0,1fr)}
+.editorial-layout .main-content{min-width:0;max-width:960px;margin-inline:auto;width:100%}

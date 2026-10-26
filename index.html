@@ -12,8 +12,9 @@
       'ad_personalization': 'denied',
       'wait_for_update': 500
     });
+    (window.adsbygoogle = window.adsbygoogle || []).pauseAdRequests = 1;
   </script>
-  <script src="/js/site-privacy.js?v=7e398101cb01" defer></script>
+  <script src="/js/site-privacy.js?v=9c8a7f7229bb" defer></script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -617,7 +618,7 @@
   <!-- Structured Data: HowTo -->
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "How to Use MortgagePro Global Mortgage Calculators", "step": [{"@type": "HowToStep", "position": 1, "name": "Select Your Country", "text": "Select the regional page for the property location and confirm that its stated model fits the product."}, {"@type": "HowToStep", "position": 2, "name": "Enter Loan Details", "text": "Input your property price, down payment, interest rate, and loan term. Defaults are editable scenario assumptions, not personalized lender offers."}, {"@type": "HowToStep", "position": 3, "name": "Get Instant Results", "text": "Read the payment components, excluded costs and limitations. Confirm actual lender terms separately."}]}</script>
 
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css?v=88c170b2957a">
 
   <meta name="google-adsense-account" content="ca-pub-1114757923146718">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1114757923146718" crossorigin="anonymous"></script>
@@ -625,8 +626,8 @@
   <!-- Advertising uses the single loader after the consent defaults. -->
 
   <script src="/js/components.js" defer></script>
-  <script src="/js/rate-snapshot.js?v=e6b148f65b8b" defer></script>
-<script src="/js/rates.js?v=024c1314e60e" defer></script>
+  <script src="/js/rate-snapshot.js?v=d5e821e48b18" defer></script>
+<script src="/js/rates.js?v=ce30a282355e" defer></script>
   <script src="/js/accessibility.js" defer></script>
 
   <!-- Favicon, Apple Touch Icon & Web App Manifest -->
@@ -748,28 +749,28 @@
             <div class="hero-calc-mockup">
               <div class="hero-calc-mockup-header">
                 <div class="mockup-icon">🏠</div>
-                <h2>Mortgage Calculator</h2>
+                <h2>Illustrative Mortgage</h2>
               </div>
               <div class="mockup-field">
                 <label>Home Price</label>
-                <div class="mockup-input">$450,000</div>
+                <div class="mockup-input" data-home-example="price">$450,000.00</div>
               </div>
               <div class="mockup-field">
                 <label>Down Payment</label>
-                <div class="mockup-input">$90,000 (20%)</div>
+                <div class="mockup-input" data-home-example="down">$90,000.00 (20%)</div>
               </div>
               <div class="mockup-field">
                 <label>Interest Rate</label>
-                <div class="mockup-input">6.66% (30-yr fixed)</div>
+                <div class="mockup-input" data-home-example="rate">6.66% (30-yr fixed assumption)</div>
               </div>
               <div class="mockup-result">
                 <div class="mockup-result-label">Monthly Payment</div>
-                <div class="mockup-result-value">$2,313</div>
+                <div class="mockup-result-value" data-home-example="payment">$2,313.46</div>
                 <div class="mockup-result-sub">Principal + Interest</div>
               </div>
               <div class="hero-floating-cards">
                 <div class="hero-float-card">
-                  <div class="hero-float-value">$250K</div>
+                  <div class="hero-float-value" data-home-example="interest">$472,844.50</div>
                   <div class="hero-float-label">Total Interest</div>
                 </div>
                 <div class="hero-float-card">
@@ -786,7 +787,7 @@
 
     <!-- ===== AD UNIT 1 - Leaderboard ===== -->
     <div class="container">
-      <div class="ad-unit ad-leaderboard" aria-label="Advertisement" role="complementary"></div>
+
     </div>
 
     <!-- ===== 2. FEATURED MORTGAGE CALCULATORS ===== -->
@@ -890,13 +891,13 @@
           </a>
 
           <a href="/europe-mortgage-calculator" class="calc-card fade-in"
-            aria-label="Europe Mortgage Calculator - Germany, France, Spain, Euribor tracking">
+            aria-label="Europe Mortgage Calculator - Germany, France, Spain, contractual rate scenarios">
             <div class="calc-card-icon" aria-hidden="true">
               <img src="/images/flags/eu.svg" alt="Europe Flag" width="40" height="27" loading="lazy"
                 style="border-radius:4px;object-fit:cover;display:block;">
             </div>
             <h2>Europe Mortgage Calculator</h2>
-            <p>Covers Germany, France, Spain, Italy, and more. Euribor tracking, notary fee estimates, and country
+            <p>Covers Germany, France, Spain, Italy, and more. Contractual rate scenarios, entered fee budgets, and country
               comparison tools.</p>
             <div class="calc-card-meta">
               <span class="calc-card-time">⏱ ~2 min</span>
@@ -924,7 +925,7 @@
         <div class="benefits-grid">
           <div class="benefit-card fade-in">
             <div class="benefit-icon" aria-hidden="true">🎯</div>
-            <h2>Accurate Calculations</h2>
+            <h2>Calculations with Stated Assumptions</h2>
             <p>Uses standard actuarial compounding formulas with benchmark data from official central banks and market surveys.</p>
           </div>
           <div class="benefit-card fade-in">
@@ -968,7 +969,7 @@
 
     <!-- ===== AD UNIT 2 - Mid-Page ===== -->
     <div class="container">
-      <div class="ad-unit ad-mid" aria-label="Advertisement" role="complementary"></div>
+
     </div>
 
     <!-- ===== 5. EDUCATIONAL LEARNING CENTER ===== -->
@@ -1167,7 +1168,7 @@
           <a href="/mortgage-faq" class="resource-card fade-in" aria-label="Mortgage Frequently Asked Questions">
             <div class="resource-card-icon" aria-hidden="true">❓</div>
             <h2>Mortgage Knowledgebase</h2>
-            <p>50+ in-depth answers covering mortgage types, compounding, debt service ratios, and down payments.</p>
+            <p>Plain-language answers about mortgage types, compounding, debt ratios and down payments.</p>
             <span class="resource-card-arrow">Explore FAQ →</span>
           </a>
 
@@ -1223,7 +1224,7 @@
 
     <!-- ===== AD UNIT 3 - Mid-Page ===== -->
     <div class="container">
-      <div class="ad-unit ad-mid" aria-label="Advertisement" role="complementary"></div>
+
     </div>
 
     <!-- ===== 10. FAQ SECTION ===== -->
@@ -1366,7 +1367,7 @@
           <li><a href="/data-deletion-policy">Data Deletion Policy</a></li>
           <li><a href="/terms-and-conditions">Terms and Conditions</a></li>
           <li><a href="/disclaimer">Disclaimer</a></li>
-          <li><a href="/privacy-policy#privacy-controls"
+          <li><a href="/privacy-settings"
               onclick="return window.MPGPrivacy ? MPGPrivacy.open(event) : true;">Privacy
               Settings</a></li>
         </ul>

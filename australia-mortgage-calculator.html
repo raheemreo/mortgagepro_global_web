@@ -12,8 +12,9 @@
       'ad_personalization': 'denied',
       'wait_for_update': 500
     });
+    (window.adsbygoogle = window.adsbygoogle || []).pauseAdRequests = 1;
   </script>
-  <script src="/js/site-privacy.js?v=7e398101cb01" defer></script>
+  <script src="/js/site-privacy.js?v=9c8a7f7229bb" defer></script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,18 +32,18 @@
   <meta property="og:image" content="https://mortgageproglobal.com/images/og-australia.jpg">
 
   <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
-<meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
+<meta name="indexnow-key" content="90248fba878891f4c5576dcd43220182">
 
   <!-- Google tag (gtag.js) -->
 
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mortgageproglobal.com"}, {"@type": "ListItem", "position": 2, "name": "Australia Mortgage Calculator", "item": "https://mortgageproglobal.com/australia-mortgage-calculator"}]}</script>
 
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Australia Mortgage Calculator", "url": "https://mortgageproglobal.com/australia-mortgage-calculator", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AUD"}, "creator": {"@type": "Organization", "name": "REO Technologies"}, "dateModified": "2026-10-25", "description": "Estimate principal and interest, an entered LMI assumption and offset effects, with verified QLD/VIC general duty or your official assessment.", "author": {"@type": "Organization", "name": "REO Technologies"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Australia Mortgage Calculator", "url": "https://mortgageproglobal.com/australia-mortgage-calculator", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AUD"}, "creator": {"@type": "Organization", "name": "REO Technologies"}, "dateModified": "2026-10-26", "description": "Estimate principal and interest, an entered LMI assumption and offset effects, with verified QLD/VIC general duty or your official assessment.", "author": {"@type": "Organization", "name": "REO Technologies"}}</script>
 
 <!-- External Stylesheets (compatibility) -->
   <link rel="preload" href="/fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  <link rel="preload" href="/css/style.css?v=88c170b2957a" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/style.css?v=88c170b2957a"></noscript>
   <link rel="stylesheet" href="/css/calculators.css">
 <style>
     :root {
@@ -1378,7 +1379,7 @@
   <meta name="msapplication-TileColor" content="#0B1D3A">
   <meta name="theme-color" content="#0B1D3A">
 <script src="/js/root-calculator-state.js?v=f80377ee5785" defer></script>
-<link rel="stylesheet" href="/css/root-calculators.css?v=34ceab807414">
+<link rel="stylesheet" href="/css/root-calculators.css?v=9bae25761362">
 <script src="/js/mortgage-tools-core.js?v=50af78e1c3be"></script>
 <script src="/js/australia-tools-models.js?v=2938e36db2bc"></script>
 <link rel="stylesheet" href="/css/country-tools.css?v=427a948ffcf4">
@@ -1489,7 +1490,7 @@
       <div class="rate-strip" role="region" aria-label="Current Australia mortgage rates">
         <div class="rs-item">
           <div class="rs-lbl">Variable</div>
-          <div class="rs-val red" data-rate="australia.variable">6.09%</div>
+          <div class="rs-val red" data-rate-unavailable="australia.variable">Lender quote</div>
           <div class="rs-note">Check source date</div>
         </div>
         <div class="rs-item">
@@ -1504,7 +1505,7 @@
         </div>
         <div class="rs-item">
           <div class="rs-lbl">RBA Cash</div>
-          <div class="rs-val gold" data-rate="australia.rba">4.60%</div>
+          <div class="rs-val gold" data-rate="australia.rba">4.60%</div><small class="rate-provenance" data-rate-meta="australia.rba"><a href="https://www.rba.gov.au/statistics/cash-rate/">Reserve Bank of Australia</a> · Effective 2026-09-30 · Source checked 2026-10-26</small>
           <div class="rs-note">Check source date</div>
         </div>
       </div>
@@ -1521,7 +1522,7 @@
     </div>
 
     <!-- DYNAMIC RESULTS SECTION -->
-    <section id="au-results" class="results-panel" aria-label="Mortgage calculation results" aria-live="polite">
+    <section id="au-results" class="results-panel" aria-label="Mortgage calculation results" aria-live="polite"><p class="root-result-education">Educational estimate, not financial advice. <a href="/disclaimer">Disclaimer</a> · <a href="/methodology">Methodology</a> · <a href="/corrections-policy">Corrections</a>.</p>
       <div class="results-grid">
         <div class="mrc results-lead">
           <span class="mrc-icon">💳</span>
@@ -1662,7 +1663,7 @@
 <!-- COUNTRY TOOLS START -->
 <section class="section country-tools-section" id="tools"><div class="sec-hdr"><h2>Mortgage and repayment</h2></div><p>Enter current figures and press Calculate estimate. Editing or resetting clears the previous result.</p><div class="g2 country-tools-directory"><a href="/tools/australia/mortgage" class="tc" data-tone="emerald"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11 12 3l9 8M5 10v11h14V10M9 21v-7h6v7"/></svg></div><div class="tn">Australian Mortgage Calculator</div><div class="td">Estimate repayment or interest-only payments using actual price, deposit, rate and financed charges.</div><div class="ta" aria-hidden="true">›</div></a>
 <a href="/tools/australia/amortization" class="tc" data-tone="violet"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 5h14v16H5zM8 3v4m8-4v4M5 10h14M9 14h1m4 0h1m-6 3h1"/></svg></div><div class="tn">Australian Amortization Schedule</div><div class="td">Calculate full principal/interest schedules and the effect of permitted extra repayments.</div><div class="ta" aria-hidden="true">›</div></a>
-<a href="/tools/australia/overpayment" class="tc" data-tone="emerald"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V4m0 16h17M7 15l5-5 4 2 5-7m-5 0h5v5"/></svg></div><div class="tn">Extra Repayment Savings</div><div class="td">Calculate full principal/interest schedules and the effect of permitted extra repayments.</div><div class="ta" aria-hidden="true">›</div></a>
+
 <a href="/tools/australia/frequency" class="tc" data-tone="teal"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4"/></svg></div><div class="tn">Payment Frequency Comparison</div><div class="td">Compare regular and accelerated monthly-equivalent repayment plans.</div><div class="ta" aria-hidden="true">›</div></a>
 <a href="/tools/australia/interest-only" class="tc" data-tone="violet"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 18 12-12M8 7a2 2 0 1 1-4 0 2 2 0 0 1 4 0m12 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0"/></svg></div><div class="tn">Interest-Only Transition</div><div class="td">Compare an interest-only period, remaining principal and the later repayment payment.</div><div class="ta" aria-hidden="true">›</div></a></div></section>
 <section class="section country-tools-section" id="repayment"><div class="sec-hdr"><h2>Budget and qualification</h2></div><p>Enter current figures and press Calculate estimate. Editing or resetting clears the previous result.</p><div class="g2 country-tools-directory"><a href="/tools/australia/affordability" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7V5h14v3M4 8h17v12H4zM16 12h5v4h-5z"/></svg></div><div class="tn">Australian Household Borrowing Budget</div><div class="td">Use actual take-home income and commitments to test an entered quote plus assessment buffer.</div><div class="ta" aria-hidden="true">›</div></a>
@@ -1671,18 +1672,18 @@
 <section class="section country-tools-section" id="regions"><div class="sec-hdr"><h2>Purchase costs and support</h2></div><p>Enter current figures and press Calculate estimate. Editing or resetting clears the previous result.</p><div class="g2 country-tools-directory"><a href="/tools/australia/lmi" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7V5h14v3M4 8h17v12H4zM16 12h5v4h-5z"/></svg></div><div class="tn">LMI Quote and Financing Budget</div><div class="td">Budget an actual all-in lender LMI quote and its cash/financed payment impact.</div><div class="ta" aria-hidden="true">›</div></a>
 <a href="/tools/australia/lmi-rate" class="tc" data-tone="blue"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 3v17h17M8 16v-4m5 4V8m5 8V5"/></svg></div><div class="tn">LMI Premium-Rate Scenario</div><div class="td">Use an entered premium-rate scenario and separately quoted additions without fabricating an insurer tariff.</div><div class="ta" aria-hidden="true">›</div></a>
 <a href="/tools/australia/stamp-duty" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6m-6 4h6"/></svg></div><div class="tn">Australian Transfer Duty Budget</div><div class="td">Calculate published general-duty scenarios for all eight states/territories and add confirmed adjustments.</div><div class="ta" aria-hidden="true">›</div></a>
-<a href="/tools/australia/duty-by-state" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6m-6 4h6"/></svg></div><div class="tn">Transfer Duty by State and Territory</div><div class="td">Calculate published general-duty scenarios for all eight states/territories and add confirmed adjustments.</div><div class="ta" aria-hidden="true">›</div></a>
+
 <a href="/tools/australia/first-home" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7V5h14v3M4 8h17v12H4zM16 12h5v4h-5z"/></svg></div><div class="tn">First-Home Purchase Funding Budget</div><div class="td">Combine actual savings, confirmed grant/FHSS release and other available funds against a deposit target.</div><div class="ta" aria-hidden="true">›</div></a></div></section>
 <section class="section country-tools-section" id="investment"><div class="sec-hdr"><h2>Switching and offset</h2></div><p>Enter current figures and press Calculate estimate. Editing or resetting clears the previous result.</p><div class="g2 country-tools-directory"><a href="/tools/australia/offset" class="tc" data-tone="blue"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 3v17h17M8 16v-4m5 4V8m5 8V5"/></svg></div><div class="tn">Australian Offset Account Simulator</div><div class="td">Keep mortgage repayments fixed while modeling a separate offset balance and monthly cash changes.</div><div class="ta" aria-hidden="true">›</div></a>
 <a href="/tools/australia/refinance" class="tc" data-tone="teal"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4"/></svg></div><div class="tn">Australian Refinance Comparison</div><div class="td">Compare actual rates, fees, interest and remaining balances over a shared horizon.</div><div class="ta" aria-hidden="true">›</div></a>
-<a href="/tools/australia/rate-comparison" class="tc" data-tone="teal"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4"/></svg></div><div class="tn">Mortgage Quote Rate Impact</div><div class="td">Compare actual rates, fees, interest and remaining balances over a shared horizon.</div><div class="ta" aria-hidden="true">›</div></a></div></section>
+</div></section>
 <section class="section country-tools-section" id="programs"><div class="sec-hdr"><h2>Construction planning</h2></div><p>Enter current figures and press Calculate estimate. Editing or resetting clears the previous result.</p><div class="g2 country-tools-directory"><a href="/tools/australia/construction" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7V5h14v3M4 8h17v12H4zM16 12h5v4h-5z"/></svg></div><div class="tn">Australian Construction Drawdown Budget</div><div class="td">Calculate construction interest from actual land/stage drawdowns and later P&amp;I on funded principal.</div><div class="ta" aria-hidden="true">›</div></a></div></section>
 <!-- COUNTRY TOOLS END -->
 <!-- State & Resources -->
     <section class="section" id="resources">
       <div class="sec-head"><span class="sec-lbl">State &amp; Resources</span></div>
       <div class="grid-info">
-        <a href="/tools/australia/duty-by-state" class="info-card">
+        <a href="/tools/australia/stamp-duty" class="info-card">
           <div class="info-icon">📋</div>
           <div>
             <div class="info-name">Stamp Duty by State</div>
@@ -1718,11 +1719,12 @@
     </section>
 
     <!-- ===== EDUCATIONAL CONTENT SECTION ===== -->
-    <section class="content-article" id="au-guide" aria-labelledby="au-guide-h"><h2 id="au-guide-h">Australian Mortgage Planning</h2><p>Updated October 25, 2026 · Scenario estimates; confirm actual lender and transaction terms.</p><h2>Keep the inputs distinct</h2>
+    <!-- BENCHMARK PROVENANCE --><section class="content-article benchmark-reference" aria-label="Dated policy benchmark"><p>Cash Rate Target: <strong data-rate="australia.rba">4.60%</strong><small class="rate-provenance" data-rate-meta="australia.rba"><a href="https://www.rba.gov.au/statistics/cash-rate/">Reserve Bank of Australia</a> · Effective 2026-09-30 · Source checked 2026-10-26</small></p><p>This is a dated policy reference, not a mortgage offer. Enter your lender's quote for the calculation. <a href="/data-sources">Sources and observation dates</a>.</p></section><!-- END BENCHMARK PROVENANCE -->
+<section class="content-article" id="au-guide" aria-labelledby="au-guide-h"><h2 id="au-guide-h">Australian Mortgage Planning</h2><p>Page revision 2026-10-26 · Scenario estimates; confirm actual lender and transaction terms.</p><h2>Keep the inputs distinct</h2>
 <p>The loan starts with price minus deposit. If a premium is financed, principal is larger. The LMI field requires an actual all-in lender quote, including applicable charges once. Enter zero to explicitly exclude a charge. A quote is not a promise that a particular guarantee applies.</p>
 <p>A monthly P&amp;I illustration divides the annual percentage by twelve. Actual Australian products commonly accrue interest daily, so payment dates, fees, offset balances and rounding matter. At AUD 520,000, an assumed 6.19% and 25 years, the monthly model gives AUD 3,411.02.</p>
 <h2>Transfer duty needs the correct category</h2>
-<p>Without an entered assessment, the root tool budgets published general residential schedules for all eight states/territories. NSW uses 2026/27 thresholds and premium duty for a wholly residential property of no more than two hectares. ACT uses the non-owner-occupier base schedule; other owner-occupier and first-home concessions are not inferred. The <a href="/tools/australia/duty-by-state">state duty tool</a> publishes the source schedules and confirmed adjustment inputs.</p>
+<p>Without an entered assessment, the root tool budgets published general residential schedules for all eight states/territories. NSW uses 2026/27 thresholds and premium duty for a wholly residential property of no more than two hectares. ACT uses the non-owner-occupier base schedule; other owner-occupier and first-home concessions are not inferred. The <a href="/tools/australia/stamp-duty">state duty tool</a> publishes the source schedules and confirmed adjustment inputs.</p>
 <p>For a concession or special category, enter an official assessment or conveyancer’s quote. A blank concession assessment is shown as not estimated. An entered quote overrides the general calculation; check its transaction date, legal dutiable value and applicable foreign surcharges.</p>
 <h2>Offset savings remain a scenario</h2>
 <p>A constant offset balance can reduce interest on an eligible product, but the actual benefit follows daily balances and product terms. This comparison excludes extra product fees and assumes an unchanged rate and offset balance. It is not a tax calculation or a guaranteed lifetime saving. Read <a href="https://moneysmart.gov.au/home-loans/mortgage-offset-accounts">Moneysmart's offset explanation</a>.</p>
@@ -1742,81 +1744,43 @@
               What is Lenders Mortgage Insurance (LMI) in Australia?
               <span class="faq-icon" aria-hidden="true">▾</span>
             </button>
-            <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1">
-              <p>Lenders Mortgage Insurance (LMI) is a premium charged by Australian lenders when a home buyer's
-                deposit is less than 20% of the property's purchase price, representing a Loan-to-Value (LTV) ratio
-                above 80%. LMI protects the lender against loss if the borrower default on their mortgage. The LMI
-                amount is tiered based on your deposit size and loan amount, and can be paid upfront or added to
-                your mortgage balance.</p>
-            </div>
+            <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1"><p>LMI protects the lender and is separate from homeowners insurance. Whether it is required, its price and whether it can be financed depend on the product, lender, insurer and any confirmed scheme. Use an actual all-in quote. This site does not generate an insurer tariff solely from a deposit percentage.</p></div>
           </li>
           <li class="faq-item">
             <button class="faq-q" aria-expanded="false" id="faq-q2" aria-controls="faq-a2">
               What is a mortgage offset account and how does it save interest?
               <span class="faq-icon" aria-hidden="true">▾</span>
             </button>
-            <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2">
-              <p>A mortgage offset account is a standard transaction account linked to your home loan in Australia.
-                The balance held in this account is offset against the outstanding mortgage balance before daily
-                interest is calculated. For example, if you have a $500,000 home loan and $50,000 in your offset
-                account, interest is calculated only on $450,000, reducing your monthly interest charges and
-                shortening your loan term.</p>
-            </div>
+            <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2"><p>An offset can reduce the balance used for interest under the product&#x27;s terms while the contractual principal remains outstanding. Its benefit depends on the offset percentage, actual cash path, fees and interest convention. Money in an offset is not automatically principal repaid; use the offset tool instead of counting the same funds as both a larger deposit and an offset balance.</p></div>
           </li>
           <li class="faq-item">
-            <button class="faq-q" aria-expanded="false" id="faq-q3" aria-controls="faq-a3">
-              What is the difference between a redraw facility and an offset account in Australia?
-              <span class="faq-icon" aria-hidden="true">▾</span>
-            </button>
-            <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3">
-              <p>An offset account is a separate daily transaction account that offsets your home loan balance. A
-                redraw facility is a feature built directly into the home loan account that allows you to make extra
-                home loan payments and then redraw those extra funds later if needed. Offset accounts offer higher
-                flexibility and separation, while redraw facilities are often cheaper but may have restrictions on
-                withdrawal sizes.</p>
-            </div>
+            <button class="faq-q" aria-expanded="false" id="faq-q3" aria-controls="faq-a3">How do regular and accelerated repayment plans differ?<span class="faq-icon" aria-hidden="true">▾</span></button>
+            <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3"><p>Compare regular repayment frequency with accelerated repayment separately. The annual amount paid, not only the size of one debit, determines the effect on debt. Confirm the lender&#x27;s convention and any limits or costs on additional payments before treating an accelerated schedule as available.</p></div>
           </li>
           <li class="faq-item">
             <button class="faq-q" aria-expanded="false" id="faq-q4" aria-controls="faq-a4">
               How much stamp duty will I pay in Australia?
               <span class="faq-icon" aria-hidden="true">▾</span>
             </button>
-            <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4">
-              <p>Stamp duty is set by State governments, ranging between 3% to 5.5% of the purchase price. First home
-                buyers in NSW pay no stamp duty on homes up to $800,000 (concessions up to $1,000,000). Victoria offers
-                exemptions up to $600,000 (concessions up to $750,000), and Queensland exemptions apply up to $500,000.
-              </p>
-            </div>
+            <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4"><p>Purchase duty and concessions depend on the state or territory, transaction date, value, property and buyer category. No single national duty range or first-home exemption is assumed. Use the supported general-rate tool and the relevant revenue authority, and enter a confirmed assessment for concessions or special cases.</p></div>
           </li>
           <li class="faq-item">
             <button class="faq-q" aria-expanded="false" id="faq-q5" aria-controls="faq-a5">
               What is the First Home Guarantee (FHBG)?
               <span class="faq-icon" aria-hidden="true">▾</span>
             </button>
-            <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5">
-              <p>The First Home Guarantee is a federal government scheme that allows eligible first home buyers to
-                purchase a home with a deposit as low as 5% without paying Lenders Mortgage Insurance (LMI). The
-                government guarantees the remaining 15% of the loan to the lender, bypassing LMI premiums.</p>
-            </div>
+            <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5"><p>Government deposit-support schemes have current eligibility and property rules that must be confirmed with the program and participating lender. A calculator cannot award a guarantee or determine that LMI is waived. Count only confirmed assistance and preserve a separate closing-cost reserve.</p></div>
           </li>
           <li class="faq-item">
-            <button class="faq-q" aria-expanded="false" id="faq-q6" aria-controls="faq-a6">
-              Are mortgage interest rates fixed or variable in Australia?
-              <span class="faq-icon" aria-hidden="true">▾</span>
-            </button>
-            <div class="faq-a" id="faq-a6" role="region" aria-labelledby="faq-q6">
-              <p>Borrowers can select between variable-rate loans, fixed-rate loans (usually fixed for 1 to 5 years), or
-                split loans (part fixed, part variable). Unlike the US where 30-year fixed rates are common, Australian
-                fixed rates reset back to the variable indicator rate after the initial fixed period (e.g. 2 or 3 years)
-                expires.</p>
-            </div>
+            <button class="faq-q" aria-expanded="false" id="faq-q6" aria-controls="faq-a6">Does this payment determine lender serviceability?<span class="faq-icon" aria-hidden="true">▾</span></button>
+            <div class="faq-a" id="faq-a6" role="region" aria-labelledby="faq-q6"><p>A serviceability assessment and a monthly repayment are different calculations. Lenders consider income, living costs, other debts and their applicable assessment policy. The RBA policy rate is not your mortgage quote. Use the actual quoted rate and a separately labelled assessment scenario without treating the result as approval.</p></div>
           </li>
         </ul>
       </div>
     </section>
 
     <!-- ===== TRUST SECTION ===== -->
-    <div class="trust-section" role="note"><h2>Sources and limits</h2><p>Published by <a href="/about">REO Technologies</a>. This page provides educational estimates under stated assumptions. No independent licensed financial review is claimed. Read our <a href="/methodology">methodology</a>, <a href="/editorial-policy">editorial policy</a> and <a href="/corrections-policy">corrections process</a>.</p></div>
+    <div class="trust-section" role="note"><p><span class="publisher-contact">Publisher contact: <a href="/authors/abdul-raheem">Abdul Raheem</a></span></p><h2>Sources and limits</h2><p>Published by <a href="/about">REO Technologies</a>. This page provides educational estimates under stated assumptions. No independent licensed financial review is claimed. Read our <a href="/methodology">methodology</a>, <a href="/editorial-policy">editorial policy</a> and <a href="/corrections-policy">corrections process</a>.</p></div>
 
     <!-- ===== CTA BANNER ===== -->
     <div class="cta-banner" role="complementary" aria-label="Explore more tools">
@@ -1867,7 +1831,7 @@
       </div>
       <div class="footer-bottom">
         <span>© 2026 MortgagePro Global by REO Technologies. All rights reserved.</span>
-        <span>RBA cash target: 4.60% · checked 2026-10-25. Policy reference, not a mortgage quote.</span>
+        <span><a href="/data-sources">Dated policy benchmarks and source observations</a>; not personal mortgage quotes.</span>
       </div>
     </div>
   </footer>
@@ -1877,8 +1841,8 @@
 
   <!-- External JS (compatibility) -->
   <script src="/js/components.js" defer></script>
-  <script src="/js/rate-snapshot.js?v=e6b148f65b8b" defer></script>
-<script src="/js/rates.js?v=024c1314e60e" defer></script>
+  <script src="/js/rate-snapshot.js?v=d5e821e48b18" defer></script>
+<script src="/js/rates.js?v=ce30a282355e" defer></script>
   <script src="/js/charts.js" defer></script>
   <script src="/js/accessibility.js" defer></script>
 

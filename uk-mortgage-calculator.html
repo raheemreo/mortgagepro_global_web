@@ -12,8 +12,9 @@
       'ad_personalization': 'denied',
       'wait_for_update': 500
     });
+    (window.adsbygoogle = window.adsbygoogle || []).pauseAdRequests = 1;
   </script>
-  <script src="/js/site-privacy.js?v=7e398101cb01" defer></script>
+  <script src="/js/site-privacy.js?v=9c8a7f7229bb" defer></script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,18 +32,18 @@
   <meta property="og:image" content="https://mortgageproglobal.com/images/og-uk.jpg">
 
   <meta name="google-site-verification" content="X0cLgraa8vN8vVizVh1CKDwBPEQ6LOgYFuYOfCyewts">
-<meta name="indexnow-key" content="a1b2c3d4e5f6789012345678901234ab">
+<meta name="indexnow-key" content="90248fba878891f4c5576dcd43220182">
 
   <!-- Google tag (gtag.js) -->
 
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mortgageproglobal.com"}, {"@type": "ListItem", "position": 2, "name": "UK Mortgage Calculator", "item": "https://mortgageproglobal.com/uk-mortgage-calculator"}]}</script>
 
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "UK Mortgage Calculator", "url": "https://mortgageproglobal.com/uk-mortgage-calculator", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "GBP"}, "creator": {"@type": "Organization", "name": "REO Technologies"}, "dateModified": "2026-10-25", "description": "Estimate repayment and supported England/Northern Ireland SDLT scenarios while keeping lender eligibility and purchase-tax relief separate.", "author": {"@type": "Organization", "name": "REO Technologies"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "UK Mortgage Calculator", "url": "https://mortgageproglobal.com/uk-mortgage-calculator", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "browserRequirements": "Requires JavaScript", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "GBP"}, "creator": {"@type": "Organization", "name": "REO Technologies"}, "dateModified": "2026-10-26", "description": "Estimate repayment and supported England/Northern Ireland SDLT scenarios while keeping lender eligibility and purchase-tax relief separate.", "author": {"@type": "Organization", "name": "REO Technologies"}}</script>
 
 <!-- External Stylesheets (compatibility) -->
   <link rel="preload" href="/fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  <link rel="preload" href="/css/style.css?v=88c170b2957a" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/style.css?v=88c170b2957a"></noscript>
   <link rel="stylesheet" href="/css/calculators.css">
 <style>
     :root {
@@ -1795,7 +1796,7 @@
   <meta name="msapplication-TileColor" content="#0B1D3A">
   <meta name="theme-color" content="#0B1D3A">
 <script src="/js/root-calculator-state.js?v=f80377ee5785" defer></script>
-<link rel="stylesheet" href="/css/root-calculators.css?v=34ceab807414">
+<link rel="stylesheet" href="/css/root-calculators.css?v=9bae25761362">
 <script src="/js/mortgage-tools-core.js?v=50af78e1c3be"></script>
 <script src="/js/uk-tools-models.js?v=033aa2dfe7aa"></script>
 <link rel="stylesheet" href="/css/country-tools.css?v=427a948ffcf4">
@@ -1830,8 +1831,7 @@
       <div class="hero-text">
         <div class="hero-eyebrow">GBP · Bank of England · SDLT · LTV · FCA Reference Resources</div>
         <h1 class="hero-title">🇬🇧 UK <span>Mortgage Tools</span></h1>
-        <p class="hero-sub">Stamp Duty · LTV · Help to Buy · Buy-to-Let · Remortgage · Shared Ownership · 20+
-          calculators</p>
+        <p class="hero-sub">Stamp Duty · LTV · Help to Buy · Buy-to-Let · Remortgage · Shared Ownership · Mortgage Planning Tools</p>
       </div>
     </div>
   </header>
@@ -1898,7 +1898,7 @@
     </div>
 
     <!-- DYNAMIC RESULTS SECTION -->
-    <section id="uk-results" class="results-panel" aria-label="Calculation results" aria-live="polite">
+    <section id="uk-results" class="results-panel" aria-label="Calculation results" aria-live="polite"><p class="root-result-education">Educational estimate, not financial advice. <a href="/disclaimer">Disclaimer</a> · <a href="/methodology">Methodology</a> · <a href="/corrections-policy">Corrections</a>.</p>
       <div class="results-grid">
         <div class="mrc results-lead">
           <span class="mrc-icon">💳</span>
@@ -1916,7 +1916,7 @@
           <span class="mrc-icon">🏢</span>
           <div class="mrc-lbl">Mortgage Loan size</div>
           <div class="mrc-val" id="uk-loan-amount" style="font-size: 18px; font-weight: 800;">£0</div>
-          <div class="mrc-sub" id="ltv-ratio">85.0% LTV ratio</div>
+          <div class="mrc-sub" id="ltv-ratio">Calculated LTV ratio</div>
         </div>
       </div>
 
@@ -2005,13 +2005,13 @@
     <!-- BoE Base Rate Banner -->
     <div id="market" class="sec-hdr">
       <h2>Bank of England</h2>
-      <a href="https://www.bankofengland.co.uk" target="_blank" rel="noopener noreferrer"></a>
+
     </div>
     <div class="boe-banner">
       <div class="boe-icon">🏛️</div>
       <div>
         <div class="boe-lbl">Bank of England · Official Bank Rate</div>
-        <div class="boe-val" data-rate="uk.boe">3.75%</div>
+        <div class="boe-val" data-rate="uk.boe">3.75%</div><small class="rate-provenance" data-rate-meta="uk.boe"><a href="https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate">Bank of England</a> · Effective 2025-12-18 · Source checked 2026-10-26</small>
         <div class="boe-sub">Monetary Policy Committee (MPC) Official Benchmark Rate</div>
       </div>
       <a href="https://www.bankofengland.co.uk" class="boe-btn" target="_blank" rel="noopener noreferrer">BoE Live</a>
@@ -2027,10 +2027,11 @@
         <div class="sdlt-title">Stamp Duty Land Tax</div>
         <div class="sdlt-sub">First-time buyer relief up to £300k/£500k · 2nd home surcharge +5% · Effective post-April 2025 HMRC rates</div>
       </div>
-      <a href="#calculator" class="sdlt-btn">Calculate SDLT</a>
+      <a href="/tools/uk/sdlt" class="sdlt-btn">Calculate SDLT</a>
     </div>
 
-    <!-- SDLT Rates Table (Post-April 1, 2025 Statutory Regime) -->
+<p class="sdlt-scope-note">England and Northern Ireland residential purchases only. First-time relief is unavailable for the entire purchase above £500,000; use standard rates on every band in that case. Non-residence can combine with additional-property rates. A buy-to-let label alone does not establish the surcharge. Companies, linked purchases, reliefs and lease rent need separate assessment. Source: <a href="https://www.gov.uk/stamp-duty-land-tax/residential-property-rates">HMRC residential rates</a>, observed 2026-10-26.</p>
+<!-- SDLT Rates Table (Post-April 1, 2025 Statutory Regime) -->
     <div class="sdlt-table">
       <table>
         <thead>
@@ -2038,8 +2039,8 @@
             <th>Property Value Band</th>
             <th>Standard Rate</th>
             <th>First-Time Buyer</th>
-            <th>Second Home / BTL (+5%)</th>
-            <th>Non-Resident (+2%)</th>
+            <th>Additional property (+5pp)</th>
+            <th>Non-resident only (+2pp)</th>
           </tr>
         </thead>
         <tbody>
@@ -2099,31 +2100,31 @@
 <!-- COUNTRY TOOLS START -->
 <section class="section country-tools-section" id="tools"><div class="sec-hdr"><h2>Core mortgage tools</h2></div><p>Enter current figures and press Calculate estimate. Editing or resetting clears the previous result.</p><div class="g2 country-tools-directory"><a href="/tools/uk/mortgage" class="tc" data-tone="emerald"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11 12 3l9 8M5 10v11h14V10M9 21v-7h6v7"/></svg></div><div class="tn">UK Mortgage Calculator</div><div class="td">Calculate repayment or interest-only monthly payments from the property price, deposit and actual rate.</div><div class="ta" aria-hidden="true">›</div></a>
 <a href="/tools/uk/amortization" class="tc" data-tone="violet"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 5h14v16H5zM8 3v4m8-4v4M5 10h14M9 14h1m4 0h1m-6 3h1"/></svg></div><div class="tn">UK Amortization Schedule</div><div class="td">Calculate every repayment and principal/interest totals, including permitted extra principal.</div><div class="ta" aria-hidden="true">›</div></a>
-<a href="/tools/uk/overpayment" class="tc" data-tone="emerald"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V4m0 16h17M7 15l5-5 4 2 5-7m-5 0h5v5"/></svg></div><div class="tn">Mortgage Overpayment Savings</div><div class="td">Calculate every repayment and principal/interest totals, including permitted extra principal.</div><div class="ta" aria-hidden="true">›</div></a>
+
 <a href="/tools/uk/interest-only" class="tc" data-tone="teal"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4"/></svg></div><div class="tn">Interest-Only and Repayment Comparison</div><div class="td">Compare an interest-only phase with repayment from the outset and the later P&amp;I payment.</div><div class="ta" aria-hidden="true">›</div></a>
 <a href="/tools/uk/affordability" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7V5h14v3M4 8h17v12H4zM16 12h5v4h-5z"/></svg></div><div class="tn">UK Household Mortgage Budget</div><div class="td">Use actual take-home income, living costs and debt payments to estimate a repayment budget.</div><div class="ta" aria-hidden="true">›</div></a>
 <a href="/tools/uk/income-multiples" class="tc" data-tone="blue"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 3v17h17M8 16v-4m5 4V8m5 8V5"/></svg></div><div class="tn">Income Multiple Scenario</div><div class="td">Compare a target loan with a chosen income-multiple scenario using qualifying income figures.</div><div class="ta" aria-hidden="true">›</div></a>
 <a href="/tools/uk/ltv" class="tc" data-tone="violet"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 18 12-12M8 7a2 2 0 1 1-4 0 2 2 0 0 1 4 0m12 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0"/></svg></div><div class="tn">UK Loan-to-Value Calculator</div><div class="td">Calculate equity, LTV and the principal reduction needed for an entered target ratio.</div><div class="ta" aria-hidden="true">›</div></a></div></section>
 <section class="section country-tools-section" id="repayment"><div class="sec-hdr"><h2>Repayment and switching</h2></div><p>Enter current figures and press Calculate estimate. Editing or resetting clears the previous result.</p><div class="g2 country-tools-directory"><a href="/tools/uk/remortgage" class="tc" data-tone="teal"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4"/></svg></div><div class="tn">UK Remortgage Comparison</div><div class="td">Compare actual mortgage quotes, fees, remaining balances and interest over a common horizon.</div><div class="ta" aria-hidden="true">›</div></a>
-<a href="/tools/uk/rate-comparison" class="tc" data-tone="teal"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4"/></svg></div><div class="tn">Mortgage Quote Rate Comparison</div><div class="td">Compare actual mortgage quotes, fees, remaining balances and interest over a common horizon.</div><div class="ta" aria-hidden="true">›</div></a></div></section>
+</div></section>
 <section class="section country-tools-section" id="regions"><div class="sec-hdr"><h2>Purchase tax and ownership</h2></div><p>Enter current figures and press Calculate estimate. Editing or resetting clears the previous result.</p><div class="g2 country-tools-directory"><a href="/tools/uk/sdlt" class="tc" data-tone="blue"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 3v17h17M8 16v-4m5 4V8m5 8V5"/></svg></div><div class="tn">England / Northern Ireland SDLT</div><div class="td">Calculate the appropriate jurisdiction’s standard residential purchase-tax bands under confirmed buyer assumptions.</div><div class="ta" aria-hidden="true">›</div></a>
 <a href="/tools/uk/lbtt" class="tc" data-tone="blue"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 3v17h17M8 16v-4m5 4V8m5 8V5"/></svg></div><div class="tn">Scotland LBTT and ADS</div><div class="td">Calculate the appropriate jurisdiction’s standard residential purchase-tax bands under confirmed buyer assumptions.</div><div class="ta" aria-hidden="true">›</div></a>
 <a href="/tools/uk/ltt" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6m-6 4h6"/></svg></div><div class="tn">Wales Land Transaction Tax</div><div class="td">Calculate the appropriate jurisdiction’s standard residential purchase-tax bands under confirmed buyer assumptions.</div><div class="ta" aria-hidden="true">›</div></a>
 <a href="/tools/uk/shared-ownership" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7V5h14v3M4 8h17v12H4zM16 12h5v4h-5z"/></svg></div><div class="tn">Shared Ownership Budget</div><div class="td">Budget the mortgage on a purchased share, rent on the unsold share and actual charges.</div><div class="ta" aria-hidden="true">›</div></a>
 <a href="/tools/uk/help-to-buy" class="tc" data-tone="blue"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3 8 9-5 9 5H3m2 3v7m5-7v7m4-7v7m5-7v7M3 21h18"/></svg></div><div class="tn">Existing Help to Buy Equity Loan</div><div class="td">Estimate an existing equity-loan redemption and current interest fee from the actual agreement.</div><div class="ta" aria-hidden="true">›</div></a></div></section>
 <section class="section country-tools-section" id="investment"><div class="sec-hdr"><h2>Investment scenarios</h2></div><p>Enter current figures and press Calculate estimate. Editing or resetting clears the previous result.</p><div class="g2 country-tools-directory"><a href="/tools/uk/buy-to-let" class="tc" data-tone="emerald"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11 12 3l9 8M5 10v11h14V10M9 21v-7h6v7"/></svg></div><div class="tn">Buy-to-Let Mortgage and Cash Flow</div><div class="td">Compare rental income, occupancy, operating costs, financing and lender stress assumptions.</div><div class="ta" aria-hidden="true">›</div></a>
-<a href="/tools/uk/rental-yield" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7V5h14v3M4 8h17v12H4zM16 12h5v4h-5z"/></svg></div><div class="tn">Rental Yield and Operating Budget</div><div class="td">Compare rental income, occupancy, operating costs, financing and lender stress assumptions.</div><div class="ta" aria-hidden="true">›</div></a></div></section>
+</div></section>
 <!-- COUNTRY TOOLS END -->
 <!-- Resources -->
     <div id="resources" class="sec-hdr">
       <h2>UK Resources &amp; Government</h2>
     </div>
     <div class="ilist" style="margin-bottom: 32px;">
-      <a href="https://www.bankofengland.co.uk" class="ic" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate" class="ic" target="_blank" rel="noopener noreferrer">
         <div class="ii">🏛️</div>
         <div>
-          <div class="in">BoE Base Rate Tracker</div>
-          <div class="is">Official Bank of England policy rate tracker</div>
+          <div class="in">Bank of England Bank Rate</div>
+          <div class="is">Official policy-rate information and decisions</div>
         </div>
         <div class="ich">›</div>
       </a>
@@ -2131,8 +2132,8 @@
         rel="noopener noreferrer">
         <div class="ii">🏡</div>
         <div>
-          <div class="in">UK House Price Index</div>
-          <div class="is">HM Land Registry · regional data</div>
+          <div class="in">HM Land Registry</div>
+          <div class="is">Official land-registration information and publications</div>
         </div>
         <div class="ich">›</div>
       </a>
@@ -2155,7 +2156,8 @@
     </div>
 
     <!-- ===== EDUCATIONAL CONTENT SECTION ===== -->
-    <section class="content-article" id="uk-guide" aria-labelledby="uk-guide-h"><h2 id="uk-guide-h">UK Mortgage Planning</h2><p>Updated October 25, 2026 · Scenario estimates; confirm actual lender and transaction terms.</p><h2>Compare the same repayment timeline</h2>
+    <!-- BENCHMARK PROVENANCE --><section class="content-article benchmark-reference" aria-label="Dated policy benchmark"><p>Official Bank Rate: <strong data-rate="uk.boe">3.75%</strong><small class="rate-provenance" data-rate-meta="uk.boe"><a href="https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate">Bank of England</a> · Effective 2025-12-18 · Source checked 2026-10-26</small></p><p>This is a dated policy reference, not a mortgage offer. Enter your lender's quote for the calculation. <a href="/data-sources">Sources and observation dates</a>.</p></section><!-- END BENCHMARK PROVENANCE -->
+<section class="content-article" id="uk-guide" aria-labelledby="uk-guide-h"><h2 id="uk-guide-h">UK Mortgage Planning</h2><p>Page revision 2026-10-26 · Scenario estimates; confirm actual lender and transaction terms.</p><h2>Compare the same repayment timeline</h2>
 <p>Enter the financed principal, the rate you want to test and the repayment years. A short fixed-rate deal can expire before the mortgage is repaid. Constant-rate lifetime interest is an illustration, not a prediction of every future refix.</p>
 <p>At GBP 262,500, an assumed 4.48% and 25 years, the monthly repayment model gives GBP 1,456.08. Actual daily accrual, dates, financed product fees and lender rounding can change the disclosure figures. Keep council tax, insurance, service charges and maintenance outside the P&amp;I number.</p>
 <h2>SDLT has a limited scope here</h2>
@@ -2178,76 +2180,40 @@
               What is Stamp Duty (SDLT) in the UK?
               <span class="faq-icon" aria-hidden="true">▾</span>
             </button>
-            <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1">
-              <p>Stamp Duty Land Tax (SDLT) is a tax paid when you buy a property or land over a certain threshold in
-                England and Northern Ireland. The tax rate is tiered, meaning you pay different percentages on different
-                bands of the property price. Under current post-April 1, 2025 HMRC legislation, standard stamp duty rates start at 0% for properties up to
-                £125,000, 2% on £125,001 to £250,000, 5% on £250,001 to £925,000, 10% on £925,001 to £1.5 million, and 12% on portions above £1.5 million.
-              </p>
-            </div>
+            <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1"><p>SDLT applies to relevant transactions in England and Northern Ireland. Scotland uses LBTT and Wales uses LTT. The jurisdiction, transaction date, property type and buyer category determine treatment; use the appropriate dedicated tool and confirm the actual case with the conveyancer rather than applying one UK-wide percentage.</p></div>
           </li>
           <li class="faq-item">
             <button class="faq-q" aria-expanded="false" id="faq-q2" aria-controls="faq-a2">
               Do first-time buyers pay Stamp Duty in the UK?
               <span class="faq-icon" aria-hidden="true">▾</span>
             </button>
-            <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2">
-              <p>First-time buyers in England and Northern Ireland qualify for Stamp Duty relief on properties priced up to £500,000. Under current post-April 1, 2025 HMRC rules, you pay 0% Stamp Duty on properties priced up to £300,000, and a discounted rate of 5% on the portion between £300,001 and £500,000. If the property price exceeds £500,000, no first-time buyer relief applies and you pay standard rates on the full amount.</p>
-            </div>
+            <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2"><p>First-time-buyer relief requires every relevant purchaser and transaction to meet the conditions. A checkbox models an assumed category; it does not prove entitlement. Price ceilings, additional-property treatment and residence rules can affect the result. Check HMRC&#x27;s dated guidance for England and Northern Ireland and the separate national rules elsewhere.</p></div>
           </li>
           <li class="faq-item">
-            <button class="faq-q" aria-expanded="false" id="faq-q3" aria-controls="faq-a3">
-              What is the difference between a repayment and interest-only mortgage?
-              <span class="faq-icon" aria-hidden="true">▾</span>
-            </button>
-            <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3">
-              <p>A repayment mortgage requires monthly payments that cover both the interest and a portion of the
-                original loan balance, ensuring the loan is completely paid off by the end of the term. An interest-only
-                mortgage requires paying only the interest accrued each month, meaning the monthly payment is lower but
-                the original debt remains fully outstanding and must be repaid via a separate repayment strategy at the
-                end of the term.</p>
-            </div>
+            <button class="faq-q" aria-expanded="false" id="faq-q3" aria-controls="faq-a3">What does the LTV ratio tell me?<span class="faq-icon" aria-hidden="true">▾</span></button>
+            <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3"><p>LTV divides the mortgage principal by the relevant assessed property value. It is a descriptive ratio, not a complete underwriting decision. A changed valuation or financed fee can change it. The lender decides the valuation and product conditions; this site does not infer a rate discount from a chosen LTV band.</p></div>
           </li>
           <li class="faq-item">
-            <button class="faq-q" aria-expanded="false" id="faq-q4" aria-controls="faq-a4">
-              How much can I borrow for a UK mortgage?
-              <span class="faq-icon" aria-hidden="true">▾</span>
-            </button>
-            <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4">
-              <p>Most UK lenders limit borrowing to approximately 4.5 times your gross annual income (or combined income
-                for joint applications). Lenders also audit your monthly expenses (affordability assessment) under a
-                stress test to ensure you can support payments if interest rates rise.</p>
-            </div>
+            <button class="faq-q" aria-expanded="false" id="faq-q4" aria-controls="faq-a4">What happens to principal under interest only?<span class="faq-icon" aria-hidden="true">▾</span></button>
+            <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4"><p>Interest-only payments do not reduce principal in the illustrated phase. The debt must still be settled, and a later repayment payment can be larger when fewer years remain. Check the lender&#x27;s repayment-plan requirements and use the transition tool instead of treating the lower opening debit as full repayment.</p></div>
           </li>
           <li class="faq-item">
             <button class="faq-q" aria-expanded="false" id="faq-q5" aria-controls="faq-a5">
               What is a fixed-rate vs tracker mortgage?
               <span class="faq-icon" aria-hidden="true">▾</span>
             </button>
-            <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5">
-              <p>A fixed-rate mortgage locks your interest rate for a set period (usually 2, 5, or 10 years), offering
-                payment certainty. A tracker mortgage variable rate tracks a benchmark (normally the Bank of England
-                base rate) plus a fixed margin (e.g. Base + 0.50%), meaning payments rise or fall in tandem with central
-                bank policies.</p>
-            </div>
+            <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5"><p>The fixed deal period and the total repayment term can be different. A tracker follows the contract&#x27;s named benchmark and margin; it does not necessarily equal the policy rate alone. Compare the actual reset and follow-on terms. No future offer or fixed-period extension is predicted here.</p></div>
           </li>
           <li class="faq-item">
-            <button class="faq-q" aria-expanded="false" id="faq-q6" aria-controls="faq-a6">
-              What is an Agreement in Principle (AIP)?
-              <span class="faq-icon" aria-hidden="true">▾</span>
-            </button>
-            <div class="faq-a" id="faq-a6" role="region" aria-labelledby="faq-q6">
-              <p>An Agreement in Principle (AIP), also called a Decision in Principle (DIP), is a document from a lender
-                indicating how much they are willing to lend you in theory. It does not guarantee a mortgage but shows
-                estate agents you are a serious buyer when making an offer.</p>
-            </div>
+            <button class="faq-q" aria-expanded="false" id="faq-q6" aria-controls="faq-a6">How should I compare a remortgage offer?<span class="faq-icon" aria-hidden="true">▾</span></button>
+            <div class="faq-a" id="faq-a6" role="region" aria-labelledby="faq-q6"><p>Remortgage comparisons should include the same comparison horizon, remaining balances, known fees, cashback obligations and early repayment charges. Extending the term can reduce the monthly payment while increasing interest. The dedicated quote comparison separates cash-flow savings from the cost of debt over that horizon.</p></div>
           </li>
         </ul>
       </div>
     </section>
 
     <!-- ===== TRUST SECTION ===== -->
-    <div class="trust-section" role="note"><h2>Sources and limits</h2><p>Published by <a href="/about">REO Technologies</a>. This page provides educational estimates under stated assumptions. No independent licensed financial review is claimed. Read our <a href="/methodology">methodology</a>, <a href="/editorial-policy">editorial policy</a> and <a href="/corrections-policy">corrections process</a>.</p></div>
+    <div class="trust-section" role="note"><p><span class="publisher-contact">Publisher contact: <a href="/authors/abdul-raheem">Abdul Raheem</a></span></p><h2>Sources and limits</h2><p>Published by <a href="/about">REO Technologies</a>. This page provides educational estimates under stated assumptions. No independent licensed financial review is claimed. Read our <a href="/methodology">methodology</a>, <a href="/editorial-policy">editorial policy</a> and <a href="/corrections-policy">corrections process</a>.</p></div>
 
     <!-- ===== CTA BANNER ===== -->
     <div class="cta-banner" role="complementary" aria-label="Explore more tools">
@@ -2292,8 +2258,8 @@
 
   <!-- External JS (compatibility) -->
   <script src="/js/components.js" defer></script>
-  <script src="/js/rate-snapshot.js?v=e6b148f65b8b" defer></script>
-<script src="/js/rates.js?v=024c1314e60e" defer></script>
+  <script src="/js/rate-snapshot.js?v=d5e821e48b18" defer></script>
+<script src="/js/rates.js?v=ce30a282355e" defer></script>
   <script src="/js/charts.js" defer></script>
   <script src="/js/accessibility.js" defer></script>
 

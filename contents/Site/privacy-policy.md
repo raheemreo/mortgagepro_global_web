@@ -22,6 +22,8 @@ The website uses Cloudflare delivery infrastructure. A request can reveal an IP 
 
 We do not claim that all hosting data is anonymous, that every IP address is truncated, or that the source code establishes a particular provider-side retention period. Provider processing is described in [Cloudflare's privacy policy](https://www.cloudflare.com/privacypolicy/). Request data and security settings must be considered separately from calculator inputs.
 
+Cloudflare also injects a performance-measurement beacon on the live website. The browser sends requests to Cloudflare's measurement endpoint, including page and browser performance information. This is separate from the publisher's calculator arithmetic and from Google Analytics or Microsoft Clarity. Cloudflare's [Web Analytics documentation](https://developers.cloudflare.com/web-analytics/about/) describes the service. The source repository does not establish every provider-side account setting or retention period, and we do not describe all hosting telemetry as absent.
+
 ## Advertising and Google services
 
 The site includes Google AdSense code on content pages. Ad availability depends on Google's account and serving decisions. Google and its partners may use cookies, identifiers, IP addresses and information about visits to this and other sites when providing, measuring or personalizing advertisements, subject to applicable choices and requirements.
@@ -33,6 +35,10 @@ Read [how Google uses information from sites using its services](https://policie
 Google's published privacy messages and regional controls, when available for this site and your location, let you make or change advertising choices. The Privacy Settings links use the provider's settings interface when it is available and otherwise lead to this section. You can also use [Google's ad controls](https://myadcenter.google.com/) and your browser's cookie controls.
 
 Advertising consent signals are initialized to denied before the ad loader runs. That technical default is not a substitute for a published consent message or a declaration of legal certification. The consent message and available ad modes depend on Google's regional and account configuration; declining a choice does not guarantee one particular type of advertisement.
+
+AdSense requests also start paused. If the applicable provider state is unknown or fails, the site does not resume requests. Where EU regulations apply, the additional gate requires a completed provider decision with storage and Google's vendor permission; refusing those permissions keeps requests paused. AdSense evaluates the actual TCF signal for permitted processing. We do not create consent strings or grant consent on your behalf.
+
+The separate [Privacy Settings page](/privacy-settings) loads the existing publisher tag only to make published Google controls available. That page never resumes advertising requests and has no ad units. It remains useful from documents that do not load advertising code. Availability still depends on the actual published provider configuration; this website does not claim to have certified the owner's dashboard setup.
 
 If the provider interface is unavailable, contact us about the issue. You can block cookies or scripts in your browser, although some advertising or security features may then change.
 

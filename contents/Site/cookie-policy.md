@@ -14,6 +14,8 @@ The current calculator code does not save a borrower profile or financial entrie
 
 Cloudflare delivers the website and may use security technologies to manage requests and detect abuse. Their operation can depend on the site's hosting settings and the request. We do not claim that a security cookie is set on every visit or that it contains no personal data. See [Cloudflare's privacy policy](https://www.cloudflare.com/privacypolicy/).
 
+The live host also injects a Cloudflare performance beacon. Its measurement requests are distinct from storing your calculator inputs. Read the provider's [Web Analytics documentation](https://developers.cloudflare.com/web-analytics/about/) for its service description. The statement below about no publisher-loaded Google Analytics or Clarity does not mean that this hosting-provider measurement is absent.
+
 ## Advertising technologies
 
 Google AdSense code is present on content pages. Google and its partners may use cookies and identifiers to provide, measure or personalize ads, subject to the applicable settings and choices. These technologies are not required to calculate principal and interest.
@@ -26,7 +28,9 @@ This website release does not load Google Analytics or Microsoft Clarity from pu
 
 ## Change your choices
 
-Use Privacy Settings to reopen the advertising provider's controls when they are available for your location. If those controls have not loaded, the link opens the [privacy controls section](/privacy-policy#privacy-controls), where you can find provider and browser options. The availability of a message depends on the site's published provider configuration and regional rules.
+Use Privacy Settings to reopen the advertising provider's controls when they are available for your location. If those controls have not loaded on the current page, the link opens the [Privacy Settings page](/privacy-settings), which also links to policy and browser guidance. The availability of a message depends on the site's published provider configuration and regional rules.
+
+The [Privacy Settings entry point](/privacy-settings) can load the published Google interface from an ad-free document. It keeps ad requests paused even if consent has already been granted. On eligible content pages, unknown or failed provider state does not resume ad requests, and refusing required storage/vendor permission keeps them paused. These controls do not invent a consent record or prove that an account message has been published.
 
 You can block or clear cookies in your browser and use [Google's ad controls](https://myadcenter.google.com/). Clearing cookies may also remove saved choices, causing a provider to ask again. Blocking scripts can affect ads or security features.
 

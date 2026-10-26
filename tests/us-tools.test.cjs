@@ -110,7 +110,8 @@ test('all supplied-input outputs and tables are finite and every model handles z
 });
 test('every generated tool canonical and directory URL is deployable through the edge worker',async()=>{
  const context={module:{exports:{}},URL,Request,Response,Headers};vm.runInNewContext(fs.readFileSync(__dirname+'/../_worker.js','utf8').replace('export default','module.exports='),context);const worker=context.module.exports;
- for(const c of C.catalog){const pathname='/tools/usa/'+c.id;let requested;const r=await worker.fetch(new Request('https://mortgageproglobal.com'+pathname),{ASSETS:{fetch:async req=>{requested=new URL(req.url).pathname;return new Response(fs.readFileSync(__dirname+'/..'+requested,'utf8'),{headers:{'Content-Type':'text/html'}});}}});assert.equal(r.status,200);assert.equal(requested,pathname+'.html');const html=await r.text();assert.ok(html.includes(`data-us-tool="${c.id}"`));assert.ok(html.includes(`href="https://mortgageproglobal.com${pathname}"`));}
+ const aliases=require('../data/tool-redirects.json').usa;
+ for(const c of C.catalog){const pathname='/tools/usa/'+c.id;let requested;const r=await worker.fetch(new Request('https://mortgageproglobal.com'+pathname),{ASSETS:{fetch:async req=>{requested=new URL(req.url).pathname;return new Response(fs.readFileSync(__dirname+'/..'+requested,'utf8'),{headers:{'Content-Type':'text/html'}});}}});if(aliases[c.id]){assert.equal(r.status,301);assert.equal(r.headers.get('Location'),'https://mortgageproglobal.com/tools/usa/'+aliases[c.id]);continue;}assert.equal(r.status,200);assert.equal(requested,pathname+'.html');const html=await r.text();assert.ok(html.includes(`data-us-tool="${c.id}"`));assert.ok(html.includes(`href="https://mortgageproglobal.com${pathname}"`));}
 });
 
 test('personal financial values are blank; only documented policy or planning settings default',()=>{

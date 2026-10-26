@@ -1,30 +1,9 @@
 {
   "jurisdiction": "New Zealand",
   "currency": "NZD",
-  "last_verified": "2026-09-04",
-  "verification_status": "verified",
-  "rules": {
-    "macroprudential_lvr_restrictions": {
-      "classification": "regulatory_requirement",
-      "governing_body": "Reserve Bank of New Zealand (RBNZ)",
-      "framework": "Statement of Principles (BS19)",
-      "source_url": "https://www.rbnz.govt.nz",
-      "effective_from": "2024-07-01",
-      "owner_occupier_high_lvr_speed_limit": "20% speed limit for lending > 80% LVR",
-      "investor_high_lvr_speed_limit": "5% speed limit for lending > 70% LVR"
-    },
-    "debt_to_income_restrictions": {
-      "classification": "regulatory_requirement",
-      "governing_body": "Reserve Bank of New Zealand (RBNZ)",
-      "effective_from": "2024-07-01",
-      "owner_occupier_dti_cap": 6.0,
-      "investor_dti_cap": 7.0,
-      "speed_limits": "Max 20% of residential lending can exceed these caps"
-    },
-    "table_loan_amortization": {
-      "classification": "regulatory_requirement",
-      "method": "Standard New Zealand Table Loan (Compounded Monthly Annuity)",
-      "formula": "Payment = P × r × (1+r)^n / ((1+r)^n - 1)"
-    }
-  }
+  "status": "retired_reference",
+  "retired_on": "2026-10-26",
+  "reason": "This parallel rules layer contained unverified or outdated generalized claims. It is not used as the calculator rule engine and is no longer published as verified statutory data.",
+  "current_calculator_reference": "/data/newzealand-tool-reference.json",
+  "scope": "Current tools describe their own supported scenarios. A reference link and source assertion are not a certification of every transaction or current law."
 }

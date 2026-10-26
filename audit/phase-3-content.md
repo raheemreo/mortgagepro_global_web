@@ -1,0 +1,15 @@
+# Phase 3 — content publication and duplicate intent
+
+Implemented 26 October 2026. The mortgage models were preserved.
+
+- `data/tool-redirects.json` documents 36 genuine aliases. For each pair, tests run both the alias and survivor with both fixture sets and compare all calculated values and tables. The edge returns 301 for extensionless, trailing-slash and `.html` aliases, retaining query parameters. Menus/cards/related links use the survivor; aliases are removed from sitemap.
+- 143 distinct calculator routes remain. Original source files and model entry points are retained for compatibility/testing; public alias URLs redirect before static HTML is served. Hurricane percentage deductibles, condo/contents inputs and separate tax jurisdictions were not blindly merged.
+- Seven principal mortgage-tool pages now contain individually written country-specific explanations, actual-model worked arithmetic and three distinct FAQs, plus honest publisher-contact attribution and a near-result disclaimer/methodology/corrections notice. Their examples are explicitly hypothetical and do not claim current market rates.
+- Other calculator pages remain functional and browsable but receive `noindex,follow` and remain ad-free until the substantive editorial/source review is complete. After excluding aliases, 136 such distinct tool pages are gated. This is the project's conservative publication decision, not a claim that Google requires a particular word count or that those tools have no value.
+- All valid supplied fixtures generate traceable static worked examples. The US tax-deduction fixture intentionally lacks confirmed tax-year limits, so no invented replacement limits/example are published there.
+- The 35 shorter non-US articles remain accessible, with `noindex,follow`, no AdSense loader and no sitemap entry. The eight longer US articles remain indexable. This applies the explicitly requested exclusion alternative; it does not pretend that 35 complete editorial rewrites have happened.
+- Short About/author/source/FAQ documents are now ad-free. No ad unit was added or relocated. Empty placeholder removal and consent behavior are handled in the following phase.
+- All 26 exact duplicate meta-description groups are resolved by intent/country descriptions. Unknown original publication dates were removed from article presentation/schema instead of asserted as verified. Organization authorship and a separately labelled real publisher contact are distinguished.
+- Generated-tool rebuilds apply the publication layer; the rate workflow will also apply exclusions after document regeneration. A later review may admit a page to indexing, but must supply its own substantive review evidence rather than simply remove the robots tag.
+
+Checks at this checkpoint: 577 model/rate/alias tests pass; existing site-readiness validation passes. Sitemap contains 39 eligible pages, with 207 source documents carrying noindex (36 of them public 301 aliases). These are deliberate exclusions, not broken URLs. Complete post-implementation verification follows.
