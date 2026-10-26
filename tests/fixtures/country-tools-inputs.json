@@ -971,5 +971,122 @@
       "years": 20,
       "credited": 0
     }
+  },
+  "europe": {
+    "mortgage": {
+      "price": 350000,
+      "down": 70000,
+      "rate": 4,
+      "years": 25,
+      "type": "repayment",
+      "financed": 0,
+      "cashFees": 0
+    },
+    "amortization": {
+      "loan": 280000,
+      "rate": 4,
+      "years": 25,
+      "frequency": "12",
+      "extra": 0,
+      "lump": 0,
+      "lumpPeriod": 1,
+      "annualLump": 0,
+      "accelerated": "no"
+    },
+    "overpayment": {
+      "loan": 280000,
+      "rate": 4,
+      "years": 25,
+      "frequency": "12",
+      "extra": 0,
+      "lump": 0,
+      "lumpPeriod": 1,
+      "annualLump": 0,
+      "accelerated": "no"
+    },
+    "affordability": {
+      "net": 5000,
+      "living": 2000,
+      "debts": 500,
+      "down": 70000,
+      "rate": 4,
+      "buffer": 0,
+      "years": 25,
+      "income": 80000,
+      "multiple": 4.5
+    },
+    "dti": {
+      "income": 5000,
+      "partner": 0,
+      "housing": 1500,
+      "car": 0,
+      "cards": 0,
+      "student": 0,
+      "personal": 0,
+      "other": 0,
+      "target": 35
+    },
+    "country-comparison": {
+      "loan": 280000,
+      "oldRate": 4.5,
+      "rate": 4,
+      "years": 25,
+      "newYears": 25,
+      "horizon": 36,
+      "fees": 0,
+      "penalty": 0,
+      "repayCashback": 0,
+      "cashback": 0
+    },
+    "nonresident": {
+      "price": 350000,
+      "down": 70000,
+      "rate": 4,
+      "years": 25,
+      "type": "repayment",
+      "financed": 0,
+      "cashFees": 0,
+      "maxLtv": 80,
+      "availableCash": 100000
+    },
+    "notary-costs": {
+      "price": 350000,
+      "down": 70000,
+      "notary": 3000,
+      "legal": 0,
+      "registry": 0,
+      "valuation": 0,
+      "broker": 0,
+      "tax": 0,
+      "other": 0
+    },
+    "property-tax": {
+      "taxBase": 350000,
+      "transferRate": 5,
+      "vatBase": 0,
+      "vatRate": 0,
+      "otherTax": 0,
+      "annualAssessed": 100000,
+      "annualRate": 1,
+      "holdingYears": 5
+    },
+    "currency": {
+      "amount": 1000,
+      "from": "EUR",
+      "to": "GBP",
+      "fx": 0.84,
+      "sourceFee": 0,
+      "spread": 0,
+      "destinationFee": 0
+    },
+    "euribor": {
+      "loan": 280000,
+      "index": 2.5,
+      "margin": 1.5,
+      "floorApplies": "no",
+      "floor": 0,
+      "years": 25,
+      "shock": 1
+    }
   }
 }

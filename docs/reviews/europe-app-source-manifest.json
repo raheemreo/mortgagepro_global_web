@@ -1,0 +1,61 @@
+{
+  "repository": "raheemreo/mortgagepro_global",
+  "commit": "9f79ea943e27b6d8b0c1ca411c37fb4cae077f72",
+  "files": [
+    {
+      "path": "lib/features/europe/europe_screen.dart",
+      "sha": "4220b692a08157a3628a5439142c94a49c5ac08a",
+      "bytes": 33578
+    },
+    {
+      "path": "lib/features/europe/tools/eu_affordability_calc.dart",
+      "sha": "b3236e2d80026d965b0b83763eef479dd0bf2461",
+      "bytes": 39115
+    },
+    {
+      "path": "lib/features/europe/tools/eu_amortization_calc.dart",
+      "sha": "4779703eece937ba419eb5548b084d4ced14ca60",
+      "bytes": 38635
+    },
+    {
+      "path": "lib/features/europe/tools/eu_country_comparison.dart",
+      "sha": "d7e0a2ad44b48623662afac3e22cbe52680cb619",
+      "bytes": 38052
+    },
+    {
+      "path": "lib/features/europe/tools/eu_currency_converter.dart",
+      "sha": "a63cf409a6ceec80468f40b7ba9af9e11a5fb980",
+      "bytes": 32685
+    },
+    {
+      "path": "lib/features/europe/tools/eu_dti_calc.dart",
+      "sha": "5fd9ab8bcfd54b6d44438bcc710738632791ed1c",
+      "bytes": 56715
+    },
+    {
+      "path": "lib/features/europe/tools/eu_euribor_tracker.dart",
+      "sha": "47324544fc21e9a4cfc8cc2e50ea4b686a089cb9",
+      "bytes": 45158
+    },
+    {
+      "path": "lib/features/europe/tools/eu_mortgage_calc.dart",
+      "sha": "38dd53c62f18f5862cff67e7faae40d9eb3f839a",
+      "bytes": 49577
+    },
+    {
+      "path": "lib/features/europe/tools/eu_nonresident_calc.dart",
+      "sha": "300ae32b0eaea7b407f7f458b153f2d2dfcc2003",
+      "bytes": 44505
+    },
+    {
+      "path": "lib/features/europe/tools/eu_notary_fee_calc.dart",
+      "sha": "270bff1bf0a39f6a93e1fb3a2e34e57cec90f516",
+      "bytes": 51160
+    },
+    {
+      "path": "lib/features/europe/tools/eu_property_tax_calc.dart",
+      "sha": "c0ef1feefc4286228c38d8fe4b47d05096a63563",
+      "bytes": 53221
+    }
+  ]
+}
