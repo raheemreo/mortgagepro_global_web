@@ -1761,7 +1761,11 @@
   <meta name="msapplication-TileColor" content="#0B1D3A">
   <meta name="theme-color" content="#0B1D3A">
 <script src="/js/root-calculator-state.js?v=f80377ee5785" defer></script>
-<link rel="stylesheet" href="/css/root-calculators.css?v=5469b7825823">
+<link rel="stylesheet" href="/css/root-calculators.css?v=2be4cee94469">
+<script src="/js/mortgage-tools-core.js?v=50af78e1c3be"></script>
+<script src="/js/newzealand-tools-models.js?v=9975924e4a51"></script>
+<link rel="stylesheet" href="/css/country-tools.css?v=427a948ffcf4">
+<link rel="stylesheet" href="/css/tool-cards.css?v=8aaea817d47a">
 </head>
 
 <body>
@@ -1808,11 +1812,11 @@
               <div class="h-row">
                 <div class="h-box" id="p-box">
                   <label for="nz-price">Property Price (NZ$)</label>
-                  <input type="number" id="nz-price" value="750000" min="50000" max="10000000" step="5000" required>
+                  <input type="number" id="nz-price" value="" min="50000" max="10000000" step="any" required>
                 </div>
                 <div class="h-box" id="d-box">
                   <label for="nz-down">Deposit (%)</label>
-                  <input type="number" id="nz-down" value="20" min="5" max="99" step="0.5" required>
+                  <input type="number" id="nz-down" value="" min="5" max="99" step="any" required>
                 </div>
               </div>
               <div class="h-row">
@@ -1828,7 +1832,7 @@
                 </div>
                 <div class="h-box" id="r-box">
                   <label for="nz-rate">Interest Rate (%)</label>
-                  <input type="number" id="nz-rate" value="6.75" min="0" max="25" step="0.01" required>
+                  <input type="number" id="nz-rate" value="" min="0" max="25" step="0.01" required>
                 </div>
               </div>
               <div class="h-row">
@@ -1966,198 +1970,47 @@
       </div>
     </section>
 
-    <!-- Core Tools -->
-    <section class="section" id="tools">
-      <div class="sec">Core Home Loan Tools <span class="more"></span></div>
-      <div class="g2">
-        <a href="#calculator" class="tc dk">
-          <div class="ti">🏠</div>
-          <div class="tn">Mortgage Calc</div>
-          <div class="td">NZD monthly payment</div>
-          <div class="bge bge-g">Fixed &amp; Float</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/nz-repayment-calculator" class="tc">
-          <div class="ti">📊</div>
-          <div class="tn">Repayment Calc</div>
-          <div class="td">P&amp;I vs interest only</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/nz-dti-calculator" class="tc">
-          <div class="ti">📈</div>
-          <div class="tn">DTI Calculator</div>
-          <div class="td">Debt-to-income NZ</div>
-          <div class="bge bge-r">DTI thresholds</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="#calculator" class="tc fn">
-          <div class="ti">📅</div>
-          <div class="tn">Amortization</div>
-          <div class="td">Full repayment schedule</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/nz-lvr-calculator" class="tc">
-          <div class="ti">💰</div>
-          <div class="tn">Affordability &amp; LVR</div>
-          <div class="td">Max borrowing capacity</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/nz-repayment-calculator" class="tc tl">
-          <div class="ti">🔄</div>
-          <div class="tn">Refixing Guide</div>
-          <div class="td">Best term to refix</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/nz-repayment-calculator" class="tc">
-          <div class="ti">📉</div>
-          <div class="tn">Extra Repayments</div>
-          <div class="td">Interest savings calc</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/nz-car-loan-calculator" class="tc rd">
-          <div class="ti">🏎️</div>
-          <div class="tn">Car Loan Calc</div>
-          <div class="td">Vehicle financing NZD</div>
-          <div class="ta">›</div>
-        </a>
-      </div>
-    </section>
-
-    <!-- LVR Banner -->
-    <section class="section">
-      <div class="sec">LVR Restrictions <span class="more"></span></div>
-      <div class="lvr-banner">
-        <div class="lb-icon">⚠️</div>
-        <div>
-          <div class="lb-title">Loan-to-Value Restrictions (LVR)</div>
-          <div class="lb-sub">Owner-occ: 20% min deposit · Investor: 30% min deposit (RBNZ current)</div>
-        </div>
-        <a href="/blog/nz-lvr-calculator" class="lb-btn">Check LVR</a>
-      </div>
-    </section>
-
-    <!-- LVR Grid -->
-    <section class="section">
-      <div class="g2">
-        <a href="/blog/nz-lvr-calculator" class="tc">
-          <div class="ti">🛡️</div>
-          <div class="tn">LVR Calculator</div>
-          <div class="td">Loan-to-value ratio</div>
-          <div class="bge bge-r">20% / 30%</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/nz-first-home-buyer" class="tc dk">
-          <div class="ti">🏦</div>
-          <div class="tn">5% Deposit Loan</div>
-          <div class="td">Kāinga Ora First Home</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/nz-lvr-calculator" class="tc sk">
-          <div class="ti">📐</div>
-          <div class="tn">LVR Speed Limits</div>
-          <div class="td">Bank allowance caps</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/nz-lvr-calculator" class="tc">
-          <div class="ti">🔍</div>
-          <div class="tn">Low Equity Margin</div>
-          <div class="td">LEM fee breakdown</div>
-          <div class="bge bge-o">LEM</div>
-          <div class="ta">›</div>
-        </a>
-      </div>
-    </section>
-
-    <!-- KiwiSaver Banner -->
-    <section class="section">
-      <div class="sec">KiwiSaver <span class="more"></span></div>
-      <div class="ks-banner">
-        <div style="font-size:26px">🥝</div>
-        <div>
-          <div class="ks-title">KiwiSaver First-Home Withdrawal</div>
-          <div class="ks-sub">Use KiwiSaver savings as deposit · Combine with Kāinga Ora First Home Loan</div>
-        </div>
-        <a href="/blog/nz-kiwisaver-calculator" class="ks-btn">KiwiSaver Guide</a>
-      </div>
-    </section>
-
-    <!-- KiwiSaver Grid -->
-    <section class="section">
-      <div class="g2">
-        <a href="/blog/nz-kiwisaver-calculator" class="tc fn">
-          <div class="ti">🥝</div>
-          <div class="tn">KiwiSaver Calc</div>
-          <div class="td">First-home withdrawal</div>
-          <div class="bge bge-t">3yr min</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/nz-first-home-buyer" class="tc">
-          <div class="ti">🏡</div>
-          <div class="tn">First Home Loan</div>
-          <div class="td">5% low-deposit scheme</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/nz-kiwisaver-calculator" class="tc">
-          <div class="ti">📦</div>
-          <div class="tn">KiwiSaver Savings</div>
-          <div class="td">Deposit growth projection</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/nz-first-home-buyer" class="tc tl">
-          <div class="ti">👥</div>
-          <div class="tn">Income Eligibility</div>
-          <div class="td">$95k / $150k caps</div>
-          <div class="ta">›</div>
-        </a>
-      </div>
-    </section>
-
-    <!-- Investment & Tax -->
-    <section class="section">
-      <div class="sec">Tax &amp; Investment Tools <span class="more"></span></div>
-      <div class="g2">
-        <a href="/blog/nz-rental-yield-calculator" class="tc sl">
-          <div class="ti">🏘️</div>
-          <div class="tn">Rental Yield Calc</div>
-          <div class="td">Gross &amp; net yield NZD</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/nz-rental-yield-calculator" class="tc">
-          <div class="ti">💼</div>
-          <div class="tn">Ring-Fencing Rules</div>
-          <div class="td">Rental loss tax rules</div>
-          <div class="bge bge-r">IRD rules</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/nz-rental-yield-calculator" class="tc">
-          <div class="ti">🚫</div>
-          <div class="tn">Bright-Line Test</div>
-          <div class="td">2-year statutory rule</div>
-          <div class="bge bge-o">Capital gains</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/nz-rental-yield-calculator" class="tc fn">
-          <div class="ti">🏢</div>
-          <div class="tn">Investment Property</div>
-          <div class="td">Cash flow &amp; return</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/nz-rental-yield-calculator" class="tc">
-          <div class="ti">📝</div>
-          <div class="tn">Interest Deductibility</div>
-          <div class="td">Phased restoration rules</div>
-          <div class="ta">›</div>
-        </a>
-        <a href="/blog/nz-repayment-calculator" class="tc tl">
-          <div class="ti">🔁</div>
-          <div class="tn">Refinance Guide</div>
-          <div class="td">Break fee &amp; savings</div>
-          <div class="ta">›</div>
-        </a>
-      </div>
-    </section>
-
-    <!-- Resources -->
+<!-- COUNTRY TOOLS START -->
+<section class="section country-tools-section" id="tools"><div class="sec-hdr"><h2>Mortgage and repayment</h2></div><p>Enter current figures and press Calculate estimate. Editing or resetting clears the previous result.</p><div class="g2 country-tools-directory"><a href="/tools/newzealand/mortgage" class="tc" data-tone="emerald"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11 12 3l9 8M5 10v11h14V10M9 21v-7h6v7"/></svg></div><div class="tn">New Zealand Mortgage Calculator</div><div class="td">Calculate a purchase repayment or interest-only budget using actual quotes and financed costs.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/purchase-budget" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7V5h14v3M4 8h17v12H4zM16 12h5v4h-5z"/></svg></div><div class="tn">New Zealand Purchase Payment Budget</div><div class="td">Calculate a purchase repayment or interest-only budget using actual quotes and financed costs.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/first-home-loan" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7V5h14v3M4 8h17v12H4zM16 12h5v4h-5z"/></svg></div><div class="tn">First Home Loan Quote Budget</div><div class="td">Calculate a purchase repayment or interest-only budget using actual quotes and financed costs.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/repayment" class="tc" data-tone="violet"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 18 12-12M8 7a2 2 0 1 1-4 0 2 2 0 0 1 4 0m12 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0"/></svg></div><div class="tn">Interest-Only and Repayment Transition</div><div class="td">Compare interest-only principal, repayment from outset and a later P&amp;I transition.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/amortization" class="tc" data-tone="violet"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 5h14v16H5zM8 3v4m8-4v4M5 10h14M9 14h1m4 0h1m-6 3h1"/></svg></div><div class="tn">New Zealand Amortization Schedule</div><div class="td">Generate full schedules/CSV and compare permitted recurring or lump-sum extra principal.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/overpayment" class="tc" data-tone="emerald"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V4m0 16h17M7 15l5-5 4 2 5-7m-5 0h5v5"/></svg></div><div class="tn">New Zealand Extra Repayments</div><div class="td">Generate full schedules/CSV and compare permitted recurring or lump-sum extra principal.</div><div class="ta" aria-hidden="true">›</div></a></div></section>
+<section class="section country-tools-section" id="lvr"><div class="sec-hdr"><h2>Budget and lending ratios</h2></div><p>Enter current figures and press Calculate estimate. Editing or resetting clears the previous result.</p><div class="g2 country-tools-directory"><a href="/tools/newzealand/affordability" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7V5h14v3M4 8h17v12H4zM16 12h5v4h-5z"/></svg></div><div class="tn">New Zealand Household Borrowing Budget</div><div class="td">Estimate a budget from actual take-home income, spending and an entered assessment-rate scenario.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/preapproval-budget" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7V5h14v3M4 8h17v12H4zM16 12h5v4h-5z"/></svg></div><div class="tn">Pre-Approval Budget Scenario</div><div class="td">Estimate a budget from actual take-home income, spending and an entered assessment-rate scenario.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/budget" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7V5h14v3M4 8h17v12H4zM16 12h5v4h-5z"/></svg></div><div class="tn">Monthly Household Budget</div><div class="td">Add actual take-home income and spending to show a monthly surplus or deficit.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/dti" class="tc" data-tone="violet"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 18 12-12M8 7a2 2 0 1 1-4 0 2 2 0 0 1 4 0m12 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0"/></svg></div><div class="tn">New Zealand Debt-to-Income Ratio</div><div class="td">Calculate debt / qualifying income without turning a bank speed limit into a personal cap.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/ltv" class="tc" data-tone="violet"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 18 12-12M8 7a2 2 0 1 1-4 0 2 2 0 0 1 4 0m12 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0"/></svg></div><div class="tn">New Zealand LVR Calculator</div><div class="td">Calculate LVR, equity and principal reduction to a chosen target using assessed property value.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/lvr-band" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7V5h14v3M4 8h17v12H4zM16 12h5v4h-5z"/></svg></div><div class="tn">LVR Target and Equity Budget</div><div class="td">Calculate LVR, equity and principal reduction to a chosen target using assessed property value.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/low-equity" class="tc" data-tone="violet"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 18 12-12M8 7a2 2 0 1 1-4 0 2 2 0 0 1 4 0m12 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0"/></svg></div><div class="tn">Low Equity Margin Quote Impact</div><div class="td">Measure the payment/interest effect of an actual quoted margin and fee.</div><div class="ta" aria-hidden="true">›</div></a></div></section>
+<section class="section country-tools-section" id="kiwisaver"><div class="sec-hdr"><h2>First-home and KiwiSaver</h2></div><p>Enter current figures and press Calculate estimate. Editing or resetting clears the previous result.</p><div class="g2 country-tools-directory"><a href="/tools/newzealand/first-home" class="tc" data-tone="emerald"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11 12 3l9 8M5 10v11h14V10M9 21v-7h6v7"/></svg></div><div class="tn">First-Home Purchase Funds</div><div class="td">Combine separate confirmed savings/withdrawals/assistance against a deposit target.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/confirmed-support" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6m-6 4h6"/></svg></div><div class="tn">Confirmed Home-Purchase Support Budget</div><div class="td">Combine separate confirmed savings/withdrawals/assistance against a deposit target.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/deposit" class="tc" data-tone="emerald"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V4m0 16h17M7 15l5-5 4 2 5-7m-5 0h5v5"/></svg></div><div class="tn">Deposit Target and Saving Time</div><div class="td">Project a stated cash-saving pattern toward an entered deposit and closing reserve.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/deposit-builder" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7V5h14v3M4 8h17v12H4zM16 12h5v4h-5z"/></svg></div><div class="tn">Deposit Builder Scenario</div><div class="td">Project a stated cash-saving pattern toward an entered deposit and closing reserve.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/kiwisaver-withdrawal" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7V5h14v3M4 8h17v12H4zM16 12h5v4h-5z"/></svg></div><div class="tn">KiwiSaver First-Home Withdrawal Budget</div><div class="td">Show a conditional first-home withdrawal after the required retention from confirmed eligible funds.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/kiwisaver-home" class="tc" data-tone="emerald"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11 12 3l9 8M5 10v11h14V10M9 21v-7h6v7"/></svg></div><div class="tn">KiwiSaver Home-Purchase Funds Check</div><div class="td">Show a conditional first-home withdrawal after the required retention from confirmed eligible funds.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/employer" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7V5h14v3M4 8h17v12H4zM16 12h5v4h-5z"/></svg></div><div class="tn">KiwiSaver Employee and Employer Contributions</div><div class="td">Separate employee deductions, gross employer contributions and employer ESCT.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/government-contribution" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7V5h14v3M4 8h17v12H4zM16 12h5v4h-5z"/></svg></div><div class="tn">KiwiSaver Government Contribution Budget</div><div class="td">Estimate the current full-year matching contribution only after eligibility is confirmed.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/kiwisaver-growth" class="tc" data-tone="emerald"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V4m0 16h17M7 15l5-5 4 2 5-7m-5 0h5v5"/></svg></div><div class="tn">KiwiSaver Balance Projection</div><div class="td">Project separately entered contributions at a clearly labeled net investment-return assumption.</div><div class="ta" aria-hidden="true">›</div></a></div></section>
+<section class="section country-tools-section" id="investment"><div class="sec-hdr"><h2>Rental and tax budgets</h2></div><p>Enter current figures and press Calculate estimate. Editing or resetting clears the previous result.</p><div class="g2 country-tools-directory"><a href="/tools/newzealand/rental-yield" class="tc" data-tone="emerald"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11 12 3l9 8M5 10v11h14V10M9 21v-7h6v7"/></svg></div><div class="tn">Rental Yield and Cash Flow</div><div class="td">Distinguish operating yield from interest-only/repayment cash flow before tax.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/investment" class="tc" data-tone="emerald"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V4m0 16h17M7 15l5-5 4 2 5-7m-5 0h5v5"/></svg></div><div class="tn">Investment-Property Operating Budget</div><div class="td">Distinguish operating yield from interest-only/repayment cash flow before tax.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/interest-deduction" class="tc" data-tone="violet"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 18 12-12M8 7a2 2 0 1 1-4 0 2 2 0 0 1 4 0m12 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0"/></svg></div><div class="tn">Rental Interest Deduction Scenario</div><div class="td">Separate paid interest, eligible rental use and tax-effect arithmetic.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/ring-fencing" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7V5h14v3M4 8h17v12H4zM16 12h5v4h-5z"/></svg></div><div class="tn">Residential Rental Ring-Fencing Budget</div><div class="td">Track an entered rental profit/loss and prior carried deductions without offsetting salary.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/income-tax" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6m-6 4h6"/></svg></div><div class="tn">NZ Resident Salary Budget — 2026/27</div><div class="td">Calculate ordinary resident income tax and explicit ACC/KiwiSaver/cash deductions for this tax year.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/property-sale" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6m-6 4h6"/></svg></div><div class="tn">Property Sale Proceeds and Tax Budget</div><div class="td">Budget selling proceeds using actual selling costs, debt settlement and an adviser-confirmed tax amount.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/investment-tax" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6m-6 4h6"/></svg></div><div class="tn">Investment Tax and Cash-Return Budget</div><div class="td">Use provider/adviser-confirmed taxable income, tax rate and usable credits without inventing FIF eligibility.</div><div class="ta" aria-hidden="true">›</div></a></div></section>
+<section class="section country-tools-section" id="switching"><div class="sec-hdr"><h2>Switching and debt planning</h2></div><p>Enter current figures and press Calculate estimate. Editing or resetting clears the previous result.</p><div class="g2 country-tools-directory"><a href="/tools/newzealand/refinance" class="tc" data-tone="teal"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4"/></svg></div><div class="tn">New Zealand Refinance Comparison</div><div class="td">Compare actual rates, cash fees, interest and balances over the same horizon.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/lender-comparison" class="tc" data-tone="teal"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4"/></svg></div><div class="tn">Actual Lender Quote Comparison</div><div class="td">Compare actual rates, cash fees, interest and balances over the same horizon.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/refix" class="tc" data-tone="teal"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4"/></svg></div><div class="tn">Split-Loan Refix Quote Budget</div><div class="td">Split an existing mortgage between two actual rate quotes and compare the initial combined payment.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/revolving" class="tc" data-tone="blue"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3 8 9-5 9 5H3m2 3v7m5-7v7m4-7v7m5-7v7M3 21h18"/></svg></div><div class="tn">Revolving Credit Cash-Flow Scenario</div><div class="td">Model actual drawn debt and monthly cash surplus against a confirmed revolving-credit limit.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/consolidation" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6m-6 4h6"/></svg></div><div class="tn">Debt Consolidation Cost Comparison</div><div class="td">Compare a mortgage plus three actual debts with a consolidated mortgage, including balances and interest.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/car-loan" class="tc" data-tone="coral"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 10 2-5h12l2 5M3 10h18v8H3zM6 18v3m12-3v3M6 14h1m10 0h1"/></svg></div><div class="tn">Car Loan Payment and Balance</div><div class="td">Calculate a reducing-balance car quote including actual fees, a final balloon and elapsed payments.</div><div class="ta" aria-hidden="true">›</div></a></div></section>
+<section class="section country-tools-section" id="costs"><div class="sec-hdr"><h2>Property and work costs</h2></div><p>Enter current figures and press Calculate estimate. Editing or resetting clears the previous result.</p><div class="g2 country-tools-directory"><a href="/tools/newzealand/construction" class="tc" data-tone="blue"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 3v17h17M8 16v-4m5 4V8m5 8V5"/></svg></div><div class="tn">New Zealand Construction Drawdowns</div><div class="td">Budget interest on actual land/stage funding and later P&amp;I on principal actually drawn.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/closing-costs" class="tc" data-tone="amber"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6m-6 4h6"/></svg></div><div class="tn">Solicitor and Purchase Closing Costs</div><div class="td">Total actual tax-inclusive professional, inspection, title, lender and moving quotes.</div><div class="ta" aria-hidden="true">›</div></a>
+<a href="/tools/newzealand/healthy-home" class="tc" data-tone="blue"><div class="tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6zM8 12l3 3 5-6"/></svg></div><div class="tn">Healthy Homes Work Budget</div><div class="td">Budget actual quotes for assessed heating, insulation, ventilation, moisture and draught work.</div><div class="ta" aria-hidden="true">›</div></a></div></section>
+<!-- COUNTRY TOOLS END -->
+<!-- Resources -->
     <section class="section" id="resources">
       <div class="sec">Government &amp; Resources <span class="more"></span></div>
       <div class="ilist">
@@ -2165,7 +2018,7 @@
           <div class="ii">🏡</div>
           <div>
             <div class="in">Kāinga Ora (Housing NZ)</div>
-            <div class="is">Public housing · First Home Partner scheme</div>
+            <div class="is">Home ownership guidance · First Home Loan</div>
           </div>
           <div class="ich">›</div>
         </a>
@@ -2218,11 +2071,11 @@
           </div>
           <div class="ich">›</div>
         </a>
-        <a href="/mortgage-faq" class="ic">
+        <a href="/methodology" class="ic">
           <div class="ii">🤖</div>
           <div>
-            <div class="in">NZ AI Mortgage Advisor</div>
-            <div class="is">LVR · KiwiSaver · bright-line guidance</div>
+            <div class="in">Calculation Methodology</div>
+            <div class="is">Formulas · assumptions · limits</div>
           </div>
           <div class="ich">›</div>
         </a>
@@ -2544,6 +2397,7 @@
 
     /* Run NZ Calculations */
     function executeCalculation() {
+      document.getElementById('nz-results').classList.remove('visible');window._nzResultBlob=null;const form=document.getElementById('nz-calc-form');if(!form.checkValidity()){form.reportValidity();return;}
       const priceInput = document.getElementById('nz-price');
       const downInput = document.getElementById('nz-down');
       const rateInput = document.getElementById('nz-rate');
@@ -2607,7 +2461,7 @@
       // Show Results block
       const resultsContainer = document.getElementById('nz-results');
       resultsContainer.classList.add('visible');
-      // Keep the page position stable during calculation and initial load.
+      resultsContainer.tabIndex=-1;resultsContainer.focus({preventScroll:true});resultsContainer.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});
 
       // Draw donut
       requestAnimationFrame(() => {

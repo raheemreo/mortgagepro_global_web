@@ -41,6 +41,10 @@ def build():
   for asset in ['js/root-calculator-state.js','css/root-calculators.css','css/site-documents.css']:
    version=hashlib.sha256((ROOT/asset).read_bytes()).hexdigest()[:12]
    s=re.sub(r'((?:src|href)="/'+re.escape(asset)+r')(?:\?[^"]*)?"',lambda m:m[1]+'?v='+version+'"',s)
+  if path.name in {'usa-mortgage-calculator.html','canada-mortgage-calculator.html','uk-mortgage-calculator.html','australia-mortgage-calculator.html','new-zealand-mortgage-calculator.html','india-home-loan-emi-calculator.html','europe-mortgage-calculator.html'}:
+   v=hashlib.sha256((ROOT/'css/tool-cards.css').read_bytes()).hexdigest()[:12]
+   s=re.sub(r'<link[^>]+href="/css/tool-cards\.css[^"]*"[^>]*>\s*','',s)
+   s=s.replace('</head>','<link rel="stylesheet" href="/css/tool-cards.css?v='+v+'">\n</head>')
   s=re.sub(r'(?m)^[ \t]+$','',s)
   s=re.sub(r'\n{3,}','\n\n',s)
   path.write_text(s)

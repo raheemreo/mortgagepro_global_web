@@ -295,8 +295,9 @@
   <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#0B1D3A">
   <meta name="msapplication-TileColor" content="#0B1D3A">
   <meta name="theme-color" content="#0B1D3A">
-<link rel="stylesheet" href="/css/us-blog.css">
-<script src="/js/global-blog-calculators.js" defer></script>
+<link rel="stylesheet" href="/css/us-blog.css?v=8de0ab0f445c">
+<script src="/js/global-blog-calculators.js?v=712bf186bf22" defer></script>
+<link rel="stylesheet" href="/css/country-tools.css?v=427a948ffcf4">
 </head>
 
 <body>
@@ -384,22 +385,23 @@
 <p>The calculator estimates a monthly amortizing car loan with no fees or balloon. It reports the balance after the entered number of payments rather than assuming the original loan amount is always the relevant debt.</p>
 <section class="us-calc" data-global-calculator="car" data-currency="NZD" data-compounding="monthly" aria-labelledby="global-calc-title">
 <h2 id="global-calc-title">Try the assumptions</h2>
-<p>Amounts are in NZD. Change the inputs to recalculate locally. No loan, tax or scheme approval is established by the result.</p>
-<div class="us-fields">
+<p>Amounts are NZD. Enter your current figures, then press Calculate estimate. The tool does not establish approval.</p>
+<form data-manual-form novalidate><div class="us-fields">
 <label for="global-loan">Original car principal (NZD)
-<input id="global-loan" name="loan" type="number" required value="35000" min="0.01" max="100000000" step="any">
+<input id="global-loan" name="loan" type="number" required value="" min="0.01" max="100000000" step="any">
 </label>
 <label for="global-rate">Annual car rate assumption (%)
-<input id="global-rate" name="rate" type="number" required value="9" min="0" max="30" step="any">
+<input id="global-rate" name="rate" type="number" required value="" min="0" max="30" step="any">
 </label>
 <label for="global-years">Car-loan years
 <input id="global-years" name="years" type="number" required value="5" min="1" max="20" step="1">
 </label>
 <label for="global-elapsed">Payments already made (whole months)
-<input id="global-elapsed" name="elapsed" type="number" required value="24" min="0" max="240" step="1">
+<input id="global-elapsed" name="elapsed" type="number" required value="" min="0" max="240" step="1">
 </label>
 </div>
-<div data-results role="status" aria-live="polite" aria-atomic="true"><p>Enable JavaScript for the interactive estimate. The worked explanations and sources remain available below.</p></div>
+<div class="us-actions"><button type="submit" hidden>Calculate estimate</button><button type="reset">Reset example</button></div></form>
+<div hidden tabindex="-1" data-results role="status" aria-live="polite" aria-atomic="true"><p>Enable JavaScript for the interactive estimate. The worked explanations and sources remain available below.</p></div>
 <noscript><p>The interactive estimate requires JavaScript. Read the worked examples and sources below.</p></noscript>
 </section>
 <h2>Use the balance at the assessment date</h2>

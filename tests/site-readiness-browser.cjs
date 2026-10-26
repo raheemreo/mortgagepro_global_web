@@ -26,6 +26,7 @@ const docs=['about','authors/abdul-raheem','privacy-policy','cookie-policy','edi
     if(id==='canada'){for(const [k,v]of Object.entries({price:700000,down:10,rate:3.99,income:150000,tax:3000,heat:120}))await form.locator('#can-'+k).fill(String(v));}
     if(id==='uk'){for(const[k,v]of Object.entries({price:380000,down:15,rate:4.75}))await form.locator('#uk-'+k).fill(String(v));}
     if(id==='au'){for(const[k,v]of Object.entries({price:700000,down:20,rate:6.19,'lmi-quote':0}))await form.locator('#au-'+k).fill(String(v));}
+    if(id==='nz'){for(const[k,v]of Object.entries({price:700000,down:20,rate:5.99}))await form.locator('#nz-'+k).fill(String(v));}
     if(id==='us'){assert.equal(await p.evaluate(()=>window._usResultBlob||null),null);await form.locator('#us-price').fill('450000');await form.locator('#us-rate').fill('7.32');}
     await p.evaluate(()=>executeCalculation());assert.ok(await p.evaluate(k=>!!window[k],cache),slug+' initial result');
     const first=form.locator('input[type=number]').first(),initial=await first.inputValue();

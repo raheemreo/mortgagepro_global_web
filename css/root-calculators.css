@@ -9,3 +9,20 @@
 
 /* The Australian hero link shares the visible primary action treatment. */
 .hdr-btns a.btn-primary{display:inline-flex;align-items:center;justify-content:center;background:#123f78;color:#fff;padding:12px 18px;border-radius:10px;font-weight:700;max-width:100%;box-sizing:border-box}
+
+/* Quick-estimate forms must fit their container, including nested action rows. */
+.hero-calc,.hero-calc form,.hero-calc .hc-fields,.hero-calc .hc-left,.hero-calc .hc-box{min-width:0;max-width:100%;box-sizing:border-box}
+.hero-calc form{flex:2 1 0;overflow-wrap:anywhere}
+.hero-calc .hc-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%}
+.hero-calc .hc-box{width:100%}
+.hero-calc input,.hero-calc select{min-width:0;max-width:100%;box-sizing:border-box}
+.hero-calc form>div[style*="display: flex"]>div{min-width:0;max-width:100%;flex-wrap:wrap;gap:10px}
+.hero-calc .hc-btn{max-width:100%;min-height:48px;white-space:normal;overflow-wrap:anywhere}
+.hero-calc label{line-height:1.5}
+@media(max-width:900px){.hero-calc{flex-direction:column;align-items:stretch;padding:24px;gap:22px}.hero-calc form{width:100%;flex:auto}.hero-calc .hc-left{flex:auto}}
+@media(max-width:520px){.hero-calc{padding:20px}.hero-calc .hc-fields{grid-template-columns:minmax(0,1fr)}.hero-calc form>div[style*="display: flex"]{gap:16px!important}.hero-calc form>div[style*="display: flex"]>div{width:100%}.hero-calc form>div[style*="display: flex"]>div:has(input[type=checkbox]){flex-wrap:nowrap;align-items:flex-start!important}.hero-calc input[type=checkbox]{flex:none;margin-top:4px}.hero-calc .hc-btn{flex:1 1 100%;width:100%}.sec-hdr{flex-wrap:wrap;gap:12px}.sec-hdr a{max-width:100%;overflow-wrap:anywhere}}
+/* The seven country templates use three historical field/button class names. */
+form[id$="calc-form"],form[id$="calc-form"] :is(.hc-row,.h-row,.hero-calc-fields,.hc-fields-wrap,.h-fields-wrap,.h-box,.hc-box){min-width:0;max-width:100%;box-sizing:border-box}
+form[id$="calc-form"] :is(input,select,button){max-width:100%;min-width:0;box-sizing:border-box}
+form[id$="calc-form"] button{white-space:normal!important;overflow-wrap:anywhere;min-height:44px}
+@media(max-width:520px){form[id$="calc-form"] :is(.hc-row,.h-row,.hero-calc-fields){display:grid!important;grid-template-columns:minmax(0,1fr)!important}form[id$="calc-form"] :is(.h-box,.hc-box){width:100%}form[id$="calc-form"] :is(.hc-btn,.h-btn){width:100%;flex:1 1 100%}}
