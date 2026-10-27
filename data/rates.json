@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-10-26T12:46:28.396Z",
+  "generatedAt": "2026-10-27T11:14:47.118Z",
   "rates": {
     "usa": {
       "fixed30": {
@@ -57,8 +57,8 @@
         "cadence": "daily"
       },
       "fed": {
-        "rate": "3.75% \u2013 4.00%",
-        "formatted": "3.75% \u2013 4.00%",
+        "rate": "3.75% – 4.00%",
+        "formatted": "3.75% – 4.00%",
         "unit": "%",
         "instrument": "FOMC Federal Funds Target Range",
         "source": "Federal Reserve Board",
@@ -80,9 +80,9 @@
         "source": "Bank of Canada Valet API",
         "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V39079/json",
         "effectiveDate": "2026-10-23",
-        "lastVerified": "2026-10-26",
-        "status": "live",
-        "isLive": true,
+        "lastVerified": "2026-10-27",
+        "status": "stale",
+        "isLive": false,
         "kind": "observation",
         "cadence": "daily"
       },
@@ -94,7 +94,7 @@
         "source": "Bank of Canada Valet API",
         "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V80691335/json",
         "effectiveDate": "2026-10-21",
-        "lastVerified": "2026-10-26",
+        "lastVerified": "2026-10-27",
         "status": "live",
         "isLive": true,
         "kind": "observation",
@@ -108,7 +108,7 @@
         "source": "Bank of Canada Valet API",
         "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V80691311/json",
         "effectiveDate": "2026-10-21",
-        "lastVerified": "2026-10-26",
+        "lastVerified": "2026-10-27",
         "status": "live",
         "isLive": true,
         "kind": "observation",
