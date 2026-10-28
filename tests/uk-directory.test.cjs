@@ -1,0 +1,20 @@
+'use strict';
+const {test}=require('node:test'),assert=require('node:assert/strict');
+const C=require('../js/uk-tools-catalog');
+const aliases=require('../data/tool-redirects.json').uk;
+const {render}=require('../scripts/uk-tool-directory.cjs');
+test('UK directory preserves distinct calculators and navigation while separating specialist tasks',()=>{
+ const groups=Object.fromEntries([...new Set(C.catalog.map(c=>c.group))].map((g,i)=>[g,['tools','repayment','regions','investment'][i]]));
+ const descriptions=[];
+ const html=render(C,groups,c=>{descriptions.push(c.description);return '<a class="tc" href="/tools/uk/'+c.id+'">'+c.title+' '+c.description+'</a>';},s=>s);
+ const links=[...html.matchAll(/href="\/tools\/uk\/([^"]+)"/g)].map(m=>m[1]);
+ assert.deepEqual([...links].sort(),C.catalog.filter(c=>!aliases[c.id]).map(c=>c.id).sort());
+ assert.equal(new Set(links).size,13);
+ assert.equal(descriptions.length,10);
+ assert.equal(new Set(descriptions).size,10);
+ for(const id of Object.values(groups))assert.ok(html.includes('id="'+id+'"'));
+ assert.match(html,/Buying in England or Northern Ireland/);
+ assert.match(html,/Buying in Scotland/);
+ assert.match(html,/Buying in Wales/);
+ assert.doesNotMatch(html,/undefined/);
+});
