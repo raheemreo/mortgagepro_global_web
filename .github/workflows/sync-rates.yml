@@ -10,8 +10,14 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: rate-snapshot-publication
+  cancel-in-progress: false
+
 jobs:
   sync-rates:
+    if: github.ref == 'refs/heads/main'
+    timeout-minutes: 20
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -44,6 +50,10 @@ jobs:
           if git diff --staged --quiet; then
             echo "No rate changes observed. Snapshot is up to date."
           else
-            git commit -m "chore(rates): automated live financial rate snapshot update [skip ci]"
+            git commit -m "chore(rates): automated live financial rate snapshot update"
             git push origin main
           fi
+
+      # GITHUB_TOKEN pushes do not start another Actions workflow. Verify here.
+      - name: Confirm production rate publication
+        run: node scripts/verify_rate_publication.cjs
