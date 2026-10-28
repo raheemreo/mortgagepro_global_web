@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-10-27T11:14:47.118Z",
+  "generatedAt": "2026-10-28T11:49:10.000Z",
   "rates": {
     "usa": {
       "fixed30": {
@@ -65,7 +65,7 @@
         "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a1.htm",
         "effectiveDate": "2026-09-17",
         "lastVerified": "2026-10-26",
-        "status": "reference",
+        "status": "stale",
         "isLive": false,
         "kind": "policy",
         "reviewAfter": "2026-10-28"
@@ -79,10 +79,10 @@
         "instrument": "Policy Interest Rate (Overnight)",
         "source": "Bank of Canada Valet API",
         "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V39079/json",
-        "effectiveDate": "2026-10-23",
-        "lastVerified": "2026-10-27",
-        "status": "stale",
-        "isLive": false,
+        "effectiveDate": "2026-10-26",
+        "lastVerified": "2026-10-28",
+        "status": "live",
+        "isLive": true,
         "kind": "observation",
         "cadence": "daily"
       },
@@ -94,7 +94,7 @@
         "source": "Bank of Canada Valet API",
         "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V80691335/json",
         "effectiveDate": "2026-10-21",
-        "lastVerified": "2026-10-27",
+        "lastVerified": "2026-10-28",
         "status": "live",
         "isLive": true,
         "kind": "observation",
@@ -108,7 +108,7 @@
         "source": "Bank of Canada Valet API",
         "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V80691311/json",
         "effectiveDate": "2026-10-21",
-        "lastVerified": "2026-10-27",
+        "lastVerified": "2026-10-28",
         "status": "live",
         "isLive": true,
         "kind": "observation",
@@ -125,7 +125,7 @@
         "sourceUrl": "https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate",
         "effectiveDate": "2025-12-18",
         "lastVerified": "2026-10-26",
-        "status": "reference",
+        "status": "stale",
         "isLive": false,
         "kind": "policy",
         "reviewAfter": "2026-10-28"
@@ -141,7 +141,7 @@
         "sourceUrl": "https://www.rba.gov.au/statistics/cash-rate/",
         "effectiveDate": "2026-09-30",
         "lastVerified": "2026-10-26",
-        "status": "reference",
+        "status": "stale",
         "isLive": false,
         "kind": "policy",
         "reviewAfter": "2026-10-28"
@@ -157,7 +157,7 @@
         "sourceUrl": "https://www.rbnz.govt.nz/monetary-policy/about-monetary-policy/the-official-cash-rate",
         "effectiveDate": "2026-09-02",
         "lastVerified": "2026-10-26",
-        "status": "reference",
+        "status": "stale",
         "isLive": false,
         "kind": "policy",
         "reviewAfter": "2026-10-28"
@@ -173,7 +173,7 @@
         "sourceUrl": "https://m.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
         "effectiveDate": "2026-10-07",
         "lastVerified": "2026-10-26",
-        "status": "reference",
+        "status": "stale",
         "isLive": false,
         "kind": "policy",
         "reviewAfter": "2026-10-28"
@@ -189,7 +189,7 @@
         "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
         "effectiveDate": "2026-09-16",
         "lastVerified": "2026-10-26",
-        "status": "reference",
+        "status": "stale",
         "isLive": false,
         "kind": "policy",
         "reviewAfter": "2026-10-28"
