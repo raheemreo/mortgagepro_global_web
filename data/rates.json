@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-10-29T07:22:20.601Z",
+  "generatedAt": "2026-10-29T11:56:46.347Z",
   "rates": {
     "usa": {
       "fixed30": {
@@ -11,10 +11,11 @@
         "source": "Freddie Mac PMMS via FRED",
         "sourceUrl": "https://fred.stlouisfed.org/series/MORTGAGE30US",
         "effectiveDate": "2026-10-22",
-        "lastVerified": "2026-10-26",
+        "lastVerified": "2026-10-29",
         "status": "live",
         "isLive": true,
-        "kind": "observation"
+        "kind": "observation",
+        "cadence": "weekly"
       },
       "fixed15": {
         "rate": 6.68,
@@ -24,10 +25,11 @@
         "source": "Freddie Mac PMMS via FRED",
         "sourceUrl": "https://fred.stlouisfed.org/series/MORTGAGE15US",
         "effectiveDate": "2026-10-22",
-        "lastVerified": "2026-10-26",
+        "lastVerified": "2026-10-29",
         "status": "live",
         "isLive": true,
-        "kind": "observation"
+        "kind": "observation",
+        "cadence": "weekly"
       },
       "prime": {
         "rate": 7,
@@ -36,11 +38,12 @@
         "instrument": "Bank Prime Loan Rate",
         "source": "Federal Reserve Board via FRED",
         "sourceUrl": "https://fred.stlouisfed.org/series/DPRIME",
-        "effectiveDate": "2026-10-21",
-        "lastVerified": "2026-10-26",
-        "status": "stale",
-        "isLive": false,
-        "kind": "observation"
+        "effectiveDate": "2026-10-27",
+        "lastVerified": "2026-10-29",
+        "status": "live",
+        "isLive": true,
+        "kind": "observation",
+        "cadence": "daily"
       },
       "fedEffective": {
         "rate": 3.88,
@@ -49,10 +52,10 @@
         "instrument": "Effective Federal Funds Rate",
         "source": "Federal Reserve Board H.15 via FRED",
         "sourceUrl": "https://fred.stlouisfed.org/series/DFF",
-        "effectiveDate": "2026-10-22",
-        "lastVerified": "2026-10-26",
-        "status": "stale",
-        "isLive": false,
+        "effectiveDate": "2026-10-27",
+        "lastVerified": "2026-10-29",
+        "status": "live",
+        "isLive": true,
         "kind": "observation",
         "cadence": "daily"
       },
