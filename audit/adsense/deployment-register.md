@@ -30,3 +30,9 @@
 - Intended output change: NB rounds base transfer tax to whole dollars, half-up, as required by statute. New boundary regression test passes.
 - Gates: 628/628 tests, canonical build, site/publication validators and whitespace check pass.
 - Preview / live verification: NOT VERIFIED; no rollback or production promotion initiated.
+
+## A03 — UK residential purchase-tax audit
+
+- Audit-only: no website or model changes, no production deployment required.
+- 386 focused-file tests passed; both validators passed. See approval register for exact source-review scope.
+- No preview, production promotion, live revision verification or rollback initiated.
