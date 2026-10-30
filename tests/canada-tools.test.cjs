@@ -21,3 +21,8 @@ test('first-buyer budget uses graduated deposit and avoids artificial FHSA balan
 test('15 pages trace to all 11 mathematical app sources without publishing private Dart',()=>{const manifest=require('../docs/reviews/canada-app-source-manifest.json');assert.equal(new Set(C.catalog.map(c=>c.source)).size,11);for(const c of C.catalog){assert.ok(manifest.files.some(f=>f.path===c.source));assert.ok(fs.existsSync('tools/canada/'+c.id+'.html'));assert.equal(fs.existsSync(c.source),false);}});
 
 test('qualifying calculations support the full 40% quote input range plus the 2-point buffer',()=>{for(const id of ['stress-test','affordability']){const x=C.validate(id,{...fixtures[id],rate:40}),r=M.calculate(id,x);for(const value of Object.values(r.values))assert.ok(Number.isFinite(value));if(id==='stress-test')near(r.values.qualifyingRate,42);}assert.throws(()=>C.validate('stress-test',{...fixtures['stress-test'],rate:40.01}));});
+
+// NB Real Property Transfer Tax Act 2(3): nearest dollar, half a dollar rounds up.
+test('New Brunswick transfer tax rounds the assessed tax to whole dollars',()=>{
+ for(const [value,expected] of [[123449,1234],[123450,1235],[123451,1235],[700000,7000]]) near(M.transferTax(value,'NB'),expected);
+});
