@@ -17,3 +17,9 @@
 - Status: NOT DEPLOYED. No production promotion or rollback initiated.
 - Preview/live verification: NOT VERIFIED.
 - Scope: homepage explanatory text and primary-source attribution only.
+
+## A03 — Canada qualifying-rule clarification
+
+- Same draft correction branch; no production promotion.
+- 627 tests and both validators pass. Canonical build refreshes catalog content hashes in Canada tool pages.
+- Preview / live revision: NOT VERIFIED. Rollback: not initiated.

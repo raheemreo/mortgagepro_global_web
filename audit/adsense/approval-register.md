@@ -47,3 +47,17 @@ This public technical register contains code-review evidence only. It does not r
 - Risk resolved: homepage glossary defect corrected in source; not a full Canadian financial audit.
 - Owner action required: none for continued verification.
 - Remaining issues / next task: verify the remaining country references and excluded-page content; complete browser/mobile QA before promotion.
+
+## A03 — Canada qualifying-rule cross-check
+
+- Date: 2026-10-30; status PARTIAL (scoped Canada review).
+- Start commit: 9f0e063; final commit: containing this entry.
+- Verified sources: CMHC Purchase, Calculating GDS/TDS; OSFI current minimum qualifying rate and detailed straight-switch letter; CRA HBP and FHSA qualifying-withdrawal guidance.
+- Checks consistent with source: 5% first CAD 500,000 plus 10% remainder for the supported 1–2 unit insured purchase; purchase below CAD 1.5 million; max(contract + 2pp, 5.25%) standard assessment; half condo fees and full ground rent; 39/44 ratios clearly scoped; HBP CAD 60,000; confirmed FHSA withdrawal can exceed contribution limits.
+- Verified defect: straight-switch text omitted the CAD 3,000 transaction-cost exception and stand-alone mortgage scope. Added the detailed OSFI source, no equity take-out, no amortization extension and continued lender assessment. Source: https://www.osfi-bsif.gc.ca/en/guidance/guidance-library/osfi-exempts-uninsured-mortgage-straight-switches-prescribed-mqr-implements-portfolio-lti-limits .
+- Files changed: Canada hub, Canada catalog, legacy-display generator, generated Canada tool pages (catalog content hash), technical registers. No financial-model formula changes.
+- Google relevance / risk resolved: more accurate financial explanation in source; no claim of approval readiness.
+- Tests passed: 627/627 Node tests, canonical build, both publication/site validators, git diff --check. Tests failed: none in this scope.
+- Preview / live verification: NOT VERIFIED. Production required eventually, but NOT DEPLOYED. No rollback initiated. Owner action required: none for continuing source review.
+- Remaining: provincial transfer-tax schedules, other countries, excluded-content review and browser/mobile QA. No reference-wide verification date was advanced.
+- Next task: continue remaining financial references and page-specific content review.
