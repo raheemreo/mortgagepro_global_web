@@ -23,3 +23,10 @@
 - Same draft correction branch; no production promotion.
 - 627 tests and both validators pass. Canonical build refreshes catalog content hashes in Canada tool pages.
 - Preview / live revision: NOT VERIFIED. Rollback: not initiated.
+
+## A03 — Canadian transfer-tax correction
+
+- Status: NOT DEPLOYED; same draft Canada correction branch.
+- Intended output change: NB rounds base transfer tax to whole dollars, half-up, as required by statute. New boundary regression test passes.
+- Gates: 628/628 tests, canonical build, site/publication validators and whitespace check pass.
+- Preview / live verification: NOT VERIFIED; no rollback or production promotion initiated.

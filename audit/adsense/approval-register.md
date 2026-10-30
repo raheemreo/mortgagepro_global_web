@@ -61,3 +61,20 @@ This public technical register contains code-review evidence only. It does not r
 - Preview / live verification: NOT VERIFIED. Production required eventually, but NOT DEPLOYED. No rollback initiated. Owner action required: none for continuing source review.
 - Remaining: provincial transfer-tax schedules, other countries, excluded-content review and browser/mobile QA. No reference-wide verification date was advanced.
 - Next task: continue remaining financial references and page-specific content review.
+
+## A03 — Canadian transfer-tax schedules and rounding
+
+- Date: 2026-10-30; Priority: Critical; Status: PARTIAL (completed correction batch, not all-market completion).
+- Start commit: 2c03848; Final commit: containing this entry.
+- Verified defects: NB returned fractional dollars despite Real Property Transfer Tax Act section 2(3) requiring nearest-dollar rounding, with 50 cents rounded upward. Ontario/Toronto and BC selection labels did not make modeled property-class limits explicit.
+- Correction: round NB base tax with Math.round(value / 100); label Ontario/Toronto as 1–2 single-family residences and BC as wholly residential. Direct unsupported property classes to a confirmed Other assessment. Replace NB tax-sale FAQ citation with the actual statute.
+- Example: CAD 123,450 taxable value formerly returned CAD 1,234.50; now CAD 1,235. At CAD 123,449 it returns CAD 1,234. Other province calculations unchanged.
+- Sources checked: Ontario Calculating Land Transfer Tax; Toronto MLTT Rates & Fees (April 2026 bands); Montreal 2026 transfer-duty table and CAD 700,000 worked example; Alberta October 2026 common-document fee schedule; Manitoba Land Transfer Tax; BC Property Transfer Tax; NB Real Property Transfer Tax Act 2(1.03), 2(3). Official URLs are in js/canada-tools-catalog.js. These checks support the modeled schedules; exemptions, transaction history, mixed property and nonresident surcharges need case-specific assessment.
+- Google policy relevance: accurate financial estimates and transparent scope.
+- Files changed: Canada model/catalog, regression test, regenerated Canada pages/hub, audit registers. Generated changes refresh model/catalog cache hashes.
+- Tests passed: focused Canada suite; full 628/628 Node suite; canonical build; site-readiness and publisher validators (247 pages, 39 sitemap entries, 36 aliases); git diff --check.
+- Tests failed: none. Preview/mobile/browser interaction: NOT VERIFIED in this batch.
+- Production deployment required: yes after release gates; Deployment status: NOT DEPLOYED; Deployment ID: none; Live verification: NOT VERIFIED; Rollback: not initiated.
+- AdSense risk resolved: a verified calculation defect fixed in source, not proof of Google readiness. Owner action required: none for continued audit.
+- Remaining issues: NS municipal rate remains user-entered; other unsupported jurisdictions require confirmed assessments. No full provincial exemption audit claimed. Other countries and full browser/mobile QA remain.
+- Next task: remaining country-specific financial references and excluded content.
