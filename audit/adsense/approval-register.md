@@ -78,3 +78,20 @@ This public technical register contains code-review evidence only. It does not r
 - AdSense risk resolved: a verified calculation defect fixed in source, not proof of Google readiness. Owner action required: none for continued audit.
 - Remaining issues: NS municipal rate remains user-entered; other unsupported jurisdictions require confirmed assessments. No full provincial exemption audit claimed. Other countries and full browser/mobile QA remain.
 - Next task: remaining country-specific financial references and excluded content.
+
+## A03 — UK residential purchase-tax verification
+
+- Date: 2026-10-30; Priority: Critical; Status: PASS for the stated rate/formula review only. Whole A03 remains PARTIAL.
+- Start commit: 284870e; Final commit: containing this entry.
+- Verified defects: none found in the supported ordinary individual purchase-tax scenarios reviewed. No calculator or published-page edits warranted.
+- Sources retrieved: https://www.gov.uk/stamp-duty-land-tax/residential-property-rates ; https://www.gov.uk/guidance/stamp-duty-land-tax-relief-for-land-or-property-transactions ; https://revenue.scot/taxes/land-buildings-transaction-tax/residential-property ; https://revenue.scot/taxes/land-buildings-transaction-tax/additional-dwelling-supplement-ads ; https://www.gov.wales/land-transaction-tax-rates-and-bands ; https://www.gov.wales/higher-rates-land-transaction-tax-overview .
+- England/NI: ordinary bands match HMRC; first-buyer relief uses 300k nil band and 500k price ceiling, with standard tax above ceiling; additional 5pp and nonresident 2pp scenarios retain separate conditions. HMRC 295k worked example yields 4,750.
+- Scotland: standard 145k/250k/325k/750k bands, first-buyer 175k nil band and 8% ADS match sources. Revenue Scotland 875k standard example yields 63,350. Transitional cases remain explicitly excluded.
+- Wales: standard 225k/400k/750k/1.5m bands and December 2024 higher bands match the source. Higher-rate 260k official example yields 15,950; 40k threshold is covered. No invented first-buyer rate.
+- Source inspection: js/uk-tools-models.js, js/uk-tools-catalog.js, js/global-blog-calculators.js, root UK calcSDLT wrapper and existing tax fixtures. Root tool calls the shared UK model for standard/first-buyer England scenarios; expanded tools cover additional categories. Existing limitations exclude linked/mixed-use, corporate, trust, lease-rent, multiple-dwelling and transitional transactions.
+- Tests run/passed: node --test tests/country-tools.test.cjs tests/global-blog-calculators.test.cjs (386/386, includes non-UK tests in those files); both site-readiness and publisher validators. Failed: none.
+- Files changed: technical registers only. Google relevance: evidence-backed financial accuracy within disclosed scope, not approval certification.
+- Preview: not required for audit-only documentation. Production deployment required: NO. Deployment status: audit-only; no deployment ID. Live production verification: NOT VERIFIED by this source audit. Rollback: not applicable.
+- Owner action required: none for continued independent checks.
+- Remaining: no transaction-specific legal opinion, complete UK editorial review, browser/mobile QA or whole-site readiness is claimed. Mortgage affordability/lending references, other markets and excluded pages remain in the wider review.
+- Next task: continue remaining country financial references and individual content reviews.
