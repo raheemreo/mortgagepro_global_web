@@ -10,3 +10,10 @@
 - Production version, active traffic and rollback target: NOT VERIFIED for this batch; confirm before any promotion.
 - Required release checks: reconcile current main and scheduled rate updates; enforce applicable CI; verify preview behavior; use the designated deployment mechanism; check exact revision and live calculator, route, rate and privacy behavior.
 - No deployment, rollback or AdSense review was initiated for this batch.
+
+## A03 — CMHC glossary
+
+- Branch: fix/a03-cmhc-glossary (based on local A02 changes).
+- Status: NOT DEPLOYED. No production promotion or rollback initiated.
+- Preview/live verification: NOT VERIFIED.
+- Scope: homepage explanatory text and primary-source attribution only.

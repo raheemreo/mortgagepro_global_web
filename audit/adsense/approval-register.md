@@ -29,3 +29,21 @@
 ## Scope of this register
 
 This public technical register contains code-review evidence only. It does not reproduce private account screenshots or deployment-account audit material. A01 account findings and A04–A11 completion must not be inferred from this batch.
+
+## A03 — CMHC homepage glossary correction
+
+- Priority: Critical
+- Status: PARTIAL — one independently verified factual correction; not all-market verification.
+- Start commit: ee4d7b6 (local A02 checkpoint; remote equivalent f1fe95e).
+- Final commit: the commit containing this entry.
+- Verified defect: the glossary asserted universal CMHC insurance below 20% down, an unqualified 0.6%–4% premium range, and automatic financing of the premium.
+- Evidence: CMHC premium schedule retrieved 2026-10-30 includes 4.50% for the specified non-traditional-down-payment tier, a 0.20% surcharge beyond 25 years, and provincial premium tax that cannot be financed. URL is linked in the corrected glossary.
+- Change: explain product/LTV/amortization scope, optional premium financing, separate provincial premium tax and lender confirmation. No changes to calculator formulas or date-stamped rate observations.
+- Google policy relevance: avoid misleading financial information and unsupported universal claims.
+- Files changed: index.html; technical approval/deployment registers.
+- Tests: canonical build, both validators and 627 Node tests; see command results for this revision.
+- Preview, production deployment and live verification: NOT VERIFIED / NOT DEPLOYED.
+- Rollback: not applicable; no production promotion.
+- Risk resolved: homepage glossary defect corrected in source; not a full Canadian financial audit.
+- Owner action required: none for continued verification.
+- Remaining issues / next task: verify the remaining country references and excluded-page content; complete browser/mobile QA before promotion.
