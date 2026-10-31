@@ -106,3 +106,9 @@ This public technical register contains code-review evidence only. It does not r
 - Deployment required: yes, owner explicitly requested live release. Deployment status: NOT DEPLOYED pending mandatory gates; ID: none; rollback not initiated.
 - Google relevance: financial accuracy and truthful source provenance. No AdSense application/review requested.
 - Remaining: evidence limits in detailed report, browser/preview gates and exact live deployment verification. Next: resolve gates before promotion.
+
+### Release-gate correction
+
+Initial candidate c93d385 failed one freshness test: it used a mutable production snapshot with a fixed historical stale date. The fixture now explicitly fixes its own lastVerified/reviewAfter dates, preserving the stale/reference behavior assertions. Rerun: 628/628 PASS. The earlier 628-pass entry refers to the pre-refresh suite; it is not a pass for c93d385.
+
+Preview 8b27969a: browser entered NB taxable value 123450 and observed CA$1,235.00. Also corrected Canada result/worked-example rounding prose to acknowledge statutory rounding. Local browser runtime remains unavailable; GitHub browser gate pending.

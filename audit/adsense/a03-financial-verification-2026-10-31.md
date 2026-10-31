@@ -38,4 +38,4 @@ BoE 3.75%, RBA 4.60%, RBNZ 2.75%, RBI 5.50%, ECB MRO 2.65% corroborated from the
 
 ## Verification and release
 
-Local model suite: 628 pass. Canonical publication and site/publication validators pass. Local browser execution blocked by missing Chromium and failed archive download. A pinned GitHub browser job was added to exercise all surviving tools and primary pages before promotion. Preview, exact production revision and rollback verification remain separate gates. No production deployment is claimed by this report.
+Initial refreshed candidate failed a date-coupled test. After isolating its historical fixture, local model suite: 628 pass. Canonical publication and site/publication validators pass. Local browser execution blocked by missing Chromium and failed archive download. A pinned GitHub browser job was added to exercise all surviving tools and primary pages before promotion. Preview, exact production revision and rollback verification remain separate gates. No production deployment is claimed by this report.
