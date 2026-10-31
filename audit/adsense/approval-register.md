@@ -112,3 +112,14 @@ This public technical register contains code-review evidence only. It does not r
 Initial candidate c93d385 failed one freshness test: it used a mutable production snapshot with a fixed historical stale date. The fixture now explicitly fixes its own lastVerified/reviewAfter dates, preserving the stale/reference behavior assertions. Rerun: 628/628 PASS. The earlier 628-pass entry refers to the pre-refresh suite; it is not a pass for c93d385.
 
 Preview 8b27969a: browser entered NB taxable value 123450 and observed CA$1,235.00. Also corrected Canada result/worked-example rounding prose to acknowledge statutory rounding. Local browser runtime remains unavailable; GitHub browser gate pending.
+
+## A03 verified release gates — 1 November 2026
+
+- Status: PASS for reviewed maintained financial scope; see detailed A03 report for excluded cases.
+- Candidate: af2601798a3875bcf59ad83509e0a4cbb64e7281; PR #26.
+- Tests passed: 628 model tests, content/publication validation, deterministic build; browser CI 157 tool/viewport, 69 page/viewport, seven calculator scenarios and 70 layout checks. Failed: none on this candidate.
+- Preview: PASS for Cloudflare build 377a409a-79e0-4403-beca-71070eb0ded0, version 5fab57ae-a16b-4138-8e6f-6bfbb951d735, directly checked NB result and Reset. Byte-level parity NOT VERIFIED due terminal HTTP 403.
+- Production deployment required: YES. Deployment status: NOT DEPLOYED at this entry; live verification pending.
+- Rollback baseline: main a69a986, reported Cloudflare version cb91cafc-a13a-48b7-bf10-169ec6e4dd3f. No rollback initiated or claimed.
+- Owner action: none for ordinary authorized merge; any repository approval requirement must be honored. Branch-protection inspection returns 403.
+- Next: normal controlled merge only after current commit checks pass, followed by Cloudflare and live-site verification.
