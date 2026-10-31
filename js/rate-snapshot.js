@@ -128,11 +128,11 @@ window.MPG_RATE_SNAPSHOT = {
         "source": "Bank of England",
         "sourceUrl": "https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate",
         "effectiveDate": "2025-12-18",
-        "lastVerified": "2026-10-26",
-        "status": "stale",
+        "lastVerified": "2026-10-31",
+        "status": "reference",
         "isLive": false,
         "kind": "policy",
-        "reviewAfter": "2026-10-28"
+        "reviewAfter": "2026-11-04"
       }
     },
     "australia": {
@@ -142,13 +142,13 @@ window.MPG_RATE_SNAPSHOT = {
         "unit": "%",
         "instrument": "Cash Rate Target",
         "source": "Reserve Bank of Australia",
-        "sourceUrl": "https://www.rba.gov.au/statistics/cash-rate/",
+        "sourceUrl": "https://www.rba.gov.au/media-releases/2026/mr-26-27.html",
         "effectiveDate": "2026-09-30",
-        "lastVerified": "2026-10-26",
-        "status": "stale",
+        "lastVerified": "2026-10-31",
+        "status": "reference",
         "isLive": false,
         "kind": "policy",
-        "reviewAfter": "2026-10-28"
+        "reviewAfter": "2026-11-04"
       }
     },
     "newzealand": {
@@ -158,13 +158,13 @@ window.MPG_RATE_SNAPSHOT = {
         "unit": "%",
         "instrument": "Official Cash Rate (OCR)",
         "source": "Reserve Bank of New Zealand",
-        "sourceUrl": "https://www.rbnz.govt.nz/monetary-policy/about-monetary-policy/the-official-cash-rate",
+        "sourceUrl": "https://www.rbnz.govt.nz/news-and-events/news/2026/10/ocr-held-at-2-75-percent",
         "effectiveDate": "2026-09-02",
-        "lastVerified": "2026-10-26",
-        "status": "stale",
+        "lastVerified": "2026-10-31",
+        "status": "reference",
         "isLive": false,
         "kind": "policy",
-        "reviewAfter": "2026-10-28"
+        "reviewAfter": "2026-11-04"
       }
     },
     "india": {
@@ -174,13 +174,13 @@ window.MPG_RATE_SNAPSHOT = {
         "unit": "%",
         "instrument": "Policy Repo Rate",
         "source": "Reserve Bank of India",
-        "sourceUrl": "https://m.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+        "sourceUrl": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63744",
         "effectiveDate": "2026-10-07",
-        "lastVerified": "2026-10-26",
-        "status": "stale",
+        "lastVerified": "2026-10-31",
+        "status": "reference",
         "isLive": false,
         "kind": "policy",
-        "reviewAfter": "2026-10-28"
+        "reviewAfter": "2026-11-04"
       }
     },
     "europe": {
@@ -190,13 +190,13 @@ window.MPG_RATE_SNAPSHOT = {
         "unit": "%",
         "instrument": "Main Refinancing Operations (MRO) Rate",
         "source": "European Central Bank",
-        "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+        "sourceUrl": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp261029~9a493adf17.en.html",
         "effectiveDate": "2026-09-16",
-        "lastVerified": "2026-10-26",
-        "status": "stale",
+        "lastVerified": "2026-10-31",
+        "status": "reference",
         "isLive": false,
         "kind": "policy",
-        "reviewAfter": "2026-10-28"
+        "reviewAfter": "2026-11-04"
       }
     }
   }
