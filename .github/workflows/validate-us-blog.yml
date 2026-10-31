@@ -58,3 +58,22 @@ jobs:
         run: |
           python scripts/build_publisher_release.py
           git diff --exit-code
+
+  browser-release-gates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install pinned browser test runtime outside the publication tree
+        run: |
+          npm install --prefix "$RUNNER_TEMP/mpg-browser" --no-save playwright@1.62.1
+          "$RUNNER_TEMP/mpg-browser/node_modules/.bin/playwright" install --with-deps chromium
+          echo "NODE_PATH=$RUNNER_TEMP/mpg-browser/node_modules" >> "$GITHUB_ENV"
+      - name: Verify all calculator tools and primary pages with external requests blocked
+        run: |
+          node tests/publisher-tools-browser.cjs
+          node tests/site-readiness-browser.cjs
+          node tests/country-responsive-browser.cjs

@@ -11,7 +11,7 @@ test('observation validation rejects placeholders, malformed dates, infinity and
  assert.equal(validObservation('0.00','2026-10-22',now),true);assert.equal(validObservation('7.32','2026-10-22',now),true);
 });
 test('an unchanged policy uses review date rather than an old effective date',()=>{
- const a=snapshot.rates.uk.boe;assert.equal(freshness(a,now).status,'reference');assert.equal(freshness(a,new Date('2026-10-29')).status,'stale');
+ const a={...snapshot.rates.uk.boe,lastVerified:'2026-10-26',reviewAfter:'2026-10-28'};assert.equal(freshness(a,now).status,'reference');assert.equal(freshness(a,new Date('2026-10-29')).status,'stale');
 });
 test('historical marketing inputs cannot become live from a new page load',()=>{assert.deepEqual(freshness({kind:'historical',effectiveDate:'2026-10-25'},now),{status:'stale',isLive:false});});
 test('weekly and daily publication windows differ',()=>{assert.equal(freshness({kind:'observation',cadence:'weekly',effectiveDate:'2026-10-20'},now).isLive,true);assert.equal(freshness({kind:'observation',cadence:'daily',effectiveDate:'2026-10-20'},now).isLive,false);});
