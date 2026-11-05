@@ -32,4 +32,4 @@ We do not accept payment to alter calculator results in an advertiser's favor. R
 
 Report a reproducible problem through the [contact page](/contact). Send fictional examples, not private application documents. We may correct, change or withdraw a tool when needed. Material changes to these terms will be reflected in the updated date.
 
-Questions about the website can be sent to [support@mortgageproglobal.com](mailto:support@mortgageproglobal.com). These website terms do not describe every feature or data practice of the separate Android application.
+Questions about the website can be sent to [support@mortgageproglobal.com](mailto:support@mortgageproglobal.com). The [Terms of Service for Mobile Applications](/app-terms-of-service) cover the separate Android apps.
