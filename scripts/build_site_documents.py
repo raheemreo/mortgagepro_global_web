@@ -7,6 +7,9 @@ ROOT=Path(__file__).resolve().parents[1]
 CONFIG={name:name for name in ['about','editorial-policy','corrections-policy','privacy-policy','cookie-policy','data-deletion-policy','contact','affiliate-disclosure','methodology','terms-and-conditions','disclaimer','data-sources','mortgage-faq']}
 CONFIG['authors/abdul-raheem']='authors-abdul-raheem'
 CONFIG['app-privacy-policy']='app-privacy-policy'
+APP_TERMS='app-terms-of-service'
+CONFIG[APP_TERMS]=APP_TERMS
+APP_TERMS_EFFECTIVE='2026-11-05'
 APP_SECTIONS={
  'About these apps':'app-privacy',
  'Covered apps and package identifiers':'covered-apps',
@@ -34,8 +37,15 @@ def build():
  revisions=json.loads((ROOT/'data/document-revisions.json').read_text())
  for slug,source in CONFIG.items():
   revision=revisions.get(slug,revisions['default'])
-  p=ROOT/(slug+'.html');s=p.read_text();md=(ROOT/f'contents/Site/{source}.md').read_text();title=re.search(r'^# (.+)',md)[1];desc=re.search(r'^\*\*Meta description:\*\* (.+)',md,re.M)[1]
-  s=re.sub(r'<title>[\s\S]*?</title>',lambda _:'<title>'+html.escape(title)+' | MortgagePro Global</title>',s,count=1)
+  p=ROOT/(slug+'.html')
+  template=ROOT/'terms-and-conditions.html' if slug==APP_TERMS else p
+  s=template.read_text();md=(ROOT/f'contents/Site/{source}.md').read_text();title=re.search(r'^# (.+)',md)[1];desc=re.search(r'^\*\*Meta description:\*\* (.+)',md,re.M)[1]
+  page_title='App Terms of Service | MortgagePro Global | REO Technologies' if slug==APP_TERMS else title+' | MortgagePro Global'
+  s=re.sub(r'<title>[\s\S]*?</title>',lambda _:'<title>'+html.escape(page_title)+'</title>',s,count=1)
+  if slug==APP_TERMS:
+   s=s.replace('https://mortgageproglobal.com/terms-and-conditions',f'https://mortgageproglobal.com/{slug}')
+   s=s.replace('<li>Terms and Conditions</li>', '<li>App Terms of Service</li>')
+   s=re.sub(r'<script\b[^>]*src="/js/(?:rates|rate-snapshot)\.js[^"]*"[^>]*></script>\s*','',s)
   for attr,key,value in [('name','description',desc),('property','og:title',title),('property','og:description',desc),('name','twitter:title',title),('name','twitter:description',desc)]:
    pat=r'<meta\b(?=[^>]*\b'+attr+r'=[\"\x27]'+re.escape(key)+r'[\"\x27])[^>]*>'
    s=re.sub(pat,lambda _:f'<meta {attr}="{key}" content="{html.escape(value,quote=True)}">',s,count=1)
@@ -60,7 +70,23 @@ def build():
     original='<h2>'+html.escape(heading,quote=False)+'</h2>'
     assert original in body,heading
     body=body.replace(original,'<h2 id="'+anchor+'" tabindex="-1">'+html.escape(heading,quote=False)+'</h2>')
-  content='<main id="main-content"><article class="site-document content-article">'+('' if has_hero else '<h1>'+html.escape(title)+'</h1>')+'<p class="document-date">Document revision '+revision+' · Publisher: REO Technologies. Source observations have their own dates.</p>'+body+'</article></main>'
+  date='<p class="document-date">Document revision '+revision+' · Publisher: REO Technologies. Source observations have their own dates.</p>'
+  if slug==APP_TERMS:
+   sections=[]
+   def terms_heading(match):
+    heading=match[1]
+    anchor=re.sub(r'[^a-z0-9]+','-',heading.lower()).strip('-')
+    sections.append((anchor,heading))
+    return f'<h2 id="{anchor}" tabindex="-1">{heading}</h2>'
+   body=re.sub(r'<h2>([^<]+)</h2>',terms_heading,body)
+   toc='<nav aria-label="Terms contents"><p><strong>On this page</strong></p><ol>'+''.join(
+    f'<li><a href="#{anchor}">{heading}</a></li>' for anchor,heading in sections
+   )+'</ol></nav>'
+   first_section=body.index('<h2 ')
+   body=body[:first_section]+toc+'\n'+body[first_section:]
+   date=(f'<p class="document-date">Effective date <time datetime="{APP_TERMS_EFFECTIVE}">{APP_TERMS_EFFECTIVE}</time>'
+         f' · Last updated <time datetime="{revision}">{revision}</time></p>')
+  content='<main id="main-content"><article class="site-document content-article">'+('' if has_hero else '<h1>'+html.escape(title)+'</h1>')+date+body+'</article></main>'
   s=before+content+s[main.end():]
   if slug=='app-privacy-policy':
    # This legal page has no rate display; avoid an unrelated API request.
@@ -73,6 +99,7 @@ def build():
    s=re.sub(r'<footer\b[\s\S]*?</footer>',add_app_link,s)
   s=re.sub(r'<script\b[^>]*type=["\x27]application/ld\+json["\x27][^>]*>[\s\S]*?</script>','',s)
   schema={'@context':'https://schema.org','@type':'ProfilePage' if slug.startswith('authors/') else 'WebPage','name':title,'description':desc,'url':'https://mortgageproglobal.com/'+slug,'dateModified':revision,'publisher':{'@type':'Organization','name':'REO Technologies','url':'https://mortgageproglobal.com/about'}}
+  if slug==APP_TERMS:schema['datePublished']=APP_TERMS_EFFECTIVE
   if slug.startswith('authors/'):schema['mainEntity']={'@type':'Person','name':'Abdul Raheem'}
   if slug=='app-privacy-policy':
    apps=re.findall(r'^\|\s*(.*?)\s*\|\s*`(com\.reotech\.[^`]+)`\s*\|$',md,re.M)

@@ -2,7 +2,7 @@
 
 **Meta description:** Shared privacy policy for REO Technologies mortgage calculator apps: USA, Global, Australia, Canada, India, New Zealand and Europe. Advertising, AI, data and choices.
 
-This is the **shared Mobile App Privacy Policy** for the seven REO Technologies Android mortgage calculator apps listed below. For browsing this website, read the separate [website privacy policy](/privacy-policy). Opening a section below does not change your advertising consent inside an app.
+This is the **shared Mobile App Privacy Policy** for the seven REO Technologies Android mortgage calculator apps listed below. For browsing this website, read the separate [website privacy policy](/privacy-policy). Read the [Terms of Service for Mobile Applications](/app-terms-of-service) for conditions of use. Opening a section below does not change your advertising consent inside an app.
 
 MOBILE_PRIVACY_LINKS
 
