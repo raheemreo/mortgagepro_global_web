@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-11-17T15:08:16.195Z",
+  "generatedAt": "2026-11-18T14:46:21.848Z",
   "rates": {
     "usa": {
       "fixed30": {
@@ -52,10 +52,10 @@
         "instrument": "Effective Federal Funds Rate",
         "source": "Federal Reserve Board H.15 via FRED",
         "sourceUrl": "https://fred.stlouisfed.org/series/DFF",
-        "effectiveDate": "2026-11-13",
-        "lastVerified": "2026-11-17",
-        "status": "stale",
-        "isLive": false,
+        "effectiveDate": "2026-11-16",
+        "lastVerified": "2026-11-18",
+        "status": "live",
+        "isLive": true,
         "kind": "observation",
         "cadence": "daily"
       },
@@ -82,8 +82,8 @@
         "instrument": "Policy Interest Rate (Overnight)",
         "source": "Bank of Canada Valet API",
         "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V39079/json",
-        "effectiveDate": "2026-11-16",
-        "lastVerified": "2026-11-17",
+        "effectiveDate": "2026-11-17",
+        "lastVerified": "2026-11-18",
         "status": "live",
         "isLive": true,
         "kind": "observation",
@@ -97,7 +97,7 @@
         "source": "Bank of Canada Valet API",
         "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V80691335/json",
         "effectiveDate": "2026-11-11",
-        "lastVerified": "2026-11-17",
+        "lastVerified": "2026-11-18",
         "status": "live",
         "isLive": true,
         "kind": "observation",
@@ -111,7 +111,7 @@
         "source": "Bank of Canada Valet API",
         "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V80691311/json",
         "effectiveDate": "2026-11-11",
-        "lastVerified": "2026-11-17",
+        "lastVerified": "2026-11-18",
         "status": "live",
         "isLive": true,
         "kind": "observation",
