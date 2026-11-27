@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-11-27T02:37:04.553Z",
+  "generatedAt": "2026-11-27T15:48:10.289Z",
   "rates": {
     "usa": {
       "fixed30": {
@@ -82,7 +82,7 @@
         "instrument": "Policy Interest Rate (Overnight)",
         "source": "Bank of Canada Valet API",
         "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V39079/json",
-        "effectiveDate": "2026-11-25",
+        "effectiveDate": "2026-11-26",
         "lastVerified": "2026-11-27",
         "status": "live",
         "isLive": true,
